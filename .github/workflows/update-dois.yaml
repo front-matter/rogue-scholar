@@ -1,0 +1,80 @@
+name: Update DOIs for changed Posts
+on:
+  workflow_dispatch:
+  schedule:
+   - cron: "*/10 * * * *"
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4       
+      - name: setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '>=1.23'
+      - name: Download posts not indexed recently
+        run: |
+          mkdir -p upload
+          curl https://api.rogue-scholar.org/posts/updated?per_page=1 > upload/posts.json
+      - name: Set number of posts to be updated as variable
+        id: current_number
+        run: |
+          echo "NUMBER=$(jq '."total-results"' upload/posts.json)" >> $GITHUB_OUTPUT
+      - name: Install commonmeta
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
+        run: |
+          go install github.com/front-matter/commonmeta@v0.5.13
+          commonmeta version
+      - name: Set current date as variable
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
+        run: |
+          echo "NOW=$(date +'%s')" >> $GITHUB_OUTPUT
+        id: current_date
+      - name: Convert posts to commonmeta
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        run: |
+          commonmeta list upload/posts.json -f jsonfeed > upload/commonmeta.json
+      - name: Convert commonmeta to crossref xml
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        run: |
+          commonmeta list upload/commonmeta.json -f commonmeta --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" -t crossrefxml > upload/${{ steps.current_date.outputs.NOW }}
+      - name: Update content via Crossref API
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        run: |
+          curl -X POST https://doi.crossref.org/servlet/deposit -F "operation=doMDUpload" -F "login_id=${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" -F "login_passwd=${{ secrets.CROSSREF_PASSWORD }}" -F "fname=@upload/${{ steps.current_date.outputs.NOW }}"
+      - name: Set post uuid, doi, blog slug and rid as variables
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        run: |
+          echo "UUID=$(jq -r '[.[] | .identifiers | .[1].identifier] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
+          echo "DOI=$(jq -rc '[.[] | .id] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
+          echo "SLUG=$(jq -r '[.[] | .container.identifier] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
+          echo "RID=$(jq -r '.[0].identifiers[] | select(.identifierType | contains("RID")) | .identifier' upload/commonmeta.json)" >> $GITHUB_OUTPUT
+        id: current_post
+      - name: Convert commonmeta to inveniordm
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        run: |
+          commonmeta list upload/commonmeta.json -f commonmeta -t inveniordm > upload/inveniordm_list.json
+          cat upload/inveniordm_list.json | jq -r '.[0]' > upload/inveniordm.json
+        id: inveniordm
+      - name: create InvenioRDM draft record from published record
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        run: |
+          curl -X POST https://rogue-scholar.org/api/records/${{ steps.current_post.outputs.RID }}/draft -H "Authorization: Bearer ${{ secrets.INVENIORDM_TOKEN }}" -H "Content-Type: application/json"
+      - name: update InvenioRDM draft record
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        run: |
+          curl -X PUT https://rogue-scholar.org/api/records/${{ steps.current_post.outputs.RID }}/draft -H "Authorization: Bearer ${{ secrets.INVENIORDM_TOKEN }}" -H "Content-Type: application/json" -d @upload/inveniordm.json
+      - name: publish updated InvenioRDM draft record
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        run: |
+          curl -X POST https://rogue-scholar.org/api/records/${{ steps.current_post.outputs.RID }}/draft/actions/publish -H "Authorization: Bearer ${{ secrets.INVENIORDM_TOKEN }}" -H "Content-Type: application/json"
+      - name: List uuids of updated posts
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        run: |
+          echo "UUIDS=$(jq -rc '[.items | .[] | .id] | join(",")' upload/posts.json)" >> $GITHUB_OUTPUT
+        id: uuids
+      - name: Update Rogue Scholar posts
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        run: |
+          curl -X PATCH https://db.rogue-scholar.org/rest/v1/posts?id=in.%28${{ steps.uuids.outputs.UUIDS }}%29 -H "apikey: ${{ secrets.SUPABASE_KEY }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" -H "Content-Type: application/json" -H "Prefer: return=minimal" -d '{ "indexed_at": "${{ steps.current_date.outputs.NOW }}", "indexed": true }'
