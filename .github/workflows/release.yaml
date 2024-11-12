@@ -29,7 +29,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/${{ github.repository_owner }}/invenio-rdm-starter
+            ghcr.io/${{ github.repository_owner }}/rogue-scholar
           tags: |
             type=ref,event=branch
             type=ref,event=pr
