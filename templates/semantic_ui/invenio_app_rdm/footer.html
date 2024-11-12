@@ -1,0 +1,66 @@
+{#
+
+  Copyright (C) 2019-2020 CERN.
+  Copyright (C) 2019-2020 Northwestern University.
+  Copyright (C) 2021 Graz University of Technology.
+  Copyright (C) 2024 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- block footer_top %}
+
+  <div class="footer-top">
+    <div class="ui container app-rdm-footer">
+      {%- block footer_top_left %}
+        <div class="ui grid app-rdm-footer">
+        <div class="rdm-footer five wide tablet two wide computer column">
+          <h2 class="ui small header">{{ _ ("About") }}</h2>
+          {% trans rogue_scholar_overview="/about" %}
+            <p><a href="{{ rogue_scholar_overview }}" target="_blank">Overview</a></p>
+          {% endtrans %}
+          {% trans rogue_scholar_faq="/about#faq" %}
+            <p><a href="{{ rogue_scholar_faq }}" target="_blank">FAQ</a></p>
+          {% endtrans %}
+          {% trans rogue_scholar_stats="/about#stats" %}
+            <p><a href="{{ rogue_scholar_stats }}" target="_blank">Stats</a></p>
+          {% endtrans %}
+          {% trans rogue_scholar_register="/auth/signin" %}
+          <p><a href="{{ rogue_scholar_register }}" target="_blank">Register Your Blog</a></p>
+        {% endtrans %}
+        </div>
+        <div class="rdm-footer five wide tablet two wide computer column">
+          <h2 class="ui small header">{{ _ ("Community") }}</h2>
+          {% trans rogue_scholar_board="/board" %}
+            <p><a href="{{ rogue_scholar_board }}" target="_blank">Advisory Board</a></p>
+          {% endtrans %}
+          {% trans rogue_scholar_blog="https://blog.front-matter.io/tag/rogue-scholar/" %}
+            <p><a href="{{ rogue_scholar_blog }}" target="_blank">Blog</a></p>
+          {% endtrans %}
+          {% trans rogue_scholar_documentation="https://docs.rogue-scholar.org/" %}
+            <p><a href="{{ rogue_scholar_documentation }}" target="_blank">Documentation</a></p>
+          {% endtrans %}
+          {% trans rogue_scholar_discussions="https://github.com/front-matter/rogue-scholar/discussions" %}
+            <p><a href="{{ rogue_scholar_discussions }}" target="_blank">Discussions</a></p>
+          {% endtrans %}
+        </div>
+        <div class="rdm-footer five wide tablet two wide computer column">
+          <h2 class="ui small header">{{ _("Support") }}</h2>
+          {% trans rogue_scholar_donate="https://ko-fi.com/rogue_scholar" %}
+            <p><a href="{{ rogue_scholar_donate }}" target="_blank">Donate</a></p>
+          {% endtrans %}
+          {% trans rogue_scholar_status="https://status.rogue-scholar.org/" %}
+            <p><a href="{{ rogue_scholar_status }}" target="_blank">Status</a></p>
+          {% endtrans %}
+        </div>
+
+      {%- endblock footer_top_left %}
+      <div class="six wide column right aligned">
+        {%- block footer_top_right %}
+        {%- endblock footer_top_right %}
+      </div>
+      </div>
+    </div>
+
+  </div>
+{%- endblock footer_top %}

@@ -1,0 +1,130 @@
+/***********************************************
+    Invenio RDM Starter Site Variables
+***********************************************/
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@fontName          : 'Lato';
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : @sky;
+@secondaryColor      : @grey;
+
+@lightPrimaryColor   : @lightSky;
+@lightSecondaryColor : @lightGrey;
+
+@darkPrimaryColor    : @darkSky;
+@darkSecondaryColor  : @darkGrey;
+
+/*-------------------
+    Focused Input
+--------------------*/
+
+@focusedFormBorderColor: @darkBlue;
+@focusedFormMutedBorderColor: @blue;
+
+/*-------------------
+       Links
+--------------------*/
+
+@linkColor           : @darkBlue;
+@linkUnderline       : none;
+@linkHoverColor      : @blue;
+@linkHoverUnderline  : @linkUnderline;
+
+/*-------------------
+      Site Colors
+      using Tailwind CSS Colors https://tailwindcss.com/docs/customizing-colors
+--------------------*/
+
+/*---  Colors  ---*/
+@red              : #ef4444;
+@orange           : #f97316;
+@yellow           : #eab308;
+@olive            : #84cc16; // lime
+@green            : #22c55e;
+@teal             : #14b8a6;
+@sky              : #0ea5e9;
+@blue             : #3b82f6;
+@violet           : #8b5cf6;
+@purple           : #a855f7;
+@pink             : #ec4899;
+@brown            : #f59e0b; // amber
+@grey             : #64748b; // slate
+@black            : #1B1C1D; 
+
+/*---  Light Colors  ---*/
+@lightRed         : #fca5a5;
+@lightOrange      : #fdba74;
+@lightYellow      : #fde047;
+@lightOlive       : #bef264; // lime
+@lightGreen       : #86efac;
+@lightTeal        : #5eead4;
+@lightSky         : #7dd3fc;
+@lightBlue        : #93c5fd;
+@lightViolet      : #c4b5fd;
+@lightPurple      : #d8b4fe;
+@lightPink        : #f9a8d4;
+@lightBrown       : #fcd34d; // amber
+@lightGrey        : #cbd5e1; // slate
+@lightBlack       : #1e293b;
+
+/*---   Neutrals  ---*/
+@fullBlack        : #000000;
+@offWhite         : #F9FAFB;
+@darkWhite        : #F3F4F5;
+@midWhite         : #DCDDDE;
+@white            : #FFFFFF;
+
+@darkTextColor    : @lightBlack;
+@mutedTextColor   : @grey;
+@lightTextColor   : @lightGrey;
+
+/*---  Dark Colors  ---*/
+@darkRed         : #b91c1c;
+@darkOrange      : #c2410c;
+@darkYellow      : #a16207;
+@darkOlive       : #4d7c0f; // lime
+@darkGreen       : #15803d;
+@darkTeal        : #0f766e;
+@darkSky         : #0369a1;
+@darkBlue        : #1d4ed8;
+@darkViolet      : #6d28d9;
+@darkPurple      : #7e22ce;
+@darkPink        : #be185d;
+@darkBrown       : #92400e; // amber
+@darkGrey        : #1e293b; // slate
+
+/*-------------------
+    Invenio RDM Colors
+--------------------*/
+
+@accessRightOpen: @green;
+@accessRightRestricted: @red;
+@accessRightEmbargoed: @yellow;
+@accessRightMetadataOnly: @olive;
+
+@restricted-components-background-color: #feeaea;
+@restricted-components-border-color: #e0b4b4;
+@embargoed-components-background-color: #fbf8ee;
+@embargoed-components-border-color: #c9ba9b;
+@versionActiveColor: @darkWhite;
+
+@orcidColor: #A6CE39;
+@orcidActiveColor: saturate(darken(@orcidColor, 5), 15, relative);
+
+@signupColor: @green;
+@primaryLabelColor: @darkPrimaryColor;
+
+@navbarBackgroundImage: e(""); // remove background image
+@navbarBackgroundColor: @grey;
+@footerLightColor: @grey;
+@footerDarkColor: @darkGrey;
+@subFooterColor: @darkGrey;
+@footerTextLightColor: @white;
+@footerTextDarkColor: @white;

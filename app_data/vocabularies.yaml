@@ -1,0 +1,38 @@
+creatorsroles:
+  pid-type: crr
+  data-file: vocabularies/roles.yaml
+contributorsroles:
+  pid-type: cor
+  data-file: vocabularies/roles.yaml
+subjects:
+  pid-type: sub
+  data-file: vocabularies/subjects_oecd_fos.yaml
+names:
+  pid-type: names
+  data-file: vocabularies/names.yaml
+licenses:
+  pid-type: lic
+  data-file: vocabularies/rs_licences.csv
+languages:
+  pid-type: lng
+  data-file: vocabularies/languages.yaml
+relationtypes:
+  pid-type: rlt
+  data-file: vocabularies/relation_types.yaml
+resourcetypes:
+  pid-type: rsrct
+  data-file: vocabularies/resource_types.yaml
+communitytypes:
+  pid-type: comtyp
+  data-file: vocabularies/community_types.yaml
+affiliations:
+  pid-type: aff
+  data-file: vocabularies/affiliations_ror.yaml
+funders:
+  pid-type: fun
+  data-file: vocabularies/funders.yaml
+# 'awards' contain a reference to a funder so the fixtures need to be run
+# after 'funders'
+awards:
+  pid-type: awa
+  data-file: vocabularies/awards.yaml

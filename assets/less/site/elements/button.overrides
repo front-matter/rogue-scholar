@@ -1,0 +1,5 @@
+/***********************************************
+         Invenio RDM Starter Button Overrides
+***********************************************/
+
+@searchButtonColor: @darkBlue;
