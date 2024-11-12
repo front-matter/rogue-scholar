@@ -1,7 +1,7 @@
 [project]
-name = "invenio-rdm-starter"
-version = "0.3.1"
-description = "Starter for the turn-key research data management repository"
+name = "rogue-scholar"
+version = "0.5.0"
+description = "Rogue Scholar is a science blog archive based on the InvenioRDM repository software."
 authors = [
     { name = "Martin Fenner", email = "martin@front-matter.io" }
 ]

@@ -1872,39 +1872,6 @@ wheels = [
 ]
 
 [[package]]
-name = "invenio-rdm-starter"
-version = "0.3.1"
-source = { editable = "." }
-dependencies = [
-    { name = "babel-edtf" },
-    { name = "gunicorn" },
-    { name = "idutils" },
-    { name = "importlib-metadata" },
-    { name = "invenio-app-rdm" },
-    { name = "invenio-rdm-records" },
-    { name = "invenio-records-resources" },
-    { name = "invenio-s3" },
-    { name = "invenio-search", extra = ["opensearch2"] },
-    { name = "material-plausible-plugin" },
-    { name = "ruff" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "babel-edtf", specifier = "~=1.2.0" },
-    { name = "gunicorn", specifier = "~=22.0.0" },
-    { name = "idutils", specifier = "~=1.4.0" },
-    { name = "importlib-metadata", specifier = "~=6.11.0" },
-    { name = "invenio-app-rdm", specifier = "~=12.0.10" },
-    { name = "invenio-rdm-records", specifier = "~=10.8.6" },
-    { name = "invenio-records-resources", specifier = "~=5.10.0" },
-    { name = "invenio-s3", specifier = "~=1.0.0" },
-    { name = "invenio-search", extras = ["opensearch2"], specifier = "~=2.4.1" },
-    { name = "material-plausible-plugin", specifier = "~=0.2.0" },
-    { name = "ruff", specifier = ">=0.7.0" },
-]
-
-[[package]]
 name = "invenio-records"
 version = "2.4.0"
 source = { registry = "https://pypi.org/simple" }
@@ -3392,6 +3359,39 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/11/23/814edf09ec6470d52022b9e95c23c1bef77f0bc451761e1504ebd09606d3/rich-12.6.0.tar.gz", hash = "sha256:ba3a3775974105c221d31141f2c116f4fd65c5ceb0698657a11e9f295ec93fd0", size = 220114 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/32/60/81ac2e7d1e3b861ab478a72e3b20fc91c4302acd2274822e493758941829/rich-12.6.0-py3-none-any.whl", hash = "sha256:a4eb26484f2c82589bd9a17c73d32a010b1e29d89f1604cd9bf3a2097b81bb5e", size = 237505 },
+]
+
+[[package]]
+name = "rogue-scholar"
+version = "0.5.0"
+source = { editable = "." }
+dependencies = [
+    { name = "babel-edtf" },
+    { name = "gunicorn" },
+    { name = "idutils" },
+    { name = "importlib-metadata" },
+    { name = "invenio-app-rdm" },
+    { name = "invenio-rdm-records" },
+    { name = "invenio-records-resources" },
+    { name = "invenio-s3" },
+    { name = "invenio-search", extra = ["opensearch2"] },
+    { name = "material-plausible-plugin" },
+    { name = "ruff" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "babel-edtf", specifier = "~=1.2.0" },
+    { name = "gunicorn", specifier = "~=22.0.0" },
+    { name = "idutils", specifier = "~=1.4.0" },
+    { name = "importlib-metadata", specifier = "~=6.11.0" },
+    { name = "invenio-app-rdm", specifier = "~=12.0.10" },
+    { name = "invenio-rdm-records", specifier = "~=10.8.6" },
+    { name = "invenio-records-resources", specifier = "~=5.10.0" },
+    { name = "invenio-s3", specifier = "~=1.0.0" },
+    { name = "invenio-search", extras = ["opensearch2"], specifier = "~=2.4.1" },
+    { name = "material-plausible-plugin", specifier = "~=0.2.0" },
+    { name = "ruff", specifier = ">=0.7.0" },
 ]
 
 [[package]]
