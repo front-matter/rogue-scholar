@@ -1,8 +1,8 @@
 name: Update DOIs for changed Posts
 on:
   workflow_dispatch:
-  # schedule:
-  #  - cron: "*/10 * * * *"
+  schedule:
+   - cron: "*/10 * * * *"
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -43,19 +43,10 @@ jobs:
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           curl -X POST https://doi.crossref.org/servlet/deposit -F "operation=doMDUpload" -F "login_id=${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" -F "login_passwd=${{ secrets.CROSSREF_PASSWORD }}" -F "fname=@upload/${{ steps.current_date.outputs.NOW }}"
-      - name: Set post uuid, doi, blog slug and rid as variables
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          echo "UUID=$(jq -r '[.[] | .identifiers | .[1].identifier] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
-          echo "DOI=$(jq -rc '[.[] | .id] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
-          echo "SLUG=$(jq -r '[.[] | .container.identifier] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
-          echo "RID=$(jq -r '.[0].identifiers[] | select(.identifierType | contains("RID")) | .identifier' upload/commonmeta.json)" >> $GITHUB_OUTPUT
-        id: current_post
-      - name: update InvenioRDM record
+      - name: update InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           commonmeta post upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
-          echo "RID=$(jq -r '.[0].id' upload/response.json)" >> $GITHUB_OUTPUT
         id: inveniordm
       - name: List uuids of updated posts
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
