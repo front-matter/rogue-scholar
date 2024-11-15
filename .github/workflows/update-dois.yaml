@@ -16,7 +16,7 @@ jobs:
       - name: Download posts not indexed recently
         run: |
           mkdir -p upload
-          curl https://api.rogue-scholar.org/posts/updated?per_page=1 > upload/posts.json
+          curl https://api.rogue-scholar.org/posts/updated?per_page=10 > upload/posts.json
       - name: Set number of posts to be updated as variable
         id: current_number
         run: |
