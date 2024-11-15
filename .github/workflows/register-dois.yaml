@@ -24,7 +24,7 @@ jobs:
       - name: Install commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          go install github.com/front-matter/commonmeta@v0.5.16
+          go install github.com/front-matter/commonmeta@v0.5.18
           commonmeta version
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
@@ -53,9 +53,8 @@ jobs:
       - name: create InvenioRDM record
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          cat upload/commonmeta.json | jq -r '.[0]' > upload/commonmeta_first.json
-          commonmeta post upload/commonmeta_first.json -t inveniordm --host https://rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
-          echo "RID=$(jq -r '.processed[0].request.topic.record' upload/response.json)" >> $GITHUB_OUTPUT
+          commonmeta post upload/commonmeta.json -t inveniordm --host https://rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
+          echo "RID=$(jq -r '.[0].id' upload/response.json)" >> $GITHUB_OUTPUT
         id: inveniordm
       - name: update Rogue Scholar post
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
