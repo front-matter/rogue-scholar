@@ -1,8 +1,8 @@
 name: Update DOIs for changed Posts
 on:
   workflow_dispatch:
-  schedule:
-   - cron: "*/10 * * * *"
+  # schedule:
+  #  - cron: "*/10 * * * *"
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -24,7 +24,7 @@ jobs:
       - name: Install commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
         run: |
-          go install github.com/front-matter/commonmeta@v0.5.13
+          go install github.com/front-matter/commonmeta@v0.5.24
           commonmeta version
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
@@ -51,24 +51,12 @@ jobs:
           echo "SLUG=$(jq -r '[.[] | .container.identifier] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
           echo "RID=$(jq -r '.[0].identifiers[] | select(.identifierType | contains("RID")) | .identifier' upload/commonmeta.json)" >> $GITHUB_OUTPUT
         id: current_post
-      - name: Convert commonmeta to inveniordm
+      - name: update InvenioRDM record
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta list upload/commonmeta.json -f commonmeta -t inveniordm > upload/inveniordm_list.json
-          cat upload/inveniordm_list.json | jq -r '.[0]' > upload/inveniordm.json
+          commonmeta post upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
+          echo "RID=$(jq -r '.[0].id' upload/response.json)" >> $GITHUB_OUTPUT
         id: inveniordm
-      - name: create InvenioRDM draft record from published record
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          curl -X POST https://rogue-scholar.org/api/records/${{ steps.current_post.outputs.RID }}/draft -H "Authorization: Bearer ${{ secrets.INVENIORDM_TOKEN }}" -H "Content-Type: application/json"
-      - name: update InvenioRDM draft record
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          curl -X PUT https://rogue-scholar.org/api/records/${{ steps.current_post.outputs.RID }}/draft -H "Authorization: Bearer ${{ secrets.INVENIORDM_TOKEN }}" -H "Content-Type: application/json" -d @upload/inveniordm.json
-      - name: publish updated InvenioRDM draft record
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          curl -X POST https://rogue-scholar.org/api/records/${{ steps.current_post.outputs.RID }}/draft/actions/publish -H "Authorization: Bearer ${{ secrets.INVENIORDM_TOKEN }}" -H "Content-Type: application/json"
       - name: List uuids of updated posts
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
