@@ -50,11 +50,6 @@ jobs:
           echo "DOI=$(jq -rc '[.[] | .id] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
           echo "SLUG=$(jq -r '[.[] | .container.identifier] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
         id: current_post
-      - name: Convert commonmeta to inveniordm
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          commonmeta list upload/commonmeta.json -f commonmeta -t inveniordm > upload/inveniordm_list.json
-          cat upload/inveniordm_list.json | jq -r '.[0]' > upload/inveniordm.json
       - name: create InvenioRDM record
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
