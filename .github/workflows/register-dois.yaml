@@ -24,7 +24,7 @@ jobs:
       - name: Install commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          go install github.com/front-matter/commonmeta@v0.5.24
+          go install github.com/front-matter/commonmeta@v0.5.26
           commonmeta version
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
@@ -43,26 +43,22 @@ jobs:
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           curl -X POST https://doi.crossref.org/servlet/deposit -F "operation=doMDUpload" -F "login_id=${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" -F "login_passwd=${{ secrets.CROSSREF_PASSWORD }}" -F "fname=@upload/${{ steps.current_date.outputs.NOW }}"
-      - name: Set post uuid, doi and blog slug as variables
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          echo "UUID=$(jq -r '[.[] | .identifiers | .[1].identifier] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
-          echo "DOI=$(jq -rc '[.[] | .id] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
-          echo "SLUG=$(jq -r '[.[] | .container.identifier] | first' upload/commonmeta.json)" >> $GITHUB_OUTPUT
-        id: current_post
-      - name: create InvenioRDM record
+      - name: create InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           commonmeta post upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
           echo "RID=$(jq -r '.[0].id' upload/response.json)" >> $GITHUB_OUTPUT
-        id: inveniordm
+          echo "UUID=$(jq -r '.[0].uuid' upload/response.json)" >> $GITHUB_OUTPUT
+          echo "DOI=$(jq -r '.[0].doi' upload/response.json)" >> $GITHUB_OUTPUT
+          echo "COMMUNITY=$(jq -r '.[0].community' upload/response.json)" >> $GITHUB_OUTPUT
+        id: response
       - name: update Rogue Scholar post
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          curl -X PATCH https://db.rogue-scholar.org/rest/v1/posts?id=eq.${{ steps.current_post.outputs.UUID }} -H "apikey: ${{ secrets.SUPABASE_KEY }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" -H "Content-Type: application/json" -H "Prefer: return=minimal" -d '{ "doi": "${{ steps.current_post.outputs.DOI }}", "rid": "${{ steps.inveniordm.outputs.RID }}", "indexed_at": "${{ steps.current_date.outputs.NOW }}", "indexed": true }'
+          curl -X PATCH https://db.rogue-scholar.org/rest/v1/posts?id=eq.${{ steps.response.outputs.UUID }} -H "apikey: ${{ secrets.SUPABASE_KEY }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" -H "Content-Type: application/json" -H "Prefer: return=minimal" -d '{ "doi": "${{ steps.response.outputs.DOI }}", "rid": "${{ steps.response.outputs.RID }}", "indexed_at": "${{ steps.current_date.outputs.NOW }}", "indexed": true }'
       - name: Update Front Matter blog
-        if: steps.current_post.outputs.SLUG == '2749-9952'
-        run: commonmeta update-ghost-post --api-key ${{ secrets.GHOST_ADMIN_API_KEY }} --api-url ${{ secrets.GHOST_ADMIN_API_URL }} ${{ steps.current_post.outputs.UUID }}
+        if: steps.response.outputs.COMMUNITY == 'front_matter'
+        run: commonmeta update-ghost-post --api-key ${{ secrets.GHOST_ADMIN_API_KEY }} --api-url ${{ secrets.GHOST_ADMIN_API_URL }} ${{ steps.response.outputs.UUID }}
       - name: Update Upstream blog
-        if: steps.current_post.outputs.SLUG == 'https://rogue-scholar.org/blogs/upstream/'
-        run: commonmeta update-ghost-post --api-key ${{ secrets.UPSTREAM_ADMIN_API_KEY }} --api-url ${{ secrets.UPSTREAM_ADMIN_API_URL }} ${{ secrets.UPSTREAM_ADMIN_API_URL }} ${{ steps.current_post.outputs.UUID }}
+        if: steps.response.outputs.COMMUNITY == 'upstream'
+        run: commonmeta update-ghost-post --api-key ${{ secrets.UPSTREAM_ADMIN_API_KEY }} --api-url ${{ secrets.UPSTREAM_ADMIN_API_URL }} ${{ secrets.UPSTREAM_ADMIN_API_URL }} ${{ steps.response.outputs.UUID }}
