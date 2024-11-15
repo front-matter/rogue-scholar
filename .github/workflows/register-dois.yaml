@@ -24,18 +24,13 @@ jobs:
       - name: Install commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          go install github.com/front-matter/commonmeta@v0.5.13
+          go install github.com/front-matter/commonmeta@v0.5.14
           commonmeta version
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           echo "NOW=$(date +'%s')" >> $GITHUB_OUTPUT
         id: current_date
-      - name: Set blog community id as variable
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          echo "ID=$(jq -r '.items[0].blog.community_id' upload/posts.json)" >> $GITHUB_OUTPUT
-        id: community
       - name: Convert posts to commonmeta and autogenerate dois based on prefix
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
@@ -60,20 +55,13 @@ jobs:
         run: |
           commonmeta list upload/commonmeta.json -f commonmeta -t inveniordm > upload/inveniordm_list.json
           cat upload/inveniordm_list.json | jq -r '.[0]' > upload/inveniordm.json
-      - name: create InvenioRDM draft record
+      - name: create InvenioRDM record
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          curl -X POST https://rogue-scholar.org/api/records -H "Authorization: Bearer ${{ secrets.INVENIORDM_TOKEN }}" -H "Content-Type: application/json" -d @upload/inveniordm.json > upload/response.json
-          echo "RID=$(jq -r '.id' upload/response.json)" >> $GITHUB_OUTPUT
+          cat upload/commonmeta.json | jq -r '.[0]' > upload/commonmeta_first.json
+          commonmeta post upload/commonmeta_first.json -t inveniordm --host https://rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
+          echo "RID=$(jq -r '.processed[0].request.topic.record' upload/response.json)" >> $GITHUB_OUTPUT
         id: inveniordm
-      - name: publish InvenioRDM draft record
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          curl -X POST https://rogue-scholar.org/api/records/${{ steps.inveniordm.outputs.RID }}/draft/actions/publish -H "Authorization: Bearer ${{ secrets.INVENIORDM_TOKEN }}" -H "Content-Type: application/json"
-      - name: Add post to blog community
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          curl -X POST https://rogue-scholar.org/api/records/${{ steps.inveniordm.outputs.RID }}/communities -H "Authorization: Bearer ${{ secrets.INVENIORDM_TOKEN }}" -H "Content-Type: application/json" -d '{ "communities": [{"id": "${{ steps.community.outputs.ID }}"}] }'
       - name: update Rogue Scholar post
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
