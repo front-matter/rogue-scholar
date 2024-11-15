@@ -53,7 +53,7 @@ jobs:
       - name: create InvenioRDM record
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta post upload/commonmeta.json -f commonmeta -t inveniordm --host https://rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
+          commonmeta post upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
           echo "RID=$(jq -r '.[0].id' upload/response.json)" >> $GITHUB_OUTPUT
         id: inveniordm
       - name: update Rogue Scholar post
