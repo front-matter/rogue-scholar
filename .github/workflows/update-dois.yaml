@@ -24,7 +24,7 @@ jobs:
       - name: Install commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
         run: |
-          go install github.com/front-matter/commonmeta@v0.5.24
+          go install github.com/front-matter/commonmeta@v0.5.25
           commonmeta version
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
@@ -47,13 +47,9 @@ jobs:
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           commonmeta post upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
-        id: inveniordm
-      - name: List uuids of updated posts
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          echo "UUIDS=$(jq -rc '[.items | .[] | .id] | join(",")' upload/posts.json)" >> $GITHUB_OUTPUT
-        id: uuids
+          echo "UUIDS=$(jq -rc '[.[] | .uuid] | join(",")' upload/response.json)" >> $GITHUB_OUTPUT
+        id: response
       - name: Update Rogue Scholar posts
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          curl -X PATCH https://db.rogue-scholar.org/rest/v1/posts?id=in.%28${{ steps.uuids.outputs.UUIDS }}%29 -H "apikey: ${{ secrets.SUPABASE_KEY }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" -H "Content-Type: application/json" -H "Prefer: return=minimal" -d '{ "indexed_at": "${{ steps.current_date.outputs.NOW }}", "indexed": true }'
+          curl -X PATCH https://db.rogue-scholar.org/rest/v1/posts?id=in.%28${{ steps.response.outputs.UUIDS }}%29 -H "apikey: ${{ secrets.SUPABASE_KEY }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" -H "Content-Type: application/json" -H "Prefer: return=minimal" -d '{ "indexed_at": "${{ steps.current_date.outputs.NOW }}", "indexed": true }'
