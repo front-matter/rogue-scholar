@@ -16,7 +16,7 @@ jobs:
       - name: Download posts not indexed recently
         run: |
           mkdir -p upload
-          curl https://api.rogue-scholar.org/posts/updated?per_page=50 > upload/posts.json
+          curl https://api.rogue-scholar.org/posts/updated?per_page=1 > upload/posts.json
       - name: Set number of posts to be updated as variable
         id: current_number
         run: |
@@ -24,7 +24,7 @@ jobs:
       - name: Install commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
         run: |
-          go install github.com/front-matter/commonmeta@v0.5.26
+          go install github.com/front-matter/commonmeta@v0.5.27
           commonmeta version
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
@@ -46,7 +46,7 @@ jobs:
       - name: update InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta post upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
+          commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
           echo "UUIDS=$(jq -rc '[.[] | .uuid] | join(",")' upload/response.json)" >> $GITHUB_OUTPUT
         id: response
       - name: Update Rogue Scholar posts
