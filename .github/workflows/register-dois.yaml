@@ -24,7 +24,7 @@ jobs:
       - name: Install commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          go install github.com/front-matter/commonmeta@v0.5.27
+          go install github.com/front-matter/commonmeta@v0.5.28
           commonmeta version
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
@@ -46,16 +46,12 @@ jobs:
       - name: create InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
+          commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacyKey ${{ secrets.SUPABASE_KEY }} > upload/response.json
           echo "RID=$(jq -r '.[0].id' upload/response.json)" >> $GITHUB_OUTPUT
           echo "UUID=$(jq -r '.[0].uuid' upload/response.json)" >> $GITHUB_OUTPUT
           echo "DOI=$(jq -r '.[0].doi' upload/response.json)" >> $GITHUB_OUTPUT
           echo "COMMUNITY=$(jq -r '.[0].community' upload/response.json)" >> $GITHUB_OUTPUT
         id: response
-      - name: update Rogue Scholar post
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          curl -X PATCH https://db.rogue-scholar.org/rest/v1/posts?id=eq.${{ steps.response.outputs.UUID }} -H "apikey: ${{ secrets.SUPABASE_KEY }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" -H "Content-Type: application/json" -H "Prefer: return=minimal" -d '{ "doi": "${{ steps.response.outputs.DOI }}", "rid": "${{ steps.response.outputs.RID }}", "indexed_at": "${{ steps.current_date.outputs.NOW }}", "indexed": true }'
       - name: Update Front Matter blog
         if: steps.response.outputs.COMMUNITY == 'front_matter'
         run: commonmeta update-ghost-post --api-key ${{ secrets.GHOST_ADMIN_API_KEY }} --api-url ${{ secrets.GHOST_ADMIN_API_URL }} ${{ steps.response.outputs.UUID }}
