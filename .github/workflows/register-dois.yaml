@@ -38,7 +38,7 @@ jobs:
       - name: Register Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta push upload/commonmeta.json -f commonmeta -t crossref --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id ${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd ${{ secrets.CROSSREF_PASSWORD }}" > upload/response.json
+          commonmeta push upload/commonmeta.json -f commonmeta -t crossrefxml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id ${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd ${{ secrets.CROSSREF_PASSWORD }}" > upload/response.json
       - name: create InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
