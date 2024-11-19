@@ -39,12 +39,12 @@ jobs:
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           commonmeta push upload/commonmeta.json -f commonmeta -t crossrefxml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" > upload/response.json
-          echo "cat upload/response.json"
+          cat upload/response.json
       - name: update InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
-          echo "cat upload/response.json"
+          cat upload/response.json
           echo "UUIDS=$(jq -rc '[.[] | .uuid] | join(",")' upload/response.json)" >> $GITHUB_OUTPUT
         id: response
       - name: Update Rogue Scholar posts
