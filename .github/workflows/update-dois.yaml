@@ -16,7 +16,7 @@ jobs:
       - name: Download posts not indexed recently
         run: |
           mkdir -p upload
-          curl https://api.rogue-scholar.org/posts/updated?per_page=10 > upload/posts.json
+          curl https://api.rogue-scholar.org/posts/updated?per_page=1 > upload/posts.json
       - name: Set number of posts to be updated as variable
         id: current_number
         run: |
@@ -24,7 +24,7 @@ jobs:
       - name: Install commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
         run: |
-          go install github.com/front-matter/commonmeta@v0.5.29
+          go install github.com/front-matter/commonmeta@v0.5.30
           commonmeta version
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
@@ -35,14 +35,10 @@ jobs:
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           commonmeta list upload/posts.json -f jsonfeed > upload/commonmeta.json
-      - name: Convert commonmeta to crossref xml
+      - name: Update Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta list upload/commonmeta.json -f commonmeta --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" -t crossrefxml > upload/${{ steps.current_date.outputs.NOW }}
-      - name: Update content via Crossref API
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          curl -X POST https://doi.crossref.org/servlet/deposit -F "operation=doMDUpload" -F "login_id=${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" -F "login_passwd=${{ secrets.CROSSREF_PASSWORD }}" -F "fname=@upload/${{ steps.current_date.outputs.NOW }}"
+          commonmeta push upload/commonmeta.json -f commonmeta -t crossref --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id ${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd ${{ secrets.CROSSREF_PASSWORD }}" > upload/response.json
       - name: update InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
