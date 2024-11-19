@@ -38,11 +38,11 @@ jobs:
       - name: Register Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta push upload/commonmeta.json -f commonmeta -t crossrefxml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" > upload/response.json
+          commonmeta push upload/commonmeta.json -f commonmeta -t crossrefxml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --legacyKey "${{ secrets.SUPABASE_KEY }}" > upload/response.json
       - name: create InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacyKey ${{ secrets.SUPABASE_KEY }} > upload/response.json
+          commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token "${{ secrets.INVENIORDM_TOKEN }}" --legacyKey "${{ secrets.SUPABASE_KEY }}" > upload/response.json
           echo "UUID=$(jq -r '.[0].uuid' upload/response.json)" >> $GITHUB_OUTPUT
           echo "DOI=$(jq -r '.[0].doi' upload/response.json)" >> $GITHUB_OUTPUT
           echo "COMMUNITY=$(jq -r '.[0].community' upload/response.json)" >> $GITHUB_OUTPUT
