@@ -16,7 +16,7 @@ jobs:
       - name: Download most recent unregistered post
         run: |
           mkdir -p upload
-          curl https://api.rogue-scholar.org/posts/unregistered?per_page=1 > upload/posts.json
+          curl https://api.rogue-scholar.org/posts/unregistered?per_page=10 > upload/posts.json
       - name: Set number of unregistered posts as variable
         id: current_number
         run: |
@@ -24,7 +24,7 @@ jobs:
       - name: Install commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          go install github.com/front-matter/commonmeta@v0.6.9
+          go install github.com/front-matter/commonmeta@v0.6.10
           commonmeta version
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
