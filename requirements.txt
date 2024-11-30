@@ -946,7 +946,7 @@ s3fs==0.4.2
     # via invenio-s3
 s3transfer==0.10.3
     # via boto3
-sentry-sdk==1.45.1
+sentry-sdk==2.8.0
     # via invenio-logging
 setuptools==75.2.0
     # via
