@@ -14,6 +14,7 @@ dependencies = [
     "invenio-records-resources~=5.10.0",
     "invenio-search[opensearch2]~=2.4.1",
     "invenio-s3~=1.0.0",
+    "invenio-oauthclient~=4.1.1",
     "idutils~=1.4.0",
     "babel-edtf~=1.2.0",
     "importlib-metadata~=6.11.0",

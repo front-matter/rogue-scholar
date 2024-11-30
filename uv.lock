@@ -1745,7 +1745,7 @@ wheels = [
 
 [[package]]
 name = "invenio-oauthclient"
-version = "4.0.2"
+version = "4.1.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "blinker" },
@@ -1756,14 +1756,15 @@ dependencies = [
     { name = "invenio-i18n" },
     { name = "invenio-mail" },
     { name = "invenio-theme" },
+    { name = "markupsafe" },
     { name = "oauthlib" },
     { name = "requests-oauthlib" },
     { name = "uritemplate" },
     { name = "uritools" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3c/27/106ffcd0527fb994ef36f1ea07cd466d20a63951166690a1f24dbf2d19b9/invenio-oauthclient-4.0.2.tar.gz", hash = "sha256:1f878930b6c6fd5adae48630ecc4ca2e1abb1da35d0bc0fa062d7f9af50c4cdb", size = 117170 }
+sdist = { url = "https://files.pythonhosted.org/packages/52/d8/339eb31740c0c8f6beee5d9d8ea0ac7d4613a139a4aa051e07406e3405d1/invenio-oauthclient-4.1.1.tar.gz", hash = "sha256:14d68ef4c3e5f4a5697a319050208c8a89f731eeab66389d10bd5332bbc06b19", size = 117766 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/25/96/85ddf736f6eed8f468bf5609c356bb4d75d0680c5410d8562cdfe18dff4e/invenio_oauthclient-4.0.2-py2.py3-none-any.whl", hash = "sha256:087c9732e9f2dabfe59b4ae2cae836b0c2f046badee020d90732fb43e934d47f", size = 202119 },
+    { url = "https://files.pythonhosted.org/packages/1c/a2/02ab389be6ae1f6432e4dd3cfc350dbc044594ee15fe462288598832db23/invenio_oauthclient-4.1.1-py2.py3-none-any.whl", hash = "sha256:356f6ee3331503bfb09a406fc6e4ee588a3c8820b24620255ee5617ccf8d4bac", size = 202524 },
 ]
 
 [[package]]
@@ -3371,6 +3372,7 @@ dependencies = [
     { name = "idutils" },
     { name = "importlib-metadata" },
     { name = "invenio-app-rdm" },
+    { name = "invenio-oauthclient" },
     { name = "invenio-rdm-records" },
     { name = "invenio-records-resources" },
     { name = "invenio-s3" },
@@ -3386,6 +3388,7 @@ requires-dist = [
     { name = "idutils", specifier = "~=1.4.0" },
     { name = "importlib-metadata", specifier = "~=6.11.0" },
     { name = "invenio-app-rdm", specifier = "~=12.0.10" },
+    { name = "invenio-oauthclient", specifier = "~=4.1.1" },
     { name = "invenio-rdm-records", specifier = "~=10.8.6" },
     { name = "invenio-records-resources", specifier = "~=5.10.0" },
     { name = "invenio-s3", specifier = "~=1.0.0" },
