@@ -25,7 +25,7 @@ jobs:
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
         run: |
           go install github.com/front-matter/commonmeta@v0.6.20
-          commonmeta version
+          commonmeta -v
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
         run: |
