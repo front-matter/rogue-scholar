@@ -1,0 +1,37 @@
+/***********************************************
+         Invenio RDM Starter List Overrides
+***********************************************/
+
+@orderedCountName: ordered;
+@orderedCountContent: counters(ordered) ". ";
+@orderedCountColor: @textColor;
+@orderedCountDistance: 1.5rem;
+@orderedCountOpacity: 0.8;
+@orderedCountTextAlign: left;
+@orderedCountVerticalAlign: middle;
+
+ol.details-list {
+  li.item {
+    padding-left: 0 !important;
+    line-height: 20px !important;
+
+    &:not(:last-child) {
+      margin-bottom: 0.25rem !important;
+    }
+  }
+  li.item:before {
+    display: inline-block;
+    position: absolute;
+    top: auto;
+    left: auto;
+    user-select: none;
+    pointer-events: none;
+    margin-left: -(@orderedCountDistance) !important;
+    counter-increment: @orderedCountName !important;
+    content: @orderedCountContent !important;
+    text-align: @orderedCountTextAlign important;
+    color: @orderedCountColor !important;
+    vertical-align: @orderedCountVerticalAlign !important;
+    opacity: @orderedCountOpacity !important;
+  }
+}
