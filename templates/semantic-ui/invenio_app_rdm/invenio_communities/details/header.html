@@ -1,7 +1,8 @@
 {# -*- coding: utf-8 -*-
 
   This file is part of Invenio.
-  Copyright (C) 2016-2020 CERN.
+  Copyright (C) 2016-2024 CERN.
+  Copyright (C) 2024 Northwestern University.
 
   Invenio is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
@@ -13,12 +14,38 @@
 {% set feed_url = community.ui.custom_fields.get("rs:feed_url", None) %}
 {% set issn = community.ui.custom_fields.get("rs:issn", None) %}
 
+{% macro button_to_request_membership(community) %}
+  {% if permissions.can_request_membership %}
+  {# TODO: Add relation_to_community for other flows #}
+  <div
+    id="request-membership-app"
+    data-community='{{ community_ui | tojson }}'
+    class="display-inline-block"
+    >
+  </div>
+  {% endif %}
+{% endmacro %}
+
+{% macro community_title(community) %}
+  <div class="ui small header">
+    <a href="{{ url_for('invenio_app_rdm_communities.communities_detail', pid_value=community.slug) }}" class="ui small header">
+      {{ community.metadata.title }}
+    </a>
+    <!-- Show the icon for subcommunities -->
+    {% if community.parent %}
+      <p class="ml-2 mb-0 display-inline-block">
+        <i class="green check circle outline icon"></i>
+      </p>
+    {% endif %}
+  </div>
+{% endmacro %}
+
 <div
   class="ui container fluid page-subheader-outer with-submenu rel-pt-2 ml-0-mobile mr-0-mobile">
   <div class="ui container relaxed grid page-subheader mr-0-mobile ml-0-mobile">
     <div class="row pb-0">
       <div
-        class="sixteen wide mobile sixteen wide tablet thirteen wide computer column">
+        class="sixteen wide mobile sixteen wide tablet eleven wide computer column">
         <div
           class="community-header flex align-items-center column-mobile align-items-start-mobile">
           <div class="flex align-items-center">
@@ -31,16 +58,13 @@
             </div>
 
             <div class="mobile only">
-              <h1 class="ui medium header mb-5">
-                {{ community.metadata.title }}
-              </h1>
+              {{community_title(community)}}
             </div>
           </div>
 
           <div>
             <div class="flex align-items-center mb-5 tablet computer only">
-              <h1 class="ui medium header mb-0">{{ community.metadata.title }}</h1>
-
+              {{community_title(community)}}
               {% if community.access.visibility == 'restricted' %}
                 <div class="rel-ml-1">
                   {{ access_status_label() }}
@@ -52,6 +76,15 @@
               {% if community.access.visibility == 'restricted' %}
                 <div class="mobile only rel-mb-1">
                   {{ access_status_label() }}
+                </div>
+              {% endif %}
+              {% if community.parent %}
+                <div class="inline-computer mt-5 rel-mr-1">
+                  <span class="ui tiny header">Part of </span>
+                  <a
+                  href="{{ url_for('invenio_app_rdm_communities.communities_home', pid_value=community.parent.slug) }}">
+                  {{community.parent.metadata.title}}
+                  </a>
                 </div>
               {% endif %}
 
@@ -97,44 +130,23 @@
               {% endif %}
 
               {% if community.metadata.organizations %}
-                {% for org in community.metadata.organizations %}
-                  {% set ror_id = org.id %}
-                  {% set name = org.name %}
-
-                  <div class="inline-computer mt-5">
-                    {% if loop.index == 1 %}
-                      <i class="building outline icon" aria-hidden="true"></i>
-                    {% endif %}
-
-                    {{ name }}
-
-                    {% if ror_id %}
-                      <a
-                        href="https://ror.org/{{ ror_id }}"
-                        aria-label="{{ name }}'s ROR {{ _('profile') }}"
-                        title="{{ name }}'s ROR {{ _('profile') }}"
-                        target="_blank"
-                      >
-                        <img
-                          class="inline-id-icon"
-                          src="{{ url_for('static', filename='images/ror-icon.svg') }}"
-                          alt=""
-                        />
-                      </a>
-                    {% endif %}
-                    {{ ", " if not loop.last }}
-                  </div>
-                {% endfor %}
+                    <div class="inline-computer" id="organizations-list" data-organizations='{{ community.metadata.organizations|tojson }}'></div>
               {% endif %}
             </div>
           </div>
         </div>
       </div>
       <div
-        class="sixteen wide mobile sixteen wide tablet three wide computer right aligned middle aligned column">
+        class="sixteen wide mobile sixteen wide tablet five wide computer right aligned middle aligned column">
+        {{ button_to_request_membership(community) }}
         {%- if not community_use_jinja_header %}
+          {%- if not permissions.can_submit_record %}
+            <div class="ui icon inline-block" data-tooltip="{{_('Submission to this community is only allowed to community members.')}}">
+              <i class="grey question circle outline icon mb-5"></i>
+            </div>
+          {% endif %}
           <a href="/uploads/new?community={{ community.slug }}"
-             class="ui positive button labeled icon rel-mt-1 theme-secondary">
+             class="ui positive button labeled icon rel-mt-1 theme-secondary {{ 'disabled' if not permissions.can_submit_record }}">
             <i class="upload icon" aria-hidden="true"></i>
             {{ _("New upload") }}
           </a>
