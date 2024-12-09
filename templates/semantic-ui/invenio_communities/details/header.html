@@ -137,27 +137,24 @@
                 </div>
               {% endif %}
 
-              {% if license %}
-                <div class="inline-computer mt-5 rel-mr-1">
-                  <a href="{{ license }}">
-                    <span class="icon-wrap">
-                      {% if license_text == "CC BY 4.0" %}
-                        <img class="icon" src="/static/icons/licenses/cc-by-icon.svg" alt="cc-by-4.0 icon">
-                      {% elif license_text == "CC0 1.0" %}
-                        <img class="icon" src="/static/icons/licenses/cc-cc0-icon.svg" alt="cc0-1.0 icon">
-                      {% endif %}
-                    </span>
-                    {{ license_text }}
-                  </a>
-                </div>
-              {% endif %}
-
               {% if community.metadata.type is defined %}
                 <div class="inline-computer mt-5 rel-mr-1">
                   <i class="tag icon" aria-hidden="true"></i>
                   <span class="label label-keyword">
                     {{ community.ui.type.title_l10n }}
                   </span>
+                </div>
+              {% endif %}
+
+              {% if license %}
+                <div class="inline-computer mt-5 rel-mr-1">
+                  <a class="ui tiny image" href="{{ license }}">
+                    {% if license == "https://creativecommons.org/publicdomain/zero/1.0/legalcode" %}
+                      <img src="/static/icons/licenses/cc-cc0-icon.svg" alt="cc0-1.0 icon">
+                    {% else %}
+                      <img src="/static/icons/licenses/cc-by-icon.svg" alt="cc-by-4.0 icon">
+                    {% endif %}
+                  </a>
                 </div>
               {% endif %}
 
