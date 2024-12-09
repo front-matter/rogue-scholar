@@ -11,7 +11,7 @@
 {%- from "invenio_theme/macros/truncate.html" import truncate_text %}
 {%- from "invenio_communities/details/macros/access-status-label.html" import access_status_label -%}
 {% set feed_url = community.ui.custom_fields.get("rs:feed_url", None) %}
-{% set feed_url = community.ui.custom_fields.get("rs:feed_url", None) %}
+{% set generator = community.ui.custom_fields.get("rs:generator", None) %}
 {% set issn = community.ui.custom_fields.get("rs:issn", None) %}
 
 {% macro button_to_request_membership(community) %}
@@ -108,15 +108,14 @@
 
               {% if generator %}
                 <div class="inline-computer mt-5 rel-mr-1">
-                  <i class="compass icon" aria-hidden="true"></i>
+                  <i class="keyboard icon" aria-hidden="true"></i>
                   {{ generator }}
                 </div>
               {% endif %}
 
               {% if issn %}
                 <div class="inline-computer mt-5 rel-mr-1">
-                  <i class="globe icon" aria-hidden="true"></i>
-                  {{ issn }}
+                  ISSN {{ issn }}
                 </div>
               {% endif %}
 
