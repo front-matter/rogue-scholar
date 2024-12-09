@@ -148,7 +148,7 @@
 
               {% if license %}
                 <div class="inline-computer mt-5 rel-mr-1">
-                  <a class="ui tiny image" href="{{ license }}">
+                  <a class="ui bottom aligned tiny image" href="{{ license }}">
                     {% if license == "https://creativecommons.org/publicdomain/zero/1.0/legalcode" %}
                       <img src="/static/icons/licenses/cc-cc0-icon.svg" alt="cc0-1.0 icon">
                     {% else %}
@@ -159,7 +159,7 @@
               {% endif %}
 
               {% if community.metadata.organizations %}
-                    <div class="inline-computer" id="organizations-list" data-organizations='{{ community.metadata.organizations|tojson }}'></div>
+                <div class="inline-computer" id="organizations-list" data-organizations='{{ community.metadata.organizations|tojson }}'></div>
               {% endif %}
             </div>
           </div>
