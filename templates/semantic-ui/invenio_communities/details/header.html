@@ -11,28 +11,24 @@
 {%- from "invenio_theme/macros/truncate.html" import truncate_text %}
 {%- from "invenio_communities/details/macros/access-status-label.html" import access_status_label -%}
 {% set feed_url = community.ui.custom_fields.get("rs:feed_url", None) %}
-{% set feed_format = community.ui.custom_fields.get("rs:feed_format", None) %}
-{% if feed_format and feed_format == "application/atom+xml" %}
+{% set feed_format = community.ui.custom_fields.get("rs:feed_format", "") %}
+{% if feed_format == "application/atom+xml" %}
   {% set feed_text = "Atom Feed" %}
-{% elif feed_format and feed_format == "application/feed+json" %}
+{% elif feed_format == "application/feed+json" %}
   {% set feed_text = "JSON Feed" %}
 {% else %}
   {% set feed_text = "RSS Feed" %}
 {% endif %}
 {% set generator = community.ui.custom_fields.get("rs:generator", None) %}
 {% set issn = community.ui.custom_fields.get("rs:issn", None) %}
-{% set license = community.ui.custom_fields.get("rs:license", None) %}
-{% if license and license == "https://creativecommons.org/licenses/by/4.0/legalcode" %}
+{% set license = community.ui.custom_fields.get("rs:license", "") %}
+{% if license == "https://creativecommons.org/licenses/by/4.0/legalcode" %}
   {% set license_text = "CC BY 4.0" %}
-{% elif license and license == "https://creativecommons.org/publicdomain/zero/1.0/legalcode" %}
+{% elif license == "https://creativecommons.org/publicdomain/zero/1.0/legalcode" %}
   {% set license_text = "CC0 1.0" %}
+{% else %}
+  {% set license_text = "" %}
 {% endif %}
-
-{% macro button_to_request_membership(community) %}
-  {% if permissions.can_request_membership %}
-
-{% macro button_to_request_membership(community) %}
-  {% if permissions.can_request_membership %}
 {% set generator = community.ui.custom_fields.get("rs:generator", None) %}
 {% set issn = community.ui.custom_fields.get("rs:issn", None) %}
 
