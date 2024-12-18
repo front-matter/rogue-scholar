@@ -10,6 +10,7 @@
 
 {%- from "invenio_theme/macros/truncate.html" import truncate_text %}
 {%- from "invenio_communities/details/macros/access-status-label.html" import access_status_label -%}
+{%- from "datetime" import datetime %}
 {% set feed_url = community.ui.custom_fields.get("rs:feed_url", None) %}
 {% set feed_format = community.ui.custom_fields.get("rs:feed_format", "") %}
 {% if feed_format == "application/atom+xml" %}
@@ -31,6 +32,14 @@
 {% endif %}
 {% set generator = community.ui.custom_fields.get("rs:generator", None) %}
 {% set issn = community.ui.custom_fields.get("rs:issn", None) %}
+{% set joined = community.ui.custom_fields.get("rs:joined", None) %}
+{% if joined %}
+  {% set joined_text = datetime.fromisoformat(joined).strftime("%B %d, %Y") %}
+{% else %}
+  {% set joined_text = "" %}
+{% endif %}
+{% set language = community.ui.custom_fields.get("rs:language", None) %}
+{% set category = community.ui.custom_fields.get("rs:category", None) %}
 
 {% macro button_to_request_membership(community) %}
   {% if permissions.can_request_membership %}
@@ -134,6 +143,27 @@
               {% if issn %}
                 <div class="inline-computer mt-5 rel-mr-1">
                   ISSN {{ issn }}
+                </div>
+              {% endif %}
+
+              {% if joined %}
+                <div class="inline-computer mt-5 rel-mr-1">
+                  <i class="calendar plus icon" aria-hidden="true"></i>
+                  {{ joined_text }}
+                </div>
+              {% endif %}
+
+              {% if language %}
+                <div class="inline-computer mt-5 rel-mr-1">
+                  <i class="language icon" aria-hidden="true"></i>
+                  {{ language }}
+                </div>
+              {% endif %}
+
+              {% if category %}
+                <div class="inline-computer mt-5 rel-mr-1">
+                  <i class="chart pie icon" aria-hidden="true"></i>
+                  {{ category }}
                 </div>
               {% endif %}
 
