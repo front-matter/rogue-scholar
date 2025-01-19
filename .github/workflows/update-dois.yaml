@@ -50,4 +50,4 @@ jobs:
       - name: Update Rogue Scholar posts
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          curl -X PATCH https://db.rogue-scholar.org/rest/v1/posts?id=in.%28${{ steps.response.outputs.UUIDS }}%29 -H "apikey: ${{ secrets.SUPABASE_KEY }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" -H "Content-Type: application/json" -H "Prefer: return=minimal" -d '{ "indexed_at": "${{ steps.current_date.outputs.NOW }}", "indexed": true }'
+          curl -X PATCH https://zggonsjmmfozmfxlrjmg.supabase.co/rest/v1/posts?id=in.%28${{ steps.response.outputs.UUIDS }}%29 -H "apikey: ${{ secrets.SUPABASE_KEY }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" -H "Content-Type: application/json" -H "Prefer: return=minimal" -d '{ "indexed_at": "${{ steps.current_date.outputs.NOW }}", "indexed": true }'
