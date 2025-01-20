@@ -24,7 +24,7 @@ jobs:
       - name: Install commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
         run: |
-          go install github.com/front-matter/commonmeta@v0.6.32
+          go install github.com/front-matter/commonmeta@v0.6.33
           commonmeta -v
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
@@ -47,7 +47,4 @@ jobs:
           cat upload/response.json
           echo "UUIDS=$(jq -rc '[.[] | .uuid] | join(",")' upload/response.json)" >> $GITHUB_OUTPUT
         id: response
-      - name: Update Rogue Scholar posts
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          curl -X PATCH https://zggonsjmmfozmfxlrjmg.supabase.co/rest/v1/posts?id=in.%28${{ steps.response.outputs.UUIDS }}%29 -H "apikey: ${{ secrets.SUPABASE_KEY }}" -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" -H "Content-Type: application/json" -H "Prefer: return=minimal" -d '{ "indexed_at": "${{ steps.current_date.outputs.NOW }}", "indexed": true }'
+      
