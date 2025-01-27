@@ -49,9 +49,3 @@ jobs:
           echo "DOI=$(jq -r '.[0].doi' upload/response.json)" >> $GITHUB_OUTPUT
           echo "COMMUNITY=$(jq -r '.[0].community' upload/response.json)" >> $GITHUB_OUTPUT
         id: response
-      - name: Update Front Matter blog
-        if: steps.response.outputs.COMMUNITY == 'front_matter'
-        run: commonmeta update-ghost-post --api-key ${{ secrets.GHOST_ADMIN_API_KEY }} --api-url ${{ secrets.GHOST_ADMIN_API_URL }} ${{ steps.response.outputs.UUID }}
-      - name: Update Upstream blog
-        if: steps.response.outputs.COMMUNITY == 'upstream'
-        run: commonmeta update-ghost-post --api-key ${{ secrets.UPSTREAM_ADMIN_API_KEY }} --api-url ${{ secrets.UPSTREAM_ADMIN_API_URL }} ${{ secrets.UPSTREAM_ADMIN_API_URL }} ${{ steps.response.outputs.UUID }}
