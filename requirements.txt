@@ -273,7 +273,7 @@ flask-sqlalchemy==2.5.1
     #   invenio-db
 flask-talisman==0.8.1
     # via invenio-app
-flask-webpackext==1.0.2
+flask-webpackext==2.0.0
     # via invenio-assets
 flask-wtf==1.2.1
     # via
@@ -367,9 +367,9 @@ invenio-administration==2.2.4
     #   invenio-users-resources
 invenio-app==1.5.0
     # via invenio-app-rdm
-invenio-app-rdm==12.0.10
+invenio-app-rdm==12.0.13
     # via rogue-scholar (pyproject.toml)
-invenio-assets==3.0.3
+invenio-assets==3.1.0
     # via
     #   invenio-app-rdm
     #   invenio-github
@@ -503,7 +503,7 @@ invenio-mail==2.1.1
     #   invenio-oauthclient
 invenio-notifications==0.6.0
     # via invenio-users-resources
-invenio-oaiserver==2.2.3
+invenio-oaiserver==2.3.0
     # via
     #   invenio-app-rdm
     #   invenio-communities
@@ -853,9 +853,7 @@ pymdown-extensions==10.11.2
 pymysql==1.1.1
     # via invenio-db
 pynpm==0.2.0
-    # via
-    #   flask-webpackext
-    #   pywebpack
+    # via pywebpack
 pyparsing==3.2.0
     # via
     #   bibtexparser
@@ -885,10 +883,8 @@ pytz==2024.2
     #   flask-restful
     #   invenio-indexer
     #   invenio-rdm-records
-pywebpack==2.0.1
-    # via
-    #   flask-webpackext
-    #   invenio-assets
+pywebpack==2.1.0
+    # via flask-webpackext
 pyyaml==6.0.2
     # via
     #   commonmeta-py
