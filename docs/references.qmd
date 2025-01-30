@@ -27,4 +27,6 @@ This information is then used to include the references in the DOI metadata regi
 1. Harris, J.D. and Dodson, P., 2004. A new diplodocoid sauropod dinosaur from the Upper Jurassic Morrison Formation of Montana, USA. Acta Palaeontologica Polonica, 49(2):197-210. https://www.app.pan.pl/archive/published/app49/app49-197.pdf
 1. Melstrom, K. M., D'emic, M. D., Chure, D., & Wilson, J. A. (2016). A juvenile sauropod dinosaur from the Late Jurassic of Utah, U.S.A., presents further evidence of an avian style air-sac system. Journal of Vertebrate Paleontology, 36(4), e1111898. https://doi.org/10.1080/02724634.2016.1111898
 
+References indexed in Rogue Scholar are searchable, allowing you to list all Rogue Scholar blog posts that cite a particular DOI or URL. For example: https://rogue-scholar.org/search?q=references%3A10.53731%2Fr79x921-97aq74v-ag5a2
+
 ### References
