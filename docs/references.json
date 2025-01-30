@@ -152,5 +152,40 @@
 				]
 			]
 		}
+	},
+	{
+		"id": "fennerPersistentIdentifiersRandom2025",
+		"type": "post-weblog",
+		"abstract": "Continuing the work on streamlining the DOI assignment for new blog posts in the Rogue Scholar science blog archive, I discovered and fixed a major bug. Rogue Scholar DOIs strings are generated from a random number and include a checksum. It turns out that this checksum was wrong, affecting all Rogue Scholar posts generated with the commonmeta Go library between May 2024 and today.",
+		"container-title": "Front Matter",
+		"language": "en",
+		"license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+		"note": "DOI: 10.53731/6kfyy-nq280",
+		"title": "Persistent identifiers, random strings, and checksums",
+		"URL": "https://blog.front-matter.io/posts/persistent-identifiers-random-strings-and-checksums-2",
+		"author": [
+			{
+				"family": "Fenner",
+				"given": "Martin"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					1,
+					30
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2025",
+					1,
+					16
+				]
+			]
+		}
 	}
 ]
