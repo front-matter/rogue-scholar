@@ -1,0 +1,59 @@
+project:
+  type: website
+  output-dir: _site
+  preview:
+    port: 4500
+execute:
+  freeze: true
+website:
+  title: "Rogue Scholar Documentation"
+  favicon: favicon.ico
+  site-url: https://docs.rogue-scholar.org
+  repo-url: https://github.com/front-matter/rogue-scholar
+  repo-subdir: docs
+  repo-actions: [edit, issue]
+  bread-crumbs: false
+  navbar:
+    background: light
+    logo: "/images/icon.png"
+    logo-alt: "Rogue Scholar Documentation"
+    right:
+      - icon: github
+        href: https://github.com/front-matter/rogue-scholar
+  sidebar:
+    contents:
+      - index.qmd
+      - guidelines.qmd
+      - metadata.qmd
+      - doi.qmd
+      - references.qmd
+      - section: "Blogging Platforms"
+        contents:
+          - platforms.qmd
+          - wordpress.qmd
+          - ghost.qmd
+          - hugo.qmd
+          - jekyll.qmd
+          - quarto.qmd
+      - api.qmd
+  page-footer:
+    left: "Copyright &copy;2023-2024 Rogue Scholar."
+    right:
+      - icon: envelope
+        href: mailto:info@rogue-scholar.org
+      - icon: mastodon 
+        href: https://wisskomm.social/@rogue_scholar
+
+format:
+  html:
+    theme:
+      light: [flatly, theme.scss]
+      dark: [darkly, theme.scss]
+    page-layout: article
+    toc: true
+    toc-location: right
+    comments:
+      giscus: 
+        repo: front-matter/legacy.rogue-scholar
+        category-id: DIC_kwDOItYbpM4CTyur
+        mapping: url

@@ -1,0 +1,17 @@
+---
+title: Ghost
+categories:
+  - cms
+  - open source
+  - api
+  - javascript
+---
+
+[Ghost](https://ghost.org) is an open source blogging platform written in JavaScript and distributed under the [MIT License](https://opensource.org/license/mit/).
+
+### Examples
+
+The following science blogs use Ghost as a platform:
+
+* [Upstream](https://upstream.force11.org) - The community blog for all things Open Research.
+* [OA.Works Blog](https://blog.oa.works/)

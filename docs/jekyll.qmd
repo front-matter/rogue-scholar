@@ -1,0 +1,17 @@
+---
+title: Jekyll
+categories:
+  - static site generator
+  - open source
+  - ruby
+---
+
+[Jekyll](https://jekyllrb.com/) is a static site generator that powers [GitHub Pages](https://pages.github.com/). Jekyll is written in Ruby.
+
+### Examples
+
+The following science blogs use Jekyll as a platform:
+
+* [Martin Paul Eve](https://eve.gd/)
+* [Journal of Open Source Software Blog](https://blog.joss.theoj.org/)
+* [Bastian Greshake Tzovaras](https://tzovar.as/)

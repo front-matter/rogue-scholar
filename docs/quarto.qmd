@@ -1,0 +1,16 @@
+---
+title: Quarto
+categories:
+  - static site generator
+  - open source
+  - javascript
+---
+
+[Quarto](https://quarto.org) is an open source blogging platform written in JavaScript and distributed under the [MIT License](https://opensource.org/license/mit/).
+
+### Examples
+
+The following science blogs use Quarto as a platform:
+
+* [Andrew Heiss's blog](https://www.andrewheiss.com/)
+* [Chris von Csefalvay](https://chrisvoncsefalvay.com/posts/index.html) - Chris von Csefalvay is a computational epidemiologist/data scientist working at the intersection of AI, epidemiology and public health.

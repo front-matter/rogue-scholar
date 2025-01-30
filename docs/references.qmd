@@ -1,0 +1,28 @@
+---
+title: References
+from: markdown+autolink_bare_uris
+---
+
+References are an important functionality of scholarly documents. Formal references are not common in science blog posts. One important reason is that blogging platforms have historically not provided functionality to include references.
+
+Rogue Scholar uses the full-text content to extract references. As there is no standard way to format references, Rogue Scholar uses two preferred strategies and one fallback strategy:
+
+1. The blog uses `citeproc` (the most popular library to format references and used by reference managers Zotero, Mendeley and many others) to generated reference lists, for example via the [Quarto](/quarto) publishing platform.
+1. Reference sections start with a (h1, h2, h3 or h4) heading named `References`, followed by an ordered or unordered list.
+1. As a fallback strategy, Rogue Scholar looks for a heading named `References` and extracts all links it finds.
+
+Rogue Scholar stores the references in a list with keys for each entry, both optional:
+
+* `id` - the identifier for the reference, expressed as linkable URL
+* `reference` - the text string of the reference, ideally formatted in a citation style.
+
+This information is then used to include the references in the DOI metadata registered with Crossref or DataCite, and in the metadata registered with the Rogue Scholar repository software. For example [this blog post](https://rogue-scholar.org/records/sct67-gjz16):
+
+### References
+
+1. Boisvert, C., Curtice, B., Wedel, M., & Wilhite, R. (2024). Description of a new specimen of Haplocanthosaurus from the Dry Mesa Dinosaur Quarry. The Anatomical Record, 307(12), 3782–3800. https://doi.org/10.1002/ar.25520
+1. Danison, A., Wedel, M., Barta, D., Woodward, H., Flora, H., Lee, A., & Snively, E. (2024). Chimerism in specimens referred to Saurophaganax maximus reveals a new species of Allosaurus (Dinosauria, Theropoda). Vertebrate Anatomy Morphology Palaeontology, 12. https://doi.org/10.18435/vamp29404 https://journals.library.ualberta.ca/vamp/index.php/VAMP/article/view/29404
+1. Hanik, Gina M., Matthew C. Lamanna and John A. Whitlock. 2017. A juvenile specimen of *Barosaurus *Marsh, 1890 (Sauropoda: Diplodocidae) from the Upper Jurassic Morrison Formation of Dinosaur National Monument, Utah, USA. Annals of Carnegie Museum 84(3):253–263.
+1. Harris, J.D. 1998. A reanalysis of Acrocanthosaurus atokensis, its phylogenetic status, and paleobiogeographic implications, based on a new specimen from Texas. New Mexico Museum of Natural History and Science 13:1−75. https://econtent.unm.edu/digital/collection/bulletins/id/1053
+1. Harris, J.D. and Dodson, P., 2004. A new diplodocoid sauropod dinosaur from the Upper Jurassic Morrison Formation of Montana, USA. Acta Palaeontologica Polonica, 49(2):197-210. https://www.app.pan.pl/archive/published/app49/app49-197.pdf
+1. Melstrom, K. M., D'emic, M. D., Chure, D., & Wilson, J. A. (2016). A juvenile sauropod dinosaur from the Late Jurassic of Utah, U.S.A., presents further evidence of an avian style air-sac system. Journal of Vertebrate Paleontology, 36(4), e1111898. https://doi.org/10.1080/02724634.2016.1111898

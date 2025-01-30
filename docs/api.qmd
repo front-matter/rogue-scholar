@@ -1,0 +1,9 @@
+---
+title: API
+categories:
+  - api
+---
+
+The [Rogue Scholar API](https://inveniordm.docs.cern.ch/reference/rest_api_index/) is provided by the InvenioRDM application. A customized version of the API documentation for Rogue Scholar is in the works. 
+
+The [previous version of the API](https://api.rogue-scholar.org) is still available with documentation with a SwaggerUI interface at [https://api.rogue-scholar.org/docs](https://api.rogue-scholar.org/docs), but will be retired in the first half of 2025.

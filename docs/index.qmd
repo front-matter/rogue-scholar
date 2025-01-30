@@ -1,0 +1,22 @@
+---
+title: What is Rogue Scholar?
+---
+
+:::{.callout-tip}
+You can help improve the Rogue Scholar documentation by using the links on the right.
+:::
+
+The [Rogue Scholar](https://rogue-scholar.org) is an archive for scholarly blog posts, hosted by [Front Matter](https://front-matter.io). 
+Rogue Scholar improves your science blog in important ways, including full-text search, long-term archiving, and DOIs and metadata. Rogue Scholar is powered by a customized version of the [InvenioRDM](https://inveniordm.docs.cern.ch/) repository software.
+
+### Full-Text Search
+
+Most blogging platforms don't support full-text search (which requires a backend service such as Elasticsearch), and instead use tags to classify content. In addition, the search typically is local to the blog, and doesn't find related content on other blogs. InvenioRDM and therefore Rogue Scholar use the [OpenSearch](https://opensearch.org/) software (an Elasticsearch fork) to provide full-text search.
+
+### Long-Term Archiving
+
+Blog content is typically not available long-term, in particular for blogs maintained by individuals or time-limited projects. Rogue Scholar has a subscription to the Internet Archive [Archive-It](https://archive-it.org/home/rogue-scholar) service that provides long-term archiving for all participating blogs.
+
+### DOIs and Metadata
+
+DOIs and consistent metadata facilitate Full-Text Search and Long-Term Archiving. Metadata such as language, subject area, title, abstract, and author names support discovery. DOI registration helps with URL changes as URLs not only change paths with platform changes (which can be resolved with redirection on the host), but may also change hosts. A special use case is a blog that stopped publishing, and where the DOI can then transparently redirect to the Long-Term Archive. Using DOIs for scholar blogs thus greatly enhances their discoverability and persistence, making it far easier for science blog posts to become part of the scholarly record by citing them.

@@ -1,0 +1,33 @@
+---
+title: Wordpress
+categories:
+  - cms
+  - open source
+  - api
+  - php
+---
+
+[Wordpress](https://wordpress.org) is the most popular blogging platform for science blogs, and websites in general, powering [about 40%](https://kinsta.com/wordpress-market-share/) of all websites. Wordpress is written in PHP.
+
+### Installation
+
+Wordpress can be self-installed, or used as a hosted version. Many organizations offer hosted Wordpress installations, including [Automattic](https://automattic.com), which runs the [Wordpress.com](https://wordpress.com) service. Wordpress installation includes an API, RSS and Atom feeds.
+
+### Recommended plugins
+
+The [Co-Authors Plus](https://wordpress.org/plugins/co-authors-plus/) plugin enables multiple authors per blog post, including guest authors.
+
+The [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugin adds a `canonical url` field to each post and can be used to store the DOI of each post as metadata.
+
+### Configuration
+
+Make sure to use the full name in the `Display name publicly as` user settings. You can optionally add the ORCID ID in the `Website` field.
+
+![](images/wordpress.png)
+
+### Examples
+
+The following science blogs use Wordpress as a platform:
+
+* [GigaBlog](http://gigasciencejournal.com/blog) - Data driven blogging from the GigaScience editors.
+* [Henry Rzepa's Blog](https://www.ch.imperial.ac.uk/rzepa/blog) - Chemistry with a twist.

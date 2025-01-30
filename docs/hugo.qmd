@@ -1,0 +1,16 @@
+---
+title: Hugo
+categories:
+  - static site generator
+  - open source
+  - go
+---
+
+[Hugo](https://gohugo.io) is one of the most popular open-source static site generators. Hugo is written in Go.
+
+### Examples
+
+The following science blogs use Hugo as a platform:
+
+* [rOpenSci](https://ropensci.org/blog/) - Open Tools and R Packages for Open Science
+* [Research Software Alliance](https://researchsoft.org/)
