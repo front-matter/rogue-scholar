@@ -37,7 +37,7 @@ website:
           - quarto.qmd
       - api.qmd
   page-footer:
-    left: "Copyright &copy;2023-2024 Rogue Scholar."
+    left: "Copyright &copy;2023-2025 Rogue Scholar."
     right:
       - icon: envelope
         href: mailto:info@rogue-scholar.org
@@ -54,6 +54,6 @@ format:
     toc-location: right
     comments:
       giscus: 
-        repo: front-matter/legacy.rogue-scholar
+        repo: front-matter/rogue-scholar
         category-id: DIC_kwDOItYbpM4CTyur
         mapping: url
