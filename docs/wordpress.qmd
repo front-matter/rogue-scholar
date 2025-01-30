@@ -5,6 +5,11 @@ categories:
   - open source
   - api
   - php
+format:
+  html:
+    other-links:
+      - text: Wordpress
+        href: https://wordpress.org
 ---
 
 [Wordpress](https://wordpress.org) is the most popular blogging platform for science blogs, and websites in general, powering [about 40%](https://kinsta.com/wordpress-market-share/) of all websites. Wordpress is written in PHP.

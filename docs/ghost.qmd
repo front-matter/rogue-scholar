@@ -5,6 +5,11 @@ categories:
   - open source
   - api
   - javascript
+format:
+  html:
+    other-links:
+      - text: Ghost
+        href: https://ghost.org
 ---
 
 [Ghost](https://ghost.org) is an open source blogging platform written in JavaScript and distributed under the [MIT License](https://opensource.org/license/mit/).

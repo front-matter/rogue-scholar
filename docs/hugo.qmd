@@ -4,6 +4,11 @@ categories:
   - static site generator
   - open source
   - go
+format:
+  html:
+    other-links:
+      - text: Hugo
+        href: https://gohugo.io
 ---
 
 [Hugo](https://gohugo.io) is one of the most popular open-source static site generators. Hugo is written in Go.

@@ -1,5 +1,14 @@
 ---
 title: What is Rogue Scholar?
+format:
+  html:
+    other-links:
+      - text: Rogue Scholar
+        href: https://rogue-scholar.org
+      - text: InvenioRDM
+        href: https://inveniordm.docs.cern.ch/
+      - text: Archive-It Rogue Scholar Page
+        href: https://archive-it.org/home/rogue-scholar
 ---
 
 :::{.callout-tip}

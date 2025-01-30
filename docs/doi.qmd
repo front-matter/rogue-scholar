@@ -14,7 +14,7 @@ The DOI string is randomly generated (format see below) either by Rogue Scholar 
 
 Rogue Scholar registers content with Crossref and uses multiple DOI prefixes for this. The standard prefix is `10.59350`, but for blogs registered by Crossref member organizations, Rogue Scholar can also use other prefixes.
 
-All Rogue Scholar DOIs use a standard format [@fennerPersistentIdentifiersRandom2025]: a random eight letter string (generated from a random number with base32-encoding), followed by a two-digit checksum:
+All Rogue Scholar DOIs use a standard format [@fennerPersistentIdentifiersRandom2025]: a random eight-letter string (generated from a random number with base32-encoding), followed by a two-digit checksum:
 
 ```
 https://doi.org/10.53731/6kfyy-nq280

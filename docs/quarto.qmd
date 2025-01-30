@@ -4,6 +4,11 @@ categories:
   - static site generator
   - open source
   - javascript
+format:
+  html:
+    other-links:
+      - text: Quarto
+        href: https://quarto.org
 ---
 
 [Quarto](https://quarto.org) is an open source blogging platform written in JavaScript and distributed under the [MIT License](https://opensource.org/license/mit/).

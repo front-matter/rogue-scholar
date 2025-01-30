@@ -4,6 +4,13 @@ categories:
   - static site generator
   - open source
   - ruby
+format:
+  html:
+    other-links:
+      - text: Jekyll
+        href: https://jekyllrb.com/
+      - text: GitHub Pages
+        href: https://pages.github.com/
 ---
 
 [Jekyll](https://jekyllrb.com/) is a static site generator that powers [GitHub Pages](https://pages.github.com/). Jekyll is written in Ruby.
