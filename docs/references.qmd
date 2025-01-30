@@ -18,9 +18,7 @@ Rogue Scholar stores the references in a list with keys for each entry, both opt
 
 If the `id` is a doi, Rogue Scholar will lookup the metadata and generate a reference string in the APA citation style.
 
-This information is then used to include the references in the DOI metadata registered with Crossref or DataCite, and in the metadata registered with the Rogue Scholar repository software. For example [this blog post](https://rogue-scholar.org/records/sct67-gjz16):
-
-### References
+This information is then used to include the references in the DOI metadata registered with Crossref or DataCite, and in the metadata registered with the Rogue Scholar repository software. For example [@wedelThatSaurophaganaxPaper2024]:
 
 1. Boisvert, C., Curtice, B., Wedel, M., & Wilhite, R. (2024). Description of a new specimen of Haplocanthosaurus from the Dry Mesa Dinosaur Quarry. The Anatomical Record, 307(12), 3782–3800. https://doi.org/10.1002/ar.25520
 1. Danison, A., Wedel, M., Barta, D., Woodward, H., Flora, H., Lee, A., & Snively, E. (2024). Chimerism in specimens referred to Saurophaganax maximus reveals a new species of Allosaurus (Dinosauria, Theropoda). Vertebrate Anatomy Morphology Palaeontology, 12. https://doi.org/10.18435/vamp29404 https://journals.library.ualberta.ca/vamp/index.php/VAMP/article/view/29404
@@ -28,3 +26,5 @@ This information is then used to include the references in the DOI metadata regi
 1. Harris, J.D. 1998. A reanalysis of Acrocanthosaurus atokensis, its phylogenetic status, and paleobiogeographic implications, based on a new specimen from Texas. New Mexico Museum of Natural History and Science 13:1−75. https://econtent.unm.edu/digital/collection/bulletins/id/1053
 1. Harris, J.D. and Dodson, P., 2004. A new diplodocoid sauropod dinosaur from the Upper Jurassic Morrison Formation of Montana, USA. Acta Palaeontologica Polonica, 49(2):197-210. https://www.app.pan.pl/archive/published/app49/app49-197.pdf
 1. Melstrom, K. M., D'emic, M. D., Chure, D., & Wilson, J. A. (2016). A juvenile sauropod dinosaur from the Late Jurassic of Utah, U.S.A., presents further evidence of an avian style air-sac system. Journal of Vertebrate Paleontology, 36(4), e1111898. https://doi.org/10.1080/02724634.2016.1111898
+
+### References

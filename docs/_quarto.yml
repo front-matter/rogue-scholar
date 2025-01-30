@@ -57,3 +57,5 @@ format:
         repo: front-matter/rogue-scholar
         category-id: DIC_kwDOItYbpM4CTyur
         mapping: url
+bibliography: references.json
+csl: apa.csl

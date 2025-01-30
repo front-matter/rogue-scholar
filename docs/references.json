@@ -1,0 +1,156 @@
+[
+	{
+		"id": "fennerDataCitationRoadmap2019",
+		"type": "article-journal",
+		"abstract": "This article presents a practical roadmap for scholarly data repositories to implement data citation in accordance with the Joint Declaration of Data Citation Principles, a synopsis and harmonization of the recommendations of major science policy bodies. The roadmap was developed by the Repositories Expert Group, as part of the Data Citation Implementation Pilot (DCIP) project, an initiative of FORCE11.org and the NIH-funded BioCADDIE (https://biocaddie.org) project. The roadmap makes 11 specific recommendations, grouped into three phases of implementation: a) required steps needed to support the Joint Declaration of Data Citation Principles, b) recommended steps that facilitate article/data publication workflows, and c) optional steps that further improve data citation support provided by data repositories. We describe the early adoption of these recommendations 18 months after they have first been published, looking specifically at implementations of machine-readable metadata on dataset landing pages.",
+		"container-title": "Scientific Data",
+		"DOI": "10.1038/s41597-019-0031-8",
+		"ISSN": "2052-4463",
+		"issue": "1",
+		"journalAbbreviation": "Sci Data",
+		"language": "en",
+		"license": "2019 The Author(s)",
+		"note": "number: 1\npublisher: Nature Publishing Group",
+		"page": "28",
+		"source": "www.nature.com",
+		"title": "A data citation roadmap for scholarly data repositories",
+		"URL": "https://www.nature.com/articles/s41597-019-0031-8",
+		"volume": "6",
+		"author": [
+			{
+				"family": "Fenner",
+				"given": "Martin"
+			},
+			{
+				"family": "Crosas",
+				"given": "Mercè"
+			},
+			{
+				"family": "Grethe",
+				"given": "Jeffrey S."
+			},
+			{
+				"family": "Kennedy",
+				"given": "David"
+			},
+			{
+				"family": "Hermjakob",
+				"given": "Henning"
+			},
+			{
+				"family": "Rocca-Serra",
+				"given": "Phillippe"
+			},
+			{
+				"family": "Durand",
+				"given": "Gustavo"
+			},
+			{
+				"family": "Berjon",
+				"given": "Robin"
+			},
+			{
+				"family": "Karcher",
+				"given": "Sebastian"
+			},
+			{
+				"family": "Martone",
+				"given": "Maryann"
+			},
+			{
+				"family": "Clark",
+				"given": "Tim"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2022",
+					8,
+					22
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2019",
+					4,
+					10
+				]
+			]
+		}
+	},
+	{
+		"id": "fennerGuidelinesScholarlyBlogs2023",
+		"type": "article-journal",
+		"abstract": "These guidelines are recommendations for authors of scholarly blogs to help with long-term archiving, discoverability, and citation of blog content. They are modeled after the publication A Data Citation Roadmap for Scholarly Data Repositories, where many of the same guidelines apply, and where I was the first author and co-chair",
+		"container-title": "Front Matter",
+		"DOI": "10.53731/a0d9m3n-n7r8h0m",
+		"ISSN": "2749-9952",
+		"language": "en",
+		"license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+		"source": "blog.front-matter.io",
+		"title": "Guidelines for Scholarly Blogs",
+		"URL": "https://doi.org/10.53731/a0d9m3n-n7r8h0m",
+		"author": [
+			{
+				"family": "Fenner",
+				"given": "Martin"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2023",
+					2,
+					6
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2023",
+					2,
+					6
+				]
+			]
+		}
+	},
+	{
+		"id": "wedelThatSaurophaganaxPaper2024",
+		"type": "post-weblog",
+		"abstract": "Newly out in VAMP: Danison, Andy D., Wedel, Mathew J., Barta, Daniel E., Woodward, Holly N., Flora, Holley M., Lee, Andrew H., and Snively, Eric. 2024. Chimerism of specimens referred to Saurophaganax maximus reveals a new species of Allosaurus (Dinosauria, Theropoda). Vertebrate Anatomy Morphology Palaeontology 12:81-114.",
+		"container-title": "Sauropod Vertebra Picture of the Week",
+		"language": "en",
+		"license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+		"note": "DOI: 10.59350/ffgmk-zjj78",
+		"title": "About that <i>Saurophaganax</i> paper",
+		"URL": "https://svpow.com/2024/12/22/about-that-saurophaganax-paper",
+		"author": [
+			{
+				"family": "Wedel",
+				"given": "Matt"
+			}
+		],
+		"accessed": {
+			"date-parts": [
+				[
+					"2025",
+					1,
+					30
+				]
+			]
+		},
+		"issued": {
+			"date-parts": [
+				[
+					"2024",
+					12,
+					22
+				]
+			]
+		}
+	}
+]

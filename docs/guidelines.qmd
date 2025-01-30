@@ -3,7 +3,7 @@ title: Guidelines
 ---
 
 These guidelines are recommendations for authors of scholarly blogs to help with long-term archiving, discoverability, and citation of the blog content.
-They are modelled after the publication *A Data Citation Roadmap for Scholarly Data Repositories* (1), where many of the same guidelines apply, and where the first author is also involved in the Rogue Scholar. Background info about these guidelines is in a blog post (2).
+They are modelled after the publication *A Data Citation Roadmap for Scholarly Data Repositories* [@fennerDataCitationRoadmap2019], where many of the same guidelines apply, and where the first author is also involved in Rogue Scholar. Background info about these guidelines is in a blog post [@fennerGuidelinesScholarlyBlogs2023].
 
 These guidelines focus on the required or recommended work for scholarly blog authors. For scholarly blog archives additional guidelines are in development.
 
@@ -21,6 +21,3 @@ These guidelines focus on the required or recommended work for scholarly blog au
 | Recommended | 10 | Metadata *should* be made available for download in BibTeX and/or another standard bibliographic format. |
 
 ### References
-
-1. Fenner, M., Crosas, M., Grethe, J. S., Kennedy, D., Hermjakob, H., Rocca-Serra, P., Durand, G., Berjon, R., Karcher, S., Martone, M., &amp; Clark, T. (2019). A data citation roadmap for scholarly data repositories. <i>Scientific Data</i>, <i>6</i>(1). <a href="https://doi.org/10.1038/s41597-019-0031-8">https://doi.org/10.1038/s41597-019-0031-8</a>
-1. Fenner, M. (2023). Guidelines for Scholarly Blogs. <i>Front Matter</i>. <a href="https://doi.org/10.53731/a0d9m3n-n7r8h0m">https://doi.org/10.53731/a0d9m3n-n7r8h0m</a>
