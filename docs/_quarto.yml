@@ -13,6 +13,7 @@ website:
   repo-subdir: docs
   repo-actions: [edit, issue]
   bread-crumbs: false
+  open-graph: true
   navbar:
     background: light
     logo: "/images/icon.png"
