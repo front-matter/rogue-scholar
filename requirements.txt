@@ -713,7 +713,7 @@ marshmallow==3.23.0
     #   webargs
 marshmallow-oneofschema==3.1.1
     # via marshmallow-utils
-marshmallow-utils==0.9.3
+marshmallow-utils==0.10.0
     # via invenio-records-resources
 matplotlib-inline==0.1.7
     # via ipython
