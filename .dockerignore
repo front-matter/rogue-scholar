@@ -5,3 +5,4 @@
 # https://docs.docker.com/go/build-context-dockerignore/
 
 # Exclude the following files and directories from the Docker build context
+.venv

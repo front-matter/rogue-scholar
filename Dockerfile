@@ -22,6 +22,7 @@ COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 RUN uv venv /opt/invenio/.venv
 # Use the virtual environment automatically
 ENV VIRTUAL_ENV=/opt/invenio/.venv \
+    UV_PROJECT_ENVIRONMENT=/opt/invenio/.venv \
     # Place entry points in the environment at the front of the path
     PATH="/opt/invenio/.venv/bin:$PATH" \
     WORKING_DIR=/opt/invenio \
@@ -55,6 +56,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt apt-get update -y --
     apt-get clean 
 
 ENV VIRTUAL_ENV=/opt/invenio/.venv \
+    UV_PROJECT_ENVIRONMENT=/opt/invenio/.venv \
     PATH="/opt/invenio/.venv/bin:$PATH" \
     WORKING_DIR=/opt/invenio \
     INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
