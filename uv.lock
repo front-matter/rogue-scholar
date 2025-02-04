@@ -3350,10 +3350,11 @@ wheels = [
 
 [[package]]
 name = "rogue-scholar"
-version = "0.6.0"
+version = "0.7.0"
 source = { editable = "." }
 dependencies = [
     { name = "babel-edtf" },
+    { name = "commonmeta-py" },
     { name = "gunicorn" },
     { name = "idutils" },
     { name = "importlib-metadata" },
@@ -3368,6 +3369,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "babel-edtf", specifier = "~=1.2.0" },
+    { name = "commonmeta-py", specifier = ">=0.8.6" },
     { name = "gunicorn", specifier = "~=22.0.0" },
     { name = "idutils", specifier = "~=1.4.0" },
     { name = "importlib-metadata", specifier = "~=6.11.0" },

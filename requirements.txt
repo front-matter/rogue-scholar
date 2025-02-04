@@ -131,7 +131,9 @@ click-repl==0.3.0
 commonmark==0.9.1
     # via rich
 commonmeta-py==0.8.6
-    # via invenio-rdm-records
+    # via
+    #   rogue-scholar (pyproject.toml)
+    #   invenio-rdm-records
 counter-robots==2018.6
     # via invenio-stats
 cryptography==43.0.3
