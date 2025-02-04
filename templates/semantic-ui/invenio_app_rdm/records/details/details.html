@@ -304,7 +304,8 @@ show_alternate_identifiers, show_related_identifiers, show_funding, show_dates %
         {{ show_references(metadata.references) }}
       </div>
     </div>
-  <div class="ui divider"></div>
+    <div class="ui divider"></div>
+  {% endif %}
 {% endif %}
 
 {% if record.custom_fields.get('rs:citations', None) %}
