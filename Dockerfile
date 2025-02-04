@@ -61,7 +61,7 @@ ENV VIRTUAL_ENV=/opt/invenio/.venv \
     WORKING_DIR=/opt/invenio \
     INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
 
-COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
+COPY --from=builder ${UV_PROJECT_ENVIRONMENT} ${UV_PROJECT_ENVIRONMENT}
 COPY --from=builder ${INVENIO_INSTANCE_PATH}/site ${INVENIO_INSTANCE_PATH}/site
 COPY --from=builder ${INVENIO_INSTANCE_PATH}/static ${INVENIO_INSTANCE_PATH}/static
 COPY --from=builder ${INVENIO_INSTANCE_PATH}/assets ${INVENIO_INSTANCE_PATH}/assets
