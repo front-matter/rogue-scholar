@@ -296,43 +296,15 @@ show_alternate_identifiers, show_related_identifiers, show_funding, show_dates %
   {% endif %}
 
   {% if metadata.references %}
-    {% if metadata.references|length > 5 %}
-      <div class="ui fluid accordion padded grid rel-mb-1">
-        <div class="active title sixteen wide mobile four wide tablet three wide computer column">
-          <h3 class="ui header">
-            <div
-              id="references-accordion-trigger"
-              role="button"
-              tabindex="0"
-              aria-expanded="true"
-              aria-controls="references-panel"
-              class="trigger"
-            >
-              <i class="caret right icon" aria-hidden="true"></i>{{ _('References') }}
-            </div>
-          </h3>
-        </div>
-        <div
-          id="references-panel"
-          role="region"
-          aria-labelledby="references-accordion-trigger"
-          class="active content sixteen wide mobile twelve wide tablet thirteen wide computer column"
-        >
-          {{ show_references(metadata.references) }}
-        </div>
+    <div class="ui grid">
+      <div class="sixteen wide mobile four wide tablet three wide computer column">
+        <h3 class="ui header">{{ _('References') }}</h3>
       </div>
-    {% else %}
-      <div class="ui grid">
-        <div class="sixteen wide mobile four wide tablet three wide computer column">
-          <h3 class="ui header">{{ _('References') }}</h3>
-        </div>
-        <div class="sixteen wide mobile twelve wide tablet thirteen wide computer column">
-          {{ show_references(metadata.references) }}
-        </div>
+      <div class="sixteen wide mobile twelve wide tablet thirteen wide computer column">
+        {{ show_references(metadata.references) }}
       </div>
-    {% endif %}
-    <div class="ui divider"></div>
-  {% endif %}
+    </div>
+  <div class="ui divider"></div>
 {% endif %}
 
 {% if record.custom_fields.get('rs:citations', None) %}
