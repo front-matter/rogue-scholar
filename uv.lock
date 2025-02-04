@@ -176,30 +176,30 @@ wheels = [
 
 [[package]]
 name = "boto3"
-version = "1.35.44"
+version = "1.36.12"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "botocore" },
     { name = "jmespath" },
     { name = "s3transfer" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6c/67/696b35f6cc39b37e94931e9376a501d07bf3a6bffdfd65074ca6c2620568/boto3-1.35.44.tar.gz", hash = "sha256:7f8e8a252458d584d8cf7877c372c4f74ec103356eedf43d2dd9e479f47f3639", size = 111053 }
+sdist = { url = "https://files.pythonhosted.org/packages/04/2b/7365aab02b6768a9694ff43e0e5f1f83f205fc7fe253a410cda990425048/boto3-1.36.12.tar.gz", hash = "sha256:287d84f49bba3255a17b374578127d42b6251e72f55914a62e0ad9ca78c0954b", size = 111048 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d1/0a/8cbf9cacfaa1f062a1cd5b9c5e1c1de54d5a40759bbf927c7e919651c3c2/boto3-1.35.44-py3-none-any.whl", hash = "sha256:18416d07b41e6094101a44f8b881047dcec6b846dad0b9f83b9bbf2f0cd93d07", size = 139159 },
+    { url = "https://files.pythonhosted.org/packages/d0/0b/eb4d244ea84b0fd9e255286a30c98f37f8f28bbf6ea85f7f4b734bf929a9/boto3-1.36.12-py3-none-any.whl", hash = "sha256:32cdf0967287f3ec25a9dc09df0d29cb86b8900c3e0546a63d672775d8127abf", size = 139178 },
 ]
 
 [[package]]
 name = "botocore"
-version = "1.35.44"
+version = "1.36.12"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jmespath" },
     { name = "python-dateutil" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/b0/f6/64f55cd5ffafb78a530edec7972b60b86527595a7b298aea5930069a36fd/botocore-1.35.44.tar.gz", hash = "sha256:1fcd97b966ad8a88de4106fe1bd3bbd6d8dadabe99bbd4a6aadcf11cb6c66b39", size = 12835782 }
+sdist = { url = "https://files.pythonhosted.org/packages/fe/54/cc9a665f92534aa105a49dd867f18d4eff4687835994a70a32a103fa11ae/botocore-1.36.12.tar.gz", hash = "sha256:86ed88beb4f244c96529435c868d3940073c2774116f0023fb7691f6e7053bd9", size = 13498321 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b8/1f/0ef17b559cee097cbe166471c617a1dc1ca73d6532828fb926046c2dd805/botocore-1.35.44-py3-none-any.whl", hash = "sha256:55388e80624401d017a9a2b8109afd94814f7e666b53e28fce51375cfa8d9326", size = 12623818 },
+    { url = "https://files.pythonhosted.org/packages/92/3a/5e19d1d1896e86bb9c25f31f5f05ff2e8f40727aa66ee6149b545d3e28b0/botocore-1.36.12-py3-none-any.whl", hash = "sha256:5ae1ed362c8ed908a6ced8cdd12b21e2196c100bc79f9e95c9c1fc7f9ea74f5a", size = 13328293 },
 ]
 
 [[package]]
@@ -1063,11 +1063,11 @@ wheels = [
 
 [[package]]
 name = "fsspec"
-version = "2024.10.0"
+version = "2025.2.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/a0/52/f16a068ebadae42526484c31f4398e62962504e5724a8ba5dc3409483df2/fsspec-2024.10.0.tar.gz", hash = "sha256:eda2d8a4116d4f2429db8550f2457da57279247dd930bb12f821b58391359493", size = 286853 }
+sdist = { url = "https://files.pythonhosted.org/packages/b5/79/68612ed99700e6413de42895aa725463e821a6b3be75c87fcce1b4af4c70/fsspec-2025.2.0.tar.gz", hash = "sha256:1c24b16eaa0a1798afa0337aa0db9b256718ab2a89c425371f5628d22c3b6afd", size = 292283 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c6/b2/454d6e7f0158951d8a78c2e1eb4f69ae81beb8dca5fee9809c6c99e9d0d0/fsspec-2024.10.0-py3-none-any.whl", hash = "sha256:03b9a6785766a4de40368b88906366755e2819e758b83705c88cd7cb5fe81871", size = 179641 },
+    { url = "https://files.pythonhosted.org/packages/e2/94/758680531a00d06e471ef649e4ec2ed6bf185356a7f9fbfbb7368a40bd49/fsspec-2025.2.0-py3-none-any.whl", hash = "sha256:9de2ad9ce1f85e1931858535bc882543171d197001a0a5eb2ddc04f1781ab95b", size = 184484 },
 ]
 
 [[package]]
@@ -2012,16 +2012,16 @@ wheels = [
 
 [[package]]
 name = "invenio-s3"
-version = "1.0.6"
+version = "1.0.7"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "boto3" },
     { name = "invenio-files-rest" },
     { name = "s3fs" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/da/77/ce4e8d8426b9e2de19d0f3c79ff263754dcc97660e55f78fee5cccea0824/invenio-s3-1.0.6.tar.gz", hash = "sha256:81646647ad1a9fe1678921c6b7c6f4777f2fcdcf23bcaaf6043460d114663cdc", size = 24987 }
+sdist = { url = "https://files.pythonhosted.org/packages/47/45/fd87d7f65843279c007873103c2a0b78cb526a2c9091978b5c78b6734d3c/invenio_s3-1.0.7.tar.gz", hash = "sha256:e8c661a7582b60def82621a3011a184dc7460fbdc96cf0428a58cfee0d589432", size = 24427 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/2b/49/2c5173231e81e58f64af5cefcfd0d6780a3618cfe76c32f47ddbeb086a7a/invenio_s3-1.0.6-py2.py3-none-any.whl", hash = "sha256:e8021c21e32f0101934edb959e9f353019a90eb1cbeba4b7da3a9a1b1ed68fdc", size = 11311 },
+    { url = "https://files.pythonhosted.org/packages/ca/2b/f8a63fdddcc87c4a395a6b57b0b484061e03ad8552268a52ac69d674bc76/invenio_s3-1.0.7-py2.py3-none-any.whl", hash = "sha256:d2afbdc9cb58360ed8e16dd691579f45f4f0d1b37e5c70a789385352c08f9d78", size = 10898 },
 ]
 
 [[package]]
@@ -2804,7 +2804,7 @@ wheels = [
 
 [[package]]
 name = "opensearch-py"
-version = "2.7.1"
+version = "2.8.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "certifi" },
@@ -2813,9 +2813,9 @@ dependencies = [
     { name = "requests" },
     { name = "urllib3" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c4/ca/5be52de5c69ecd327c16f3fc0dba82b7ffda5bbd0c0e215bdf23a4d12b12/opensearch_py-2.7.1.tar.gz", hash = "sha256:67ab76e9373669bc71da417096df59827c08369ac3795d5438c9a8be21cbd759", size = 226630 }
+sdist = { url = "https://files.pythonhosted.org/packages/7c/e4/192c97ca676c81f69e138a22e10fb03f64e14a55633cb2acffb41bf6d061/opensearch_py-2.8.0.tar.gz", hash = "sha256:6598df0bc7a003294edd0ba88a331e0793acbb8c910c43edf398791e3b2eccda", size = 237923 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/80/8f/db678ae203d761922a73920215ea53a79faf3bb1ec6aa9511f809c8e234c/opensearch_py-2.7.1-py3-none-any.whl", hash = "sha256:5417650eba98a1c7648e502207cebf3a12beab623ffe0ebbf55f9b1b4b6e44e9", size = 325380 },
+    { url = "https://files.pythonhosted.org/packages/23/35/a957c6fb88ff6874996be688448b889475cf0ea978446cd5a30e764e0561/opensearch_py-2.8.0-py3-none-any.whl", hash = "sha256:52c60fdb5d4dcf6cce3ee746c13b194529b0161e0f41268b98ab8f1624abe2fa", size = 353492 },
 ]
 
 [[package]]
@@ -3353,14 +3353,9 @@ name = "rogue-scholar"
 version = "0.7.0"
 source = { editable = "." }
 dependencies = [
-    { name = "babel-edtf" },
     { name = "commonmeta-py" },
     { name = "gunicorn" },
-    { name = "idutils" },
-    { name = "importlib-metadata" },
     { name = "invenio-app-rdm" },
-    { name = "invenio-rdm-records" },
-    { name = "invenio-records-resources" },
     { name = "invenio-s3" },
     { name = "invenio-search", extra = ["opensearch2"] },
     { name = "ruff" },
@@ -3368,15 +3363,10 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "babel-edtf", specifier = "~=1.2.0" },
     { name = "commonmeta-py", specifier = ">=0.8.6" },
     { name = "gunicorn", specifier = "~=22.0.0" },
-    { name = "idutils", specifier = "~=1.4.0" },
-    { name = "importlib-metadata", specifier = "~=6.11.0" },
     { name = "invenio-app-rdm", specifier = "~=12.0.13" },
-    { name = "invenio-rdm-records", specifier = "~=10.8.6" },
-    { name = "invenio-records-resources", specifier = "~=5.10.0" },
-    { name = "invenio-s3", specifier = "~=1.0.0" },
+    { name = "invenio-s3", specifier = "~=1.0.7" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = "~=2.4.1" },
     { name = "ruff", specifier = ">=0.9.0" },
 ]
@@ -3455,14 +3445,14 @@ wheels = [
 
 [[package]]
 name = "s3transfer"
-version = "0.10.3"
+version = "0.11.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "botocore" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a0/a8/e0a98fd7bd874914f0608ef7c90ffde17e116aefad765021de0f012690a2/s3transfer-0.10.3.tar.gz", hash = "sha256:4f50ed74ab84d474ce614475e0b8d5047ff080810aac5d01ea25231cfc944b0c", size = 144591 }
+sdist = { url = "https://files.pythonhosted.org/packages/62/45/2323b5928f86fd29f9afdcef4659f68fa73eaa5356912b774227f5cf46b5/s3transfer-0.11.2.tar.gz", hash = "sha256:3b39185cb72f5acc77db1a58b6e25b977f28d20496b6e58d6813d75f464d632f", size = 147885 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e5/c0/b0fba8259b61c938c9733da9346b9f93e00881a9db22aafdd72f6ae0ec05/s3transfer-0.10.3-py3-none-any.whl", hash = "sha256:263ed587a5803c6c708d3ce44dc4dfedaab4c1a32e8329bab818933d79ddcf5d", size = 82625 },
+    { url = "https://files.pythonhosted.org/packages/1b/ac/e7dc469e49048dc57f62e0c555d2ee3117fa30813d2a1a2962cce3a2a82a/s3transfer-0.11.2-py3-none-any.whl", hash = "sha256:be6ecb39fadd986ef1701097771f87e4d2f821f27f6071c872143884d2950fbc", size = 84151 },
 ]
 
 [[package]]

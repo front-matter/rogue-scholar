@@ -35,7 +35,6 @@ babel==2.16.0
     #   sphinx
 babel-edtf==1.2.1
     # via
-    #   rogue-scholar (pyproject.toml)
     #   invenio-rdm-records
     #   invenio-records-resources
     #   marshmallow-utils
@@ -315,14 +314,12 @@ idna==3.10
     #   requests
 idutils==1.4.1
     # via
-    #   rogue-scholar (pyproject.toml)
     #   datacite
     #   marshmallow-utils
 imagesize==1.4.1
     # via sphinx
 importlib-metadata==6.11.0
     # via
-    #   rogue-scholar (pyproject.toml)
     #   datacite
     #   invenio-base
     #   invenio-jsonschemas
@@ -539,9 +536,7 @@ invenio-previewer==2.2.1
 invenio-queues==1.0.1
     # via invenio-stats
 invenio-rdm-records==10.8.6
-    # via
-    #   rogue-scholar (pyproject.toml)
-    #   invenio-app-rdm
+    # via invenio-app-rdm
 invenio-records==2.4.0
     # via
     #   invenio-app-rdm
@@ -557,7 +552,6 @@ invenio-records-permissions==0.21.0
     # via invenio-records-resources
 invenio-records-resources==5.10.0
     # via
-    #   rogue-scholar (pyproject.toml)
     #   invenio-administration
     #   invenio-drafts-resources
     #   invenio-github
@@ -584,7 +578,7 @@ invenio-rest==1.3.1
     #   invenio-oaiserver
     #   invenio-pages
     #   invenio-records-rest
-invenio-s3==1.0.6
+invenio-s3==1.0.7
     # via rogue-scholar (pyproject.toml)
 invenio-search==2.4.1
     # via rogue-scholar (pyproject.toml)
