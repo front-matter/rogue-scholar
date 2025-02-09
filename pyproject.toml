@@ -1,10 +1,8 @@
 [project]
 name = "rogue-scholar"
-version = "12.0.13"
+version = "12.0.13.11"
 description = "Rogue Scholar is a science blog archive based on the InvenioRDM repository software."
-authors = [
-    { name = "Martin Fenner", email = "martin@front-matter.io" }
-]
+authors = [{ name = "Martin Fenner", email = "martin@front-matter.io" }]
 readme = "README.md"
 requires-python = ">=3.12"
 license = "MIT"
@@ -21,6 +19,9 @@ dependencies = [
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch.build]
+include = ["site/rogue_scholar/*.py"]
+
 [tool.ruff]
 line-length = 79
-include = ["pyproject.toml", "src/**/*.py"]
+include = ["pyproject.toml", "site/**/*.py"]
