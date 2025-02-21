@@ -21,3 +21,6 @@ jobs:
         run: |
           mkdir -p upload
           commonmeta push -f inveniordm -t inveniordm --from-host rogue-scholar.org --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --type publication-preprint -n 50 > upload/response.json
+          cat upload/response.json
+        id: response
+      
