@@ -20,7 +20,7 @@ jobs:
       - name: Convert inveniordm posts of type publication-preprint
         run: |
           mkdir -p upload
-          commonmeta push upload/commonmeta.json -f inveniordm -t inveniordm --from-host rogue-scholar.org --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --type publication-preprint -n 50 > upload/response.json
+          commonmeta push -f inveniordm -t inveniordm --from-host rogue-scholar.org --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --type publication-preprint -n 50 > upload/response.json
           cat upload/response.json
           echo "UUIDS=$(jq -rc '[.[] | .uuid] | join(",")' upload/response.json)" >> $GITHUB_OUTPUT
         id: response
