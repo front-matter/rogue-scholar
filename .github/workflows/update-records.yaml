@@ -1,0 +1,26 @@
+name: Update Rogue Scholar Records
+on:
+  workflow_dispatch:
+  schedule:
+   - cron: "*/10 * * * *"
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4       
+      - name: setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '>=1.23'
+      - name: Install commonmeta
+        run: |
+          go install github.com/front-matter/commonmeta@latest
+          commonmeta -v
+      - name: Convert inveniordm posts of type publication-preprint
+        run: |
+          commonmeta push upload/commonmeta.json -f inveniordm -t inveniordm --from-host rogue-scholar.org --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --type publication-preprint -n 50 > upload/response.json
+          cat upload/response.json
+          echo "UUIDS=$(jq -rc '[.[] | .uuid] | join(",")' upload/response.json)" >> $GITHUB_OUTPUT
+        id: response
+      
