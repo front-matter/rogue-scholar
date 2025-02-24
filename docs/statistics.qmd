@@ -1,0 +1,88 @@
+--- 
+title: "Statistics"
+format: dashboard
+---
+
+```{python}
+#| output: false
+from os import environ
+from dotenv import load_dotenv
+from supabase import create_client, Client
+from pydash import py_
+
+loaded = load_dotenv()
+
+url: str = environ.get("SUPABASE_URL")
+key: str = environ.get("SUPABASE_ANON_KEY")
+supabase: Client = create_client(url, key)
+status = ["active", "archived", "expired"]
+
+response = (
+    supabase.table("blogs")
+    .select("*", count="exact", head=True)
+    .in_("status", status)
+    .execute()
+)
+blog_count = response.count
+
+response = supabase.table("posts_by_year").select("*").execute()
+posts_by_year = [y for y in response.data if y["year"] in range(2005, 2026)]
+post_count = 0
+for y in posts_by_year:
+    if y["year"] and y["year"] <= 2025:
+        post_count += y["year_count"]
+
+post_2025 = [y for y in posts_by_year if y["year"] == 2025]
+post_2025_count = post_2025[0].get("year_count", 0)
+
+ojs_define(posts_by_year = posts_by_year)
+```
+
+## Row
+
+```{python}
+#| content: valuebox
+#| title: "Particating Blogs"
+#| icon: journals
+#| color: "#10b981"
+dict(
+  value = blog_count
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Total Blog Posts"
+#| icon: newspaper
+#| color: "#0ea5e9"
+dict(
+  value = post_count
+)
+```
+
+```{python}
+# | content: valuebox
+# | title: "Blog Posts in 2025"
+# | icon: calendar-range
+# | color: "#38bdf8"
+dict(value=post_2025_count)
+```
+
+## Row
+
+```{ojs}
+Plot.plot({
+  x: {
+    tickFormat: "",
+    label: null
+  },
+  y: {
+    grid: true,
+    label: null
+  },
+  marks: [
+    Plot.ruleY([0]),
+    Plot.barY(posts_by_year, {x: "year", y: "year_count", fill: "#0ea5e9"})
+  ],
+})
+```

@@ -37,6 +37,7 @@ website:
           - jekyll.qmd
           - quarto.qmd
       - api.qmd
+      - statistics.qmd
   page-footer:
     left: "Copyright &copy;2023-2025 Rogue Scholar."
     right:
