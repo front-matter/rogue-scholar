@@ -8,7 +8,6 @@ format: dashboard
 from os import environ
 from dotenv import load_dotenv
 from supabase import create_client, Client
-from pydash import py_
 
 loaded = load_dotenv()
 
