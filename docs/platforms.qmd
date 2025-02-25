@@ -4,11 +4,13 @@ title: Overview
 
 The following blogging platforms are used by Rogue Scholar blogs:
 
+![Blog Posts by Blogging Platform](https://blog.front-matter.io/content/images/2025/02/Bildschirmfoto-2025-02-25-um-17.19.48.png)
+
 - [Wordpress](https://wordpress.org/)
-- [Ghost](https://ghost.org/)
 - [Hugo](https://gohugo.io/)
-- [Jekyll](https://jekyllrb.com/)
 - [Blogger](https://blogger.com)
+- [Jekyll](https://jekyllrb.com/)
+- [Ghost](https://ghost.org/)
 - [Quarto](https://quarto.org)
 - [Substack](https://substack.com)
 - [Medium](https://medium.com)
