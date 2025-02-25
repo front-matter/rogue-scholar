@@ -114,9 +114,13 @@ posts_by_category = [
     if c["category"]
 ]
 
+response = supabase.table("posts_by_generator").select("*").execute()
+posts_by_generator = [d for d in response.data if d["generator"] != "Other"]
+
 ojs_define(posts_by_year=posts_by_year)
 ojs_define(posts_by_language=posts_by_language)
 ojs_define(posts_by_category=posts_by_category)
+ojs_define(posts_by_generator=posts_by_generator)
 ```
 
 ## Row
@@ -174,22 +178,51 @@ Plot.plot({
 ```{ojs}
 //| title: "Blog Posts by Language"
 Plot.plot({
-  marginLeft: 180,
-  height: 180,
+  marginLeft: 150,
+  marginRight: 60,
+  height: 300,
   x: { axis: null },
   y: { label: null },
   marks: [
     Plot.barX(posts_by_language, {
       x: "lang_count",
       y: "language",
-      sort: { y: "x", reverse: true, limit: 4 },
-      fill: "#0ea5e9"
+      sort: { y: "x", reverse: true, limit: 8 },
+      fill: "language",
     }),
 
     Plot.text(posts_by_language, {
       text: d => `${d.lang_count}`,
       y: "language",
       x: "lang_count",
+      textAnchor: "start",
+      dx: 5,
+    })
+  ]
+})
+```
+
+## Row
+
+```{ojs}
+//| title: "Blog Posts by OECD Fields of Science and Technology"
+Plot.plot({
+  marginLeft: 150,
+  height: 230,
+  x: { axis: null },
+  y: { label: null },
+  marks: [
+    Plot.barX(posts_by_category, {
+      x: "cat_count",
+      y: "category",
+      sort: { y: "x", reverse: true, limit: 6 },
+      fill: "category"
+    }),
+
+    Plot.text(posts_by_category, {
+      text: c => `${c.cat_count}`,
+      y: "category",
+      x: "cat_count",
       textAnchor: "end",
       dx: -3,
       fill: "white"
@@ -201,27 +234,27 @@ Plot.plot({
 ## Row
 
 ```{ojs}
-//| title: "Blog Posts by Category"
+//| title: "Blog Posts by Blogging Platform"
 Plot.plot({
-  marginLeft: 180,
-  height: 230,
+  marginLeft: 150,
+  marginRight: 60,
+  height: 360,
   x: { axis: null },
   y: { label: null },
   marks: [
-    Plot.barX(posts_by_category, {
-      x: "cat_count",
-      y: "category",
-      sort: { y: "x", reverse: true, limit: 6 },
-      fill: "#0ea5e9"
+    Plot.barX(posts_by_generator, {
+      x: "gen_count",
+      y: "generator",
+      sort: { y: "x", reverse: true, limit: 9 },
+      fill: "generator",
     }),
 
-    Plot.text(posts_by_category, {
-      text: d => `${d.cat_count}`,
-      y: "category",
-      x: "cat_count",
-      textAnchor: "end",
-      dx: -3,
-      fill: "white"
+    Plot.text(posts_by_generator, {
+      text: d => `${d.gen_count}`,
+      y: "generator",
+      x: "gen_count",
+      textAnchor: "start",
+      dx: 5,
     })
   ]
 })
