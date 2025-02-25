@@ -1,10 +1,13 @@
 --- 
 title: "Statistics"
-format: dashboard
+format: 
+  dashboard:
+    scrolling: true 
 ---
 
 ```{python}
 #| output: false
+
 from os import environ
 from dotenv import load_dotenv
 from supabase import create_client, Client
@@ -34,7 +37,85 @@ for y in posts_by_year:
 post_2025 = [y for y in posts_by_year if y["year"] == 2025]
 post_2025_count = post_2025[0].get("year_count", 0)
 
-ojs_define(posts_by_year = posts_by_year)
+response = supabase.table("posts_by_language").select("*").execute()
+language_dict = {
+    "en": "English",
+    "de": "German",
+    "es": "Spanish",
+    "fr": "French",
+    "it": "Italian",
+    "pt": "Portuguese",
+    "nl": "Dutch",
+    "tr": "Turkish",
+    "sl": "Slovenian",
+    "ar": "Arabic",
+    "ca": "Catalan",
+}
+posts_by_language = [
+    {"language": language_dict[l["language"]], "lang_count": l["lang_count"]}
+    for l in response.data
+]
+
+response = supabase.table("posts_by_category").select("*").execute()
+category_dict = {
+    "naturalSciences": "Natural sciences",
+    "mathematics": "Natural sciences",
+    "computerAndInformationSciences": "Natural sciences",
+    "physicalSciences": "Natural sciences",
+    "chemicalSciences": "Natural sciences",
+    "earthAndRelatedEnvironmentalSciences": "Natural sciences",
+    "biologicalSciences": "Natural sciences",
+    "otherNaturalSciences": "Natural sciences",
+    "engineeringAndTechnology": "Engineering and technology",
+    "civilEngineering": "Engineering and technology",
+    "electricalEngineering": "Engineering and technology",
+    "mechanicalEngineering": "Engineering and technology",
+    "chemicalEngineering": "Engineering and technology",
+    "materialsEngineering": "Engineering and technology",
+    "medicalEngineering": "Engineering and technology",
+    "environmentalEngineering": "Engineering and technology",
+    "environmentalBiotechnology": "Engineering and technology",
+    "industrialBiotechnology": "Engineering and technology",
+    "nanoTechnology": "Engineering and technology",
+    "otherEngineeringAndTechnologies": "Engineering and technology",
+    "medicalAndHealthSciences": "Medical and health sciences",
+    "basicMedicine": "Medical and health sciences",
+    "clinicalMedicine": "Medical and health sciences",
+    "healthSciences": "Medical and health sciences",
+    "healthBiotechnology": "Medical and health sciences",
+    "otherMedicalSciences": "Medical and health sciences",
+    "agriculturalSciences": "Agricultural sciences",
+    "agricultureForestryAndFisheries": "Agricultural sciences",
+    "animalAndDairyScience": "Agricultural sciences",
+    "veterinaryScience": "Agricultural sciences",
+    "agriculturalBiotechnology": "Agricultural sciences",
+    "otherAgriculturalSciences": "Agricultural sciences",
+    "socialScience": "Social science",
+    "psychology": "Social science",
+    "economicsAndBusiness": "Social science",
+    "educationalSciences": "Social science",
+    "sociology": "Social science",
+    "law": "Social science",
+    "politicalScience": "Social science",
+    "socialAndEconomicGeography": "Social science",
+    "mediaAndCommunications": "Social science",
+    "otherSocialSciences": "Social science",
+    "humanities": "Humanities",
+    "historyAndArchaeology": "Humanities",
+    "languagesAndLiterature": "Humanities",
+    "philosophyEthicsAndReligion": "Humanities",
+    "artsArtsHistoryOfArtsPerformingArtsMusic": "Humanities",
+    "otherHumanities": "Humanities",
+}
+posts_by_category = [
+    {"category": category_dict[c["category"]], "cat_count": c["cat_count"]}
+    for c in response.data
+    if c["category"]
+]
+
+ojs_define(posts_by_year=posts_by_year)
+ojs_define(posts_by_language=posts_by_language)
+ojs_define(posts_by_category=posts_by_category)
 ```
 
 ## Row
@@ -51,7 +132,7 @@ dict(
 
 ```{python}
 #| content: valuebox
-#| title: "Total Blog Posts"
+#| title: "All Blog Posts"
 #| icon: newspaper
 #| color: "#0ea5e9"
 dict(
@@ -70,6 +151,7 @@ dict(value=post_2025_count)
 ## Row
 
 ```{ojs}
+//| title: "Blog Posts by Year"
 Plot.plot({
   x: {
     tickFormat: "",
@@ -83,5 +165,63 @@ Plot.plot({
     Plot.ruleY([0]),
     Plot.barY(posts_by_year, {x: "year", y: "year_count", fill: "#0ea5e9"})
   ],
+})
+```
+
+## Row
+
+```{ojs}
+//| title: "Blog Posts by Language"
+Plot.plot({
+  marginLeft: 180,
+  height: 250,
+  x: { axis: null },
+  y: { label: null },
+  marks: [
+    Plot.barX(posts_by_language, {
+      x: "lang_count",
+      y: "language",
+      sort: { y: "x", reverse: true, limit: 4 },
+      fill: "#0ea5e9"
+    }),
+
+    Plot.text(posts_by_language, {
+      text: d => `${d.lang_count}`,
+      y: "language",
+      x: "lang_count",
+      textAnchor: "end",
+      dx: -3,
+      fill: "white"
+    })
+  ]
+})
+```
+
+## Row
+
+```{ojs}
+//| title: "Blog Posts by Category"
+Plot.plot({
+  marginLeft: 180,
+  height: 250,
+  x: { axis: null },
+  y: { label: null },
+  marks: [
+    Plot.barX(posts_by_category, {
+      x: "cat_count",
+      y: "category",
+      sort: { y: "x", reverse: true, limit: 6 },
+      fill: "#0ea5e9"
+    }),
+
+    Plot.text(posts_by_category, {
+      text: d => `${d.cat_count}`,
+      y: "category",
+      x: "cat_count",
+      textAnchor: "end",
+      dx: -3,
+      fill: "white"
+    })
+  ]
 })
 ```
