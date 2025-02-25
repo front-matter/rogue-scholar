@@ -117,6 +117,7 @@ posts_by_category = [
 response = supabase.table("posts_by_generator").select("*").execute()
 posts_by_generator = [d for d in response.data if d["generator"] != "Other"]
 
+ojs_define(post_count=post_count)
 ojs_define(posts_by_year=posts_by_year)
 ojs_define(posts_by_language=posts_by_language)
 ojs_define(posts_by_category=posts_by_category)
@@ -192,7 +193,10 @@ Plot.plot({
     }),
 
     Plot.text(posts_by_language, {
-      text: d => `${d.lang_count}`,
+      text: d => `${(d.lang_count / post_count).toLocaleString(undefined, {
+        style: "percent", 
+        maximumSignificantDigits: 2
+      })}`,
       y: "language",
       x: "lang_count",
       textAnchor: "start",
@@ -206,20 +210,23 @@ Plot.plot({
 
 ```{ojs}
 //| title: "Blog Posts by OECD Fields of Science and Technology"
+// c_rollup = d3.rollup(posts_by_category, v => d3.sum(v, d => d.cat_count), d => d.category)
+// categories = c_rollup.map(([category, cat_count]) => ({category, cat_count}))
+categories = posts_by_category
 Plot.plot({
   marginLeft: 150,
   height: 230,
   x: { axis: null },
   y: { label: null },
   marks: [
-    Plot.barX(posts_by_category, {
+    Plot.barX(categories, {
       x: "cat_count",
       y: "category",
       sort: { y: "x", reverse: true, limit: 6 },
       fill: "category"
     }),
 
-    Plot.text(posts_by_category, {
+    Plot.text(categories, {
       text: c => `${c.cat_count}`,
       y: "category",
       x: "cat_count",
@@ -250,7 +257,10 @@ Plot.plot({
     }),
 
     Plot.text(posts_by_generator, {
-      text: d => `${d.gen_count}`,
+      text: d => `${(d.gen_count / post_count).toLocaleString(undefined, {
+        style: "percent", 
+        maximumSignificantDigits: 2
+      })}`,
       y: "generator",
       x: "gen_count",
       textAnchor: "start",
