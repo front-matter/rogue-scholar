@@ -4238,7 +4238,7 @@ wheels = [
 
 [[package]]
 name = "rogue-scholar"
-version = "12.0.13.15"
+version = "12.0.13.16"
 source = { editable = "." }
 dependencies = [
     { name = "commonmeta-py" },
@@ -4247,7 +4247,6 @@ dependencies = [
     { name = "invenio-logging", extra = ["sentry-sdk"] },
     { name = "invenio-s3" },
     { name = "invenio-search", extra = ["opensearch2"] },
-    { name = "pydash" },
     { name = "python-dotenv" },
     { name = "quarto-cli" },
     { name = "ruff" },
@@ -4262,7 +4261,6 @@ requires-dist = [
     { name = "invenio-logging", extras = ["sentry-sdk"], specifier = ">=2.1.0,<3.0.0" },
     { name = "invenio-s3", specifier = "~=1.0.7" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = "~=2.4.1" },
-    { name = "pydash", specifier = ">=6.0" },
     { name = "python-dotenv", specifier = ">=1.0" },
     { name = "quarto-cli", specifier = ">=1.6.4" },
     { name = "ruff", specifier = ">=0.9.0" },
