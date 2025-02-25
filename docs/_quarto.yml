@@ -32,9 +32,9 @@ website:
         contents:
           - platforms.qmd
           - wordpress.qmd
-          - ghost.qmd
           - hugo.qmd
           - jekyll.qmd
+          - ghost.qmd
           - quarto.qmd
       - api.qmd
       - statistics.qmd
