@@ -6,7 +6,7 @@ format:
 ---
 
 ```{python}
-#| output: false
+# | output: false
 
 from os import environ
 from dotenv import load_dotenv
@@ -54,6 +54,7 @@ language_dict = {
 posts_by_language = [
     {"language": language_dict[l["language"]], "lang_count": l["lang_count"]}
     for l in response.data
+    if l["language"]
 ]
 
 response = supabase.table("posts_by_category").select("*").execute()
@@ -174,7 +175,7 @@ Plot.plot({
 //| title: "Blog Posts by Language"
 Plot.plot({
   marginLeft: 180,
-  height: 250,
+  height: 180,
   x: { axis: null },
   y: { label: null },
   marks: [
@@ -203,7 +204,7 @@ Plot.plot({
 //| title: "Blog Posts by Category"
 Plot.plot({
   marginLeft: 180,
-  height: 250,
+  height: 230,
   x: { axis: null },
   y: { label: null },
   marks: [
