@@ -4,7 +4,38 @@ title: Overview
 
 The following blogging platforms are used by Rogue Scholar blogs:
 
-![Blog Posts by Blogging Platform](https://blog.front-matter.io/content/images/2025/02/Bildschirmfoto-2025-02-25-um-17.19.48.png)
+```{ojs}
+//| echo: false
+//| title: "Blog Posts by Blogging Platform"
+import { post_count, posts_by_generator } from "./statistics.qmd";
+
+Plot.plot({
+  marginLeft: 150,
+  marginRight: 60,
+  height: 360,
+  x: { axis: null },
+  y: { label: null },
+  marks: [
+    Plot.barX(posts_by_generator, {
+      x: "gen_count",
+      y: "generator",
+      sort: { y: "x", reverse: true, limit: 9 },
+      fill: "generator",
+    }),
+
+    Plot.text(posts_by_generator, {
+      text: d => `${(d.gen_count / post_count).toLocaleString(undefined, {
+        style: "percent", 
+        maximumSignificantDigits: 2
+      })}`,
+      y: "generator",
+      x: "gen_count",
+      textAnchor: "start",
+      dx: 5,
+    })
+  ]
+})
+```
 
 - [Wordpress](https://wordpress.org/)
 - [Hugo](https://gohugo.io/)
