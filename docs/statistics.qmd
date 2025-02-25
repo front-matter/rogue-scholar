@@ -7,7 +7,6 @@ format:
 
 ```{python}
 # | output: false
-
 from os import environ
 from dotenv import load_dotenv
 from supabase import create_client, Client
@@ -108,10 +107,25 @@ category_dict = {
     "artsArtsHistoryOfArtsPerformingArtsMusic": "Humanities",
     "otherHumanities": "Humanities",
 }
-posts_by_category = [
+
+category_count = {
+    "Natural sciences": 0,
+    "Engineering and technology": 0,
+    "Medical and health sciences": 0,
+    "Agricultural sciences": 0,
+    "Social science": 0,
+    "Humanities": 0,
+}
+
+posts_by_cat = [
     {"category": category_dict[c["category"]], "cat_count": c["cat_count"]}
     for c in response.data
     if c["category"]
+]
+for c in posts_by_cat:
+    category_count[c["category"]] += c["cat_count"]
+posts_by_category = [
+    {"category": k, "cat_count": v} for k, v in category_count.items()
 ]
 
 response = supabase.table("posts_by_generator").select("*").execute()
@@ -210,29 +224,29 @@ Plot.plot({
 
 ```{ojs}
 //| title: "Blog Posts by OECD Fields of Science and Technology"
-// c_rollup = d3.rollup(posts_by_category, v => d3.sum(v, d => d.cat_count), d => d.category)
-// categories = c_rollup.map(([category, cat_count]) => ({category, cat_count}))
-categories = posts_by_category
 Plot.plot({
   marginLeft: 150,
-  height: 230,
+  marginRight: 60,
+  height: 240,
   x: { axis: null },
   y: { label: null },
   marks: [
-    Plot.barX(categories, {
+    Plot.barX(posts_by_category, {
       x: "cat_count",
       y: "category",
       sort: { y: "x", reverse: true, limit: 6 },
       fill: "category"
     }),
 
-    Plot.text(categories, {
-      text: c => `${c.cat_count}`,
+    Plot.text(posts_by_category, {
+      text: d => `${(d.cat_count / post_count).toLocaleString(undefined, {
+        style: "percent", 
+        maximumSignificantDigits: 2
+      })}`,
       y: "category",
       x: "cat_count",
-      textAnchor: "end",
-      dx: -3,
-      fill: "white"
+      textAnchor: "start",
+      dx: 5,
     })
   ]
 })
