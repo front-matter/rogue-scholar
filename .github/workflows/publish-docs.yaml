@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install dependencies
-        run: pip install jupyter supabase python-dotenv
+        run: pip install jupyter supabase pydash httpx python-dotenv
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:

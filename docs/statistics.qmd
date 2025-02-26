@@ -10,6 +10,8 @@ format:
 from os import environ
 from dotenv import load_dotenv
 from supabase import create_client, Client
+import httpx
+import pydash as py_
 
 loaded = load_dotenv()
 
@@ -18,13 +20,10 @@ key: str = environ.get("SUPABASE_ANON_KEY")
 supabase: Client = create_client(url, key)
 status = ["active", "archived", "expired"]
 
-response = (
-    supabase.table("blogs")
-    .select("*", count="exact", head=True)
-    .in_("status", status)
-    .execute()
-)
-blog_count = response.count
+url = "https://rogue-scholar.org/api/communities?type=blog"
+response = httpx.get(url)
+result = response.json()
+blog_count = py_.get(result, "hits.total")
 
 response = supabase.table("posts_by_year").select("*").execute()
 posts_by_year = [y for y in response.data if y["year"] in range(2005, 2026)]
@@ -143,9 +142,9 @@ ojs_define(posts_by_generator=posts_by_generator)
 ```{python}
 #| content: valuebox
 #| title: "Particating Blogs"
-#| icon: journals
-#| color: "#10b981"
 dict(
+  icon = "journals",
+  color = "#10b981",
   value = blog_count
 )
 ```
