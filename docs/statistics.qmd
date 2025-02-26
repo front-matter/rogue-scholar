@@ -20,17 +20,22 @@ key: str = environ.get("SUPABASE_ANON_KEY")
 supabase: Client = create_client(url, key)
 status = ["active", "archived", "expired"]
 
-url = "https://rogue-scholar.org/api/communities?type=blog"
+url = "https://rogue-scholar.org/api/communities?type=blog&size=1"
 response = httpx.get(url)
 result = response.json()
 blog_count = py_.get(result, "hits.total")
 
+url = "https://rogue-scholar.org/api/records?size=1"
+response = httpx.get(url)
+result = response.json()
+post_count = py_.get(result, "hits.total")
+
 response = supabase.table("posts_by_year").select("*").execute()
 posts_by_year = [y for y in response.data if y["year"] in range(2005, 2026)]
-post_count = 0
+posts_count = 0
 for y in posts_by_year:
     if y["year"] and y["year"] <= 2025:
-        post_count += y["year_count"]
+        posts_count += y["year_count"]
 
 post_2025 = [y for y in posts_by_year if y["year"] == 2025]
 post_2025_count = post_2025[0].get("year_count", 0)
