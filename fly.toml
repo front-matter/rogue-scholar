@@ -7,7 +7,7 @@ app = 'invenio-rdm-starter'
 primary_region = 'fra'
 
 [build]
-  image = "ghcr.io/front-matter/rogue-scholar:v12.0.13.15"
+  image = "ghcr.io/front-matter/rogue-scholar:v12.0.13.17"
 
 [env]
   # Flask-Babel
