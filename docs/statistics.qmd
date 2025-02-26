@@ -29,6 +29,7 @@ url = "https://rogue-scholar.org/api/records?size=1"
 response = httpx.get(url)
 result = response.json()
 post_count = py_.get(result, "hits.total")
+posts_by_language = py_.get(result, "aggregations.language.buckets")
 
 url = "https://rogue-scholar.org/api/records?q=metadata.creators.person_or_org.identifiers.identifier:*&size=1"
 response = httpx.get(url)
@@ -59,26 +60,6 @@ for y in posts_by_year:
 
 post_2025 = [y for y in posts_by_year if y["year"] == 2025]
 post_2025_count = post_2025[0].get("year_count", 0)
-
-response = supabase.table("posts_by_language").select("*").execute()
-language_dict = {
-    "en": "English",
-    "de": "German",
-    "es": "Spanish",
-    "fr": "French",
-    "it": "Italian",
-    "pt": "Portuguese",
-    "nl": "Dutch",
-    "tr": "Turkish",
-    "sl": "Slovenian",
-    "ar": "Arabic",
-    "ca": "Catalan",
-}
-posts_by_language = [
-    {"language": language_dict[l["language"]], "lang_count": l["lang_count"]}
-    for l in response.data
-    if l["language"]
-]
 
 response = supabase.table("posts_by_category").select("*").execute()
 category_dict = {
@@ -261,24 +242,24 @@ Plot.plot({
 Plot.plot({
   marginLeft: 150,
   marginRight: 60,
-  height: 300,
+  height: 350,
   x: { axis: null },
   y: { label: null },
   marks: [
     Plot.barX(posts_by_language, {
-      x: "lang_count",
-      y: "language",
-      sort: { y: "x", reverse: true, limit: 8 },
-      fill: "language",
+      x: "doc_count",
+      y: "label",
+      sort: { y: "x", reverse: true, limit: 9 },
+      fill: "label",
     }),
 
     Plot.text(posts_by_language, {
-      text: d => `${(d.lang_count / post_count).toLocaleString(undefined, {
+      text: d => `${(d.doc_count / post_count).toLocaleString(undefined, {
         style: "percent", 
         maximumSignificantDigits: 2
       })}`,
-      y: "language",
-      x: "lang_count",
+      y: "label",
+      x: "doc_count",
       textAnchor: "start",
       dx: 5,
     })
