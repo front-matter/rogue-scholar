@@ -172,11 +172,13 @@ category_dict = {
 def format_category(d):
     category = category_dict[d["category"]]
     parent = category_dict[category_parents[d["category"]]]
+    label = category
     if category != parent:
-        category = parent + ": " + category
+        label = parent + ": " + category
     return {
         "category": category,
         "parent": parent,
+        "label": label,
         "cat_count": d["cat_count"],
     }
 
@@ -346,7 +348,7 @@ Plot.plot({
   marks: [
     Plot.barX(posts_by_category, {
       x: "cat_count",
-      y: "category",
+      y: "label",
       href: d => `https://rogue-scholar.org/search?q=&f=subject:${d.category}`,
       fill: "parent",
     }),
@@ -356,7 +358,7 @@ Plot.plot({
         style: "percent", 
         maximumSignificantDigits: 2
       })}`,
-      y: "category",
+      y: "label",
       x: "cat_count",
       textAnchor: "start",
       dx: 5,
