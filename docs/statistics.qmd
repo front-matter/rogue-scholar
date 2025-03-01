@@ -29,6 +29,16 @@ url = "https://rogue-scholar.org/api/records?size=1"
 response = httpx.get(url)
 result = response.json()
 post_count = py_.get(result, "hits.total")
+
+url = "https://rogue-scholar.org/api/records?q=metadata.publication_date%3A%5B2025%20TO%202026%5D&size=1"
+response = httpx.get(url)
+result = response.json()
+post_2025_count = py_.get(result, "hits.total")
+
+url = "https://rogue-scholar.org/api/records?size=1"
+response = httpx.get(url)
+result = response.json()
+post_count = py_.get(result, "hits.total")
 posts_by_language = py_.get(result, "aggregations.language.buckets")
 
 url = "https://rogue-scholar.org/api/records?q=metadata.creators.person_or_org.identifiers.identifier:*&size=1"
@@ -51,91 +61,134 @@ response = httpx.get(url)
 result = response.json()
 post_citation_count = py_.get(result, "hits.total") / post_count
 
-response = supabase.table("posts_by_year").select("*").execute()
-posts_by_year = [y for y in response.data if y["year"] in range(2005, 2026)]
-posts_count = 0
-for y in posts_by_year:
-    if y["year"] and y["year"] <= 2025:
-        posts_count += y["year_count"]
 
-post_2025 = [y for y in posts_by_year if y["year"] == 2025]
-post_2025_count = post_2025[0].get("year_count", 0)
+response = supabase.table("posts_by_year").select("*").execute()
+posts_by_year = [d for d in response.data if d["year"] in range(2005, 2026)]
 
 response = supabase.table("posts_by_category").select("*").execute()
+category_parents = {
+    "naturalSciences": "naturalSciences",
+    "mathematics": "naturalSciences",
+    "computerAndInformationSciences": "naturalSciences",
+    "physicalSciences": "naturalSciences",
+    "chemicalSciences": "naturalSciences",
+    "earthAndRelatedEnvironmentalSciences": "naturalSciences",
+    "biologicalSciences": "naturalSciences",
+    "otherNaturalSciences": "naturalSciences",
+    "engineeringAndTechnology": "engineeringAndTechnology",
+    "civilEngineering": "engineeringAndTechnology",
+    "electricalEngineering": "engineeringAndTechnology",
+    "mechanicalEngineering": "engineeringAndTechnology",
+    "chemicalEngineering": "engineeringAndTechnology",
+    "materialsEngineering": "engineeringAndTechnology",
+    "medicalEngineering": "engineeringAndTechnology",
+    "environmentalEngineering": "engineeringAndTechnology",
+    "environmentalBiotechnology": "engineeringAndTechnology",
+    "industrialBiotechnology": "engineeringAndTechnology",
+    "nanoTechnology": "engineeringAndTechnology",
+    "otherEngineeringAndTechnologies": "engineeringAndTechnology",
+    "medicalAndHealthSciences": "medicalAndHealthSciences",
+    "basicMedicine": "medicalAndHealthSciences",
+    "clinicalMedicine": "medicalAndHealthSciences",
+    "healthSciences": "medicalAndHealthSciences",
+    "healthBiotechnology": "medicalAndHealthSciences",
+    "otherMedicalSciences": "medicalAndHealthSciences",
+    "agriculturalSciences": "agriculturalSciences",
+    "agricultureForestryAndFisheries": "agriculturalSciences",
+    "animalAndDairyScience": "agriculturalSciences",
+    "veterinaryScience": "agriculturalSciences",
+    "agriculturalBiotechnology": "agriculturalSciences",
+    "otherAgriculturalSciences": "agriculturalSciences",
+    "socialScience": "socialScience",
+    "psychology": "socialScience",
+    "economicsAndBusiness": "socialScience",
+    "educationalSciences": "socialScience",
+    "sociology": "socialScience",
+    "law": "socialScience",
+    "politicalScience": "socialScience",
+    "socialAndEconomicGeography": "socialScience",
+    "mediaAndCommunications": "socialScience",
+    "otherSocialSciences": "socialScience",
+    "humanities": "humanities",
+    "historyAndArchaeology": "humanities",
+    "languagesAndLiterature": "humanities",
+    "philosophyEthicsAndReligion": "humanities",
+    "artsArtsHistoryOfArtsPerformingArtsMusic": "humanities",
+    "otherHumanities": "humanities",
+}
+
 category_dict = {
     "naturalSciences": "Natural sciences",
-    "mathematics": "Natural sciences",
-    "computerAndInformationSciences": "Natural sciences",
-    "physicalSciences": "Natural sciences",
-    "chemicalSciences": "Natural sciences",
-    "earthAndRelatedEnvironmentalSciences": "Natural sciences",
-    "biologicalSciences": "Natural sciences",
-    "otherNaturalSciences": "Natural sciences",
+    "mathematics": "Mathematics",
+    "computerAndInformationSciences": "Computer and information sciences",
+    "physicalSciences": "Physical sciences",
+    "chemicalSciences": "Chemical sciences",
+    "earthAndRelatedEnvironmentalSciences": "Earth and related environmental sciences",
+    "biologicalSciences": "Biological sciences",
+    "otherNaturalSciences": "Other natural sciences",
     "engineeringAndTechnology": "Engineering and technology",
-    "civilEngineering": "Engineering and technology",
-    "electricalEngineering": "Engineering and technology",
-    "mechanicalEngineering": "Engineering and technology",
-    "chemicalEngineering": "Engineering and technology",
-    "materialsEngineering": "Engineering and technology",
-    "medicalEngineering": "Engineering and technology",
-    "environmentalEngineering": "Engineering and technology",
-    "environmentalBiotechnology": "Engineering and technology",
-    "industrialBiotechnology": "Engineering and technology",
-    "nanoTechnology": "Engineering and technology",
-    "otherEngineeringAndTechnologies": "Engineering and technology",
+    "civilEngineering": "Civil engineering",
+    "electricalEngineering": "Electrical engineering, electronic engineering, information engineering",
+    "mechanicalEngineering": "Mechanical engineering",
+    "chemicalEngineering": "Chemical engineering",
+    "materialsEngineering": "Materials engineering",
+    "medicalEngineering": "Medical engineering",
+    "environmentalEngineering": "Environmental engineering",
+    "environmentalBiotechnology": "Environmental biotechnology",
+    "industrialBiotechnology": "Industrial biotechnology",
+    "nanoTechnology": "Nano technology",
+    "otherEngineeringAndTechnologies": "Other engineering and technologies",
     "medicalAndHealthSciences": "Medical and health sciences",
-    "basicMedicine": "Medical and health sciences",
-    "clinicalMedicine": "Medical and health sciences",
-    "healthSciences": "Medical and health sciences",
-    "healthBiotechnology": "Medical and health sciences",
-    "otherMedicalSciences": "Medical and health sciences",
+    "basicMedicine": "Basic medicine",
+    "clinicalMedicine": "Clinical medicine",
+    "healthSciences": "Health sciences",
+    "healthBiotechnology": "Health biotechnology",
+    "otherMedicalSciences": "Other medical sciences",
     "agriculturalSciences": "Agricultural sciences",
-    "agricultureForestryAndFisheries": "Agricultural sciences",
-    "animalAndDairyScience": "Agricultural sciences",
-    "veterinaryScience": "Agricultural sciences",
-    "agriculturalBiotechnology": "Agricultural sciences",
-    "otherAgriculturalSciences": "Agricultural sciences",
+    "agricultureForestryAndFisheries": "Agriculture, forestry, and fisheries",
+    "animalAndDairyScience": "Animal and dairy science",
+    "veterinaryScience": "Veterinary science",
+    "agriculturalBiotechnology": "Agricultural biotechnology",
+    "otherAgriculturalSciences": "Other agricultural sciences",
     "socialScience": "Social science",
-    "psychology": "Social science",
-    "economicsAndBusiness": "Social science",
-    "educationalSciences": "Social science",
-    "sociology": "Social science",
-    "law": "Social science",
-    "politicalScience": "Social science",
-    "socialAndEconomicGeography": "Social science",
-    "mediaAndCommunications": "Social science",
-    "otherSocialSciences": "Social science",
+    "psychology": "Psychology",
+    "economicsAndBusiness": "Economics and business",
+    "educationalSciences": "Educational sciences",
+    "sociology": "Sociology",
+    "law": "Law",
+    "politicalScience": "Political science",
+    "socialAndEconomicGeography": "Social and economic geography",
+    "mediaAndCommunications": "Media and communications",
+    "otherSocialSciences": "Other social sciences",
     "humanities": "Humanities",
-    "historyAndArchaeology": "Humanities",
-    "languagesAndLiterature": "Humanities",
-    "philosophyEthicsAndReligion": "Humanities",
-    "artsArtsHistoryOfArtsPerformingArtsMusic": "Humanities",
-    "otherHumanities": "Humanities",
+    "historyAndArchaeology": "History and archaeology",
+    "languagesAndLiterature": "Languages and literature",
+    "philosophyEthicsAndReligion": "Philosophy, ethics and religion",
+    "artsArtsHistoryOfArtsPerformingArtsMusic": "Arts (arts, history of arts, performing arts, music)",
+    "otherHumanities": "Other humanities",
 }
 
-category_count = {
-    "Natural sciences": 0,
-    "Engineering and technology": 0,
-    "Medical and health sciences": 0,
-    "Agricultural sciences": 0,
-    "Social science": 0,
-    "Humanities": 0,
-}
 
-posts_by_cat = [
-    {"category": category_dict[c["category"]], "cat_count": c["cat_count"]}
-    for c in response.data
-    if c["category"]
-]
-for c in posts_by_cat:
-    category_count[c["category"]] += c["cat_count"]
+def format_category(d):
+    category = category_dict[d["category"]]
+    parent = category_dict[category_parents[d["category"]]]
+    if category != parent:
+        category = parent + ": " + category
+    return {
+        "category": category,
+        "parent": parent,
+        "cat_count": d["cat_count"],
+    }
+
+
 posts_by_category = [
-    {"category": k, "cat_count": v} for k, v in category_count.items()
+    format_category(d) for d in response.data if d["category"]
 ]
 
 response = supabase.table("posts_by_generator").select("*").execute()
 posts_by_generator = [d for d in response.data if d["generator"] != "Other"]
 
+ojs_define(blog_count=blog_count)
 ojs_define(post_count=post_count)
 ojs_define(posts_by_year=posts_by_year)
 ojs_define(posts_by_language=posts_by_language)
@@ -145,14 +198,12 @@ ojs_define(posts_by_generator=posts_by_generator)
 
 ## Row
 
-```{python}
-#| content: valuebox
-#| title: "Particating Blogs"
-dict(
-  icon = "journals",
-  color = "#10b981",
-  value = blog_count
-)
+```{ojs}
+//| content: valuebox
+//| title: "Particating Blogs"
+//| icon: "journals"
+//| color: "#10b981"
+blog_count
 ```
 
 ```{python}
@@ -230,7 +281,21 @@ Plot.plot({
   },
   marks: [
     Plot.ruleY([0]),
-    Plot.barY(posts_by_year, {x: "year", y: "year_count", fill: "#0ea5e9"})
+    Plot.rectY(posts_by_year, {
+      x: "year",
+      interval: 1,
+      y: "year_count", 
+      href: d => `https://rogue-scholar.org/search?q=metadata.publication_date:[${d.year}%20TO%20${d.year+1}]&sort=oldest`, 
+      fill: "#0ea5e9"
+    }),
+    Plot.text(posts_by_year, {
+      text: d => `${d.year_count}`,
+      x: "year",
+      y: "year_count",
+      dx: 20,
+      dy: -6,
+      textAnchor: "start",
+    })
   ],
 })
 ```
@@ -242,13 +307,14 @@ Plot.plot({
 Plot.plot({
   marginLeft: 150,
   marginRight: 60,
-  height: 350,
+  height: 360,
   x: { axis: null },
   y: { label: null },
   marks: [
     Plot.barX(posts_by_language, {
       x: "doc_count",
       y: "label",
+      href: d => `https://rogue-scholar.org/search?q=&f=language:${d.key}`,
       sort: { y: "x", reverse: true, limit: 9 },
       fill: "label",
     }),
@@ -272,17 +338,17 @@ Plot.plot({
 ```{ojs}
 //| title: "Blog Posts by OECD Fields of Science and Technology"
 Plot.plot({
-  marginLeft: 150,
+  marginLeft: 490,
   marginRight: 60,
-  height: 240,
+  height: 700,
   x: { axis: null },
   y: { label: null },
   marks: [
     Plot.barX(posts_by_category, {
       x: "cat_count",
       y: "category",
-      sort: { y: "x", reverse: true, limit: 6 },
-      fill: "category"
+      href: d => `https://rogue-scholar.org/search?q=&f=subject:${d.category}`,
+      fill: "parent",
     }),
 
     Plot.text(posts_by_category, {
@@ -306,7 +372,7 @@ Plot.plot({
 Plot.plot({
   marginLeft: 150,
   marginRight: 60,
-  height: 360,
+  height: 400,
   x: { axis: null },
   y: { label: null },
   marks: [
