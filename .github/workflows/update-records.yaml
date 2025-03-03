@@ -20,7 +20,7 @@ jobs:
       - name: Update inveniordm posts from jsonfeed
         run: |
           mkdir -p upload
-          commonmeta push -f jsonfeed -t inveniordm --from-host rogue-scholar.org --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacyKey ${{ secrets.SUPABASE_KEY }} --is-archived=false -n 3 > upload/response.json
+          commonmeta push -f jsonfeed -t inveniordm --from-host rogue-scholar.org --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacyKey ${{ secrets.SUPABASE_KEY }} --is-archived=false -n 50 > upload/response.json
           cat upload/response.json
         id: response
       
