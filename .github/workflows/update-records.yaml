@@ -17,10 +17,10 @@ jobs:
         run: |
           go install github.com/front-matter/commonmeta@latest
           commonmeta -v
-      - name: Convert inveniordm posts of type publication-preprint
+      - name: Update inveniordm posts from jsonfeed
         run: |
           mkdir -p upload
-          commonmeta push -f inveniordm -t inveniordm --from-host rogue-scholar.org --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --type publication-preprint -n 50 > upload/response.json
+          commonmeta push -f jsonfeed -t inveniordm --from-host rogue-scholar.org --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacyKey ${{ secrets.SUPABASE_KEY }} --is-archived=false -n 3 > upload/response.json
           cat upload/response.json
         id: response
       
