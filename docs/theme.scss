@@ -6,11 +6,10 @@ $link-hover-color: #1d4ed8;
 $link-decoration: none;
 $navbar-bg: #e5e7eb;
 
-// .base-row {
-//   height: 10rem !important;
-//   grid-template-rows: auto;
-//   grid-template-columns: auto;
-// }
+@at-root .bslib-grid-item {
+  display: grid !important;
+  grid-template-rows: minmax(3em, 1fr) !important;
+}
 
 .base-row .card {
   height: 10rem !important;

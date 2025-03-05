@@ -2,8 +2,8 @@
 title: "Statistics"
 format: 
   dashboard:
-    scrolling: true
     expandable: false
+    scrolling: true
 ---
 
 ```{python}
@@ -57,12 +57,12 @@ post_ror_count = f"{(py_.get(result, 'hits.total') / post_count):.2%}"
 url = "https://rogue-scholar.org/api/records?q=metadata.references.identifier:*&size=1"
 response = httpx.get(url)
 result = response.json()
-post_reference_count = f"{(py_.get(result, "hits.total") / post_count):.2%}"
+post_reference_count = f"{(py_.get(result, 'hits.total') / post_count):.2%}"
 
 url = "https://rogue-scholar.org/api/records?q=custom_fields.rs%5C:citations.identifier:*&size=1"
 response = httpx.get(url)
 result = response.json()
-post_citation_count = f"{(py_.get(result, "hits.total") / post_count):.2%}"
+post_citation_count = f"{(py_.get(result, 'hits.total') / post_count):.2%}"
 
 
 response = supabase.table("posts_by_year").select("*").execute()
@@ -251,7 +251,7 @@ All Blog Posts
 Posts with ORCID
 
 ::::: {.value}
-[`{python} post_orcid_count`](https://rogue-scholar.org/search?q=&f=author_identifiers:Aorcid&l=list&p=1&s=10&sort=newest)
+[`{python} post_orcid_count`](https://rogue-scholar.org/search?q=&f=author_identifiers:orcid&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
 :::
@@ -297,6 +297,7 @@ Posts with Citations
 ```{ojs}
 //| title: "Blog Posts by Year"
 Plot.plot({
+  height: 400,
   x: {
     tickFormat: "",
     label: null
