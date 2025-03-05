@@ -5,3 +5,69 @@ $link-color: #3b82f6;
 $link-hover-color: #1d4ed8;
 $link-decoration: none;
 $navbar-bg: #e5e7eb;
+
+// .base-row {
+//   height: 10rem !important;
+//   grid-template-rows: auto;
+//   grid-template-columns: auto;
+// }
+
+.base-row .card {
+  height: 10rem !important;
+
+  .card-body {
+    display: grid !important;
+    grid-template-columns: 1fr 3fr !important;
+  }
+
+  iconify-icon {
+    padding: 1.5rem !important;
+  }
+
+  .area p {
+    font-size: 1.1rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  a {
+    color: black;
+  }
+
+  a:hover {
+    color: #4b5563;
+  }
+
+  .value {
+    font-size: 3rem;
+    white-space: nowrap;
+  }
+}
+
+
+.base-row .blog {
+  background-color: #4269d0 !important;
+}
+
+.base-row .community {
+  background-color: #ff725c !important;
+}
+
+.base-row .blog-post {
+  background-color: #efb118 !important;
+}
+
+.base-row .orcid {
+  background-color: #a6ce39;
+}
+
+.base-row .ror {
+  background-color: #53baa1;
+}
+
+.base-row .references {
+  background-color: #97bbf5 !important;
+}
+
+.base-row .citations {
+  background-color: #a463f2 !important;
+}

@@ -2,7 +2,8 @@
 title: "Statistics"
 format: 
   dashboard:
-    scrolling: true 
+    scrolling: true
+    expandable: false
 ---
 
 ```{python}
@@ -12,6 +13,7 @@ from dotenv import load_dotenv
 from supabase import create_client, Client
 import httpx
 import pydash as py_
+
 
 loaded = load_dotenv()
 
@@ -29,37 +31,38 @@ url = "https://rogue-scholar.org/api/records?size=1"
 response = httpx.get(url)
 result = response.json()
 post_count = py_.get(result, "hits.total")
+post_total_count = f"{post_count:,d}"
+posts_by_language = py_.get(result, "aggregations.language.buckets")
 
 url = "https://rogue-scholar.org/api/records?q=metadata.publication_date%3A%5B2025%20TO%202026%5D&size=1"
 response = httpx.get(url)
 result = response.json()
 post_2025_count = py_.get(result, "hits.total")
 
-url = "https://rogue-scholar.org/api/records?size=1"
+url = "https://rogue-scholar.org/api/communities?type=topic&size=1"
 response = httpx.get(url)
 result = response.json()
-post_count = py_.get(result, "hits.total")
-posts_by_language = py_.get(result, "aggregations.language.buckets")
+topic_count = py_.get(result, "hits.total")
 
 url = "https://rogue-scholar.org/api/records?q=metadata.creators.person_or_org.identifiers.identifier:*&size=1"
 response = httpx.get(url)
 result = response.json()
-post_orcid_count = py_.get(result, "hits.total") / post_count
+post_orcid_count = f"{(py_.get(result, 'hits.total') / post_count):.2%}"
 
 url = "https://rogue-scholar.org/api/records?q=metadata.creators.affiliations.id:*&size=1"
 response = httpx.get(url)
 result = response.json()
-post_ror_count = py_.get(result, "hits.total") / post_count
+post_ror_count = f"{(py_.get(result, 'hits.total') / post_count):.2%}"
 
 url = "https://rogue-scholar.org/api/records?q=metadata.references.identifier:*&size=1"
 response = httpx.get(url)
 result = response.json()
-post_reference_count = py_.get(result, "hits.total") / post_count
+post_reference_count = f"{(py_.get(result, "hits.total") / post_count):.2%}"
 
 url = "https://rogue-scholar.org/api/records?q=custom_fields.rs%5C:citations.identifier:*&size=1"
 response = httpx.get(url)
 result = response.json()
-post_citation_count = py_.get(result, "hits.total") / post_count
+post_citation_count = f"{(py_.get(result, "hits.total") / post_count):.2%}"
 
 
 response = supabase.table("posts_by_year").select("*").execute()
@@ -77,7 +80,7 @@ category_parents = {
     "otherNaturalSciences": "naturalSciences",
     "engineeringAndTechnology": "engineeringAndTechnology",
     "civilEngineering": "engineeringAndTechnology",
-    "electricalEngineering": "engineeringAndTechnology",
+    "electricalEngineeringElectronicEngineeringInformationEngineering": "engineeringAndTechnology",
     "mechanicalEngineering": "engineeringAndTechnology",
     "chemicalEngineering": "engineeringAndTechnology",
     "materialsEngineering": "engineeringAndTechnology",
@@ -128,7 +131,7 @@ category_dict = {
     "otherNaturalSciences": "Other natural sciences",
     "engineeringAndTechnology": "Engineering and technology",
     "civilEngineering": "Civil engineering",
-    "electricalEngineering": "Electrical engineering, electronic engineering, information engineering",
+    "electricalEngineeringElectronicEngineeringInformationEngineering": "Electrical engineering, electronic engineering, information engineering",
     "mechanicalEngineering": "Mechanical engineering",
     "chemicalEngineering": "Chemical engineering",
     "materialsEngineering": "Materials engineering",
@@ -190,7 +193,6 @@ posts_by_category = [
 response = supabase.table("posts_by_generator").select("*").execute()
 posts_by_generator = [d for d in response.data if d["generator"] != "Other"]
 
-ojs_define(blog_count=blog_count)
 ojs_define(post_count=post_count)
 ojs_define(posts_by_year=posts_by_year)
 ojs_define(posts_by_language=posts_by_language)
@@ -198,75 +200,97 @@ ojs_define(posts_by_category=posts_by_category)
 ojs_define(posts_by_generator=posts_by_generator)
 ```
 
-## Row
+## Row {.base-row}
 
-```{ojs}
-//| content: valuebox
-//| title: "Particating Blogs"
-//| icon: "journals"
-//| color: "#10b981"
-blog_count
-```
+::: {.card .blog}
 
-```{python}
-#| content: valuebox
-#| title: "All Blog Posts"
-#| icon: newspaper
-#| color: "#0ea5e9"
-dict(
-  value = post_count
-)
-```
+{{< iconify grommet-icons:blog size=4x >}}
 
-```{python}
-# | content: valuebox
-# | title: "Blog Posts in 2025"
-# | icon: calendar-range
-# | color: "#38bdf8"
-dict(value=post_2025_count)
-```
+:::: {.area}
+Participating Blogs
 
-## Row
+::::: {.value}
+[`{python} blog_count`](https://rogue-scholar.org/communities/search?q=&f=type%3Ablog&l=list&p=1&s=10&sort=newest)
+:::::
+::::
+:::
 
-```{python}
-#| content: valuebox
-#| title: "Blog Posts with ORCID"
-dict(
-  icon = "person",
-  color = "#60a5fa",
-  value = f"{post_orcid_count:.2%}"
-)
-```
+::: {.card .community}
 
-```{python}
-#| content: valuebox
-#| title: "Blog Posts with ROR ID"
-dict(
-  icon = "people",
-  color = "#60a5fa",
-  value = f"{post_ror_count:.2%}"
-)
-```
+{{< iconify fluent:people-community-16-regular size=4x >}}
 
-```{python}
-#| content: valuebox
-#| title: "Blog Posts with References"
-dict(
-  icon = "link",
-  color = "#60a5fa",
-  value = f"{post_reference_count:.2%}"
-)
-```
+:::: {.area}
+Topic Communities
 
-```{python}
-#| content: valuebox
-#| title: "Blog Posts with Citations"
-dict(
-  icon = "share",
-  color = "#60a5fa",
-  value = f"{post_citation_count:.2%}"
-)
-```
+::::: {.value}
+[`{python} topic_count`](https://rogue-scholar.org/communities/search?q=&f=type%3Atopic&l=list&p=1&s=10&sort=newest)
+:::::
+::::
+:::
+
+::: {.card .blog-post}
+
+{{< iconify ic:outline-article size=4x >}}
+
+:::: {.area}
+All Blog Posts
+
+::::: {.value}
+[`{python} post_total_count`](https://rogue-scholar.org/search?q=&l=list&p=1&s=10&sort=newest)
+:::::
+::::
+:::
+
+## Row {.base-row}
+
+::: {.card .orcid}
+
+{{< iconify academicons:orcid size=4x >}}
+
+:::: {.area}
+Posts with ORCID
+
+::::: {.value}
+[`{python} post_orcid_count`](https://rogue-scholar.org/search?q=&f=author_identifiers:Aorcid&l=list&p=1&s=10&sort=newest)
+:::::
+::::
+:::
+
+::: {.card .ror}
+{{< iconify academicons:ror size=4x >}}
+
+:::: {.area}
+Posts with ROR ID
+
+::::: {.value}
+[`{python} post_ror_count`](https://rogue-scholar.org/search?q=ror:*&l=list&p=1&s=10&sort=newest)
+:::::
+::::
+:::
+
+::: {.card .references}
+{{< iconify codicon:list-ordered size=4x >}}
+
+:::: {.area}
+Posts with References
+
+::::: {.value}
+[`{python} post_reference_count`](https://rogue-scholar.org/search?q=references:*&l=list&p=1&s=10&sort=newest)
+:::::
+::::
+:::
+
+::: {.card .citations}
+{{< iconify codicon:references size=4x >}}
+
+:::: {.area}
+Posts with Citations
+
+::::: {.value}
+[`{python} post_citation_count`](https://rogue-scholar.org/search?q=citations:*&l=list&p=1&s=10&sort=newest)
+:::::
+::::
+:::
 
 ## Row
 
@@ -294,7 +318,7 @@ Plot.plot({
       text: d => `${d.year_count}`,
       x: "year",
       y: "year_count",
-      dx: 20,
+      dx: 18,
       dy: -6,
       textAnchor: "start",
     })
@@ -309,14 +333,14 @@ Plot.plot({
 Plot.plot({
   marginLeft: 150,
   marginRight: 60,
-  height: 360,
+  height: 300,
   x: { axis: null },
   y: { label: null },
   marks: [
     Plot.barX(posts_by_language, {
       x: "doc_count",
       y: "label",
-      href: d => `https://rogue-scholar.org/search?q=&f=language:${d.key}`,
+      href: d => `https://rogue-scholar.org/search?q=&f=language:${d.key}&sort=newest`,
       sort: { y: "x", reverse: true, limit: 9 },
       fill: "label",
     }),
@@ -349,7 +373,7 @@ Plot.plot({
     Plot.barX(posts_by_category, {
       x: "cat_count",
       y: "label",
-      href: d => `https://rogue-scholar.org/search?q=&f=subject:${d.category}`,
+      href: d => `https://rogue-scholar.org/search?q=&f=subject:${d.category}&sort=newest`,
       fill: "parent",
     }),
 
@@ -374,13 +398,14 @@ Plot.plot({
 Plot.plot({
   marginLeft: 150,
   marginRight: 60,
-  height: 400,
+  height: 360,
   x: { axis: null },
   y: { label: null },
   marks: [
     Plot.barX(posts_by_generator, {
       x: "gen_count",
       y: "generator",
+      href: d => `https://rogue-scholar.org/search?q=platform:${d.generator}&sort=newest`,
       sort: { y: "x", reverse: true, limit: 9 },
       fill: "generator",
     }),
