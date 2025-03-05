@@ -334,7 +334,7 @@ Plot.plot({
 Plot.plot({
   marginLeft: 150,
   marginRight: 60,
-  height: 300,
+  height: 360,
   x: { axis: null },
   y: { label: null },
   marks: [
@@ -367,7 +367,7 @@ Plot.plot({
 Plot.plot({
   marginLeft: 490,
   marginRight: 60,
-  height: 700,
+  height: 800,
   x: { axis: null },
   y: { label: null },
   marks: [
