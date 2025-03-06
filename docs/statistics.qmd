@@ -287,18 +287,6 @@ Posts with Grant IDs
 
 ## Row {.base-row}
 
-::: {.card .full-text}
-{{< iconify bi:tags size=4x >}}
-
-:::: {.h5}
-Posts with OECD FOS
-
-::::: {.display-5}
-[100%](https://rogue-scholar.org/search?q=references:*&l=list&p=1&s=10&sort=newest)
-:::::
-::::
-:::
-
 ::: {.card .license}
 {{< iconify fa-brands:creative-commons size=4x >}}
 
@@ -307,6 +295,18 @@ Posts with Full-Text
 
 ::::: {.display-5}
 [100%](https://rogue-scholar.org/search?q=&l=list&p=1&s=10&sort=newest)
+:::::
+::::
+:::
+
+::: {.card .oecd}
+{{< iconify bi:tags size=4x >}}
+
+:::: {.h5}
+Posts with OECD FOS
+
+::::: {.display-5}
+[100%](https://rogue-scholar.org/search?q=references:*&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
 :::
