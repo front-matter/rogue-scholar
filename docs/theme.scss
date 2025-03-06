@@ -3,6 +3,8 @@ $toc-color: #3b82f6;
 $header-margin-bottom: 0;
 $link-color: #3b82f6;
 $link-hover-color: #1d4ed8;
+// $link-color-dark: tint-color($primary, 40%) !default;
+// $link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage) !default;
 $link-decoration: none;
 $navbar-bg: #e5e7eb;
 
@@ -36,6 +38,7 @@ $navbar-bg: #e5e7eb;
     }
 
     a {
+      // @extend .link-dark;
       color: black;
 
       &:hover {
