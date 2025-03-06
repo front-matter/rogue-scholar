@@ -8,6 +8,16 @@
   identifiers:
     - identifier: https://doi.org/10.3030/654039
       scheme: doi
+- id: "312788"
+  title:
+    en: "ORCID and DATACITE Interoperability Network"
+  number: "312788"
+  acronym: ODIN
+  funder:
+    id: 00k4n6c32
+  identifiers:
+    - identifier: https://cordis.europa.eu/project/id/312788
+      scheme: url
 - id: "777523"
   title:
     en: "Connected Open Identifiers for Discovery, Access and Use of Research Resources"
