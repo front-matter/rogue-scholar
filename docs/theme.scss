@@ -16,29 +16,32 @@ $navbar-bg: #e5e7eb;
 
   .card-body {
     display: grid !important;
-    grid-template-columns: 1fr 3fr !important;
-  }
+    grid-template-columns: 1fr 2fr !important;
 
-  iconify-icon {
-    padding: 1.5rem !important;
-  }
+    iconify-icon {
+      // @extend .d-sm-none;
+      // @extend .d-xl-block;
+      padding: 1rem !important;
+    }
 
-  .area p {
-    font-size: 1.1rem !important;
-    margin-bottom: 0 !important;
-  }
+    .h5 {
+      p {
+        @extend .h5;
+        margin-bottom: 0 !important;
+      }
+    }
 
-  a {
-    color: black;
-  }
+    .display-5 {
+      @extend .text-nowrap;
+    }
 
-  a:hover {
-    color: #4b5563;
-  }
+    a {
+      color: black;
 
-  .value {
-    font-size: 3rem;
-    white-space: nowrap;
+      &:hover {
+        color: #4b5563;
+      }
+    }
   }
 }
 

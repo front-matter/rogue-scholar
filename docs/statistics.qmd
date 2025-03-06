@@ -206,10 +206,10 @@ ojs_define(posts_by_generator=posts_by_generator)
 
 {{< iconify grommet-icons:blog size=4x >}}
 
-:::: {.area}
+:::: {.h5}
 Participating Blogs
 
-::::: {.value}
+::::: {.display-4}
 [`{python} blog_count`](https://rogue-scholar.org/communities/search?q=&f=type%3Ablog&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
@@ -219,23 +219,23 @@ Participating Blogs
 
 {{< iconify fluent:people-community-16-regular size=4x >}}
 
-:::: {.area}
+:::: {.h5}
 Topic Communities
 
-::::: {.value}
+::::: {.display-4}
 [`{python} topic_count`](https://rogue-scholar.org/communities/search?q=&f=type%3Atopic&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
 :::
 
-::: {.card .blog-post}
+::: {.card .blog-post .container-fluid }
 
 {{< iconify ic:outline-article size=4x >}}
 
-:::: {.area}
+:::: {.h5}
 All Blog Posts
 
-::::: {.value}
+::::: {.display-4}
 [`{python} post_total_count`](https://rogue-scholar.org/search?q=&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
@@ -247,10 +247,10 @@ All Blog Posts
 
 {{< iconify academicons:orcid size=4x >}}
 
-:::: {.area}
+:::: {.h5}
 Posts with ORCID
 
-::::: {.value}
+::::: {.display-5}
 [`{python} post_orcid_count`](https://rogue-scholar.org/search?q=&f=author_identifiers:orcid&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
@@ -259,10 +259,10 @@ Posts with ORCID
 ::: {.card .ror}
 {{< iconify academicons:ror size=4x >}}
 
-:::: {.area}
+:::: {.h5}
 Posts with ROR ID
 
-::::: {.value}
+::::: {.display-5}
 [`{python} post_ror_count`](https://rogue-scholar.org/search?q=ror:*&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
@@ -271,10 +271,10 @@ Posts with ROR ID
 ::: {.card .references}
 {{< iconify codicon:list-ordered size=4x >}}
 
-:::: {.area}
+:::: {.h5}
 Posts with References
 
-::::: {.value}
+::::: {.display-5}
 [`{python} post_reference_count`](https://rogue-scholar.org/search?q=references:*&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
@@ -283,10 +283,10 @@ Posts with References
 ::: {.card .citations}
 {{< iconify codicon:references size=4x >}}
 
-:::: {.area}
+:::: {.h5}
 Posts with Citations
 
-::::: {.value}
+::::: {.display-5}
 [`{python} post_citation_count`](https://rogue-scholar.org/search?q=citations:*&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
