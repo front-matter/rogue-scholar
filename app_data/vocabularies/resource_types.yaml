@@ -512,7 +512,7 @@
     openaire_type: publication
     eurepo: info:eu-repo/semantics/preprint
     schema.org: https://schema.org/BlogPosting
-    subtype: publication-preprint
+    subtype: publication-blogpost
     type: publication
     marc21_type: publication
     marc21_subtype: preprint
