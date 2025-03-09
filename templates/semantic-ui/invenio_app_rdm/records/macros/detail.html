@@ -138,8 +138,8 @@
   <ol class="ui ordered list details-list">
     {% for reference in references %}
       {% set reference_string = reference.reference | safe %}
-      {% if reference.identifier %}
-        {% if reference.scheme %}
+      {% if 'identifier' in reference %}
+        {% if 'scheme' in reference %}
           {% set id = reference.identifier %}
           {% if 'doi' == reference.scheme %}
             <li class="item">{{ reference_string }}

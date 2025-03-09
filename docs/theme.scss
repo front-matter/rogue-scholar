@@ -3,5 +3,88 @@ $toc-color: #3b82f6;
 $header-margin-bottom: 0;
 $link-color: #3b82f6;
 $link-hover-color: #1d4ed8;
+// $link-color-dark: tint-color($primary, 40%) !default;
+// $link-hover-color-dark: shift-color($link-color-dark, -$link-shade-percentage) !default;
 $link-decoration: none;
 $navbar-bg: #e5e7eb;
+
+@at-root .bslib-grid-item {
+  display: grid !important;
+  grid-template-rows: minmax(3em, 1fr) !important;
+}
+
+.base-row .card {
+  height: 10rem !important;
+
+  .card-body {
+    display: grid !important;
+    grid-template-columns: 1fr 2fr !important;
+
+    iconify-icon {
+      // @extend .d-sm-none;
+      // @extend .d-xl-block;
+      padding: 1rem !important;
+    }
+
+    .h5 {
+      p {
+        @extend .h5;
+        margin-bottom: 0 !important;
+      }
+    }
+
+    .display-5 {
+      @extend .text-nowrap;
+    }
+
+    a {
+      // @extend .link-dark;
+      color: black;
+
+      &:hover {
+        color: #4b5563;
+      }
+    }
+  }
+}
+
+
+.base-row .blog {
+  background-color: #4269d0 !important;
+}
+
+.base-row .community {
+  background-color: #ff725c !important;
+}
+
+.base-row .blog-post {
+  background-color: #efb118 !important;
+}
+
+.base-row .orcid {
+  background-color: #a6ce39;
+}
+
+.base-row .ror {
+  background-color: #53baa1;
+}
+
+.base-row .funding {
+  background-color: #ff8ab7;
+}
+
+.base-row .license {
+  background-color: #ffffff !important;
+}
+
+.base-row .oecd {
+  background-color: #3ca951 !important;
+}
+
+.base-row .references {
+  background-color: #97bbf5 !important;
+}
+
+.base-row .citations {
+  background-color: #a463f2 !important;
+}
