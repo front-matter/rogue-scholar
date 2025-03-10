@@ -1,6 +1,6 @@
 [project]
 name = "rogue-scholar"
-version = "12.0.14.2"
+version = "12.0.14.3"
 description = "Rogue Scholar is a science blog archive based on the InvenioRDM repository software."
 authors = [{ name = "Martin Fenner", email = "martin@front-matter.io" }]
 readme = "README.md"
