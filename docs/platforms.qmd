@@ -7,7 +7,7 @@ The following blogging platforms are used by Rogue Scholar blogs:
 ```{ojs}
 //| echo: false
 //| title: "Blog Posts by Blogging Platform"
-import { post_count, posts_by_generator } from "./statistics.qmd";
+import { post_count, posts_by_generator } from "./dashboard.qmd";
 
 Plot.plot({
   marginLeft: 150,

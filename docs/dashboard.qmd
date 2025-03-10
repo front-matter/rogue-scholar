@@ -1,5 +1,5 @@
 --- 
-title: "Statistics"
+title: "Dashboard"
 format: 
   dashboard:
     expandable: false
@@ -39,7 +39,7 @@ response = httpx.get(url)
 result = response.json()
 post_2025_count = py_.get(result, "hits.total")
 
-url = "https://rogue-scholar.org/api/communities?type=topic&size=1"
+url = "https://rogue-scholar.org/api/communities?size=1"
 response = httpx.get(url)
 result = response.json()
 topic_count = py_.get(result, "hits.total")
@@ -220,19 +220,6 @@ Participating Blogs
 ::::
 :::
 
-::: {.card .community}
-
-{{< iconify fluent:people-community-16-regular size=4x >}}
-
-:::: {.h5}
-Topic Communities
-
-::::: {.display-4}
-[`{python} topic_count`](https://rogue-scholar.org/communities/search?q=&f=type%3Atopic&l=list&p=1&s=10&sort=newest)
-:::::
-::::
-:::
-
 ::: {.card .blog-post}
 
 {{< iconify ic:outline-article size=4x >}}
@@ -242,6 +229,19 @@ All Blog Posts
 
 ::::: {.display-4}
 [`{python} post_total_count`](https://rogue-scholar.org/search?q=&l=list&p=1&s=10&sort=newest)
+:::::
+::::
+:::
+
+::: {.card .community}
+
+{{< iconify fluent:people-community-16-regular size=4x >}}
+
+:::: {.h5}
+All Communities
+
+::::: {.display-4}
+[`{python} topic_count`](https://rogue-scholar.org/communities/search?q=&f=type%3Atopic&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
 :::
