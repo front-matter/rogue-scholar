@@ -38,10 +38,10 @@
   identifiers:
     - identifier: https://gepris-extern.dfg.de/gepris/projekt/422587133
       scheme: url
-- id: "OSF23.2.097"
+- id: "osf232097"
   title:
     en: "The Chemistry Development Kit in 2024: improving cheminformatics research"
-  number: "OSF23.2.097"
+  number: "osf232097"
   acronym: CDK2024
   funder:
     id: 04jsz6e67
