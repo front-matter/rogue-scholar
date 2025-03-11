@@ -69,6 +69,8 @@ response = httpx.get(url)
 result = response.json()
 post_citation_count = f"{(py_.get(result, 'hits.total') / post_count):.2%}"
 
+response = supabase.table("citations").select("*", count="exact").execute()
+citation_count = f"{response.count:,d}"
 
 response = supabase.table("posts_by_year").select("*").execute()
 posts_by_year = [d for d in response.data if d["year"] in range(2005, 2026)]
@@ -233,15 +235,14 @@ All Blog Posts
 ::::
 :::
 
-::: {.card .community}
-
-{{< iconify fluent:people-community-16-regular size=4x >}}
+::: {.card .citations}
+{{< iconify codicon:references size=4x >}}
 
 :::: {.h5}
-All Communities
+All Citations
 
 ::::: {.display-4}
-[`{python} topic_count`](https://rogue-scholar.org/communities/search?q=&l=list&p=1&s=10&sort=newest)
+[`{python} citation_count`](https://rogue-scholar.org/search?q=citations:*&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
 :::
@@ -255,7 +256,7 @@ All Communities
 :::: {.h5}
 Posts with ORCID
 
-::::: {.display-4}
+::::: {.display-5}
 [`{python} post_orcid_count`](https://rogue-scholar.org/search?q=&f=author_identifiers:orcid&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
@@ -267,46 +268,8 @@ Posts with ORCID
 :::: {.h5}
 Posts with ROR ID
 
-::::: {.display-4}
+::::: {.display-5}
 [`{python} post_ror_count`](https://rogue-scholar.org/search?q=ror:*&l=list&p=1&s=10&sort=newest)
-:::::
-::::
-:::
-
-::: {.card .funding}
-{{< iconify octicon:sponsor-tiers-24 size=4x >}}
-
-:::: {.h5}
-Posts with Grant IDs
-
-::::: {.display-4}
-[`{python} post_funding_count`](https://rogue-scholar.org/search?q=funder:*&l=list&p=1&s=10&sort=newest)
-:::::
-::::
-:::
-
-## Row {.base-row}
-
-::: {.card .license}
-{{< iconify fa-brands:creative-commons size=4x >}}
-
-:::: {.h5}
-Posts with Full-Text
-
-::::: {.display-5}
-[100%](https://rogue-scholar.org/search?q=&l=list&p=1&s=10&sort=newest)
-:::::
-::::
-:::
-
-::: {.card .oecd}
-{{< iconify bi:tags size=4x >}}
-
-:::: {.h5}
-Posts with OECD FOS
-
-::::: {.display-5}
-[100%](https://rogue-scholar.org/search?q=&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
 :::
@@ -323,14 +286,14 @@ Posts with References
 ::::
 :::
 
-::: {.card .citations}
-{{< iconify codicon:references size=4x >}}
+::: {.card .funding}
+{{< iconify octicon:sponsor-tiers-24 size=4x >}}
 
 :::: {.h5}
-Posts with Citations
+Posts with Grant IDs
 
 ::::: {.display-5}
-[`{python} post_citation_count`](https://rogue-scholar.org/search?q=citations:*&l=list&p=1&s=10&sort=newest)
+[`{python} post_funding_count`](https://rogue-scholar.org/search?q=funder:*&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
 :::
@@ -361,7 +324,7 @@ Plot.plot({
       interval: 1,
       y: "year_count", 
       href: d => `https://rogue-scholar.org/search?q=metadata.publication_date:[${d.year}%20TO%20${d.year+1}]&sort=oldest`, 
-      fill: "#efb118"
+      fill: "#ff725c",
     }),
     Plot.text(posts_by_year, {
       text: d => `${d.year_count}`,
