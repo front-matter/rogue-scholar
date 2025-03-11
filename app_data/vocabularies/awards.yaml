@@ -6,7 +6,7 @@
   funder:
     id: 00k4n6c32
   identifiers:
-    - identifier: https://doi.org/10.3030/654039
+    - identifier: 10.3030/654039
       scheme: doi
 - id: "312788"
   title:
@@ -26,7 +26,7 @@
   funder:
     id: 00k4n6c32
   identifiers:
-    - identifier: https://doi.org/10.3030/777523
+    - identifier: 10.3030/777523
       scheme: doi
 - id: "422587133"
   title:
