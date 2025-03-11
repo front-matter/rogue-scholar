@@ -411,33 +411,40 @@ Plot.plot({
 })
 ```
 
-<!-- ## Row
+## Row
 
 ```{ojs}
 Plot.plot({
   title: "Blog Posts by OECD Fields of Science and Technology",
-  marginLeft: 240,
-  marginRight: 160,
+  marginLeft: 540,
+  marginRight: 60,
   height: 800,
   x: { axis: null },
   y: { label: null },
-  facet: {marginRight: 90},
+  style: {
+    fontSize: 11,
+  },
   marks: [
-    Plot.frame(),
     Plot.barX(posts_by_category, {
       x: "cat_count",
-      y: "category",
-      fy: "parent",
+      y: "label",
       href: d => `https://rogue-scholar.org/search?q=&f=subject:${d.category}&sort=newest`,
       fill: "parent",
-      lineWidth: 3,
-      sort: {y: "-x", fy: "-x", reduce: "median"}
     }),
-
+    Plot.text(posts_by_category, {
+      text: d => `${(d.cat_count / post_count).toLocaleString(undefined, {
+        style: "percent", 
+        maximumSignificantDigits: 2
+      })}`,
+      y: "label",
+      x: "cat_count",
+      textAnchor: "start",
+      dx: 5,
+    })
 
   ]
 })
-``` -->
+```
 
 ## Row
 
