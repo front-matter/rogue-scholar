@@ -119,10 +119,17 @@
 
         {%- if item.award.identifiers -%}
           {% for identifier in item.award.identifiers if 'url' == identifier.scheme %}
-            <a href="{{ identifier.identifier }}" target="_blank"
-               rel="noopener noreferrer" aria-label="{{ _('Open external link') }}">
-              <i class="external alternate icon"></i>
-            </a>
+            {% if identifier.scheme == 'url' %}
+              <a href="{{ identifier.identifier }}" target="_blank"
+                 rel="noopener noreferrer" aria-label="{{ _('Open external link') }}">
+                <i class="external alternate icon"></i>
+              </a>
+            {% elif identifier.scheme == 'doi' %}
+              <a href="{{ identifier.identifier|pid_url('doi') }}" target="_blank"
+                 rel="noopener noreferrer" aria-label="{{ _('Open external link') }}">
+                <i class="external alternate icon"></i>
+              </a>
+            {% endif %}
           {%- endfor -%}
         {%- endif -%}
       </dt>
