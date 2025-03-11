@@ -241,7 +241,7 @@ All Blog Posts
 All Communities
 
 ::::: {.display-4}
-[`{python} topic_count`](https://rogue-scholar.org/communities/search?q=&f=type%3Atopic&l=list&p=1&s=10&sort=newest)
+[`{python} topic_count`](https://rogue-scholar.org/communities/search?q=&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
 :::
@@ -280,7 +280,7 @@ Posts with ROR ID
 Posts with Grant IDs
 
 ::::: {.display-4}
-[`{python} post_funding_count`](https://rogue-scholar.org/search?q=funding:*&l=list&p=1&s=10&sort=newest)
+[`{python} post_funding_count`](https://rogue-scholar.org/search?q=funder:*&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
 :::
@@ -306,7 +306,7 @@ Posts with Full-Text
 Posts with OECD FOS
 
 ::::: {.display-5}
-[100%](https://rogue-scholar.org/search?q=references:*&l=list&p=1&s=10&sort=newest)
+[100%](https://rogue-scholar.org/search?q=&l=list&p=1&s=10&sort=newest)
 :::::
 ::::
 :::
@@ -338,8 +338,13 @@ Posts with Citations
 ## Row
 
 ```{ojs}
-//| title: "Blog Posts by Year"
 Plot.plot({
+  title: "Blog Posts by Year",
+  style: {
+    fontSize: 11,
+  },
+  marginLeft: 100,
+  marginRight: 100,
   height: 400,
   x: {
     tickFormat: "",
@@ -356,7 +361,7 @@ Plot.plot({
       interval: 1,
       y: "year_count", 
       href: d => `https://rogue-scholar.org/search?q=metadata.publication_date:[${d.year}%20TO%20${d.year+1}]&sort=oldest`, 
-      fill: "#0ea5e9"
+      fill: "#efb118"
     }),
     Plot.text(posts_by_year, {
       text: d => `${d.year_count}`,
@@ -373,19 +378,22 @@ Plot.plot({
 ## Row
 
 ```{ojs}
-//| title: "Blog Posts by Language"
 Plot.plot({
+  title: "Blog Posts by Language",
   marginLeft: 150,
   marginRight: 60,
   height: 360,
   x: { axis: null },
   y: { label: null },
+  style: {
+    fontSize: 14,
+  },
   marks: [
     Plot.barX(posts_by_language, {
       x: "doc_count",
       y: "label",
       href: d => `https://rogue-scholar.org/search?q=&f=language:${d.key}&sort=newest`,
-      sort: { y: "x", reverse: true, limit: 9 },
+      sort: { y: "x", reverse: true, limit: 5 },
       fill: "label",
     }),
 
@@ -403,48 +411,47 @@ Plot.plot({
 })
 ```
 
-## Row
+<!-- ## Row
 
 ```{ojs}
-//| title: "Blog Posts by OECD Fields of Science and Technology"
 Plot.plot({
-  marginLeft: 490,
-  marginRight: 60,
+  title: "Blog Posts by OECD Fields of Science and Technology",
+  marginLeft: 240,
+  marginRight: 160,
   height: 800,
   x: { axis: null },
   y: { label: null },
+  facet: {marginRight: 90},
   marks: [
+    Plot.frame(),
     Plot.barX(posts_by_category, {
       x: "cat_count",
-      y: "label",
+      y: "category",
+      fy: "parent",
       href: d => `https://rogue-scholar.org/search?q=&f=subject:${d.category}&sort=newest`,
       fill: "parent",
+      lineWidth: 3,
+      sort: {y: "-x", fy: "-x", reduce: "median"}
     }),
 
-    Plot.text(posts_by_category, {
-      text: d => `${(d.cat_count / post_count).toLocaleString(undefined, {
-        style: "percent", 
-        maximumSignificantDigits: 2
-      })}`,
-      y: "label",
-      x: "cat_count",
-      textAnchor: "start",
-      dx: 5,
-    })
+
   ]
 })
-```
+``` -->
 
 ## Row
 
 ```{ojs}
-//| title: "Blog Posts by Blogging Platform"
 Plot.plot({
+  title: "Blog Posts by Blogging Platform",
   marginLeft: 150,
   marginRight: 60,
   height: 360,
   x: { axis: null },
   y: { label: null },
+  style: {
+    fontSize: 14,
+  },
   marks: [
     Plot.barX(posts_by_generator, {
       x: "gen_count",
