@@ -38,3 +38,23 @@
   identifiers:
     - identifier: https://gepris-extern.dfg.de/gepris/projekt/422587133
       scheme: url
+- id: "OSF23.2.097"
+  title:
+    en: "The Chemistry Development Kit in 2024: improving cheminformatics research"
+  number: "OSF23.2.097"
+  acronym: CDK2024
+  funder:
+    id: 04jsz6e67
+  identifiers:
+    - identifier: https://www.nwo.nl/en/projects/osf232097
+      scheme: url
+- id: "604134"
+  title: 
+    en: "A Database and Ontology Framework for Nanomaterials Design and Safety Assessment"
+  number: "604134"
+  acronym: eNanoMapper
+  funder:
+    id: 00k4n6c32
+  identifiers:
+    - identifier: https://cordis.europa.eu/project/id/604134
+      scheme: url
