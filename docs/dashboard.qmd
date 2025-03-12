@@ -320,7 +320,7 @@ Plot.plot({
       fill: "#ff725c",
     }),
     Plot.text(posts_by_year, {
-      text: d => `${d.year_count}`,
+      text: d => `${d.doc_count}`,
       x: "label",
       y: "doc_count",
       dx: 18,
