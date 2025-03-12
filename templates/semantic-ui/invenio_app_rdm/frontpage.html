@@ -43,7 +43,47 @@
       {% block side_column %}
         <aside class="five wide computer sixteen wide tablet column">
 
-          {% block side_column_content %}{% endblock side_column_content %}
+          {% block side_column_content %}
+            <section class="sidebar-container">
+              <h2 class="ui medium top attached header mt-0">{{ _("Why use Rogue Scholar?") }} </h2>
+              <div class="ui segment bottom attached rdm-sidebar">
+                <ul class="m-0">
+                  <li>
+                    <strong>No waiting time</strong> — blogs can join Rogue Scholar via a simple <a href="https://tally.so/r/nPvNK0" target="_blank">form</a>. Blog posts are made automatically available within minutes after publishing them on your blog.
+                  </li>
+                  <li>
+                    <strong>No fees</strong> — blog posts are made available without fees to either readers or authors. Rogue Scholar depends on donations and sponsorships.
+                  </li>
+                  <li>
+                    <strong>Archived</strong> — blog posts are archived by Rogue Scholar, and semiannually by the Internet Archive Archive-It service.
+                  </li>
+                  <li>
+                    <strong>Findable</strong> — every blog post is searchable via full-text search.
+                  </li>
+                  <li>
+                    <strong>Accessible</strong> — metadata and full-text of every blog post are distributed under the terms of the Creative Commons Attribution 4.0 license.
+                  </li>
+                  <li>
+                    <strong>Citeable</strong> — every blog post is assigned a Digital Object Identifier (DOI), to make them citable and trackable.
+                  </li>
+                  <li>
+                    <strong>Communities</strong> — blog posts automatically become part of communities for your blog, the blog subject area, and topic communities based on blog post tags.
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="sidebar-container">
+              <h2 class="ui medium top attached header mt-0">Newsletter</h2>
+              <div class="ui segment bottom attached rdm-sidebar">
+                <p>Receive information on blogs that have joined Rogue Scholar, important technical and community updates, and other news relevant to Rogue Scholar users.</p>
+
+                {% trans rogue_scholar_newsletter="https://blog.front-matter.io/#/portal/signup" %}
+                  <p><a href="{{ rogue_scholar_newsletter }}" target="_blank">Sign up for the Newsletter</a></p>
+                {% endtrans %}
+              </div>
+            </section>
+          {% endblock side_column_content %}
 
         </aside>
       {% endblock side_column %}
