@@ -33,14 +33,7 @@ result = response.json()
 post_count = py_.get(result, "hits.total")
 post_total_count = f"{post_count:,d}"
 posts_by_language = py_.get(result, "aggregations.language.buckets")
-
-
 posts_by_year = py_.get(result, "aggregations.publication_date.buckets")
-
-url = "https://rogue-scholar.org/api/records?q=metadata.publication_date%3A%5B2025%20TO%202026%5D&size=1"
-response = httpx.get(url)
-result = response.json()
-post_2025_count = py_.get(result, "hits.total")
 
 url = "https://rogue-scholar.org/api/communities?size=1"
 response = httpx.get(url)
