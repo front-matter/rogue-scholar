@@ -119,7 +119,7 @@
 
         {%- if item.award.identifiers -%}
           {% for identifier in item.award.identifiers %}
-            {% set id = reference.identifier %}
+            {% set id = identifier.identifier %}
             {% if identifier.scheme == 'url' %}
               <a href="{{ id }}" target="_blank"
                 rel="noopener noreferrer" aria-label="{{ _('Open external link') }}">
