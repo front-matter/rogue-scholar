@@ -34,6 +34,9 @@ post_count = py_.get(result, "hits.total")
 post_total_count = f"{post_count:,d}"
 posts_by_language = py_.get(result, "aggregations.language.buckets")
 
+
+posts_by_year = py_.get(result, "aggregations.publication_date.buckets")
+
 url = "https://rogue-scholar.org/api/records?q=metadata.publication_date%3A%5B2025%20TO%202026%5D&size=1"
 response = httpx.get(url)
 result = response.json()
@@ -71,9 +74,6 @@ post_citation_count = f"{(py_.get(result, 'hits.total') / post_count):.2%}"
 
 response = supabase.table("citations").select("*", count="exact").execute()
 citation_count = f"{response.count:,d}"
-
-response = supabase.table("posts_by_year").select("*").execute()
-posts_by_year = [d for d in response.data if d["year"] in range(2005, 2026)]
 
 response = supabase.table("posts_by_category").select("*").execute()
 category_parents = {
@@ -320,16 +320,16 @@ Plot.plot({
   marks: [
     Plot.ruleY([0]),
     Plot.rectY(posts_by_year, {
-      x: "year",
+      x: "label",
       interval: 1,
-      y: "year_count", 
-      href: d => `https://rogue-scholar.org/search?q=metadata.publication_date:[${d.year}%20TO%20${d.year+1}]&sort=oldest`, 
+      y: "doc_count", 
+      href: d => `https://rogue-scholar.org/search?q=&f=publication_date:${d.key}&sort=oldest`, 
       fill: "#ff725c",
     }),
     Plot.text(posts_by_year, {
       text: d => `${d.year_count}`,
-      x: "year",
-      y: "year_count",
+      x: "label",
+      y: "doc_count",
       dx: 18,
       dy: -6,
       textAnchor: "start",
