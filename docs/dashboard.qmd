@@ -295,10 +295,7 @@ Posts with Grant IDs
 
 ```{ojs}
 Plot.plot({
-  title: "Blog Posts by Year",
-  style: {
-    fontSize: 11,
-  },
+  title: "Blog Posts by Publication Year",
   marginLeft: 100,
   marginRight: 100,
   height: 400,
@@ -313,9 +310,9 @@ Plot.plot({
   marks: [
     Plot.ruleY([0]),
     Plot.rectY(posts_by_year, {
-      x: "label",
-      interval: 1,
-      y: "doc_count", 
+      x: "key",
+      y: "doc_count",
+      interval: 1, 
       href: d => `https://rogue-scholar.org/search?q=&f=publication_date:${d.key}&sort=oldest`, 
       fill: "#ff725c",
     }),
@@ -323,7 +320,7 @@ Plot.plot({
       text: d => `${d.doc_count}`,
       x: "label",
       y: "doc_count",
-      dx: 18,
+      dx: -10,
       dy: -6,
       textAnchor: "start",
     })
