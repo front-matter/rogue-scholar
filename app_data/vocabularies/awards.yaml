@@ -49,7 +49,7 @@
     - identifier: https://www.nwo.nl/en/projects/osf232097
       scheme: url
 - id: "604134"
-  title: 
+  title:
     en: "A Database and Ontology Framework for Nanomaterials Design and Safety Assessment"
   number: "604134"
   acronym: eNanoMapper
@@ -58,3 +58,23 @@
   identifiers:
     - identifier: https://cordis.europa.eu/project/id/604134
       scheme: url
+- id: "731075"
+  title:
+    en: "Open e-Infrastructure to Support Data Sharing, Knowledge Integration and in silico Analysis and Modelling in Risk Assessment"
+  number: "731075"
+  acronym: OpenRiskNet
+  funder:
+    id: 00k4n6c32
+  identifiers:
+    - identifier: 10.3030/731075
+      scheme: doi
+- id: "681002"
+  title:
+    en: "An Integrated European ‘Flagship’ Program Driving Mechanism-based Toxicity Testing and Risk Assessment for the 21st Century"
+  number: "681002"
+  acronym: EU-ToxRisk
+  funder:
+    id: 00k4n6c32
+  identifiers:
+    - identifier: 10.3030/731075
+      scheme: doi
