@@ -16,7 +16,7 @@ primary_region = 'fra'
     interval = "15s"
     timeout = "1m0s"
     grace_period = "1s"
-
+    
 [[services]]
   protocol = "tcp"
   internal_port = 15672
