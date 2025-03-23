@@ -249,9 +249,16 @@
             {%- endblock record_title -%}
 
             {# Description #}
-            {%- block record_content -%}
+            {%- block record_description -%}
               {%- include "invenio_app_rdm/records/details/description.html" %}
-            {%- endblock record_content -%}
+            {%- endblock record_description -%}
+
+            {# Content #}
+            {% if can_manage_record %}
+              {%- block record_content -%}
+                {%- include "invenio_app_rdm/records/details/content.html" %}
+              {%- endblock record_content -%}
+            {% endif %}
 
             {# Files #}
             {%- block record_files -%}
