@@ -8,13 +8,12 @@
   it under the terms of the MIT License; see LICENSE file for more details.
 #}
 
-{% set content = record.ui.custom_fields.get("rs:content", None) %}
+{% set content = record.ui.custom_fields.get("rs:content_html", None) %}
 {% if content %}
   <section id="content" class="rel-mt-2 rich-input-content" aria-label="{{ _('Record content') }}">
     <div class="ui items">
       <div class="item">
         <div class="content" style="word-wrap: break-word;">
-          {# content data is being sanitized by marshmallow in the backend #}
           <p>{{ content | safe }}</p>
         </div>
       </div>
