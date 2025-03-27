@@ -11,4 +11,10 @@
     max-width: 100%;
     height: auto;
   }
+  figure .image-link-expand {
+    display: none;
+  }
+  a.d-print-none {
+    display: none;
+  }
 }
