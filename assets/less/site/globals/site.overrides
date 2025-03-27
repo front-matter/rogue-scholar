@@ -5,3 +5,10 @@
 html.cover-page {
   background-color: @grey;
 }
+
+code {
+  color: @codeColor;
+  background-color: @codeBackgroundColor;
+  padding: 3px;
+  font-size: 13px;
+}

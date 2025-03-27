@@ -1,0 +1,14 @@
+/***********************************************
+    Invenio App RDM Starter Item Overrides
+***********************************************/
+
+.ui.items > .item > .content {
+  figure {
+    max-width: 100%;
+    height: auto;
+  }
+  figure img, img:not(.inline-id-icon) {
+    max-width: 100%;
+    height: auto;
+  }
+}

@@ -23,7 +23,7 @@ services:
       - caddy_data:/data
       - caddy_config:/config
   web:
-    image: ghcr.io/front-matter/rogue-scholar:latest
+    image: ghcr.io/front-matter/rogue-scholar:v12.0.14.7
     pull_policy: if_not_present
     volumes:
       - uploaded_data:/opt/invenio/var/instance/data
@@ -114,7 +114,7 @@ services:
         condition: service_started
   worker:
     command: "celery -A invenio_app.celery worker --beat --events --loglevel=WARNING"
-    image: ghcr.io/front-matter/rogue-scholar:latest
+    image: ghcr.io/front-matter/rogue-scholar:v12.0.14.7
     pull_policy: if_not_present
     volumes:
       - uploaded_data:/opt/invenio/var/instance/data

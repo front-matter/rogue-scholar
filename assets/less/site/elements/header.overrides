@@ -1,0 +1,14 @@
+/***********************************************
+         Invenio RDM Starter Header Overrides
+***********************************************/
+
+section#content .ui.items .item .content {
+  h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+}

@@ -10,17 +10,11 @@
 {%- from "invenio_app_rdm/records/macros/detail.html" import show_add_descriptions %}
 
 {% set description = metadata.get('description') %}
-{% set feature_image = record.ui.custom_fields.get("rs:image", None) %}
 {% if description %}
   <section id="description" class="rel-mt-2 rich-input-content" aria-label="{{ _('Record description') }}">
     <h2 id="description-heading" class="sr-only">{{ _('Description') }}</h2>
     <div class="ui items">
       <div class="item">
-        {% if feature_image %}
-          <div class="ui image rounded medium">
-            <img src="{{ feature_image }}" alt="Feature image" />
-          </div>
-        {% endif %}
         <div class="content">
           {# description data is being sanitized by marshmallow in the backend #}
           <div class="description" style="word-wrap: break-word;">

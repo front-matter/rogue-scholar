@@ -248,11 +248,13 @@
               </section>
             {%- endblock record_title -%}
 
-            {# Description #}
-            {%- block record_description -%}
-              {%- include "invenio_app_rdm/records/details/description.html" %}
-            {%- endblock record_description -%}
-
+            {% set feature_image = record.ui.custom_fields.get("rs:image", None) %}
+            {% if feature_image %}
+              <div class="ui image rounded medium">
+                <img src="{{ feature_image }}" alt="Feature image" />
+              </div>
+            {% endif %}
+            
             {# Content #}
             {% if can_manage_record %}
               {%- block record_content -%}
