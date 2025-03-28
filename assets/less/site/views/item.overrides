@@ -14,7 +14,7 @@
   figure .image-link-expand {
     display: none;
   }
-  a.d-print-none {
+  a.d-print-none, .wp_orcid_field {
     display: none;
   }
   ul, ol {
