@@ -17,4 +17,7 @@
   a.d-print-none {
     display: none;
   }
+  ul, ol {
+    max-width: 100%;
+  }
 }
