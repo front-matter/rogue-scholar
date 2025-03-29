@@ -250,11 +250,11 @@
 
             {% set feature_image = record.ui.custom_fields.get("rs:image", None) %}
             {% if feature_image %}
-              <div class="ui image rounded medium">
+              <div class="ui image rounded medium rel-mt-2">
                 <img src="{{ feature_image }}" alt="Feature image" />
               </div>
             {% endif %}
-            
+
             {# Content #}
             {% if can_manage_record %}
               {%- block record_content -%}

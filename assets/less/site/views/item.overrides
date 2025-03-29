@@ -11,13 +11,16 @@
     max-width: 100%;
     height: auto;
   }
+  ul, ol {
+    max-width: 100%;
+  }
   figure .image-link-expand {
     display: none;
   }
   a.d-print-none, .wp_orcid_field, .citation, .admonition {
     display: none;
   }
-  ul, ol {
-    max-width: 100%;
+  h2#references, h3#references, h2#references + ol, h3#references + ol {
+    display: none;
   }
 }
