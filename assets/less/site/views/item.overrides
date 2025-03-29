@@ -17,6 +17,9 @@
   figure .image-link-expand {
     display: none;
   }
+  figcaption {
+    font-style: italic;
+  }
   a.d-print-none, .wp_orcid_field, .citation, #quarto-bibliography, #quarto-citation, .admonition {
     display: none;
   }
