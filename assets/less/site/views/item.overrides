@@ -17,7 +17,7 @@
   figure .image-link-expand {
     display: none;
   }
-  a.d-print-none, .wp_orcid_field, .citation, .admonition {
+  a.d-print-none, .wp_orcid_field, .citation, .quarto-citation, .admonition {
     display: none;
   }
   h2#references, h3#references, h2#references + ol, h3#references + ol {
