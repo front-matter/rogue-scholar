@@ -23,7 +23,7 @@ services:
       - caddy_data:/data
       - caddy_config:/config
   web:
-    image: ghcr.io/front-matter/rogue-scholar:v12.0.14.7
+    image: ghcr.io/front-matter/rogue-scholar:latest
     pull_policy: if_not_present
     volumes:
       - uploaded_data:/opt/invenio/var/instance/data
@@ -114,7 +114,7 @@ services:
         condition: service_started
   worker:
     command: "celery -A invenio_app.celery worker --beat --events --loglevel=WARNING"
-    image: ghcr.io/front-matter/rogue-scholar:v12.0.14.7
+    image: ghcr.io/front-matter/rogue-scholar:latest
     pull_policy: if_not_present
     volumes:
       - uploaded_data:/opt/invenio/var/instance/data
@@ -160,7 +160,7 @@ services:
     ports:
       - "6379:6379"
   db:
-    image: postgres:16.6-bookworm
+    image: postgres:16.4-bookworm
     restart: "unless-stopped"
     environment:
       - POSTGRES_USER=${POSTGRES_USER:-inveniordm}
