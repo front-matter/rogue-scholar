@@ -3,6 +3,7 @@
 ***********************************************/
 
 .ui.items > .item > .content {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif !important;
   figure {
     max-width: 100%;
     height: auto;
