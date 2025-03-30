@@ -2,8 +2,11 @@
     Invenio App RDM Starter Item Overrides
 ***********************************************/
 
-.ui.items > .item > .content {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif !important;
+section#content > .ui.items > .item > .content {
+  font-family: Georgia, "Times New Roman", Times, serif !important;
+  font-size: 16px !important;;
+  line-height: 1.8 !important;
+
   figure {
     max-width: 100%;
     height: auto;
@@ -11,6 +14,12 @@
   figure img, img:not(.inline-id-icon) {
     max-width: 100%;
     height: auto;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  h3 {
+    font-size: 1.3rem;
   }
   ul, ol {
     max-width: 100%;
