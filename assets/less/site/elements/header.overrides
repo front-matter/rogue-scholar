@@ -3,7 +3,7 @@
 ***********************************************/
 
 section#content .ui.items .item .content {
-  h2 {
+  h2, h2:not(#record-details-heading) {
     margin-top: 1.25rem;
     margin-bottom: 0.25rem;
   }
