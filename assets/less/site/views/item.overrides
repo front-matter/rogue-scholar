@@ -16,10 +16,13 @@ section#content > .ui.items > .item > .content {
     height: auto;
   }
   h2 {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
   h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+  }
+  p {
+    line-height: 1.8 !important;
   }
   ul, ol {
     max-width: 100%;
