@@ -21,6 +21,9 @@ section#content > .ui.items > .item > .content {
   h3 {
     font-size: 1.4rem;
   }
+  h4 {
+    font-size: 16px !important;
+  }
   p {
     line-height: 1.8 !important;
   }
@@ -33,7 +36,9 @@ section#content > .ui.items > .item > .content {
   figcaption {
     font-style: italic;
   }
-  a.d-print-none, .wp_orcid_field, .citation, #quarto-bibliography, #quarto-citation, .admonition, .subscription-widget-wrap-editor, .button-wrapper {
+  a.d-print-none, .wp_orcid_field, .citation, #quarto-bibliography, #quarto-citation, 
+  .admonition, .subscription-widget-wrap-editor, .button-wrapper, .ui.divider.hidden,
+  svg.anchor-symbol {
     display: none;
   }
   h2#references, h3#references, h2#references + ol, h3#references + ol {

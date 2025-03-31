@@ -11,4 +11,8 @@ section#content .ui.items .item .content {
     margin-top: 1rem;
     margin-bottom: 0.25rem;
   }
+  h4 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
 }
