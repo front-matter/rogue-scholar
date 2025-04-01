@@ -50,6 +50,6 @@ section#content > .ui.items > .item > .content {
     display: none;
   }
   .wp-block-syntaxhighlighter-code > pre {
-    font-size: 0.8;
+    font-size: 0.8rem;
   }
 }
