@@ -17,5 +17,5 @@ kbd,
 pre,
 samp {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 0.8;
+  font-size: 0.9rem;
 }
