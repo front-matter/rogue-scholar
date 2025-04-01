@@ -46,7 +46,12 @@ section#content > .ui.items > .item > .content {
   .admonition, .subscription-widget-wrap-editor, .button-wrapper, svg.anchor-symbol, .wp-block-spacer {
     display: none;
   }
-  h2#references, h3#references, h2#references + ol, h3#references + ol {
+  h2#references, h3#references, h2#references + ol, h3#references + ol, h2#references + ul, h3#references + ul, h2.references + .csl-bib-body {
     display: none;
+  }
+  .wp-block-syntaxhighlighter-code {
+    pre {
+      font-size: 0.8;
+    }
   }
 }
