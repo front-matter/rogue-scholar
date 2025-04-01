@@ -10,5 +10,12 @@ code {
   color: @codeColor;
   background-color: @codeBackgroundColor;
   padding: 3px;
-  font-size: 13px;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 0.8;
 }
