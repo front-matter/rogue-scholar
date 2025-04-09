@@ -43,7 +43,7 @@ section#content > .ui.items > .item > .content {
     font-style: italic;
   }
   a.d-print-none, .wp_orcid_field, .citation, #quarto-bibliography, #quarto-citation, 
-  .admonition, .subscription-widget-wrap-editor, .button-wrapper, svg.anchor-symbol, .wp-block-spacer, .body-image-wrapper {
+  .subscription-widget-wrap-editor, .button-wrapper, svg.anchor-symbol, .wp-block-spacer, .body-image-wrapper {
     display: none;
   }
   h2#references, h3#references, h2#references + ol, h3#references + ol, h2#references + ul, h3#references + ul, h2 + .csl-bib-body {
