@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: Update posts with no content_html
         run: |
-          curl -X POST https://api.rogue-scholar.org/posts?blog_slug=cameronneylon&no_fulltext=true&per_page=50 -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
+          curl -X POST https://api.rogue-scholar.org/posts?no_fulltext=true&per_page=50 -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
