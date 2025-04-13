@@ -256,11 +256,9 @@
             {% endif %}
 
             {# Content #}
-            {% if can_manage_record %}
-              {%- block record_content -%}
-                {%- include "invenio_app_rdm/records/details/content.html" %}
-              {%- endblock record_content -%}
-            {% endif %}
+            {%- block record_content -%}
+              {%- include "invenio_app_rdm/records/details/content.html" %}
+            {%- endblock record_content -%}
 
             {# Files #}
             {%- block record_files -%}
