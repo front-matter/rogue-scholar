@@ -7,20 +7,6 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4       
-      - name: setup Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: '>=1.23'
-      - name: Install commonmeta
+      - name: Update posts with no content_html
         run: |
-          go install github.com/front-matter/commonmeta@latest
-          commonmeta -v
-      - name: Update inveniordm posts with type publication-preprint
-        run: |
-          mkdir -p upload
-          commonmeta push -f inveniordm -t inveniordm --from-host rogue-scholar.org --host rogue-scholar.org --type publication-preprint --token ${{ secrets.INVENIORDM_TOKEN }} -n 50 > upload/response.json
-          cat upload/response.json
-        id: response
-      
+          curl -X POST https://api.rogue-scholar.org/posts?blog_slug=cameronneylon&no_fulltext=true&per_page=50 -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
