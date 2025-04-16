@@ -1,12 +1,12 @@
 name: Update Rogue Scholar Records
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/10 * * * *"
+  # schedule:
+  # - cron: "*/10 * * * *"
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - name: Update posts with no content_html
         run: |
-          curl -X POST -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" https://api.rogue-scholar.org/posts?no_fulltext=true&per_page=50
+          curl -X POST -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" https://api.rogue-scholar.org/blogs/oan/posts?update=all&validate=all&page=999
