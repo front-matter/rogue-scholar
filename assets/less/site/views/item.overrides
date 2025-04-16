@@ -39,7 +39,10 @@ section#content > .ui.items > .item > .content {
   figure .image-link-expand {
     display: none;
   }
-  figcaption {
+  .wp-caption {
+    padding: 8px;
+  }
+  figcaption, .wp-caption-text {
     font-style: italic;
   }
   a.d-print-none, .wp_orcid_field, .citation, #quarto-bibliography, #quarto-citation, 
