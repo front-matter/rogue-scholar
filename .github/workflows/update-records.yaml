@@ -11,4 +11,4 @@ jobs:
         run: |
           mkdir -p upload
           curl -X POST -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" "https://api.rogue-scholar.org/blogs/oan/posts?update=all&validate=all&page=999" > upload/posts.json
-          cat upload/response.json
+          cat upload/posts.json
