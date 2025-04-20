@@ -2,17 +2,17 @@ name: Update DOIs for changed Posts
 on:
   workflow_dispatch:
   schedule:
-   - cron: "*/10 * * * *"
+    - cron: "*/10 * * * *"
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4       
+        uses: actions/checkout@v4
       - name: setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '>=1.23'
+          go-version: ">=1.23"
       - name: Download posts not indexed recently
         run: |
           mkdir -p upload
@@ -22,12 +22,12 @@ jobs:
         run: |
           echo "NUMBER=$(jq '."total-results"' upload/posts.json)" >> $GITHUB_OUTPUT
       - name: Install commonmeta
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          go install github.com/front-matter/commonmeta@latest
+          go install github.com/front-matter/commonmeta@v0.19.0
           commonmeta -v
       - name: Set current date as variable
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }} 
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           echo "NOW=$(date +'%s')" >> $GITHUB_OUTPUT
         id: current_date
@@ -47,4 +47,3 @@ jobs:
           cat upload/response.json
           echo "UUIDS=$(jq -rc '[.[] | .uuid] | join(",")' upload/response.json)" >> $GITHUB_OUTPUT
         id: response
-      
