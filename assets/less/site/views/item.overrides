@@ -40,7 +40,16 @@ section#content > .ui.items > .item > .content {
     display: none;
   }
   .wp-caption {
-    padding: 8px;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+  }
+  .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .arve-ar {
+    padding: 0 !important;
   }
   figcaption, .wp-caption-text {
     font-style: italic;
