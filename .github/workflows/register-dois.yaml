@@ -12,7 +12,7 @@ jobs:
       - name: setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: ">=1.23"
+          go-version: ">=1.24"
       - name: Download most recent unregistered post
         run: |
           mkdir -p upload
@@ -25,7 +25,6 @@ jobs:
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           go install github.com/front-matter/commonmeta@latest
-          commonmeta -v
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
