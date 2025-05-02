@@ -384,3 +384,10 @@
   name: Howard Hughes Medical Institute
   title:
     en: Howard Hughes Medical Institute
+- id: 019jywm96
+  identifiers:
+    - identifier: 019jywm96
+      scheme: ror
+  name: rOpenSci
+  title:
+    en: rOpenSci
