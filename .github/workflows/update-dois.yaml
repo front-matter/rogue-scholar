@@ -37,14 +37,14 @@ jobs:
       - name: Convert posts to commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta list upload/posts.json -f jsonfeed > upload/commonmeta.json
+          uv run commonmeta list upload/posts.json -f jsonfeed > upload/commonmeta.json
       - name: Update Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta push upload/commonmeta.json -f commonmeta -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --legacyKey "${{ secrets.SUPABASE_KEY }}" > upload/response.json
+          uv run commonmeta push upload/commonmeta.json -f commonmeta -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --legacyKey "${{ secrets.SUPABASE_KEY }}" > upload/response.json
           cat upload/response.json
       - name: update InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
+          uv run commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
           cat upload/response.json
