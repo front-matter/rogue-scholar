@@ -46,5 +46,5 @@ jobs:
       - name: update InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          uv run commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
+          uv run commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacy-key "${{ secrets.SUPABASE_KEY }}"> upload/response.json
           cat upload/response.json
