@@ -9,10 +9,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: setup Go
-        uses: actions/setup-go@v5
+      - name: setup python
+        uses: actions/setup-python@v5
         with:
-          go-version: ">=1.24"
+          python-version: "3.13"
       - name: Download posts not indexed recently
         run: |
           mkdir -p upload
@@ -21,10 +21,10 @@ jobs:
         id: current_number
         run: |
           echo "NUMBER=$(jq '."total-results"' upload/posts.json)" >> $GITHUB_OUTPUT
-      - name: Install commonmeta
+      - name: Install commonmeta-py
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          go install github.com/front-matter/commonmeta@latest
+          pip install commonmeta-py
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
@@ -37,12 +37,10 @@ jobs:
       - name: Update Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta push upload/commonmeta.json -f commonmeta -t crossrefxml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --legacyKey "${{ secrets.SUPABASE_KEY }}" > upload/response.json
+          commonmeta push upload/commonmeta.json -f commonmeta -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --legacyKey "${{ secrets.SUPABASE_KEY }}" > upload/response.json
           cat upload/response.json
       - name: update InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} > upload/response.json
           cat upload/response.json
-          echo "UUIDS=$(jq -rc '[.[] | .uuid] | join(",")' upload/response.json)" >> $GITHUB_OUTPUT
-        id: response
