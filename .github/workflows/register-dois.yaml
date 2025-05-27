@@ -1,8 +1,8 @@
 name: Register DOIs for new Posts
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/10 * * * *"
+  # schedule:
+  #   - cron: "*/10 * * * *"
 env:
   UV_SYSTEM_PYTHON: 1
 jobs:
