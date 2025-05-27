@@ -9,11 +9,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: setup Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: ">=1.24"
-      - name: Download most recent unregistered post
+      - name: Download most recent unregistered posts
         run: |
           mkdir -p upload
           curl https://api.rogue-scholar.org/posts/unregistered?per_page=10 > upload/posts.json
@@ -21,10 +17,18 @@ jobs:
         id: current_number
         run: |
           echo "NUMBER=$(jq '."total-results"' upload/posts.json)" >> $GITHUB_OUTPUT
-      - name: Install commonmeta
+      - name: Install uv
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        uses: astral-sh/setup-uv@v5
+      - name: "Set up Python"
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: ".python-version"
+      - name: Install commonmeta-py
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          go install github.com/front-matter/commonmeta@latest
+          uv pip install commonmeta-py
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
@@ -33,16 +37,16 @@ jobs:
       - name: Convert posts to commonmeta and autogenerate dois based on prefix
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta list upload/posts.json -f jsonfeed > upload/commonmeta.json
+          uv run commonmeta list upload/posts.json -f jsonfeed > upload/commonmeta.json
       - name: Register Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta push upload/commonmeta.json -f commonmeta -t crossrefxml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --legacyKey "${{ secrets.SUPABASE_KEY }}" > upload/response.json
+          uv run commonmeta push upload/commonmeta.json -f commonmeta -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --legacy-key "${{ secrets.SUPABASE_KEY }}" > upload/response.json
           cat upload/response.json
       - name: create InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token "${{ secrets.INVENIORDM_TOKEN }}" --legacyKey "${{ secrets.SUPABASE_KEY }}" > upload/response.json
+          uv run commonmeta push upload/commonmeta.json -f commonmeta -t inveniordm --host rogue-scholar.org --token "${{ secrets.INVENIORDM_TOKEN }}" --legacy-key "${{ secrets.SUPABASE_KEY }}" > upload/response.json
           cat upload/response.json
           echo "UUID=$(jq -r '.[0].uuid' upload/response.json)" >> $GITHUB_OUTPUT
           echo "DOI=$(jq -r '.[0].doi' upload/response.json)" >> $GITHUB_OUTPUT
