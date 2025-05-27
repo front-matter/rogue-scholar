@@ -3,6 +3,8 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "*/10 * * * *"
+env:
+  UV_SYSTEM_PYTHON: 1
 jobs:
   register:
     runs-on: ubuntu-latest
