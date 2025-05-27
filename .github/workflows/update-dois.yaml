@@ -20,8 +20,10 @@ jobs:
         run: |
           echo "NUMBER=$(jq '."total-results"' upload/posts.json)" >> $GITHUB_OUTPUT
       - name: Install uv
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         uses: astral-sh/setup-uv@v5
       - name: "Set up Python"
+        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         uses: actions/setup-python@v5
         with:
           python-version-file: ".python-version"
