@@ -1776,6 +1776,11 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5b/47/4d73f4961bc02f9ed93cd8c5f207ee9558cb51a4490c23145b528f09ee5e/invenio_logging-4.1.0-py2.py3-none-any.whl", hash = "sha256:4f0f539628aca8823a86587d71b263c52f65aa8ad4d7be24c0fc1abda8e6bbe7", size = 11898, upload-time = "2025-04-28T12:05:10.067Z" },
 ]
 
+[package.optional-dependencies]
+sentry = [
+    { name = "sentry-sdk", extra = ["flask"] },
+]
+
 [[package]]
 name = "invenio-mail"
 version = "2.2.1"
@@ -3493,11 +3498,12 @@ wheels = [
 
 [[package]]
 name = "rogue-scholar"
-version = "13.0.0.1"
+version = "13.0.0.2"
 source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
+    { name = "invenio-logging", extra = ["sentry"] },
     { name = "invenio-rdm-records" },
     { name = "invenio-s3" },
     { name = "invenio-search", extra = ["opensearch2"] },
@@ -3508,6 +3514,7 @@ dependencies = [
 requires-dist = [
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = "~=13.0.0b3.dev17" },
+    { name = "invenio-logging", extras = ["sentry"], specifier = "~=4.1.0" },
     { name = "invenio-rdm-records", specifier = "~=18.14" },
     { name = "invenio-s3", specifier = "~=3.0.0" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = "~=3.0.0" },
@@ -3585,6 +3592,26 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/7f/6f/d0ee452580d7d0643a1a776b95dfef2144023f3fc077038e07d651995d34/s3fs-2025.5.1.tar.gz", hash = "sha256:84beffa231b8ed94f8d667e93387b38351e1c4447aedea5c2c19dd88b7fcb658", size = 77276, upload-time = "2025-05-24T12:14:11.442Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d5/c0/f5cc95ec88694429fcb841a37456be0a27463bc39d43edbd36e3164120ed/s3fs-2025.5.1-py3-none-any.whl", hash = "sha256:7475e7c40a3a112f17144907ffae50782ab6c03487fe0b45a9c3942bb7a5c606", size = 30476, upload-time = "2025-05-24T12:14:10.056Z" },
+]
+
+[[package]]
+name = "sentry-sdk"
+version = "1.45.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "certifi" },
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c8/28/02c0cd9184f9108e3c52519f9628b215077a3854240e0b17ae845e664855/sentry_sdk-1.45.1.tar.gz", hash = "sha256:a16c997c0f4e3df63c0fc5e4207ccb1ab37900433e0f72fef88315d317829a26", size = 244774, upload-time = "2024-07-26T13:48:32.375Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/fe/9f/105366a122efa93f0cb1914f841747d160788e4d022d0488d2d44c2ba26c/sentry_sdk-1.45.1-py2.py3-none-any.whl", hash = "sha256:608887855ccfe39032bfd03936e3a1c4f4fc99b3a4ac49ced54a4220de61c9c1", size = 267163, upload-time = "2024-07-26T13:48:29.38Z" },
+]
+
+[package.optional-dependencies]
+flask = [
+    { name = "blinker" },
+    { name = "flask" },
+    { name = "markupsafe" },
 ]
 
 [[package]]
