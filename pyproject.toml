@@ -1,16 +1,16 @@
 [project]
 name = "rogue-scholar"
-version = "12.0.18.3"
+version = "13.0.0.0"
 description = "Rogue Scholar is a science blog archive based on the InvenioRDM repository software."
 authors = [{ name = "Martin Fenner", email = "martin@front-matter.io" }]
 readme = "README.md"
 requires-python = ">=3.13"
 license = "MIT"
 dependencies = [
-    "invenio-app-rdm~=12.0.18",
-    "invenio-search[opensearch2]~=2.4.1",
-    "invenio-logging[sentry]>=2.1.5,<3.0.0",
-    "invenio-s3~=1.0.7",
+    "invenio-app-rdm~=13.0.0b3.dev17",
+    "invenio-search[opensearch2]~=3.0.0",
+    "invenio-s3~=3.0.0",
+    "invenio-rdm-records~=18.14",
     "gunicorn~=23.0.0",
     "ruff>=0.9.0",
 ]
