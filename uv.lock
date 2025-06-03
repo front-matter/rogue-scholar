@@ -3493,7 +3493,7 @@ wheels = [
 
 [[package]]
 name = "rogue-scholar"
-version = "13.0.0.0"
+version = "13.0.0.1"
 source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },

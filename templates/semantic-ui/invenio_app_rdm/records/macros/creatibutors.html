@@ -37,8 +37,8 @@
 {% endmacro %}
 
 
-{% macro show_creatibutors(creatibutors, show_affiliations=False, type="creators") %}
-  {% for creatibutor in creatibutors %}
+{% macro show_creatibutors(creatibutors, show_affiliations=False, type="creators", show_role=False) %}
+  {% for creatibutor in creatibutors if creatibutor.person_or_org and creatibutor.person_or_org.name %}
   <li class="creatibutor-wrap separated">
     <a class="ui creatibutor-link"
       {% if show_affiliations and creatibutor.affiliations %}
@@ -49,6 +49,9 @@
 
       <span class="creatibutor-name">
         {{- creatibutor.person_or_org.name -}}
+        {% if show_role and creatibutor.role %}
+          ({{- creatibutor.role.title -}})
+        {%- endif -%}
       </span>
       {%- if creatibutor.affiliations -%}
       <sup class="font-tiny">
