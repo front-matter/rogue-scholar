@@ -1415,7 +1415,7 @@ wheels = [
 
 [[package]]
 name = "invenio-app-rdm"
-version = "13.0.0b3.dev17"
+version = "13.0.0b3.dev18"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cairosvg" },
@@ -1428,6 +1428,7 @@ dependencies = [
     { name = "invenio-base" },
     { name = "invenio-cache" },
     { name = "invenio-celery" },
+    { name = "invenio-collections" },
     { name = "invenio-communities" },
     { name = "invenio-config" },
     { name = "invenio-db", extra = ["mysql", "postgresql"] },
@@ -1455,9 +1456,9 @@ dependencies = [
     { name = "invenio-theme" },
     { name = "invenio-userprofiles" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/d6/75/9b812bfa4c82b83755b52ce8ec63794b3055e04093c6950f79c207278043/invenio_app_rdm-13.0.0b3.dev17.tar.gz", hash = "sha256:6fc38db6561720d2fbba29dd103e16cba61befecb7aecebd453aa246b7b82fc8", size = 493997, upload-time = "2025-06-02T12:30:21.058Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/05/6b/cf2dc9814c0e11904deae6e4f2062852ee663f9a8e6d5aef5c2cec55870e/invenio_app_rdm-13.0.0b3.dev18.tar.gz", hash = "sha256:79f7f4355bc4adbd836fab449e3d51b14c817cf9c30cdd5327a90a1f8c8361c6", size = 494193, upload-time = "2025-06-04T08:31:52.532Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/cf/51/48145148e76858887653584272ebcd19862e0c2552636af5fed941782031/invenio_app_rdm-13.0.0b3.dev17-py2.py3-none-any.whl", hash = "sha256:389755ede80dba6cb5381887a47df0596e9520c8f634f03962d5ad836d734af5", size = 891933, upload-time = "2025-06-02T12:30:18.345Z" },
+    { url = "https://files.pythonhosted.org/packages/f8/ea/156f6b3b4aa7e60ac7f36d2d8534469188fedd4ce80e26c04e60dbf5008f/invenio_app_rdm-13.0.0b3.dev18-py2.py3-none-any.whl", hash = "sha256:c76c0188ec05b3749da50261e59efdf612dacf01694302c03b913ed4a32fb63c", size = 892232, upload-time = "2025-06-04T08:31:50.248Z" },
 ]
 
 [[package]]
@@ -3493,7 +3494,7 @@ wheels = [
 
 [[package]]
 name = "rogue-scholar"
-version = "13.0.0.3"
+version = "13.0.0.4"
 source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
@@ -3508,7 +3509,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "gunicorn", specifier = "~=23.0.0" },
-    { name = "invenio-app-rdm", specifier = "~=13.0.0b3.dev17" },
+    { name = "invenio-app-rdm", specifier = "~=13.0.0b3.dev18" },
     { name = "invenio-rdm-records", specifier = "~=18.14" },
     { name = "invenio-s3", specifier = "~=3.0.0" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = "~=3.0.0" },
