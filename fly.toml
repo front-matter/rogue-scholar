@@ -7,7 +7,7 @@ app = 'invenio-rdm-starter'
 primary_region = 'fra'
 
 [build]
-image = "ghcr.io/front-matter/rogue-scholar:v13.0.0.4"
+image = "ghcr.io/front-matter/rogue-scholar:v12.1.0.0"
 
 [env]
 # Flask-Babel
@@ -17,6 +17,7 @@ INVENIO_BABEL_DEFAULT_TIMEZONE = "UTC"
 # Invenio-Records-Resources
 INVENIO_SITE_API_URL = "https://rogue-scholar.org/api"
 INVENIO_SITE_UI_URL = "https://rogue-scholar.org"
+INVENIO_APP_ALLOWED_HOSTS = "['rogue-scholar.org']"
 
 # Invenio-Search
 INVENIO_SEARCH_INDEX_PREFIX = "invenio-rdm-"
