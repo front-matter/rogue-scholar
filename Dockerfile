@@ -91,7 +91,7 @@ COPY ./setup.sh /opt/invenio/.venv/bin/setup.sh
 
 WORKDIR ${WORKING_DIR}/src
 
-USER invenio
+# USER invenio
 
 EXPOSE 5000
 CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:5000", "--workers", "4", "--access-logfile", "-", "--error-logfile", "-"]
