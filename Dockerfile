@@ -1,4 +1,4 @@
-FROM python:3.13-bookworm AS builder
+FROM python:3.13.1-bookworm AS builder
 
 # Dockerfile that builds the Rogue Scholar Docker image.
 
@@ -57,7 +57,7 @@ RUN --mount=type=cache,target=/var/cache/assets \
     invenio collect --verbose && \
     invenio webpack buildall
 
-FROM python:3.13-slim-bookworm AS runtime
+FROM python:3.13.1-slim-bookworm AS runtime
 
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US:en
@@ -91,7 +91,7 @@ COPY ./setup.sh /opt/invenio/.venv/bin/setup.sh
 
 WORKDIR ${WORKING_DIR}/src
 
-# USER invenio
+USER invenio
 
 EXPOSE 5000
 CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:5000", "--workers", "4", "--access-logfile", "-", "--error-logfile", "-"]
