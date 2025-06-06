@@ -159,3 +159,6 @@ docker/opensearch/*
 
 # Local Netlify folder
 .netlify
+
+# Local Kamal folder
+.kamal
