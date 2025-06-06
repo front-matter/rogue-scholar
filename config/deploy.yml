@@ -1,0 +1,127 @@
+service: rogue-scholar
+image: front-matter/rogue-scholar
+servers:
+  web:
+    hosts:
+      - 176.9.24.117
+  job:
+    hosts:
+      - 176.9.24.117
+  #   cmd: bin/jobs
+
+# Enable SSL auto certification via Let's Encrypt and allow for multiple apps on a single web server.
+# Remove this section when using multiple web servers and ensure you terminate SSL at your load balancer.
+#
+proxy:
+  ssl: true
+  host: staging.rogue-scholar.org
+  healthcheck:
+    interval: 10
+    path: /ping
+    timeout: 3
+
+registry:
+  server: ghcr.io
+  username: mfenner
+
+  # Always use an access token rather than real password (pulled from .kamal/secrets).
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+# Configure builder setup.
+builder:
+  arch: amd64
+  context: .
+  remote: ssh://root@176.9.24.117
+  local: true
+  # Pass in additional build args needed for your Dockerfile.
+  # args:
+  #   RUBY_VERSION: <%= ENV["RBENV_VERSION"] || ENV["rvm_ruby_string"] || "#{RUBY_ENGINE}-#{RUBY_ENGINE_VERSION}" %>
+# Inject ENV variables into containers (secrets come from .kamal/secrets).
+#
+env:
+  clear:
+    INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
+    INVENIO_CACHE_TYPE: redis
+    INVENIO_CACHE_REDIS_URL: redis://cache:6379/0
+    INVENIO_ACCOUNTS_SESSION_REDIS_URL: redis://cache:6379/1
+    INVENIO_CELERY_RESULT_BACKEND: redis://cache:6379/2
+    INVENIO_RATELIMIT_STORAGE_URL: redis://cache:6379/3
+    INVENIO_COMMUNITIES_IDENTITIES_CACHE_REDIS_URL: redis://cache:6379/4
+    INVENIO_CELERY_BROKER_URL: redis://cache:6379/5
+    INVENIO_SEARCH_INDEX_PREFIX: invenio-rdm-
+    INVENIO_S3_BUCKET_NAME: dev.assets.rogue-scholar.org
+    INVENIO_FILES_REST_STORAGE_FACTORY: invenio_s3.s3fs_storage_factory
+    INVENIO_WSGI_PROXIES: 4
+    INVENIO_THEME_SITENAME: Rogue Scholar
+    INVENIO_THEME_FRONTPAGE_TITLE: "Science blogging on steroids."
+    INVENIO_THEME_FRONTPAGE_SUBTITLE: "The Rogue Scholar science blog archive improves science blogs in important ways, including full-text search, long-term archiving, DOIs and metadata, and communities."
+    INVENIO_THEME_LOGO: images/rogue-scholar-white.svg
+    INVENIO_RDM_ALLOW_EXTERNAL_DOI_VERSIONING: False
+    INVENIO_LEGACY_URL: https://legacy.rogue-scholar.org
+  secret:
+    - INVENIO_SQLALCHEMY_DATABASE_URI
+    - INVENIO_MAIL_SERVER
+    - INVENIO_MAIL_PORT
+    - INVENIO_MAIL_SUPPRESS_SEND
+    - INVENIO_MAIL_USE_SSL
+    - INVENIO_MAIL_USERNAME
+    - INVENIO_MAIL_PASSWORD
+    - INVENIO_MAIL_DEFAULT_SENDER
+    - INVENIO_SECURITY_EMAIL_SENDER
+    - INVENIO_APP_RDM_ADMIN_EMAIL_RECIPIENT
+    - INVENIO_SECRET_KEY
+    - INVENIO_ORCID_CLIENT_ID
+    - INVENIO_ORCID_CLIENT_SECRET
+    - INVENIO_ORCID_APP_CREDENTIALS
+    - INVENIO_GITHUB_APP_CREDENTIALS
+# Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
+# "bin/kamal app logs -r job" will tail logs from the first server in the job section.
+#
+# aliases:
+#   shell: app exec --interactive --reuse "bash"
+
+# Use a different ssh user than root
+#
+# ssh:
+#   user: app
+
+# Use a persistent storage volume.
+#
+# volumes:
+#   - "app_storage:/app/storage"
+
+# Bridge fingerprinted assets, like JS and CSS, between versions to avoid
+# hitting 404 on in-flight requests. Combines all files from new and old
+# version inside the asset_path.
+#
+# asset_path: /app/public/assets
+
+# Configure rolling deploys by setting a wait time between batches of restarts.
+#
+# boot:
+#   limit: 10 # Can also specify as a percentage of total hosts, such as "25%"
+#   wait: 2
+
+# Use accessory services (secrets come from .kamal/secrets).
+#
+accessories:
+  redis:
+    image: valkey/valkey:7.2.5
+    service: cache
+    host: 176.9.24.117
+    port: 6379
+    directories:
+      - data:/data
+  opensearch:
+    image: opensearchproject/opensearch:2.18.0
+    service: search
+    host: 176.9.24.117
+    port: 9200
+    env:
+      clear:
+        discovery.type: single-node
+        bootstrap.memory_lock: true
+        OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
+        DISABLE_INSTALL_DEMO_CONFIG: true
+        DISABLE_SECURITY_PLUGIN: false
