@@ -162,3 +162,5 @@ docker/opensearch/*
 
 # Local Kamal folder
 .kamal
+
+config/master.key
