@@ -7,38 +7,27 @@ servers:
   job:
     hosts:
       - 176.9.24.117
-  #   cmd: bin/jobs
 
-# Enable SSL auto certification via Let's Encrypt and allow for multiple apps on a single web server.
-# Remove this section when using multiple web servers and ensure you terminate SSL at your load balancer.
-#
 proxy:
   ssl: true
   host: staging.rogue-scholar.org
   healthcheck:
     interval: 10
     path: /ping
-    timeout: 3
+    timeout: 10
 
 registry:
   server: ghcr.io
   username: mfenner
-
-  # Always use an access token rather than real password (pulled from .kamal/secrets).
   password:
     - KAMAL_REGISTRY_PASSWORD
 
-# Configure builder setup.
 builder:
   arch: amd64
   context: .
   remote: ssh://root@176.9.24.117
-  local: true
-  # Pass in additional build args needed for your Dockerfile.
-  # args:
-  #   RUBY_VERSION: <%= ENV["RBENV_VERSION"] || ENV["rvm_ruby_string"] || "#{RUBY_ENGINE}-#{RUBY_ENGINE_VERSION}" %>
-# Inject ENV variables into containers (secrets come from .kamal/secrets).
-#
+  local: false
+
 env:
   clear:
     INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
@@ -60,7 +49,7 @@ env:
     INVENIO_RDM_ALLOW_EXTERNAL_DOI_VERSIONING: False
     INVENIO_LEGACY_URL: https://legacy.rogue-scholar.org
   secret:
-    - INVENIO_SQLALCHEMY_DATABASE_URI
+    - POSTGRES_PASSWORD
     - INVENIO_MAIL_SERVER
     - INVENIO_MAIL_PORT
     - INVENIO_MAIL_SUPPRESS_SEND
@@ -75,48 +64,34 @@ env:
     - INVENIO_ORCID_CLIENT_SECRET
     - INVENIO_ORCID_APP_CREDENTIALS
     - INVENIO_GITHUB_APP_CREDENTIALS
-# Aliases are triggered with "bin/kamal <alias>". You can overwrite arguments on invocation:
-# "bin/kamal app logs -r job" will tail logs from the first server in the job section.
-#
-# aliases:
-#   shell: app exec --interactive --reuse "bash"
 
-# Use a different ssh user than root
-#
-# ssh:
-#   user: app
-
-# Use a persistent storage volume.
-#
-# volumes:
-#   - "app_storage:/app/storage"
-
-# Bridge fingerprinted assets, like JS and CSS, between versions to avoid
-# hitting 404 on in-flight requests. Combines all files from new and old
-# version inside the asset_path.
-#
-# asset_path: /app/public/assets
-
-# Configure rolling deploys by setting a wait time between batches of restarts.
-#
-# boot:
-#   limit: 10 # Can also specify as a percentage of total hosts, such as "25%"
-#   wait: 2
-
-# Use accessory services (secrets come from .kamal/secrets).
-#
 accessories:
-  redis:
+  db:
+    image: postgres:17.4-bookworm
+    roles:
+      - web
+    port: 5432
+    directories:
+      - data:/var/lib/postgresql/data
+    env:
+      clear:
+        POSTGRES_USER: inveniordm
+        POSTGRES_DB: inveniordm
+      secret:
+        - POSTGRES_PASSWORD
+  cache:
     image: valkey/valkey:7.2.5
-    service: cache
-    host: 176.9.24.117
+    roles:
+      - web
+      - job
     port: 6379
+    cmd: "redis-server"
     directories:
       - data:/data
-  opensearch:
+  search:
     image: opensearchproject/opensearch:2.18.0
-    service: search
-    host: 176.9.24.117
+    roles:
+      - web
     port: 9200
     env:
       clear:
@@ -125,3 +100,5 @@ accessories:
         OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
         DISABLE_INSTALL_DEMO_CONFIG: true
         DISABLE_SECURITY_PLUGIN: false
+    options:
+      memory: 8g
