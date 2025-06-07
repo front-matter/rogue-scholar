@@ -116,6 +116,9 @@ accessories:
         - OPENSEARCH_INITIAL_ADMIN_PASSWORD
     options:
       memory: 4g
+      publish:
+        - 9600:9600
 volumes:
   - uploaded_data:/opt/invenio/var/instance/data
   - archived_data:/opt/invenio/var/instance/archive
+deploy_timeout: 30
