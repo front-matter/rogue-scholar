@@ -74,9 +74,6 @@ accessories:
     image: postgres:17.4-bookworm
     service: db
     host: 176.9.24.117
-    roles:
-      - web
-      - job
     port: 5432
     directories:
       - data:/var/lib/postgresql/data
@@ -90,9 +87,6 @@ accessories:
     image: valkey/valkey:7.2.5
     service: cache
     host: 176.9.24.117
-    roles:
-      - web
-      - job
     port: 6379
     directories:
       - data:/data
@@ -100,9 +94,6 @@ accessories:
     image: opensearchproject/opensearch:2.18.0
     service: search
     host: 176.9.24.117
-    roles:
-      - web
-      - job
     port: 9200
     env:
       clear:
