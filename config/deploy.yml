@@ -13,9 +13,9 @@ proxy:
   host: staging.rogue-scholar.org
   app_port: 5000
   healthcheck:
-    path: /ping
-    interval: 120
+    interval: 30
     timeout: 10
+    path: /ping
 
 registry:
   server: ghcr.io
