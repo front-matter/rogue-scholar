@@ -68,6 +68,7 @@ env:
 accessories:
   db:
     image: postgres:17.4-bookworm
+    service: db
     roles:
       - web
       - job
@@ -82,6 +83,7 @@ accessories:
         - POSTGRES_PASSWORD
   cache:
     image: valkey/valkey:7.2.5
+    service: cache
     roles:
       - web
       - job
@@ -90,6 +92,7 @@ accessories:
       - data:/data
   search:
     image: opensearchproject/opensearch:2.18.0
+    service: search
     roles:
       - web
       - job
