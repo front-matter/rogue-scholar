@@ -82,6 +82,7 @@ env:
     - INVENIO_GITHUB_APP_CREDENTIALS
     - INVENIO_S3_ACCESS_KEY_ID
     - INVENIO_S3_SECRET_ACCESS_KEY
+    - INVENIO_SENTRY_DSN
 accessories:
   db:
     image: postgres:17.4-bookworm
