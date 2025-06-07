@@ -4,15 +4,10 @@ servers:
   web:
     hosts:
       - 176.9.24.117
-    volumes:
-      - uploaded_data:/opt/invenio/var/instance/data
-      - archived_data:/opt/invenio/var/instance/archive
   job:
     hosts:
       - 176.9.24.117
     cmd: celery -A invenio_app.celery worker --beat --events
-    volumes:
-      - uploaded_data:/opt/invenio/var/instance/data
 
 proxy:
   ssl: true
@@ -117,8 +112,5 @@ accessories:
     options:
       memory: 4g
 volumes:
-  app_data:
-  uploaded_data:
-  archived_data:
-  caddy_data:
-  caddy_config:
+  - uploaded_data:/opt/invenio/var/instance/data
+  - archived_data:/opt/invenio/var/instance/archive
