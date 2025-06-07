@@ -93,5 +93,5 @@ WORKDIR ${WORKING_DIR}/src
 
 # USER invenio
 
-EXPOSE 80
-CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:80", "--workers", "4", "--access-logfile", "-"]
+EXPOSE 5000
+CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:5000", "--workers", "4", "--access-logfile", "-"]
