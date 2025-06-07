@@ -12,7 +12,7 @@ servers:
 proxy:
   ssl: true
   forward_headers: true
-  host: fleur.front-matter.io
+  host: staging.rogue-scholar.org
   app_port: 5000
   healthcheck:
     interval: 90
@@ -35,7 +35,7 @@ env:
   clear:
     POSTGRES_DB: inveniordm
     POSTGRES_USER: inveniordm
-    INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org', 'fleur.front-matter.io']"
+    INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
     INVENIO_SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://inveniordm:${POSTGRES_PASSWORD}@inveniordm-db/inveniordm
     INVENIO_CACHE_TYPE: redis
     INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/0
@@ -47,8 +47,8 @@ env:
     INVENIO_CELERY_BROKER_URL: redis://inveniordm-cache:6379/5
     INVENIO_SEARCH_HOSTS: "['inveniordm-search:9200']"
     INVENIO_SEARCH_INDEX_PREFIX: invenio-rdm-
-    INVENIO_SITE_UI_URL: https://fleur.front-matter.io
-    INVENIO_SITE_API_URL: https://fleur.front-matter.io/api
+    INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
+    INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
     INVENIO_S3_BUCKET_NAME: dev.assets.rogue-scholar.org
     INVENIO_FILES_REST_STORAGE_FACTORY: invenio_s3.s3fs_storage_factory
     INVENIO_WSGI_PROXIES: 4
