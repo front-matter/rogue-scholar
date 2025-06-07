@@ -106,4 +106,4 @@ accessories:
         DISABLE_INSTALL_DEMO_CONFIG: true
         DISABLE_SECURITY_PLUGIN: false
     options:
-      memory: 8g
+      memory: 4g
