@@ -13,8 +13,8 @@ proxy:
   host: staging.rogue-scholar.org
   app_port: 5000
   healthcheck:
-    interval: 10
     path: /ping
+    interval: 120
     timeout: 10
 
 registry:
@@ -31,7 +31,6 @@ builder:
 
 env:
   clear:
-    DB_HOST: 176.9.24.117
     POSTGRES_DB: inveniordm
     POSTGRES_USER: inveniordm
     INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
@@ -43,7 +42,10 @@ env:
     INVENIO_RATELIMIT_STORAGE_URL: redis://inveniordm-cache:6379/3
     INVENIO_COMMUNITIES_IDENTITIES_CACHE_REDIS_URL: redis://inveniordm-cache:6379/4
     INVENIO_CELERY_BROKER_URL: redis://inveniordm-cache:6379/5
+    INVENIO_SEARCH_HOSTS: "['inveniordm-search:9200']"
     INVENIO_SEARCH_INDEX_PREFIX: invenio-rdm-
+    INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
+    INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
     INVENIO_S3_BUCKET_NAME: dev.assets.rogue-scholar.org
     INVENIO_FILES_REST_STORAGE_FACTORY: invenio_s3.s3fs_storage_factory
     INVENIO_WSGI_PROXIES: 4
@@ -53,6 +55,7 @@ env:
     INVENIO_THEME_LOGO: images/rogue-scholar-white.svg
     INVENIO_RDM_ALLOW_EXTERNAL_DOI_VERSIONING: False
     INVENIO_LEGACY_URL: https://legacy.rogue-scholar.org
+    INVENIO_LOGGING_CONSOLE_LEVEL: WARNING
   secret:
     - POSTGRES_PASSWORD
     - INVENIO_MAIL_SERVER
