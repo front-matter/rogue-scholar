@@ -4,7 +4,7 @@ servers:
   web:
     hosts:
       - 176.9.24.117
-  job:
+  worker:
     hosts:
       - 176.9.24.117
     cmd: celery -A invenio_app.celery worker --beat --events
