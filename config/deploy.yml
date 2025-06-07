@@ -11,7 +11,7 @@ servers:
 proxy:
   ssl: true
   forward_headers: true
-  host: fleur.rogue-scholar.org
+  host: staging.rogue-scholar.org
   app_port: 5000
   healthcheck:
     interval: 30
