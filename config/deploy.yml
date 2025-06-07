@@ -3,7 +3,7 @@ image: front-matter/rogue-scholar
 servers:
   web:
     hosts:
-      - staging.rogue-scholar.org
+      - 176.9.24.117
   job:
     hosts:
       - 176.9.24.117
@@ -11,7 +11,7 @@ servers:
 proxy:
   ssl: true
   forward_headers: true
-  host: staging.rogue-scholar.org
+  host: fleur.rogue-scholar.org
   app_port: 5000
   healthcheck:
     interval: 30
