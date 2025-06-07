@@ -38,7 +38,6 @@ env:
     POSTGRES_DB: inveniordm
     POSTGRES_USER: inveniordm
     INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
-    INVENIO_SQLALCHEMY_DATABASE_URI: postgresql+psycopg2://inveniordm:${POSTGRES_PASSWORD}@inveniordm-db/inveniordm
     INVENIO_CACHE_TYPE: redis
     INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/0
     INVENIO_ACCOUNTS_SESSION_REDIS_URL: redis://inveniordm-cache:6379/1
@@ -65,6 +64,7 @@ env:
     INVENIO_LOGGING_CONSOLE_LEVEL: DEBUG
     INVENIO_DATACITE_ENABLED: False
   secret:
+    - INVENIO_SQLALCHEMY_DATABASE_URI
     - POSTGRES_PASSWORD
     - INVENIO_MAIL_SERVER
     - INVENIO_MAIL_PORT
