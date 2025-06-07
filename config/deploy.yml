@@ -7,6 +7,7 @@ servers:
   job:
     hosts:
       - 176.9.24.117
+    cmd: celery -A invenio_app.celery worker --beat --events
 
 proxy:
   ssl: true
@@ -14,7 +15,7 @@ proxy:
   host: fleur.front-matter.io
   app_port: 5000
   healthcheck:
-    interval: 30
+    interval: 90
     timeout: 10
     path: /ping
 
