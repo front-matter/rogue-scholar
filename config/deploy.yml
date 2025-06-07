@@ -1,4 +1,4 @@
-service: rogue-scholar
+service: inveniordm
 image: front-matter/rogue-scholar
 servers:
   web:
@@ -32,12 +32,12 @@ env:
   clear:
     INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
     INVENIO_CACHE_TYPE: redis
-    INVENIO_CACHE_REDIS_URL: redis://cache:6379/0
-    INVENIO_ACCOUNTS_SESSION_REDIS_URL: redis://cache:6379/1
-    INVENIO_CELERY_RESULT_BACKEND: redis://cache:6379/2
-    INVENIO_RATELIMIT_STORAGE_URL: redis://cache:6379/3
-    INVENIO_COMMUNITIES_IDENTITIES_CACHE_REDIS_URL: redis://cache:6379/4
-    INVENIO_CELERY_BROKER_URL: redis://cache:6379/5
+    INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/0
+    INVENIO_ACCOUNTS_SESSION_REDIS_URL: redis://inveniordm-cache:6379/1
+    INVENIO_CELERY_RESULT_BACKEND: redis://inveniordm-cache:6379/2
+    INVENIO_RATELIMIT_STORAGE_URL: redis://inveniordm-cache:6379/3
+    INVENIO_COMMUNITIES_IDENTITIES_CACHE_REDIS_URL: redis://inveniordm-cache:6379/4
+    INVENIO_CELERY_BROKER_URL: redis://inveniordm-cache:6379/5
     INVENIO_SEARCH_INDEX_PREFIX: invenio-rdm-
     INVENIO_S3_BUCKET_NAME: dev.assets.rogue-scholar.org
     INVENIO_FILES_REST_STORAGE_FACTORY: invenio_s3.s3fs_storage_factory
@@ -70,6 +70,7 @@ accessories:
     image: postgres:17.4-bookworm
     roles:
       - web
+      - job
     port: 5432
     directories:
       - data:/var/lib/postgresql/data
@@ -85,13 +86,13 @@ accessories:
       - web
       - job
     port: 6379
-    cmd: "redis-server"
     directories:
       - data:/data
   search:
     image: opensearchproject/opensearch:2.18.0
     roles:
       - web
+      - job
     port: 9200
     env:
       clear:
