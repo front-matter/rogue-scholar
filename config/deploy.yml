@@ -30,6 +30,8 @@ builder:
   context: .
   remote: ssh://root@176.9.24.117
   local: false
+  cache:
+    type: registry
 
 env:
   clear:
