@@ -10,7 +10,7 @@ servers:
     cmd: celery -A invenio_app.celery worker --beat --events
 
 proxy:
-  ssl: true
+  ssl: false
   host: staging.rogue-scholar.org
   app_port: 5000
   healthcheck:
