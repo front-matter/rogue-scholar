@@ -11,8 +11,7 @@ servers:
 
 proxy:
   ssl: false
-  ssl_redirect: true
-  forward_headers: true
+  ssl_redirect: false
   host: staging.rogue-scholar.org
   app_port: 5000
   healthcheck:
