@@ -36,7 +36,7 @@ builder:
 
 env:
   clear:
-    INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
+    INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org','localhost']"
     INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
     INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
     INVENIO_WSGI_PROXIES: 4
