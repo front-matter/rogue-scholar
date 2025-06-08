@@ -52,7 +52,8 @@ COPY ./invenio.cfg ${INVENIO_INSTANCE_PATH}/
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev
 
-# Build Javascript assets
+# Build Javascript assets using rspack
+ENV WEBPACKEXT_PROJECT=invenio_assets.webpack:rspack_project
 RUN --mount=type=cache,target=/var/cache/assets \
     invenio collect --verbose && \
     invenio webpack buildall
