@@ -95,12 +95,16 @@ accessories:
         POSTGRES_DB: inveniordm
       secret:
         - POSTGRES_PASSWORD
+    options:
+      restart: unless-stopped
   cache:
     image: valkey/valkey:7.2.5
     host: 176.9.24.117
     port: 6379
     directories:
       - data:/data
+    options:
+      restart: unless-stopped
   search:
     image: opensearchproject/opensearch:2.18.0
     host: 176.9.24.117
@@ -115,6 +119,7 @@ accessories:
       secret:
         - OPENSEARCH_INITIAL_ADMIN_PASSWORD
     options:
+      restart: unless-stopped
       memory: 4g
       publish:
         - 9600:9600
