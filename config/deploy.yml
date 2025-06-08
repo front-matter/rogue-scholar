@@ -36,7 +36,7 @@ env:
   clear:
     INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
     INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
-    INVENIO_APP_ALLOWED_HOSTS: ["staging.rogue-scholar.org"]
+    INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
     INVENIO_WSGI_PROXIES: 4
     # accessories db, cache, search
     POSTGRES_DB: inveniordm
