@@ -186,9 +186,9 @@ def format_category(d):
     }
 
 
-posts_by_category = [
-    format_category(d) for d in response.data if d["category"]
-]
+# posts_by_category = [
+#     format_category(d) for d in response.data if d["category"]
+# ]
 
 response = supabase.table("posts_by_generator").select("*").execute()
 posts_by_generator = [d for d in response.data if d["generator"] != "Other"]
@@ -196,7 +196,7 @@ posts_by_generator = [d for d in response.data if d["generator"] != "Other"]
 ojs_define(post_count=post_count)
 ojs_define(posts_by_year=posts_by_year)
 ojs_define(posts_by_language=posts_by_language)
-ojs_define(posts_by_category=posts_by_category)
+# ojs_define(posts_by_category=posts_by_category)
 ojs_define(posts_by_generator=posts_by_generator)
 ```
 
@@ -372,7 +372,7 @@ Plot.plot({
 
 ## Row
 
-```{ojs}
+<!-- ```{ojs}
 Plot.plot({
   title: "Blog Posts by OECD Fields of Science and Technology",
   marginLeft: 540,
@@ -404,7 +404,7 @@ Plot.plot({
 
   ]
 })
-```
+``` -->
 
 ## Row
 
