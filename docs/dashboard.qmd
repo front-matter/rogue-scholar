@@ -370,8 +370,6 @@ Plot.plot({
 })
 ```
 
-## Row
-
 <!-- ```{ojs}
 Plot.plot({
   title: "Blog Posts by OECD Fields of Science and Technology",
