@@ -8,15 +8,31 @@ servers:
     hosts:
       - 176.9.24.117
     cmd: celery -A invenio_app.celery worker --beat --events
+  observability:
+    hosts:
+      - 176.9.24.117
 
 proxy:
-  ssl: false
+  ssl: true
   host: staging.rogue-scholar.org
+  forward_headers: true
   app_port: 5000
   healthcheck:
-    interval: 90
-    timeout: 10
     path: /ping
+    #   interval: 90
+    #   timeout: 10
+  logging:
+    request_headers:
+      - Protocol
+      - Host
+      - Port
+      - Path
+      - Cache-Control
+      - User-Agent
+      - X-Forwarded-Proto
+    response_headers:
+      - X-Request-ID
+      - X-Request-Start
 
 registry:
   server: ghcr.io
@@ -36,7 +52,7 @@ env:
   clear:
     INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
     INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
-    INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
+    # INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
     INVENIO_WSGI_PROXIES: 4
     # accessories db, cache, search
     POSTGRES_DB: inveniordm
@@ -57,7 +73,6 @@ env:
     INVENIO_THEME_SHOW_FRONTPAGE_INTRO_SECTION: False
     INVENIO_RDM_ALLOW_EXTERNAL_DOI_VERSIONING: False
     INVENIO_LEGACY_URL: https://legacy.rogue-scholar.org
-    INVENIO_LOGGING_CONSOLE_LEVEL: DEBUG
     INVENIO_DATACITE_ENABLED: False
     # mail
     INVENIO_MAIL_DEFAULT_SENDER: info@rogue-scholar.org
@@ -71,7 +86,6 @@ env:
     - POSTGRES_PASSWORD
     - OPENSEARCH_INITIAL_ADMIN_PASSWORD
     - INVENIO_SECRET_KEY
-    - INVENIO_SENTRY_DSN
     # mail
     - INVENIO_MAIL_SERVER
     - INVENIO_MAIL_USERNAME
@@ -117,7 +131,16 @@ accessories:
       memory: 4g
       publish:
         - 9600:9600
+  vector:
+    image: timberio/vector:0.46.1-alpine
+    roles:
+      - web
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    files:
+      - config/vector.yml:/etc/vector/vector.yaml
 volumes:
   - uploaded_data:/opt/invenio/var/instance/data
   - archived_data:/opt/invenio/var/instance/archive
 deploy_timeout: 30
+primary_role: web
