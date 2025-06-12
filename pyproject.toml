@@ -9,9 +9,9 @@ license = "MIT"
 dependencies = [
     "invenio-app-rdm~=12.1.0",
     "invenio-search[opensearch2]~=2.4.1",
-    "invenio-logging[sentry]~=2.1.5",
     "invenio-s3~=1.0.7",
     "invenio-assets~=3.2.0",
+    "sentry-sdk>=1.45,<2.0.0",
     "gunicorn~=23.0.0",
     "ruff>=0.11.0",
 ]
@@ -26,3 +26,6 @@ include = ["site/rogue_scholar/*.py"]
 [tool.ruff]
 line-length = 79
 include = ["pyproject.toml", "site/**/*.py"]
+
+[project.optional-dependencies]
+docs = ["quarto-cli~=1.7.31"]
