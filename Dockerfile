@@ -94,5 +94,7 @@ WORKDIR ${WORKING_DIR}/src
 
 # USER invenio
 
+HEALTHCHECK --interval=20s --timeout=10s --start-period=30s --retries=3 \
+    CMD curl -f http://localhost:5000/ping || exit 1
 EXPOSE 5000
-CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:5000", "--workers", "4", "--access-logfile", "-"]
+CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:5000", "--workers", "4", "--access-logfile", "-", "--error-logfile", "-", "--log-level", "INFO"]
