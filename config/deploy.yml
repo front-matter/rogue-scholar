@@ -19,8 +19,8 @@ proxy:
   app_port: 5000
   healthcheck:
     path: /ping
-    #   interval: 90
-    #   timeout: 10
+    interval: 30
+    timeout: 10
   logging:
     request_headers:
       - Protocol
@@ -143,5 +143,5 @@ accessories:
 volumes:
   - uploaded_data:/opt/invenio/var/instance/data
   - archived_data:/opt/invenio/var/instance/archive
-deploy_timeout: 30
+deploy_timeout: 120
 primary_role: web
