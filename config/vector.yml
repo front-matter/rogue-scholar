@@ -1,3 +1,0 @@
-sources:
-  docker:
-    type: "docker_logs"
