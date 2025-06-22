@@ -65,6 +65,7 @@ env:
     INVENIO_COMMUNITIES_IDENTITIES_CACHE_REDIS_URL: redis://inveniordm-cache:6379/4
     INVENIO_BROKER_URL: redis://inveniordm-cache:6379/5
     INVENIO_CELERY_BROKER_URL: redis://inveniordm-cache:6379/5
+    INVENIO_SEARCH_HOSTS: inveniordm-search:9200
     INVENIO_SEARCH_INDEX_PREFIX: invenio-rdm-
     INVENIO_THEME_SITENAME: Rogue Scholar
     INVENIO_THEME_FRONTPAGE_TITLE: "Science blogging on steroids."
