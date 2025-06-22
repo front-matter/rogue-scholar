@@ -53,7 +53,6 @@ env:
   clear:
     INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
     INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
-    # INVENIO_APP_ALLOWED_HOSTS: "['staging.rogue-scholar.org']"
     INVENIO_WSGI_PROXIES: 4
     # accessories db, cache, search
     POSTGRES_DB: inveniordm
@@ -82,12 +81,14 @@ env:
     INVENIO_MAIL_PORT: 465
     INVENIO_MAIL_SUPPRESS_SEND: True
     INVENIO_MAIL_USE_SSL: True
+    THEME_SHOW_FRONTPAGE_INTRO_SECTION: False
   secret:
     - INVENIO_SQLALCHEMY_DATABASE_URI
     - POSTGRES_PASSWORD
     - OPENSEARCH_INITIAL_ADMIN_PASSWORD
     - INVENIO_SECRET_KEY
     - INVENIO_SENTRY_DSN
+    - INVENIO_APP_ALLOWED_HOSTS
     # mail
     - INVENIO_MAIL_SERVER
     - INVENIO_MAIL_USERNAME
@@ -144,5 +145,5 @@ accessories:
 volumes:
   - uploaded_data:/opt/invenio/var/instance/data
   - archived_data:/opt/invenio/var/instance/archive
-deploy_timeout: 120
+deploy_timeout: 30
 primary_role: web
