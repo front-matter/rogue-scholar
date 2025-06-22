@@ -77,7 +77,7 @@ env:
     INVENIO_MAIL_DEFAULT_SENDER: info@rogue-scholar.org
     INVENIO_SECURITY_EMAIL_SENDER: info@rogue-scholar.org
     INVENIO_APP_RDM_ADMIN_EMAIL_RECIPIENT: info@rogue-scholar.org
-    INVENIO_MAIL_PORT: 465
+    INVENIO_MAIL_PORT: 587
     INVENIO_MAIL_SUPPRESS_SEND: True
     INVENIO_MAIL_USE_SSL: True
   secret:
