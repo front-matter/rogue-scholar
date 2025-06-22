@@ -70,7 +70,6 @@ env:
     INVENIO_THEME_FRONTPAGE_TITLE: "Science blogging on steroids."
     INVENIO_THEME_FRONTPAGE_SUBTITLE: "The Rogue Scholar science blog archive improves science blogs in important ways, including full-text search, long-term archiving, DOIs and metadata, and communities."
     INVENIO_THEME_LOGO: images/rogue-scholar-white.svg
-    INVENIO_THEME_SHOW_FRONTPAGE_INTRO_SECTION: False
     INVENIO_RDM_ALLOW_EXTERNAL_DOI_VERSIONING: False
     INVENIO_LEGACY_URL: https://legacy.rogue-scholar.org
     INVENIO_DATACITE_ENABLED: False
