@@ -391,3 +391,17 @@
   name: rOpenSci
   title:
     en: rOpenSci
+- id: 024mrxd33
+  identifiers:
+    - identifier: 024mrxd33
+      scheme: ror
+  name: University of Leeds
+  title:
+    en: University of Leeds
+- id: 050qmg959
+  identifiers:
+    - identifier: 050qmg959
+      scheme: ror
+  name: Singapore Management University
+  title:
+    en: Singapore Management University
