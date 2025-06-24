@@ -91,6 +91,9 @@ env:
     - INVENIO_MAIL_SERVER
     - INVENIO_MAIL_USERNAME
     - INVENIO_MAIL_PASSWORD
+    # oauth authentication
+    - INVENIO_ORCID_APP_CREDENTIALS
+    - INVENIO_GITHUB_APP_CREDENTIALS
 accessories:
   db:
     image: paradedb/paradedb:0.15.22-pg17
