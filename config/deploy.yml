@@ -8,9 +8,6 @@ servers:
     hosts:
       - 176.9.24.117
     cmd: celery -A invenio_app.celery worker --beat --events
-  observability:
-    hosts:
-      - 176.9.24.117
 
 proxy:
   ssl: true
@@ -30,7 +27,6 @@ proxy:
       - Path
       - Cache-Control
       - User-Agent
-      - X-Forwarded-Proto
     response_headers:
       - X-Request-ID
       - X-Request-Start
