@@ -2229,8 +2229,8 @@ wheels = [
 
 [[package]]
 name = "invenio-rest"
-version = "1.5.1"
-source = { registry = "https://pypi.org/simple" }
+version = "1.5.2"
+source = { git = "https://github.com/front-matter/invenio-rest?branch=maint-1.x#8e5e5fb65f57eecbed16e9a3bc84df9da875d2c4" }
 dependencies = [
     { name = "flask-cors" },
     { name = "invenio-base" },
@@ -2238,10 +2238,6 @@ dependencies = [
     { name = "itsdangerous" },
     { name = "marshmallow" },
     { name = "webargs" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/d8/56/107454f088a9364bf402de24bb56e9c1777928dbb09ca8249328551516c7/invenio_rest-1.5.1.tar.gz", hash = "sha256:1fd6debb122b247b5b6545a482540fd99206de4bc0582108ce00d974ea0cf25c", size = 37006, upload-time = "2025-04-29T20:12:47.42Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/c8/ec/a9c6fcd9b0ec5372da38c11dfc1dcfba6e663879a4fdf5d535bffa2d765e/invenio_rest-1.5.1-py2.py3-none-any.whl", hash = "sha256:ed9314a9e53f9422b58f821b0d7fe268aab492f236e17d54fe89a3fc4f82b251", size = 21504, upload-time = "2025-04-29T20:12:45.576Z" },
 ]
 
 [[package]]
@@ -3936,12 +3932,13 @@ wheels = [
 
 [[package]]
 name = "rogue-scholar"
-version = "12.1.0.4"
+version = "12.1.0.5"
 source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
     { name = "invenio-assets" },
+    { name = "invenio-rest" },
     { name = "invenio-s3" },
     { name = "invenio-search", extra = ["opensearch2"] },
     { name = "ruff" },
@@ -3957,6 +3954,7 @@ requires-dist = [
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = "~=12.1.0" },
     { name = "invenio-assets", specifier = "~=3.2.0" },
+    { name = "invenio-rest", git = "https://github.com/front-matter/invenio-rest?branch=maint-1.x" },
     { name = "invenio-s3", specifier = "~=1.0.7" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = "~=2.4.1" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.7.31" },

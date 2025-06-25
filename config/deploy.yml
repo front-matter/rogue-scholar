@@ -30,6 +30,7 @@ proxy:
     response_headers:
       - X-Request-ID
       - X-Request-Start
+      - X-Forwarded-Host
 
 registry:
   server: ghcr.io
