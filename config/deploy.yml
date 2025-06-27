@@ -87,9 +87,9 @@ accessories:
       - data:/var/lib/postgresql/data
     env:
       clear:
-        POSTGRES_USER: inveniordm
         POSTGRES_DB: inveniordm
       secret:
+        - POSTGRES_USER
         - POSTGRES_PASSWORD
   cache:
     image: valkey/valkey:7.2.5
