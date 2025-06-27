@@ -41,13 +41,13 @@ env:
     # accessories db, cache, search
     POSTGRES_DB: inveniordm
     INVENIO_CACHE_TYPE: redis
-    INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/0
-    INVENIO_ACCOUNTS_SESSION_REDIS_URL: redis://inveniordm-cache:6379/1
-    INVENIO_CELERY_RESULT_BACKEND: redis://inveniordm-cache:6379/2
-    INVENIO_RATELIMIT_STORAGE_URL: redis://inveniordm-cache:6379/3
-    INVENIO_COMMUNITIES_IDENTITIES_CACHE_REDIS_URL: redis://inveniordm-cache:6379/4
-    INVENIO_BROKER_URL: redis://inveniordm-cache:6379/5
-    INVENIO_CELERY_BROKER_URL: redis://inveniordm-cache:6379/5
+    INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/6
+    INVENIO_ACCOUNTS_SESSION_REDIS_URL: redis://inveniordm-cache:6379/7
+    INVENIO_CELERY_RESULT_BACKEND: redis://inveniordm-cache:6379/8
+    INVENIO_RATELIMIT_STORAGE_URL: redis://inveniordm-cache:6379/9
+    INVENIO_COMMUNITIES_IDENTITIES_CACHE_REDIS_URL: redis://inveniordm-cache:6379/10
+    INVENIO_BROKER_URL: redis://inveniordm-cache:6379/11
+    INVENIO_CELERY_BROKER_URL: redis://inveniordm-cache:6379/11
     INVENIO_SEARCH_HOSTS: inveniordm-search:9200
     INVENIO_SEARCH_INDEX_PREFIX: invenio-rdm-
     INVENIO_THEME_SITENAME: Rogue Scholar
