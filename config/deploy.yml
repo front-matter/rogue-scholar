@@ -53,7 +53,6 @@ env:
     INVENIO_WSGI_PROXIES: 4
     # accessories db, cache, search
     POSTGRES_DB: inveniordm
-    POSTGRES_USER: inveniordm
     INVENIO_CACHE_TYPE: redis
     INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/0
     INVENIO_ACCOUNTS_SESSION_REDIS_URL: redis://inveniordm-cache:6379/1
@@ -65,9 +64,9 @@ env:
     INVENIO_SEARCH_HOSTS: inveniordm-search:9200
     INVENIO_SEARCH_INDEX_PREFIX: invenio-rdm-
     INVENIO_THEME_SITENAME: Rogue Scholar
-    INVENIO_THEME_FRONTPAGE_TITLE: "Science blogging on steroids (Staging)."
+    INVENIO_THEME_FRONTPAGE_TITLE: "Science blogging on steroids."
     INVENIO_THEME_FRONTPAGE_SUBTITLE: "The Rogue Scholar science blog archive improves science blogs in important ways, including full-text search, long-term archiving, DOIs and metadata, and communities."
-    INVENIO_THEME_LOGO: images/rogue-scholar-white.svg
+    INVENIO_THEME_LOGO: images/rogue-scholar-staging.svg
     INVENIO_RDM_ALLOW_EXTERNAL_DOI_VERSIONING: False
     INVENIO_LEGACY_URL: https://legacy.rogue-scholar.org
     # mail
@@ -75,10 +74,11 @@ env:
     INVENIO_SECURITY_EMAIL_SENDER: info@rogue-scholar.org
     INVENIO_APP_RDM_ADMIN_EMAIL_RECIPIENT: info@rogue-scholar.org
     INVENIO_MAIL_PORT: 587
-    INVENIO_MAIL_SUPPRESS_SEND: True
+    INVENIO_MAIL_SUPPRESS_SEND: False
     INVENIO_MAIL_USE_SSL: True
   secret:
     - INVENIO_SQLALCHEMY_DATABASE_URI
+    - POSTGRES_USER
     - POSTGRES_PASSWORD
     - OPENSEARCH_INITIAL_ADMIN_PASSWORD
     - INVENIO_SECRET_KEY
