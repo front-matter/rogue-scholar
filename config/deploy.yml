@@ -14,23 +14,11 @@ proxy:
   host: staging.rogue-scholar.org
   ssl_redirect: true
   forward_headers: true
-  app_port: 5000
+  app_port: 4000
   healthcheck:
     path: /ping
     interval: 30
     timeout: 10
-  logging:
-    request_headers:
-      - Protocol
-      - Host
-      - Port
-      - Path
-      - Cache-Control
-      - User-Agent
-    response_headers:
-      - X-Request-ID
-      - X-Request-Start
-      - X-Forwarded-Host
 
 registry:
   server: ghcr.io
@@ -42,7 +30,6 @@ builder:
   arch: amd64
   context: .
   remote: ssh://root@176.9.24.117
-  local: false
   cache:
     type: registry
 
@@ -73,8 +60,6 @@ env:
     INVENIO_MAIL_DEFAULT_SENDER: info@rogue-scholar.org
     INVENIO_SECURITY_EMAIL_SENDER: info@rogue-scholar.org
     INVENIO_APP_RDM_ADMIN_EMAIL_RECIPIENT: info@rogue-scholar.org
-    INVENIO_MAIL_SUPPRESS_SEND: False
-    INVENIO_MAIL_USE_SSL: True
   secret:
     - INVENIO_SQLALCHEMY_DATABASE_URI
     - POSTGRES_USER
@@ -88,6 +73,7 @@ env:
     - INVENIO_MAIL_PORT
     - INVENIO_MAIL_USERNAME
     - INVENIO_MAIL_PASSWORD
+    - INVENIO_MAIL_USE_TLS
     # oauth authentication
     - INVENIO_OAUTHCLIENT_REMOTE_APPS
     - INVENIO_ORCID_APP_CREDENTIALS
