@@ -3,7 +3,7 @@
 // ###############################
 
 // Host Cadvisor on the Docker socket to expose container metrics.
-prometheus.exporter.cadvisor "docker" {
+prometheus.exporter.cadvisor "invenio" {
   docker_host = "unix:///var/run/docker.sock"
 
   storage_duration = "5m"
@@ -12,11 +12,8 @@ prometheus.exporter.cadvisor "docker" {
 
 // Configure a prometheus.scrape component to collect cadvisor metrics.
 prometheus.scrape "scraper" {
-  targets    = prometheus.exporter.cadvisor.docker.targets
+  targets    = prometheus.exporter.cadvisor.invenio.targets
   forward_to = [ prometheus.remote_write.grafanacloud.receiver ]
-
-
-  scrape_interval = "10s"
 }
 
 // Configure a prometheus.remote_write component to send metrics to a Prometheus server.
@@ -42,16 +39,15 @@ discovery.docker "linux" {
 
 // Define a relabeling rule to create a service name from the container name.
 discovery.relabel "logs_integrations_docker" {
-      targets = []
-  
-      rule {
-          source_labels = ["__meta_docker_container_name"]
-          regex = "/(.*)"
-          target_label = "service_name"
-      }
+    targets = []
 
-  }
+    rule {
+        source_labels = ["__meta_docker_container_name"]
+        regex = "/(.*)"
+        target_label = "service_name"
+    }
 
+}
 
 // Configure a loki.source.docker component to collect logs from Docker containers.
 loki.source.docker "staging" {
