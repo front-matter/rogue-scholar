@@ -3,7 +3,7 @@
 // ###############################
 
 // Host Cadvisor on the Docker socket to expose container metrics.
-prometheus.exporter.cadvisor "example" {
+prometheus.exporter.cadvisor "docker" {
   docker_host = "unix:///var/run/docker.sock"
 
   storage_duration = "5m"
@@ -54,7 +54,7 @@ discovery.relabel "logs_integrations_docker" {
 
 
 // Configure a loki.source.docker component to collect logs from Docker containers.
-loki.source.docker "rogue-scholar" {
+loki.source.docker "staging" {
   host       = "unix:///var/run/docker.sock"
   targets    = discovery.docker.linux.targets
   labels     = {"platform" = "docker"}
