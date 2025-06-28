@@ -12,7 +12,7 @@ prometheus.exporter.cadvisor "docker" {
 
 // Configure a prometheus.scrape component to collect cadvisor metrics.
 prometheus.scrape "scraper" {
-  targets    = prometheus.exporter.cadvisor.example.targets
+  targets    = prometheus.exporter.cadvisor.docker.targets
   forward_to = [ prometheus.remote_write.grafanacloud.receiver ]
 
 
