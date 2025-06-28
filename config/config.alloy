@@ -22,10 +22,10 @@ prometheus.scrape "scraper" {
 // Configure a prometheus.remote_write component to send metrics to a Prometheus server.
 prometheus.remote_write "grafanacloud" {
   endpoint {
-    url = "https://prometheus-prod-01-eu-west-0.grafana.net/api/prom/push"
+    url = "https://prometheus-prod-24-prod-eu-west-2.grafana.net/api/prom/push"
 
     basic_auth {
-      username = "468164"
+      username = "2528507"
       password = env("GRAFANA_CLOUD_TOKEN")
     }
   }
@@ -62,12 +62,13 @@ loki.source.docker "rogue-scholar" {
   forward_to = [loki.write.local.receiver]
 }
 
+// Configure a loki.write component to send logs to Grafana Cloud Loki.
 loki.write "grafanacloud" {
   endpoint {
-    url = "https://logs-prod-eu-west-0.grafana.net/loki/api/v1/push"
+    url = "https://logs-prod-012.grafana.net/loki/api/v1/push"
 
     basic_auth {
-      username = "233052"
+      username = "1259930"
       password = env("GRAFANA_CLOUD_TOKEN")
     }
   }
