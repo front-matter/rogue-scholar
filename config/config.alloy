@@ -26,7 +26,7 @@ prometheus.remote_write "grafanacloud" {
 
     basic_auth {
       username = "2528507"
-      password = env("GRAFANA_CLOUD_TOKEN")
+      password = env("PROMETHEUS_TOKEN")
     }
   }
 }
@@ -69,7 +69,7 @@ loki.write "grafanacloud" {
 
     basic_auth {
       username = "1259930"
-      password = env("GRAFANA_CLOUD_TOKEN")
+      password = env("LOKI_TOKEN")
     }
   }
 }
