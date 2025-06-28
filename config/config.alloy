@@ -13,7 +13,7 @@ prometheus.exporter.cadvisor "docker" {
 // Configure a prometheus.scrape component to collect cadvisor metrics.
 prometheus.scrape "scraper" {
   targets    = prometheus.exporter.cadvisor.example.targets
-  forward_to = [ prometheus.remote_write.demo.receiver ]
+  forward_to = [ prometheus.remote_write.grafanacloud.receiver ]
 
 
   scrape_interval = "10s"
@@ -59,7 +59,7 @@ loki.source.docker "staging" {
   targets    = discovery.docker.linux.targets
   labels     = {"platform" = "docker"}
   relabel_rules = discovery.relabel.logs_integrations_docker.rules
-  forward_to = [loki.write.local.receiver]
+  forward_to = [loki.write.grafanacloud.receiver]
 }
 
 // Configure a loki.write component to send logs to Grafana Cloud Loki.
