@@ -120,12 +120,14 @@ accessories:
     image: grafana/alloy:v1.9.2
     host: 176.9.24.117
     port: 12345
-    directories:
-      - data:/etc/alloy/config.alloy
+    files:
+      - config/config.alloy:/etc/alloy/config.alloy
     env:
       clear:
         server.http.listen-addr: "0.0.0.0:12345"
         storage.path: /var/lib/alloy/data
+      secret:
+        - GRAFANA_CLOUD_TOKEN
 volumes:
   - uploaded_data:/opt/invenio/var/instance/data
   - archived_data:/opt/invenio/var/instance/archive
