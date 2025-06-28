@@ -1,4 +1,6 @@
 FROM python:3.13.1-bookworm AS builder
+LABEL service="rogue-scholar"
+LABEL maintainer="Front Matter <info@front-matter.io>"
 
 # Dockerfile that builds the Rogue Scholar Docker image.
 
@@ -14,7 +16,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt \
     apt-get install -y nodejs --no-install-recommends
 
 # Install uv and activate virtualenv
-COPY --from=ghcr.io/astral-sh/uv:0.7.10 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.7.15 /uv /uvx /bin/
 RUN uv venv /opt/invenio/.venv
 
 # Use the virtual environment automatically

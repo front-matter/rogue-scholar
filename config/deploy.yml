@@ -4,6 +4,8 @@ servers:
   web:
     hosts:
       - 176.9.24.117
+    labels:
+      service: rogue-scholar
   worker:
     hosts:
       - 176.9.24.117
@@ -80,7 +82,7 @@ env:
     - INVENIO_GITHUB_APP_CREDENTIALS
 accessories:
   db:
-    image: paradedb/paradedb:0.15.22-pg17
+    image: paradedb/paradedb:0.16.0-pg17
     host: 176.9.24.117
     port: 5432
     directories:
@@ -114,14 +116,6 @@ accessories:
       memory: 4g
       publish:
         - 9600:9600
-  vector:
-    image: timberio/vector:0.46.1-alpine
-    roles:
-      - web
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    files:
-      - config/vector.yml:/etc/vector/vector.yaml
 volumes:
   - uploaded_data:/opt/invenio/var/instance/data
   - archived_data:/opt/invenio/var/instance/archive
