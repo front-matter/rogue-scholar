@@ -122,6 +122,8 @@ accessories:
     port: 12345
     files:
       - config/config.alloy:/etc/alloy/config.alloy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     env:
       clear:
         server.http.listen-addr: "0.0.0.0:12345"
