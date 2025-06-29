@@ -15,6 +15,11 @@ prometheus.exporter.unix "host" {
   disable_collectors = ["mdadm"]
 }
 
+// Discover Docker containers and extract metadata.
+discovery.docker "containers" {
+  host = "unix:///var/run/docker.sock"
+}
+
 prometheus.exporter.redis "cache" {
   redis_addr = "inveniordm-cache:6379"
 }
@@ -26,6 +31,11 @@ prometheus.scrape "cadvisor" {
   
   scrape_interval = "15s"
   metrics_path = "/metrics"
+}
+
+prometheus.scrape "containers" {
+  targets    = discovery.docker.containers.targets
+  forward_to = [prometheus.remote_write.grafanacloud.receiver]
 }
 
 // Scrape node exporter metrics
@@ -66,14 +76,9 @@ prometheus.remote_write "grafanacloud" {
 // #### Logging Configuration ####
 // ###############################
 
-// Discover Docker containers and extract metadata.
-discovery.docker "linux" {
-  host = "unix:///var/run/docker.sock"
-}
-
 // Define a relabeling rule to create a service name from the container name.
 discovery.relabel "logs_integrations_docker" {
-  targets = discovery.docker.linux.targets
+  targets = discovery.docker.containers.targets
 
   rule {
     source_labels = ["__meta_docker_container_name"]
