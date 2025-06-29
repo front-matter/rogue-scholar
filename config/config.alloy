@@ -7,7 +7,6 @@ prometheus.exporter.cadvisor "invenio" {
   docker_host = "unix:///var/run/docker.sock"
 
   storage_duration = "5m"
-  container_label_include = ["com.docker.compose.*"]
 }
 
 // Node exporter for host metrics
@@ -23,17 +22,6 @@ prometheus.scrape "cadvisor" {
   
   scrape_interval = "15s"
   metrics_path = "/metrics"
-  
-  metric_relabel_config {
-    source_labels = ["__name__"]
-    target_label = "job"
-    replacement  = "cadvisor"
-  }
-  
-  metric_relabel_config {
-    source_labels = ["container_label_com_docker_compose_service"]
-    target_label = "service"
-  }
 }
 
 // Scrape node exporter metrics
@@ -42,12 +30,6 @@ prometheus.scrape "node" {
   forward_to = [ prometheus.remote_write.grafanacloud.receiver ]
   
   scrape_interval = "15s"
-  
-  metric_relabel_config {
-    source_labels = ["__name__"]
-    target_label = "job"
-    replacement  = "node"
-  }
 }
 
 // Configure a prometheus.remote_write component to send metrics to a Prometheus server.
@@ -67,25 +49,6 @@ prometheus.remote_write "grafanacloud" {
       batch_send_deadline = "5s"
       max_samples_per_send = 2000
     }
-  }
-
-  // Retry configuration
-  retry_config {
-    min_period = "100ms"
-    max_period = "5s"
-  }
-
-  // Write relabeling to add environment labels
-  write_relabel_config {
-    source_labels = ["__name__"]
-    target_label = "environment"
-    replacement = "staging"
-  }
-  
-  // Add cluster label for identification
-  write_relabel_config {
-    target_label = "cluster"
-    replacement = "rogue-scholar-staging"
   }
 }
 
