@@ -10,10 +10,7 @@ prometheus.exporter.cadvisor "invenio" {
 }
 
 // Node exporter for host metrics
-prometheus.exporter.unix "host" {
-  include_exporter_metrics = true
-  disable_collectors = ["mdadm"]
-}
+prometheus.exporter.unix "host" { /* use defaults */ }
 
 // Discover Docker containers and extract metadata.
 discovery.docker "containers" {
@@ -30,7 +27,14 @@ prometheus.scrape "cadvisor" {
   forward_to = [ prometheus.remote_write.grafanacloud.receiver ]
   
   scrape_interval = "15s"
-  metrics_path = "/metrics"
+}
+
+// Scrape host exporter metrics
+prometheus.scrape "host" {
+  targets    = prometheus.exporter.unix.host.targets
+  forward_to = [ prometheus.remote_write.grafanacloud.receiver ]
+  
+  scrape_interval = "15s"
 }
 
 prometheus.scrape "containers" {
@@ -38,15 +42,7 @@ prometheus.scrape "containers" {
   forward_to = [prometheus.remote_write.grafanacloud.receiver]
 }
 
-// Scrape node exporter metrics
-prometheus.scrape "node" {
-  targets    = prometheus.exporter.unix.host.targets
-  forward_to = [ prometheus.remote_write.grafanacloud.receiver ]
-  
-  scrape_interval = "15s"
-}
-
-// Configure a prometheus.scrape component to collect Redis metrics.
+// Scrape Redis metrics.
 prometheus.scrape "cache" {
   targets    = prometheus.exporter.redis.cache.targets
   forward_to = [prometheus.remote_write.grafanacloud.receiver]
@@ -76,6 +72,11 @@ prometheus.remote_write "grafanacloud" {
 // #### Logging Configuration ####
 // ###############################
 
+logging {
+	level  = "info"
+	format = "logfmt"
+}
+
 // Define a relabeling rule to create a service name from the container name.
 discovery.relabel "logs_integrations_docker" {
   targets = discovery.docker.containers.targets
@@ -86,16 +87,28 @@ discovery.relabel "logs_integrations_docker" {
     target_label = "service_name"
   }
 
+  // Kamal-spezifische Labels
   rule {
-    source_labels = ["__meta_docker_container_label_com_docker_compose_service"]
-    target_label = "compose_service"
+    source_labels = ["__meta_docker_container_label_service"]
+    target_label = "kamal_service"
   }
   
-  // Filter to include only containers with a specific label pattern
   rule {
-    source_labels = ["__meta_docker_container_label_com_docker_compose_project"]
+    source_labels = ["__meta_docker_container_label_role"]
+    target_label = "kamal_role"
+  }
+  
+  rule {
+    source_labels = ["__meta_docker_container_label_destination"]
+    target_label = "kamal_destination"
+  }
+
+  
+  // Filter für Kamal oder Compose Services
+  rule {
+    source_labels = ["__meta_docker_container_label_service"]
     action = "keep"
-    regex = "rogue-scholar.*"
+    regex = ".+|rogue-scholar.*"
   }
   
   // Add environment label for identification
@@ -109,7 +122,7 @@ discovery.relabel "logs_integrations_docker" {
 loki.source.docker "staging" {
   host       = "unix:///var/run/docker.sock"
   targets    = discovery.relabel.logs_integrations_docker.output
-  labels     = {"platform" = "docker", "cluster" = "rogue-scholar-staging"}
+  labels     = {"platform" = "docker", "cluster" = "rogue-scholar-staging", "deployment_tool" = "kamal"}
   forward_to = [loki.write.grafanacloud.receiver]
   
   refresh_interval = "5s"
