@@ -15,6 +15,10 @@ prometheus.exporter.unix "host" {
   disable_collectors = ["mdadm"]
 }
 
+prometheus.exporter.redis "cache" {
+  redis_addr = "inveniordm-cache:6379"
+}
+
 // Configure a prometheus.scrape component to collect cadvisor metrics.
 prometheus.scrape "cadvisor" {
   targets    = prometheus.exporter.cadvisor.invenio.targets
@@ -30,6 +34,12 @@ prometheus.scrape "node" {
   forward_to = [ prometheus.remote_write.grafanacloud.receiver ]
   
   scrape_interval = "15s"
+}
+
+// Configure a prometheus.scrape component to collect Redis metrics.
+prometheus.scrape "cache" {
+  targets    = prometheus.exporter.redis.cache.targets
+  forward_to = [prometheus.remote_write.grafanacloud.receiver]
 }
 
 // Configure a prometheus.remote_write component to send metrics to a Prometheus server.
