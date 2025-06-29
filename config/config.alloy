@@ -2,10 +2,8 @@
 // #### Metrics Configuration ####
 // ###############################
 
-// Host Cadvisor on the Docker socket to expose container metrics.
+// Exporter for Docker cAdvisor metrics
 prometheus.exporter.cadvisor "invenio" {
-  docker_host = "unix:///var/run/docker.sock"
-
   storage_duration = "5m"
 }
 
@@ -72,61 +70,61 @@ prometheus.remote_write "grafanacloud" {
 // #### Logging Configuration ####
 // ###############################
 
-logging {
-	level  = "info"
-	format = "logfmt"
-}
+// // Discover Docker containers and extract metadata.
+// discovery.docker "linux" {
+//   host = "unix:///var/run/docker.sock"
+// }
 
-// Define a relabeling rule to create a service name from the container name.
-discovery.relabel "logs_integrations_docker" {
-  targets = discovery.docker.containers.targets
+// // Define a relabeling rule to create a service name from the container name.
+// discovery.relabel "logs_integrations_docker" {
+//   targets = discovery.docker.linux.targets
 
-  rule {
-    source_labels = ["__meta_docker_container_name"]
-    regex = "/(.*)"
-    target_label = "service_name"
-  }
+//   rule {
+//     source_labels = ["__meta_docker_container_name"]
+//     regex = "/(.*)"
+//     target_label = "service_name"
+//   }
 
-  // Kamal-spezifische Labels
-  rule {
-    source_labels = ["__meta_docker_container_label_service"]
-    target_label = "kamal_service"
-  }
+//   // Kamal-spezifische Labels
+//   rule {
+//     source_labels = ["__meta_docker_container_label_service"]
+//     target_label = "kamal_service"
+//   }
   
-  rule {
-    source_labels = ["__meta_docker_container_label_role"]
-    target_label = "kamal_role"
-  }
+//   rule {
+//     source_labels = ["__meta_docker_container_label_role"]
+//     target_label = "kamal_role"
+//   }
   
-  rule {
-    source_labels = ["__meta_docker_container_label_destination"]
-    target_label = "kamal_destination"
-  }
+//   rule {
+//     source_labels = ["__meta_docker_container_label_destination"]
+//     target_label = "kamal_destination"
+//   }
 
   
-  // Filter für Kamal oder Compose Services
-  rule {
-    source_labels = ["__meta_docker_container_label_service"]
-    action = "keep"
-    regex = ".+|rogue-scholar.*"
-  }
+//   // Filter für Kamal Services
+//   rule {
+//     source_labels = ["__meta_docker_container_label_service"]
+//     action = "keep"
+//     regex = ".+|rogue-scholar.*"
+//   }
   
-  // Add environment label for identification
-  rule {
-    target_label = "environment"
-    replacement = "staging"
-  }
-}
+//   // Add environment label for identification
+//   rule {
+//     target_label = "environment"
+//     replacement = "staging"
+//   }
+// }
 
-// Configure a loki.source.docker component to collect logs from Docker containers.
-loki.source.docker "staging" {
-  host       = "unix:///var/run/docker.sock"
-  targets    = discovery.relabel.logs_integrations_docker.output
-  labels     = {"platform" = "docker", "cluster" = "rogue-scholar-staging", "deployment_tool" = "kamal"}
-  forward_to = [loki.write.grafanacloud.receiver]
+// // Configure a loki.source.docker component to collect logs from Docker containers.
+// loki.source.docker "staging" {
+//   host       = "unix:///var/run/docker.sock"
+//   targets    = discovery.docker.linux.targets
+//   labels     = {"platform" = "docker", "cluster" = "rogue-scholar-staging", "deployment_tool" = "kamal"}
+//   forward_to = [loki.write.grafanacloud.receiver]
   
-  refresh_interval = "5s"
-}
+//   refresh_interval = "5s"
+// }
 
 // Configure a loki.write component to send logs to Grafana Cloud Loki.
 loki.write "grafanacloud" {
