@@ -9,11 +9,37 @@ prometheus.exporter.cadvisor "invenio" {
   storage_duration = "5m"
 }
 
+// Node exporter for host metrics
+prometheus.exporter.unix "host" {
+  include_exporter_metrics = true
+  disable_collectors = ["mdadm"]
+}
 
 // Configure a prometheus.scrape component to collect cadvisor metrics.
-prometheus.scrape "scraper" {
+prometheus.scrape "cadvisor" {
   targets    = prometheus.exporter.cadvisor.invenio.targets
   forward_to = [ prometheus.remote_write.grafanacloud.receiver ]
+  
+  scrape_interval = "15s"
+  metrics_path = "/metrics"
+  
+  relabel {
+    target_label = "__tmp_prometheus_job_name"
+    replacement  = "cadvisor"
+  }
+}
+
+// Scrape node exporter metrics
+prometheus.scrape "node" {
+  targets    = prometheus.exporter.unix.host.targets
+  forward_to = [ prometheus.remote_write.grafanacloud.receiver ]
+  
+  scrape_interval = "15s"
+  
+  relabel {
+    target_label = "__tmp_prometheus_job_name"
+    replacement  = "node"
+  }
 }
 
 // Configure a prometheus.remote_write component to send metrics to a Prometheus server.
@@ -25,6 +51,27 @@ prometheus.remote_write "grafanacloud" {
       username = "2528507"
       password = env("PROMETHEUS_TOKEN")
     }
+  }
+
+  // Queue configuration for better reliability
+  queue_config {
+    capacity = 10000
+    min_shards = 1
+    max_shards = 200
+    batch_send_deadline = "5s"
+  }
+
+  // Retry configuration
+  retry_config {
+    min_period = "100ms"
+    max_period = "5s"
+  }
+
+  // Write relabeling to add environment labels
+  write_relabel_config {
+    source_labels = ["__name__"]
+    target_label = "environment"
+    replacement = "staging"
   }
 }
 
@@ -39,14 +86,18 @@ discovery.docker "linux" {
 
 // Define a relabeling rule to create a service name from the container name.
 discovery.relabel "logs_integrations_docker" {
-    targets = []
+  targets = discovery.docker.linux.targets
 
-    rule {
-        source_labels = ["__meta_docker_container_name"]
-        regex = "/(.*)"
-        target_label = "service_name"
-    }
+  rule {
+    source_labels = ["__meta_docker_container_name"]
+    regex = "/(.*)"
+    target_label = "service_name"
+  }
 
+  rule {
+    source_labels = ["__meta_docker_container_label_com_docker_compose_service"]
+    target_label = "compose_service"
+  }
 }
 
 // Configure a loki.source.docker component to collect logs from Docker containers.
