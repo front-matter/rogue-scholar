@@ -7,6 +7,7 @@ prometheus.exporter.cadvisor "invenio" {
   docker_host = "unix:///var/run/docker.sock"
 
   storage_duration = "5m"
+  container_label_include = ["com.docker.compose.*"]
 }
 
 // Node exporter for host metrics
@@ -23,9 +24,15 @@ prometheus.scrape "cadvisor" {
   scrape_interval = "15s"
   metrics_path = "/metrics"
   
-  relabel {
-    target_label = "__tmp_prometheus_job_name"
+  metric_relabel_config {
+    source_labels = ["__name__"]
+    target_label = "job"
     replacement  = "cadvisor"
+  }
+  
+  metric_relabel_config {
+    source_labels = ["container_label_com_docker_compose_service"]
+    target_label = "service"
   }
 }
 
@@ -36,8 +43,9 @@ prometheus.scrape "node" {
   
   scrape_interval = "15s"
   
-  relabel {
-    target_label = "__tmp_prometheus_job_name"
+  metric_relabel_config {
+    source_labels = ["__name__"]
+    target_label = "job"
     replacement  = "node"
   }
 }
@@ -51,14 +59,14 @@ prometheus.remote_write "grafanacloud" {
       username = "2528507"
       password = env("PROMETHEUS_TOKEN")
     }
-  }
-
-  // Queue configuration for better reliability
-  queue_config {
-    capacity = 10000
-    min_shards = 1
-    max_shards = 200
-    batch_send_deadline = "5s"
+    
+    queue_config {
+      capacity = 10000
+      min_shards = 1
+      max_shards = 200
+      batch_send_deadline = "5s"
+      max_samples_per_send = 2000
+    }
   }
 
   // Retry configuration
@@ -72,6 +80,12 @@ prometheus.remote_write "grafanacloud" {
     source_labels = ["__name__"]
     target_label = "environment"
     replacement = "staging"
+  }
+  
+  // Add cluster label for identification
+  write_relabel_config {
+    target_label = "cluster"
+    replacement = "rogue-scholar-staging"
   }
 }
 
@@ -98,15 +112,29 @@ discovery.relabel "logs_integrations_docker" {
     source_labels = ["__meta_docker_container_label_com_docker_compose_service"]
     target_label = "compose_service"
   }
+  
+  // Filter to include only containers with a specific label pattern
+  rule {
+    source_labels = ["__meta_docker_container_label_com_docker_compose_project"]
+    action = "keep"
+    regex = "rogue-scholar.*"
+  }
+  
+  // Add environment label for identification
+  rule {
+    target_label = "environment"
+    replacement = "staging"
+  }
 }
 
 // Configure a loki.source.docker component to collect logs from Docker containers.
 loki.source.docker "staging" {
   host       = "unix:///var/run/docker.sock"
-  targets    = discovery.docker.linux.targets
-  labels     = {"platform" = "docker"}
-  relabel_rules = discovery.relabel.logs_integrations_docker.rules
+  targets    = discovery.relabel.logs_integrations_docker.output
+  labels     = {"platform" = "docker", "cluster" = "rogue-scholar-staging"}
   forward_to = [loki.write.grafanacloud.receiver]
+  
+  refresh_interval = "5s"
 }
 
 // Configure a loki.write component to send logs to Grafana Cloud Loki.
