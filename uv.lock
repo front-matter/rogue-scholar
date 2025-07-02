@@ -1779,11 +1779,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/5b/47/4d73f4961bc02f9ed93cd8c5f207ee9558cb51a4490c23145b528f09ee5e/invenio_logging-4.1.0-py2.py3-none-any.whl", hash = "sha256:4f0f539628aca8823a86587d71b263c52f65aa8ad4d7be24c0fc1abda8e6bbe7", size = 11898, upload-time = "2025-04-28T12:05:10.067Z" },
 ]
 
-[package.optional-dependencies]
-sentry = [
-    { name = "sentry-sdk", extra = ["flask"] },
-]
-
 [[package]]
 name = "invenio-mail"
 version = "2.2.1"
@@ -3752,10 +3747,11 @@ source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
-    { name = "invenio-logging", extra = ["sentry"] },
+    { name = "invenio-logging" },
     { name = "invenio-rest" },
     { name = "invenio-search", extra = ["opensearch2"] },
     { name = "ruff" },
+    { name = "sentry-sdk" },
 ]
 
 [package.optional-dependencies]
@@ -3767,11 +3763,12 @@ docs = [
 requires-dist = [
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = "~=13.0.0rc3" },
-    { name = "invenio-logging", extras = ["sentry"], specifier = ">=4.1.0" },
+    { name = "invenio-logging", specifier = ">=4.1.0" },
     { name = "invenio-rest", git = "https://github.com/front-matter/invenio-rest?branch=152-app_allowed_hosts-is-none" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.0.0" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.7.31" },
     { name = "ruff", specifier = ">=0.11.0" },
+    { name = "sentry-sdk", specifier = ">=1.45,<2.0.0" },
 ]
 provides-extras = ["docs"]
 
@@ -3854,13 +3851,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/c8/28/02c0cd9184f9108e3c52519f9628b215077a3854240e0b17ae845e664855/sentry_sdk-1.45.1.tar.gz", hash = "sha256:a16c997c0f4e3df63c0fc5e4207ccb1ab37900433e0f72fef88315d317829a26", size = 244774, upload-time = "2024-07-26T13:48:32.375Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/fe/9f/105366a122efa93f0cb1914f841747d160788e4d022d0488d2d44c2ba26c/sentry_sdk-1.45.1-py2.py3-none-any.whl", hash = "sha256:608887855ccfe39032bfd03936e3a1c4f4fc99b3a4ac49ced54a4220de61c9c1", size = 267163, upload-time = "2024-07-26T13:48:29.38Z" },
-]
-
-[package.optional-dependencies]
-flask = [
-    { name = "blinker" },
-    { name = "flask" },
-    { name = "markupsafe" },
 ]
 
 [[package]]
