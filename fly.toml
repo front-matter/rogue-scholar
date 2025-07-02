@@ -7,7 +7,7 @@ app = 'invenio-rdm-starter'
 primary_region = 'fra'
 
 [build]
-image = "ghcr.io/front-matter/rogue-scholar:v12.1.0.3"
+image = "ghcr.io/front-matter/rogue-scholar:v12.1.0.5"
 
 [env]
 # Flask-Babel
@@ -30,11 +30,11 @@ INVENIO_THEME_SHOW_FRONTPAGE_INTRO_SECTION = "False"
 INVENIO_THEME_SITENAME = "Rogue Scholar"
 
 [processes]
-web = "gunicorn invenio_app.wsgi:application --bind 0.0.0.0:5000 --workers 4"
+web = "gunicorn invenio_app.wsgi:application --bind 0.0.0.0:4000 --workers 4"
 worker = "celery -A invenio_app.celery worker --beat --events --loglevel=WARNING"
 
 [[services]]
-internal_port = 5000
+internal_port = 4000
 protocol = "tcp"
 auto_stop_machines = "off"
 auto_start_machines = true
