@@ -223,7 +223,7 @@
                 <span
                   class="label text-muted"> | {{ _('Version {version_number}').format(version_number=record_ui["ui"]["version"]) }}</span>
                 
-                {%- set id_doi = record.pids.get('doi', {}).get('identifier', None) %}
+                {%- set id_doi = record_ui["pids"].get('doi', {}).get('identifier', None) %}
                 {% if id_doi %}
                   <span class="label text-muted"> | </span>
                   <a class="no-text-decoration" target="_blank" href="{{ id_doi|pid_url('doi') }}">
