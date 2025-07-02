@@ -216,44 +216,21 @@
 
               <section id="record-info"
                        aria-label="{{ _('Publication date and version number') }}">
-                <div class="ui grid middle aligned">
-                  <div class="two column row">
-                    <div class="left floated left aligned column">
-                      <span class="ui" title="{{ _('Publication date') }}">
-                        {{ _('Published') }} {{ record_ui["ui"]["publication_date_l10n_long"] }}
-                      </span>
-                      <span
-                        class="label text-muted"> | {{ _('Version {version_number}').format(version_number=record_ui["ui"]["version"]) }}</span>
-                    </div>
-                    <div class="right floated right aligned column">
-
-                      {% if record_ui["ui"]["resource_type"] %}
-                        <span role="note"
-                              class="ui label horizontal small neutral mb-5"
-                              aria-label="{{ _('Resource type') }}"
-                        >
-                          {{ record_ui["ui"]["resource_type"]["title_l10n"] }}
-                        </span>
-                      {% endif %}
-
-                      <span role="note"
-                            class="ui label horizontal small access-status {{ record_ui["ui"]["access_status"]["id"] }} mb-5"
-                            data-tooltip="{{ record_ui["ui"]["access_status"]["description_l10n"] }}"
-                            data-inverted=""
-                            aria-label="{{ _('Access status') }}"
-                      >
-                        {% if record_ui["ui"]["access_status"]["icon"] %}
-                          <i class="icon {{ record_ui["ui"]["access_status"]["icon"] }}"
-                             aria-hidden="true"></i>
-                        {% endif %}
-                        <span
-                          aria-label="{{ record_ui["ui"]["access_status"]["description_l10n"] }}">
-                          {{ record_ui["ui"]["access_status"]["title_l10n"] }}
-                        </span>
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                {# begin Rogue Scholar customization #}
+                <span class="ui" title="{{ _('Publication date') }}">
+                  {{ _('Published') }} {{ record_ui["ui"]["publication_date_l10n_long"] }}
+                </span>
+                <span
+                  class="label text-muted"> | {{ _('Version {version_number}').format(version_number=record_ui["ui"]["version"]) }}</span>
+                
+                {%- set id_doi = record.pids.get('doi', {}).get('identifier', None) %}
+                {% if id_doi %}
+                  <span class="label text-muted"> | </span>
+                  <a class="no-text-decoration" target="_blank" href="{{ id_doi|pid_url('doi') }}">
+                    {{ id_doi|pid_url('doi') }}
+                  </a>
+                {% endif %}
+                {# end Rogue Scholar customization #}
               </section>
               <div class="ui divider hidden"></div>
 
