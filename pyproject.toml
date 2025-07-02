@@ -1,19 +1,16 @@
 [project]
 name = "rogue-scholar"
-version = "12.1.0.5"
+version = "13.0.0.0"
 description = "Rogue Scholar is a science blog archive based on the InvenioRDM repository software."
 authors = [{ name = "Martin Fenner", email = "martin@front-matter.io" }]
 readme = "README.md"
 requires-python = ">=3.13"
 license = "MIT"
 dependencies = [
-    "invenio-app-rdm~=12.1.0",
-    "invenio-search[opensearch2]~=2.4.1",
-    "invenio-s3~=1.0.7",
-    "invenio-assets~=3.2.0",
+    "invenio-app-rdm~=13.0.0rc3",
+    "invenio-search[opensearch2]>=3.0.0",
     "gunicorn~=23.0.0",
     "ruff>=0.11.0",
-    "invenio-rest>=1.5.2",
 ]
 
 [build-system]
@@ -28,7 +25,7 @@ line-length = 79
 include = ["pyproject.toml", "site/**/*.py"]
 
 [tool.uv.sources]
-invenio-rest = { git = "https://github.com/front-matter/invenio-rest", branch = "maint-1.x" }
+invenio-rest = { git = "https://github.com/front-matter/invenio-rest" }
 
 [project.optional-dependencies]
 docs = ["quarto-cli~=1.7.31"]
