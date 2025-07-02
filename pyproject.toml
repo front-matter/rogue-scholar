@@ -9,6 +9,7 @@ license = "MIT"
 dependencies = [
     "invenio-app-rdm~=13.0.0rc3",
     "invenio-search[opensearch2]>=3.0.0",
+    "invenio-rest",
     "gunicorn~=23.0.0",
     "ruff>=0.11.0",
 ]
@@ -25,7 +26,7 @@ line-length = 79
 include = ["pyproject.toml", "site/**/*.py"]
 
 [tool.uv.sources]
-invenio-rest = { git = "https://github.com/front-matter/invenio-rest" }
+invenio-rest = { git = "https://github.com/front-matter/invenio-rest", branch = "152-app_allowed_hosts-is-none" }
 
 [project.optional-dependencies]
 docs = ["quarto-cli~=1.7.31"]

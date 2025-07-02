@@ -2106,7 +2106,7 @@ wheels = [
 [[package]]
 name = "invenio-rest"
 version = "2.0.4"
-source = { registry = "https://pypi.org/simple" }
+source = { git = "https://github.com/front-matter/invenio-rest?branch=152-app_allowed_hosts-is-none#b8343ab30ceb1bf9b638cee8ac168f4caa37bfd5" }
 dependencies = [
     { name = "flask-cors" },
     { name = "invenio-base" },
@@ -2114,10 +2114,6 @@ dependencies = [
     { name = "itsdangerous" },
     { name = "marshmallow" },
     { name = "webargs" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/89/23/ae9f8c4dd1d5c84e8b996a8a8ba343dd1335e9f40024740fb9ca827a7106/invenio_rest-2.0.4.tar.gz", hash = "sha256:89c639ba85ecf2ea540e200d9a8c675e1735b7c8f2bcebd4c661456e226db9b8", size = 37307, upload-time = "2025-07-01T19:44:41.71Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/25/40/21594f0537d17428b259387d30e0451cbb5eb58c9d76a8064e4f022d6982/invenio_rest-2.0.4-py2.py3-none-any.whl", hash = "sha256:e1735531e5e696ce69c9da808fa6ceb143001ff6556d24215e98f60f6389a23b", size = 21683, upload-time = "2025-07-01T19:44:40.772Z" },
 ]
 
 [[package]]
@@ -3751,6 +3747,7 @@ source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
+    { name = "invenio-rest" },
     { name = "invenio-search", extra = ["opensearch2"] },
     { name = "ruff" },
 ]
@@ -3764,6 +3761,7 @@ docs = [
 requires-dist = [
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = "~=13.0.0rc3" },
+    { name = "invenio-rest", git = "https://github.com/front-matter/invenio-rest?branch=152-app_allowed_hosts-is-none" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.0.0" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.7.31" },
     { name = "ruff", specifier = ">=0.11.0" },
