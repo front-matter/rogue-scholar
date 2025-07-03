@@ -138,7 +138,7 @@ accessories:
         - PROMETHEUS_TOKEN
         - LOKI_TOKEN
 volumes:
-  - uploaded_data:/opt/invenio/var/instance/data
-  - archived_data:/opt/invenio/var/instance/archive
+  - /var/inveniordm/data:/opt/invenio/var/instance/data
+  - /var/inveniordm/archive:/opt/invenio/var/instance/archive
 deploy_timeout: 45
 primary_role: web
