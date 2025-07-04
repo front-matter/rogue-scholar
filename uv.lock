@@ -1938,7 +1938,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.3.0"
-source = { registry = "https://pypi.org/simple" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=fix-external-doi-validation#ad92b64d86313e6a0a4f973143445f7631fb4f9e" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -1969,10 +1969,6 @@ dependencies = [
     { name = "python-slugify" },
     { name = "pytz" },
     { name = "pyyaml" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/54/e3/f93d87fb0cc1e807f1e1253cc7b50a3ea57a6433b78b148f7706bf5dec84/invenio_rdm_records-19.3.0.tar.gz", hash = "sha256:8e6ae03b005d7ed8135dbf286032c74c7d14343ae26b5d7b5abfa060eb4198e2", size = 1002562, upload-time = "2025-07-02T07:16:47.466Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/64/16/fdd3d48e6c11cbf469bbb97eafbf7815b7acaaf2626090794ea9e78e37b5/invenio_rdm_records-19.3.0-py2.py3-none-any.whl", hash = "sha256:4d951a83f75c1d363bf01a64ad579bdaac3457c429dae8b600f839118bdb84fd", size = 1506053, upload-time = "2025-07-02T07:16:44.767Z" },
 ]
 
 [[package]]
@@ -3744,6 +3740,7 @@ dependencies = [
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
     { name = "invenio-logging" },
+    { name = "invenio-rdm-records" },
     { name = "invenio-rest" },
     { name = "invenio-search", extra = ["opensearch2"] },
     { name = "ruff" },
@@ -3760,6 +3757,7 @@ requires-dist = [
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", git = "https://github.com/front-matter/invenio-app-rdm?branch=rdm-parent-persistent-identifiers-none" },
     { name = "invenio-logging", specifier = ">=4.1.0" },
+    { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=fix-external-doi-validation" },
     { name = "invenio-rest", git = "https://github.com/front-matter/invenio-rest?branch=152-app_allowed_hosts-is-none" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.0.0" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.7.31" },
