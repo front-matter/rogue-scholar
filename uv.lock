@@ -1923,7 +1923,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.3.0"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=fix-external-doi-validation#ec9ab8d0710386920b13603f5e4c0bc216ae073d" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=fix-external-doi-validation#a81f2cfd5f8c77f2dfab113d81245a68b4c0dfb9" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
