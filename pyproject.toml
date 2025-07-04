@@ -7,7 +7,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 license = "MIT"
 dependencies = [
-    "invenio-app-rdm~=13.0.0rc3",
+    "invenio-app-rdm",
     "invenio-search[opensearch2]>=3.0.0",
     "invenio-logging>=4.1.0",
     "sentry-sdk>=1.45,<2.0.0",
@@ -29,6 +29,7 @@ include = ["pyproject.toml", "site/**/*.py"]
 
 [tool.uv.sources]
 invenio-rest = { git = "https://github.com/front-matter/invenio-rest", branch = "152-app_allowed_hosts-is-none" }
+invenio-app-rdm = { git = "https://github.com/front-matter/invenio-app-rdm", branch = "rdm-parent-persistent-identifiers-none" }
 
 [project.optional-dependencies]
 docs = ["quarto-cli~=1.7.31"]
