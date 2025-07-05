@@ -1,5 +1,7 @@
 {#
-  Copyright (C) 2020 CERN.
+  Copyright (C) 2020-2025 CERN.
+  Copyright (C) 2024 Northwestern University.
+  Copyright (C) 2024-2025 KTH Royal Institute of Technology.
 
   Invenio RDM Records is free software; you can redistribute it and/or modify
   it under the terms of the MIT License; see LICENSE file for more details.
@@ -10,6 +12,7 @@
   <dt class="ui tiny header">{{ title }}</dt>
   <dd>{{ value }}</dd>
 {%- endmacro %}
+
 
 {% macro show_title_detail(title, language, value) %}
   <dt class="ui tiny header">
@@ -22,6 +25,7 @@
     {{ value }}
   </dd>
 {%- endmacro %}
+
 
 {% macro show_sanitized_detail(title, value) %}
   <dt class="ui tiny header">{{ title }}</dt>
@@ -39,14 +43,6 @@
     {% else %}
       {{ value }}{{ ", " if not loop.last }}
     {% endif %}
-
-  {% endfor %}
-{% endmacro %}
-
-
-{% macro list_formats(formats) %}
-  {% for format in formats %}
-    {{ format }}{{ ", " if not loop.last }}
   {% endfor %}
 {% endmacro %}
 
@@ -64,18 +60,25 @@
 
 {% macro show_add_descriptions(add_descriptions) %}
   {% for add_description in add_descriptions %}
-    <section id="additional-description-{{ loop.index }}" class="rel-mt-2 rich-input-content"
-             aria-label="{{ _( add_description.type.title_l10n ) }}">
-      <h2>{{ add_description.type.title_l10n }} <span
-        class="text-muted language">{{ '(' + add_description.lang.title_l10n + ')' if add_description.lang }}</span>
+    {% set desc_type_defined = add_description.type is defined %}
+    {% set desc_text = add_description.description|default('') %}
+    <section
+      id="additional-description-{{ loop.index }}"
+      class="rel-mt-2 rich-input-content"
+      aria-label="{{ (add_description.type.title_l10n if desc_type_defined else _('Missing description type!')) }}"
+    >
+      <h2>
+        {{ add_description.type.title_l10n if desc_type_defined else _('Missing description type!') }}
+        <span class="text-muted language">
+          {{ '(' ~ add_description.lang.title_l10n ~ ')' if add_description.lang is defined else '' }}
+        </span>
       </h2>
-
-      {% if add_description.type.id == "notes" %}
+      {% if desc_type_defined and add_description.type.id == "notes" %}
         <div class="ui message warning">
-          {{ add_description.description | sanitize_html() | safe }}
+          {{ desc_text | sanitize_html() | safe }}
         </div>
       {% else %}
-        {{ add_description.description | sanitize_html() | safe }}
+        {{ desc_text | sanitize_html() | safe }}
       {% endif %}
     </section>
   {% endfor %}
@@ -84,10 +87,11 @@
 
 {% macro show_dates(dates) %}
   {% for date in dates %}
-    <dt class="ui tiny header">{{ date.type.title_l10n }}</dt>
+    {% set date_type_title = date.get('type', {}).get('title_l10n', _('Unknown date type')) %}
+    <dt class="ui tiny header">{{ date_type_title }}</dt>
     <dd>
-      <div>{{ date.date }}</div>
-      <div class="text-muted">{{ date.description }}</div>
+      <div>{{ date.date|default('') }}</div>
+      <div class="text-muted">{{ date.description|default('') }}</div>
     </dd>
   {% endfor %}
 {% endmacro %}
@@ -99,53 +103,43 @@
   {% endfor %}
 {% endmacro %}
 
+
 {% macro _show_funding_item(item, index) %}
+  <dt class="ui tiny header">{{ item.funder.name if item.funder }}</dt>
   {%- if item.award -%}
-    {%- if item.award.title_l10n -%}
-      <dt class="ui tiny header">
-        <span class="mr-5">
-          {% if item.award.acronym %}
-            {{ item.award.acronym }} –
-          {% endif %}
+  <dt class="ui tiny header">
+    <span class="mr-0 text-muted">
+      {% if item.award.acronym %}
+        {{ item.award.acronym }} -
+      {% endif %}
 
-          {{ item.award.title_l10n }}
-        </span>
+      {%- if item.award.title_l10n -%}
+        {{ item.award.title_l10n }}
+      {%- endif -%}
+    </span>
 
-        {%- if item.award.number -%}
-          <span class="ui mini basic label ml-0 mr-5" id="number-label-{{ index }}">
-            {{ item.award.number }}
-          </span>
-        {%- endif -%}
-
-        {%- if item.award.identifiers -%}
-          {% for identifier in item.award.identifiers %}
-            {% set id = identifier.identifier %}
-            {% if identifier.scheme == 'url' %}
-              <a href="{{ id }}" target="_blank"
-                rel="noopener noreferrer" aria-label="{{ _('Open external link') }}">
-                <i class="external alternate icon"></i>
-              </a>
-            {% elif identifier.scheme == 'doi' %}
-              <a href="{{ id|pid_url('doi') }}" target="_blank"
-                rel="noopener noreferrer" aria-label="{{ _('Open external link') }}">
-                <i class="external alternate icon"></i>
-              </a>
-            {% endif %}
-          {%- endfor -%}
-        {%- endif -%}
-      </dt>
+    {%- if item.award.number -%}
+      <span class="ui mini basic label {% if not item.award.title_l10n %}ml-0{% endif %}" id="number-label-{{ index }}">
+        {{ item.award.number }}
+      </span>
     {%- endif -%}
-    <dd class="text-muted">{{ item.funder.name if item.funder }}</dd>
-  {%- else -%}
-    <dt class="ui tiny header">{{ item.funder.name if item.funder }}</dt>
-  {%- endif -%}
-{% endmacro %}
 
+    {%- if item.award.identifiers -%}
+      {% for identifier in item.award.identifiers if 'url' == identifier.scheme %}
+        <a href="{{ identifier.identifier }}" target="_blank"
+          rel="noopener noreferrer" aria-label="{{ _('Open external link') }}">
+          <i class="external alternate icon"></i>
+        </a>
+      {%- endfor -%}
+    {%- endif -%}
+  </dt>
+{%- endif -%}
+{% endmacro %}
 
 {% macro show_references(references) %}
   <ol class="ui ordered list details-list">
     {% for reference in references %}
-      {% set reference_string = reference.reference | safe %}
+      {% set reference_string = reference.reference|default('') %}
       {% if reference.identifier %}
         {% if reference.scheme %}
           {% set id = reference.identifier %}
@@ -174,20 +168,23 @@
 {% macro _identifiers_for_group(related_identifiers) %}
   {% for identifier in related_identifiers %}
     <dd>
-      {% if identifier.resource_type is defined %}
+      {% if identifier.resource_type is defined and identifier.resource_type.title_l10n is defined %}
         {{ identifier.resource_type.title_l10n }}:
       {% endif %}
 
-      {% set url = identifier.identifier|pid_url %}
+      {% set ident_val = identifier.identifier|default('') %}
+      {% set url = ident_val|pid_url(scheme=identifier.scheme) %}
       {% if url %}
         <a href="{{ url }}" target="_blank" title="{{ _('Opens in new tab') }}">
-          {{ identifier.identifier }}
+          {{ ident_val }}
         </a>
       {% else %}
-        {{ identifier.identifier }}
+        {{ ident_val }}
       {% endif %}
 
-      {{ ' (' + identifier.scheme | get_scheme_label + ')' }}
+      {% if identifier.scheme is defined and identifier.scheme %}
+        {{ ' (' ~ (identifier.scheme|get_scheme_label) ~ ')' }}
+      {% endif %}
     </dd>
   {% endfor %}
 {% endmacro %}
@@ -195,7 +192,7 @@
 
 {% macro show_related_identifiers(related_identifiers) %}
   <dl class="details-list">
-    {%- for group in related_identifiers | groupby('relation_type.title_l10n') %}
+    {%- for group in (related_identifiers|selectattr("relation_type","defined")|list) | groupby('relation_type.title_l10n') %}
       <dt class="ui tiny header">{{ group.grouper }}</dt>
       {{ _identifiers_for_group(group.list) }}
     {%- endfor %}
@@ -226,15 +223,21 @@
   {% endfor %}
 {% endmacro %}
 
-{% macro list_vocabulary_values(values) %}
+{% macro list_vocabulary_values(field, values, field_cfg) %}
   {% if values.title_l10n is defined %}
-    {{ values.title_l10n }}
+    {% set search_url = field | custom_fields_search(values.title_l10n, field_cfg) %}
+    {% if search_url %}
+      <a href="{{ search_url }}">{{ values.title_l10n | safe }}</a>
+    {% else %}
+      {{ values.title_l10n }}
+    {% endif %}
   {% else %}
     {% for value in values %}
       {{ value.title_l10n }}{{ ", " if not loop.last }}
     {% endfor %}
   {% endif %}
 {% endmacro %}
+
 
 {% macro list_float_values(field, values) %}
   {% for value in values %}
@@ -257,7 +260,7 @@
       {% else %}
         <dt class="ui tiny header">
           {{ field_cfg.props.label }}
-          {% set namespace_url = field_cfg.field | namespace_url %}
+          {% set namespace_url = field_cfg.display_url if field_cfg.display_url is defined else field_cfg.field | namespace_url %}
           {% if namespace_url %}
             <a href="{{ namespace_url }}" aria-label="{{ namespace_url }}">
               <i class="icon external" aria-hidden="true"></i>
@@ -282,7 +285,7 @@
             {% endif %}
           </dd>
         {% elif field_cfg.is_vocabulary %}
-          <dd>{{ list_vocabulary_values(field_value) }}</dd>
+          <dd>{{ list_vocabulary_values(field_cfg.field, field_value, field_cfg) }}</dd>
         {% elif field_value is iterable and field_value|length > 0 and field_value[0] is string %}
           <dd>{{ list_string_values(field_cfg.field, field_value) }}</dd>
         {% elif field_value is iterable and field_value|length > 0 and field_value[0] is number %}
@@ -294,6 +297,7 @@
     {% endif %}
   {% endfor %}
 {% endmacro %}
+
 
 {% macro show_detail_conference(conference) %}
   <dd>
@@ -315,4 +319,13 @@
     <dd><a href="{{ conference.url }}"><i
       class="fa fa-external-link"></i> {{ _('Conference website') }}</a></dd>
   {%- endif %}
+{% endmacro %}
+
+
+{% macro show_detail_thesis(title, thesis) %}
+  <dt class="ui tiny header">
+    {{ title }}
+  </dt>
+  <dd>{{ thesis | safe }}
+  </dd>
 {% endmacro %}
