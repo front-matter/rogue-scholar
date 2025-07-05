@@ -78,3 +78,12 @@
   identifiers:
     - identifier: 10.3030/731075
       scheme: doi
+- id: "528958385"
+  title:
+    de: "Kooperative Informationsinfrastruktur für wissenschaftliche Blogs (Infra Wiss Blogs)"
+  number: "528958385"
+  funder:
+    id: 018mejw64
+  identifiers:
+    - identifier: https://gepris.dfg.de/gepris/projekt/528958385
+      scheme: url
