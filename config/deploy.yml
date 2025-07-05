@@ -38,7 +38,7 @@ env:
     INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
     INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
     INVENIO_WSGI_PROXIES: 4
-    INVENIO_DATADIR: /var/inveniordm/data
+    INVENIO_DATADIR: /opt/invenio/var/instance/data
     # accessories db, cache, search
     POSTGRES_DB: inveniordm
     INVENIO_CACHE_TYPE: redis
