@@ -3,6 +3,7 @@
   This file is part of Invenio.
   Copyright (C) 2016-2024 CERN.
   Copyright (C) 2024 Northwestern University.
+  Copyright (C) 2025 Graz University of Technology.
 
   Invenio is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
@@ -10,8 +11,8 @@
 
 {%- from "invenio_theme/macros/truncate.html" import truncate_text %}
 {%- from "invenio_communities/details/macros/access-status-label.html" import access_status_label -%}
-{% set feed_url = community.ui.custom_fields.get("rs:feed_url", None) %}
-{% set feed_format = community.ui.custom_fields.get("rs:feed_format", "") %}
+{% set feed_url = community_ui['custom_fields'].get("rs:feed_url", None) %}
+{% set feed_format = community_ui['custom_fields'].get("rs:feed_format", "") %}
 {% if feed_format == "application/atom+xml" %}
   {% set feed_text = "Atom Feed" %}
 {% elif feed_format == "application/feed+json" %}
@@ -19,9 +20,9 @@
 {% else %}
   {% set feed_text = "RSS Feed" %}
 {% endif %}
-{% set generator = community.ui.custom_fields.get("rs:generator", None) %}
-{% set issn = community.ui.custom_fields.get("rs:issn", None) %}
-{% set license = community.ui.custom_fields.get("rs:license", "") %}
+{% set generator = community_ui['custom_fields'].get("rs:generator", None) %}
+{% set issn = community_ui['custom_fields'].get("rs:issn", None) %}
+{% set license = community_ui['custom_fields'].get("rs:license", "") %}
 {% if license == "https://creativecommons.org/licenses/by/4.0/legalcode" %}
   {% set license_text = "CC BY 4.0" %}
 {% elif license == "https://creativecommons.org/publicdomain/zero/1.0/legalcode" %}
@@ -29,13 +30,12 @@
 {% else %}
   {% set license_text = "" %}
 {% endif %}
-{% set generator = community.ui.custom_fields.get("rs:generator", None) %}
-{% set issn = community.ui.custom_fields.get("rs:issn", None) %}
-{% set joined = community.ui.custom_fields.get("rs:joined", None) %}
-{% set language = community.ui.custom_fields.get("rs:language", None) %}
-{% set category = community.ui.custom_fields.get("rs:category", None) %}
-
-{% macro button_to_request_membership(community) %}
+{% set generator = community_ui['custom_fields'].get("rs:generator", None) %}
+{% set issn = community_ui['custom_fields'].get("rs:issn", None) %}
+{% set joined = community_ui['custom_fields'].get("rs:joined", None) %}
+{% set language = community_ui['custom_fields'].get("rs:language", None) %}
+{% set category = community_ui['custom_fields'].get("rs:category", None) %}
+{% macro button_to_request_membership(community_ui) %}
   {% if permissions.can_request_membership %}
   {# TODO: Add relation_to_community for other flows #}
   <div
@@ -47,13 +47,13 @@
   {% endif %}
 {% endmacro %}
 
-{% macro community_title(community) %}
+{% macro community_title(community_ui) %}
   <div class="ui small header">
-    <a href="{{ url_for('invenio_app_rdm_communities.communities_detail', pid_value=community.slug) }}" class="ui small header">
-      {{ community.metadata.title }}
+    <a href="{{ url_for('invenio_app_rdm_communities.communities_detail', pid_value=community_ui['slug']) }}" class="ui small header">
+      {{ community_ui["metadata"]["title"] }}
     </a>
     <!-- Show the icon for subcommunities -->
-    {% if community.parent %}
+    {% if community_ui['parent'] %}
       <p class="ml-2 mb-0 display-inline-block">
         <i class="green check circle outline icon"></i>
       </p>
@@ -72,21 +72,21 @@
           <div class="flex align-items-center">
             <div class="ui rounded image community-image mt-5 rel-mr-2">
               <img
-                src="{{ community.links.logo | resolve_community_logo(community.id) }}"
+                src="{{ community_ui['links']['logo'] | resolve_community_logo(community_ui['id']) }}"
                 alt=""
                 class="rel-mb-1"
               />
             </div>
 
             <div class="mobile only">
-              {{community_title(community)}}
+              {{community_title(community_ui)}}
             </div>
           </div>
 
           <div>
             <div class="flex align-items-center mb-5 tablet computer only">
-              {{community_title(community)}}
-              {% if community.access.visibility == 'restricted' %}
+              {{community_title(community_ui)}}
+              {% if community_ui["access"]["visibility"] == 'restricted' %}
                 <div class="rel-ml-1">
                   {{ access_status_label() }}
                 </div>
@@ -94,26 +94,26 @@
             </div>
 
             <div>
-              {% if community.access.visibility == 'restricted' %}
+              {% if community_ui["access"]["visibility"] == 'restricted' %}
                 <div class="mobile only rel-mb-1">
                   {{ access_status_label() }}
                 </div>
               {% endif %}
-              {% if community.parent %}
+              {% if community_ui['parent'] %}
                 <div class="inline-computer mt-5 rel-mr-1">
                   <span class="ui tiny header">Part of </span>
                   <a
                   href="{{ url_for('invenio_app_rdm_communities.communities_home', pid_value=community.parent.slug) }}">
-                  {{community.parent.metadata.title}}
+                  {{community_ui["parent"]["metadata"]["title"]}}
                   </a>
                 </div>
               {% endif %}
 
-              {% if community.metadata.website %}
+              {% if community_ui["metadata"]["website"] %}
                 <div class="inline-computer mt-5 rel-mr-1">
                   <i class="linkify icon" aria-hidden="true"></i>
-                  <a href="{{ community.metadata.website }}">
-                    {{ community.metadata.website }}
+                  <a href="{{ community_ui["metadata"]["website"] }}">
+                    {{ community_ui["metadata"]["website"] }}
                   </a>
                 </div>
               {% endif %}
@@ -161,11 +161,11 @@
                 </div>
               {% endif %}
 
-              {% if community.metadata.type is defined %}
+              {% if community_ui["metadata"]["type"] is defined %}
                 <div class="inline-computer mt-5 rel-mr-1">
                   <i class="tag icon" aria-hidden="true"></i>
                   <span class="label label-keyword">
-                    {{ community.ui.type.title_l10n }}
+                    {{ community_ui["ui"]["type"]["title_l10nn"] }}
                   </span>
                 </div>
               {% endif %}
@@ -182,8 +182,8 @@
                 </div>
               {% endif %}
 
-              {% if community.metadata.organizations %}
-                <div class="inline-computer" id="organizations-list" data-organizations='{{ community.metadata.organizations|tojson }}'></div>
+              {% if community_ui["metadata"]["organizations"] %}
+                <div class="inline-computer" id="organizations-list" data-organizations='{{ community_ui["metadata"]["organizations"] | tojson }}'></div>
               {% endif %}
             </div>
           </div>
@@ -191,14 +191,15 @@
       </div>
       <div
         class="sixteen wide mobile sixteen wide tablet five wide computer right aligned middle aligned column">
-        {{ button_to_request_membership(community) }}
+        {# Button to request membership is fully disabled until feature completely merged in v14. #}
+        {# {{ button_to_request_membership(community) }} #}
         {%- if not community_use_jinja_header %}
           {%- if not permissions.can_submit_record %}
             <div class="ui icon inline-block" data-tooltip="{{_('Submission to this community is only allowed to community members.')}}">
               <i class="grey question circle outline icon mb-5"></i>
             </div>
           {% endif %}
-          <a href="/uploads/new?community={{ community.slug }}"
+          <a href="/uploads/new?community={{ community_ui['slug'] }}"
              class="ui positive button labeled icon rel-mt-1 theme-secondary {{ 'disabled' if not permissions.can_submit_record }}">
             <i class="upload icon" aria-hidden="true"></i>
             {{ _("New upload") }}
@@ -206,7 +207,7 @@
         {% endif %}
         {% if permissions.can_moderate %}
           <a
-            href="{{ url_for('administration.communities', q='slug:'+community.slug) }}"
+            href="{{ url_for('administration.communities', q='slug:'+community_ui['slug']) }}"
             class="ui button labeled icon rel-mt-1">
             <i class="cog icon" aria-hidden="true"></i>
             {{ _("Manage community") }}
