@@ -120,3 +120,4 @@ accessories:
       secret:
         - PROMETHEUS_TOKEN
         - LOKI_TOKEN
+deploy_timeout: 45
