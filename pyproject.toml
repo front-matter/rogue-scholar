@@ -13,7 +13,6 @@ dependencies = [
     "sentry-sdk>=1.45,<2.0.0",
     "invenio-rest",
     "invenio-rdm-records",
-    "commonmeta-py>=0.133",
     "gunicorn~=23.0.0",
     "ruff>=0.11.0",
 ]
@@ -36,3 +35,4 @@ invenio-rdm-records = { git = "https://github.com/front-matter/invenio-rdm-recor
 
 [project.optional-dependencies]
 docs = ["quarto-cli~=1.7.31"]
+actions = ["commonmeta-py>=0.134"]

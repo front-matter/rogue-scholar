@@ -460,7 +460,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.133"
+version = "0.134"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -497,9 +497,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/0d/98/1b7f75f03352ae0ddf44c6ced0bba34f45cf9c58b7f6e9fee047d65f3bab/commonmeta_py-0.133.tar.gz", hash = "sha256:038fb53f13708503b4cff24bdd5283126cb0185ae0773299731278ee9ad92dc2", size = 286449, upload-time = "2025-07-08T08:27:15.321Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/5f/ed/d48ccafe88905ddf7b57d23e06f6bd5a59e56fd65403534b74cc4c6943e8/commonmeta_py-0.134.tar.gz", hash = "sha256:a10071e424c26a99a038c8faf1b489dd275e026afcfc7c8b3fa3b79246e7cf4b", size = 286451, upload-time = "2025-07-08T15:27:29.904Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0c/06/555a7957193fecffdcac929a3eacf5fc9ef9c1868caa3e3bc795f438304d/commonmeta_py-0.133-py3-none-any.whl", hash = "sha256:f497d60d33bfb2a9f8ce044549d6de0c16413a2a869baf2f00083d001ebcfac8", size = 345842, upload-time = "2025-07-08T08:27:13.525Z" },
+    { url = "https://files.pythonhosted.org/packages/b9/dc/80aa268b62d413ce888b3000908036ada0d658b295672dbc77afb6ec4663/commonmeta_py-0.134-py3-none-any.whl", hash = "sha256:963d04f3623f792bc714468b38294284313dd84e6a3173611a0155534d38849b", size = 345830, upload-time = "2025-07-08T15:27:28.34Z" },
 ]
 
 [[package]]
@@ -3739,7 +3739,6 @@ name = "rogue-scholar"
 version = "13.0.0.1"
 source = { editable = "." }
 dependencies = [
-    { name = "commonmeta-py" },
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
     { name = "invenio-logging" },
@@ -3751,13 +3750,16 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
+actions = [
+    { name = "commonmeta-py" },
+]
 docs = [
     { name = "quarto-cli" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "commonmeta-py", specifier = ">=0.133" },
+    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.134" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", git = "https://github.com/front-matter/invenio-app-rdm?branch=rdm-parent-persistent-identifiers-none" },
     { name = "invenio-logging", specifier = ">=4.1.0" },
@@ -3768,7 +3770,7 @@ requires-dist = [
     { name = "ruff", specifier = ">=0.11.0" },
     { name = "sentry-sdk", specifier = ">=1.45,<2.0.0" },
 ]
-provides-extras = ["docs"]
+provides-extras = ["docs", "actions"]
 
 [[package]]
 name = "rpds-py"
