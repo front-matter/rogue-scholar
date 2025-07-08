@@ -460,7 +460,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.128"
+version = "0.133"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -497,9 +497,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/67/1d/9b3260055b55158241d1c66b01ce39f0055c368a5b7c7f4c9e33154c0bd6/commonmeta_py-0.128.tar.gz", hash = "sha256:221f5f8d3a692c53482fffc156ca8392182c04ff103ac415ad910b32f69d27c8", size = 286138, upload-time = "2025-05-29T00:56:06.033Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/0d/98/1b7f75f03352ae0ddf44c6ced0bba34f45cf9c58b7f6e9fee047d65f3bab/commonmeta_py-0.133.tar.gz", hash = "sha256:038fb53f13708503b4cff24bdd5283126cb0185ae0773299731278ee9ad92dc2", size = 286449, upload-time = "2025-07-08T08:27:15.321Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/63/69/4825e7418c77a7f5e8ac8cd9bb0688aa7f1a0bd967a8f44a344b8e2e530c/commonmeta_py-0.128-py3-none-any.whl", hash = "sha256:e8bf0ad6970cf95ad198cb10104bbdd0ab8d2316a1cbe6baf858e84420a8ca32", size = 345471, upload-time = "2025-05-29T00:56:04.079Z" },
+    { url = "https://files.pythonhosted.org/packages/0c/06/555a7957193fecffdcac929a3eacf5fc9ef9c1868caa3e3bc795f438304d/commonmeta_py-0.133-py3-none-any.whl", hash = "sha256:f497d60d33bfb2a9f8ce044549d6de0c16413a2a869baf2f00083d001ebcfac8", size = 345842, upload-time = "2025-07-08T08:27:13.525Z" },
 ]
 
 [[package]]
@@ -3739,6 +3739,7 @@ name = "rogue-scholar"
 version = "13.0.0.1"
 source = { editable = "." }
 dependencies = [
+    { name = "commonmeta-py" },
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
     { name = "invenio-logging" },
@@ -3756,6 +3757,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
+    { name = "commonmeta-py", specifier = ">=0.133" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", git = "https://github.com/front-matter/invenio-app-rdm?branch=rdm-parent-persistent-identifiers-none" },
     { name = "invenio-logging", specifier = ">=4.1.0" },
