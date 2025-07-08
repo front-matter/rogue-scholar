@@ -30,7 +30,7 @@ jobs:
       - name: Install commonmeta-py
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          uv pip install commonmeta-py --no-cache
+          uv pip install 'commonmeta-py>=0.131'
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
