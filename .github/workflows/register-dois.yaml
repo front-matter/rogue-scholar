@@ -30,7 +30,9 @@ jobs:
       - name: Install commonmeta-py
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
+          uv venv
           uv pip install --refresh 'commonmeta-py>=0.132'
+          source .venv/bin/activate
       - name: Set current date as variable
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
