@@ -39,7 +39,6 @@ jobs:
       - name: Convert posts to commonmeta
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          uv run commonmeta version
           uv run commonmeta list upload/posts.json -f jsonfeed > upload/commonmeta.json
       - name: Update Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}

@@ -22,8 +22,6 @@ jobs:
       - name: Install uv
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         uses: astral-sh/setup-uv@v6
-        with:
-          enable-cache: false
       - name: "Set up Python"
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         uses: actions/setup-python@v5
@@ -41,7 +39,6 @@ jobs:
       - name: Convert posts to commonmeta and autogenerate dois based on prefix
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          uv run commonmeta version
           uv run commonmeta list upload/posts.json -f jsonfeed > upload/commonmeta.json
       - name: Register Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
