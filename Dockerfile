@@ -1,4 +1,4 @@
-FROM python:3.13.5-bookworm AS builder
+FROM python:3.13-bookworm AS builder
 LABEL service="inveniordm"
 LABEL maintainer="Front Matter <info@front-matter.io>"
 
@@ -60,7 +60,7 @@ RUN --mount=type=cache,target=/var/cache/assets \
     invenio collect --verbose && \
     invenio webpack buildall
 
-FROM python:3.13.5-slim-bookworm AS runtime
+FROM python:3.13-slim-bookworm AS runtime
 
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US:en
