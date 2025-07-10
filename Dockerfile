@@ -1,5 +1,5 @@
-FROM python:3.13.1-bookworm AS builder
-LABEL service="rogue-scholar"
+FROM python:3.13.5-bookworm AS builder
+LABEL service="inveniordm"
 LABEL maintainer="Front Matter <info@front-matter.io>"
 
 # Dockerfile that builds the Rogue Scholar Docker image.
@@ -60,7 +60,7 @@ RUN --mount=type=cache,target=/var/cache/assets \
     invenio collect --verbose && \
     invenio webpack buildall
 
-FROM python:3.13.1-slim-bookworm AS runtime
+FROM python:3.13.5-slim-bookworm AS runtime
 
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US:en
@@ -97,4 +97,4 @@ WORKDIR ${WORKING_DIR}/src
 # USER invenio
 
 EXPOSE 4000
-CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:4000", "--workers", "4", "--access-logfile", "-", "--error-logfile", "-", "--log-level", "INFO"]
+CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:4000", "--workers", "4", "--access-logfile", "-", "--error-logfile", "-", "--log-level", "ERROR"]
