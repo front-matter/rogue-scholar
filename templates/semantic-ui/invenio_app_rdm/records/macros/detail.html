@@ -139,7 +139,7 @@
 {% macro show_references(references) %}
   <ol class="ui ordered list details-list">
     {% for reference in references %}
-      {% set reference_string = reference.reference|default('') %}
+      {% set reference_string = reference.reference|default('') | safe %}
       {% if reference.identifier %}
         {% if reference.scheme %}
           {% set id = reference.identifier %}
