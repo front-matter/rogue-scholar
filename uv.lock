@@ -1926,8 +1926,8 @@ wheels = [
 
 [[package]]
 name = "invenio-rdm-records"
-version = "19.3.0"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=fix-external-doi-validation#4ab33de3d009708f52493e0e381bbb3efa92e8e9" }
+version = "19.4.0"
+source = { git = "https://github.com/caltechlibrary/invenio-rdm-records?branch=parent-doi#bfe89c6e3e350b80064b1e16b24d4e7aea6f1d9b" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -3767,7 +3767,7 @@ requires-dist = [
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = ">=13.0.0rc4" },
     { name = "invenio-logging", specifier = ">=4.1.0" },
-    { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=fix-external-doi-validation" },
+    { name = "invenio-rdm-records", git = "https://github.com/caltechlibrary/invenio-rdm-records?branch=parent-doi" },
     { name = "invenio-rest", git = "https://github.com/front-matter/invenio-rest?branch=152-app_allowed_hosts-is-none" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.0.0" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.7.31" },
