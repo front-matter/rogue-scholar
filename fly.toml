@@ -15,9 +15,9 @@ INVENIO_BABEL_DEFAULT_LOCALE = "en"
 INVENIO_BABEL_DEFAULT_TIMEZONE = "UTC"
 
 # Invenio-Records-Resources
-INVENIO_SITE_API_URL = "https://rogue-scholar.org/api"
-INVENIO_SITE_UI_URL = "https://rogue-scholar.org"
-INVENIO_APP_ALLOWED_HOSTS = "['rogue-scholar.org']"
+INVENIO_SITE_API_URL = "https://old.rogue-scholar.org/api"
+INVENIO_SITE_UI_URL = "https://old.rogue-scholar.org"
+INVENIO_APP_ALLOWED_HOSTS = "['old.rogue-scholar.org']"
 
 # Invenio-Search
 INVENIO_SEARCH_INDEX_PREFIX = "invenio-rdm-"
