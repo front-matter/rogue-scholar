@@ -42,7 +42,7 @@ env:
     INVENIO_WSGI_PROXIES: 4
     INVENIO_DATADIR: /opt/invenio/var/instance/data
     # accessories db, cache, search
-    POSTGRES_DB: inveniordm
+    POSTGRES_DB: scholar
     INVENIO_CACHE_TYPE: redis
     INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/6
     INVENIO_ACCOUNTS_SESSION_REDIS_URL: redis://inveniordm-cache:6379/7
