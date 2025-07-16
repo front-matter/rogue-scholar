@@ -2,6 +2,10 @@
          Invenio RDM Starter Header Overrides
 ***********************************************/
 
+.ui.login.header {
+    margin: 0 0 20px 0;
+}
+
 section#content .ui.items .item .content {
   h2, h2:not(#record-details-heading) {
     margin-top: 1.25rem;
