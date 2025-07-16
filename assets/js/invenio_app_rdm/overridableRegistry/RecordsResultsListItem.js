@@ -12,7 +12,7 @@ import React, { Component } from "react";
 import Overridable from "react-overridable";
 import { SearchItemCreators } from "../utils";
 import PropTypes from "prop-types";
-import { Item, Label, Icon } from "semantic-ui-react";
+import { Item, Label } from "semantic-ui-react";
 import { buildUID } from "react-searchkit";
 import { CompactStats } from "../components/CompactStats";
 import { DisplayPartOfCommunities } from "../components/DisplayPartOfCommunities";
@@ -21,14 +21,13 @@ class RecordsResultsListItem extends Component {
   render() {
     const { currentQueryState, result, key, appName } = this.props;
 
-    const accessStatusId = _get(result, "ui.access_status.id", "open");
-    const accessStatus = _get(result, "ui.access_status.title_l10n", "Open");
-    const accessStatusIcon = _get(result, "ui.access_status.icon", "unlock");
     const createdDate = _get(
       result,
       "ui.created_date_l10n_long",
       i18next.t("No creation date found.")
     );
+
+    const doi = _get(result, "pids.doi.identifier", null);
 
     const creators = result.ui.creators.creators;
 
@@ -48,6 +47,7 @@ class RecordsResultsListItem extends Component {
       "ui.resource_type.title_l10n",
       i18next.t("No resource type")
     );
+    const languages = _get(result, "ui.languages", []);
     const subjects = _get(result, "ui.subjects", []);
     const title = _get(result, "metadata.title", i18next.t("No title"));
     const version = _get(result, "ui.version", null);
@@ -77,14 +77,13 @@ class RecordsResultsListItem extends Component {
         id={buildUID("RecordsResultsListItem.layout", "", appName)}
         result={result}
         key={key}
-        accessStatusId={accessStatusId}
-        accessStatus={accessStatus}
-        accessStatusIcon={accessStatusIcon}
+        doi={doi}
         createdDate={createdDate}
         creators={creators}
         descriptionStripped={descriptionStripped}
         publicationDate={publicationDate}
         resourceType={resourceType}
+        languages={languages}
         subjects={subjects}
         title={title}
         version={version}
@@ -103,13 +102,10 @@ class RecordsResultsListItem extends Component {
               <Label horizontal size="small" className="neutral">
                 {resourceType}
               </Label>
-              <Label
-                horizontal
-                size="small"
-                className={`access-status ${accessStatusId}`}
-              >
-                {accessStatusIcon && <Icon name={accessStatusIcon} />}
-                {accessStatus}
+              <Label horizontal size="small" className="olive">
+                {languages.map((lang) => (
+                  <span key={lang.title_l10n}>{lang.title_l10n}</span>
+                ))}
               </Label>
             </Item.Extra>
             <Item.Header as="h2" className="theme-primary-text">
@@ -149,7 +145,6 @@ class RecordsResultsListItem extends Component {
                       </>
                     )}
                     {createdDate && publishingInformation && " | "}
-
                     {publishingInformation && (
                       <>
                         {i18next.t("Published in: {{- publishInfo }}", {
@@ -178,6 +173,15 @@ class RecordsResultsListItem extends Component {
                     uniqueViews={uniqueViews}
                     uniqueDownloads={uniqueDownloads}
                   />
+                </small>
+              </div>
+              <div className="rel-mt-1">
+                <small>
+                  <strong>
+                    <a href={"https://doi.org/" + doi} target="_blank">
+                      {"https://doi.org/" + doi}
+                    </a>
+                  </strong>
                 </small>
               </div>
             </Item.Extra>
