@@ -36,17 +36,17 @@ jobs:
         run: |
           echo "NOW=$(date +'%s')" >> $GITHUB_OUTPUT
         id: current_date
-      - name: Convert posts to commonmeta
+      - name: Convert posts to InvenioRDM format
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          uv run commonmeta list upload/posts.json -f jsonfeed > upload/commonmeta.json
+          uv run commonmeta list upload/posts.json -f jsonfeed -t inveniordm > upload/inveniordm.json
       - name: update InvenioRDM content
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          uv run commonmeta push upload/posts.json -f jsonfeed -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacy-key "${{ secrets.SUPABASE_KEY }}"> upload/response.json
+          uv run commonmeta push upload/inveniordm.json -f inveniordm -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacy-key "${{ secrets.SUPABASE_KEY }}"> upload/response.json
           cat upload/response.json
       - name: Update Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          uv run commonmeta push upload/commonmeta.json -f commonmeta -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --legacy-key "${{ secrets.SUPABASE_KEY }}" > upload/response.json
+          uv run commonmeta push upload/inveniordm.json -f inveniordm -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --legacy-key "${{ secrets.SUPABASE_KEY }}" > upload/response.json
           cat upload/response.json
