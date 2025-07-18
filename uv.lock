@@ -460,7 +460,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.139"
+version = "0.140"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -497,9 +497,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/9b/4c/e2cdaca25526617ced7f8c9d75061369c39bdfdc26f9f6d703f070bc8627/commonmeta_py-0.139.tar.gz", hash = "sha256:aeaad1d8ff3d5434a9ddae9a7bfcc25c6581549418532c4dc7ebffecd2ee4fee", size = 286784, upload-time = "2025-07-18T21:28:59.068Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fb/7d/0673e0635ff94029ff06c9b5671ad265c5ad041fda19806d6e3e5a8517ed/commonmeta_py-0.140.tar.gz", hash = "sha256:8cc5e80e40c02080e83a7ab005aff3f3bf688e34f24cb1e471ba4150c0899c84", size = 286854, upload-time = "2025-07-18T22:15:50.83Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/76/ea/365100ba90966b118259b3f8574cad16a79162c2ca80a197cfa35517b3b8/commonmeta_py-0.139-py3-none-any.whl", hash = "sha256:7bfcfe55818f32b05256062442657c1c9b731a54ab831e78ea562b9514ec89cc", size = 346316, upload-time = "2025-07-18T21:28:57.562Z" },
+    { url = "https://files.pythonhosted.org/packages/5e/df/8ddfe4a9faeee5f2706b69a5161dcac60b4bb00d886f9c0126460b39059a/commonmeta_py-0.140-py3-none-any.whl", hash = "sha256:c9f78525c876a3f37fb64bb724ff971b3d83b176a09cd688b4d5e21b52c132e9", size = 346394, upload-time = "2025-07-18T22:15:48.876Z" },
 ]
 
 [[package]]
@@ -3771,7 +3771,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.139" },
+    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.140" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = ">=13.0.0rc4" },
     { name = "invenio-logging", specifier = ">=4.1.0" },
