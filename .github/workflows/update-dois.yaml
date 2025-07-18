@@ -14,7 +14,7 @@ jobs:
       - name: Download posts not indexed recently
         run: |
           mkdir -p upload
-          curl https://api.rogue-scholar.org/posts/updated?per_page=10 > upload/posts.json
+          curl https://api.rogue-scholar.org/posts/stale?per_page=10 > upload/posts.json
       - name: Set number of posts to be updated as variable
         id: current_number
         run: |
@@ -40,11 +40,11 @@ jobs:
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           uv run commonmeta list upload/posts.json -f jsonfeed -t inveniordm > upload/inveniordm.json
-      - name: update InvenioRDM content
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          uv run commonmeta push upload/inveniordm.json -f inveniordm -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacy-key "${{ secrets.SUPABASE_KEY }}"> upload/response.json
-          cat upload/response.json
+      # - name: update InvenioRDM content
+      #   if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+      #   run: |
+      #     uv run commonmeta push upload/inveniordm.json -f inveniordm -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacy-key "${{ secrets.SUPABASE_KEY }}"> upload/response.json
+      #     cat upload/response.json
       - name: Update Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |

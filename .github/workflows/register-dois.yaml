@@ -1,8 +1,8 @@
 name: Register DOIs for new Posts
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/10 * * * *"
+  # schedule:
+  #   - cron: "*/10 * * * *"
 env:
   UV_SYSTEM_PYTHON: 1
 jobs:
@@ -40,15 +40,15 @@ jobs:
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
           uv run commonmeta list upload/posts.json -f jsonfeed -t inveniordm > upload/inveniordm.json
-      - name: create InvenioRDM content
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          uv run commonmeta push upload/inveniordm.json -f inveniordm -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacy-key "${{ secrets.SUPABASE_KEY }}"> upload/response.json
-          cat upload/response.json
-          echo "UUID=$(jq -r '.[0].uuid' upload/response.json)" >> $GITHUB_OUTPUT
-          echo "DOI=$(jq -r '.[0].doi' upload/response.json)" >> $GITHUB_OUTPUT
-          echo "COMMUNITY=$(jq -r '.[0].community' upload/response.json)" >> $GITHUB_OUTPUT
-        id: response
+      # - name: create InvenioRDM content
+      #   if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
+      #   run: |
+      #     uv run commonmeta push upload/inveniordm.json -f inveniordm -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacy-key "${{ secrets.SUPABASE_KEY }}"> upload/response.json
+      #     cat upload/response.json
+      #     echo "UUID=$(jq -r '.[0].uuid' upload/response.json)" >> $GITHUB_OUTPUT
+      #     echo "DOI=$(jq -r '.[0].doi' upload/response.json)" >> $GITHUB_OUTPUT
+      #     echo "COMMUNITY=$(jq -r '.[0].community' upload/response.json)" >> $GITHUB_OUTPUT
+      #   id: response
       - name: Register Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
