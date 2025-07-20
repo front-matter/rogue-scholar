@@ -16,4 +16,6 @@ export const overriddenComponents = {
     RecordsResultsListItem,
   "InvenioAppRdm.RecordsList.RecordsResultsListItem.layout":
     RecordsResultsListItem,
+  "InvenioAppRdm.DashboardUploads.RecordsResultsListItem.layout":
+    RecordsResultsListItem,
 };
