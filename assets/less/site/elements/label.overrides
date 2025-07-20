@@ -4,3 +4,16 @@
 
 @neutralLabelColor: @teal;
 @neutralBorderLabelColor @teal;
+@linkOpacity: 1
+
+/* Inside Link */
+.ui.label > a {
+  cursor: pointer;
+  color: @white;
+  opacity: @linkOpacity;
+  transition: @linkTransition;
+}
+.ui.label > a:hover {
+  opacity: 0.8;
+}
+

@@ -42,11 +42,6 @@ class RecordsResultsListItem extends Component {
       "ui.publication_date_l10n_long",
       i18next.t("No publication date found.")
     );
-    const resourceType = _get(
-      result,
-      "ui.resource_type.title_l10n",
-      i18next.t("No resource type")
-    );
     const languages = _get(result, "ui.languages", []);
     const subjects = _get(result, "ui.subjects", []);
     const title = _get(result, "metadata.title", i18next.t("No title"));
@@ -82,7 +77,6 @@ class RecordsResultsListItem extends Component {
         creators={creators}
         descriptionStripped={descriptionStripped}
         publicationDate={publicationDate}
-        resourceType={resourceType}
         languages={languages}
         subjects={subjects}
         title={title}
@@ -99,17 +93,22 @@ class RecordsResultsListItem extends Component {
               <Label horizontal size="small" className="primary theme-primary">
                 {publicationDate} ({version})
               </Label>
-              <Label horizontal size="small" className="neutral">
-                {resourceType}
-              </Label>
               <Label horizontal size="small" className="olive">
                 {languages.map((lang) => (
                   <span key={lang.title_l10n}>{lang.title_l10n}</span>
                 ))}
               </Label>
+              <Label horizontal size="small" className="neutral">
+                <a href={"https://doi.org/" + doi} target="_blank">
+                  {"https://doi.org/" + doi}
+                </a>
+              </Label>
             </Item.Extra>
             <Item.Header as="h2" className="theme-primary-text">
-              <a href={viewLink}>{title}</a>
+              <a
+                href={viewLink}
+                dangerouslySetInnerHTML={{ __html: title }}
+              ></a>
             </Item.Header>
             <Item className="creatibutors">
               <SearchItemCreators creators={creators} othersLink={viewLink} />
@@ -173,15 +172,6 @@ class RecordsResultsListItem extends Component {
                     uniqueViews={uniqueViews}
                     uniqueDownloads={uniqueDownloads}
                   />
-                </small>
-              </div>
-              <div className="rel-mt-1">
-                <small>
-                  <strong>
-                    <a href={"https://doi.org/" + doi} target="_blank">
-                      {"https://doi.org/" + doi}
-                    </a>
-                  </strong>
                 </small>
               </div>
             </Item.Extra>
