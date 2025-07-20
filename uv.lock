@@ -1387,7 +1387,7 @@ wheels = [
 [[package]]
 name = "invenio-app-rdm"
 version = "13.0.0b4.dev2"
-source = { git = "https://github.com/front-matter/invenio-app-rdm?branch=overriddenComponents#b06a5ab3f5859dabb950edb8a7ba693729f6346d" }
+source = { git = "https://github.com/front-matter/invenio-app-rdm?branch=overriddenComponents#54698e34e03e325f3242df7846713a40812793fd" }
 dependencies = [
     { name = "cairosvg" },
     { name = "invenio-access" },
