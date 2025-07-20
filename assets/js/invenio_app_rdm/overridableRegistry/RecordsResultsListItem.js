@@ -116,9 +116,12 @@ class RecordsResultsListItem extends Component {
               <SearchItemCreators creators={creators} othersLink={viewLink} />
             </Item>
             {featureImage && (
-              <Item.Extra className="ui image featured rounded medium rel-mb-1">
+              <Item.Image
+                size="150px"
+                className="featured rounded medium rel-mb-1"
+              >
                 <img src={featureImage} alt={title} />
-              </Item.Extra>
+              </Item.Image>
             )}
             <Overridable
               id={buildUID("RecordsResultsListItem.description", "", appName)}
