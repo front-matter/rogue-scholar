@@ -88,7 +88,7 @@ class RecordsResultsListItem extends Component {
         numOtherVersions={numOtherVersions}
       >
         <Item key={key ?? result.id}>
-          <Item.Content>
+          <Item.Content verticalAlign="top">
             {/* FIXME: Uncomment to enable themed banner */}
             {/* <DisplayVerifiedCommunity communities={result.parent?.communities} /> */}
             <Item.Extra className="labels-actions">
@@ -115,14 +115,6 @@ class RecordsResultsListItem extends Component {
             <Item className="creatibutors">
               <SearchItemCreators creators={creators} othersLink={viewLink} />
             </Item>
-            {featureImage && (
-              <Item.Image
-                size="150px"
-                className="featured rounded medium rel-mb-1"
-              >
-                <img src={featureImage} alt={title} />
-              </Item.Image>
-            )}
             <Overridable
               id={buildUID("RecordsResultsListItem.description", "", appName)}
               descriptionStripped={descriptionStripped}
@@ -184,6 +176,9 @@ class RecordsResultsListItem extends Component {
               </div>
             </Item.Extra>
           </Item.Content>
+          {featureImage && (
+            <Item.Image size="small" src={featureImage} className="rel-ml-1" />
+          )}
         </Item>
       </Overridable>
     );
