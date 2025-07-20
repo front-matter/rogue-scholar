@@ -2,18 +2,11 @@
          Invenio RDM Starter Label Overrides
 ***********************************************/
 
-@neutralLabelColor: @teal;
-@neutralBorderLabelColor @teal;
-@linkOpacity: 1
-
 /* Inside Link */
-.ui.label > a {
-  cursor: pointer;
-  color: @white;
-  opacity: @linkOpacity;
-  transition: @linkTransition;
+.ui.teal.label > a {
+  color: @white !important;
+  opacity: 1 !important;
 }
-.ui.label > a:hover {
-  opacity: 0.8;
+.ui.teal.label > a:hover {
+  opacity: 0.8 !important;
 }
-

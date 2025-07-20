@@ -1,0 +1,7 @@
+/***********************************************
+         Invenio RDM Starter Label Variables
+***********************************************/
+
+@neutralLabelColor: @teal;
+@neutralBorderLabelColor @teal;
+@linkOpacity: 1

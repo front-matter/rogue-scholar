@@ -117,6 +117,7 @@
 
 @orcidColor: #A6CE39;
 @orcidActiveColor: saturate(darken(@orcidColor, 5), 15, relative);
+@doiColor: #0075C6;
 
 @signupColor: @green;
 @primaryLabelColor: @darkPrimaryColor;

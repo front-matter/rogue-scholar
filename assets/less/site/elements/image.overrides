@@ -1,0 +1,8 @@
+/***********************************************
+         Invenio RDM Starter Image Overrides
+***********************************************/
+
+.ui.medium.image {
+  max-height: 100px;
+  object-fit: contain;
+}

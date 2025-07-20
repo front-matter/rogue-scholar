@@ -66,3 +66,4 @@ section#content > .ui.items > .item > .content {
     font-size: 0.9rem;
   }
 }
+ 

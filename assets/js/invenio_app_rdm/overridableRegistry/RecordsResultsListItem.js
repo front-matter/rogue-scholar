@@ -31,6 +31,7 @@ class RecordsResultsListItem extends Component {
 
     const creators = result.ui.creators.creators;
 
+    const featureImage = _get(result, "ui.custom_fields.rs:image", null);
     const descriptionStripped = _get(
       result,
       "ui.description_stripped",
@@ -75,6 +76,7 @@ class RecordsResultsListItem extends Component {
         doi={doi}
         createdDate={createdDate}
         creators={creators}
+        featureImage={featureImage}
         descriptionStripped={descriptionStripped}
         publicationDate={publicationDate}
         languages={languages}
@@ -98,7 +100,7 @@ class RecordsResultsListItem extends Component {
                   <span key={lang.title_l10n}>{lang.title_l10n}</span>
                 ))}
               </Label>
-              <Label horizontal size="small" className="neutral">
+              <Label horizontal size="small" className="teal">
                 <a href={"https://doi.org/" + doi} target="_blank">
                   {"https://doi.org/" + doi}
                 </a>
@@ -113,14 +115,17 @@ class RecordsResultsListItem extends Component {
             <Item className="creatibutors">
               <SearchItemCreators creators={creators} othersLink={viewLink} />
             </Item>
+            {featureImage && (
+              <Item.Extra className="ui image featured rounded medium rel-mb-1">
+                <img src={featureImage} alt={title} />
+              </Item.Extra>
+            )}
             <Overridable
               id={buildUID("RecordsResultsListItem.description", "", appName)}
               descriptionStripped={descriptionStripped}
               result={result}
             >
-              <Item.Description className="truncate-lines-2">
-                {descriptionStripped}
-              </Item.Description>
+              <Item.Description>{descriptionStripped}</Item.Description>
             </Overridable>
 
             <Item.Extra>
