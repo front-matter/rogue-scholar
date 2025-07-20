@@ -5,6 +5,9 @@
 article > section#record-info {
   margin-bottom: 0.25rem;
 }
+article > section#feature-image {
+  display: block;
+}
 article > .ui.divider.hidden {
   display: none;
 }

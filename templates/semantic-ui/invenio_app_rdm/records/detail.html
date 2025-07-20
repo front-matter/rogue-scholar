@@ -253,13 +253,6 @@
             {%- endblock record_title -%}
 
             {# Begin customization Rogue Scholar #}
-            {% set feature_image = record.ui.custom_fields.get("rs:image", None) %}
-            {% if feature_image %}
-              <div class="ui image rounded medium rel-mt-2">
-                <img src="{{ feature_image }}" alt="Feature image" />
-              </div>
-            {% endif %}
-
             {# Content #}
             {%- block record_content -%}
               {%- include "invenio_app_rdm/records/details/content.html" %}
