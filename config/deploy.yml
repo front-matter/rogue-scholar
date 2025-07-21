@@ -106,6 +106,22 @@ accessories:
       memory: 4g
       publish:
         - 9600:9600
+  pocket-id:
+    image: ghcr.io/pocket-id/pocket-id:v1
+    host: 176.9.24.117
+    port: 1411
+    directories:
+      - data:/app/data
+    env:
+      clear:
+        APP_URL: https://auth.rogue-scholar.org
+      secret:
+        - DB_CONNECTION_STRING
+        - TRUST_PROXY
+        - MAXMIND_LICENSE_KEY
+        - PUID
+        - PGID
+
   monitor:
     image: grafana/alloy:v1.9.2
     host: 176.9.24.117
