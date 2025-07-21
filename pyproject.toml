@@ -33,4 +33,4 @@ invenio-app-rdm = { git = "https://github.com/front-matter/invenio-app-rdm", bra
 
 [project.optional-dependencies]
 docs = ["quarto-cli~=1.7.31"]
-actions = ["commonmeta-py>=0.141"]
+actions = ["commonmeta-py>=0.142"]
