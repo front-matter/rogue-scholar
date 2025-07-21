@@ -12,7 +12,7 @@ import React, { Component } from "react";
 import Overridable from "react-overridable";
 import { SearchItemCreators } from "../utils";
 import PropTypes from "prop-types";
-import { Item, Label } from "semantic-ui-react";
+import { Item, Label, Image } from "semantic-ui-react";
 import { buildUID } from "react-searchkit";
 import { CompactStats } from "../components/CompactStats";
 import { DisplayPartOfCommunities } from "../components/DisplayPartOfCommunities";
@@ -120,7 +120,17 @@ class RecordsResultsListItem extends Component {
               descriptionStripped={descriptionStripped}
               result={result}
             >
-              <Item.Description>{descriptionStripped}</Item.Description>
+              <Item.Description>
+                {featureImage && (
+                  <Image
+                    src={featureImage}
+                    size="medium"
+                    floated="left"
+                    rounded
+                  />
+                )}
+                {descriptionStripped}
+              </Item.Description>
             </Overridable>
 
             <Item.Extra>
@@ -176,9 +186,6 @@ class RecordsResultsListItem extends Component {
               </div>
             </Item.Extra>
           </Item.Content>
-          {featureImage && (
-            <Item.Image size="small" src={featureImage} className="rel-ml-1" />
-          )}
         </Item>
       </Overridable>
     );
