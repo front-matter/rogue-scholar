@@ -78,6 +78,8 @@ env:
     # oauth authentication
     - INVENIO_ORCID_APP_CREDENTIALS_CONSUMER_KEY
     - INVENIO_ORCID_APP_CREDENTIALS_CONSUMER_SECRET
+    - INVENIO_POCKETID_APP_CREDENTIALS_CONSUMER_KEY
+    - INVENIO_POCKETID_APP_CREDENTIALS_CONSUMER_SECRET
 
 volumes:
   - inveniordm:/opt/invenio/var/instance/data
@@ -113,6 +115,8 @@ accessories:
     proxy:
       ssl: true
       host: auth.rogue-scholar.org
+      ssl_redirect: true
+      forward_headers: true
       app_port: 1411
       healthcheck:
         path: /healthz
