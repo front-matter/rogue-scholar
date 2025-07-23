@@ -1386,8 +1386,8 @@ wheels = [
 
 [[package]]
 name = "invenio-app-rdm"
-version = "13.0.0b4.dev2"
-source = { git = "https://github.com/front-matter/invenio-app-rdm?branch=overriddenComponents#54698e34e03e325f3242df7846713a40812793fd" }
+version = "13.0.0rc7"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cairosvg" },
     { name = "invenio-access" },
@@ -1426,6 +1426,10 @@ dependencies = [
     { name = "invenio-sitemap" },
     { name = "invenio-theme" },
     { name = "invenio-userprofiles" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cb/31/b15ba8de96e6f342d4eee47483c72cfae23ca14c6ca4076f5916d363fbf4/invenio_app_rdm-13.0.0rc7.tar.gz", hash = "sha256:fb7bf3b55e411084d05a68a0ae38a0187f75ce00d38c2ee966abedecfcd2899a", size = 714074, upload-time = "2025-07-22T14:31:58.122Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/27/e2/30e1aa9c1f28726f5f3ea172ec206f987827d3f2c3879724ff8982158857/invenio_app_rdm-13.0.0rc7-py2.py3-none-any.whl", hash = "sha256:1dbfb58a7d8b0146ca66c7cb10a7359258b501f99ec7874e17f0afc850a9af6f", size = 1138665, upload-time = "2025-07-22T14:31:56.037Z" },
 ]
 
 [[package]]
@@ -1830,7 +1834,7 @@ wheels = [
 [[package]]
 name = "invenio-oauthclient"
 version = "5.2.0"
-source = { git = "https://github.com/front-matter/invenio-oauthclient?branch=pocketid#572eaf3a88c8207def36fb8eebf889c0a0169345" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "blinker" },
     { name = "flask-oauthlib-invenio" },
@@ -1845,6 +1849,10 @@ dependencies = [
     { name = "requests-oauthlib" },
     { name = "uritemplate" },
     { name = "uritools" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b6/ff/0f14e8775787f3b269cb3e658b90fcecd31c201e5c0b66b07eea30470b65/invenio_oauthclient-5.2.0.tar.gz", hash = "sha256:d4f1cea3263ea6cc6dad66ad972747b32a64beee50c14d1bd40a17be4e277427", size = 92818, upload-time = "2025-07-17T20:20:02.184Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6d/d2/92584c2169083bde97a04f9ce1e19fcd3fce0e5e4d951f461fb77d3f83dd/invenio_oauthclient-5.2.0-py2.py3-none-any.whl", hash = "sha256:3bd1107e152c1510608fb5b02b18a0a1fe5536a776675a6b0c1eac7df32e71cd", size = 204511, upload-time = "2025-07-17T20:20:00.204Z" },
 ]
 
 [[package]]
@@ -3765,7 +3773,7 @@ wheels = [
 
 [[package]]
 name = "rogue-scholar"
-version = "13.0.0.4"
+version = "13.0.0.5"
 source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
@@ -3789,9 +3797,9 @@ docs = [
 requires-dist = [
     { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.142" },
     { name = "gunicorn", specifier = "~=23.0.0" },
-    { name = "invenio-app-rdm", git = "https://github.com/front-matter/invenio-app-rdm?branch=overriddenComponents" },
+    { name = "invenio-app-rdm", specifier = ">=13.0.0rc7" },
     { name = "invenio-logging", specifier = ">=4.1.0" },
-    { name = "invenio-oauthclient", git = "https://github.com/front-matter/invenio-oauthclient?branch=pocketid" },
+    { name = "invenio-oauthclient" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.0.0" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.7.31" },
     { name = "ruff", specifier = ">=0.11.0" },

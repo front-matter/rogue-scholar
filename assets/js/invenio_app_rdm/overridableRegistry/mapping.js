@@ -11,11 +11,9 @@
 import RecordsResultsListItem from "./RecordsResultsListItem.js";
 
 export const overriddenComponents = {
-  "InvenioAppRdm.Search.RecordsResultsListItem.layout": RecordsResultsListItem,
+  "InvenioAppRDM.Search.RecordsResultsListItem.layout": RecordsResultsListItem,
   "InvenioCommunities.DetailsSearch.RecordsResultsListItem.layout":
     RecordsResultsListItem,
   "InvenioAppRdm.RecordsList.RecordsResultsListItem.layout":
-    RecordsResultsListItem,
-  "InvenioAppRdm.DashboardUploads.RecordsResultsListItem.layout":
     RecordsResultsListItem,
 };
