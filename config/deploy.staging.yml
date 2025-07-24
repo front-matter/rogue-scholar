@@ -1,0 +1,40 @@
+service: staging
+
+proxy:
+  ssl: true
+  host: staging.rogue-scholar.org
+  ssl_redirect: true
+  forward_headers: true
+  app_port: 6000
+  healthcheck:
+    path: /ping
+    interval: 30
+    timeout: 10
+
+env:
+  clear:
+    INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
+    INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
+    # accessories db, cache, search
+    POSTGRES_DB: staging
+    INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/12
+    INVENIO_ACCOUNTS_SESSION_REDIS_URL: redis://inveniordm-cache:6379/13
+    INVENIO_CELERY_RESULT_BACKEND: redis://inveniordm-cache:6379/14
+    INVENIO_RATELIMIT_STORAGE_URL: redis://inveniordm-cache:6379/15
+    INVENIO_COMMUNITIES_IDENTITIES_CACHE_REDIS_URL: redis://inveniordm-cache:6379/16
+    INVENIO_BROKER_URL: redis://inveniordm-cache:6379/17
+    INVENIO_CELERY_BROKER_URL: redis://inveniordm-cache:6379/18
+    INVENIO_SEARCH_INDEX_PREFIX: invenio-rdm-staging-
+    INVENIO_THEME_SITENAME: Rogue Scholar Staging
+    INVENIO_THEME_LOGO: images/rogue-scholar-staging.svg
+  secret:
+    - INVENIO_SQLALCHEMY_DATABASE_URI
+    - OPENSEARCH_INITIAL_ADMIN_PASSWORD
+    - INVENIO_SECRET_KEY
+    - INVENIO_SENTRY_DSN
+    - INVENIO_TRUSTED_HOSTS
+    # oauth authentication
+    - INVENIO_ORCID_APP_CREDENTIALS_CONSUMER_KEY
+    - INVENIO_ORCID_APP_CREDENTIALS_CONSUMER_SECRET
+    - INVENIO_POCKETID_APP_CREDENTIALS_CONSUMER_KEY
+    - INVENIO_POCKETID_APP_CREDENTIALS_CONSUMER_SECRET
