@@ -1,4 +1,15 @@
-service: inveniordm
+service: inveniordm-staging
+image: front-matter/rogue-scholar-staging
+servers:
+  web:
+    hosts:
+      - 176.9.24.117
+    labels:
+      service: inveniordm-staging
+  worker:
+    hosts:
+      - 176.9.24.117
+    cmd: celery -A invenio_app.celery worker --beat --events
 
 proxy:
   ssl: true
@@ -38,3 +49,5 @@ env:
     - INVENIO_ORCID_APP_CREDENTIALS_CONSUMER_SECRET
     - INVENIO_POCKETID_APP_CREDENTIALS_CONSUMER_KEY
     - INVENIO_POCKETID_APP_CREDENTIALS_CONSUMER_SECRET
+
+deploy_timeout: 180
