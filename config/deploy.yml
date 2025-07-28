@@ -139,13 +139,13 @@ accessories:
         - PUID
         - PGID
 
-  metrics:
+  usage:
     image: ghcr.io/umami-software/umami:postgresql-v2.19
     host: 176.9.24.117
     port: 3000
     proxy:
       ssl: true
-      host: metrics.rogue-scholar.org
+      host: usage.rogue-scholar.org
       ssl_redirect: true
       forward_headers: true
       app_port: 3000
