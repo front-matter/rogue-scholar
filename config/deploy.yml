@@ -89,8 +89,11 @@ accessories:
     image: valkey/valkey:7.2.5
     host: 176.9.24.117
     port: 6379
-    directories:
-      - data:/data
+    cmd: valkey-server /etc/valkey.conf
+    files:
+      - config/valkey.conf:/etc/valkey.conf
+    volumes:
+      - /var/lib/valkey:/data
   search:
     image: opensearchproject/opensearch:2.18.0
     host: 176.9.24.117
