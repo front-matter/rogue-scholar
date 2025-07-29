@@ -6,7 +6,9 @@
        Fonts
 --------------------*/
 
-@fontName          : 'Lato';
+@fontName: "Noto Sans", Arial, Helvetica, sans-serif;
+@pageFont: "Noto Sans", Arial, Helvetica, sans-serif;
+@headerFont: @fontName;
 
 /*-------------------
     Brand Colors
