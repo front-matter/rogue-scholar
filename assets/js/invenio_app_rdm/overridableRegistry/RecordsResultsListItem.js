@@ -82,7 +82,6 @@ class RecordsResultsListItem extends Component {
         languages={languages}
         subjects={subjects}
         title={title}
-        version={version}
         versions={versions}
         allVersionsVisible={allVersionsVisible}
         numOtherVersions={numOtherVersions}
@@ -93,7 +92,7 @@ class RecordsResultsListItem extends Component {
             {/* <DisplayVerifiedCommunity communities={result.parent?.communities} /> */}
             <Item.Extra className="labels-actions">
               <Label horizontal size="small" className="primary theme-primary">
-                {publicationDate} ({version})
+                {publicationDate}
               </Label>
               <Label horizontal size="small" className="olive">
                 {languages.map((lang) => (

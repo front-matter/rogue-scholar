@@ -215,13 +215,11 @@
               {% endif %}
 
               <section id="record-info"
-                       aria-label="{{ _('Publication date and version number') }}">
+                       aria-label="{{ _('Publication date') }}">
                 {# begin Rogue Scholar customization #}
                 <span class="ui" title="{{ _('Publication date') }}">
                   {{ _('Published') }} {{ record_ui["ui"]["publication_date_l10n_long"] }}
                 </span>
-                <span
-                  class="label text-muted"> | {{ _('Version {version_number}').format(version_number=record_ui["ui"]["version"]) }}</span>
                 
                 {%- set id_doi = record_ui["pids"].get('doi', {}).get('identifier', None) %}
                 {% if id_doi %}
