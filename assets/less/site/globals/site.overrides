@@ -2,6 +2,14 @@
          Invenio RDM Starter Site Overrides
 ***********************************************/
 
+@font-face {
+  font-family: "Lora";
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Lora-Regular.ttf") format("truetype");
+}
+
 html.cover-page {
   background-color: @grey;
 }
