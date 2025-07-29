@@ -6,8 +6,8 @@
        Fonts
 --------------------*/
 
-@fontName: "Noto Sans", Arial, Helvetica, sans-serif;
-@pageFont: "Noto Sans", Arial, Helvetica, sans-serif;
+@fontName: Lato, Arial, Helvetica, sans-serif;
+@pageFont: Lato, Arial, Helvetica, sans-serif;
 @headerFont: @fontName;
 
 /*-------------------

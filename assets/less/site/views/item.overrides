@@ -12,7 +12,7 @@ article > .ui.divider.hidden {
   display: none;
 }
 section#content > .ui.items > .item > .content {
-  font-family: Georgia, "Times New Roman", Times, serif !important;
+  font-family: Palatino, "Times New Roman", Times, serif !important;
   font-size: 16px !important;;
   line-height: 1.8 !important;
 

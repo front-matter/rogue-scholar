@@ -2,22 +2,6 @@
          Invenio RDM Starter Site Overrides
 ***********************************************/
 
-@font-face {
-  font-family: "Noto Sans";
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Noto Serif";
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/assets/less/site/fonts/NotoSerif-VariableFont_wdth,wght.ttf") format("truetype");
-}
-
 html.cover-page {
   background-color: @grey;
 }
