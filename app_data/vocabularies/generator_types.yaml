@@ -1,0 +1,39 @@
+- id: Blogger
+  title:
+    en: Blogger
+- id: Distill
+  title:
+    en: Distill
+- id: Drupal
+  title:
+    en: Drupal
+- id: Ghost
+  title:
+    en: Ghost
+- id: Hugo
+  title:
+    en: Hugo
+- id: Jekyll
+  title:
+    en: Jekyll
+- id: Medium
+  title:
+    en: Medium
+- id: Quarto
+  title:
+    en: Quarto
+- id: Squarespace
+  title:
+    en: Squarespace
+- id: Substack
+  title:
+    en: Substack
+- id: WordPress
+  title:
+    en: WordPress
+- id: WordPress.com
+  title:
+    en: WordPress.com
+- id: Other
+  title:
+    en: Other

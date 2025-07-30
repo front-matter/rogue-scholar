@@ -1,0 +1,12 @@
+- id: rss
+  title:
+    en: application/rss+xml
+- id: atom
+  title:
+    en: application/atom+xml
+- id: jsonfeed
+  title:
+    en: application/feed+json
+- id: json
+  title:
+    en: application/json

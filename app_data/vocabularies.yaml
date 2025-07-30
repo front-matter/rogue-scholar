@@ -42,3 +42,10 @@ awards:
 names:
   pid-type: names
   data-file: vocabularies/names.yaml
+# custom vocabularies
+generatortypes:
+  pid-type: gen
+  data-file: vocabularies/generator_types.yaml
+feedformats:
+  pid-type: ffo
+  data-file: vocabularies/feed_formats.yaml
