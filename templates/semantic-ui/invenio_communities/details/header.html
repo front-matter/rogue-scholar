@@ -147,6 +147,15 @@
                 </div>
               {% endif %}
 
+              {% if community_ui["metadata"]["type"] is defined %}
+                <div class="inline-computer mt-5 rel-mr-1">
+                  <i class="tag icon" aria-hidden="true"></i>
+                  <span class="label label-keyword">
+                    {{ community_ui["ui"]["type"]["title_l10n"] }}
+                  </span>
+                </div>
+              {% endif %}
+
               {% if language %}
                 <div class="inline-computer mt-5 rel-mr-1">
                   <i class="language icon" aria-hidden="true"></i>
@@ -158,15 +167,6 @@
                 <div class="inline-computer mt-5 rel-mr-1">
                   <i class="chart pie icon" aria-hidden="true"></i>
                   {{ category }}
-                </div>
-              {% endif %}
-
-              {% if community_ui["metadata"]["type"] is defined %}
-                <div class="inline-computer mt-5 rel-mr-1">
-                  <i class="tag icon" aria-hidden="true"></i>
-                  <span class="label label-keyword">
-                    {{ community_ui["ui"]["type"]["title_l10n"] }}
-                  </span>
                 </div>
               {% endif %}
 
