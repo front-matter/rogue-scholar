@@ -6,6 +6,7 @@ servers:
       - 176.9.24.117
     labels:
       service: inveniordm
+    cmd: gunicorn --bind=0.0.0.0:6000 --workers=4 --access-logfile=- --error-logfile=- --log-level=ERROR invenio_app.wsgi:application
   worker:
     hosts:
       - 176.9.24.117
@@ -21,9 +22,6 @@ proxy:
     path: /ping
     interval: 30
     timeout: 10
-
-builder:
-  dockerfile: Dockerfile.staging
 
 env:
   clear:
