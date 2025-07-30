@@ -7,6 +7,9 @@
 - id: Drupal
   title:
     en: Drupal
+- id: Eleventy
+  title:
+    en: Eleventy
 - id: Ghost
   title:
     en: Ghost
