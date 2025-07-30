@@ -127,13 +127,6 @@
                 </div>
               {% endif %}
 
-              {% if generator %}
-                <div class="inline-computer mt-5 rel-mr-1">
-                  <i class="keyboard icon" aria-hidden="true"></i>
-                  {{ generator }}
-                </div>
-              {% endif %}
-
               {% if issn %}
                 <div class="inline-computer mt-5 rel-mr-1">
                   ISSN {{ issn }}
@@ -146,7 +139,9 @@
                   {{ joined }}
                 </div>
               {% endif %}
+            </div>
 
+            <div>
               {% if community_ui["metadata"]["type"] is defined %}
                 <div class="inline-computer mt-5 rel-mr-1">
                   <i class="tag icon" aria-hidden="true"></i>
@@ -170,6 +165,15 @@
                 </div>
               {% endif %}
 
+              {% if generator %}
+                <div class="inline-computer mt-5 rel-mr-1">
+                  <i class="keyboard icon" aria-hidden="true"></i>
+                  {{ generator }}
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="mt-5">
               {% if license %}
                 <div class="inline-computer mt-5 rel-mr-1">
                   <a class="ui bottom aligned tiny image" href="{{ license }}">
