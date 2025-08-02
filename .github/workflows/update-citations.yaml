@@ -1,0 +1,12 @@
+name: Update Citations
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * 0"
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: update Rogue Scholar citations
+        run: |
+          curl -X POST https://api.rogue-scholar.org/citations -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
