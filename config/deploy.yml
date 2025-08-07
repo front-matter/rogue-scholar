@@ -157,6 +157,7 @@ accessories:
     env:
       clear:
         DATABASE_TYPE: postgresql
+        REDIS_URL: redis://inveniordm-cache:6379/19
       secret:
         - DATABASE_URL
         - APP_SECRET
