@@ -139,6 +139,28 @@ accessories:
         - ENCRYPTION_KEY
         - PUID
         - PGID
+  plausible:
+    image: ghcr.io/plausible/community-edition:v3.0.1
+    host: 176.9.24.117
+    port: 8000
+    cmd: sh -c "/entrypoint.sh db createdb && /entrypoint.sh db migrate && /entrypoint.sh run"
+    proxy:
+      ssl: true
+      host: plausible.rogue-scholar.org
+      ssl_redirect: true
+      forward_headers: true
+      app_port: 8000
+      healthcheck:
+        path: /api/health
+        interval: 30
+        timeout: 10
+    env:
+      clear:
+        BASE_URL: https://plausible.rogue-scholar.org
+      secret:
+        - SECRET_KEY_BASE
+        - DATABASE_URL:PLAUSIBLE_DATABASE_URL
+        - CLICKHOUSE_DATABASE_URL
 
   usage:
     image: ghcr.io/umami-software/umami:postgresql-v2.19
@@ -160,7 +182,26 @@ accessories:
         REDIS_URL: redis://inveniordm-cache:6379/19
       secret:
         - DATABASE_URL
-        - APP_SECRET
+        - CLICKHOUSE_DATABASE_URL
+
+  events-db:
+    image: clickhouse/clickhouse-server:25.7-alpine
+    host: 176.9.24.117
+    port: 8123
+    env:
+      secret:
+        - CLICKHOUSE_PASSWORD
+    directories:
+      - event-data:/var/lib/clickhouse
+      - event-logs:/var/log/clickhouse-server
+    files:
+      - ./clickhouse/logs.xml:/etc/clickhouse-server/config.d/logs.xml:ro
+      # This makes ClickHouse bind to IPv4 only, since Docker doesn't enable IPv6 in bridge networks by default.
+      # Fixes "Listen [::]:9000 failed: Address family for hostname not supported" warnings.
+      - ./clickhouse/ipv4-only.xml:/etc/clickhouse-server/config.d/ipv4-only.xml:ro
+      # This makes ClickHouse consume less resources, which is useful for small setups.
+      # https://clickhouse.com/docs/en/operations/tips#using-less-than-16gb-of-ram
+      - ./clickhouse/low-resources.xml:/etc/clickhouse-server/config.d/low-resources.xml:ro
 
   monitor:
     image: grafana/alloy:v1.9.2
