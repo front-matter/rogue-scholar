@@ -54,7 +54,9 @@ format:
     page-layout: article
     toc: true
     toc-location: right
-    include-after-body: plausible.html
+    include-in-header:
+      text: |
+        <script defer data-domain="docs.rogue-scholar.org" src="https://plausible.rogue-scholar.org/js/script.js"></script>
     comments:
       giscus:
         repo: front-matter/rogue-scholar
