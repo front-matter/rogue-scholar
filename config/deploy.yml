@@ -161,6 +161,8 @@ accessories:
         - SECRET_KEY_BASE
         - DATABASE_URL:PLAUSIBLE_DATABASE_URL
         - CLICKHOUSE_DATABASE_URL
+        - GOOGLE_CLIENT_ID
+        - GOOGLE_CLIENT_SECRET
 
   usage:
     image: ghcr.io/umami-software/umami:postgresql-v2.19
