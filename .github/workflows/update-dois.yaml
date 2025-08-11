@@ -39,6 +39,7 @@ jobs:
       - name: Convert posts to InvenioRDM format
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
+          uv run commonmeta version
           uv run commonmeta list upload/posts.json -f jsonfeed -t inveniordm > upload/inveniordm.json
       # - name: update InvenioRDM content
       #   if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
