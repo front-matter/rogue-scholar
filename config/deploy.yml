@@ -157,10 +157,18 @@ accessories:
     env:
       clear:
         BASE_URL: https://plausible.rogue-scholar.org
+        MAILER_EMAIL: info@rogue-scholar.org
+        MAILER_NAME: Rogue Scholar
       secret:
         - SECRET_KEY_BASE
         - DATABASE_URL:PLAUSIBLE_DATABASE_URL
         - CLICKHOUSE_DATABASE_URL
+        - DISABLE_REGISTRATION
+        - ENABLE_EMAIL_VERIFICATION
+        - SMTP_HOST_ADDR:INVENIO_MAIL_SERVER
+        - SMTP_PORT:INVENIO_MAIL_PORT
+        - SMTP_USER_NAME:INVENIO_MAIL_USERNAME
+        - SMTP_USER_PWD:INVENIO_MAIL_PASSWORD
         - GOOGLE_CLIENT_ID
         - GOOGLE_CLIENT_SECRET
 
