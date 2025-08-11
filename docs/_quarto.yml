@@ -43,7 +43,7 @@ website:
     right:
       - icon: envelope
         href: mailto:info@rogue-scholar.org
-      - icon: mastodon 
+      - icon: mastodon
         href: https://wisskomm.social/@rogue_scholar
 
 format:
@@ -54,8 +54,9 @@ format:
     page-layout: article
     toc: true
     toc-location: right
+    include-after-body: plausible.html
     comments:
-      giscus: 
+      giscus:
         repo: front-matter/rogue-scholar
         category-id: DIC_kwDOItYbpM4CTyur
         mapping: url
