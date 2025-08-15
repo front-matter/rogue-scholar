@@ -15,6 +15,12 @@ jobs:
         run: |
           mkdir -p upload
           curl https://rogue-scholar.org/api/records?q=custom_fields.rs%5C%3Astale%3Atrue&l=list&s=10&sort=newest | jq '.hits.hits' > upload/inveniordm.json
+      - name: Validate JSON file
+        run: |
+          if ! jq empty upload/inveniordm.json; then
+            echo "Error: Downloaded JSON is not valid"
+            exit 1
+          fi
       - name: Set number of records to be registered as variable
         id: current_number
         run: |
