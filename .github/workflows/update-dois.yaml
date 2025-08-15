@@ -13,14 +13,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Download records not registered with Crossref
         run: |
-          mkdir -p upload
-          curl https://rogue-scholar.org/api/records?q=custom_fields.rs%5C%3Astale%3Atrue&l=list&s=10&sort=newest > upload/records.json
-          jq '.hits.hits' upload/records.json > upload/inveniordm.json
+          curl https://rogue-scholar.org/api/records?q=custom_fields.rs%5C%3Astale%3Atrue&l=list&s=10&sort=newest | jq .hits.hits > inveniordm.json
+          cat inveniordm.json
       - name: Set number of records to be registered as variable
         id: current_number
         run: |
-          echo "NUMBER=$(jq 'length' upload/inveniordm.json)" >> $GITHUB_OUTPUT
-          echo "Found $(jq 'length' upload/inveniordm.json) records to process"
+          echo "NUMBER=$(jq 'length' inveniordm.json)" >> $GITHUB_OUTPUT
+          echo "Found $(jq 'length' inveniordm.json) records to process"
       - name: Install uv
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         uses: astral-sh/setup-uv@v6
@@ -41,5 +40,5 @@ jobs:
       - name: Upsert Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          uv run commonmeta push upload/inveniordm.json -f inveniordm -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --host rogue-scholar.org --token "${{ secrets.INVENIORDM_TOKEN }}" --legacy-key "${{ secrets.SUPABASE_KEY }}" > upload/response.json
-          cat upload/response.json
+          uv run commonmeta push inveniordm.json -f inveniordm -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --host rogue-scholar.org --token "${{ secrets.INVENIORDM_TOKEN }}" --legacy-key "${{ secrets.SUPABASE_KEY }}" > response.json
+          cat response.json
