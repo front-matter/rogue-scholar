@@ -13,8 +13,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Download records not registered with Crossref
         run: |
-          curl https://rogue-scholar.org/api/records?q=custom_fields.rs%5C%3Astale%3Atrue&l=list&s=10&sort=newest | jq .hits.hits > inveniordm.json
-          cat inveniordm.json
+          curl "https://rogue-scholar.org/api/records?q=custom_fields.rs%5C%3Astale%3Atrue&l=list&s=10&sort=newest" | jq .hits.hits > inveniordm.json
       - name: Set number of records to be registered as variable
         id: current_number
         run: |
