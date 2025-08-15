@@ -11,14 +11,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Download posts not indexed recently
+      - name: Download records not registered with Crossref
         run: |
           mkdir -p upload
-          curl https://api.rogue-scholar.org/posts/stale?per_page=10 > upload/posts.json
-      - name: Set number of posts to be updated as variable
+          curl https://rogue-scholar.org/api/records?q=custom_fields.rs%5C%3Astale%3Atrue&l=list&s=10&sort=newest > upload/results.json
+      - name: Set number of records to be registered as variable
         id: current_number
         run: |
-          echo "NUMBER=$(jq '."total-results"' upload/posts.json)" >> $GITHUB_OUTPUT
+          echo "NUMBER=$(jq '.hits.total' upload/results.json)" >> $GITHUB_OUTPUT
       - name: Install uv
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         uses: astral-sh/setup-uv@v5
@@ -36,18 +36,9 @@ jobs:
         run: |
           echo "NOW=$(date +'%s')" >> $GITHUB_OUTPUT
         id: current_date
-      - name: Convert posts to InvenioRDM format
+      - name: Upsert Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          uv run commonmeta version
-          uv run commonmeta list upload/posts.json -f jsonfeed -t inveniordm > upload/inveniordm.json
-      # - name: update InvenioRDM content
-      #   if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-      #   run: |
-      #     uv run commonmeta push upload/inveniordm.json -f inveniordm -t inveniordm --host rogue-scholar.org --token ${{ secrets.INVENIORDM_TOKEN }} --legacy-key "${{ secrets.SUPABASE_KEY }}"> upload/response.json
-      #     cat upload/response.json
-      - name: Update Crossref DOIs
-        if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
-        run: |
-          uv run commonmeta push upload/inveniordm.json -f inveniordm -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --legacy-key "${{ secrets.SUPABASE_KEY }}" > upload/response.json
+          jq '.hits.hits' upload/results.json > upload/inveniordm.json
+          uv run commonmeta push upload/inveniordm.json -f inveniordm -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --host rogue-scholar.org --token "${{ secrets.INVENIORDM_TOKEN }}" --legacy-key "${{ secrets.SUPABASE_KEY }}" > upload/response.json
           cat upload/response.json
