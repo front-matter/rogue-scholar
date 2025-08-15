@@ -18,7 +18,7 @@ jobs:
       - name: Set number of records to be registered as variable
         id: current_number
         run: |
-          echo "NUMBER=$(jq .hits.total upload/results.json)" >> $GITHUB_OUTPUT
+          echo "NUMBER=$(jq -r '.hits.total' upload/results.json)" >> $GITHUB_OUTPUT
           echo ${{ fromJSON(steps.current_number.outputs.NUMBER) }}
       - name: Install uv
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
@@ -40,6 +40,6 @@ jobs:
       - name: Upsert Crossref DOIs
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         run: |
-          jq .hits.hits upload/results.json > upload/inveniordm.json
+          jq '.hits.hits' upload/results.json > upload/inveniordm.json
           uv run commonmeta push upload/inveniordm.json -f inveniordm -t crossref_xml --depositor "${{ secrets.CROSSREF_DEPOSITOR_NAME }}" --email "${{ secrets.CROSSREF_DEPOSITOR_EMAIL }}" --registrant "${{ secrets.CROSSREF_REGISTRANT }}" --login_id "${{ secrets.CROSSREF_USERNAME_WITH_ROLE }}" --login_passwd "${{ secrets.CROSSREF_PASSWORD }}" --host rogue-scholar.org --token "${{ secrets.INVENIORDM_TOKEN }}" --legacy-key "${{ secrets.SUPABASE_KEY }}" > upload/response.json
           cat upload/response.json
