@@ -14,11 +14,11 @@ jobs:
       - name: Download records not registered with Crossref
         run: |
           mkdir -p upload
-          curl https://rogue-scholar.org/api/records?q=custom_fields.rs%5C%3Astale%3Atrue&l=list&s=10&sort=newest > upload/results.json
+          curl https://rogue-scholar.org/api/records?q=custom_fields.rs%5C%3Astale%3Atrue&l=list&s=10&sort=newest | jq '.hits.hits' > upload/inveniordm.json
       - name: Set number of records to be registered as variable
         id: current_number
         run: |
-          echo "NUMBER=$(jq -r '.hits.total' upload/results.json)" >> $GITHUB_OUTPUT
+          echo "NUMBER=$(jq 'length' upload/inveniordm.json)" >> $GITHUB_OUTPUT
       - name: Install uv
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         uses: astral-sh/setup-uv@v5
