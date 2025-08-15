@@ -19,7 +19,7 @@ jobs:
         id: current_number
         run: |
           echo "NUMBER=$(jq '.hits.total' upload/results.json)" >> $GITHUB_OUTPUT
-          cat jq '.hits.total' upload/results.json
+          echo ${{ fromJSON(steps.current_number.outputs.NUMBER) }}
       - name: Install uv
         if: ${{ fromJSON(steps.current_number.outputs.NUMBER) > 0 }}
         uses: astral-sh/setup-uv@v5
