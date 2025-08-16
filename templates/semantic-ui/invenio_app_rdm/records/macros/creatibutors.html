@@ -42,11 +42,17 @@
 {% macro show_creatibutors(creatibutors, show_affiliations=False, type="creators", show_role=False) %}
   {% for creatibutor in creatibutors if creatibutor.person_or_org and creatibutor.person_or_org.name %}
   <li class="creatibutor-wrap separated">
+    {% set orcid_identifiers = creatibutor.person_or_org.identifiers | selectattr("scheme", "==", "orcid") | list %}
+    {% if orcid_identifiers %}
+      {%- set q = 'orcid:' + orcid_identifiers[0].identifier -%}
+    {% else %}
+      {%- set q = 'metadata.' + creatibutor.person_or_org.type + '.name:"' + creatibutor.person_or_org.name + '"' -%}
+    {% endif %}
     <a class="ui creatibutor-link"
       {% if show_affiliations and creatibutor.affiliations %}
         data-tooltip="{{ creatibutor.affiliations|join('; ', attribute='1') }}"
       {% endif %}
-      href="{{url_for('invenio_search_ui.search', q='metadata.' + type + '.person_or_org.name:"' + creatibutor.person_or_org.name + '"')}}"
+      href="{{ url_for('invenio_search_ui.search', q=q) }}"
     >
 
       <span class="creatibutor-name">

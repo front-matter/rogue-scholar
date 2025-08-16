@@ -144,7 +144,11 @@
         {% if reference.scheme %}
           {% set id = reference.identifier %}
           {% if 'doi' == reference.scheme %}
-            <li class="item">{{ reference_string }}
+            <li class="item">
+              {%- set q = 'doi:' + id + '^5 references:' + id + ' citations:' + id -%}
+              <a class="ui creatibutor-link" href="{{ url_for('invenio_search_ui.search', q=q) }}">
+                {{ reference_string }}
+              </a>
               <a class="no-text-decoration" target="_blank" href="{{ id|pid_url('doi') }}">
                 {{ id|pid_url('doi') }}
               </a>

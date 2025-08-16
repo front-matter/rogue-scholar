@@ -10,7 +10,7 @@ import { i18next } from "@translations/invenio_app_rdm/i18next";
 import _get from "lodash/get";
 import React, { Component } from "react";
 import Overridable from "react-overridable";
-import { SearchItemCreators } from "../utils";
+import { SearchItemCreators } from "./Utils";
 import PropTypes from "prop-types";
 import { Item, Label, Image } from "semantic-ui-react";
 import { buildUID } from "react-searchkit";
