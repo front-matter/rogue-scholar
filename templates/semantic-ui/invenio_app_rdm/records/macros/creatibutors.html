@@ -52,7 +52,7 @@
       {% if show_affiliations and creatibutor.affiliations %}
         data-tooltip="{{ creatibutor.affiliations|join('; ', attribute='1') }}"
       {% endif %}
-      href="{{ url_for('invenio_search_ui.search', q=q) }}"
+      href="{{ url_for('invenio_search_ui.search', q=q, sort='newest') }}"
     >
 
       <span class="creatibutor-name">

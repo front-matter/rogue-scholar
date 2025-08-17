@@ -87,7 +87,7 @@ export function SearchItemCreators({ creators, className, othersLink }) {
     let link = (
       <a
         className="creatibutor-link"
-        href={`/search?q=${searchQuery}`}
+        href={`/search?q=${searchQuery}&sort=newest`}
         title={`${creatorName}: ${i18next.t("Search")}`}
       >
         <span className="creatibutor-name">{creatorName}</span>
