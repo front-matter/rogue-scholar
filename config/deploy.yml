@@ -113,7 +113,7 @@ accessories:
       publish:
         - 9600:9600
   pocketid:
-    image: ghcr.io/pocket-id/pocket-id:v1.7.0
+    image: ghcr.io/pocket-id/pocket-id:v1.8.0
     host: 176.9.24.117
     port: 1411
     proxy:
