@@ -109,7 +109,7 @@ in their RSS/Atom feeds.
 | Ghost     | CMS    | yes   | theme  | theme     | yes   |
 | Hugo      | static | yes   | theme  | theme     | no    |
 | Jekyll    | static | no    | plugin | plugin    | no    |
-| Blogger   | CMS    | yes   | yes    | no        | no    |
+| Blogger   | CMS    | yes   | yes    | no        | yes   |
 | Quarto    | static | yes   | no     | no        | no    |
 | Substack  | CMS    | yes   | no     | no        | yes   |
 | Medium    | CMS    | yes   | no     | no        | no    |

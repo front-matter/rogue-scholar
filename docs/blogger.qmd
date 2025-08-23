@@ -1,0 +1,20 @@
+---
+title: Blogger
+categories:
+  - cms
+  - api
+format:
+  html:
+    other-links:
+      - text: Blogger
+        href: https://blogger.com
+---
+
+[Blogger](https://blogger.com) is a popular hosted blogging platform owned by Google.
+
+### Examples
+
+The following science blogs use Blogger as a platform:
+
+* [Open Access News](https://legacy.earlham.edu/~peters/fos/fosblog.html)
+* [iPhylo](https://iphylo.blogspot.com/)

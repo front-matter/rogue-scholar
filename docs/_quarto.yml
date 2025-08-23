@@ -31,6 +31,7 @@ website:
       - section: "Blogging Platforms"
         contents:
           - platforms.qmd
+          - blogger.qmd
           - wordpress.qmd
           - hugo.qmd
           - jekyll.qmd
