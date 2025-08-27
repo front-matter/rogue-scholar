@@ -7,7 +7,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 license = "MIT"
 dependencies = [
-    "invenio-app-rdm",
+    "invenio-app-rdm>=13.0.2",
     "invenio-search[opensearch2]>=3.0.0",
     "invenio-rdm-records",
     "sentry-sdk>=1.45,<2.0.0",
@@ -15,8 +15,7 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-invenio-app-rdm = { git = "https://github.com/front-matter/invenio-app-rdm" }
-invenio-rdm-records = { git = "https://github.com/front-matter/invenio-rdm-records", branch = "crossref" }
+invenio-rdm-records = { git = "https://github.com/front-matter/invenio-rdm-records", branch = "crossref-doi-registration" }
 
 [build-system]
 requires = ["hatchling"]
@@ -31,4 +30,4 @@ include = ["pyproject.toml", "site/**/*.py"]
 
 [project.optional-dependencies]
 docs = ["quarto-cli~=1.7.31"]
-actions = ["commonmeta-py>=0.157"]
+actions = ["commonmeta-py>=0.159"]
