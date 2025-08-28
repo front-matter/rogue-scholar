@@ -508,7 +508,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.159"
+version = "0.160"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -546,9 +546,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/29/34/1d8df6d0e05701d7f4e5e52a9e4262d92fdcc8b9cb35c6f64dea83a9cf99/commonmeta_py-0.159.tar.gz", hash = "sha256:57d97ad5a7d90020928125257f3897ee3ce9a318a0e4a18f5470cd8d0df80ed8", size = 290196, upload-time = "2025-08-27T13:52:14.832Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/8d/d2/b2ffda38c1116f44bbdc359840fe5da6b1c2d173f7c6958b0e145bf051bb/commonmeta_py-0.160.tar.gz", hash = "sha256:7ac2d7c25d29dbf655e02133104398e49ba0b67c6bf4ec47f335bba98db7c743", size = 290213, upload-time = "2025-08-27T17:57:39.053Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/8d/2b/192f9219ecf90c2c3856db1ce17e92c3b0dbaa07d0cf7b02560a88f53685/commonmeta_py-0.159-py3-none-any.whl", hash = "sha256:3f65312532312dc6d2dc9e2170dcdaff8f16237cdc698018912da95a3ebc5da5", size = 350010, upload-time = "2025-08-27T13:52:12.901Z" },
+    { url = "https://files.pythonhosted.org/packages/70/ed/78eed97dc54e77507247e6a3a5809a0fef9bc56f7e0c170022a850302869/commonmeta_py-0.160-py3-none-any.whl", hash = "sha256:447a4b5cec1816104524663ae7e8c05275b895ba6216812bf81da024a5b44e60", size = 350041, upload-time = "2025-08-27T17:57:37.066Z" },
 ]
 
 [[package]]
@@ -1974,7 +1974,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.5.5"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#8c226dd0bd0e9b708f27ab112f81ce90b09e57c4" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#afaed039677b3ef0051a65779234115f1f7294eb" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -2626,14 +2626,14 @@ wheels = [
 
 [[package]]
 name = "jupyter-lsp"
-version = "2.2.6"
+version = "2.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jupyter-server" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/28/3d/40bdb41b665d3302390ed1356cebd5917c10769d1f190ee4ca595900840e/jupyter_lsp-2.2.6.tar.gz", hash = "sha256:0566bd9bb04fd9e6774a937ed01522b555ba78be37bebef787c8ab22de4c0361", size = 48948, upload-time = "2025-07-18T21:35:19.885Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/eb/5a/9066c9f8e94ee517133cd98dba393459a16cd48bba71a82f16a65415206c/jupyter_lsp-2.3.0.tar.gz", hash = "sha256:458aa59339dc868fb784d73364f17dbce8836e906cd75fd471a325cba02e0245", size = 54823, upload-time = "2025-08-27T17:47:34.671Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/47/7c/12f68daf85b469b4896d5e4a629baa33c806d61de75ac5b39d8ef27ec4a2/jupyter_lsp-2.2.6-py3-none-any.whl", hash = "sha256:283783752bf0b459ee7fa88effa72104d87dd343b82d5c06cf113ef755b15b6d", size = 69371, upload-time = "2025-07-18T21:35:16.585Z" },
+    { url = "https://files.pythonhosted.org/packages/1a/60/1f6cee0c46263de1173894f0fafcb3475ded276c472c14d25e0280c18d6d/jupyter_lsp-2.3.0-py3-none-any.whl", hash = "sha256:e914a3cb2addf48b1c7710914771aaf1819d46b2e5a79b0f917b5478ec93f34f", size = 76687, upload-time = "2025-08-27T17:47:33.15Z" },
 ]
 
 [[package]]
