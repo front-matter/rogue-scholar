@@ -28,6 +28,7 @@ env:
     INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
     INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
     INVENIO_CROSSREF_ENABLED: True
+    INVENIO_CROSSREF_PREFIX: "10.53731"
     # accessories db, cache, search
     POSTGRES_DB: staging
     INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/12
