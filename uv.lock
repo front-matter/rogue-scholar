@@ -508,7 +508,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.166"
+version = "0.167"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -546,9 +546,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/1a/87/9e5fae9b597a67591ccda181cc5150f84f66e7138d92bf7de94fe17ff1ed/commonmeta_py-0.166.tar.gz", hash = "sha256:3c4c45856b8fb610015723be23f2d428143efad282560c0c07b3cd15de9a94f3", size = 289731, upload-time = "2025-09-03T04:44:30.773Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/8b/8e/3008cdc9bd0cfbbdeeecff557f504821514c1b4a83202b34d1f713fbc369/commonmeta_py-0.167.tar.gz", hash = "sha256:7dc4ef27324a9198c60def3120cd3272c74cb07509f5848f18320bf621c18068", size = 289764, upload-time = "2025-09-03T10:33:30.67Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/56/cc/1225db9f3025bcb48fed32e1a0d7ebb41960f6d07f30eda7083917ec2a4f/commonmeta_py-0.166-py3-none-any.whl", hash = "sha256:d65b5b2fed4d422ae9b01d6df0efd8d56fb046a83c69c1e38926c268e28c4885", size = 349620, upload-time = "2025-09-03T04:44:28.13Z" },
+    { url = "https://files.pythonhosted.org/packages/14/c0/ac0af2797ce971a5333a2912d558f1a8657b332bc53a049fd7bf19d0ed48/commonmeta_py-0.167-py3-none-any.whl", hash = "sha256:25f8daf7386dcdc5db5ad1035736a1ddc70415585d2904dbeba5b652587d3bcc", size = 349674, upload-time = "2025-09-03T10:33:28.162Z" },
 ]
 
 [[package]]
@@ -1970,7 +1970,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.5.5"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#a6ca83c575801df430f496b13d3170802340486f" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#fde211ef70c112b59363c66d9e6e835f37d6a17f" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -3904,7 +3904,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.166" },
+    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.167" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = ">=13.0.2" },
     { name = "invenio-pidstore", git = "https://github.com/front-matter/invenio-pidstore?branch=crossref" },
