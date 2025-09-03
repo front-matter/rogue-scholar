@@ -508,7 +508,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.165"
+version = "0.166"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -546,9 +546,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/10/6b/e4e3aaf5c3531dc7ae307af4f4a247e1a12ea0b4ee098978fe7fd3c1cf3e/commonmeta_py-0.165.tar.gz", hash = "sha256:c0e1a45c68ce846696cb1791f7868c6efeeab074c2e24bb53f6083c952d1f627", size = 289533, upload-time = "2025-09-01T16:21:10.924Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/1a/87/9e5fae9b597a67591ccda181cc5150f84f66e7138d92bf7de94fe17ff1ed/commonmeta_py-0.166.tar.gz", hash = "sha256:3c4c45856b8fb610015723be23f2d428143efad282560c0c07b3cd15de9a94f3", size = 289731, upload-time = "2025-09-03T04:44:30.773Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d1/9f/e6f8e6904f00572388116c7b8f20baa48c22457a5e69a711335b77000e64/commonmeta_py-0.165-py3-none-any.whl", hash = "sha256:17b9f783a0fe6f0a78acd9cc4ecf147ea16d1db8e0ceb7b6589f01406f996c4b", size = 349409, upload-time = "2025-09-01T16:21:07.953Z" },
+    { url = "https://files.pythonhosted.org/packages/56/cc/1225db9f3025bcb48fed32e1a0d7ebb41960f6d07f30eda7083917ec2a4f/commonmeta_py-0.166-py3-none-any.whl", hash = "sha256:d65b5b2fed4d422ae9b01d6df0efd8d56fb046a83c69c1e38926c268e28c4885", size = 349620, upload-time = "2025-09-03T04:44:28.13Z" },
 ]
 
 [[package]]
@@ -1922,17 +1922,13 @@ wheels = [
 [[package]]
 name = "invenio-pidstore"
 version = "2.2.0"
-source = { registry = "https://pypi.org/simple" }
+source = { git = "https://github.com/front-matter/invenio-pidstore?branch=crossref#4add8bb1e56669ea5a5f6ad51496b8278a2534fe" }
 dependencies = [
     { name = "base32-lib" },
     { name = "importlib-metadata" },
     { name = "importlib-resources" },
     { name = "invenio-base" },
     { name = "invenio-i18n" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/9d/6b/de47c9f023126f4249cfc8875f7615728ba358bfdafaf1d05a964158bfa0/invenio_pidstore-2.2.0.tar.gz", hash = "sha256:00a87239c88249b15b1f2cf0396a4f0b656765291a09adb6603dc9588db6f8c9", size = 38855, upload-time = "2025-07-17T20:21:39.294Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/0c/2d/7d3d40ab6a40d4e8e7cc169c3adefe359feed07b7736012afc349825bd99/invenio_pidstore-2.2.0-py2.py3-none-any.whl", hash = "sha256:a83961c05b562a7aacc9ae9fce06a127a39996d3be91f40cfeb1cfeab4a25b0b", size = 82402, upload-time = "2025-07-17T20:21:38.398Z" },
 ]
 
 [[package]]
@@ -1974,7 +1970,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.5.5"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#9dde03d1d5ac29198098823bc5943d1b68de9370" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#a6ca83c575801df430f496b13d3170802340486f" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -3892,6 +3888,7 @@ source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
+    { name = "invenio-pidstore" },
     { name = "invenio-rdm-records" },
     { name = "invenio-search", extra = ["opensearch2"] },
     { name = "sentry-sdk" },
@@ -3907,9 +3904,10 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.164" },
+    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.166" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = ">=13.0.2" },
+    { name = "invenio-pidstore", git = "https://github.com/front-matter/invenio-pidstore?branch=crossref" },
     { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.0.0" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.7.31" },
