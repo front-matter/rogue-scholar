@@ -9,15 +9,15 @@ license = "MIT"
 dependencies = [
     "invenio-app-rdm>=13.0.2",
     "invenio-search[opensearch2]>=3.0.0",
-    "invenio-pidstore",
-    "invenio-rdm-records",
+    # "invenio-pidstore",
+    # "invenio-rdm-records",
     "sentry-sdk>=1.45,<2.0.0",
     "gunicorn~=23.0.0",
 ]
 
 [tool.uv.sources]
-invenio-pidstore = { git = "https://github.com/front-matter/invenio-pidstore", branch = "crossref" }
-invenio-rdm-records = { git = "https://github.com/front-matter/invenio-rdm-records", branch = "crossref-doi-registration" }
+# invenio-pidstore = { git = "https://github.com/front-matter/invenio-pidstore", branch = "crossref" }
+# invenio-rdm-records = { git = "https://github.com/front-matter/invenio-rdm-records", branch = "crossref-doi-registration" }
 
 [build-system]
 requires = ["hatchling"]

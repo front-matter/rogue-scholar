@@ -1922,13 +1922,17 @@ wheels = [
 [[package]]
 name = "invenio-pidstore"
 version = "2.2.0"
-source = { git = "https://github.com/front-matter/invenio-pidstore?branch=crossref#4add8bb1e56669ea5a5f6ad51496b8278a2534fe" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
     { name = "importlib-metadata" },
     { name = "importlib-resources" },
     { name = "invenio-base" },
     { name = "invenio-i18n" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9d/6b/de47c9f023126f4249cfc8875f7615728ba358bfdafaf1d05a964158bfa0/invenio_pidstore-2.2.0.tar.gz", hash = "sha256:00a87239c88249b15b1f2cf0396a4f0b656765291a09adb6603dc9588db6f8c9", size = 38855, upload-time = "2025-07-17T20:21:39.294Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0c/2d/7d3d40ab6a40d4e8e7cc169c3adefe359feed07b7736012afc349825bd99/invenio_pidstore-2.2.0-py2.py3-none-any.whl", hash = "sha256:a83961c05b562a7aacc9ae9fce06a127a39996d3be91f40cfeb1cfeab4a25b0b", size = 82402, upload-time = "2025-07-17T20:21:38.398Z" },
 ]
 
 [[package]]
@@ -1969,8 +1973,8 @@ wheels = [
 
 [[package]]
 name = "invenio-rdm-records"
-version = "19.5.5"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#3abdef9bd6b2c1a1ca5e7d5638251938e2dba97f" }
+version = "19.5.4"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -2001,6 +2005,10 @@ dependencies = [
     { name = "python-slugify" },
     { name = "pytz" },
     { name = "pyyaml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9b/76/85885613e720764faab93df081c4556c966a6387550f935999b015ca15c2/invenio_rdm_records-19.5.4.tar.gz", hash = "sha256:d29f577ddd9a4ef64c8269bf89851dd154638bb20d048de1e6d9c01a4e1aaeeb", size = 1228659, upload-time = "2025-08-20T11:50:14.59Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ab/eb/ce26ffd83d805ec23d52c47c6c11ff27dfb164435729747940a06559c4f0/invenio_rdm_records-19.5.4-py2.py3-none-any.whl", hash = "sha256:4e817b49b8fd39482b81aff5aba23a776dfc6609be22971767c65671e758f40e", size = 1754498, upload-time = "2025-08-20T11:50:11.674Z" },
 ]
 
 [[package]]
@@ -3888,8 +3896,6 @@ source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
-    { name = "invenio-pidstore" },
-    { name = "invenio-rdm-records" },
     { name = "invenio-search", extra = ["opensearch2"] },
     { name = "sentry-sdk" },
 ]
@@ -3907,8 +3913,6 @@ requires-dist = [
     { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.167" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = ">=13.0.2" },
-    { name = "invenio-pidstore", git = "https://github.com/front-matter/invenio-pidstore?branch=crossref" },
-    { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.0.0" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.7.31" },
     { name = "sentry-sdk", specifier = ">=1.45,<2.0.0" },
