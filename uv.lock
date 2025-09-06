@@ -1963,7 +1963,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.5.5"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#0c417941234f6e7261f74d1fce8e8ef76eec0738" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#1904d3f2f7b40c9eabf648312c51949cefef80c4" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -3899,7 +3899,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.167" },
+    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.168" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = ">=13.0.2" },
     { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration" },
