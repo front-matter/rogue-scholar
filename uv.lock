@@ -508,7 +508,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.167"
+version = "0.168"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -546,9 +546,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/8b/8e/3008cdc9bd0cfbbdeeecff557f504821514c1b4a83202b34d1f713fbc369/commonmeta_py-0.167.tar.gz", hash = "sha256:7dc4ef27324a9198c60def3120cd3272c74cb07509f5848f18320bf621c18068", size = 289764, upload-time = "2025-09-03T10:33:30.67Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/03/ef/47d8ec962c44f8e4b65f39b76f5b8db761072dd3c3a16f768cec1b98ddfd/commonmeta_py-0.168.tar.gz", hash = "sha256:0b1ddccab87a4504a1b7052a554165f3c0420e0dc79bba21400a94a95a981c02", size = 289772, upload-time = "2025-09-06T06:57:20.352Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/14/c0/ac0af2797ce971a5333a2912d558f1a8657b332bc53a049fd7bf19d0ed48/commonmeta_py-0.167-py3-none-any.whl", hash = "sha256:25f8daf7386dcdc5db5ad1035736a1ddc70415585d2904dbeba5b652587d3bcc", size = 349674, upload-time = "2025-09-03T10:33:28.162Z" },
+    { url = "https://files.pythonhosted.org/packages/ea/05/28fda645ff916d21350bcb9b69c8070be2c59c546cd2144c6bf8f9f70cf9/commonmeta_py-0.168-py3-none-any.whl", hash = "sha256:6f2fb5a5f55fc3977da842594915dbbcae3dbfc190d57279c87b7c15fd0ec8ed", size = 349684, upload-time = "2025-09-06T06:57:16.706Z" },
 ]
 
 [[package]]
@@ -1147,13 +1147,15 @@ wheels = [
 
 [[package]]
 name = "ftfy"
-version = "4.4.3"
+version = "6.3.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "html5lib" },
     { name = "wcwidth" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/21/5d/9385540977b00df1f3a0c0f07b7e6c15b5e7a3109d7f6ae78a0a764dab22/ftfy-4.4.3.tar.gz", hash = "sha256:3c0066db64a98436e751e56414f03f1cdea54f29364c0632c141c36cca6a5d94", size = 50530, upload-time = "2017-05-15T15:52:37.756Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a5/d3/8650919bc3c7c6e90ee3fa7fd618bf373cbbe55dff043bd67353dbb20cd8/ftfy-6.3.1.tar.gz", hash = "sha256:9b3c3d90f84fb267fe64d375a07b7f8912d817cf86009ae134aa03e1819506ec", size = 308927, upload-time = "2024-10-26T00:50:35.149Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ab/6e/81d47999aebc1b155f81eca4477a616a70f238a2549848c38983f3c22a82/ftfy-6.3.1-py3-none-any.whl", hash = "sha256:7c70eb532015cd2f9adb53f101fb6c7945988d023a085d127d1573dc49dd0083", size = 44821, upload-time = "2024-10-26T00:50:33.425Z" },
+]
 
 [[package]]
 name = "furl"
@@ -1244,19 +1246,6 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/01/ee/02a2c011bdab74c6fb3c75474d40b3052059d95df7e73351460c8588d963/h11-0.16.0.tar.gz", hash = "sha256:4e35b956cf45792e4caa5885e69fba00bdbc6ffafbfa020300e549b208ee5ff1", size = 101250, upload-time = "2025-04-24T03:35:25.427Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl", hash = "sha256:63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86", size = 37515, upload-time = "2025-04-24T03:35:24.344Z" },
-]
-
-[[package]]
-name = "html5lib"
-version = "1.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "six" },
-    { name = "webencodings" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/ac/b6/b55c3f49042f1df3dcd422b7f224f939892ee94f22abcf503a9b7339eaf2/html5lib-1.1.tar.gz", hash = "sha256:b2e5b40261e20f354d198eae92afc10d750afb487ed5e50f9c4eaf07c184146f", size = 272215, upload-time = "2020-06-22T23:32:38.834Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/6c/dd/a834df6482147d48e225a49515aabc28974ad5a4ca3215c18a882565b028/html5lib-1.1-py2.py3-none-any.whl", hash = "sha256:0d78f8fde1c230e99fe37986a60526d7049ed4bf8a9fadbad5f00e22e58e041d", size = 112173, upload-time = "2020-06-22T23:32:36.781Z" },
 ]
 
 [[package]]
@@ -1922,13 +1911,17 @@ wheels = [
 [[package]]
 name = "invenio-pidstore"
 version = "2.2.0"
-source = { git = "https://github.com/front-matter/invenio-pidstore?branch=crossref#4add8bb1e56669ea5a5f6ad51496b8278a2534fe" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
     { name = "importlib-metadata" },
     { name = "importlib-resources" },
     { name = "invenio-base" },
     { name = "invenio-i18n" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9d/6b/de47c9f023126f4249cfc8875f7615728ba358bfdafaf1d05a964158bfa0/invenio_pidstore-2.2.0.tar.gz", hash = "sha256:00a87239c88249b15b1f2cf0396a4f0b656765291a09adb6603dc9588db6f8c9", size = 38855, upload-time = "2025-07-17T20:21:39.294Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0c/2d/7d3d40ab6a40d4e8e7cc169c3adefe359feed07b7736012afc349825bd99/invenio_pidstore-2.2.0-py2.py3-none-any.whl", hash = "sha256:a83961c05b562a7aacc9ae9fce06a127a39996d3be91f40cfeb1cfeab4a25b0b", size = 82402, upload-time = "2025-07-17T20:21:38.398Z" },
 ]
 
 [[package]]
@@ -1970,7 +1963,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.5.5"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#a91e6e7491ef21184d229d83176489ae0e703c24" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#0c417941234f6e7261f74d1fce8e8ef76eec0738" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -3514,11 +3507,14 @@ wheels = [
 
 [[package]]
 name = "pydash"
-version = "6.0.2"
+version = "8.0.5"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/2a/d6/a0bf5a313f8888df7d45b9bc953335b0149a07b90890be84f4ca24960318/pydash-6.0.2.tar.gz", hash = "sha256:35caa588e01d293713655e0870544d25128cd414c5e19477a0d63adc2b2ca03e", size = 146289, upload-time = "2023-02-24T03:01:32.649Z" }
+dependencies = [
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2f/24/91c037f47e434172c2112d65c00c84d475a6715425e3315ba2cbb7a87e66/pydash-8.0.5.tar.gz", hash = "sha256:7cc44ebfe5d362f4f5f06c74c8684143c5ac481376b059ff02570705523f9e2e", size = 164861, upload-time = "2025-01-17T16:08:50.562Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/03/42/a5996e99396ee8a7e23b68721b79404fdd00f7e6fe51cd0ef76c1a98df4a/pydash-6.0.2-py3-none-any.whl", hash = "sha256:6d3ce5cbbc8ca3533c12782ac201c2ec756d1e1703ec3efc88f2b95d1ed2bb31", size = 85390, upload-time = "2023-02-24T03:01:29.725Z" },
+    { url = "https://files.pythonhosted.org/packages/2c/86/e74c978800131c657fc5145f2c1c63e0cea01a49b6216f729cf77a2e1edf/pydash-8.0.5-py3-none-any.whl", hash = "sha256:b2625f8981862e19911daa07f80ed47b315ce20d9b5eb57aaf97aaf570c3892f", size = 102077, upload-time = "2025-01-17T16:08:47.91Z" },
 ]
 
 [[package]]
@@ -3888,7 +3884,6 @@ source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
-    { name = "invenio-pidstore" },
     { name = "invenio-rdm-records" },
     { name = "invenio-search", extra = ["opensearch2"] },
     { name = "sentry-sdk" },
@@ -3907,7 +3902,6 @@ requires-dist = [
     { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.167" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = ">=13.0.2" },
-    { name = "invenio-pidstore", git = "https://github.com/front-matter/invenio-pidstore?branch=crossref" },
     { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.0.0" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.7.31" },
