@@ -1963,7 +1963,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.5.5"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#1904d3f2f7b40c9eabf648312c51949cefef80c4" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#8a6570682f53255473d543a133f96531a66d65b0" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
