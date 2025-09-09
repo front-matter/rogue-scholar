@@ -503,7 +503,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.169"
+version = "0.170"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -526,7 +526,6 @@ dependencies = [
     { name = "orjsonl" },
     { name = "pikepdf" },
     { name = "pycountry" },
-    { name = "pydash" },
     { name = "pyjwt" },
     { name = "python-dateutil" },
     { name = "pyyaml" },
@@ -541,9 +540,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7d/75/e8601164afeaea5b7867716ff23b813bae80e100bcf81b1083521fac1645/commonmeta_py-0.169.tar.gz", hash = "sha256:ef0cb324f103e4a5663f724fd33ffd00e81d0ed4a7b35ea6e27cdaa63c902df9", size = 289573, upload-time = "2025-09-08T10:33:19.915Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/c1/c7/ad02cf947d352e1d30b5a1ddd2ed77b19088af13dd84646ee2fcda1c907f/commonmeta_py-0.170.tar.gz", hash = "sha256:987e470195828ec664dfe7518563c9c04dcaa2be467c7590fa4ce0163d26d050", size = 290494, upload-time = "2025-09-09T16:47:49.049Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/59/cb/48b7dfec3cf5df56191251087d7521e0c4a8797559f16a633b7333033e43/commonmeta_py-0.169-py3-none-any.whl", hash = "sha256:aed0064d9d23fd7c21727db442ea855df975d18ad2ae6630a690059cf88e9072", size = 349406, upload-time = "2025-09-08T10:33:18.041Z" },
+    { url = "https://files.pythonhosted.org/packages/3a/3f/c161f5e992c71973705ca263cb8c52913290697d8bce9ee03262b265df03/commonmeta_py-0.170-py3-none-any.whl", hash = "sha256:487d7ce2d4f25ab86d188c5e8a34696f586cb6d3c4cf14f0c159521dc30413ab", size = 350856, upload-time = "2025-09-09T16:47:46.947Z" },
 ]
 
 [[package]]
@@ -1958,7 +1957,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.5.5"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#7a208519341265db563ad5082157f631799dabf4" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#770aacce43f24c1e88085b70832317492e9e554c" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -3493,11 +3492,11 @@ wheels = [
 
 [[package]]
 name = "pycparser"
-version = "2.22"
+version = "2.23"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/1d/b2/31537cf4b1ca988837256c910a668b553fceb8f069bedc4b1c826024b52c/pycparser-2.22.tar.gz", hash = "sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6", size = 172736, upload-time = "2024-03-30T13:22:22.564Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fe/cf/d2d3b9f5699fb1e4615c8e32ff220203e43b248e1dfcc6736ad9057731ca/pycparser-2.23.tar.gz", hash = "sha256:78816d4f24add8f10a06d6f05b4d424ad9e96cfebf68a4ddc99c65c0720d00c2", size = 173734, upload-time = "2025-09-09T13:23:47.91Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl", hash = "sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc", size = 117552, upload-time = "2024-03-30T13:22:20.476Z" },
+    { url = "https://files.pythonhosted.org/packages/a0/e3/59cd50310fc9b59512193629e1984c1f95e5c8ae6e5d8c69532ccc65a7fe/pycparser-2.23-py3-none-any.whl", hash = "sha256:e5c6e8d3fbad53479cab09ac03729e0a9faf2bee3db8208a550daf5af81a5934", size = 118140, upload-time = "2025-09-09T13:23:46.651Z" },
 ]
 
 [[package]]
@@ -3894,7 +3893,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.168" },
+    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.170" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = ">=13.0.2" },
     { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration" },
