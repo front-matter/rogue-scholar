@@ -174,28 +174,6 @@ accessories:
         - GOOGLE_CLIENT_ID
         - GOOGLE_CLIENT_SECRET
 
-  usage:
-    image: ghcr.io/umami-software/umami:postgresql-v2.19
-    host: 176.9.24.117
-    port: 3000
-    proxy:
-      ssl: true
-      host: usage.rogue-scholar.org
-      ssl_redirect: true
-      forward_headers: true
-      app_port: 3000
-      healthcheck:
-        path: /api/heartbeat
-        interval: 30
-        timeout: 10
-    env:
-      clear:
-        DATABASE_TYPE: postgresql
-        REDIS_URL: redis://inveniordm-cache:6379/19
-      secret:
-        - DATABASE_URL
-        - CLICKHOUSE_DATABASE_URL
-
   events-db:
     image: clickhouse/clickhouse-server:25.7-alpine
     host: 176.9.24.117
