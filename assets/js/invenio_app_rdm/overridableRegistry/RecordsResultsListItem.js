@@ -14,7 +14,6 @@ import { SearchItemCreators } from "./Utils";
 import PropTypes from "prop-types";
 import { Item, Label, Image } from "semantic-ui-react";
 import { buildUID } from "react-searchkit";
-import { CompactStats } from "../components/CompactStats";
 import { DisplayPartOfCommunities } from "../components/DisplayPartOfCommunities";
 
 class RecordsResultsListItem extends Component {
@@ -48,12 +47,6 @@ class RecordsResultsListItem extends Component {
     const title = _get(result, "metadata.title", i18next.t("No title"));
     const version = _get(result, "ui.version", null);
     const versions = _get(result, "versions");
-    const uniqueViews = _get(result, "stats.all_versions.unique_views", 0);
-    const uniqueDownloads = _get(
-      result,
-      "stats.all_versions.unique_downloads",
-      0
-    );
 
     const publishingInformation = _get(
       result,
@@ -174,13 +167,6 @@ class RecordsResultsListItem extends Component {
                       </b>
                     </p>
                   )}
-                </small>
-
-                <small>
-                  <CompactStats
-                    uniqueViews={uniqueViews}
-                    uniqueDownloads={uniqueDownloads}
-                  />
                 </small>
               </div>
             </Item.Extra>
