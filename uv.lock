@@ -503,7 +503,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.182"
+version = "0.178"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -531,6 +531,8 @@ dependencies = [
     { name = "pyyaml" },
     { name = "requests" },
     { name = "requests-toolbelt" },
+    { name = "setuptools" },
+    { name = "simplejson" },
     { name = "types-beautifulsoup4" },
     { name = "types-dateparser" },
     { name = "types-pyyaml" },
@@ -538,9 +540,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e4/a6/9ea3811bf125de51745bafdc01b992d0523233e30d5083b75e06ce0be79e/commonmeta_py-0.182.tar.gz", hash = "sha256:19ff3cacda0ebdfaffbb010811c664a3cee0a7325aacfd1ed9e91095af88541d", size = 292179, upload-time = "2025-10-05T19:11:12.308Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/7a/71/b03a8d5f4541acaa3618d925d7a0c88fd94bf320c5ab20982f0ade02244f/commonmeta_py-0.178.tar.gz", hash = "sha256:77dc3be9f8ceb8f2d5d9ef06c32b8a0c9151d5913a0ecdde3f64b9ab8db08d01", size = 290868, upload-time = "2025-09-28T11:26:32.764Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/12/d7/4784257a680ce427d7c965bd8fc1e33b2c127e5f8e5f0931e7e74b481b6f/commonmeta_py-0.182-py3-none-any.whl", hash = "sha256:6142f696922022f3b1c2b23ee992cbca336f0437a8050ecdfb3f261dc05c8e57", size = 353720, upload-time = "2025-10-05T19:11:10.414Z" },
+    { url = "https://files.pythonhosted.org/packages/41/d9/d3b12e84df186740ceb4060e1b53b9e3233ae454ba168037355b319b6a57/commonmeta_py-0.178-py3-none-any.whl", hash = "sha256:d82285b4ed075453a9de318ec5520f1f4c679e5462080c19c8df610daf63eeb2", size = 351380, upload-time = "2025-09-28T11:26:30.825Z" },
 ]
 
 [[package]]
@@ -1980,7 +1982,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.5.6"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#493884b3e862322f8b0908c69f406cbbc66dc6a9" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#e5f13cbd342c5b0f3bdbab88481e714611f50116" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
