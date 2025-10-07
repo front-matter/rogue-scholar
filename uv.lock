@@ -148,11 +148,11 @@ wheels = [
 
 [[package]]
 name = "attrs"
-version = "25.3.0"
+version = "25.4.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/5a/b0/1367933a8532ee6ff8d63537de4f1177af4bff9f3e829baf7331f595bb24/attrs-25.3.0.tar.gz", hash = "sha256:75d7cefc7fb576747b2c81b4442d4d4a1ce0900973527c011d1030fd3bf4af1b", size = 812032, upload-time = "2025-03-13T11:10:22.779Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6b/5c/685e6633917e101e5dcb62b9dd76946cbb57c26e133bae9e0cd36033c0a9/attrs-25.4.0.tar.gz", hash = "sha256:16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11", size = 934251, upload-time = "2025-10-06T13:54:44.725Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/77/06/bb80f5f86020c4551da315d78b3ab75e8228f89f0162f2c3a819e407941a/attrs-25.3.0-py3-none-any.whl", hash = "sha256:427318ce031701fea540783410126f03899a97ffc6f61596ad581ac2e40e3bc3", size = 63815, upload-time = "2025-03-13T11:10:21.14Z" },
+    { url = "https://files.pythonhosted.org/packages/3a/2a/7cc015f5b9f5db42b7d48157e23356022889fc354a2813c15934b7cb5c0e/attrs-25.4.0-py3-none-any.whl", hash = "sha256:adcf7e2a1fb3b36ac48d97835bb6d8ade15b8dcce26aba8bf1d14847b57a3373", size = 67615, upload-time = "2025-10-06T13:54:43.17Z" },
 ]
 
 [[package]]
@@ -503,7 +503,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.178"
+version = "0.183"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -531,8 +531,6 @@ dependencies = [
     { name = "pyyaml" },
     { name = "requests" },
     { name = "requests-toolbelt" },
-    { name = "setuptools" },
-    { name = "simplejson" },
     { name = "types-beautifulsoup4" },
     { name = "types-dateparser" },
     { name = "types-pyyaml" },
@@ -540,9 +538,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/7a/71/b03a8d5f4541acaa3618d925d7a0c88fd94bf320c5ab20982f0ade02244f/commonmeta_py-0.178.tar.gz", hash = "sha256:77dc3be9f8ceb8f2d5d9ef06c32b8a0c9151d5913a0ecdde3f64b9ab8db08d01", size = 290868, upload-time = "2025-09-28T11:26:32.764Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/ef/a6/39decd20bae71ec874af8f3b9f9abeaacdcd6b07b4e319f53a03a7e5ddda/commonmeta_py-0.183.tar.gz", hash = "sha256:e84385e94b9f4dda020b7d00e8c53f230140efca61c0d26ea36c24158b61ed29", size = 296084, upload-time = "2025-10-06T19:28:30.526Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/41/d9/d3b12e84df186740ceb4060e1b53b9e3233ae454ba168037355b319b6a57/commonmeta_py-0.178-py3-none-any.whl", hash = "sha256:d82285b4ed075453a9de318ec5520f1f4c679e5462080c19c8df610daf63eeb2", size = 351380, upload-time = "2025-09-28T11:26:30.825Z" },
+    { url = "https://files.pythonhosted.org/packages/9f/80/114c2e5de4772074ae2720441d90c870be9dbbbe23a4f96dc889e27f6ad7/commonmeta_py-0.183-py3-none-any.whl", hash = "sha256:4062148271f94f411ff3411b78762b6a8a968d375bcc116bc2a033432bd2ae4d", size = 359056, upload-time = "2025-10-06T19:28:28.635Z" },
 ]
 
 [[package]]
@@ -1982,7 +1980,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "19.5.6"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#e5f13cbd342c5b0f3bdbab88481e714611f50116" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration#f7542c0663b0497adf5f085a764c5ff024b58719" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -3670,11 +3668,11 @@ sdist = { url = "https://files.pythonhosted.org/packages/7c/65/cb04188154f7626e8
 
 [[package]]
 name = "python-json-logger"
-version = "3.3.0"
+version = "4.0.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/9e/de/d3144a0bceede957f961e975f3752760fbe390d57fbe194baf709d8f1f7b/python_json_logger-3.3.0.tar.gz", hash = "sha256:12b7e74b17775e7d565129296105bbe3910842d9d0eb083fc83a6a617aa8df84", size = 16642, upload-time = "2025-03-07T07:08:27.301Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/29/bf/eca6a3d43db1dae7070f70e160ab20b807627ba953663ba07928cdd3dc58/python_json_logger-4.0.0.tar.gz", hash = "sha256:f58e68eb46e1faed27e0f574a55a0455eecd7b8a5b88b85a784519ba3cff047f", size = 17683, upload-time = "2025-10-06T04:15:18.984Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/08/20/0f2523b9e50a8052bc6a8b732dfc8568abbdc42010aef03a2d750bdab3b2/python_json_logger-3.3.0-py3-none-any.whl", hash = "sha256:dd980fae8cffb24c13caf6e158d3d61c0d6d22342f932cb6e9deedab3d35eec7", size = 15163, upload-time = "2025-03-07T07:08:25.627Z" },
+    { url = "https://files.pythonhosted.org/packages/51/e5/fecf13f06e5e5f67e8837d777d1bc43fac0ed2b77a676804df5c34744727/python_json_logger-4.0.0-py3-none-any.whl", hash = "sha256:af09c9daf6a813aa4cc7180395f50f2a9e5fa056034c9953aec92e381c5ba1e2", size = 15548, upload-time = "2025-10-06T04:15:17.553Z" },
 ]
 
 [[package]]
@@ -4031,7 +4029,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.178" },
+    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.183" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = "==13.0.2" },
     { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref-doi-registration" },
