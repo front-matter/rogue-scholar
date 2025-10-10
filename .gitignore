@@ -167,3 +167,4 @@ config/master.key
 
 !clickhouse/logs.xml
 !clickhouse/ipv4-only.xml
+node_modules
