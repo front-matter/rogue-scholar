@@ -27,6 +27,7 @@ env:
   clear:
     INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
     INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
+    INVENIO_LOGGING_CONSOLE_LEVEL: DEBUG
     # accessories db, cache, search
     POSTGRES_DB: staging
     INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/12
@@ -56,5 +57,7 @@ env:
     # oauth authentication
     - INVENIO_POCKETID_APP_CREDENTIALS_CONSUMER_KEY
     - INVENIO_POCKETID_APP_CREDENTIALS_CONSUMER_SECRET
+    - INVENIO_ORCID_APP_CREDENTIALS_CONSUMER_KEY
+    - INVENIO_ORCID_APP_CREDENTIALS_CONSUMER_SECRET
 
 deploy_timeout: 180

@@ -7,16 +7,17 @@ readme = "README.md"
 requires-python = ">=3.13"
 license = "MIT"
 dependencies = [
-    "invenio-app-rdm==14.0.0b1.dev4",
+    "invenio-app-rdm",
     "invenio-search[opensearch2]>=3.0.0",
     "invenio-rdm-records",
     "invenio-previewer>=3.3.0,<3.4.0",
-    "sentry-sdk>=1.45,<2.0.0",
     "gunicorn~=23.0.0",
 ]
 
 [tool.uv.sources]
+invenio-app-rdm = { git = "https://github.com/front-matter/invenio-app-rdm", branch = "roguescholar" }
 invenio-rdm-records = { git = "https://github.com/front-matter/invenio-rdm-records", branch = "crossref_pid_provider" }
+invenio-pages = { git = "https://github.com/front-matter/invenio-pages", branch = "idempotent-migrations" }
 
 [build-system]
 requires = ["hatchling"]

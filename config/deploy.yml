@@ -42,6 +42,7 @@ env:
     INVENIO_SITE_API_URL: https://rogue-scholar.org/api
     INVENIO_WSGI_PROXIES: 4
     INVENIO_DATADIR: /opt/invenio/var/instance/data
+    INVENIO_LOGGING_CONSOLE_LEVEL: ERROR
     # accessories db, cache, search
     POSTGRES_DB: scholar
     INVENIO_CACHE_TYPE: redis
