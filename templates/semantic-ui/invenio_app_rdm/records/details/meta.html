@@ -1,0 +1,38 @@
+{#
+Copyright (C) 2020-2025 CERN.
+Copyright (C) 2020 Northwestern University.
+Copyright (C) 2021 New York University.
+Copyright (C) 2023 Front Matter.
+
+Invenio App RDM is free software; you can redistribute it and/or modify
+it under the terms of the MIT License; see LICENSE file for more details.
+#}
+
+{%- from "invenio_formatter/macros/meta.html" import meta_twittercard, meta_opengraph, meta_highwire -%}
+
+{%- set meta_title = record_ui["metadata"]["title"]|striptags -%}
+{%- set meta_description = record_ui["metadata"]["description"]|striptags -%}
+{%- set meta_authors = record_ui["metadata"]["creators"]|map(attribute='person_or_org')|map(attribute='name') -%}
+{%- set url_identifier = record_ui["metadata"]["identifiers"]|selectattr("scheme", "equalto", "url")|first -%}
+{%- set url = url_identifier["identifier"] if url_identifier else record_ui["pids"]["doi"]["identifier"]|pid_url('doi') -%}
+{%- set files = record_ui["files"] %}
+
+{{- meta_highwire(meta_title,meta_description,authors=meta_authors,publisher=meta_publisher,publication_date=record_ui["publication_date"]|from_isodate,doi=record_ui["pids"].get("doi", {}).get("identifier"),keywords=record_ui["metadata"]["subjects"] | map(attribute="subject"),url=url) }}
+{{- meta_opengraph(meta_title, meta_description, url=url) }}
+{{- meta_twittercard(meta_title, meta_description) }}
+
+{%- if permissions.can_read_files -%}
+  {%- for file_name, file in files.entries.items() or {} -%}
+    {%- set file_url = url_for("invenio_app_rdm_records.record_file_download", pid_value=record_ui["id"], filename=file_name,
+_external=True) %}
+    {##}
+    {%- if file.ext == "pdf" %}
+      <meta name="citation_pdf_url" content="{{ file_url }}"/>
+    {%- endif %}
+    <link rel="alternate" type="{{ file.mimetype }}" href="{{ file_url }}">
+    {#- See https://signposting.org/FAIR/ #}
+    <link rel="item" type="{{ file.mimetype }}" href="{{ file_url }}">
+  {%- endfor %}
+{% endif %}
+
+<link rel="canonical" href="{{ url }}">
