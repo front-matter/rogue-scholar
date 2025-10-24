@@ -150,6 +150,14 @@
     en: Supervisor
     sv: Handledare
     de: SupervisorIn
+- id: translator
+  props:
+    datacite: Other
+    marc: oth
+  title:
+    en: Translator
+    sv: Översättare
+    de: Übersetzer
 - id: workpackageleader
   props:
     datacite: WorkPackageLeader
