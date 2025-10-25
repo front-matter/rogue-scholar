@@ -54,6 +54,14 @@
     en: Hosting institution
     sv: Värdinstitution
     de: Bereitstellende Institution
+- id: interviewee
+  props:
+    datacite: other
+    marc: oth
+  title:
+    en: Interviewee
+    sv: Intervjuad
+    de: Interviewte(r)
 - id: producer
   props:
     datacite: Producer
