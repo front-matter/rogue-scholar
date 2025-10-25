@@ -2,49 +2,34 @@
   Copyright (C) 2020-2024 CERN.
   Copyright (C) 2020 Northwestern University.
   Copyright (C) 2021 TU Wien.
+  Copyright (C) 2025 Front Matter.
 
   Invenio RDM Records is free software; you can redistribute it and/or modify
   it under the terms of the MIT License; see LICENSE file for more details.
 #}
 
 {%- from "invenio_app_rdm/records/macros/creatibutors.html" import affiliations_accordion, show_creatibutors %}
+{# Merge creators and contributors into one list #}
+{%- set creators = record_ui["ui"].get("creators", {}).get("creators", []) -%}
+{%- set contributors = record_ui["ui"].get("contributors", {}).get("contributors", []) -%}
+{%- set all_creatibutors = creators + contributors -%}
 
 <div class="ui grid">
-  {% if record_ui["ui"]["creators"] and record_ui["ui"]["creators"]["creators"] %}
+  {% if all_creatibutors %}
     <div class="row ui accordion affiliations">
       <div class="sixteen wide mobile twelve wide tablet thirteen wide computer column">
-          <h3 class="sr-only">{{ _('Creators') }}</h3>
+          <h3 class="sr-only">{{ _('Creators & Contributors') }}</h3>
           <ul class="creatibutors">
-            {{ show_creatibutors(record_ui["ui"]["creators"]["creators"], show_affiliations=True, show_role=True) }}
+            {{ show_creatibutors(all_creatibutors, show_affiliations=True, show_role=True) }}
           </ul>
       </div>
-
-        {# Todo: get full list of all affiliations (both creators & contributors) e.g.
-        record_ui["ui"]["affiliation"] and merge to one accordion #}
-        {% if record_ui["ui"]["creators"] and record_ui["ui"]["creators"]["affiliations"] %}
-          {{ affiliations_accordion('creators', record_ui["ui"]["creators"]["affiliations"])}}
-        {% endif %}
-
-    </div>
-  {% endif %}
-
-  {% if record_ui["ui"]["contributors"] and record_ui["ui"]["contributors"]["contributors"] %}
-    <div class="row ui accordion affiliations">
-      <div class="sixteen wide mobile twelve wide tablet thirteen wide computer column">
-          {%- for group in record_ui["ui"]["contributors"]["contributors"]|groupby('role.title')%}
-          <div>
-            <h3 class="creatibutors-header ui small header">{{group.grouper}}{%- if group.list|length > 1 -%}s{%- endif -%}:</h3>
-            <ul class="creatibutors">
-              {{ show_creatibutors(group.list, show_affiliations=True, type="contributors") }}
-            </ul>
-          </div>
-          {%- endfor %}
-      </div>
-
-      {% if record_ui["ui"]["contributors"] and record_ui["ui"]["contributors"]["affiliations"] %}
-        {{ affiliations_accordion('contributors', record_ui["ui"]["contributors"]["affiliations"])}}
+      {# Affiliations: merge both creators and contributors affiliations if needed #}
+      {% set creator_affiliations = record_ui["ui"].get("creators", {}).get("affiliations", []) %}
+      {% set contributor_affiliations = record_ui["ui"].get("contributors", {}).get("affiliations", []) %}
+      {% set all_affiliations = creator_affiliations + contributor_affiliations %}
+      {% if all_affiliations %}
+        {{ affiliations_accordion('creatibutors', all_affiliations) }}
       {% endif %}
-
     </div>
   {% endif %}
 </div>
