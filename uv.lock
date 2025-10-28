@@ -222,14 +222,14 @@ wheels = [
 
 [[package]]
 name = "bleach"
-version = "6.2.0"
+version = "6.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "webencodings" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/76/9a/0e33f5054c54d349ea62c277191c020c2d6ef1d65ab2cb1993f91ec846d1/bleach-6.2.0.tar.gz", hash = "sha256:123e894118b8a599fd80d3ec1a6d4cc7ce4e5882b1317a7e1ba69b56e95f991f", size = 203083, upload-time = "2024-10-29T18:30:40.477Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/07/18/3c8523962314be6bf4c8989c79ad9531c825210dd13a8669f6b84336e8bd/bleach-6.3.0.tar.gz", hash = "sha256:6f3b91b1c0a02bb9a78b5a454c92506aa0fdf197e1d5e114d2e00c6f64306d22", size = 203533, upload-time = "2025-10-27T17:57:39.211Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/fc/55/96142937f66150805c25c4d0f31ee4132fd33497753400734f9dfdcbdc66/bleach-6.2.0-py3-none-any.whl", hash = "sha256:117d9c6097a7c3d22fd578fcd8d35ff1e125df6736f554da4e432fdd63f31e5e", size = 163406, upload-time = "2024-10-29T18:30:38.186Z" },
+    { url = "https://files.pythonhosted.org/packages/cd/3a/577b549de0cc09d95f11087ee63c739bba856cd3952697eec4c4bb91350a/bleach-6.3.0-py3-none-any.whl", hash = "sha256:fe10ec77c93ddf3d13a73b035abaac7a9f5e436513864ccdad516693213c65d6", size = 164437, upload-time = "2025-10-27T17:57:37.538Z" },
 ]
 
 [package.optional-dependencies]
@@ -513,7 +513,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.190"
+version = "0.191"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -548,9 +548,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/32/1c/9298a02f4083b24696d699e18249d84c392b4433f5f3cf63494f9b379820/commonmeta_py-0.190.tar.gz", hash = "sha256:71c372e594f6e60d400f75c58dd77e384dcbee0f8f8b328920876010cdaab4a6", size = 297618, upload-time = "2025-10-25T11:59:42.476Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/57/24/a40990e35177703044bcd732b350a838d6fa4e23cd03bf8f7a6dbddfab40/commonmeta_py-0.191.tar.gz", hash = "sha256:1bf2f9a5f7a2f27941c57641d6ec0552a29c899e49e4b38f12e9dca7d04b61f5", size = 297652, upload-time = "2025-10-25T14:04:07.121Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/29/64/dad4541cba5b4c297457929cc934d8b801cefcf1ec30444ff59ac628158e/commonmeta_py-0.190-py3-none-any.whl", hash = "sha256:db0348540ce7a6263776c091c993be7601a4f935c5f838ad031f508c6f35345d", size = 360175, upload-time = "2025-10-25T11:59:40.073Z" },
+    { url = "https://files.pythonhosted.org/packages/fa/e5/3fad49298280612d839acffecdefa31682f70d596a7275a8f908ee9632ed/commonmeta_py-0.191-py3-none-any.whl", hash = "sha256:76b38d166d88e3732d195b86e0f7fe6b0aed50e79a1b134f5443df3545951919", size = 360218, upload-time = "2025-10-25T14:04:05.272Z" },
 ]
 
 [[package]]
@@ -2230,7 +2230,7 @@ wheels = [
 
 [[package]]
 name = "invenio-theme"
-version = "4.4.2"
+version = "4.4.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "flask-menu" },
@@ -2239,9 +2239,9 @@ dependencies = [
     { name = "invenio-i18n" },
     { name = "jsmin" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/94/64/7ee70ea53c5f4f1bc2a524213dd3977681787b5bf365dac8e98c891cb2e0/invenio_theme-4.4.2.tar.gz", hash = "sha256:33788a66e56cd5e3b5dc8b60304832b5ce3d74ab25fd3d5fa26f2ac68210801c", size = 4438147, upload-time = "2025-10-22T16:25:18.837Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/96/2f/89c6bb0b32c342d14ac878c8e3064bb30e35fc711b987d3630f24c4adaee/invenio_theme-4.4.3.tar.gz", hash = "sha256:f177db9297c549f119ff329ae2a5152f4a3dfe4279faba92ef60da3b133cc731", size = 4438280, upload-time = "2025-10-27T13:39:06.3Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d0/3b/b0fa20f4627adcce41bb43b0cdb49aaf3fba3f2badb742f87c1fae30c008/invenio_theme-4.4.2-py2.py3-none-any.whl", hash = "sha256:32decd1870723eeabda8c03827b42df293ab9e40357595bc7494b22971fdad79", size = 4567070, upload-time = "2025-10-22T16:25:17.17Z" },
+    { url = "https://files.pythonhosted.org/packages/77/54/4720c5e88594e395e43f9f2192655357b72c66969efcbe7130d4c86c6607/invenio_theme-4.4.3-py2.py3-none-any.whl", hash = "sha256:f513d7aecdb4418e078f6992d9823a92131c97f72d9e91fdeca2683a65cb38a3", size = 4567206, upload-time = "2025-10-27T13:39:04.154Z" },
 ]
 
 [[package]]
@@ -2312,7 +2312,7 @@ wheels = [
 
 [[package]]
 name = "ipykernel"
-version = "7.0.1"
+version = "7.1.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "appnope", marker = "sys_platform == 'darwin'" },
@@ -2329,9 +2329,9 @@ dependencies = [
     { name = "tornado" },
     { name = "traitlets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a8/4c/9f0024c8457286c6bfd5405a15d650ec5ea36f420ef9bbc58b301f66cfc5/ipykernel-7.0.1.tar.gz", hash = "sha256:2d3fd7cdef22071c2abbad78f142b743228c5d59cd470d034871ae0ac359533c", size = 171460, upload-time = "2025-10-14T16:17:07.325Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/b9/a4/4948be6eb88628505b83a1f2f40d90254cab66abf2043b3c40fa07dfce0f/ipykernel-7.1.0.tar.gz", hash = "sha256:58a3fc88533d5930c3546dc7eac66c6d288acde4f801e2001e65edc5dc9cf0db", size = 174579, upload-time = "2025-10-27T09:46:39.471Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b8/f7/761037905ffdec673533bfa43af8d4c31c859c778dfc3bbb71899875ec18/ipykernel-7.0.1-py3-none-any.whl", hash = "sha256:87182a8305e28954b6721087dec45b171712610111d494c17bb607befa1c4000", size = 118157, upload-time = "2025-10-14T16:17:05.606Z" },
+    { url = "https://files.pythonhosted.org/packages/a3/17/20c2552266728ceba271967b87919664ecc0e33efca29c3efc6baf88c5f9/ipykernel-7.1.0-py3-none-any.whl", hash = "sha256:763b5ec6c5b7776f6a8d7ce09b267693b4e5ce75cb50ae696aaefb3c85e1ea4c", size = 117968, upload-time = "2025-10-27T09:46:37.805Z" },
 ]
 
 [[package]]
@@ -2779,11 +2779,11 @@ wheels = [
 
 [[package]]
 name = "lark"
-version = "1.3.0"
+version = "1.3.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/1d/37/a13baf0135f348af608c667633cbe5d13aa2c5c15a56ae9ad3e6cba45ae3/lark-1.3.0.tar.gz", hash = "sha256:9a3839d0ca5e1faf7cfa3460e420e859b66bcbde05b634e73c369c8244c5fa48", size = 259551, upload-time = "2025-09-22T13:45:05.072Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/da/34/28fff3ab31ccff1fd4f6c7c7b0ceb2b6968d8ea4950663eadcb5720591a0/lark-1.3.1.tar.gz", hash = "sha256:b426a7a6d6d53189d318f2b6236ab5d6429eaf09259f1ca33eb716eed10d2905", size = 382732, upload-time = "2025-10-27T18:25:56.653Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a8/3e/1c6b43277de64fc3c0333b0e72ab7b52ddaaea205210d60d9b9f83c3d0c7/lark-1.3.0-py3-none-any.whl", hash = "sha256:80661f261fb2584a9828a097a2432efd575af27d20be0fd35d17f0fe37253831", size = 113002, upload-time = "2025-09-22T13:45:03.747Z" },
+    { url = "https://files.pythonhosted.org/packages/82/3d/14ce75ef66813643812f3093ab17e46d3a206942ce7376d31ec2d36229e7/lark-1.3.1-py3-none-any.whl", hash = "sha256:c629b661023a014c37da873b4ff58a817398d12635d3bbb2c5a03be7fe5d1e12", size = 113151, upload-time = "2025-10-27T18:25:54.882Z" },
 ]
 
 [[package]]
@@ -3868,11 +3868,11 @@ wheels = [
 
 [[package]]
 name = "redis"
-version = "7.0.0"
+version = "7.0.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/d2/0e/80de0c7d9b04360331906b6b713a967e6523d155a92090983eba2e99302e/redis-7.0.0.tar.gz", hash = "sha256:6546ada54354248a53a47342d36abe6172bb156f23d24f018fda2e3c06b9c97a", size = 4754895, upload-time = "2025-10-22T15:38:36.128Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/57/8f/f125feec0b958e8d22c8f0b492b30b1991d9499a4315dfde466cf4289edc/redis-7.0.1.tar.gz", hash = "sha256:c949df947dca995dc68fdf5a7863950bf6df24f8d6022394585acc98e81624f1", size = 4755322, upload-time = "2025-10-27T14:34:00.33Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/aa/de/68c1add9d9a49588e6f75a149e079e44bab973e748a35e0582ccada09002/redis-7.0.0-py3-none-any.whl", hash = "sha256:1e66c8355b3443af78367c4937484cd875fdf9f5f14e1fed14aa95869e64f6d1", size = 339526, upload-time = "2025-10-22T15:38:34.901Z" },
+    { url = "https://files.pythonhosted.org/packages/e9/97/9f22a33c475cda519f20aba6babb340fb2f2254a02fb947816960d1e669a/redis-7.0.1-py3-none-any.whl", hash = "sha256:4977af3c7d67f8f0eb8b6fec0dafc9605db9343142f634041fb0235f67c0588a", size = 339938, upload-time = "2025-10-27T14:33:58.553Z" },
 ]
 
 [[package]]
@@ -4060,7 +4060,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.190" },
+    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.191" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", git = "https://github.com/front-matter/invenio-app-rdm?branch=roguescholar" },
     { name = "invenio-previewer", specifier = ">=3.3.0,<3.4.0" },

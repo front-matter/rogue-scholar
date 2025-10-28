@@ -17,7 +17,6 @@ dependencies = [
 [tool.uv.sources]
 invenio-app-rdm = { git = "https://github.com/front-matter/invenio-app-rdm", branch = "roguescholar" }
 invenio-rdm-records = { git = "https://github.com/front-matter/invenio-rdm-records", branch = "crossref_pid_provider" }
-invenio-pages = { git = "https://github.com/front-matter/invenio-pages", branch = "idempotent-migrations" }
 
 [build-system]
 requires = ["hatchling"]
@@ -32,4 +31,4 @@ include = ["pyproject.toml", "site/**/*.py"]
 
 [project.optional-dependencies]
 docs = ["quarto-cli~=1.8.25"]
-actions = ["commonmeta-py>=0.190"]
+actions = ["commonmeta-py>=0.191"]
