@@ -142,6 +142,35 @@ accessories:
         - ENCRYPTION_KEY
         - PUID
         - PGID
+  listmonk:
+    image: listmonk/listmonk:v5.1.0
+    host: 176.9.24.117
+    port: "127.0.0.1:9000:9000"
+    proxy:
+      ssl: true
+      host: listmonk.rogue-scholar.org
+      ssl_redirect: true
+      forward_headers: true
+      app_port: 9000
+      healthcheck:
+        path: /
+        interval: 30
+        timeout: 10
+    cmd: sh -c "./listmonk --install --idempotent --yes --config '' && ./listmonk --upgrade --yes --config '' && ./listmonk --config ''"
+    env:
+      clear:
+        LISTMONK_app__address: 0.0.0.0:9000
+        LISTMONK_db__port: 5432
+      secret:
+        - LISTMONK_db__user
+        - LISTMONK_db__password
+        - LISTMONK_db__database
+        - LISTMONK_db__host
+        - LISTMONK_db__ssl_mode
+        - LISTMONK_db__max_open
+        - LISTMONK_db__max_idle
+        - LISTMONK_db__max_lifetime
+        - TZ
   plausible:
     image: ghcr.io/plausible/community-edition:v3.0.1
     host: 176.9.24.117
