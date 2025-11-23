@@ -199,6 +199,8 @@ accessories:
     image: ghcr.io/front-matter/rogue-scholar-bert:v0.5
     host: 176.9.24.117
     port: 5100
+    options:
+      memory: 8g
     proxy:
       ssl: true
       host: bert.rogue-scholar.org
