@@ -196,7 +196,7 @@ accessories:
         - DB_POSTGRESDB_USER
         - DB_POSTGRESDB_PASSWORD
   bert:
-    image: ghcr.io/front-matter/rogue-scholar-bert
+    image: ghcr.io/front-matter/rogue-scholar-bert:v0.3
     host: 176.9.24.117
     port: 5100
     proxy:
