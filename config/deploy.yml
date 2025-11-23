@@ -118,7 +118,7 @@ accessories:
   pocketid:
     image: ghcr.io/pocket-id/pocket-id:v1.7.0
     host: 176.9.24.117
-    port: 1411
+    port: "127.0.0.1:1411:1411"
     proxy:
       ssl: true
       host: auth.rogue-scholar.org
@@ -198,7 +198,7 @@ accessories:
   bert:
     image: ghcr.io/front-matter/rogue-scholar-bert:v0.5
     host: 176.9.24.117
-    port: 5100
+    port: "127.0.0.1:5100:5100"
     options:
       memory: 8g
     proxy:
@@ -217,7 +217,7 @@ accessories:
   plausible:
     image: ghcr.io/plausible/community-edition:v3.0.1
     host: 176.9.24.117
-    port: 8000
+    port: "127.0.0.1:8000:8000"
     cmd: sh -c "/entrypoint.sh db createdb && /entrypoint.sh db migrate && /entrypoint.sh run"
     proxy:
       ssl: true
@@ -250,7 +250,7 @@ accessories:
   events-db:
     image: clickhouse/clickhouse-server:25.7-alpine
     host: 176.9.24.117
-    port: 8123
+    port: "127.0.0.1:8123:8123"
     env:
       secret:
         - CLICKHOUSE_PASSWORD
@@ -269,7 +269,7 @@ accessories:
   monitor:
     image: grafana/alloy:v1.9.2
     host: 176.9.24.117
-    port: 12345
+    port: "127.0.0.1:12345:12345"
     files:
       - config/config.alloy:/etc/alloy/config.alloy
     volumes:

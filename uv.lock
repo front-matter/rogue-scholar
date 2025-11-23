@@ -2165,15 +2165,15 @@ wheels = [
 
 [[package]]
 name = "invenio-search"
-version = "3.1.1"
+version = "3.1.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "dictdiffer" },
     { name = "invenio-base" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/60/c9/654b0d15e332b0c1cd9e5b403d396b4412a1cd377c6bda08badaf3d1ed72/invenio_search-3.1.1.tar.gz", hash = "sha256:2eac5060b32987d82744fec408b25c6ccc5eff4a10d9ea4ef48d16b5305baabc", size = 27989, upload-time = "2025-10-17T07:18:47.019Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/82/51/fc1108453d09cdc5a2c257624e5d7055090b77d49e63a4f921d6d511120c/invenio_search-3.1.2.tar.gz", hash = "sha256:8edfc9eca1506ed841a861231b29ce374770db0862490346cc3d327b8e6dd440", size = 27992, upload-time = "2025-11-20T13:32:40.309Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e8/f2/779a379689c6c16436e3af00118952354e07f578fb0d959c56108abd5c6f/invenio_search-3.1.1-py2.py3-none-any.whl", hash = "sha256:c5fa92cfe2c3db996d1784e22c5e676388065be1984712c382c29d4862d63cb0", size = 26278, upload-time = "2025-10-17T07:18:45.833Z" },
+    { url = "https://files.pythonhosted.org/packages/6f/04/eca8047b8aae592f7e0726debc02bc26ca25b4909c6940b66d2d867957be/invenio_search-3.1.2-py2.py3-none-any.whl", hash = "sha256:5c714fe51d2a103b95725088dad433af6ef531d4a01230d850bfeb50f641ef6c", size = 26272, upload-time = "2025-11-20T13:32:39.319Z" },
 ]
 
 [package.optional-dependencies]
@@ -4048,7 +4048,7 @@ wheels = [
 
 [[package]]
 name = "rogue-scholar"
-version = "14.0.0.0"
+version = "14.0.0.1"
 source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
@@ -4073,7 +4073,7 @@ requires-dist = [
     { name = "invenio-app-rdm", git = "https://github.com/front-matter/invenio-app-rdm?branch=roguescholar" },
     { name = "invenio-previewer", specifier = ">=3.3.0,<3.4.0" },
     { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref_pid_provider" },
-    { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.0.0" },
+    { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.1.2,<3.2.0" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.8.25" },
 ]
 provides-extras = ["docs", "actions"]
