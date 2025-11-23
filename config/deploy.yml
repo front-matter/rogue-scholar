@@ -171,6 +171,47 @@ accessories:
         - LISTMONK_db__max_idle
         - LISTMONK_db__max_lifetime
         - TZ
+  n8n:
+    image: n8nio/n8n:1.121.2
+    host: 176.9.24.117
+    port: "127.0.0.1:5678:5678"
+    proxy:
+      ssl: true
+      host: n8n.rogue-scholar.org
+      ssl_redirect: true
+      forward_headers: true
+      app_port: 5678
+      healthcheck:
+        path: /
+        interval: 30
+        timeout: 10
+    volumes:
+      - n8n_storage:/home/node/.n8n
+    env:
+      secret:
+        - DB_TYPE
+        - DB_POSTGRESDB_HOST
+        - DB_POSTGRESDB_PORT
+        - DB_POSTGRESDB_DATABASE
+        - DB_POSTGRESDB_USER
+        - DB_POSTGRESDB_PASSWORD
+  bert:
+    image: ghcr.io/front-matter/rogue-scholar-bert
+    host: 176.9.24.117
+    port: 5100
+    proxy:
+      ssl: true
+      host: bert.rogue-scholar.org
+      ssl_redirect: true
+      forward_headers: true
+      app_port: 5100
+      healthcheck:
+        path: /heartbeat
+        interval: 30
+        timeout: 10
+    env:
+      secret:
+        - QUART_SERVICE_KEY
   plausible:
     image: ghcr.io/plausible/community-edition:v3.0.1
     host: 176.9.24.117
