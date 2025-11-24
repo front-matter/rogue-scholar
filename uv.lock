@@ -1376,7 +1376,7 @@ wheels = [
 
 [[package]]
 name = "invenio-app-rdm"
-version = "14.0.0b1.dev7"
+version = "14.0.0b1.dev2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cairosvg" },
@@ -1417,9 +1417,9 @@ dependencies = [
     { name = "invenio-theme" },
     { name = "invenio-userprofiles" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/44/a0/735a2f86a4e674e431c246ebac924171f899b81eed129581cea3fdcf7f9d/invenio_app_rdm-14.0.0b1.dev7.tar.gz", hash = "sha256:062bf0dfa8a36612529cd91a4c579604979bff26cbddd0ef84c3e1fe7b6b1b58", size = 725396, upload-time = "2025-11-14T15:21:18.584Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/8d/34/47f495d835a46e16c9628153d9f0e82adf0c67caddda1920987e69c37daf/invenio_app_rdm-14.0.0b1.dev2.tar.gz", hash = "sha256:68b771241e01be2f526de704dcdcf8a39200fae776e5b57388b62140964f2ec1", size = 723450, upload-time = "2025-09-29T12:41:41.022Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9e/35/d8bbc709fc65738a71330907d707aad61b38befb8df7de6983a65eaf8611/invenio_app_rdm-14.0.0b1.dev7-py2.py3-none-any.whl", hash = "sha256:b0ea5052280ee7d871450a40d3e2ade1307dc56b93774ded21aa5728d6e98a37", size = 1157436, upload-time = "2025-11-14T15:21:15.847Z" },
+    { url = "https://files.pythonhosted.org/packages/66/f2/b7b1b261685070b42dd38abd27553613b35fc806f430b363c157c5932107/invenio_app_rdm-14.0.0b1.dev2-py2.py3-none-any.whl", hash = "sha256:b7df880f8ab95ef469e167e48a6e56d52b44edc5efec0a7342d58af04b657aa6", size = 1156845, upload-time = "2025-09-29T12:41:38.537Z" },
 ]
 
 [[package]]
@@ -3758,7 +3758,7 @@ docs = [
 requires-dist = [
     { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.191" },
     { name = "gunicorn", specifier = "~=23.0.0" },
-    { name = "invenio-app-rdm", specifier = "==14.0.0b1.dev7" },
+    { name = "invenio-app-rdm", specifier = "==14.0.0b1.dev2" },
     { name = "invenio-previewer", specifier = ">=3.3.0,<3.4.0" },
     { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref_pid_provider" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.1.2,<3.2.0" },
