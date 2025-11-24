@@ -10,7 +10,6 @@ dependencies = [
     "invenio-app-rdm==14.0.0b1.dev7",
     "invenio-search[opensearch2]>=3.1.2,<3.2.0",
     "invenio-rdm-records",
-    "invenio-previewer>=3.3.0,<3.4.0",
     "gunicorn~=23.0.0",
 ]
 

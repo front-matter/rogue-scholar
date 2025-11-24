@@ -3741,7 +3741,6 @@ source = { editable = "." }
 dependencies = [
     { name = "gunicorn" },
     { name = "invenio-app-rdm" },
-    { name = "invenio-previewer" },
     { name = "invenio-rdm-records" },
     { name = "invenio-search", extra = ["opensearch2"] },
 ]
@@ -3759,7 +3758,6 @@ requires-dist = [
     { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.191" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = "==14.0.0b1.dev7" },
-    { name = "invenio-previewer", specifier = ">=3.3.0,<3.4.0" },
     { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref_pid_provider" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.1.2,<3.2.0" },
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.8.25" },
