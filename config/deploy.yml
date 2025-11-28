@@ -4,8 +4,6 @@ servers:
   web:
     hosts:
       - 176.9.24.117
-    labels:
-      service: inveniordm
     cmd: gunicorn --bind=0.0.0.0:4000 --workers=4 --access-logfile=- --error-logfile=- --log-level=ERROR invenio_app.wsgi:application
   worker:
     hosts:
@@ -195,12 +193,24 @@ accessories:
         - DB_POSTGRESDB_DATABASE
         - DB_POSTGRESDB_USER
         - DB_POSTGRESDB_PASSWORD
+        - GENERIC_TIMEZONE
+        - N8N_EMAIL_MODE
+        - N8N_EMAIL_SMTP_HOST
+        - N8N_EMAIL_SMTP_PORT
+        - N8N_EMAIL_SMTP_USER
+        - N8N_EMAIL_SMTP_PASS
+        - N8N_SMTP_SENDER
+        - N8N_HOST
+        - N8N_PROTOCOL
+        - N8N_PORT
+        - N8N_WEBHOOK_URL
+        - N8N_PROXY_HOPS
+        # - N8N_METRICS
+        # - QUEUE_HEALTH_CHECK_ACTIVE
   bert:
-    image: ghcr.io/front-matter/rogue-scholar-bert:v0.5
+    image: ghcr.io/front-matter/rogue-scholar-bert:v0.6
     host: 176.9.24.117
     port: "127.0.0.1:5100:5100"
-    options:
-      memory: 8g
     proxy:
       ssl: true
       host: bert.rogue-scholar.org
