@@ -7,7 +7,7 @@ readme = "README.md"
 requires-python = ">=3.13,<3.14"
 license = "MIT"
 dependencies = [
-    "invenio-app-rdm==14.0.0b1.dev2",
+    "invenio-app-rdm",
     "invenio-search[opensearch2]>=3.1.2,<3.2.0",
     "invenio-rdm-records",
     "invenio-previewer>=3.3.0,<3.4.0",
@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-# invenio-app-rdm = { git = "https://github.com/front-matter/invenio-app-rdm", branch = "roguescholar" }
+invenio-app-rdm = { git = "https://github.com/front-matter/invenio-app-rdm", branch = "roguescholar" }
 invenio-rdm-records = { git = "https://github.com/front-matter/invenio-rdm-records", branch = "crossref_pid_provider" }
 
 [build-system]
