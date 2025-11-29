@@ -1377,7 +1377,7 @@ wheels = [
 [[package]]
 name = "invenio-app-rdm"
 version = "14.0.0b1.dev2"
-source = { registry = "https://pypi.org/simple" }
+source = { git = "https://github.com/front-matter/invenio-app-rdm?branch=roguescholar#5f009e763d618a6a6cec326ae60f0122a02941dc" }
 dependencies = [
     { name = "cairosvg" },
     { name = "invenio-access" },
@@ -1416,10 +1416,6 @@ dependencies = [
     { name = "invenio-sitemap" },
     { name = "invenio-theme" },
     { name = "invenio-userprofiles" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/8d/34/47f495d835a46e16c9628153d9f0e82adf0c67caddda1920987e69c37daf/invenio_app_rdm-14.0.0b1.dev2.tar.gz", hash = "sha256:68b771241e01be2f526de704dcdcf8a39200fae776e5b57388b62140964f2ec1", size = 723450, upload-time = "2025-09-29T12:41:41.022Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/66/f2/b7b1b261685070b42dd38abd27553613b35fc806f430b363c157c5932107/invenio_app_rdm-14.0.0b1.dev2-py2.py3-none-any.whl", hash = "sha256:b7df880f8ab95ef469e167e48a6e56d52b44edc5efec0a7342d58af04b657aa6", size = 1156845, upload-time = "2025-09-29T12:41:38.537Z" },
 ]
 
 [[package]]
@@ -3758,7 +3754,7 @@ docs = [
 requires-dist = [
     { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.191" },
     { name = "gunicorn", specifier = "~=23.0.0" },
-    { name = "invenio-app-rdm", specifier = "==14.0.0b1.dev2" },
+    { name = "invenio-app-rdm", git = "https://github.com/front-matter/invenio-app-rdm?branch=roguescholar" },
     { name = "invenio-previewer", specifier = ">=3.3.0,<3.4.0" },
     { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref_pid_provider" },
     { name = "invenio-search", extras = ["opensearch2"], specifier = ">=3.1.2,<3.2.0" },
