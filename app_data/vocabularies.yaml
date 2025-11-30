@@ -11,9 +11,18 @@ subjects:
       name: Fields of Science and Technology
       uri: "http://www.oecd.org/science/inno/38235147.pdf"
       data-file: vocabularies/subjects_oecd_fos.yaml
-    - id: openalex
+    - id: Domains
+      uri: "https://openalex.org/domains/"
+      data-file: vocabularies/subjects_domains.yaml
+    - id: Fields
+      uri: "https://openalex.org/fields/"
+      data-file: vocabularies/subjects_fields.yaml
+    - id: Subfields
       uri: "https://openalex.org/subfields/"
-      data-file: vocabularies/subjects_openalex.yaml
+      data-file: vocabularies/subjects_subfields.yaml
+    - id: Topics
+      uri: "https://openalex.org/topics/"
+      data-file: vocabularies/subjects_topics.yaml
 licenses:
   pid-type: lic
   data-file: vocabularies/licences.csv
