@@ -1,0 +1,7 @@
+{
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/octobercms/october/master/modules/system/assets/json/schemas/fields.json": []
+  },
+  "yaml.validate": false,
+  "yaml.customTags": ["!reference sequence"]
+}
