@@ -24,7 +24,7 @@
 .ui.segment.rdm-sidebar {
   > h2.ui.small.header,
   > .header {
-    margin-bottom: 0.rem;
+    margin-bottom: 0;
     padding-bottom: 0;
   }
 }
