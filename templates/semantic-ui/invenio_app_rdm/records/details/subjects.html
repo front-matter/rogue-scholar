@@ -1,0 +1,52 @@
+{#
+  Copyright (C) 2020 CERN.
+  Copyright (C) 2020-2022 Northwestern University.
+  Copyright (C) 2021 New York University.
+
+  Invenio RDM Records is free software; you can redistribute it and/or modify
+  it under the terms of the MIT License; see LICENSE file for more details.
+#}
+
+{%- set subjects = record_ui["metadata"]["subjects"] -%}
+
+{% if subjects %}
+  {% set keywords = subjects|rejectattr("scheme")|list %}
+  {% if keywords %}
+  <h3 class="hidden">{{ _('Keywords') }}</h3>
+  <ul class="ui horizontal list no-bullets subjects">
+    {%- for subject in keywords %}
+    <li class="item">
+      {%- set q = 'metadata.subjects.subject:"' + subject.subject + '"' %}
+      <a href="{{ url_for('invenio_search_ui.search', q=q) }}"
+          class="subject"
+          title="{{ _('Search results for ') + subject.subject }}"
+      >
+        {{ subject.subject }}
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+  {% endif %}
+
+  {%- for scheme, subjects in subjects|selectattr("scheme")|groupby('scheme')|sort(attribute='scheme') %}
+  <h3 class="ui tiny header">{{scheme}}</h3>
+  <ul class="ui horizontal list no-bullets subjects">
+    {%- for subject in subjects %}
+    <li class="item">
+      {%- set scheme_key = scheme.lower().rstrip('s') %}
+      {%- set scheme_value = subject.id.split('/')[-1] %}
+      {%- if scheme_key == 'topic' %}
+        {%- set scheme_value = scheme_value[1:] %}
+      {%- endif %}
+      {%- set q = scheme_key + ':' + scheme_value %}
+      <a href="{{ url_for('invenio_search_ui.search', q=q) }}"
+         class="subject"
+         title="{{ _('Search results for ') + subject.subject }}"
+      >
+        {{ subject.subject }}
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endfor %}
+{% endif %}

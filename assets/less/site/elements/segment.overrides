@@ -21,14 +21,6 @@
   }
 }
 
-.ui.segment.rdm-sidebar {
-  > h2.ui.small.header,
-  > .header {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-}
-
 .sidebar-container,
 .segment-container,
 .ui.segment.sidebar-container {
@@ -99,6 +91,12 @@
       & > :before {
         background-color: @rdmSidebarSegmentColor;
       }
+    }
+  }
+
+  #keywords-and-subjects {
+    .ui.tiny.header {
+      margin-bottom: 0;
     }
   }
 }
