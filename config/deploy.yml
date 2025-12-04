@@ -208,7 +208,7 @@ accessories:
         # - N8N_METRICS
         # - QUEUE_HEALTH_CHECK_ACTIVE
   bert:
-    image: ghcr.io/front-matter/rogue-scholar-bert:v0.6
+    image: ghcr.io/front-matter/rogue-scholar-bert:v0.10
     host: 176.9.24.117
     port: "127.0.0.1:5100:5100"
     proxy:
