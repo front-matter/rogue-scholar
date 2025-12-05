@@ -1,14 +1,12 @@
-name: Update Rogue Scholar Records
+name: Classify Rogue Scholar Records
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: "*/10 * * * *"
+  schedule:
+    - cron: "*/10 * * * *"
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Update posts
+      - name: Classify posts
         run: |
-          mkdir -p upload
-          curl -X POST -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" "https://api.rogue-scholar.org/blogs/oan/posts?update=all&validate=all&page=999" > upload/posts.json
-          cat upload/posts.json
+          curl -X POST -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" "https://api.rogue-scholar.org/blogs/svpow/posts?update=all&validate=all&classify=all&page=999"
