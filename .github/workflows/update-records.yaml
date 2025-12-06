@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: Classify posts
         run: |
-          curl -X POST -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" "https://api.rogue-scholar.org/blogs/svpow/posts?update=unclassified&validate=all&classify=all&page=999"
+          curl -X POST -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" "https://api.rogue-scholar.org/blogs/iphylo/posts?update=unclassified&validate=all&classify=all&page=999"
