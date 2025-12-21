@@ -20,6 +20,9 @@ importers:
       '@ckeditor/ckeditor5-react':
         specifier: ^2.1.0
         version: 2.1.0(react@16.14.0)
+      '@fortawesome/fontawesome-free':
+        specifier: 5.15.4
+        version: 5.15.4
       '@microlink/react-json-view':
         specifier: ^1.27.0
         version: 1.27.0(@types/react@19.2.2)(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
@@ -1209,6 +1212,10 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
       react-dom: ^16.8.0 || ^17 || ^18
+
+  '@fortawesome/fontawesome-free@5.15.4':
+    resolution: {integrity: sha512-eYm8vijH/hpzr/6/1CJ/V/Eb1xQFW2nnUKArb3z+yUWv7HTwj6M7SP957oMjfZjAHU6qpoNc2wQvIxBLWYa/Jg==}
+    engines: {node: '>=6'}
 
   '@humanwhocodes/config-array@0.13.0':
     resolution: {integrity: sha512-DZLEEqFWQFiyK6h5YIeynKx7JlvCYWL0cImfSRXZ9l4Sg2efkFGTuFf6vzXjK1cq6IYkU+Eg/JizXw+TD2vRNw==}
@@ -6812,6 +6819,8 @@ snapshots:
       react: 16.14.0
       react-dom: 16.14.0(react@16.14.0)
       react-is: 16.13.1
+
+  '@fortawesome/fontawesome-free@5.15.4': {}
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
