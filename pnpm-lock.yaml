@@ -71,9 +71,6 @@ importers:
       flightjs:
         specifier: ~1.5.2
         version: 1.5.2
-      font-awesome:
-        specifier: ~4.5.0
-        version: 4.5.0
       formik:
         specifier: ^2.4.6
         version: 2.4.6(@types/react@19.2.2)(react@16.14.0)
@@ -2091,6 +2088,7 @@ packages:
   bootstrap@3.4.1:
     resolution: {integrity: sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==}
     engines: {node: '>=6'}
+    deprecated: This version of Bootstrap is no longer supported. Please upgrade to the latest version.
 
   brace-expansion@1.1.12:
     resolution: {integrity: sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==}
@@ -3081,10 +3079,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-
-  font-awesome@4.5.0:
-    resolution: {integrity: sha512-XGGY8CN/NT8e5fKOC/K7CESNQ3+2oYOfZqwZcKgEMtcmTiHtFIH+XZWRoU0HtcdwhtSkpWXLfTIUlTdJ4PhX8A==}
-    engines: {node: '>=0.10.3'}
 
   font-awesome@4.7.0:
     resolution: {integrity: sha512-U6kGnykA/6bFmg1M/oT9EkFeIYv7JlX3bozwQJWiiLz6L0w3F5vBVPxHlwyX/vtNq1ckcpRKOB9f2Qal/VtFpg==}
@@ -4695,6 +4689,7 @@ packages:
   raw-body@1.1.7:
     resolution: {integrity: sha512-WmJJU2e9Y6M5UzTOkHaM7xJGAPQD8PNzx3bAd2+uhZAim6wDk6dAZxPVYLF67XhbR4hmKGh33Lpmh4XWrCH5Mg==}
     engines: {node: '>= 0.8.0'}
+    deprecated: No longer maintained. Please upgrade to a stable version.
 
   react-base16-styling@0.6.0:
     resolution: {integrity: sha512-yvh/7CArceR/jNATXOKDlvTnPKPmGZz7zsenQ3jUwLzHkNUR0CvY3yGYJbWJ/nnxsL8Sgmt5cO3/SILVuPO6TQ==}
@@ -9088,8 +9083,6 @@ snapshots:
       - encoding
 
   follow-redirects@1.15.11: {}
-
-  font-awesome@4.5.0: {}
 
   font-awesome@4.7.0: {}
 
