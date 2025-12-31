@@ -84,8 +84,6 @@ env:
     - INVENIO_MAIL_PASSWORD
     - INVENIO_MAIL_USE_TLS
     # Authentication
-    - INVENIO_ORCID_APP_CREDENTIALS_CONSUMER_KEY
-    - INVENIO_ORCID_APP_CREDENTIALS_CONSUMER_SECRET
     - INVENIO_OIDC_ISSUER
     - INVENIO_OIDC_APP_CREDENTIALS_CONSUMER_KEY
     - INVENIO_OIDC_APP_CREDENTIALS_CONSUMER_SECRET
@@ -120,34 +118,6 @@ accessories:
       memory: 4g
       publish:
         - 9600:9600
-  pocketid:
-    image: ghcr.io/pocket-id/pocket-id:v1.7.0
-    host: 176.9.24.117
-    port: "127.0.0.1:1411:1411"
-    proxy:
-      ssl: true
-      host: auth.rogue-scholar.org
-      ssl_redirect: true
-      forward_headers: true
-      app_port: 1411
-      healthcheck:
-        path: /healthz
-        interval: 30
-        timeout: 10
-    directories:
-      - data:/app/data
-    env:
-      clear:
-        APP_URL: https://auth.rogue-scholar.org
-        LOG_LEVEL: debug
-      secret:
-        - DB_PROVIDER
-        - DB_CONNECTION_STRING
-        - TRUST_PROXY
-        - MAXMIND_LICENSE_KEY
-        - ENCRYPTION_KEY
-        - PUID
-        - PGID
   listmonk:
     image: listmonk/listmonk:v5.1.0
     host: 176.9.24.117
