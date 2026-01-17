@@ -17,9 +17,14 @@ import pydash as py_
 
 loaded = load_dotenv()
 
-url: str = environ.get("SUPABASE_URL")
-key: str = environ.get("SUPABASE_ANON_KEY")
-supabase: Client = create_client(url, key)
+supabase_url: str | None = environ.get("SUPABASE_URL")
+supabase_key: str | None = environ.get("SUPABASE_ANON_KEY")
+
+supabase: Client | None
+if supabase_url and supabase_key:
+  supabase = create_client(supabase_url, supabase_key)
+else:
+  supabase = None
 status = ["active", "archived", "expired"]
 
 url = "https://rogue-scholar.org/api/communities?type=blog&size=1"
@@ -65,10 +70,13 @@ response = httpx.get(url)
 result = response.json()
 post_citation_count = f"{(py_.get(result, 'hits.total') / post_count):.2%}"
 
-response = supabase.table("citations").select("*", count="exact").execute()
-citation_count = f"{response.count:,d}"
+if supabase:
+  response = supabase.table("citations").select("*", count="exact").execute()
+  citation_count = f"{response.count:,d}"
 
-response = supabase.table("posts_by_category").select("*").execute()
+  response = supabase.table("posts_by_category").select("*").execute()
+else:
+  citation_count = "0"
 category_parents = {
     "naturalSciences": "naturalSciences",
     "mathematics": "naturalSciences",
@@ -190,8 +198,11 @@ def format_category(d):
 #     format_category(d) for d in response.data if d["category"]
 # ]
 
-response = supabase.table("posts_by_generator").select("*").execute()
-posts_by_generator = [d for d in response.data if d["generator"] != "Other"]
+if supabase:
+  response = supabase.table("posts_by_generator").select("*").execute()
+  posts_by_generator = [d for d in response.data if d["generator"] != "Other"]
+else:
+  posts_by_generator = []
 
 ojs_define(post_count=post_count)
 ojs_define(posts_by_year=posts_by_year)

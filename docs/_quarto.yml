@@ -3,6 +3,9 @@ project:
   output-dir: _site
   preview:
     port: 4500
+  render:
+    - "*.qmd"
+    - "!activate/**"
 
 execute:
   freeze: true
