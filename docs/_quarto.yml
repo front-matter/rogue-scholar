@@ -3,8 +3,12 @@ project:
   output-dir: _site
   preview:
     port: 4500
+
 execute:
   freeze: true
+  # Execute Python via this Jupyter kernel name.
+  # Keeps Quarto independent of any removed Homebrew Python installs.
+  kernel: rogue-scholar
 website:
   title: "Rogue Scholar Documentation"
   favicon: favicon.ico
