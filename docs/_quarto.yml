@@ -57,7 +57,11 @@ format:
     toc-location: right
     include-in-header:
       text: |
-        <script defer data-domain="docs.rogue-scholar.org" src="https://plausible.rogue-scholar.org/js/script.js"></script>
+        <script async src="https://plausible.front-matter.de/js/pa-VEqoiqOwSynRPtmJoUE6d.js"></script>
+        <script>
+          window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+          plausible.init()
+        </script>
     comments:
       giscus:
         repo: front-matter/rogue-scholar
