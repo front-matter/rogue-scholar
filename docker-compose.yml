@@ -49,7 +49,7 @@ services:
       - INVENIO_BROKER_URL=${INVENIO_BROKER_URL:-redis://cache:6379/5}
       - INVENIO_CELERY_BROKER_URL=${INVENIO_CELERY_BROKER_URL:-redis://cache:6379/5}
 
-      - INVENIO_WSGI_PROXIES=4
+      - INVENIO_WSGI_PROXIES=1
       - INVENIO_SECRET_KEY=${INVENIO_SECRET_KEY:-changeme}
 
       # Invenio-I18N
