@@ -71,9 +71,6 @@ importers:
       flightjs:
         specifier: ~1.5.2
         version: 1.5.2
-      font-awesome:
-        specifier: ~4.5.0
-        version: 4.5.0
       formik:
         specifier: ^2.4.6
         version: 2.4.6(@types/react@19.2.2)(react@16.14.0)
@@ -3081,10 +3078,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-
-  font-awesome@4.5.0:
-    resolution: {integrity: sha512-XGGY8CN/NT8e5fKOC/K7CESNQ3+2oYOfZqwZcKgEMtcmTiHtFIH+XZWRoU0HtcdwhtSkpWXLfTIUlTdJ4PhX8A==}
-    engines: {node: '>=0.10.3'}
 
   font-awesome@4.7.0:
     resolution: {integrity: sha512-U6kGnykA/6bFmg1M/oT9EkFeIYv7JlX3bozwQJWiiLz6L0w3F5vBVPxHlwyX/vtNq1ckcpRKOB9f2Qal/VtFpg==}
@@ -9088,8 +9081,6 @@ snapshots:
       - encoding
 
   follow-redirects@1.15.11: {}
-
-  font-awesome@4.5.0: {}
 
   font-awesome@4.7.0: {}
 
