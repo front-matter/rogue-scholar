@@ -1,5 +1,5 @@
 name: Update Blogs
-on: 
+on:
   workflow_dispatch:
   schedule:
     - cron: "30 7 * * *"
@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: update Rogue Scholar blogs
         run: |
-          curl -X POST https://api.rogue-scholar.org/blogs -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}"
+          curl -X POST https://api.rogue-scholar.org/blogs -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" --insecure
