@@ -157,7 +157,7 @@ services:
     ports:
       - "6379:6379"
   db:
-    image: paradedb/paradedb:0.15.22-pg17
+    image: postgres:17.4-bookworm
     restart: "unless-stopped"
     environment:
       - POSTGRES_USER=${POSTGRES_USER:-inveniordm}
