@@ -13,7 +13,7 @@
 
 services:
   proxy:
-    image: caddy:2.8.4
+    image: caddy:2.10
     restart: "unless-stopped"
     ports:
       - "80:80"
