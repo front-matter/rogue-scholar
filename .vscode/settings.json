@@ -3,5 +3,9 @@
     "https://raw.githubusercontent.com/octobercms/october/master/modules/system/assets/json/schemas/fields.json": []
   },
   "yaml.validate": false,
-  "yaml.customTags": ["!reference sequence"]
+  "yaml.customTags": ["!reference sequence"],
+  "i18n-ally.localesPaths": [
+    "docs/activate/lib/python3.13/site-packages/jedi/third_party/django-stubs/django-stubs/conf/locale",
+    "docs/activate/lib/python3.13/site-packages/jedi/third_party/django-stubs/django-stubs/contrib/messages"
+  ]
 }
