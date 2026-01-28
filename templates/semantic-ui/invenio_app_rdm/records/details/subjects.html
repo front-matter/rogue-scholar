@@ -35,12 +35,12 @@
     <li class="item">
       {%- set scheme_key = scheme.lower().rstrip('s') %}
       {%- if scheme_key == 'fo' %}
-        {%- set scheme_key = 'ford' %}
+        {%- set scheme_key = 'fos' %}
       {%- endif %}
       {%- set scheme_value = subject.id.split('/')[-1] %}
       {%- if scheme_key == 'topic' %}
         {%- set scheme_value = scheme_value[1:] %}
-      {%- elif scheme_key == 'ford' %}
+      {%- elif scheme_key == 'fos' %}
         {%- set scheme_value = subject.id.split('?')[-1] %}
       {%- endif %}
       {%- set q = scheme_key + ':' + scheme_value %}
