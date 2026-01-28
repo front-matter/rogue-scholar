@@ -17,7 +17,7 @@
     {%- for subject in keywords %}
     <li class="item">
       {%- set q = 'metadata.subjects.subject:"' + subject.subject + '"' %}
-      <a href="{{ url_for('invenio_search_ui.search', q=q) }}"
+      <a href="{{ url_for('invenio_search_ui.search', q=q, sort='newest') }}"
           class="subject"
           title="{{ _('Search results for ') + subject.subject }}"
       >
@@ -44,7 +44,7 @@
         {%- set scheme_value = subject.id.split('?')[-1] %}
       {%- endif %}
       {%- set q = scheme_key + ':' + scheme_value %}
-      <a href="{{ url_for('invenio_search_ui.search', q=q) }}"
+      <a href="{{ url_for('invenio_search_ui.search', q=q, sort='newest') }}"
          class="subject"
          title="{{ _('Search results for ') + subject.subject }}"
       >
