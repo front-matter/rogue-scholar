@@ -1,8 +1,8 @@
 #!/bin/bash
+# Entrypoint script for InvenioRDM
+set -e
 
-echo "-- Setup InvenioRDM --"
-
-# Creating database...
+# Creating database and tables if they do not exist...
 invenio db init create
 
 # Creating files location...
@@ -20,8 +20,7 @@ invenio access allow administration-access role administration
 invenio roles create administration-moderation
 invenio access allow administration-moderation role administration-moderation
 
-# Dropping and re-creating indices...
-invenio index destroy --force --yes-i-know
+# Creating indices if they do not exist...
 invenio index init
 
 # Creating custom fields for records...
@@ -39,4 +38,4 @@ invenio rdm rebuild-all-indices
 # Declaring queues...
 invenio queues declare
 
-echo "-- Setup completed --"
+exec "$@"

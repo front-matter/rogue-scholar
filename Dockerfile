@@ -104,11 +104,8 @@ COPY --from=builder --chown=invenio:root ${INVENIO_INSTANCE_PATH}/app_data ${INV
 COPY --from=builder --chown=invenio:root ${INVENIO_INSTANCE_PATH}/translations ${INVENIO_INSTANCE_PATH}/translations
 COPY --from=builder --chown=invenio:root ${INVENIO_INSTANCE_PATH}/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
 COPY ./Caddyfile /etc/caddy/Caddyfile
-
-COPY ./setup.sh /opt/invenio/.venv/bin/setup.sh
+COPY --chown=invenio:root --chmod=0755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
 
 WORKDIR ${WORKING_DIR}/src
-
-# USER invenio
 
 CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:4000", "--workers", "2", "--threads", "4", "--timeout", "60", "--access-logfile", "-", "--error-logfile", "-", "--log-level", "ERROR"]
