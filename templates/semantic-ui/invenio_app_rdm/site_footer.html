@@ -15,7 +15,7 @@
           {{ _("Powered by") }}
           <a href="http://inveniosoftware.org/products/rdm">{{ _("InvenioRDM") }}</a>
           {%- if config.INVENIO_APP_RDM_VERSION %}
-          <a class="ui grey tiny label" href="https://pypi.org/project/invenio-app-rdm/{{ config.INVENIO_APP_RDM_VERSION }}/">{{ config.INVENIO_APP_RDM_VERSION }}</a>
+          <a class="ui padded text-muted" href="https://pypi.org/project/invenio-app-rdm/{{ config.INVENIO_APP_RDM_VERSION }}/">{{ config.INVENIO_APP_RDM_VERSION }}</a>
           {%- endif %}
         {%- endblock footer_bottom_left %}
       </div>
