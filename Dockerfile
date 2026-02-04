@@ -136,7 +136,7 @@ COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/app_data ${INVENIO_I
 COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/translations ${INVENIO_INSTANCE_PATH}/translations
 COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
 COPY --chown=1654:0 ./Caddyfile /etc/caddy/Caddyfile
-COPY --chown=1654:0 --chmod=755 ./entrypoint.sh ${INVENIO_INSTANCE_PATH}/entrypoint.sh
+COPY --chown=1654:0 --chmod=755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
 
 # Declare volumes for persistent data
 VOLUME ["/opt/invenio/var/instance/data", "/opt/invenio/var/instance/archive"]

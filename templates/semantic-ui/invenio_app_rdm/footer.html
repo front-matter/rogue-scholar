@@ -14,7 +14,7 @@
     <div class="ui container app-rdm-footer">
       {%- block footer_top_left %}
         <div class="ui grid app-rdm-footer">
-        <div class="rdm-footer five wide tablet two wide computer column">
+        <div class="rdm-footer four wide computer column">
           <h2 class="ui small header">{{ _ ("About") }}</h2>
           {% trans rogue_scholar_overview="/about" %}
             <p><a href="{{ rogue_scholar_overview }}" target="_blank">Overview</a></p>
@@ -29,7 +29,7 @@
           <p><a href="{{ rogue_scholar_register }}" target="_blank">Register Your Blog</a></p>
         {% endtrans %}
         </div>
-        <div class="rdm-footer five wide tablet two wide computer column">
+        <div class="rdm-footer four wide computer column">
           <h2 class="ui small header">{{ _ ("Community") }}</h2>
           {% trans rogue_scholar_board="/board" %}
             <p><a href="{{ rogue_scholar_board }}" target="_blank">Advisory Board</a></p>
@@ -44,7 +44,7 @@
             <p><a href="{{ rogue_scholar_discord }}" target="_blank">Slack Community</a></p>
           {% endtrans %}
         </div>
-        <div class="rdm-footer five wide tablet two wide computer column">
+        <div class="rdm-footer four wide computer column">
           <h2 class="ui small header">{{ _("Support") }}</h2>
           {% trans rogue_scholar_donate="https://ko-fi.com/rogue_scholar" %}
             <p><a href="{{ rogue_scholar_donate }}" target="_blank">Donate</a></p>
@@ -58,7 +58,7 @@
         </div>
 
       {%- endblock footer_top_left %}
-      <div class="six wide column right aligned">
+      <div class="four wide column right aligned">
         {%- block footer_top_right %}
         {%- endblock footer_top_right %}
       </div>
