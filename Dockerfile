@@ -1,5 +1,9 @@
 FROM python:3.13.11-bookworm AS builder
 LABEL maintainer="Front Matter <info@front-matter.de>"
+LABEL org.opencontainers.image.source="https://github.com/front-matter/rogue-scholar"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.title="Rogue Scholar"
+LABEL org.opencontainers.image.description="Rogue Scholar is a science blog archive based on the InvenioRDM repository software."
 
 # Dockerfile that builds the Rogue Scholar Docker image.
 
@@ -10,7 +14,11 @@ ENV LANG=en_US.UTF-8 \
 RUN --mount=type=cache,sharing=locked,target=/var/cache/apt \
     apt-get update --fix-missing && \
     apt-get install -y build-essential libssl-dev libffi-dev \
-    python3-dev cargo pkg-config curl --no-install-recommends && \
+    python3-dev cargo pkg-config curl \
+    libcairo2-dev libpango1.0-dev libgdk-pixbuf2.0-dev \
+    libxml2-dev libxslt1-dev libpq-dev libjpeg-dev \
+    libwebp-dev libtiff-dev libcurl4-openssl-dev \
+    --no-install-recommends && \
     curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
     apt-get install -y nodejs --no-install-recommends && \
     npm install -g pnpm@latest-10
@@ -66,51 +74,21 @@ COPY ./package.json ${INVENIO_INSTANCE_PATH}/assets/
 COPY ./pnpm-lock.yaml ${INVENIO_INSTANCE_PATH}/assets/
 
 WORKDIR ${INVENIO_INSTANCE_PATH}/assets
-RUN pnpm install && \
+RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
+    pnpm install && \
     pnpm run build
 
 # Gather runtime libraries into a single directory for easy copying
-RUN ARCH=$(dpkg --print-architecture) && \
+RUN ARCH="$(dpkg --print-architecture)" && \
     LIB_DIR="/usr/lib/${ARCH}-linux-gnu" && \
     mkdir -p /invenio-libs && \
-    cp -P ${LIB_DIR}/libcairo*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libpango*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libharfbuzz*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libfontconfig*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libfreetype*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libpixman*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libpng*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libexpat*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libbrotli*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libxcb*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libX*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libfribidi*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libthai*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libglib*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libgobject*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libdatrie*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libpcre2*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libffi*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libbsd*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libmd*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libpq*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libssl*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libcrypto*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libxml2*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libxslt*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libexslt*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libjpeg*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libwebp*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libtiff*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libz*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/liblzma*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libcurl*.so* /invenio-libs/ && \
-    cp -P ${LIB_DIR}/libnghttp*.so* /invenio-libs/ 2>/dev/null || true && \
-    cp -P ${LIB_DIR}/librtmp*.so* /invenio-libs/ 2>/dev/null || true && \
-    cp -P ${LIB_DIR}/libssh*.so* /invenio-libs/ 2>/dev/null || true && \
-    cp -P ${LIB_DIR}/libicui18n*.so* /invenio-libs/ 2>/dev/null || true && \
-    cp -P ${LIB_DIR}/libicuuc*.so* /invenio-libs/ 2>/dev/null || true && \
-    cp -P ${LIB_DIR}/libicudata*.so* /invenio-libs/ 2>/dev/null || true
+    for lib in cairo pango harfbuzz fontconfig freetype pixman png expat brotli \
+    xcb X11 Xau Xdmcp Xext Xrender fribidi thai glib-2.0 gobject-2.0 \
+    datrie pcre2-8 ffi bsd md pq ssl crypto xml2 xslt exslt \
+    jpeg webp tiff z lzma curl nghttp2 rtmp ssh2 \
+    icui18n icuuc icudata; do \
+    find ${LIB_DIR} -name "lib${lib}*.so*" -exec cp -P {} /invenio-libs/ \; 2>/dev/null || true; \
+    done
 
 FROM python:3.13.11-slim-bookworm AS runtime
 
@@ -127,11 +105,12 @@ ENV INVENIO_USER_ID=1654
 RUN adduser invenio --uid ${INVENIO_USER_ID} --gid 0 --no-create-home --disabled-password
 
 # Copy runtime libraries from builder (Cairo for invenio_formatter, etc.)
-RUN ARCH=$(dpkg --print-architecture) && \
-    mkdir -p /usr/lib/${ARCH}-linux-gnu
+RUN ARCH="$(dpkg --print-architecture)" && \
+    mkdir -p "/usr/lib/${ARCH}-linux-gnu"
 COPY --from=builder /invenio-libs/* /usr/lib/
-RUN ARCH=$(dpkg --print-architecture) && \
-    mv /usr/lib/*.so* /usr/lib/${ARCH}-linux-gnu/ 2>/dev/null || true
+RUN ARCH="$(dpkg --print-architecture)" && \
+    mv /usr/lib/*.so* "/usr/lib/${ARCH}-linux-gnu/" 2>/dev/null || true && \
+    ldconfig
 
 COPY --from=builder --chown=1654:0 ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/site ${INVENIO_INSTANCE_PATH}/site
