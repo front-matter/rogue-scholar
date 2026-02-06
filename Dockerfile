@@ -70,45 +70,47 @@ RUN pnpm install && \
     pnpm run build
 
 # Gather runtime libraries into a single directory for easy copying
-RUN mkdir -p /invenio-libs && \
-    cp -P /usr/lib/x86_64-linux-gnu/libcairo*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libpango*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libharfbuzz*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libfontconfig*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libfreetype*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libpixman*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libpng*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libexpat*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libbrotli*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libxcb*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libX*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libfribidi*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libthai*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libglib*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libgobject*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libdatrie*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libpcre2*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libffi*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libbsd*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libmd*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libpq*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libssl*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libcrypto*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libxml2*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libxslt*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libexslt*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libjpeg*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libwebp*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libtiff*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libz*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/liblzma*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libcurl*.so* /invenio-libs/ && \
-    cp -P /usr/lib/x86_64-linux-gnu/libnghttp*.so* /invenio-libs/ 2>/dev/null || true && \
-    cp -P /usr/lib/x86_64-linux-gnu/librtmp*.so* /invenio-libs/ 2>/dev/null || true && \
-    cp -P /usr/lib/x86_64-linux-gnu/libssh*.so* /invenio-libs/ 2>/dev/null || true && \
-    cp -P /usr/lib/x86_64-linux-gnu/libicui18n*.so* /invenio-libs/ 2>/dev/null || true && \
-    cp -P /usr/lib/x86_64-linux-gnu/libicuuc*.so* /invenio-libs/ 2>/dev/null || true && \
-    cp -P /usr/lib/x86_64-linux-gnu/libicudata*.so* /invenio-libs/ 2>/dev/null || true
+RUN ARCH=$(dpkg --print-architecture) && \
+    LIB_DIR="/usr/lib/${ARCH}-linux-gnu" && \
+    mkdir -p /invenio-libs && \
+    cp -P ${LIB_DIR}/libcairo*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libpango*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libharfbuzz*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libfontconfig*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libfreetype*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libpixman*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libpng*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libexpat*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libbrotli*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libxcb*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libX*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libfribidi*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libthai*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libglib*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libgobject*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libdatrie*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libpcre2*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libffi*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libbsd*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libmd*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libpq*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libssl*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libcrypto*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libxml2*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libxslt*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libexslt*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libjpeg*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libwebp*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libtiff*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libz*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/liblzma*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libcurl*.so* /invenio-libs/ && \
+    cp -P ${LIB_DIR}/libnghttp*.so* /invenio-libs/ 2>/dev/null || true && \
+    cp -P ${LIB_DIR}/librtmp*.so* /invenio-libs/ 2>/dev/null || true && \
+    cp -P ${LIB_DIR}/libssh*.so* /invenio-libs/ 2>/dev/null || true && \
+    cp -P ${LIB_DIR}/libicui18n*.so* /invenio-libs/ 2>/dev/null || true && \
+    cp -P ${LIB_DIR}/libicuuc*.so* /invenio-libs/ 2>/dev/null || true && \
+    cp -P ${LIB_DIR}/libicudata*.so* /invenio-libs/ 2>/dev/null || true
 
 FROM python:3.13.11-slim-bookworm AS runtime
 
@@ -125,7 +127,11 @@ ENV INVENIO_USER_ID=1654
 RUN adduser invenio --uid ${INVENIO_USER_ID} --gid 0 --no-create-home --disabled-password
 
 # Copy runtime libraries from builder (Cairo for invenio_formatter, etc.)
-COPY --from=builder /invenio-libs/* /usr/lib/x86_64-linux-gnu/
+RUN ARCH=$(dpkg --print-architecture) && \
+    mkdir -p /usr/lib/${ARCH}-linux-gnu
+COPY --from=builder /invenio-libs/* /usr/lib/
+RUN ARCH=$(dpkg --print-architecture) && \
+    mv /usr/lib/*.so* /usr/lib/${ARCH}-linux-gnu/ 2>/dev/null || true
 
 COPY --from=builder --chown=1654:0 ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/site ${INVENIO_INSTANCE_PATH}/site
