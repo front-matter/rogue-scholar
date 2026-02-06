@@ -138,9 +138,6 @@ COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/invenio.cfg ${INVENI
 COPY --chown=1654:0 ./Caddyfile /etc/caddy/Caddyfile
 COPY --chown=1654:0 --chmod=755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
 
-# Declare volumes for persistent data
-VOLUME ["/opt/invenio/var/instance/data", "/opt/invenio/var/instance/archive"]
-
 WORKDIR ${WORKING_DIR}/src
 
 USER invenio
