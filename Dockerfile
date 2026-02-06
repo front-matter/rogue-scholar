@@ -78,24 +78,71 @@ RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
     pnpm install && \
     pnpm run build
 
-# Gather runtime libraries into a single directory for easy copying
-RUN ARCH="$(dpkg --print-architecture)" && \
+# Gather runtime libraries and all transitive dependencies via ldd
+RUN set -e && \
+    ARCH="$(dpkg --print-architecture)" && \
     LIB_DIR="/usr/lib/${ARCH}-linux-gnu" && \
     mkdir -p /invenio-libs && \
-    for lib in cairo pango harfbuzz fontconfig freetype pixman png expat brotli \
-    xcb X11 Xau Xdmcp Xext Xrender fribidi thai glib-2.0 gobject-2.0 \
-    datrie pcre2-8 ffi bsd md pq ssl crypto xml2 xslt exslt \
-    jpeg webp tiff z lzma curl nghttp2 rtmp ssh2 \
-    icui18n icuuc icudata; do \
-    find ${LIB_DIR} -name "lib${lib}*.so*" -exec cp -P {} /invenio-libs/ \; 2>/dev/null || true; \
-    done
+    echo "${ARCH}" > /invenio-libs/.arch && \
+    PRIMARY_LIBS=" \
+    libcairo.so.2 \
+    libpango-1.0.so.0 \
+    libpangocairo-1.0.so.0 \
+    libpangoft2-1.0.so.0 \
+    libgdk_pixbuf-2.0.so.0 \
+    libgobject-2.0.so.0 \
+    libglib-2.0.so.0 \
+    libgio-2.0.so.0 \
+    libgmodule-2.0.so.0 \
+    libxml2.so.2 \
+    libxslt.so.1 \
+    libexslt.so.0 \
+    libpq.so.5 \
+    libjpeg.so.62 \
+    libwebp.so.7 \
+    libtiff.so.6 \
+    libcurl.so.4 \
+    " && \
+    for lib in ${PRIMARY_LIBS}; do \
+    LIB_PATH="${LIB_DIR}/${lib}"; \
+    if [ -e "${LIB_PATH}" ]; then \
+    REAL="$(readlink -f "${LIB_PATH}")" && \
+    cp -Pn "${LIB_PATH}" /invenio-libs/ 2>/dev/null || true; \
+    cp -Pn "${REAL}" /invenio-libs/ 2>/dev/null || true; \
+    ldd "${REAL}" 2>/dev/null \
+    | awk '/=>/{print $3}' \
+    | while read -r dep; do \
+    if [ -f "${dep}" ]; then \
+    cp -Pn "${dep}" /invenio-libs/ 2>/dev/null || true; \
+    DEP_REAL="$(readlink -f "${dep}")" && \
+    cp -Pn "${DEP_REAL}" /invenio-libs/ 2>/dev/null || true; \
+    fi; \
+    done; \
+    fi; \
+    done && \
+    # Copy version symlinks for all collected libraries
+    for f in /invenio-libs/lib*.so*; do \
+    base="$(basename "${f}")" && \
+    stem="${base%%.*}" && \
+    find "${LIB_DIR}" -maxdepth 1 -name "${stem}*" \
+    -exec cp -Pn {} /invenio-libs/ \; 2>/dev/null || true; \
+    done && \
+    # Remove libraries already present in slim base image
+    rm -f /invenio-libs/libc.so* /invenio-libs/libc-*.so* \
+    /invenio-libs/libpthread* /invenio-libs/libdl* \
+    /invenio-libs/libm.so* /invenio-libs/libm-*.so* \
+    /invenio-libs/librt* /invenio-libs/libutil* \
+    /invenio-libs/ld-linux* /invenio-libs/libresolv* \
+    /invenio-libs/libnss* /invenio-libs/libstdc++* \
+    /invenio-libs/libgcc_s* && \
+    ls -la /invenio-libs/libcairo* && \
+    echo "Collected $(find /invenio-libs -type f -name '*.so*' | wc -l) library files"
 
 FROM python:3.13.11-slim-bookworm AS runtime
 
 ENV LANG=en_US.UTF-8 \
-    LANGUAGE=en_US:en
-
-ENV VIRTUAL_ENV=/opt/invenio/.venv \
+    LANGUAGE=en_US:en \
+    VIRTUAL_ENV=/opt/invenio/.venv \
     PATH="/opt/invenio/.venv/bin:$PATH" \
     WORKING_DIR=/opt/invenio \
     INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
@@ -104,13 +151,16 @@ ENV VIRTUAL_ENV=/opt/invenio/.venv \
 ENV INVENIO_USER_ID=1654
 RUN adduser invenio --uid ${INVENIO_USER_ID} --gid 0 --no-create-home --disabled-password
 
-# Copy runtime libraries from builder (Cairo for invenio_formatter, etc.)
-RUN ARCH="$(dpkg --print-architecture)" && \
-    mkdir -p "/usr/lib/${ARCH}-linux-gnu"
-COPY --from=builder /invenio-libs/* /usr/lib/
-RUN ARCH="$(dpkg --print-architecture)" && \
-    mv /usr/lib/*.so* "/usr/lib/${ARCH}-linux-gnu/" 2>/dev/null || true && \
-    ldconfig
+# Copy prebuilt runtime libraries into arch-specific directory
+# so ctypes.util.find_library() can locate them
+COPY --from=builder /invenio-libs/ /tmp/invenio-libs/
+RUN ARCH="$(cat /tmp/invenio-libs/.arch)" && \
+    TARGET="/usr/lib/${ARCH}-linux-gnu" && \
+    mkdir -p "${TARGET}" && \
+    cp -P /tmp/invenio-libs/lib*.so* "${TARGET}/" && \
+    rm -rf /tmp/invenio-libs && \
+    ldconfig && \
+    python3 -c "import ctypes.util; assert ctypes.util.find_library('cairo'), 'libcairo not found'"
 
 COPY --from=builder --chown=1654:0 ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/site ${INVENIO_INSTANCE_PATH}/site
