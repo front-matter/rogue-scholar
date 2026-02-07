@@ -43,6 +43,8 @@ x-common-env:
   INVENIO_DATACITE_PASSWORD: ${INVENIO_DATACITE_PASSWORD:-}
   INVENIO_DATACITE_PREFIX: ${INVENIO_DATACITE_PREFIX:-}
   INVENIO_DATACITE_DATACENTER_SYMBOL: ${INVENIO_DATACITE_DATACENTER_SYMBOL:-}
+  INVENIO_CROSSREF_USERNAME: ${INVENIO_CROSSREF_USERNAME:-}
+  INVENIO_CROSSREF_PASSWORD: ${INVENIO_CROSSREF_PASSWORD:-}
 
   # Invenio-RDM-Records
   INVENIO_RDM_ALLOW_METADATA_ONLY_RECORDS: ${INVENIO_RDM_ALLOW_METADATA_ONLY_RECORDS:-True}
@@ -74,7 +76,6 @@ services:
   web:
     image: ghcr.io/front-matter/rogue-scholar:latest
     platform: linux/amd64
-    pull_policy: if_not_present
     expose:
       - "4000"
     volumes:
@@ -145,7 +146,6 @@ services:
   worker:
     image: ghcr.io/front-matter/rogue-scholar:latest
     platform: linux/amd64
-    pull_policy: if_not_present
     command: [ "celery", "-A", "invenio_app.celery", "worker", "--beat", "--schedule=/tmp/celerybeat-schedule", "--events", "--loglevel=WARNING" ]
     volumes:
       - uploaded_data:/opt/invenio/var/instance/data
