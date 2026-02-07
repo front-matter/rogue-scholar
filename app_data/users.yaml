@@ -1,6 +1,0 @@
-- email: admin@inveniosoftware.org
-  active: True
-  roles:
-    - admin
-  allow:
-    - superuser-access
