@@ -149,4 +149,4 @@ WORKDIR ${WORKING_DIR}/src
 
 USER invenio
 EXPOSE 4000
-CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:4000", "--workers", "2", "--threads", "4", "--timeout", "60", "--access-logfile", "-", "--error-logfile", "-", "--log-level", "ERROR"]
+CMD ["sh", "-c", "gunicorn invenio_app.wsgi:application --bind 0.0.0.0:4000 --workers 2 --threads 4 --timeout 60 --access-logfile - --error-logfile - --log-level ${GUNICORN_LOG_LEVEL:-WARNING}"]
