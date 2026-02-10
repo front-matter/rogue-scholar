@@ -33,4 +33,4 @@ include = ["pyproject.toml", "site/**/*.py"]
 
 [project.optional-dependencies]
 docs = ["quarto-cli~=1.8.25"]
-actions = ["commonmeta-py>=0.201"]
+actions = ["commonmeta-py>=0.203"]

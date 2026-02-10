@@ -547,7 +547,7 @@ wheels = [
 
 [[package]]
 name = "commonmeta-py"
-version = "0.201"
+version = "0.203"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "base32-lib" },
@@ -581,9 +581,9 @@ dependencies = [
     { name = "xmlschema" },
     { name = "xmltodict" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c7/99/1b53503662c3c2b59896d68636e849b04abddee6be7564b1f2fd6844256d/commonmeta_py-0.201.tar.gz", hash = "sha256:ff8297a409ec7987c9aff235aae6377d2e93e14111582324e2d3d8811caed1d0", size = 393528, upload-time = "2026-01-28T08:10:42.844Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/10/43/dc7476b2d6281be26526e8010e1281327a56ee07a9ea71168399d3ca4685/commonmeta_py-0.203.tar.gz", hash = "sha256:b5860b78742aac3c533c0d35bd0e9f1f1bb24d647adaaeb36418dee2356bb7a5", size = 393776, upload-time = "2026-02-09T15:43:42.413Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/03/64/6b94621c2e28c67592c53cf4e9840787cb61cbbed539c02261dd65184f38/commonmeta_py-0.201-py3-none-any.whl", hash = "sha256:597e567cbc3bf1267651d8507816d1abfe9118c65523623f0344bafded1cfc87", size = 457380, upload-time = "2026-01-28T08:10:40.786Z" },
+    { url = "https://files.pythonhosted.org/packages/8f/37/1b2377cebff63453e0c3974da4c793ab520b1ffef26258011b507118e835/commonmeta_py-0.203-py3-none-any.whl", hash = "sha256:e67ec23ac47b66be0f21e72638ac933c1985f1dae7d02ad7cf8b176ff8459b79", size = 457633, upload-time = "2026-02-09T15:43:40.602Z" },
 ]
 
 [[package]]
@@ -2029,7 +2029,7 @@ wheels = [
 [[package]]
 name = "invenio-rdm-records"
 version = "24.0.0"
-source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref_doi_provider#17433c0ad1057696cb85f0354e6c38d72e9c4371" }
+source = { git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref_doi_provider#7b049959edc390021d1f1ff92c44a1b093edfc9e" }
 dependencies = [
     { name = "arrow" },
     { name = "babel-edtf" },
@@ -3357,11 +3357,11 @@ wheels = [
 
 [[package]]
 name = "parso"
-version = "0.8.5"
+version = "0.8.6"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/d4/de/53e0bcf53d13e005bd8c92e7855142494f41171b34c2536b86187474184d/parso-0.8.5.tar.gz", hash = "sha256:034d7354a9a018bdce352f48b2a8a450f05e9d6ee85db84764e9b6bd96dafe5a", size = 401205, upload-time = "2025-08-23T15:15:28.028Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/81/76/a1e769043c0c0c9fe391b702539d594731a4362334cdf4dc25d0c09761e7/parso-0.8.6.tar.gz", hash = "sha256:2b9a0332696df97d454fa67b81618fd69c35a7b90327cbe6ba5c92d2c68a7bfd", size = 401621, upload-time = "2026-02-09T15:45:24.425Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/16/32/f8e3c85d1d5250232a5d3477a2a28cc291968ff175caeadaf3cc19ce0e4a/parso-0.8.5-py2.py3-none-any.whl", hash = "sha256:646204b5ee239c396d040b90f9e272e9a8017c630092bf59980beb62fd033887", size = 106668, upload-time = "2025-08-23T15:15:25.663Z" },
+    { url = "https://files.pythonhosted.org/packages/b6/61/fae042894f4296ec49e3f193aff5d7c18440da9e48102c3315e1bc4519a7/parso-0.8.6-py2.py3-none-any.whl", hash = "sha256:2c549f800b70a5c4952197248825584cb00f033b29c692671d3bf08bf380baff", size = 106894, upload-time = "2026-02-09T15:45:21.391Z" },
 ]
 
 [[package]]
@@ -3798,11 +3798,11 @@ wheels = [
 
 [[package]]
 name = "redis"
-version = "7.1.0"
+version = "7.1.1"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/43/c8/983d5c6579a411d8a99bc5823cc5712768859b5ce2c8afe1a65b37832c81/redis-7.1.0.tar.gz", hash = "sha256:b1cc3cfa5a2cb9c2ab3ba700864fb0ad75617b41f01352ce5779dabf6d5f9c3c", size = 4796669, upload-time = "2025-11-19T15:54:39.961Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/f7/80/2971931d27651affa88a44c0ad7b8c4a19dc29c998abb20b23868d319b59/redis-7.1.1.tar.gz", hash = "sha256:a2814b2bda15b39dad11391cc48edac4697214a8a5a4bd10abe936ab4892eb43", size = 4800064, upload-time = "2026-02-09T18:39:40.292Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/89/f0/8956f8a86b20d7bb9d6ac0187cf4cd54d8065bc9a1a09eb8011d4d326596/redis-7.1.0-py3-none-any.whl", hash = "sha256:23c52b208f92b56103e17c5d06bdc1a6c2c0b3106583985a76a18f83b265de2b", size = 354159, upload-time = "2025-11-19T15:54:38.064Z" },
+    { url = "https://files.pythonhosted.org/packages/29/55/1de1d812ba1481fa4b37fb03b4eec0fcb71b6a0d44c04ea3482eb017600f/redis-7.1.1-py3-none-any.whl", hash = "sha256:f77817f16071c2950492c67d40b771fa493eb3fccc630a424a10976dbb794b7a", size = 356057, upload-time = "2026-02-09T18:39:38.602Z" },
 ]
 
 [[package]]
@@ -3982,7 +3982,7 @@ docs = [
 
 [package.metadata]
 requires-dist = [
-    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.201" },
+    { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.203" },
     { name = "gunicorn", specifier = "~=23.0.0" },
     { name = "invenio-app-rdm", specifier = ">=14.0.0b5.dev0" },
     { name = "invenio-oauthclient", git = "https://github.com/front-matter/invenio-oauthclient?branch=contrib-oidc" },

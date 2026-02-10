@@ -144,9 +144,11 @@ COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/translations ${INVEN
 COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
 COPY --chown=1654:0 ./Caddyfile /etc/caddy/Caddyfile
 COPY --chown=1654:0 --chmod=755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
+COPY --chown=1654:0 ./entrypoint.py /opt/invenio/.venv/bin/entrypoint.py
 
 WORKDIR ${WORKING_DIR}/src
 
 USER invenio
 EXPOSE 4000
+# ENTRYPOINT ["python", "/opt/invenio/.venv/bin/entrypoint.py"]
 CMD ["sh", "-c", "gunicorn invenio_app.wsgi:application --bind 0.0.0.0:4000 --workers 2 --threads 4 --timeout 60 --access-logfile - --error-logfile - --log-level ${GUNICORN_LOG_LEVEL:-WARNING}"]

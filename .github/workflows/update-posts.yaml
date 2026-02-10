@@ -9,4 +9,4 @@ jobs:
     steps:
       - name: update Rogue Scholar posts
         run: |
-          curl -X POST -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" https://api.rogue-scholar.org/posts?verify=all&classify=all
+          curl -X POST -H "Authorization: Bearer ${{ secrets.SUPABASE_KEY }}" https://api.rogue-scholar.org/posts?classify=all
