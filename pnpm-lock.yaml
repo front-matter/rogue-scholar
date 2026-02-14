@@ -111,8 +111,8 @@ importers:
         specifier: ^15.8.1
         version: 15.8.1
       qs:
-        specifier: ^6.14.1
-        version: 6.14.1
+        specifier: ^6.14.2
+        version: 6.14.2
       query-string:
         specifier: ^7.1.3
         version: 7.1.3
@@ -154,7 +154,7 @@ importers:
         version: 6.30.3(react-dom@16.14.0(react@16.14.0))(react@16.14.0)
       react-searchkit:
         specifier: ^3.0.3
-        version: 3.0.3(@babel/runtime@7.28.6)(axios@1.13.4)(lodash@4.17.23)(qs@6.14.1)(react-dom@16.14.0(react@16.14.0))(react-overridable@0.0.3(@babel/runtime@7.28.6)(prop-types@15.8.1)(react@16.14.0))(react-redux@7.2.9(react-dom@16.14.0(react@16.14.0))(react@16.14.0))(react@16.14.0)(redux-thunk@2.4.2(redux@4.2.1))(redux@4.2.1)(semantic-ui-css@2.5.0)(semantic-ui-react@2.1.5(react-dom@16.14.0(react@16.14.0))(react@16.14.0))
+        version: 3.0.3(@babel/runtime@7.28.6)(axios@1.13.4)(lodash@4.17.23)(qs@6.14.2)(react-dom@16.14.0(react@16.14.0))(react-overridable@0.0.3(@babel/runtime@7.28.6)(prop-types@15.8.1)(react@16.14.0))(react-redux@7.2.9(react-dom@16.14.0(react@16.14.0))(react@16.14.0))(react@16.14.0)(redux-thunk@2.4.2(redux@4.2.1))(redux@4.2.1)(semantic-ui-css@2.5.0)(semantic-ui-react@2.1.5(react-dom@16.14.0(react@16.14.0))(react@16.14.0))
       redux:
         specifier: ^4.2.1
         version: 4.2.1
@@ -4989,8 +4989,8 @@ packages:
   qr-creator@1.0.0:
     resolution: {integrity: sha512-C0cqfbS1P5hfqN4NhsYsUXePlk9BO+a45bAQ3xLYjBL3bOIFzoVEjs79Fado9u9BPBD3buHi3+vY+C8tHh4qMQ==}
 
-  qs@6.14.1:
-    resolution: {integrity: sha512-4EK3+xJl8Ts67nLYNwqw/dsFVnCf+qR7RgXSK9jEEm9unao3njwMDdmsdvoKBKHzxd7tCYz5e5M+SnMjdtXGQQ==}
+  qs@6.14.2:
+    resolution: {integrity: sha512-V/yCWTTF7VJ9hIh18Ugr2zhJMP01MY7c5kh4J870L7imm6/DIzBsNLTXzMwUA3yZ5b/KBqLx8Kp3uRvd7xSe3Q==}
     engines: {node: '>=0.6'}
 
   query-string@7.1.3:
@@ -11601,7 +11601,7 @@ snapshots:
 
   qr-creator@1.0.0: {}
 
-  qs@6.14.1:
+  qs@6.14.2:
     dependencies:
       side-channel: 1.1.0
 
@@ -11778,12 +11778,12 @@ snapshots:
       '@remix-run/router': 1.23.2
       react: 16.14.0
 
-  react-searchkit@3.0.3(@babel/runtime@7.28.6)(axios@1.13.4)(lodash@4.17.23)(qs@6.14.1)(react-dom@16.14.0(react@16.14.0))(react-overridable@0.0.3(@babel/runtime@7.28.6)(prop-types@15.8.1)(react@16.14.0))(react-redux@7.2.9(react-dom@16.14.0(react@16.14.0))(react@16.14.0))(react@16.14.0)(redux-thunk@2.4.2(redux@4.2.1))(redux@4.2.1)(semantic-ui-css@2.5.0)(semantic-ui-react@2.1.5(react-dom@16.14.0(react@16.14.0))(react@16.14.0)):
+  react-searchkit@3.0.3(@babel/runtime@7.28.6)(axios@1.13.4)(lodash@4.17.23)(qs@6.14.2)(react-dom@16.14.0(react@16.14.0))(react-overridable@0.0.3(@babel/runtime@7.28.6)(prop-types@15.8.1)(react@16.14.0))(react-redux@7.2.9(react-dom@16.14.0(react@16.14.0))(react@16.14.0))(react@16.14.0)(redux-thunk@2.4.2(redux@4.2.1))(redux@4.2.1)(semantic-ui-css@2.5.0)(semantic-ui-react@2.1.5(react-dom@16.14.0(react@16.14.0))(react@16.14.0)):
     dependencies:
       '@babel/runtime': 7.28.6
       axios: 1.13.4
       lodash: 4.17.23
-      qs: 6.14.1
+      qs: 6.14.2
       react: 16.14.0
       react-dom: 16.14.0(react@16.14.0)
       react-overridable: 0.0.3(@babel/runtime@7.28.6)(prop-types@15.8.1)(react@16.14.0)
@@ -12430,7 +12430,7 @@ snapshots:
       faye-websocket: 0.10.0
       livereload-js: 2.4.0
       object-assign: 4.1.1
-      qs: 6.14.1
+      qs: 6.14.2
     transitivePeerDependencies:
       - supports-color
 
@@ -12612,7 +12612,7 @@ snapshots:
   url@0.11.4:
     dependencies:
       punycode: 1.4.1
-      qs: 6.14.1
+      qs: 6.14.2
 
   use-composed-ref@1.4.0(@types/react@19.2.11)(react@16.14.0):
     dependencies:
