@@ -10,9 +10,8 @@
 {% macro records_list(title=none, fetch_url=none) %}
   {% set lang_map = {'en': 'eng', 'de': 'deu', 'es': 'spa', 'fr': 'fra'} %}
   {% set lang_code = lang_map.get(current_i18n.language, 'eng') %}
-  {% set title = title or _("Recent blog posts in English") %}
-  {% set fetch_url = fetch_url or ("/api/records?sort=newest&size=10&q=languages.id:" ~ lang_code) %}
-%}
+  {% set title = title or _("Recent blog posts") %}
+  {% set fetch_url = fetch_url or ("/api/records?sort=newest&size=10&q=&f=language:" ~ lang_code) %}
   <div
     id="records-list"
     data-fetch-url="{{ fetch_url }}"

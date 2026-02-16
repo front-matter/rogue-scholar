@@ -63,5 +63,5 @@ msgid "Status"
 msgstr "Statut"
 
 #: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
-msgid "Recent blog posts in English"
+msgid "Recent blog posts"
 msgstr "Articles de blog récents en français"
