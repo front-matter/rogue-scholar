@@ -1,0 +1,75 @@
+# Swedish translations for Rogue Scholar.
+# Copyright (C) 2026 Front Matter
+# This file is distributed under the MIT License.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rogue Scholar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-16 00:00+0000\n"
+"PO-Revision-Date: 2026-02-16 00:00+0000\n"
+"Last-Translator: \n"
+"Language: sv\n"
+"Language-Team: sv <info@front-matter.io>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel\n"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html
+msgid "About"
+msgstr "Om"
+
+msgid "Overview"
+msgstr "Översikt"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Dashboard"
+msgstr "Instrumentpanel"
+
+msgid "Register Your Blog"
+msgstr "Registrera din blogg"
+
+msgid "Community"
+msgstr "Gemenskap"
+
+msgid "Advisory Board"
+msgstr "Rådgivande styrelse"
+
+msgid "Newsletter"
+msgstr "Nyhetsbrev"
+
+msgid "Documentation"
+msgstr "Dokumentation"
+
+msgid "Slack Community"
+msgstr "Slack-gemenskap"
+
+msgid "Support"
+msgstr "Support"
+
+msgid "Membership Interest Form"
+msgstr "Intresseanmälan för medlemskap"
+
+msgid "Donate"
+msgstr "Donera"
+
+msgid "Web Analytics"
+msgstr "Webbanalys"
+
+msgid "Status"
+msgstr "Status"
+
+#: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
+msgid "Recent blog posts"
+msgstr "Senaste blogginlägg på svenska"
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "No records found."
+msgstr "Inga inlägg på svenska hittades."
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "Search all records"
+msgstr "Sök alla inlägg"

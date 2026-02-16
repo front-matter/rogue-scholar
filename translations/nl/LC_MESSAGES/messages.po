@@ -1,0 +1,75 @@
+# Dutch translations for Rogue Scholar.
+# Copyright (C) 2026 Front Matter
+# This file is distributed under the MIT License.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rogue Scholar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-16 00:00+0000\n"
+"PO-Revision-Date: 2026-02-16 00:00+0000\n"
+"Last-Translator: \n"
+"Language: nl\n"
+"Language-Team: nl <info@front-matter.io>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel\n"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html
+msgid "About"
+msgstr "Over ons"
+
+msgid "Overview"
+msgstr "Overzicht"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Register Your Blog"
+msgstr "Registreer je blog"
+
+msgid "Community"
+msgstr "Gemeenschap"
+
+msgid "Advisory Board"
+msgstr "Adviesraad"
+
+msgid "Newsletter"
+msgstr "Nieuwsbrief"
+
+msgid "Documentation"
+msgstr "Documentatie"
+
+msgid "Slack Community"
+msgstr "Slack-gemeenschap"
+
+msgid "Support"
+msgstr "Ondersteuning"
+
+msgid "Membership Interest Form"
+msgstr "Lidmaatschap-interesseformulier"
+
+msgid "Donate"
+msgstr "Doneer"
+
+msgid "Web Analytics"
+msgstr "Webanalyse"
+
+msgid "Status"
+msgstr "Status"
+
+#: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
+msgid "Recent blog posts"
+msgstr "Recente blogposts in het Nederlands"
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "No records found."
+msgstr "Geen artikelen in het Nederlands gevonden."
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "Search all records"
+msgstr "Alle artikelen doorzoeken"

@@ -9,6 +9,17 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { i18next } from "@translations/invenio_app_rdm/i18next";
 import { withCancel, http } from "react-invenio-forms";
+import {
+  Placeholder,
+  Divider,
+  Container,
+  Header,
+  Item,
+  Button,
+  Message,
+} from "semantic-ui-react";
+import RecordsResultsListItem from "./RecordsResultsListItem";
+import isEmpty from "lodash/isEmpty";
 
 // Add custom translations for this component
 const customTranslations = {
@@ -28,22 +39,39 @@ const customTranslations = {
     "No records found.": "Aucun article en français trouvé.",
     "Search all records": "Rechercher tous les articles",
   },
+  it: {
+    "No records found.": "Nessun articolo in italiano trovato.",
+    "Search all records": "Cerca tutti gli articoli",
+  },
+  nl: {
+    "No records found.": "Geen artikelen in het Nederlands gevonden.",
+    "Search all records": "Alle artikelen doorzoeken",
+  },
+  pt: {
+    "No records found.": "Nenhuma publicação em português encontrada.",
+    "Search all records": "Pesquisar todas as publicações",
+  },
+  sv: {
+    "No records found.": "Inga inlägg på svenska hittades.",
+    "Search all records": "Sök alla inlägg",
+  },
+  tr: {
+    "No records found.": "Türkçe yazı bulunamadı.",
+    "Search all records": "Tüm yazıları ara",
+  },
+  uk: {
+    "No records found.": "Не знайдено жодного запису українською.",
+    "Search all records": "Шукати всі записи",
+  },
+  cs: {
+    "No records found.": "Nebyly nalezeny žádné příspěvky v češtině.",
+    "Search all records": "Prohledat všechny příspěvky",
+  },
 };
 
 Object.entries(customTranslations).forEach(([lng, resources]) => {
   i18next.addResourceBundle(lng, "translation", resources, true, false);
 });
-import {
-  Placeholder,
-  Divider,
-  Container,
-  Header,
-  Item,
-  Button,
-  Message,
-} from "semantic-ui-react";
-import RecordsResultsListItem from "./RecordsResultsListItem";
-import isEmpty from "lodash/isEmpty";
 
 class RecordsList extends Component {
   constructor(props) {

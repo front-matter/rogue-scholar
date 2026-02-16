@@ -1,0 +1,75 @@
+# Turkish translations for Rogue Scholar.
+# Copyright (C) 2026 Front Matter
+# This file is distributed under the MIT License.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rogue Scholar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-16 00:00+0000\n"
+"PO-Revision-Date: 2026-02-16 00:00+0000\n"
+"Last-Translator: \n"
+"Language: tr\n"
+"Language-Team: tr <info@front-matter.io>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel\n"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html
+msgid "About"
+msgstr "Hakkında"
+
+msgid "Overview"
+msgstr "Genel Bakış"
+
+msgid "FAQ"
+msgstr "SSS"
+
+msgid "Dashboard"
+msgstr "Kontrol Paneli"
+
+msgid "Register Your Blog"
+msgstr "Blogunuzu kaydedin"
+
+msgid "Community"
+msgstr "Topluluk"
+
+msgid "Advisory Board"
+msgstr "Danışma Kurulu"
+
+msgid "Newsletter"
+msgstr "Bülten"
+
+msgid "Documentation"
+msgstr "Dokümantasyon"
+
+msgid "Slack Community"
+msgstr "Slack Topluluğu"
+
+msgid "Support"
+msgstr "Destek"
+
+msgid "Membership Interest Form"
+msgstr "Üyelik ilgi formu"
+
+msgid "Donate"
+msgstr "Bağış yap"
+
+msgid "Web Analytics"
+msgstr "Web Analizi"
+
+msgid "Status"
+msgstr "Durum"
+
+#: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
+msgid "Recent blog posts"
+msgstr "Türkçe son blog yazıları"
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "No records found."
+msgstr "Türkçe yazı bulunamadı."
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "Search all records"
+msgstr "Tüm yazıları ara"

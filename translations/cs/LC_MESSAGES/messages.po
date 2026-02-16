@@ -1,0 +1,75 @@
+# Czech translations for Rogue Scholar.
+# Copyright (C) 2026 Front Matter
+# This file is distributed under the MIT License.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rogue Scholar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-16 00:00+0000\n"
+"PO-Revision-Date: 2026-02-16 00:00+0000\n"
+"Last-Translator: \n"
+"Language: cs\n"
+"Language-Team: cs <info@front-matter.io>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel\n"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html
+msgid "About"
+msgstr "O nás"
+
+msgid "Overview"
+msgstr "Přehled"
+
+msgid "FAQ"
+msgstr "Časté dotazy"
+
+msgid "Dashboard"
+msgstr "Přehled"
+
+msgid "Register Your Blog"
+msgstr "Zaregistrujte svůj blog"
+
+msgid "Community"
+msgstr "Komunita"
+
+msgid "Advisory Board"
+msgstr "Poradní výbor"
+
+msgid "Newsletter"
+msgstr "Newsletter"
+
+msgid "Documentation"
+msgstr "Dokumentace"
+
+msgid "Slack Community"
+msgstr "Slack komunita"
+
+msgid "Support"
+msgstr "Podpora"
+
+msgid "Membership Interest Form"
+msgstr "Formulář zájmu o členství"
+
+msgid "Donate"
+msgstr "Přispějte"
+
+msgid "Web Analytics"
+msgstr "Webová analytika"
+
+msgid "Status"
+msgstr "Stav"
+
+#: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
+msgid "Recent blog posts"
+msgstr "Nejnovější příspěvky v češtině"
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "No records found."
+msgstr "Nebyly nalezeny žádné příspěvky v češtině."
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "Search all records"
+msgstr "Prohledat všechny příspěvky"
