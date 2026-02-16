@@ -68,6 +68,9 @@ COPY templates ${INVENIO_INSTANCE_PATH}/templates
 COPY app_data ${INVENIO_INSTANCE_PATH}/app_data
 COPY translations ${INVENIO_INSTANCE_PATH}/translations
 
+# Compile translation catalogs
+RUN pybabel compile -d ${INVENIO_INSTANCE_PATH}/translations
+
 # Enable the option to have a deterministic javascript dependency build
 # From: https://github.com/tu-graz-library/docker-invenio-base
 COPY ./package.json ${INVENIO_INSTANCE_PATH}/assets/
