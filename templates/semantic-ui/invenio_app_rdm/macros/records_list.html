@@ -1,0 +1,52 @@
+@ -1,50 +0,0 @@
+{#
+  Copyright (C) 2019-2022 CERN
+  Copyright (C) 2024 KTH Royal Institute of Technology.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+
+{% macro records_list(title=none, fetch_url=none) %}
+  {% set lang_map = {'en': 'eng', 'de': 'deu', 'es': 'spa', 'fr': 'fra'} %}
+  {% set lang_code = lang_map.get(current_i18n.language, 'eng') %}
+  {% set title = title or _("Recent blog posts in English") %}
+  {% set fetch_url = fetch_url or ("/api/records?sort=newest&size=10&q=languages.id:" ~ lang_code) %}
+%}
+  <div
+    id="records-list"
+    data-fetch-url="{{ fetch_url }}"
+    data-title="{{ title }}"
+  >
+
+    <h2 class="ui header">{{ title }}</h2>
+
+    {% for n in range(10) %}
+      <div class="ui fluid placeholder rel-mt-3">
+        <div class="header">
+          <div class="line"></div>
+        </div>
+
+        <div class="paragraph">
+          <div class="line"></div>
+        </div>
+
+        <div class="paragraph">
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="paragraph">
+          <div class="line"></div>
+        </div>
+      </div>
+
+      {% if n < 9 %}
+        <div class="ui divider rel-mt-2 rel-mb-2"></div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  {{ webpack['overridable-registry.js'] }}
+  {{ webpack['invenio-app-rdm-frontpage.js']}}
+{% endmacro %}

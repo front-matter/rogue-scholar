@@ -61,3 +61,7 @@ msgstr "Analítica web"
 
 msgid "Status"
 msgstr "Estado"
+
+#: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
+msgid "Recent blog posts in English"
+msgstr "Publicaciones recientes en español"
