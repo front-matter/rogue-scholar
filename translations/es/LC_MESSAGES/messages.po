@@ -1,0 +1,63 @@
+# Spanish translations for Rogue Scholar.
+# Copyright (C) 2026 Front Matter
+# This file is distributed under the MIT License.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rogue Scholar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-16 00:00+0000\n"
+"PO-Revision-Date: 2026-02-16 00:00+0000\n"
+"Last-Translator: \n"
+"Language: es\n"
+"Language-Team: es <info@front-matter.io>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel\n"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html
+msgid "About"
+msgstr "Acerca de"
+
+msgid "Overview"
+msgstr "Descripción general"
+
+msgid "FAQ"
+msgstr "Preguntas frecuentes"
+
+msgid "Dashboard"
+msgstr "Panel de control"
+
+msgid "Register Your Blog"
+msgstr "Registra tu blog"
+
+msgid "Community"
+msgstr "Comunidad"
+
+msgid "Advisory Board"
+msgstr "Consejo asesor"
+
+msgid "Newsletter"
+msgstr "Boletín informativo"
+
+msgid "Documentation"
+msgstr "Documentación"
+
+msgid "Slack Community"
+msgstr "Comunidad de Slack"
+
+msgid "Support"
+msgstr "Apoyo"
+
+msgid "Membership Interest Form"
+msgstr "Formulario de interés de membresía"
+
+msgid "Donate"
+msgstr "Donar"
+
+msgid "Web Analytics"
+msgstr "Analítica web"
+
+msgid "Status"
+msgstr "Estado"

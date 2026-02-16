@@ -15,49 +15,25 @@
       {%- block footer_top_left %}
         <div class="ui grid app-rdm-footer">
         <div class="rdm-footer four wide computer column">
-          <h2 class="ui small header">{{ _ ("About") }}</h2>
-          {% trans rogue_scholar_overview="/about" %}
-            <p><a href="{{ rogue_scholar_overview }}" target="_blank">Overview</a></p>
-          {% endtrans %}
-          {% trans rogue_scholar_faq="/about#faq" %}
-            <p><a href="{{ rogue_scholar_faq }}" target="_blank">FAQ</a></p>
-          {% endtrans %}
-          {% trans rogue_scholar_stats="https://docs.rogue-scholar.org/dashboard" %}
-            <p><a href="{{ rogue_scholar_stats }}" target="_blank">Dashboard</a></p>
-          {% endtrans %}
-          {% trans rogue_scholar_register="https://tally.so/r/nPvNK0" %}
-          <p><a href="{{ rogue_scholar_register }}" target="_blank">Register Your Blog</a></p>
-        {% endtrans %}
+          <h2 class="ui small header">{{ _("About") }}</h2>
+          <p><a href="/about" target="_blank">{{ _("Overview") }}</a></p>
+          <p><a href="/about#faq" target="_blank">{{ _("FAQ") }}</a></p>
+          <p><a href="https://docs.rogue-scholar.org/dashboard" target="_blank">{{ _("Dashboard") }}</a></p>
+          <p><a href="https://tally.so/r/nPvNK0" target="_blank">{{ _("Register Your Blog") }}</a></p>
         </div>
         <div class="rdm-footer four wide computer column">
-          <h2 class="ui small header">{{ _ ("Community") }}</h2>
-          {% trans rogue_scholar_board="/board" %}
-            <p><a href="{{ rogue_scholar_board }}" target="_blank">Advisory Board</a></p>
-          {% endtrans %}
-          {% trans rogue_scholar_newsletter="https://listmonk.rogue-scholar.org/subscription/form" %}
-            <p><a href="{{ rogue_scholar_newsletter }}" target="_blank">Newsletter</a></p>
-          {% endtrans %}
-          {% trans rogue_scholar_documentation="https://docs.rogue-scholar.org/" %}
-            <p><a href="{{ rogue_scholar_documentation }}" target="_blank">Documentation</a></p>
-          {% endtrans %}
-          {% trans rogue_scholar_discord="https://join.slack.com/t/rogue-scholar/shared_invite/zt-2ylpq1yoy-o~TkxDarfz5LSMhGSCYtiA" %}
-            <p><a href="{{ rogue_scholar_discord }}" target="_blank">Slack Community</a></p>
-          {% endtrans %}
+          <h2 class="ui small header">{{ _("Community") }}</h2>
+          <p><a href="/board" target="_blank">{{ _("Advisory Board") }}</a></p>
+          <p><a href="https://listmonk.rogue-scholar.org/subscription/form" target="_blank">{{ _("Newsletter") }}</a></p>
+          <p><a href="https://docs.rogue-scholar.org/" target="_blank">{{ _("Documentation") }}</a></p>
+          <p><a href="https://join.slack.com/t/rogue-scholar/shared_invite/zt-2ylpq1yoy-o~TkxDarfz5LSMhGSCYtiA" target="_blank">{{ _("Slack Community") }}</a></p>
         </div>
         <div class="rdm-footer four wide computer column">
           <h2 class="ui small header">{{ _("Support") }}</h2>
-          {% trans rogue_scholar_membership="https://tally.so/r/LZWa22" %}
-            <p><a href="{{ rogue_scholar_membership }}" target="_blank">Membership Interest Form</a></p>
-          {% endtrans %}
-          {% trans rogue_scholar_donate="https://ko-fi.com/rogue_scholar" %}
-            <p><a href="{{ rogue_scholar_donate }}" target="_blank">Donate</a></p>
-          {% endtrans %}
-          {% trans rogue_scholar_web_analytics="https://plausible.front-matter.de/rogue-scholar.org" %}
-            <p><a href="{{ rogue_scholar_web_analytics }}" target="_blank">Web Analytics</a></p>
-          {% endtrans %}
-          {% trans rogue_scholar_status="https://status.rogue-scholar.org/" %}
-            <p><a href="{{ rogue_scholar_status }}" target="_blank">Status</a></p>
-          {% endtrans %}
+          <p><a href="https://tally.so/r/LZWa22" target="_blank">{{ _("Membership Interest Form") }}</a></p>
+          <p><a href="https://ko-fi.com/rogue_scholar" target="_blank">{{ _("Donate") }}</a></p>
+          <p><a href="https://plausible.front-matter.de/rogue-scholar.org" target="_blank">{{ _("Web Analytics") }}</a></p>
+          <p><a href="https://status.rogue-scholar.org/" target="_blank">{{ _("Status") }}</a></p>
         </div>
 
       {%- endblock footer_top_left %}
