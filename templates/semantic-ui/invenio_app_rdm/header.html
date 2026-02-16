@@ -103,11 +103,13 @@
                 {%- endif %}
               {%- endfor %}
 
-              {% for item in current_menu.submenu('actions').children|sort(attribute='order') if item.visible recursive %}
-                <div class="{{ 'item active' if item.active else 'item' }}">
-                  <a href="{{ item.url }}">{{ item.text|safe }}</a>
-                </div>
-              {% endfor %}
+              {%- if current_user.is_authenticated %}
+                {% for item in current_menu.submenu('actions').children|sort(attribute='order') if item.visible recursive %}
+                  <div class="{{ 'item active' if item.active else 'item' }}">
+                    <a href="{{ item.url }}">{{ item.text|safe }}</a>
+                  </div>
+                {% endfor %}
+              {%- endif %}
             {%- endblock navbar_nav %}
 
             {%- block navbar_right %}
