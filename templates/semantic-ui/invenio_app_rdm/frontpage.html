@@ -44,48 +44,10 @@
         <aside class="five wide computer sixteen wide tablet column">
 
           {% block side_column_content %}
-            <section class="sidebar-container">
-              <h2 class="ui medium top attached header mt-0">{{ _("Why use Rogue Scholar?") }} </h2>
-              <div class="ui segment bottom attached rdm-sidebar">
-                <ul class="m-0">
-                  <li>
-                    <strong>No waiting time</strong> — blogs can join via a simple <a href="https://tally.so/r/nPvNK0" target="_blank">form</a>. Blog posts are automatically archived within minutes after publication on your blog.
-                  </li>
-                  <li>
-                    <strong>No fees</strong> — blog posts are archived without fees to either readers or authors. Rogue Scholar is sustained by <a href="https://ko-fi.com/rogue_scholar" target="_blank">donations</a> and sponsorships.
-                  </li>
-                  <li>
-                    <strong>Archived</strong> — blog posts are archived by Rogue Scholar, and semiannually by the Internet Archive <a href="https://archive-it.org/home/rogue-scholar" target="_blank">Archive-It</a> service.
-                  </li>
-                  <li>
-                    <strong>Findable</strong> — every blog post is searchable via rich metadata and full-text search.
-                  </li>
-                  <li>
-                    <strong>Citeable</strong> — every blog post is assigned a Digital Object Identifier (DOI), to make them citable and trackable. Rogue Scholar shows citations to blog posts found by Crossref.
-                  </li>
-                  <li>
-                    <strong>Interoperable</strong> — metadata are distributed via Crossref and ORCID, and downstream services using their metadata catalogs.
-                  </li>
-                  <li>
-                    <strong>Reusable</strong> — the full-text of every blog post is distributed under the terms of the Creative Commons Attribution 4.0 license.
-                  </li>
-                  <li>
-                    <strong>Communities</strong> — blog posts automatically become part of communities for your blog, the blog subject area, and topic communities based on blog post tags.
-                  </li>
-                </ul>
-              </div>
-            </section>
-
-            <section class="sidebar-container">
-              <h2 class="ui medium top attached header mt-0">Newsletter</h2>
-              <div class="ui segment bottom attached rdm-sidebar">
-                <p>Receive information on blogs that have joined Rogue Scholar, important technical and community updates, and other news relevant to Rogue Scholar users.</p>
-
-                {% trans rogue_scholar_newsletter="https://listmonk.rogue-scholar.org/subscription/form" %}
-                  <p><a href="{{ rogue_scholar_newsletter }}" target="_blank">Sign up for the monthly newsletter</a></p>
-                {% endtrans %}
-              </div>
-            </section>
+            {% include [
+              "invenio_app_rdm/sidebar." ~ current_i18n.language ~ ".html",
+              "invenio_app_rdm/sidebar.en.html"
+            ] %}
           {% endblock side_column_content %}
 
         </aside>
