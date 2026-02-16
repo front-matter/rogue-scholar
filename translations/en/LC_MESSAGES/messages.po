@@ -65,3 +65,11 @@ msgstr "Status"
 #: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
 msgid "Recent blog posts"
 msgstr "Recent blog posts in English"
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "No records found."
+msgstr "No records in English found."
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "Search all records"
+msgstr "Search all records"

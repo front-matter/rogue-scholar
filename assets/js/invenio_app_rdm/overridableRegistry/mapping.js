@@ -9,6 +9,7 @@
  */
 
 import RecordsResultsListItem from "./RecordsResultsListItem.js";
+import RecordsList from "./RecordsList.js";
 
 export const overriddenComponents = {
   "InvenioAppRdm.Search.RecordsResultsListItem.layout": RecordsResultsListItem,
@@ -16,4 +17,5 @@ export const overriddenComponents = {
     RecordsResultsListItem,
   "InvenioAppRDM.RecordsList.RecordsResultsListItem.layout":
     RecordsResultsListItem,
+  "InvenioAppRDM.RecordsList.layout": RecordsList,
 };

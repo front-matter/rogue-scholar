@@ -65,3 +65,11 @@ msgstr "Statut"
 #: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
 msgid "Recent blog posts"
 msgstr "Articles de blog récents en français"
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "No records found."
+msgstr "Aucun article en français trouvé."
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "Search all records"
+msgstr "Rechercher tous les articles"

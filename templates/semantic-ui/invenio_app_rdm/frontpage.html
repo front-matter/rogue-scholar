@@ -34,7 +34,7 @@
         <div class="eleven wide computer sixteen wide tablet column">
 
           {% block main_column_content %}
-            {{ records_list() }}
+            {{ records_list(language=current_i18n.language) }}
           {% endblock main_column_content %}
 
         </div>
