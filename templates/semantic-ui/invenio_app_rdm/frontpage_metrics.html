@@ -4,7 +4,6 @@
   Rogue Scholar is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
 #}
-<script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
 <style>
   .metrics-card.card {
     border-radius: 0.5rem !important;
@@ -24,9 +23,9 @@
     display: flex;
     align-items: center;
   }
-  .metrics-card .metrics-icon iconify-icon {
-    font-size: 3em;
-    color: rgba(255,255,255,0.85);
+  .metrics-card .metrics-icon svg {
+    width: 48px;
+    height: 48px;
   }
   .metrics-card .metrics-value {
     font-size: 1.8em;
@@ -54,7 +53,7 @@
   <div class="ui three stackable cards">
     <div class="card metrics-card" style="background-color:#4269d0;">
       <div class="content">
-        <div class="metrics-icon"><iconify-icon icon="grommet-icons:blog"></iconify-icon></div>
+        <div class="metrics-icon"><img src="/static/images/blog.svg" alt="Blog" width="48" height="48"></div>
         <div>
           <div class="ui placeholder metrics-placeholder" id="metric-blogs-placeholder">
             <div class="line"></div>
@@ -66,7 +65,7 @@
     </div>
     <div class="card metrics-card" style="background-color:#ff725c;">
       <div class="content">
-        <div class="metrics-icon"><iconify-icon icon="ic:outline-article"></iconify-icon></div>
+        <div class="metrics-icon"><img src="/static/images/article.svg" alt="Article" width="48" height="48"></div>
         <div>
           <div class="ui placeholder metrics-placeholder" id="metric-posts-placeholder">
             <div class="line"></div>
@@ -78,7 +77,7 @@
     </div>
     <div class="card metrics-card" style="background-color:#efb118;">
       <div class="content">
-        <div class="metrics-icon"><iconify-icon icon="ic:outline-date-range"></iconify-icon></div>
+        <div class="metrics-icon"><img src="/static/images/date-range.svg" alt="Date range" width="48" height="48"></div>
         <div>
           <div class="ui placeholder metrics-placeholder" id="metric-recent-placeholder">
             <div class="line"></div>
@@ -94,7 +93,7 @@
   <div class="ui four stackable cards" style="margin-top:0.5rem;">
     <div class="card metrics-card" style="background-color:#a6ce39;">
       <div class="content">
-        <div class="metrics-icon"><iconify-icon icon="academicons:orcid"></iconify-icon></div>
+        <div class="metrics-icon"><img src="/static/images/orcid.svg" alt="ORCID" width="48" height="48"></div>
         <div>
           <div class="ui placeholder metrics-placeholder" id="metric-orcid-placeholder">
             <div class="line"></div>
@@ -106,7 +105,7 @@
     </div>
     <div class="card metrics-card" style="background-color:#53baa1;">
       <div class="content">
-        <div class="metrics-icon"><iconify-icon icon="academicons:ror"></iconify-icon></div>
+        <div class="metrics-icon"><img src="/static/images/ror.svg" alt="ROR" width="48" height="48"></div>
         <div>
           <div class="ui placeholder metrics-placeholder" id="metric-ror-placeholder">
             <div class="line"></div>
@@ -118,7 +117,7 @@
     </div>
     <div class="card metrics-card" style="background-color:#97bbf5;">
       <div class="content">
-        <div class="metrics-icon"><iconify-icon icon="codicon:list-ordered"></iconify-icon></div>
+        <div class="metrics-icon"><img src="/static/images/list-ordered.svg" alt="References" width="48" height="48"></div>
         <div>
           <div class="ui placeholder metrics-placeholder" id="metric-references-placeholder">
             <div class="line"></div>
@@ -130,7 +129,7 @@
     </div>
     <div class="card metrics-card" style="background-color:#ff8ab7;">
       <div class="content">
-        <div class="metrics-icon"><iconify-icon icon="octicon:sponsor-tiers-24"></iconify-icon></div>
+        <div class="metrics-icon"><img src="/static/images/sponsor-tiers.svg" alt="Funding" width="48" height="48"></div>
         <div>
           <div class="ui placeholder metrics-placeholder" id="metric-funding-placeholder">
             <div class="line"></div>
