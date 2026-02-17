@@ -78,10 +78,10 @@ msgstr "Buscar todas las publicaciones"
 msgid "Participating Blogs"
 msgstr "Blogs participantes"
 
-msgid "All Blog Posts"
+msgid "All Posts"
 msgstr "Todas las publicaciones"
 
-msgid "Blog Posts last 30 Days"
+msgid "Posts last 30 Days"
 msgstr "Publicaciones de los últimos 30 días"
 
 msgid "Posts with ORCID"
@@ -95,3 +95,6 @@ msgstr "Publicaciones con referencias"
 
 msgid "Posts with Funding"
 msgstr "Publicaciones con financiación"
+
+msgid "Cited Posts"
+msgstr "Publicaciones citadas"

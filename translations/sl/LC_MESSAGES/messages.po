@@ -78,10 +78,10 @@ msgstr "Išči vse objave"
 msgid "Participating Blogs"
 msgstr "Sodelujoči blogi"
 
-msgid "All Blog Posts"
+msgid "All Posts"
 msgstr "Vse objave"
 
-msgid "Blog Posts last 30 Days"
+msgid "Posts last 30 Days"
 msgstr "Objave v zadnjih 30 dneh"
 
 msgid "Posts with ORCID"
@@ -95,3 +95,6 @@ msgstr "Objave z referencami"
 
 msgid "Posts with Funding"
 msgstr "Objave s financiranjem"
+
+msgid "Cited Posts"
+msgstr "Citirane objave"

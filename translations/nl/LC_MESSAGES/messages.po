@@ -78,11 +78,11 @@ msgstr "Alle artikelen doorzoeken"
 msgid "Participating Blogs"
 msgstr "Deelnemende blogs"
 
-msgid "All Blog Posts"
-msgstr "Alle blogposts"
+msgid "All Posts"
+msgstr "Alle berichten"
 
-msgid "Blog Posts last 30 Days"
-msgstr "Blogposts van de afgelopen 30 dagen"
+msgid "Posts last 30 Days"
+msgstr "Berichten van de afgelopen 30 dagen"
 
 msgid "Posts with ORCID"
 msgstr "Posts met ORCID"
@@ -95,3 +95,6 @@ msgstr "Posts met referenties"
 
 msgid "Posts with Funding"
 msgstr "Posts met financiering"
+
+msgid "Cited Posts"
+msgstr "Geciteerde berichten"

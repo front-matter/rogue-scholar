@@ -78,10 +78,10 @@ msgstr "Prohledat všechny příspěvky"
 msgid "Participating Blogs"
 msgstr "Zúčastněné blogy"
 
-msgid "All Blog Posts"
+msgid "All Posts"
 msgstr "Všechny příspěvky"
 
-msgid "Blog Posts last 30 Days"
+msgid "Posts last 30 Days"
 msgstr "Příspěvky za posledních 30 dní"
 
 msgid "Posts with ORCID"
@@ -95,3 +95,6 @@ msgstr "Příspěvky s referencemi"
 
 msgid "Posts with Funding"
 msgstr "Příspěvky s financováním"
+
+msgid "Cited Posts"
+msgstr "Citované příspěvky"

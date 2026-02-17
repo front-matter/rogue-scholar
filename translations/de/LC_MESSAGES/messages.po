@@ -78,11 +78,11 @@ msgstr "Alle Beiträge durchsuchen"
 msgid "Participating Blogs"
 msgstr "Teilnehmende Blogs"
 
-msgid "All Blog Posts"
-msgstr "Alle Blogbeiträge"
+msgid "All Posts"
+msgstr "Alle Beiträge"
 
-msgid "Blog Posts last 30 Days"
-msgstr "Blogbeiträge der letzten 30 Tage"
+msgid "Posts last 30 Days"
+msgstr "Beiträge der letzten 30 Tage"
 
 msgid "Posts with ORCID"
 msgstr "Beiträge mit ORCID"
@@ -95,3 +95,6 @@ msgstr "Beiträge mit Referenzen"
 
 msgid "Posts with Funding"
 msgstr "Beiträge mit Förderung"
+
+msgid "Cited Posts"
+msgstr "Zitierte Beiträge"

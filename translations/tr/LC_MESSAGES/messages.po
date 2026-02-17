@@ -78,11 +78,11 @@ msgstr "Tüm yazıları ara"
 msgid "Participating Blogs"
 msgstr "Katılan bloglar"
 
-msgid "All Blog Posts"
-msgstr "Tüm blog yazıları"
+msgid "All Posts"
+msgstr "Tüm yazılar"
 
-msgid "Blog Posts last 30 Days"
-msgstr "Son 30 günün blog yazıları"
+msgid "Posts last 30 Days"
+msgstr "Son 30 günün yazıları"
 
 msgid "Posts with ORCID"
 msgstr "ORCID'li yazılar"
@@ -95,3 +95,6 @@ msgstr "Referanslı yazılar"
 
 msgid "Posts with Funding"
 msgstr "Finansmanlı yazılar"
+
+msgid "Cited Posts"
+msgstr "Alıntılanan yazılar"

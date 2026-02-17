@@ -78,11 +78,11 @@ msgstr "Sök alla inlägg"
 msgid "Participating Blogs"
 msgstr "Deltagande bloggar"
 
-msgid "All Blog Posts"
-msgstr "Alla blogginlägg"
+msgid "All Posts"
+msgstr "Alla inlägg"
 
-msgid "Blog Posts last 30 Days"
-msgstr "Blogginlägg senaste 30 dagarna"
+msgid "Posts last 30 Days"
+msgstr "Inlägg senaste 30 dagarna"
 
 msgid "Posts with ORCID"
 msgstr "Inlägg med ORCID"
@@ -95,3 +95,6 @@ msgstr "Inlägg med referenser"
 
 msgid "Posts with Funding"
 msgstr "Inlägg med finansiering"
+
+msgid "Cited Posts"
+msgstr "Citerade inlägg"
