@@ -165,7 +165,7 @@
   }
 
   function pct(n, total) {
-    return (n / total * 100).toFixed(1) + "%";
+    return Math.round(n / total * 100) + "%";
   }
 
   function show(id, text, href) {
@@ -193,7 +193,7 @@
     fetch(baseUrl + "/communities?type=blog&size=1", { headers: headers }).then(function(r) { return r.json(); }),
     fetch(baseUrl + "/records?size=1", { headers: headers }).then(function(r) { return r.json(); }),
     fetch(baseUrl + "/records?q=" + encodeURIComponent(recentQ) + "&size=1", { headers: headers }).then(function(r) { return r.json(); }),
-    fetch(baseUrl + "/records?q=metadata.funding.award.number:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+    fetch(baseUrl + "/records?q=funder:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
   ]).then(function(results) {
     var blogCount = results[0].hits.total;
     totalPosts = results[1].hits.total;
