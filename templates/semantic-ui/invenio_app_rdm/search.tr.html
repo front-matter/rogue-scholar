@@ -1,0 +1,302 @@
+{#
+  Copyright (C) 2021 CERN.
+  Copyright (C) 2021 Northwestern University.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Search guide") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+<div class="ui container mt-25">
+  <h1>Arama rehberi</h1>
+  <p>
+    Bu rehber, anlaşılması kolay örnekler kullanarak gelişmiş arama
+    sorgularının nasıl yazılacağını açıklar.
+  </p>
+  <h3>Basit arama (bir veya daha fazla terim)</h3>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=open%20science"
+      ><code>open science</code></a
+    >
+  </p>
+  <p>
+    Sonuçlar, <em>herhangi bir alanda</em> <code>open</code>
+    <em>veya</em> <code>science</code> <em>terimlerini</em> içeren kayıtlarla eşleşecektir.
+    Kök bulma (lemmatizasyon) uygulandığını unutmayın, bu nedenle örneğin <code>science</code>
+    aynı zamanda <code>sciences</code> ile de eşleşecektir. Arama sonuçları, arama terimlerinizi
+    dikkate alan bir algoritmaya göre sıralanır.
+  </p>
+  <p>
+    <code>+</code> veya <code>AND</code> operatörünü kullanarak her iki terimin de
+    <em>mevcut</em> olmasını zorunlu kılabilirsiniz:
+  </p>
+  <p>
+    <strong>Örnekler:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%2Bopen%20%2Bscience"
+      ><code>+open +science</code></a
+    >
+    veya
+    <a href="/search?page=1&amp;size=20&amp;q=open%20AND%20science"
+      ><code>open AND science</code></a
+    >
+  </p>
+  <p>
+    <code>-</code> veya <code>NOT</code> operatörünü kullanarak bir veya daha fazla terimin
+    <em>bulunmamasını</em> zorunlu kılabilirsiniz:
+  </p>
+  <p>
+    <strong>Örnekler:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=-open%20%2Bscience"
+      ><code>-open +science</code></a
+    >
+    veya
+    <a href="/search?page=1&amp;size=20&amp;q=NOT%20open%20AND%20science"
+      ><code>NOT open AND science</code></a
+    >
+  </p>
+  <h3>Kalıp araması</h3>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%22open%20science%22"
+      ><code>"open science"</code></a
+    >
+  </p>
+  <p>
+    Sonuçlar, <em>herhangi bir alanda</em> <code>open science</code>
+    <em>kalıbını</em> içeren kayıtlarla eşleşecektir.
+  </p>
+  <h3>Alan araması</h3>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:open"
+      ><code>metadata.title:open</code></a
+    >
+  </p>
+  <p>
+    Sonuçlar, <code>metadata.title</code> <em>alanında</em> <code>open</code>
+    <em>terimini</em> içeren kayıtlarla eşleşecektir. Başlıkta birden fazla terim aramak
+    istiyorsanız, parantezler kullanarak <strong>terimleri gruplamalısınız</strong>:
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:(open%20science%29"
+      ><code>metadata.title:(open science)</code></a
+    >
+  </p>
+  <p>
+    Arama yapabileceğiniz alanların tam listesi için aşağıdaki alan referansına bakın.
+  </p>
+  <h3>Tam metin araması</h3>
+  <p>
+    <strong>Örnek:</strong>
+    <a href='/search?page=1&amp;size=20&amp;q=content:"Marie Curie"'
+      ><code>content:"Marie Curie"</code></a
+    >
+  </p>
+  <p>
+    Sonuçlar, <code>içerikte</code> <code>Marie Curie</code> <em>kalıbını</em> içeren kayıtlarla
+    eşleşecektir. Birden fazla kelimenin tam eşleşmesini aramak istiyorsanız
+    (örneğin bir kişinin adı), kalıbı çift tırnak işaretleri içine almalısınız.
+  </p>
+  <h3>Kalıcı tanımlayıcı araması</h3>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=doi:10.59350/b7mtv-gpn88"
+      ><code>doi:10.59350/b7mtv-gpn88</code></a
+    >
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=orcid:0000-0001-7542-0286"
+      ><code>orcid:0000-0001-7542-0286</code></a
+    >
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=ror:00vtgdb53"
+      ><code>ror:00vtgdb53</code></a
+    >
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=issn:3033-3695"
+      ><code>issn:3033-3695</code></a
+    >
+  </p>
+  <p>
+    <em>doi</em>, <em>orcid</em>, <em>ror</em> veya <em>issn</em> kalıcı tanımlayıcılarını
+    arayın. <em>doi</em> kaydın dış tanımlayıcısıdır, <em>orcid</em> kaydın yazarlarından
+    birinin yazar tanımlayıcısıdır, <em>ror</em> yazarların bağlılıklarından birinin
+    kurum tanımlayıcısıdır ve <em>issn</em> kaydın süreli yayın tanımlayıcısıdır.
+  </p>
+  <h3>Basit, kalıp veya alan aramasının kombinasyonu</h3>
+  <p>
+    <strong>Örnek:</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=%2Bmetadata.title:%22open%20science%22%20-metadata.title:policy"
+      ><code>+metadata.title:"open science" -metadata.title:policy</code></a
+    >
+    veya örneğin
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:(-open%20%2Bscience%29"
+      ><code>metadata.title:(-open +science)</code></a
+    >
+  </p>
+  <p>
+    Gelişmiş arama sorguları oluşturmak için basit aramaları, kalıp aramalarını
+    ve alan aramalarını birleştirebilirsiniz.
+  </p>
+  <h3>Aralık araması</h3>
+  <p>
+    <strong>Örnek:</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=metadata.publication_date:%5B2017%20TO%202018%5D"
+      ><code>metadata.publication_date:[2017 TO 2018]</code></a
+    >
+    (<code>TO</code>'nun büyük harflerle yazılması gerektiğini unutmayın).
+  </p>
+  <p>
+    Sonuçlar, yayın tarihi 2017-01-01 ile 2018-01-01 arasında olan
+    (her iki tarih dahil) tüm kayıtlarla eşleşecektir.
+  </p>
+  <p>Kısmi tarihlerin tam tarihlere genişletildiğini unutmayın, örneğin:</p>
+  <ul>
+    <li>2017, 2017-01-01 olarak genişletilir</li>
+    <li>2017-06, 2017-06-01 olarak genişletilir</li>
+  </ul>
+  <p>
+    <em>Kapsayıcı</em> aralıklar için köşeli parantezler (<code>[]</code>) ve
+    <em>dışlayıcı</em> aralıklar için süslü parantezler (<code>{}</code>) kullanın, örneğin:
+  </p>
+  <ul>
+    <li>
+      <code>[2017 TO 2018}</code>, tarih genişletmesi ve dışlayıcı üst sınır
+      nedeniyle <code>[2017-01-01 TO 2017-12-31]</code> ile eşdeğerdir.
+    </li>
+  </ul>
+  <p>Diğer aralık örnekleri:</p>
+  <ul>
+    <li>
+      <code>metadata.publication_date:{* TO 2017-01-01}</code>: 2017'ye kadar tüm günler.
+    </li>
+    <li>
+      <code>metadata.publication_date:[2017-01-01 TO *]</code>: 2017'den itibaren tüm günler.
+    </li>
+  </ul>
+  <h3>Sıralama</h3>
+  <p>
+    Varsayılan olarak, tüm aramalar her eşleşmeyi sorgunuza göre puanlayan
+    dahili bir sıralama algoritmasına göre sıralanır. Hem kullanıcı arayüzünde
+    hem de REST API'de sonuçları şuna göre sıralamak mümkündür:
+  </p>
+  <ul>
+    <li>En iyi eşleşme</li>
+    <li>En yeni</li>
+    <li>En eski</li>
+    <li>Son güncellenen</li>
+    <li>En az güncel güncellenen</li>
+    <li>Son eklenen</li>
+    <li>En az güncel eklenen</li>
+  </ul>
+  <h3>Düzenli ifadeler</h3>
+  <p>
+    Düzenli ifadeler, bir alanda belirli kalıpları aramanızı sağlayan güçlü bir
+    kalıp eşleştirme dilidir. Örneğin, 10.59350 DOI önekine sahip tüm kayıtları
+    bulmak istesek, düzenli ifade araması kullanabiliriz:
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=pids.doi.identifier%3A%2F10.59350.%2A%2F"
+      ><code>pids.doi.identifier:/10.59350.*/</code></a
+    >
+  </p>
+  <p>
+    Dikkat, düzenli ifadenin alanın <em>tam</em> değeriyle eşleşmesi gerekir.
+    Daha fazla ayrıntı için OpenSearch
+    <a
+      href="https://opensearch.org/docs/latest/query-dsl/term/regexp/"
+      >düzenli ifade sözdizimi</a
+    >
+    belgelerine bakın.
+  </p>
+  <h3>Eksik değerler</h3>
+  <p>
+    <code>_exists_</code> ve <code>not _exists_</code> alan adlarını kullanarak
+    belirli bir alanda değeri eksik olan veya değeri olan kayıtları
+    aramak mümkündür.
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=not%20_exists_:metadata.additional_titles"
+      ><code>not _exists_:metadata.additional_titles</code></a
+    >
+    (metadata.additional_titles olmayan tüm kayıtlar)
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=_exists_:metadata.creators"
+      ><code>_exists_:metadata.creators</code></a
+    >
+    (metadata.creators olan tüm kayıtlar)
+  </p>
+  <h3>Gelişmiş kavramlar</h3>
+  <h4>Güçlendirme</h4>
+  <p>
+    Bir terim diğerinden daha ilgili olduğunda güçlendirme operatörü <code>^</code>
+    kullanabilirsiniz. Örneğin, <em>başlık</em> veya <em>açıklama</em> alanında
+    <em>open science</em> kalıbını içeren tüm kayıtları arayabilir, ancak
+    kalıbı <em>başlık</em> alanında içeren kayıtları daha yüksek sıralayabilirsiniz:
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=metadata.title:%22open%20science%22%5E5%20metadata.description:%22open%20science%22"
+      ><code>metadata.title:"open science"^5 metadata.description:"open science"</code></a
+    >
+  </p>
+  <h4>Bulanık arama</h4>
+  <p>
+    Bulanık operatör <code>~</code> kullanarak arama teriminize benzer ancak tam olarak
+    aynı olmayan terimleri arayabilirsiniz.
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=oepn~"><code>oepn~</code></a>
+  </p>
+  <p>
+    Sonuçlar, <code>oepn</code>'ye benzer terimler içeren kayıtlarla eşleşecektir,
+    bu da örneğin <code>open</code> ile de eşleşir.
+  </p>
+  <h4>Yakınlık araması</h4>
+  <p>
+    <code>"open science"</code> gibi bir kalıp araması, varsayılan olarak tüm terimlerin
+    tam olarak aynı sırada olmasını bekler ve bu nedenle <em>"open access and science"</em>
+    kalıbını içeren bir kayıtla eşleşmez. Yakınlık araması, terimlerin tam sırada
+    olmamasına ve aralarına başka terimler girmesine izin verir. Esneklik derecesi
+    bir tam sayı ile belirtilir:
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%22open%20science%22~5"
+      ><code>"open science"~5</code></a
+    >
+  </p>
+  <h4>Joker karakterler</h4>
+  <p>
+    Arama terimlerinde tek bir karakteri değiştirmek için (<code>?</code> operatörü ile)
+    veya sıfır veya daha fazla karakteri değiştirmek için (<code>*</code> operatörü ile)
+    joker karakterler kullanabilirsiniz.
+  </p>
+  <p>
+    <strong>Örnek:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=ope%3F%20scien*"
+      ><code>ope? scien*</code></a
+    >
+  </p>
+  <p>
+    Joker karakter aramaları yavaş olabilir ve mümkünse normalde bunlardan kaçınılmalıdır.
+  </p>
+</div>
+{%- endblock page_body%}

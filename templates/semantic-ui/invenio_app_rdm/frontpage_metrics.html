@@ -168,13 +168,19 @@
     el.style.display = "";
   }
 
+  // Compute date 30 days ago as YYYY-MM-DD
+  var d = new Date();
+  d.setDate(d.getDate() - 30);
+  var since = d.toISOString().slice(0, 10);
+  var recentQ = "metadata.publication_date:[" + since + " TO *]";
+
   // Fetch all metrics in parallel
   var totalPosts = 0;
 
   Promise.all([
     fetch(baseUrl + "/communities?type=blog&size=1", { headers: headers }).then(function(r) { return r.json(); }),
     fetch(baseUrl + "/records?size=1", { headers: headers }).then(function(r) { return r.json(); }),
-    fetch(baseUrl + "/records?q=metadata.publication_date%3A%5Bnow-30d%2Fd+TO+*%5D&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+    fetch(baseUrl + "/records?q=" + encodeURIComponent(recentQ) + "&size=1", { headers: headers }).then(function(r) { return r.json(); }),
   ]).then(function(results) {
     var blogCount = results[0].hits.total;
     totalPosts = results[1].hits.total;
@@ -182,7 +188,7 @@
 
     show("metric-blogs", fmt(blogCount), "/communities/search?q=&f=type%3Ablog&l=list&p=1&s=10&sort=newest");
     show("metric-posts", fmt(totalPosts), "/search?q=&l=list&p=1&s=10&sort=newest");
-    show("metric-recent", fmt(recentCount), "/search?q=metadata.publication_date%3A%5Bnow-30d%2Fd+TO+*%5D&l=list&p=1&s=10&sort=newest");
+    show("metric-recent", fmt(recentCount), "/search?q=" + encodeURIComponent(recentQ) + "&l=list&p=1&s=10&sort=newest");
 
     // Row 2: percentage metrics (depend on totalPosts)
     return Promise.all([

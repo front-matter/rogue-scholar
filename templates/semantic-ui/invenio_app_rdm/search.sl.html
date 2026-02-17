@@ -1,0 +1,306 @@
+{#
+  Copyright (C) 2021 CERN.
+  Copyright (C) 2021 Northwestern University.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Search guide") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+<div class="ui container mt-25">
+  <h1>Vodnik po iskanju</h1>
+  <p>
+    Ta vodnik pojasnjuje, kako pisati napredne iskalne poizvedbe
+    z uporabo enostavno razumljivih primerov.
+  </p>
+  <h3>Preprosto iskanje (en ali več izrazov)</h3>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=open%20science"
+      ><code>open science</code></a
+    >
+  </p>
+  <p>
+    Rezultati bodo ustrezali zapisom, ki vsebujejo <em>izraze</em> <code>open</code>
+    <em>ali</em> <code>science</code> v <em>katerem koli polju</em>. Upoštevajte, da se
+    uporablja lematizacija, zato bo na primer <code>science</code> ustrezal tudi
+    <code>sciences</code>. Rezultati iskanja so razvrščeni po algoritmu,
+    ki upošteva vaše iskalne izraze.
+  </p>
+  <p>
+    Zahtevate lahko <em>prisotnost</em> obeh izrazov z uporabo operatorja
+    <code>+</code> ali <code>AND</code>:
+  </p>
+  <p>
+    <strong>Primeri:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%2Bopen%20%2Bscience"
+      ><code>+open +science</code></a
+    >
+    ali
+    <a href="/search?page=1&amp;size=20&amp;q=open%20AND%20science"
+      ><code>open AND science</code></a
+    >
+  </p>
+  <p>
+    Zahtevate lahko <em>odsotnost</em> enega ali več izrazov z uporabo operatorja
+    <code>-</code> ali <code>NOT</code>:
+  </p>
+  <p>
+    <strong>Primeri:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=-open%20%2Bscience"
+      ><code>-open +science</code></a
+    >
+    ali
+    <a href="/search?page=1&amp;size=20&amp;q=NOT%20open%20AND%20science"
+      ><code>NOT open AND science</code></a
+    >
+  </p>
+  <h3>Frazno iskanje</h3>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%22open%20science%22"
+      ><code>"open science"</code></a
+    >
+  </p>
+  <p>
+    Rezultati bodo ustrezali zapisom, ki vsebujejo <em>frazo</em>
+    <code>open science</code> v <em>katerem koli polju</em>.
+  </p>
+  <h3>Iskanje po polju</h3>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:open"
+      ><code>metadata.title:open</code></a
+    >
+  </p>
+  <p>
+    Rezultati bodo ustrezali zapisom, ki vsebujejo <em>izraz</em> <code>open</code> v
+    <em>polju</em> <code>metadata.title</code>. Če želite iskati več izrazov
+    v naslovu, morate <strong>izraze združiti</strong> z uporabo oklepajev:
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:(open%20science%29"
+      ><code>metadata.title:(open science)</code></a
+    >
+  </p>
+  <p>
+    Oglejte si referenco polj spodaj za celoten seznam polj, v katerih lahko iščete.
+  </p>
+  <h3>Celotno besedilno iskanje</h3>
+  <p>
+    <strong>Primer:</strong>
+    <a href='/search?page=1&amp;size=20&amp;q=content:"Marie Curie"'
+      ><code>content:"Marie Curie"</code></a
+    >
+  </p>
+  <p>
+    Rezultati bodo ustrezali zapisom, ki vsebujejo <em>frazo</em> <code>Marie Curie</code> v
+    <code>vsebini</code>. Če želite iskati natančno ujemanje več besed
+    (npr. ime osebe), morate frazo zapreti v dvojne narekovaje.
+  </p>
+  <h3>Iskanje po trajnem identifikatorju</h3>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=doi:10.59350/b7mtv-gpn88"
+      ><code>doi:10.59350/b7mtv-gpn88</code></a
+    >
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=orcid:0000-0001-7542-0286"
+      ><code>orcid:0000-0001-7542-0286</code></a
+    >
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=ror:00vtgdb53"
+      ><code>ror:00vtgdb53</code></a
+    >
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=issn:3033-3695"
+      ><code>issn:3033-3695</code></a
+    >
+  </p>
+  <p>
+    Iščite po trajnih identifikatorjih <em>doi</em>, <em>orcid</em>, <em>ror</em> ali
+    <em>issn</em>. <em>doi</em> je zunanji identifikator zapisa, <em>orcid</em> je
+    identifikator avtorja za enega od avtorjev zapisa, <em>ror</em> je
+    identifikator ustanove za eno od affiliacij avtorjev, <em>issn</em> pa je
+    identifikator periodične publikacije zapisa.
+  </p>
+  <h3>Kombinacija preprostega, fraznega ali poljnega iskanja</h3>
+  <p>
+    <strong>Primer:</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=%2Bmetadata.title:%22open%20science%22%20-metadata.title:policy"
+      ><code>+metadata.title:"open science" -metadata.title:policy</code></a
+    >
+    ali na primer
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:(-open%20%2Bscience%29"
+      ><code>metadata.title:(-open +science)</code></a
+    >
+  </p>
+  <p>
+    Kombinirte lahko preprosto, frazno in poljno iskanje za sestavljanje
+    naprednih iskalnih poizvedb.
+  </p>
+  <h3>Iskanje po razponu</h3>
+  <p>
+    <strong>Primer:</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=metadata.publication_date:%5B2017%20TO%202018%5D"
+      ><code>metadata.publication_date:[2017 TO 2018]</code></a
+    >
+    (upoštevajte, da mora biti <code>TO</code> z velikimi črkami).
+  </p>
+  <p>
+    Rezultati bodo ustrezali kateremu koli zapisu, katerega datum objave
+    je med 2017-01-01 in 2018-01-01 (oba datuma vključno).
+  </p>
+  <p>Upoštevajte, da se delni datumi razširijo v polne datume, na primer:</p>
+  <ul>
+    <li>2017 se razširi v 2017-01-01</li>
+    <li>2017-06 se razširi v 2017-06-01</li>
+  </ul>
+  <p>
+    Uporabite oglate oklepaje (<code>[]</code>) za <em>vključujoče</em> razpone in
+    zavite oklepaje (<code>{}</code>) za <em>izključujoče</em> razpone, na primer:
+  </p>
+  <ul>
+    <li>
+      <code>[2017 TO 2018}</code> je enakovredno
+      <code>[2017-01-01 TO 2017-12-31]</code> zaradi razširitve datumov in
+      izključujoče zgornje meje.
+    </li>
+  </ul>
+  <p>Primeri drugih razponov:</p>
+  <ul>
+    <li>
+      <code>metadata.publication_date:{* TO 2017-01-01}</code>: Vsi dnevi do leta 2017.
+    </li>
+    <li>
+      <code>metadata.publication_date:[2017-01-01 TO *]</code>: Vsi dnevi od leta 2017.
+    </li>
+  </ul>
+  <h3>Razvrščanje/Urejanje</h3>
+  <p>
+    Privzeto so vsa iskanja urejena po notranjem algoritmu razvrščanja,
+    ki vsak zadetek oceni glede na vašo poizvedbo. Tako v uporabniškem
+    vmesniku kot v REST API je mogoče rezultate razvrstiti po:
+  </p>
+  <ul>
+    <li>Najboljše ujemanje</li>
+    <li>Najnovejše</li>
+    <li>Najstarejše</li>
+    <li>Nedavno posodobljeno</li>
+    <li>Najdlje nazaj posodobljeno</li>
+    <li>Nedavno dodano</li>
+    <li>Najdlje nazaj dodano</li>
+  </ul>
+  <h3>Regularni izrazi</h3>
+  <p>
+    Regularni izrazi so močan jezik za ujemanje vzorcev, ki vam omogoča
+    iskanje specifičnih vzorcev v polju. Če bi na primer želeli najti
+    vse zapise s predpono DOI 10.59350, bi lahko uporabili iskanje z
+    regularnim izrazom:
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=pids.doi.identifier%3A%2F10.59350.%2A%2F"
+      ><code>pids.doi.identifier:/10.59350.*/</code></a
+    >
+  </p>
+  <p>
+    Pozor, regularni izraz se mora ujemati s <em>celotno</em> vrednostjo polja.
+    Oglejte si dokumentacijo OpenSearch o
+    <a
+      href="https://opensearch.org/docs/latest/query-dsl/term/regexp/"
+      >sintaksi regularnih izrazov</a
+    >
+    za več podrobnosti.
+  </p>
+  <h3>Manjkajoče vrednosti</h3>
+  <p>
+    Mogoče je iskati zapise, ki jim manjka vrednost ali imajo
+    vrednost v določenem polju z uporabo imen polj
+    <code>_exists_</code> in <code>not _exists_</code>.
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=not%20_exists_:metadata.additional_titles"
+      ><code>not _exists_:metadata.additional_titles</code></a
+    >
+    (vsi zapisi brez metadata.additional_titles)
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=_exists_:metadata.creators"
+      ><code>_exists_:metadata.creators</code></a
+    >
+    (vsi zapisi z metadata.creators)
+  </p>
+  <h3>Napredni koncepti</h3>
+  <h4>Ojačanje</h4>
+  <p>
+    Uporabite lahko operator ojačanja <code>^</code>, kadar je en izraz bolj
+    relevanten kot drugi. Na primer, lahko iščete vse zapise s frazo
+    <em>open science</em> v polju <em>naslov</em> ali
+    <em>opis</em>, vendar zapise s frazo v polju
+    <em>naslov</em> razvrstite višje:
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=metadata.title:%22open%20science%22%5E5%20metadata.description:%22open%20science%22"
+      ><code>metadata.title:"open science"^5 metadata.description:"open science"</code></a
+    >
+  </p>
+  <h4>Približno iskanje</h4>
+  <p>
+    Iščete lahko izraze, ki so podobni, a ne povsem enaki vašemu iskalnemu
+    izrazu, z uporabo operatorja približnega iskanja <code>~</code>.
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=oepn~"><code>oepn~</code></a>
+  </p>
+  <p>
+    Rezultati bodo ustrezali zapisom, ki vsebujejo izraze podobne
+    <code>oepn</code>, kar bo na primer ustrezalo tudi <code>open</code>.
+  </p>
+  <h4>Iskanje po bližini</h4>
+  <p>
+    Frazno iskanje, kot je <code>"open science"</code>, privzeto pričakuje, da so
+    vsi izrazi natanko v istem vrstnem redu, in zato ne bo ustrezalo zapisu, ki
+    vsebuje frazo <em>"open access and science"</em>. Iskanje po bližini dovoljuje,
+    da izrazi niso v natančnem vrstnem redu in lahko vključujejo druge izraze
+    med njimi. Stopnja prožnosti je določena s celim številom:
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%22open%20science%22~5"
+      ><code>"open science"~5</code></a
+    >
+  </p>
+  <h4>Nadomestni znaki</h4>
+  <p>
+    V iskalnih izrazih lahko uporabite nadomestne znake za zamenjavo enega znaka
+    (z uporabo operatorja <code>?</code>) ali nič ali več znakov (z uporabo
+    operatorja <code>*</code>).
+  </p>
+  <p>
+    <strong>Primer:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=ope%3F%20scien*"
+      ><code>ope? scien*</code></a
+    >
+  </p>
+  <p>
+    Iskanja z nadomestnimi znaki so lahko počasna in se jim je običajno treba izogibati, če je to mogoče.
+  </p>
+</div>
+{%- endblock page_body%}

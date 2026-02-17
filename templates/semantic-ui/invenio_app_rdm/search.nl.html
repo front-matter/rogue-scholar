@@ -1,0 +1,306 @@
+{#
+  Copyright (C) 2021 CERN.
+  Copyright (C) 2021 Northwestern University.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Search guide") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+<div class="ui container mt-25">
+  <h1>Zoekgids</h1>
+  <p>
+    Deze gids legt uit hoe u geavanceerde zoekopdrachten kunt schrijven
+    aan de hand van eenvoudig te begrijpen voorbeelden.
+  </p>
+  <h3>Eenvoudig zoeken (een of meer termen)</h3>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=open%20science"
+      ><code>open science</code></a
+    >
+  </p>
+  <p>
+    De resultaten komen overeen met records die de <em>termen</em> <code>open</code>
+    <em>of</em> <code>science</code> bevatten in <em>elk veld</em>. Merk op dat
+    stamvorming wordt toegepast, dus bijvoorbeeld <code>science</code> komt ook overeen met
+    <code>sciences</code>. Zoekresultaten worden gerangschikt volgens een algoritme
+    dat rekening houdt met uw zoektermen.
+  </p>
+  <p>
+    U kunt de <em>aanwezigheid</em> van beide termen vereisen met behulp van de
+    <code>+</code> of <code>AND</code> operator:
+  </p>
+  <p>
+    <strong>Voorbeelden:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%2Bopen%20%2Bscience"
+      ><code>+open +science</code></a
+    >
+    of
+    <a href="/search?page=1&amp;size=20&amp;q=open%20AND%20science"
+      ><code>open AND science</code></a
+    >
+  </p>
+  <p>
+    U kunt de <em>afwezigheid</em> van een of meer termen vereisen met behulp van de
+    <code>-</code> of <code>NOT</code> operator:
+  </p>
+  <p>
+    <strong>Voorbeelden:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=-open%20%2Bscience"
+      ><code>-open +science</code></a
+    >
+    of
+    <a href="/search?page=1&amp;size=20&amp;q=NOT%20open%20AND%20science"
+      ><code>NOT open AND science</code></a
+    >
+  </p>
+  <h3>Zoeken op frase</h3>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%22open%20science%22"
+      ><code>"open science"</code></a
+    >
+  </p>
+  <p>
+    De resultaten komen overeen met records die de <em>frase</em>
+    <code>open science</code> bevatten in <em>elk veld</em>.
+  </p>
+  <h3>Zoeken op veld</h3>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:open"
+      ><code>metadata.title:open</code></a
+    >
+  </p>
+  <p>
+    De resultaten komen overeen met records die de <em>term</em> <code>open</code> bevatten in het
+    <em>veld</em> <code>metadata.title</code>. Als u meerdere termen in de titel wilt zoeken,
+    moet u de <strong>termen groeperen</strong> met haakjes:
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:(open%20science%29"
+      ><code>metadata.title:(open science)</code></a
+    >
+  </p>
+  <p>
+    Zie de veldreferentie hieronder voor de volledige lijst van velden waarin u kunt zoeken.
+  </p>
+  <h3>Zoeken in volledige tekst</h3>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href='/search?page=1&amp;size=20&amp;q=content:"Marie Curie"'
+      ><code>content:"Marie Curie"</code></a
+    >
+  </p>
+  <p>
+    De resultaten komen overeen met records die de <em>frase</em> <code>Marie Curie</code> bevatten in de
+    <code>inhoud</code>. Als u een exacte overeenkomst van meerdere woorden wilt zoeken
+    (bijv. de naam van een persoon), moet u de frase tussen dubbele aanhalingstekens plaatsen.
+  </p>
+  <h3>Zoeken op persistente identificator</h3>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=doi:10.59350/b7mtv-gpn88"
+      ><code>doi:10.59350/b7mtv-gpn88</code></a
+    >
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=orcid:0000-0001-7542-0286"
+      ><code>orcid:0000-0001-7542-0286</code></a
+    >
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=ror:00vtgdb53"
+      ><code>ror:00vtgdb53</code></a
+    >
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=issn:3033-3695"
+      ><code>issn:3033-3695</code></a
+    >
+  </p>
+  <p>
+    Zoek naar de persistente identificatoren <em>doi</em>, <em>orcid</em>, <em>ror</em> of
+    <em>issn</em>. De <em>doi</em> is de externe identificator van het record, de <em>orcid</em> is
+    de auteur-identificator voor een van de auteurs van het record, de <em>ror</em> is de
+    instellings-identificator voor een van de affiliaties van de auteurs, en de <em>issn</em> is
+    de identificator van het periodiek van het record.
+  </p>
+  <h3>Combinatie van eenvoudig, frase- of veldzoeken</h3>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=%2Bmetadata.title:%22open%20science%22%20-metadata.title:policy"
+      ><code>+metadata.title:"open science" -metadata.title:policy</code></a
+    >
+    of bijvoorbeeld
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:(-open%20%2Bscience%29"
+      ><code>metadata.title:(-open +science)</code></a
+    >
+  </p>
+  <p>
+    U kunt eenvoudige, frase- en veldzoekopdrachten combineren om
+    geavanceerde zoekopdrachten op te stellen.
+  </p>
+  <h3>Zoeken op bereik</h3>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=metadata.publication_date:%5B2017%20TO%202018%5D"
+      ><code>metadata.publication_date:[2017 TO 2018]</code></a
+    >
+    (merk op dat <code>TO</code> in hoofdletters moet zijn).
+  </p>
+  <p>
+    De resultaten komen overeen met elk record waarvan de publicatiedatum
+    tussen 2017-01-01 en 2018-01-01 ligt (beide data inbegrepen).
+  </p>
+  <p>Merk op dat gedeeltelijke datums worden uitgebreid tot volledige datums, bijvoorbeeld:</p>
+  <ul>
+    <li>2017 wordt uitgebreid tot 2017-01-01</li>
+    <li>2017-06 wordt uitgebreid tot 2017-06-01</li>
+  </ul>
+  <p>
+    Gebruik vierkante haken (<code>[]</code>) voor <em>inclusieve</em> bereiken en
+    accolades (<code>{}</code>) voor <em>exclusieve</em> bereiken, bijvoorbeeld:
+  </p>
+  <ul>
+    <li>
+      <code>[2017 TO 2018}</code> is gelijkwaardig aan
+      <code>[2017-01-01 TO 2017-12-31]</code> vanwege datumuitbreiding en de
+      exclusieve bovengrens.
+    </li>
+  </ul>
+  <p>Voorbeelden van andere bereiken:</p>
+  <ul>
+    <li>
+      <code>metadata.publication_date:{* TO 2017-01-01}</code>: Alle dagen tot 2017.
+    </li>
+    <li>
+      <code>metadata.publication_date:[2017-01-01 TO *]</code>: Alle dagen vanaf 2017.
+    </li>
+  </ul>
+  <h3>Rangschikking/Sortering</h3>
+  <p>
+    Standaard worden alle zoekopdrachten gesorteerd volgens een intern
+    rangschikkingsalgoritme dat elke overeenkomst een score geeft op basis van uw
+    zoekopdracht. Zowel in de gebruikersinterface als in de REST API is het mogelijk
+    de resultaten te sorteren op:
+  </p>
+  <ul>
+    <li>Beste overeenkomst</li>
+    <li>Nieuwste</li>
+    <li>Oudste</li>
+    <li>Recent bijgewerkt</li>
+    <li>Minst recent bijgewerkt</li>
+    <li>Recent toegevoegd</li>
+    <li>Minst recent toegevoegd</li>
+  </ul>
+  <h3>Reguliere expressies</h3>
+  <p>
+    Reguliere expressies zijn een krachtige patroonherkenning-taal waarmee u kunt zoeken
+    naar specifieke patronen in een veld. Als we bijvoorbeeld alle records willen vinden
+    met het DOI-prefix 10.59350, kunnen we een zoekopdracht met reguliere expressie gebruiken:
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=pids.doi.identifier%3A%2F10.59350.%2A%2F"
+      ><code>pids.doi.identifier:/10.59350.*/</code></a
+    >
+  </p>
+  <p>
+    Let op: de reguliere expressie moet overeenkomen met de <em>volledige</em> veldwaarde.
+    Raadpleeg de OpenSearch-documentatie over de
+    <a
+      href="https://opensearch.org/docs/latest/query-dsl/term/regexp/"
+      >syntaxis van reguliere expressies</a
+    >
+    voor meer details.
+  </p>
+  <h3>Ontbrekende waarden</h3>
+  <p>
+    Het is mogelijk te zoeken naar records die een waarde missen of een waarde hebben
+    in een specifiek veld met behulp van de veldnamen
+    <code>_exists_</code> en <code>not _exists_</code>.
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=not%20_exists_:metadata.additional_titles"
+      ><code>not _exists_:metadata.additional_titles</code></a
+    >
+    (alle records zonder metadata.additional_titles)
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=_exists_:metadata.creators"
+      ><code>_exists_:metadata.creators</code></a
+    >
+    (alle records met metadata.creators)
+  </p>
+  <h3>Geavanceerde concepten</h3>
+  <h4>Versterking</h4>
+  <p>
+    U kunt de versterkingsoperator <code>^</code> gebruiken wanneer een term relevanter
+    is dan een andere. U kunt bijvoorbeeld zoeken naar alle records met de frase
+    <em>open science</em> in het veld <em>titel</em> of
+    <em>beschrijving</em>, maar records met de frase in het veld
+    <em>titel</em> hoger rangschikken:
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=metadata.title:%22open%20science%22%5E5%20metadata.description:%22open%20science%22"
+      ><code>metadata.title:"open science"^5 metadata.description:"open science"</code></a
+    >
+  </p>
+  <h4>Fuzzy zoeken</h4>
+  <p>
+    U kunt zoeken naar termen die vergelijkbaar zijn met maar niet precies gelijk aan uw
+    zoekterm met behulp van de fuzzy-operator <code>~</code>.
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=oepn~"><code>oepn~</code></a>
+  </p>
+  <p>
+    De resultaten komen overeen met records die termen bevatten die vergelijkbaar zijn met
+    <code>oepn</code>, wat bijvoorbeeld ook overeenkomt met <code>open</code>.
+  </p>
+  <h4>Nabijheidszoeken</h4>
+  <p>
+    Een frasezoekopdracht zoals <code>"open science"</code> verwacht standaard dat alle termen
+    in exact dezelfde volgorde staan, en komt daarom niet overeen met een record dat de
+    frase <em>"open access and science"</em> bevat. Een nabijheidszoek-opdracht staat toe dat
+    de termen niet in de exacte volgorde staan en andere termen ertussen kunnen staan. De mate
+    van flexibiliteit wordt aangegeven door een geheel getal:
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%22open%20science%22~5"
+      ><code>"open science"~5</code></a
+    >
+  </p>
+  <h4>Jokertekens</h4>
+  <p>
+    U kunt jokertekens gebruiken in zoektermen om een enkel teken te vervangen
+    (met de <code>?</code> operator) of nul of meer tekens (met de
+    <code>*</code> operator).
+  </p>
+  <p>
+    <strong>Voorbeeld:</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=ope%3F%20scien*"
+      ><code>ope? scien*</code></a
+    >
+  </p>
+  <p>
+    Zoekopdrachten met jokertekens kunnen traag zijn en moeten normaal gesproken worden vermeden indien mogelijk.
+  </p>
+</div>
+{%- endblock page_body%}

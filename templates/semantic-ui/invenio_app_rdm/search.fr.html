@@ -1,0 +1,308 @@
+{#
+  Copyright (C) 2021 CERN.
+  Copyright (C) 2021 Northwestern University.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Search guide") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+<div class="ui container mt-25">
+  <h1>Guide de recherche</h1>
+  <p>
+    Ce guide explique comment rédiger des requêtes de recherche avancées
+    à l'aide d'exemples faciles à comprendre.
+  </p>
+  <h3>Recherche simple (un ou plusieurs termes)</h3>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=open%20science"
+      ><code>open science</code></a
+    >
+  </p>
+  <p>
+    Les résultats correspondront aux enregistrements contenant les <em>termes</em> <code>open</code>
+    <em>ou</em> <code>science</code> dans <em>n'importe quel champ</em>. Notez que la
+    lemmatisation est appliquée, donc par ex. <code>science</code> correspondra aussi à
+    <code>sciences</code>. Les résultats de recherche sont classés selon un algorithme
+    qui prend en compte vos termes de recherche.
+  </p>
+  <p>
+    Vous pouvez exiger la <em>présence</em> des deux termes en utilisant l'opérateur
+    <code>+</code> ou <code>AND</code> :
+  </p>
+  <p>
+    <strong>Exemples :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%2Bopen%20%2Bscience"
+      ><code>+open +science</code></a
+    >
+    ou
+    <a href="/search?page=1&amp;size=20&amp;q=open%20AND%20science"
+      ><code>open AND science</code></a
+    >
+  </p>
+  <p>
+    Vous pouvez exiger l'<em>absence</em> d'un ou plusieurs termes en utilisant
+    l'opérateur <code>-</code> ou <code>NOT</code> :
+  </p>
+  <p>
+    <strong>Exemples :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=-open%20%2Bscience"
+      ><code>-open +science</code></a
+    >
+    ou
+    <a href="/search?page=1&amp;size=20&amp;q=NOT%20open%20AND%20science"
+      ><code>NOT open AND science</code></a
+    >
+  </p>
+  <h3>Recherche par expression</h3>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%22open%20science%22"
+      ><code>"open science"</code></a
+    >
+  </p>
+  <p>
+    Les résultats correspondront aux enregistrements contenant l'<em>expression</em>
+    <code>open science</code> dans <em>n'importe quel champ</em>.
+  </p>
+  <h3>Recherche par champ</h3>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:open"
+      ><code>metadata.title:open</code></a
+    >
+  </p>
+  <p>
+    Les résultats correspondront aux enregistrements contenant le <em>terme</em> <code>open</code> dans le
+    <em>champ</em> <code>metadata.title</code>. Si vous souhaitez rechercher plusieurs termes
+    dans le titre, vous devez <strong>grouper les termes</strong> à l'aide de parenthèses :
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:(open%20science%29"
+      ><code>metadata.title:(open science)</code></a
+    >
+  </p>
+  <p>
+    Consultez la référence des champs ci-dessous pour la liste complète des champs interrogeables.
+  </p>
+  <h3>Recherche en texte intégral</h3>
+  <p>
+    <strong>Exemple :</strong>
+    <a href='/search?page=1&amp;size=20&amp;q=content:"Marie Curie"'
+      ><code>content:"Marie Curie"</code></a
+    >
+  </p>
+  <p>
+    Les résultats correspondront aux enregistrements contenant l'<em>expression</em> <code>Marie Curie</code> dans le
+    <code>contenu</code>. Si vous souhaitez rechercher une correspondance exacte de plusieurs mots
+    (par ex. un nom de personne), vous devez mettre l'expression entre guillemets doubles.
+  </p>
+  <h3>Recherche par identifiant persistant</h3>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=doi:10.59350/b7mtv-gpn88"
+      ><code>doi:10.59350/b7mtv-gpn88</code></a
+    >
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=orcid:0000-0001-7542-0286"
+      ><code>orcid:0000-0001-7542-0286</code></a
+    >
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=ror:00vtgdb53"
+      ><code>ror:00vtgdb53</code></a
+    >
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=issn:3033-3695"
+      ><code>issn:3033-3695</code></a
+    >
+  </p>
+  <p>
+    Recherchez les identifiants persistants <em>doi</em>, <em>orcid</em>, <em>ror</em> ou
+    <em>issn</em>. Le <em>doi</em> est l'identifiant externe de l'enregistrement, l'<em>orcid</em> est
+    l'identifiant d'auteur pour l'un des auteurs de l'enregistrement, le <em>ror</em> est l'identifiant
+    d'institution pour l'une des affiliations des auteurs, et l'<em>issn</em> est l'identifiant du
+    périodique de l'enregistrement.
+  </p>
+  <h3>Combinaison de recherches simples, par expression ou par champ</h3>
+  <p>
+    <strong>Exemple :</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=%2Bmetadata.title:%22open%20science%22%20-metadata.title:policy"
+      ><code>+metadata.title:"open science" -metadata.title:policy</code></a
+    >
+    ou par ex.
+    <a href="/search?page=1&amp;size=20&amp;q=metadata.title:(-open%20%2Bscience%29"
+      ><code>metadata.title:(-open +science)</code></a
+    >
+  </p>
+  <p>
+    Vous pouvez combiner les recherches simples, par expression et par champ pour
+    construire des requêtes de recherche avancées.
+  </p>
+  <h3>Recherche par plage</h3>
+  <p>
+    <strong>Exemple :</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=metadata.publication_date:%5B2017%20TO%202018%5D"
+      ><code>metadata.publication_date:[2017 TO 2018]</code></a
+    >
+    (notez que <code>TO</code> doit être en majuscules).
+  </p>
+  <p>
+    Les résultats correspondront à tout enregistrement dont la date de publication
+    est comprise entre le 2017-01-01 et le 2018-01-01 (les deux dates incluses).
+  </p>
+  <p>Notez que les dates partielles sont étendues en dates complètes, par ex. :</p>
+  <ul>
+    <li>2017 est étendu à 2017-01-01</li>
+    <li>2017-06 est étendu à 2017-06-01</li>
+  </ul>
+  <p>
+    Utilisez les crochets (<code>[]</code>) pour les plages <em>inclusives</em> et les
+    accolades (<code>{}</code>) pour les plages <em>exclusives</em>, par ex. :
+  </p>
+  <ul>
+    <li>
+      <code>[2017 TO 2018}</code> est équivalent à
+      <code>[2017-01-01 TO 2017-12-31]</code> en raison de l'extension des dates et
+      de la borne supérieure exclusive.
+    </li>
+  </ul>
+  <p>Exemples d'autres plages :</p>
+  <ul>
+    <li>
+      <code>metadata.publication_date:{* TO 2017-01-01}</code> : Tous les jours jusqu'en 2017.
+    </li>
+    <li>
+      <code>metadata.publication_date:[2017-01-01 TO *]</code> : Tous les jours à partir de 2017.
+    </li>
+  </ul>
+  <h3>Classement/Tri</h3>
+  <p>
+    Par défaut, toutes les recherches sont triées selon un algorithme de classement
+    interne qui évalue chaque résultat par rapport à votre requête. Dans l'interface
+    utilisateur et l'API REST, il est possible de trier les résultats par :
+  </p>
+  <ul>
+    <li>Meilleure correspondance</li>
+    <li>Plus récent</li>
+    <li>Plus ancien</li>
+    <li>Récemment mis à jour</li>
+    <li>Moins récemment mis à jour</li>
+    <li>Récemment ajouté</li>
+    <li>Moins récemment ajouté</li>
+  </ul>
+  <h3>Expressions régulières</h3>
+  <p>
+    Les expressions régulières sont un langage puissant de correspondance de motifs
+    qui permet de rechercher des motifs spécifiques dans un champ. Par exemple, si nous
+    voulions trouver tous les enregistrements avec un préfixe DOI 10.59350, nous
+    pourrions utiliser une recherche par expression régulière :
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=pids.doi.identifier%3A%2F10.59350.%2A%2F"
+      ><code>pids.doi.identifier:/10.59350.*/</code></a
+    >
+  </p>
+  <p>
+    Attention, l'expression régulière doit correspondre à la valeur <em>entière</em> du champ.
+    Consultez la documentation OpenSearch sur la
+    <a
+      href="https://opensearch.org/docs/latest/query-dsl/term/regexp/"
+      >syntaxe des expressions régulières</a
+    >
+    pour plus de détails.
+  </p>
+  <h3>Valeurs manquantes</h3>
+  <p>
+    Il est possible de rechercher des enregistrements auxquels il manque une valeur
+    ou qui ont une valeur dans un champ spécifique en utilisant les noms de champ
+    <code>_exists_</code> et <code>not _exists_</code>.
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=not%20_exists_:metadata.additional_titles"
+      ><code>not _exists_:metadata.additional_titles</code></a
+    >
+    (tous les enregistrements sans metadata.additional_titles)
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=_exists_:metadata.creators"
+      ><code>_exists_:metadata.creators</code></a
+    >
+    (tous les enregistrements avec metadata.creators)
+  </p>
+  <h3>Concepts avancés</h3>
+  <h4>Pondération</h4>
+  <p>
+    Vous pouvez utiliser l'opérateur de pondération <code>^</code> lorsqu'un terme
+    est plus pertinent qu'un autre. Par exemple, vous pouvez rechercher tous les
+    enregistrements contenant l'expression <em>open science</em> dans le champ
+    <em>titre</em> ou <em>description</em>, mais classer plus haut les enregistrements
+    contenant l'expression dans le champ <em>titre</em> :
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a
+      href="/search?page=1&amp;size=20&amp;q=metadata.title:%22open%20science%22%5E5%20metadata.description:%22open%20science%22"
+      ><code>metadata.title:"open science"^5 metadata.description:"open science"</code></a
+    >
+  </p>
+  <h4>Recherche floue</h4>
+  <p>
+    Vous pouvez rechercher des termes similaires mais pas exactement identiques
+    à votre terme de recherche en utilisant l'opérateur flou <code>~</code>.
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=oepn~"><code>oepn~</code></a>
+  </p>
+  <p>
+    Les résultats correspondront aux enregistrements contenant des termes similaires
+    à <code>oepn</code>, ce qui correspondrait par ex. aussi à <code>open</code>.
+  </p>
+  <h4>Recherche de proximité</h4>
+  <p>
+    Une recherche par expression comme <code>"open science"</code> attend par défaut
+    tous les termes exactement dans le même ordre, et ne correspondrait donc pas à
+    un enregistrement contenant l'expression <em>"open access and science"</em>. Une
+    recherche de proximité permet que les termes ne soient pas dans l'ordre exact et
+    puissent inclure d'autres termes entre eux. Le degré de flexibilité est spécifié
+    par un entier qui suit :
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=%22open%20science%22~5"
+      ><code>"open science"~5</code></a
+    >
+  </p>
+  <h4>Caractères génériques</h4>
+  <p>
+    Vous pouvez utiliser des caractères génériques dans les termes de recherche pour
+    remplacer un seul caractère (avec l'opérateur <code>?</code>) ou zéro ou
+    plusieurs caractères (avec l'opérateur <code>*</code>).
+  </p>
+  <p>
+    <strong>Exemple :</strong>
+    <a href="/search?page=1&amp;size=20&amp;q=ope%3F%20scien*"
+      ><code>ope? scien*</code></a
+    >
+  </p>
+  <p>
+    Les recherches avec caractères génériques peuvent être lentes et devraient
+    normalement être évitées si possible.
+  </p>
+</div>
+{%- endblock page_body%}

@@ -81,8 +81,8 @@ msgstr "Katılan bloglar"
 msgid "All Blog Posts"
 msgstr "Tüm blog yazıları"
 
-msgid "All Citations"
-msgstr "Tüm atıflar"
+msgid "Blog Posts last 30 Days"
+msgstr "Son 30 günün blog yazıları"
 
 msgid "Posts with ORCID"
 msgstr "ORCID'li yazılar"

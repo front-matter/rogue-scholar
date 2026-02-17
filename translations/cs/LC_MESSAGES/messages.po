@@ -81,8 +81,8 @@ msgstr "Zúčastněné blogy"
 msgid "All Blog Posts"
 msgstr "Všechny příspěvky"
 
-msgid "All Citations"
-msgstr "Všechny citace"
+msgid "Blog Posts last 30 Days"
+msgstr "Příspěvky za posledních 30 dní"
 
 msgid "Posts with ORCID"
 msgstr "Příspěvky s ORCID"

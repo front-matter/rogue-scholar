@@ -81,8 +81,8 @@ msgstr "Deelnemende blogs"
 msgid "All Blog Posts"
 msgstr "Alle blogposts"
 
-msgid "All Citations"
-msgstr "Alle citaties"
+msgid "Blog Posts last 30 Days"
+msgstr "Blogposts van de afgelopen 30 dagen"
 
 msgid "Posts with ORCID"
 msgstr "Posts met ORCID"

@@ -81,8 +81,8 @@ msgstr "Sodelujoči blogi"
 msgid "All Blog Posts"
 msgstr "Vse objave"
 
-msgid "All Citations"
-msgstr "Vsi citati"
+msgid "Blog Posts last 30 Days"
+msgstr "Objave v zadnjih 30 dneh"
 
 msgid "Posts with ORCID"
 msgstr "Objave z ORCID"

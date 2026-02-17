@@ -81,8 +81,8 @@ msgstr "Teilnehmende Blogs"
 msgid "All Blog Posts"
 msgstr "Alle Blogbeiträge"
 
-msgid "All Citations"
-msgstr "Alle Zitierungen"
+msgid "Blog Posts last 30 Days"
+msgstr "Blogbeiträge der letzten 30 Tage"
 
 msgid "Posts with ORCID"
 msgstr "Beiträge mit ORCID"
