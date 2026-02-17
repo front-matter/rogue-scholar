@@ -78,13 +78,13 @@
     </div>
     <div class="card metrics-card" style="background-color:#efb118;">
       <div class="content">
-        <div class="metrics-icon"><iconify-icon icon="codicon:references"></iconify-icon></div>
+        <div class="metrics-icon"><iconify-icon icon="ic:outline-date-range"></iconify-icon></div>
         <div>
-          <div class="ui placeholder metrics-placeholder" id="metric-citations-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metric-recent-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metric-citations" style="display:none;"></div>
-          <div class="meta">{{ _("All Citations") }}</div>
+          <div class="metrics-value" id="metric-recent" style="display:none;"></div>
+          <div class="meta">{{ _("Blog Posts last 30 Days") }}</div>
         </div>
       </div>
     </div>
@@ -175,15 +175,15 @@
   Promise.all([
     fetch(baseUrl + "/communities?type=blog&size=1", { headers: headers }).then(function(r) { return r.json(); }),
     fetch(baseUrl + "/records?size=1", { headers: headers }).then(function(r) { return r.json(); }),
-    fetch(baseUrl + "/records?q=custom_fields.rs%5C:citations.identifier:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+    fetch(baseUrl + "/records?q=metadata.publication_date%3A%5Bnow-30d%2Fd+TO+*%5D&size=1", { headers: headers }).then(function(r) { return r.json(); }),
   ]).then(function(results) {
     var blogCount = results[0].hits.total;
     totalPosts = results[1].hits.total;
-    var citationCount = results[2].hits.total;
+    var recentCount = results[2].hits.total;
 
     show("metric-blogs", fmt(blogCount), "/communities/search?q=&f=type%3Ablog&l=list&p=1&s=10&sort=newest");
     show("metric-posts", fmt(totalPosts), "/search?q=&l=list&p=1&s=10&sort=newest");
-    show("metric-citations", fmt(citationCount), "/search?q=citations:*&l=list&p=1&s=10&sort=newest");
+    show("metric-recent", fmt(recentCount), "/search?q=metadata.publication_date%3A%5Bnow-30d%2Fd+TO+*%5D&l=list&p=1&s=10&sort=newest");
 
     // Row 2: percentage metrics (depend on totalPosts)
     return Promise.all([
