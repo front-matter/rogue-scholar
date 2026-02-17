@@ -4,75 +4,140 @@
   Rogue Scholar is free software; you can redistribute it and/or modify it
   under the terms of the MIT License; see LICENSE file for more details.
 #}
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@2/dist/iconify-icon.min.js"></script>
+<style>
+  .metrics-card.card {
+    border-radius: 0.5rem !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .metrics-card .content {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    grid-template-rows: 1fr auto !important;
+    align-items: center !important;
+    padding: 1.2em 1.5em !important;
+  }
+  .metrics-card .metrics-icon {
+    grid-row: 1 / 3;
+    padding-right: 1em;
+    display: flex;
+    align-items: center;
+  }
+  .metrics-card .metrics-icon iconify-icon {
+    font-size: 3em;
+    color: rgba(255,255,255,0.85);
+  }
+  .metrics-card .metrics-value {
+    font-size: 1.8em;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .metrics-card .metrics-value a,
+  .metrics-card .meta {
+    color: rgba(255,255,255,0.95) !important;
+  }
+  .metrics-card .metrics-value a:hover {
+    color: #fff !important;
+  }
+  .metrics-card .meta {
+    font-size: 0.95em;
+    opacity: 0.9;
+  }
+  .metrics-card .ui.placeholder .line {
+    background: rgba(255,255,255,0.3);
+  }
+</style>
 <div id="frontpage-metrics" class="ui container rel-mt-2 rel-mb-1">
 
   {# Row 1: Absolute counts #}
   <div class="ui three stackable cards">
-    <div class="card metrics-card">
-      <div class="content center aligned">
-        <div class="ui placeholder metrics-placeholder" id="metric-blogs-placeholder">
-          <div class="line"></div>
+    <div class="card metrics-card" style="background-color:#4269d0;">
+      <div class="content">
+        <div class="metrics-icon"><iconify-icon icon="grommet-icons:blog"></iconify-icon></div>
+        <div>
+          <div class="ui placeholder metrics-placeholder" id="metric-blogs-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="metrics-value" id="metric-blogs" style="display:none;"></div>
+          <div class="meta">{{ _("Participating Blogs") }}</div>
         </div>
-        <div class="metrics-value" id="metric-blogs" style="display:none;"></div>
-        <div class="meta">{{ _("Participating Blogs") }}</div>
       </div>
     </div>
-    <div class="card metrics-card">
-      <div class="content center aligned">
-        <div class="ui placeholder metrics-placeholder" id="metric-posts-placeholder">
-          <div class="line"></div>
+    <div class="card metrics-card" style="background-color:#ff725c;">
+      <div class="content">
+        <div class="metrics-icon"><iconify-icon icon="ic:outline-article"></iconify-icon></div>
+        <div>
+          <div class="ui placeholder metrics-placeholder" id="metric-posts-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="metrics-value" id="metric-posts" style="display:none;"></div>
+          <div class="meta">{{ _("All Blog Posts") }}</div>
         </div>
-        <div class="metrics-value" id="metric-posts" style="display:none;"></div>
-        <div class="meta">{{ _("All Blog Posts") }}</div>
       </div>
     </div>
-    <div class="card metrics-card">
-      <div class="content center aligned">
-        <div class="ui placeholder metrics-placeholder" id="metric-citations-placeholder">
-          <div class="line"></div>
+    <div class="card metrics-card" style="background-color:#efb118;">
+      <div class="content">
+        <div class="metrics-icon"><iconify-icon icon="codicon:references"></iconify-icon></div>
+        <div>
+          <div class="ui placeholder metrics-placeholder" id="metric-citations-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="metrics-value" id="metric-citations" style="display:none;"></div>
+          <div class="meta">{{ _("All Citations") }}</div>
         </div>
-        <div class="metrics-value" id="metric-citations" style="display:none;"></div>
-        <div class="meta">{{ _("All Citations") }}</div>
       </div>
     </div>
   </div>
 
   {# Row 2: Percentage metrics #}
-  <div class="ui four stackable cards rel-mt-1">
-    <div class="card metrics-card">
-      <div class="content center aligned">
-        <div class="ui placeholder metrics-placeholder" id="metric-orcid-placeholder">
-          <div class="line"></div>
+  <div class="ui four stackable cards" style="margin-top:0.5rem;">
+    <div class="card metrics-card" style="background-color:#a6ce39;">
+      <div class="content">
+        <div class="metrics-icon"><iconify-icon icon="academicons:orcid"></iconify-icon></div>
+        <div>
+          <div class="ui placeholder metrics-placeholder" id="metric-orcid-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="metrics-value" id="metric-orcid" style="display:none;"></div>
+          <div class="meta">{{ _("Posts with ORCID") }}</div>
         </div>
-        <div class="metrics-value" id="metric-orcid" style="display:none;"></div>
-        <div class="meta">{{ _("Posts with ORCID") }}</div>
       </div>
     </div>
-    <div class="card metrics-card">
-      <div class="content center aligned">
-        <div class="ui placeholder metrics-placeholder" id="metric-ror-placeholder">
-          <div class="line"></div>
+    <div class="card metrics-card" style="background-color:#53baa1;">
+      <div class="content">
+        <div class="metrics-icon"><iconify-icon icon="academicons:ror"></iconify-icon></div>
+        <div>
+          <div class="ui placeholder metrics-placeholder" id="metric-ror-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="metrics-value" id="metric-ror" style="display:none;"></div>
+          <div class="meta">{{ _("Posts with ROR ID") }}</div>
         </div>
-        <div class="metrics-value" id="metric-ror" style="display:none;"></div>
-        <div class="meta">{{ _("Posts with ROR ID") }}</div>
       </div>
     </div>
-    <div class="card metrics-card">
-      <div class="content center aligned">
-        <div class="ui placeholder metrics-placeholder" id="metric-references-placeholder">
-          <div class="line"></div>
+    <div class="card metrics-card" style="background-color:#97bbf5;">
+      <div class="content">
+        <div class="metrics-icon"><iconify-icon icon="codicon:list-ordered"></iconify-icon></div>
+        <div>
+          <div class="ui placeholder metrics-placeholder" id="metric-references-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="metrics-value" id="metric-references" style="display:none;"></div>
+          <div class="meta">{{ _("Posts with References") }}</div>
         </div>
-        <div class="metrics-value" id="metric-references" style="display:none;"></div>
-        <div class="meta">{{ _("Posts with References") }}</div>
       </div>
     </div>
-    <div class="card metrics-card">
-      <div class="content center aligned">
-        <div class="ui placeholder metrics-placeholder" id="metric-funding-placeholder">
-          <div class="line"></div>
+    <div class="card metrics-card" style="background-color:#ff8ab7;">
+      <div class="content">
+        <div class="metrics-icon"><iconify-icon icon="octicon:sponsor-tiers-24"></iconify-icon></div>
+        <div>
+          <div class="ui placeholder metrics-placeholder" id="metric-funding-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="metrics-value" id="metric-funding" style="display:none;"></div>
+          <div class="meta">{{ _("Posts with Funding") }}</div>
         </div>
-        <div class="metrics-value" id="metric-funding" style="display:none;"></div>
-        <div class="meta">{{ _("Posts with Funding") }}</div>
       </div>
     </div>
   </div>
