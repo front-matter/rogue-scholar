@@ -1,0 +1,75 @@
+# Slovenian translations for Rogue Scholar.
+# Copyright (C) 2026 Front Matter
+# This file is distributed under the MIT License.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Rogue Scholar\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-16 00:00+0000\n"
+"PO-Revision-Date: 2026-02-16 00:00+0000\n"
+"Last-Translator: \n"
+"Language: sl\n"
+"Language-Team: sl <info@front-matter.io>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel\n"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html
+msgid "About"
+msgstr "O nas"
+
+msgid "Overview"
+msgstr "Pregled"
+
+msgid "FAQ"
+msgstr "Pogosta vprašanja"
+
+msgid "Dashboard"
+msgstr "Nadzorna plošča"
+
+msgid "Register Your Blog"
+msgstr "Registrirajte svoj blog"
+
+msgid "Community"
+msgstr "Skupnost"
+
+msgid "Advisory Board"
+msgstr "Svetovalni odbor"
+
+msgid "Newsletter"
+msgstr "Novice"
+
+msgid "Documentation"
+msgstr "Dokumentacija"
+
+msgid "Slack Community"
+msgstr "Slack skupnost"
+
+msgid "Support"
+msgstr "Podpora"
+
+msgid "Membership Interest Form"
+msgstr "Obrazec za interes za članstvo"
+
+msgid "Donate"
+msgstr "Donirajte"
+
+msgid "Web Analytics"
+msgstr "Spletna analitika"
+
+msgid "Status"
+msgstr "Stanje"
+
+#: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
+msgid "Recent blog posts"
+msgstr "Nedavne objave v slovenščini"
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "No records found."
+msgstr "Ni najdenih objav v slovenščini."
+
+#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+msgid "Search all records"
+msgstr "Išči vse objave"

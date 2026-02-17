@@ -63,6 +63,10 @@ const customTranslations = {
     "No records found.": "Не знайдено жодного запису українською.",
     "Search all records": "Шукати всі записи",
   },
+  sl: {
+    "No records found.": "Ni najdenih objav v slovenščini.",
+    "Search all records": "Išči vse objave",
+  },
   cs: {
     "No records found.": "Nebyly nalezeny žádné příspěvky v češtině.",
     "Search all records": "Prohledat všechny příspěvky",
