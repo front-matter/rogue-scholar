@@ -73,3 +73,25 @@ msgstr "Nebyly nalezeny žádné příspěvky v češtině."
 #: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
 msgid "Search all records"
 msgstr "Prohledat všechny příspěvky"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html
+msgid "Participating Blogs"
+msgstr "Zúčastněné blogy"
+
+msgid "All Blog Posts"
+msgstr "Všechny příspěvky"
+
+msgid "All Citations"
+msgstr "Všechny citace"
+
+msgid "Posts with ORCID"
+msgstr "Příspěvky s ORCID"
+
+msgid "Posts with ROR ID"
+msgstr "Příspěvky s ROR ID"
+
+msgid "Posts with References"
+msgstr "Příspěvky s referencemi"
+
+msgid "Posts with Funding"
+msgstr "Příspěvky s financováním"

@@ -73,3 +73,25 @@ msgstr "No records in English found."
 #: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
 msgid "Search all records"
 msgstr "Search all records"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html
+msgid "Participating Blogs"
+msgstr "Participating Blogs"
+
+msgid "All Blog Posts"
+msgstr "All Blog Posts"
+
+msgid "All Citations"
+msgstr "All Citations"
+
+msgid "Posts with ORCID"
+msgstr "Posts with ORCID"
+
+msgid "Posts with ROR ID"
+msgstr "Posts with ROR ID"
+
+msgid "Posts with References"
+msgstr "Posts with References"
+
+msgid "Posts with Funding"
+msgstr "Posts with Funding"

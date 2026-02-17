@@ -73,3 +73,25 @@ msgstr "Geen artikelen in het Nederlands gevonden."
 #: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
 msgid "Search all records"
 msgstr "Alle artikelen doorzoeken"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html
+msgid "Participating Blogs"
+msgstr "Deelnemende blogs"
+
+msgid "All Blog Posts"
+msgstr "Alle blogposts"
+
+msgid "All Citations"
+msgstr "Alle citaties"
+
+msgid "Posts with ORCID"
+msgstr "Posts met ORCID"
+
+msgid "Posts with ROR ID"
+msgstr "Posts met ROR-ID"
+
+msgid "Posts with References"
+msgstr "Posts met referenties"
+
+msgid "Posts with Funding"
+msgstr "Posts met financiering"

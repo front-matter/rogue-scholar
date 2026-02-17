@@ -1,0 +1,139 @@
+{#
+  Copyright (C) 2026 Front Matter.
+
+  Rogue Scholar is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+<div id="frontpage-metrics" class="ui container rel-mt-2 rel-mb-1">
+
+  {# Row 1: Absolute counts #}
+  <div class="ui three stackable cards">
+    <div class="card metrics-card">
+      <div class="content center aligned">
+        <div class="ui placeholder metrics-placeholder" id="metric-blogs-placeholder">
+          <div class="line"></div>
+        </div>
+        <div class="metrics-value" id="metric-blogs" style="display:none;"></div>
+        <div class="meta">{{ _("Participating Blogs") }}</div>
+      </div>
+    </div>
+    <div class="card metrics-card">
+      <div class="content center aligned">
+        <div class="ui placeholder metrics-placeholder" id="metric-posts-placeholder">
+          <div class="line"></div>
+        </div>
+        <div class="metrics-value" id="metric-posts" style="display:none;"></div>
+        <div class="meta">{{ _("All Blog Posts") }}</div>
+      </div>
+    </div>
+    <div class="card metrics-card">
+      <div class="content center aligned">
+        <div class="ui placeholder metrics-placeholder" id="metric-citations-placeholder">
+          <div class="line"></div>
+        </div>
+        <div class="metrics-value" id="metric-citations" style="display:none;"></div>
+        <div class="meta">{{ _("All Citations") }}</div>
+      </div>
+    </div>
+  </div>
+
+  {# Row 2: Percentage metrics #}
+  <div class="ui four stackable cards rel-mt-1">
+    <div class="card metrics-card">
+      <div class="content center aligned">
+        <div class="ui placeholder metrics-placeholder" id="metric-orcid-placeholder">
+          <div class="line"></div>
+        </div>
+        <div class="metrics-value" id="metric-orcid" style="display:none;"></div>
+        <div class="meta">{{ _("Posts with ORCID") }}</div>
+      </div>
+    </div>
+    <div class="card metrics-card">
+      <div class="content center aligned">
+        <div class="ui placeholder metrics-placeholder" id="metric-ror-placeholder">
+          <div class="line"></div>
+        </div>
+        <div class="metrics-value" id="metric-ror" style="display:none;"></div>
+        <div class="meta">{{ _("Posts with ROR ID") }}</div>
+      </div>
+    </div>
+    <div class="card metrics-card">
+      <div class="content center aligned">
+        <div class="ui placeholder metrics-placeholder" id="metric-references-placeholder">
+          <div class="line"></div>
+        </div>
+        <div class="metrics-value" id="metric-references" style="display:none;"></div>
+        <div class="meta">{{ _("Posts with References") }}</div>
+      </div>
+    </div>
+    <div class="card metrics-card">
+      <div class="content center aligned">
+        <div class="ui placeholder metrics-placeholder" id="metric-funding-placeholder">
+          <div class="line"></div>
+        </div>
+        <div class="metrics-value" id="metric-funding" style="display:none;"></div>
+        <div class="meta">{{ _("Posts with Funding") }}</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var baseUrl = "/api";
+  var headers = { "Accept": "application/vnd.inveniordm.v1+json" };
+
+  function fmt(n) {
+    return n.toLocaleString();
+  }
+
+  function pct(n, total) {
+    return (n / total * 100).toFixed(1) + "%";
+  }
+
+  function show(id, text, href) {
+    var el = document.getElementById(id);
+    var ph = document.getElementById(id + "-placeholder");
+    if (href) {
+      el.innerHTML = '<a href="' + href + '">' + text + '</a>';
+    } else {
+      el.textContent = text;
+    }
+    ph.style.display = "none";
+    el.style.display = "";
+  }
+
+  // Fetch all metrics in parallel
+  var totalPosts = 0;
+
+  Promise.all([
+    fetch(baseUrl + "/communities?type=blog&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+    fetch(baseUrl + "/records?size=1", { headers: headers }).then(function(r) { return r.json(); }),
+    fetch(baseUrl + "/records?q=custom_fields.rs%5C:citations.identifier:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+  ]).then(function(results) {
+    var blogCount = results[0].hits.total;
+    totalPosts = results[1].hits.total;
+    var citationCount = results[2].hits.total;
+
+    show("metric-blogs", fmt(blogCount), "/communities/search?q=&f=type%3Ablog&l=list&p=1&s=10&sort=newest");
+    show("metric-posts", fmt(totalPosts), "/search?q=&l=list&p=1&s=10&sort=newest");
+    show("metric-citations", fmt(citationCount), "/search?q=citations:*&l=list&p=1&s=10&sort=newest");
+
+    // Row 2: percentage metrics (depend on totalPosts)
+    return Promise.all([
+      fetch(baseUrl + "/records?q=metadata.creators.person_or_org.identifiers.identifier:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+      fetch(baseUrl + "/records?q=metadata.creators.affiliations.id:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+      fetch(baseUrl + "/records?q=metadata.references.identifier:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+      fetch(baseUrl + "/records?q=metadata.funding.award.number:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+    ]);
+  }).then(function(results) {
+    show("metric-orcid", pct(results[0].hits.total, totalPosts), "/search?q=&f=author_identifiers:orcid&l=list&p=1&s=10&sort=newest");
+    show("metric-ror", pct(results[1].hits.total, totalPosts), "/search?q=ror:*&l=list&p=1&s=10&sort=newest");
+    show("metric-references", pct(results[2].hits.total, totalPosts), "/search?q=references:*&l=list&p=1&s=10&sort=newest");
+    show("metric-funding", pct(results[3].hits.total, totalPosts), "/search?q=funder:*&l=list&p=1&s=10&sort=newest");
+  }).catch(function(err) {
+    console.error("Failed to load frontpage metrics:", err);
+  });
+})();
+</script>

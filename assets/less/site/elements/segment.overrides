@@ -112,3 +112,54 @@
     border-radius: 0 0 0.8rem 0.8rem;
   }
 }
+
+/*--- Frontpage Metrics Cards ---*/
+
+#frontpage-metrics {
+  .metrics-card {
+    border-radius: @borderRadius !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid @rdmSidebarSegmentBorderColor !important;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+      transform: translateY(-2px);
+    }
+
+    .content {
+      padding: 1.25rem 1rem;
+    }
+
+    .metrics-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: @primaryColor;
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+
+      a {
+        color: @primaryColor;
+
+        &:hover {
+          color: @darkPrimaryColor;
+        }
+      }
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: @mutedTextColor;
+      font-weight: 500;
+    }
+
+    .metrics-placeholder {
+      max-width: 120px;
+      margin: 0 auto 0.35rem;
+
+      .line {
+        height: 2.5rem;
+      }
+    }
+  }
+}

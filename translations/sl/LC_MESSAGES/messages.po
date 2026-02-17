@@ -73,3 +73,25 @@ msgstr "Ni najdenih objav v slovenščini."
 #: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
 msgid "Search all records"
 msgstr "Išči vse objave"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html
+msgid "Participating Blogs"
+msgstr "Sodelujoči blogi"
+
+msgid "All Blog Posts"
+msgstr "Vse objave"
+
+msgid "All Citations"
+msgstr "Vsi citati"
+
+msgid "Posts with ORCID"
+msgstr "Objave z ORCID"
+
+msgid "Posts with ROR ID"
+msgstr "Objave z ROR ID"
+
+msgid "Posts with References"
+msgstr "Objave z referencami"
+
+msgid "Posts with Funding"
+msgstr "Objave s financiranjem"

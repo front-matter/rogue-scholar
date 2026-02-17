@@ -73,3 +73,25 @@ msgstr "Inga inlägg på svenska hittades."
 #: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
 msgid "Search all records"
 msgstr "Sök alla inlägg"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html
+msgid "Participating Blogs"
+msgstr "Deltagande bloggar"
+
+msgid "All Blog Posts"
+msgstr "Alla blogginlägg"
+
+msgid "All Citations"
+msgstr "Alla citeringar"
+
+msgid "Posts with ORCID"
+msgstr "Inlägg med ORCID"
+
+msgid "Posts with ROR ID"
+msgstr "Inlägg med ROR-ID"
+
+msgid "Posts with References"
+msgstr "Inlägg med referenser"
+
+msgid "Posts with Funding"
+msgstr "Inlägg med finansiering"

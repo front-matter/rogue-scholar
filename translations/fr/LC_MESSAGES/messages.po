@@ -73,3 +73,25 @@ msgstr "Aucun article en français trouvé."
 #: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
 msgid "Search all records"
 msgstr "Rechercher tous les articles"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html
+msgid "Participating Blogs"
+msgstr "Blogs participants"
+
+msgid "All Blog Posts"
+msgstr "Tous les articles"
+
+msgid "All Citations"
+msgstr "Toutes les citations"
+
+msgid "Posts with ORCID"
+msgstr "Articles avec ORCID"
+
+msgid "Posts with ROR ID"
+msgstr "Articles avec ROR ID"
+
+msgid "Posts with References"
+msgstr "Articles avec références"
+
+msgid "Posts with Funding"
+msgstr "Articles avec financement"

@@ -73,3 +73,25 @@ msgstr "Nenhuma publicação em português encontrada."
 #: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
 msgid "Search all records"
 msgstr "Pesquisar todas as publicações"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html
+msgid "Participating Blogs"
+msgstr "Blogs participantes"
+
+msgid "All Blog Posts"
+msgstr "Todas as publicações"
+
+msgid "All Citations"
+msgstr "Todas as citações"
+
+msgid "Posts with ORCID"
+msgstr "Publicações com ORCID"
+
+msgid "Posts with ROR ID"
+msgstr "Publicações com ROR ID"
+
+msgid "Posts with References"
+msgstr "Publicações com referências"
+
+msgid "Posts with Funding"
+msgstr "Publicações com financiamento"
