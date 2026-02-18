@@ -1004,7 +1004,7 @@ msgstr "Alle Beiträge"
 
 #: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:86
 msgid "Posts last 30 Days"
-msgstr "Beiträge der letzten 30 Tage"
+msgstr "Beiträge letzte 30 Tage"
 
 #: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:98
 msgid "Posts with Funding"
@@ -1386,3 +1386,677 @@ msgstr "Community managen"
 #~ msgid "No records found."
 #~ msgstr "Keine Beiträge auf Deutsch gefunden."
 
+
+# Merged from invenio_app_rdm DE translations
+
+msgid "Accept conditions"
+msgstr "Bedingungen akzeptieren"
+
+msgid "Access"
+msgstr "Zugriff"
+
+msgid "Access already granted"
+msgstr "Zugriff bereits gewährt"
+
+msgid "Access request"
+msgstr "Zugriffsanfrage"
+
+msgid "Actions"
+msgstr "Aktionen"
+
+msgid "Activate"
+msgstr "Aktivieren"
+
+msgid "Activated"
+msgstr "Aktiviert"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Add"
+msgstr "Hinzufügen"
+
+msgid "Add contributor"
+msgstr "Mitwirkende hinzufügen"
+
+msgid "Add groups"
+msgstr "Gruppen hinzufügen"
+
+msgid "Add people"
+msgstr "Personen hinzufügen"
+
+msgid "Advanced options"
+msgstr "Erweiterte Optionen"
+
+msgid "Alternate identifiers"
+msgstr "Alternative IDs"
+
+msgid "An error occurred while fetching the versions."
+msgstr "Es ist ein Fehler aufgetreten, während die Versionen geladen wurden."
+
+msgid "An error occurred while generating the citation."
+msgstr "Beim Anlegen der Zitation ist ein Fehler aufgetreten."
+
+msgid "Approve"
+msgstr "Akzeptieren"
+
+msgid "Approved"
+msgstr "Akzeptiert"
+
+msgid "Awards/Grants"
+msgstr "Auszeichnungen/Stipendien"
+
+msgid "Basic information"
+msgstr "Allgemeine Informationen"
+
+msgid "Bibliographic citation"
+msgstr "Bibliographische Zitation"
+
+msgid "Block"
+msgstr "Sperren"
+
+msgid "Blocked"
+msgstr "Gesperrt"
+
+msgid "Can edit"
+msgstr "Bearbeitungsrechte"
+
+msgid "Can manage"
+msgstr "Kann verwalten"
+
+msgid "Can preview drafts"
+msgstr "Kann Entwürfe einsehen"
+
+msgid "Can view"
+msgstr "Sichtrechte"
+
+msgid "Cancel"
+msgstr "Abbrechen"
+
+msgid "Cancel removal"
+msgstr "Löschvorgang abbrechen"
+
+msgid "Communities"
+msgstr "Communities"
+
+msgid "Community management menu dropdown"
+msgstr "Dropdown-Menü für die Community-Verwaltung"
+
+msgid "Company"
+msgstr "Firma"
+
+msgid "Confirm removal"
+msgstr "Löschen bestätigen"
+
+msgid "Confirmed"
+msgstr "Bestätigt"
+
+msgid "Contributors"
+msgstr "Mitwirkende"
+
+msgid "Copied!"
+msgstr "Kopiert!"
+
+msgid "Copy link"
+msgstr "Link kopieren"
+
+msgid "Copy to clipboard"
+msgstr "In die Zwischenablage kopieren"
+
+msgid "Create a new link"
+msgstr "Neuen Link erstellen"
+
+msgid "Created"
+msgstr "Erstellt"
+
+msgid "Creators"
+msgstr "Ersteller*innen"
+
+msgid "Declined"
+msgstr "Abgelehnt"
+
+msgid "Delete"
+msgstr "Löschen"
+
+msgid "Delete record"
+msgstr "Eintrag löschen"
+
+msgid "Deleted"
+msgstr "Gelöscht"
+
+msgid "Domain"
+msgstr "Domain"
+
+msgid "Download file"
+msgstr "Datei herunterladen"
+
+msgid "Downloads"
+msgstr "Downloads"
+
+msgid "Draft"
+msgstr "Entwurf"
+
+msgid "Edit"
+msgstr "Editieren"
+
+msgid "Edit contributor"
+msgstr "Mitwirkende*n bearbeiten"
+
+msgid "Email"
+msgstr "E-Mail"
+
+msgid "Email address"
+msgstr "E-Mail-Adresse"
+
+msgid "Email confirmation needed"
+msgstr "E-Mail-Bestätigung erforderlich"
+
+msgid "Email domain"
+msgstr "E-Mail-Domain"
+
+msgid "Empty draft title"
+msgstr "Leerer Entwurfstitel"
+
+msgid "Enter max file size..."
+msgstr "Maximale Dateigröße eingeben..."
+
+msgid "Enter quota size..."
+msgstr "Größe der Quota eingeben..."
+
+msgid "Error"
+msgstr "Fehler"
+
+msgid "Expiration date format: YYYY-MM-DD"
+msgstr "Format des Ablaufdatums: YYYY-MM-DD"
+
+msgid "Expiration date: "
+msgstr "Ablaufdatum: "
+
+msgid "Expiration date: YYYY-MM-DD or never if blank (optional)."
+msgstr "Ablaufdatum: YYYY-MM-DD oder nie, falls leer (optional)."
+
+msgid "Expired"
+msgstr "Abgelaufen"
+
+msgid "Expires"
+msgstr "Ablaufdatum"
+
+msgid "Expires at"
+msgstr "Läuft ab am"
+
+msgid "Export"
+msgstr "Exportieren"
+
+msgid "Export selection"
+msgstr "Auswahl exportieren"
+
+msgid "Filter results"
+msgstr "Ergebnisse filtern"
+
+msgid "Flagged"
+msgstr "Markiert"
+
+msgid "Full name"
+msgstr "Vollständiger Name"
+
+msgid "GND logo"
+msgstr "GND-Logo"
+
+msgid "GND profile"
+msgstr "GND Profil"
+
+msgid "Get started!"
+msgstr "Los!"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Group"
+msgstr "Gruppe"
+
+msgid "Groups"
+msgstr "Gruppen"
+
+msgid "Groups with access"
+msgstr "Gruppen mit Zugriff"
+
+msgid "Hidden"
+msgstr "Verborgen"
+
+msgid "I understand the consequences:"
+msgstr "Ich verstehe die Auswirkungen:"
+
+msgid "Impersonate"
+msgstr "Sich als ein*e andere*r Benutzer*in ausgeben"
+
+msgid "Impersonate user"
+msgstr "Sich als ein*e andere*r Benutzer*in ausgeben"
+
+msgid "In 1 month"
+msgstr "In einem Monat"
+
+msgid "In 1 year"
+msgstr "In einem Jahr"
+
+msgid "In 2 months"
+msgstr "In zwei Monaten"
+
+msgid "In 6 months"
+msgstr "In sechs Monaten"
+
+msgid "In review"
+msgstr "In Begutachtung"
+
+msgid "Inactive"
+msgstr "Inaktiv"
+
+msgid "Invalid date format."
+msgstr "Ungültiges Datumsformat."
+
+msgid "Link expiration"
+msgstr "Linkablaufdatum"
+
+msgid "Link expiration date:"
+msgstr "Ablaufdatum des Links:"
+
+msgid "Link title"
+msgstr "Link-Titel"
+
+msgid "Links"
+msgstr "Links"
+
+msgid "Mail provider"
+msgstr "E-Mail-Provider"
+
+msgid "Make your first upload!"
+msgstr "Erstellen Sie Ihren ersten Eintrag!"
+
+msgid "Manage"
+msgstr "Verwalten"
+
+msgid "Manage communities"
+msgstr "Communities verwalten"
+
+msgid "Manage user"
+msgstr "Benutzer*innen verwalten"
+
+msgid "Max file size ({{unit}})"
+msgstr "Maximale Dateigröße ({{unit}})"
+
+msgid "Moderated"
+msgstr "Moderiert"
+
+msgid "More"
+msgstr "Mehr"
+
+msgid "Never"
+msgstr "Nie"
+
+msgid "New"
+msgstr "Neu"
+
+msgid "New version draft"
+msgstr "Entwurf einer neuen Version"
+
+msgid "No creation date found."
+msgstr "Kein Erstellungsdatum gefunden."
+
+msgid "No description"
+msgstr "Keine Beschreibung"
+
+msgid "No group has access to this record yet."
+msgstr "Bisher hat keine Gruppe Zugriff auf diesen Eintrag."
+
+msgid "No name"
+msgstr "Kein Name"
+
+msgid "No publication date found."
+msgstr "Kein Veröffentlichungsdatum gefunden."
+
+msgid "No resource type"
+msgstr "Kein Ressource-Typ"
+
+msgid "No selected groups"
+msgstr "Keine ausgewählten Gruppen"
+
+msgid "No selected users"
+msgstr "Keine ausgewählten Personen"
+
+msgid "No title"
+msgstr "Ohne Titel"
+
+msgid "No user has access to this record yet."
+msgstr "Noch kein*e Benutzer*in hat Zugriff auf diesen Eintrag."
+
+msgid "Note"
+msgstr "Bemerkung"
+
+msgid "Notification message"
+msgstr "Benachrichtigungs-Nachricht"
+
+msgid "Notify people"
+msgstr "User Benachrichtigen"
+
+msgid "ORCID logo"
+msgstr "ORCID-Logo"
+
+msgid "ORCID profile"
+msgstr "ORCID Profil"
+
+msgid "Only published versions are displayed."
+msgstr "Es werden nur veröffentlichte Versionen angezeigt."
+
+msgid "Open"
+msgstr "Offen"
+
+msgid "Organization"
+msgstr "Organisation"
+
+msgid "Owner"
+msgstr "Besitzer*in"
+
+msgid "Part of "
+msgstr "Teil von "
+
+msgid "Pending communities"
+msgstr "Ausstehende Communities"
+
+msgid "Pending submissions"
+msgstr "Einreichungen in der Warteschlange"
+
+msgid "People"
+msgstr "Personen"
+
+msgid "People with access"
+msgstr "Personen mit Zugriff"
+
+msgid "Person"
+msgstr "Person"
+
+msgid "ProTip"
+msgstr "ProTipp"
+
+msgid "Public"
+msgstr "Öffentlich"
+
+msgid "Public note"
+msgstr "Öffentlich sichtbare Bemerkung"
+
+msgid "Published in: {{publishInfo}}"
+msgstr "Veröffentlicht in: {{publishInfo}}"
+
+msgid "Published in: {{publishedIn}}"
+msgstr "Veröffentlicht in: {{publishedIn}}"
+
+msgid "Quota of {{id}} was set to {{quota}} {{unit}}"
+msgstr "Quota von {{id}} wurde auf {{quota}} {{unit}} gesetzt"
+
+msgid "Quota size ({{unit}})"
+msgstr "Größe der Quota ({{unit}})"
+
+msgid "ROR logo"
+msgstr "ROR-Logo"
+
+msgid "ROR profile"
+msgstr "ROR Profil"
+
+msgid "Recommended information"
+msgstr "Empfohlene Informationen"
+
+msgid "Record submitted"
+msgstr "Eintrag eingereicht"
+
+msgid "Record {{id}} was deleted."
+msgstr "Eintrag {{id}} wurde gelöscht."
+
+msgid "Record {{id}} was restored."
+msgstr "Eintrag {{id}} wurde wiederhergestellt."
+
+msgid "Records"
+msgstr "Einträge"
+
+msgid "Remove"
+msgstr "Entfernen"
+
+msgid "Remove branding"
+msgstr "Branding entfernen"
+
+msgid "Remove community"
+msgstr "Community entfernen"
+
+msgid "Remove {{communityTitle}} from this record"
+msgstr "Entfernen Sie {{communityTitle}} aus diesem Eintrag"
+
+msgid "Request message"
+msgstr "Ihre Nachricht"
+
+msgid "Restore"
+msgstr "Wiederherstellen"
+
+msgid "Restore record"
+msgstr "Eintrag wiederherstellen"
+
+msgid "Restored"
+msgstr "Wiederhergestellt"
+
+msgid "Review requested"
+msgstr "Überprüfung beantragt"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Scheduled for purge"
+msgstr "Zur Sperrung vorgesehen"
+
+msgid "Search by email, full name or username"
+msgstr "Suche anhand von E-Mail, vollständigem Namen oder Kontonamen"
+
+msgid "Search for community..."
+msgstr "Suche nach Community ..."
+
+msgid "Search for groups"
+msgstr "Suche nach Gruppen"
+
+msgid "Search for pending submissions to communities..."
+msgstr "Suche nach ausstehenden Einreichungen in Communities ..."
+
+msgid "Search in all communities"
+msgstr "Suche in allen Communities"
+
+msgid "Search in my communities"
+msgstr "Suche in meinen Communities"
+
+msgid "Search in my communities..."
+msgstr "Suche in meinen Communities"
+
+msgid "Search in my uploads..."
+msgstr "Suche in meinen Uploads..."
+
+msgid "Search records in community..."
+msgstr "Einträge in dieser Community suchen..."
+
+msgid "Search records..."
+msgstr "Einträge suchen..."
+
+msgid "Select a community"
+msgstr "Wählen Sie eine Community"
+
+msgid "Select permissions"
+msgstr "Berechtigungen auswählen"
+
+msgid "Set Quota"
+msgstr "Quota setzen"
+
+msgid "Set branding"
+msgstr "Branding setzen"
+
+msgid "Set default quota for {{email}}"
+msgstr "Standard-Quota für {{email}} setzen"
+
+msgid "Set quota"
+msgstr "Quota setzen"
+
+msgid "Set quota for record {{recordId}}"
+msgstr "Quota für den Eintrag {{recordId}} setzen"
+
+msgid "Set quota in bytes"
+msgstr "Quota in Bytes setzen"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Share"
+msgstr "Teilen"
+
+msgid "Share access"
+msgstr "Zugriff teilen"
+
+msgid "Short name for your link (optional)."
+msgstr "Kurzname für Ihren Link (optional)."
+
+msgid "Something went wrong"
+msgstr "Etwas ist etwas schief gelaufen"
+
+msgid "Sort by"
+msgstr "Sortieren nach"
+
+msgid "Spammer"
+msgstr "Spammer"
+
+msgid "Start over"
+msgstr "Neu beginnen"
+
+msgid "Stats"
+msgstr "Statistiken"
+
+msgid "Style"
+msgstr "Stil"
+
+msgid "Submit to community"
+msgstr "Einreichen in die Community"
+
+msgid "Success"
+msgstr "Erfolg"
+
+msgid "Suspend"
+msgstr "Sperren"
+
+msgid "Suspended"
+msgstr "Gesperrt"
+
+msgid "TLD"
+msgstr "TLD"
+
+msgid "The record has no files."
+msgstr "Der Eintrag enthält keine Dateien."
+
+msgid "This record has no links generated yet."
+msgstr "Dieser Eintrag hat noch keine Links."
+
+msgid "This record is not included in any communities yet."
+msgstr "Dieser Eintrag ist noch nicht Teil einer Community."
+
+msgid "Ticket 1234"
+msgstr "Ticket 1234"
+
+msgid "Unable to change the access request settings."
+msgstr "Es ist nicht möglich, die Zugriffs-Einstellungen zu ändern."
+
+msgid "Unable to change the expiration request settings."
+msgstr "Es ist nicht möglich, die Ablaufzeit der Zugriffsanfrage zu ändern."
+
+msgid "Unable to delete"
+msgstr "Es ist nicht möglich, den Eintrag zu löschen."
+
+msgid "Unable to impersonate user."
+msgstr "Es ist nicht möglich, sich als ein*e andere*r Benutzer*in auszugeben."
+
+msgid "Unable to request the access."
+msgstr "Es ist nicht möglich, Zugriff zu beantragen."
+
+msgid "Unable to restore."
+msgstr "Es ist nicht möglich, den Eintrag wiederherzustellen."
+
+msgid "Unable to set quota."
+msgstr "Es ist nicht möglich, die Quota zu setzen."
+
+msgid "Unavailability statement"
+msgstr "Nichtverfügbarkeits-Erklärung"
+
+msgid "Updated"
+msgstr "Aktualisiert"
+
+msgid "Uploaded on {{uploadDate}}"
+msgstr "Hochgeladen am {{uploadDate}}"
+
+msgid "User"
+msgstr "Benutzer*in"
+
+msgid "User {{name}} is blocked."
+msgstr "Benutzer*in {{name}} wurde gesperrt."
+
+msgid "User {{name}} was approved."
+msgstr "Benutzer*in {{name}} wurde akzeptiert."
+
+msgid "Username"
+msgstr "Kontoname"
+
+msgid "Users"
+msgstr "Benutzer*innen"
+
+msgid "Verified"
+msgstr "Verifiziert"
+
+msgid "Version {{- version}}"
+msgstr "Version {{- version}}"
+
+msgid "View"
+msgstr "Ansicht"
+
+msgid "Views"
+msgstr "Ansichten"
+
+msgid "Visibility"
+msgstr "Sichtbarkeit"
+
+msgid "We couldn't find any matches for {{- search}}"
+msgstr "Wir konnten keine Treffer für {{- search}} finden"
+
+msgid "You"
+msgstr "Sie"
+
+msgid "You <bold>MUST</bold> logout after completing your inquiry."
+msgstr "Sie <bold>MÜSSEN</bold> sich nach Abschluss Ihrer Anfrage abmelden."
+
+msgid "You are about to add"
+msgstr "Sie sind dabei, Folgendes hinzuzufügen"
+
+msgid "You don't have permissions to share this record."
+msgstr "Sie haben nicht die Berechtigung diesen Eintrag zu teilen."
+
+msgid "You must accept this."
+msgstr "Sie müssen dies akzeptieren."
+
+msgid "Your email address"
+msgstr "Ihre E-Mail-Adresse"
+
+msgid "Your full name"
+msgstr "Ihr vollständiger Name"
+
+msgid "groups"
+msgstr "Gruppen"
+
+msgid "open"
+msgstr "Offen"
+
+msgid "unlock"
+msgstr "entsperren"
+
+msgid "users"
+msgstr "Benutzer*innen"
+
+msgid "version"
+msgstr "Version"
+
+msgid "{{communityTitle}} is a default branding for this record"
+msgstr "{{communityTitle}} ist ein Standard-Branding für diesen Eintrag"
