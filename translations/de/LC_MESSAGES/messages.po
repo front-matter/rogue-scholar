@@ -1366,3 +1366,15 @@ msgstr "Dieser Eintrag ist noch nicht Teil einer Community."
 
 msgid "{{communityTitle}} is a default branding for this record"
 msgstr "{{communityTitle}} ist ein Standard-Branding für diesen Eintrag"
+
+msgid "Search communities"
+msgstr "Communities durchsuchen"
+
+msgid "My communities"
+msgstr "Meine Communities"
+
+msgid "New communities"
+msgstr "Neue Communities"
+
+msgid "Featured communities"
+msgstr "Ausgewählte Communities"
