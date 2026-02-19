@@ -68,7 +68,6 @@ COPY templates ${INVENIO_INSTANCE_PATH}/templates
 COPY app_data ${INVENIO_INSTANCE_PATH}/app_data
 COPY translations ${INVENIO_INSTANCE_PATH}/translations
 COPY update_subjects.py ${INVENIO_INSTANCE_PATH}/
-RUN chmod +x ${INVENIO_INSTANCE_PATH}/update_subjects.py
 
 # Compile translation catalogs
 RUN pybabel compile -d ${INVENIO_INSTANCE_PATH}/translations
@@ -147,6 +146,7 @@ COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/templates ${INVENIO_
 COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/app_data ${INVENIO_INSTANCE_PATH}/app_data
 COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/translations ${INVENIO_INSTANCE_PATH}/translations
 COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
+COPY --from=builder --chown=1654:0 --chmod=755 ${INVENIO_INSTANCE_PATH}/update_subjects.py ${INVENIO_INSTANCE_PATH}/update_subjects.py
 COPY --chown=1654:0 ./Caddyfile /etc/caddy/Caddyfile
 COPY --chown=1654:0 --chmod=755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
 COPY --chown=1654:0 ./entrypoint.py /opt/invenio/.venv/bin/entrypoint.py
