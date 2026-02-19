@@ -67,6 +67,8 @@ COPY assets ${INVENIO_INSTANCE_PATH}/assets
 COPY templates ${INVENIO_INSTANCE_PATH}/templates
 COPY app_data ${INVENIO_INSTANCE_PATH}/app_data
 COPY translations ${INVENIO_INSTANCE_PATH}/translations
+COPY update_subjects.py ${INVENIO_INSTANCE_PATH}/
+RUN chmod +x ${INVENIO_INSTANCE_PATH}/update_subjects.py
 
 # Compile translation catalogs
 RUN pybabel compile -d ${INVENIO_INSTANCE_PATH}/translations
