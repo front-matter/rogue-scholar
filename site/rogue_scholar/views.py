@@ -49,14 +49,17 @@ def _load_subject_titles_from_yaml(instance_path: str) -> dict:
 def _language_name(lang_id):
     """Return the display name of a language ID in the current UI locale.
 
-    Uses Babel to translate ISO 639-2/3 language codes (e.g. 'deu', 'eng')
-    into a human-readable name in the currently active Flask-Babel locale.
-    Falls back to the language ID itself if no translation is found.
+    Uses Babel to translate ISO 639-1 (e.g. 'en') and ISO 639-2/B (e.g. 'eng')
+    language codes into a human-readable name in the currently active
+    Flask-Babel locale. Falls back to the language ID itself if no translation
+    is found.
     """
     try:
         ui_locale = str(get_locale() or "en")
         loc = Locale.parse(ui_locale)
-        name = loc.languages.get(lang_id)
+        # Normalize to 2-letter ISO 639-1 via Locale.parse (handles 'eng' -> 'en')
+        normalized = Locale.parse(lang_id).language
+        name = loc.languages.get(normalized)
         return name if name else lang_id
     except (UnknownLocaleError, ValueError):
         return lang_id
