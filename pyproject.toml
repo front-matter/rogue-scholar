@@ -27,6 +27,9 @@ build-backend = "hatchling.build"
 [tool.hatch.build]
 include = ["site/rogue_scholar/*.py"]
 
+[tool.hatch.build.targets.wheel]
+sources = { "site" = "" }
+
 [project.entry-points."invenio_base.blueprints"]
 rogue_scholar = "rogue_scholar.views:create_blueprint"
 
