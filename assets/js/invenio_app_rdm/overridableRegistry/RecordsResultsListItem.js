@@ -23,7 +23,7 @@ class RecordsResultsListItem extends Component {
     const createdDate = _get(
       result,
       "ui.created_date_l10n_long",
-      i18next.t("No creation date found.")
+      i18next.t("No creation date found."),
     );
 
     const doi = _get(result, "pids.doi.identifier", null);
@@ -34,13 +34,13 @@ class RecordsResultsListItem extends Component {
     const descriptionStripped = _get(
       result,
       "ui.description_stripped",
-      i18next.t("No description")
+      i18next.t("No description"),
     );
 
     const publicationDate = _get(
       result,
       "ui.publication_date_l10n_long",
-      i18next.t("No publication date found.")
+      i18next.t("No publication date found."),
     );
     const languages = _get(result, "ui.languages", []);
     const subjects = _get(result, "ui.subjects", []);
@@ -51,7 +51,7 @@ class RecordsResultsListItem extends Component {
     const publishingInformation = _get(
       result,
       "ui.publishing_information.journal",
-      ""
+      "",
     );
 
     const filters =
@@ -148,7 +148,7 @@ class RecordsResultsListItem extends Component {
                     {createdDate && publishingInformation && " | "}
                     {publishingInformation && (
                       <>
-                        {i18next.t("Published in: {{- publishInfo }}", {
+                        {i18next.t("Published in: {{publishInfo}}", {
                           publishInfo: publishingInformation,
                         })}
                       </>
@@ -162,7 +162,7 @@ class RecordsResultsListItem extends Component {
                           "{{count}} more versions exist for this record",
                           {
                             count: numOtherVersions,
-                          }
+                          },
                         )}
                       </b>
                     </p>
@@ -192,5 +192,5 @@ RecordsResultsListItem.defaultProps = {
 
 export default Overridable.component(
   "RecordsResultsListItem",
-  RecordsResultsListItem
+  RecordsResultsListItem,
 );
