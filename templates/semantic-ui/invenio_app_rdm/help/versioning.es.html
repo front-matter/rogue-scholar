@@ -1,0 +1,148 @@
+{#
+  Copyright (C) 2021-2023 CERN.
+  Copyright (C) 2021 Northwestern University.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("FAQ versioning") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui two column grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="versioning">Versionado de DOI</h2>
+      </div>
+      <div class="ui eight wide column">
+        <h5>
+          <p>¿Qué es el versionado de DOI?</p>
+        </h5>
+        <p>El versionado de DOI le permite:</p>
+        <ul>
+          <li>editar/actualizar los archivos de un registro después de su publicación.</li>
+          <li>citar una versión específica de un registro.</li>
+          <li>citar todas las versiones de un registro.</li>
+        </ul>
+        <h5>
+          <p>¿Cómo funciona el versionado de DOI?</p>
+        </h5>
+        <p>
+          Cuando publica un depósito por primera vez, se registran dos DOI:
+        </p>
+        <ul>
+          <li>
+            un DOI que representa la <strong>versión específica</strong> de su registro.
+          </li>
+          <li>
+            un DOI que representa <strong>todas las versiones</strong> de su registro.
+          </li>
+        </ul>
+        <p>A partir de entonces, se registra un DOI para cada nueva versión de su depósito.</p>
+        <p>
+          Esto se ilustra mejor con un ejemplo de un paquete de software. Si el software
+          ha sido lanzado en dos versiones (v1.0 y v1.1), se habrían registrado los
+          siguientes DOI:
+        </p>
+        <ul>
+          <li><strong>v1.0 (versión específica):</strong> 10.1234/7s0da-05p39</li>
+          <li><strong>v1.1 (versión específica):</strong> 10.1234/chc5z-w0r30</li>
+          <li><strong>Concepto (todas las versiones):</strong> 10.1234/3s67k-pd636</li>
+        </ul>
+        <p>
+          Los dos primeros DOI para las versiones <strong>v1.0</strong> y
+          <strong>v1.1</strong> representan las versiones específicas del software.
+          El último DOI representa todas las versiones del paquete de software,
+          es decir, el concepto del paquete y el conjunto de versiones. Por eso también
+          los llamamos <strong>DOI de versión</strong> y <strong>DOI de concepto</strong>
+          (técnicamente, ambos son DOI normales).
+        </p>
+        <p>
+          Es posible que observe que los DOI de versión no incluyen un sufijo «.v1».
+          Lea a continuación para saber por qué.
+        </p>
+        <h5>
+          <p>¿Qué DOI debo usar en las citas?</p>
+        </h5>
+        <p>
+          Normalmente, siempre debe usar el DOI de la
+          <strong>versión específica</strong> de su registro en las citas. Esto garantiza
+          que otros investigadores puedan acceder al artefacto de investigación
+          <strong>exacto</strong> que utilizó para garantizar la reproducibilidad.
+          De forma predeterminada, utilizamos la versión específica para generar citas.
+        </p>
+        <p>
+          Puede usar el DOI de concepto que representa todas las versiones en las citas
+          cuando sea deseable citar un artefacto de investigación en evolución, sin
+          especificar la versión.
+        </p>
+        <h5>
+          <p>¿A dónde redirige el DOI de concepto?</p>
+        </h5>
+        <p>
+          El DOI de concepto redirige a la página de destino de la última
+          versión de su registro.
+        </p>
+      </div>
+      <div class="ui eight wide column">
+        <h5>
+          <p>
+            Solo quiero cambiar el título de mi depósito, ¿obtengo igualmente un nuevo DOI?
+          </p>
+        </h5>
+        <p>
+          No, puede continuar editando los metadatos de su depósito sin
+          crear una nueva versión del registro. Solo debe crear una nueva versión
+          si desea actualizar los archivos de su registro.
+        </p>
+
+        <h5>
+          <p>¿Por qué los DOI no tienen un sufijo de número de versión como «.v1»?</p>
+        </h5>
+        <p>
+          Incluir información semántica como el número de versión en un DOI es una mala
+          práctica, ya que esta información puede cambiar con el tiempo, mientras que los
+          DOI deben permanecer persistentes y no deben cambiar.
+        </p>
+        <p>
+          Además, el versionado de DOI es lineal, lo que significa que el número de versión
+          puede no corresponderse con el número de versión real del recurso.
+          Tomemos como ejemplo un software, donde es habitual tener versiones con puntos
+          y realizar nuevas versiones en un orden no lineal (p. ej., primero v1.0,
+          luego v1.1, luego v2.0, luego v1.2).
+        </p>
+        <p>
+          El sufijo de versión tampoco es una funcionalidad del sistema DOI, es decir,
+          agregar .v2 a un DOI no resolverá a la versión 2 de un recurso para ningún DOI
+          de ningún proveedor. Diferentes proveedores también usan distintos patrones,
+          como .v2, .2 o /2.
+        </p>
+        <p>
+          Lo más importante es que los sufijos de versión no son legibles por máquinas.
+          Un sistema de descubrimiento que comprende los DOI no sabrá que .v1 y .v2 de un
+          DOI son en realidad dos versiones del mismo recurso.
+        </p>
+        <p>
+          Una mejor solución a este problema es vincular semánticamente dos DOI en los
+          metadatos de un DOI. Esto garantiza que los sistemas de descubrimiento tengan
+          una forma legible por máquinas de identificar que dos DOI son versiones del
+          mismo recurso.
+        </p>
+        <p>
+          Véase también <a href="https://doi.org/10.5438/55E5-T5C0">Cool DOIs</a> para
+          más información.
+        </p>
+
+        <h5>
+          <p>¿Se duplican todos los archivos para cada nueva versión de un registro?</p>
+        </h5>
+        <p>
+          No. Si cambia un archivo README de 10 kb en un conjunto de datos de 50 GB,
+          no duplicamos todo el conjunto de datos de 50 GB. InvenioRDM, la plataforma
+          de software subyacente, gestiona eficientemente el almacenamiento de archivos,
+          por lo que solo almacenamos los 10 kb adicionales.
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock page_body %}

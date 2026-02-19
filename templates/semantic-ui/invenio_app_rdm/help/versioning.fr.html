@@ -1,0 +1,145 @@
+{#
+  Copyright (C) 2021-2023 CERN.
+  Copyright (C) 2021 Northwestern University.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("FAQ versioning") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui two column grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="versioning">Versionnage des DOI</h2>
+      </div>
+      <div class="ui eight wide column">
+        <h5>
+          <p>Qu'est-ce que le versionnage des DOI&nbsp;?</p>
+        </h5>
+        <p>Le versionnage des DOI vous permet de&nbsp;:</p>
+        <ul>
+          <li>modifier/mettre à jour les fichiers d'un enregistrement après leur publication.</li>
+          <li>citer une version spécifique d'un enregistrement.</li>
+          <li>citer toutes les versions d'un enregistrement.</li>
+        </ul>
+        <h5>
+          <p>Comment fonctionne le versionnage des DOI&nbsp;?</p>
+        </h5>
+        <p>
+          Lors de la première publication d'un dépôt, deux DOI sont enregistrés&nbsp;:
+        </p>
+        <ul>
+          <li>
+            un DOI représentant la <strong>version spécifique</strong> de votre enregistrement.
+          </li>
+          <li>
+            un DOI représentant <strong>toutes les versions</strong> de votre enregistrement.
+          </li>
+        </ul>
+        <p>Par la suite, un nouveau DOI est enregistré pour chaque nouvelle version de votre dépôt.</p>
+        <p>
+          Un exemple concret est celui d'un logiciel. Si le logiciel a été publié
+          en deux versions (v1.0 et v1.1), les DOI suivants auraient été enregistrés&nbsp;:
+        </p>
+        <ul>
+          <li><strong>v1.0 (version spécifique)&nbsp;:</strong> 10.1234/7s0da-05p39</li>
+          <li><strong>v1.1 (version spécifique)&nbsp;:</strong> 10.1234/chc5z-w0r30</li>
+          <li><strong>Concept (toutes les versions)&nbsp;:</strong> 10.1234/3s67k-pd636</li>
+        </ul>
+        <p>
+          Les deux premiers DOI pour les versions <strong>v1.0</strong> et
+          <strong>v1.1</strong> représentent les versions spécifiques du logiciel.
+          Le dernier DOI représente toutes les versions du logiciel,
+          c'est-à-dire le concept du logiciel et l'ensemble de ses versions. On les
+          appelle donc respectivement <strong>DOI de version</strong> et
+          <strong>DOI de concept</strong> (techniquement, ce sont tous des DOI normaux).
+        </p>
+        <p>
+          Vous remarquerez que les DOI de version ne comportent pas de suffixe «&nbsp;.v1&nbsp;».
+          Lisez la suite pour savoir pourquoi.
+        </p>
+        <h5>
+          <p>Quel DOI dois-je utiliser dans les citations&nbsp;?</p>
+        </h5>
+        <p>
+          Il est généralement recommandé d'utiliser le DOI de la
+          <strong>version spécifique</strong> de votre enregistrement dans les citations,
+          afin de garantir que d'autres chercheurs puissent accéder à
+          l'<strong>exacte</strong> ressource scientifique que vous avez utilisée.
+          Par défaut, nous utilisons la version spécifique pour générer les citations.
+        </p>
+        <p>
+          Vous pouvez utiliser le DOI de concept représentant toutes les versions dans
+          les citations lorsqu'il est souhaitable de citer une ressource en évolution,
+          sans préciser la version.
+        </p>
+        <h5>
+          <p>Vers où redirige le DOI de concept&nbsp;?</p>
+        </h5>
+        <p>
+          Le DOI de concept redirige vers la page de destination de la dernière
+          version de votre enregistrement.
+        </p>
+      </div>
+      <div class="ui eight wide column">
+        <h5>
+          <p>
+            Je souhaite uniquement modifier le titre de mon dépôt, vais-je quand même obtenir un nouveau DOI&nbsp;?
+          </p>
+        </h5>
+        <p>
+          Non, vous pouvez continuer à modifier les métadonnées de votre dépôt sans
+          créer une nouvelle version de l'enregistrement. Vous ne devez créer une nouvelle
+          version que si vous souhaitez mettre à jour les fichiers de votre enregistrement.
+        </p>
+
+        <h5>
+          <p>Pourquoi les DOI n'ont-ils pas de suffixe de numéro de version comme «&nbsp;.v1&nbsp;»&nbsp;?</p>
+        </h5>
+        <p>
+          Inclure des informations sémantiques telles que le numéro de version dans un DOI
+          est une mauvaise pratique, car ces informations peuvent changer au fil du temps,
+          alors que les DOI doivent rester persistants et ne pas changer.
+        </p>
+        <p>
+          De plus, le versionnage des DOI est linéaire, ce qui signifie que le numéro de
+          version peut en fait ne pas correspondre au numéro de version réel de la ressource.
+          Prenons par exemple un logiciel, où il est courant d'avoir des versions en points
+          et de publier de nouvelles versions dans un ordre non linéaire (par ex. d'abord v1.0,
+          puis v1.1, puis v2.0, puis v1.2).
+        </p>
+        <p>
+          Le suffixe de version n'est pas non plus une fonctionnalité du système DOI, c'est-à-dire
+          qu'ajouter .v2 à un DOI ne redirigera pas vers la version 2 d'une ressource, quel que
+          soit le fournisseur. Les différents fournisseurs utilisent également des modèles
+          différents, tels que .v2, .2 ou /2.
+        </p>
+        <p>
+          Plus important encore, les suffixes de version ne sont pas lisibles par les machines.
+          Un système de découverte comprenant les DOI ne saura pas que .v1 et .v2 d'un DOI sont
+          en réalité deux versions de la même ressource.
+        </p>
+        <p>
+          Une meilleure solution consiste à lier sémantiquement deux DOI dans les métadonnées
+          d'un DOI. Cela garantit que les systèmes de découverte disposent d'un moyen lisible
+          par machine pour identifier que deux DOI sont des versions de la même ressource.
+        </p>
+        <p>
+          Voir également <a href="https://doi.org/10.5438/55E5-T5C0">Cool DOIs</a> pour
+          plus d'informations.
+        </p>
+
+        <h5>
+          <p>Les fichiers sont-ils dupliqués pour chaque nouvelle version d'un enregistrement&nbsp;?</p>
+        </h5>
+        <p>
+          Non. Si vous modifiez un fichier README de 10&nbsp;ko dans un jeu de données de 50&nbsp;Go,
+          nous ne dupliquons pas l'intégralité des 50&nbsp;Go. InvenioRDM, la plateforme logicielle
+          sous-jacente, gère efficacement le stockage des fichiers et n'enregistre que les 10&nbsp;ko supplémentaires.
+        </p>
+      </div>
+    </div>
+  </div>
+{% endblock page_body %}
