@@ -6,95 +6,1268 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rogue Scholar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-16 00:00+0000\n"
-"PO-Revision-Date: 2026-02-16 00:00+0000\n"
+"POT-Creation-Date: 2026-02-18 21:13+0000\n"
+"PO-Revision-Date: 2026-02-19 00:00+0000\n"
 "Last-Translator: \n"
 "Language: es\n"
 "Language-Team: es <info@front-matter.io>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel\n"
+"Generated-By: Babel 2.18.0\n"
 
-#: templates/semantic-ui/invenio_app_rdm/footer.html
+
+#: invenio.cfg:208
+msgid "Arabic"
+msgstr "Árabe"
+
+
+#: invenio.cfg:209
+msgid "Catalan"
+msgstr "Catalán"
+
+
+#: invenio.cfg:210
+msgid "Czech"
+msgstr "Checo"
+
+
+#: invenio.cfg:211
+msgid "German"
+msgstr "Alemán"
+
+
+#: invenio.cfg:212
+msgid "Spanish"
+msgstr "Español"
+
+
+#: invenio.cfg:213
+msgid "Estonian"
+msgstr "Estonio"
+
+
+#: invenio.cfg:214
+msgid "Finnish"
+msgstr "Finés"
+
+
+#: invenio.cfg:215
+msgid "French"
+msgstr "Francés"
+
+
+#: invenio.cfg:216
+msgid "Hungarian"
+msgstr "Húngaro"
+
+
+#: invenio.cfg:217
+msgid "Italian"
+msgstr "Italiano"
+
+
+#: invenio.cfg:218
+msgid "Dutch"
+msgstr "Neerlandés"
+
+
+#: invenio.cfg:219
+msgid "Portuguese"
+msgstr "Portugués"
+
+
+#: invenio.cfg:220
+msgid "Romanian"
+msgstr "Rumano"
+
+
+#: invenio.cfg:221
+msgid "Russian"
+msgstr "Ruso"
+
+
+#: invenio.cfg:222
+msgid "Slovenian"
+msgstr "Esloveno"
+
+
+#: invenio.cfg:223
+msgid "Swedish"
+msgstr "Sueco"
+
+
+#: invenio.cfg:224
+msgid "Turkish"
+msgstr "Turco"
+
+
+#: invenio.cfg:225
+msgid "Ukrainian"
+msgstr "Ucraniano"
+
+
+#: invenio.cfg:226
+msgid "Chinese"
+msgstr "Chino"
+
+
+#: invenio.cfg:409
+msgid "OAI ID"
+msgstr "ID OAI"
+
+
+#: invenio.cfg:427
+msgid "OAI"
+msgstr "OAI"
+
+
+#: invenio.cfg:439 invenio.cfg:450
+msgid "Concept DOI"
+msgstr "DOI de concepto"
+
+
+#: invenio.cfg:472
+msgid "ARK"
+msgstr "ARK"
+
+
+#: invenio.cfg:474
+msgid "arXiv"
+msgstr "arXiv"
+
+
+#: invenio.cfg:479
+msgid "Bibcode"
+msgstr "Bibcode"
+
+
+#: invenio.cfg:484
+msgid "Crossref Funder ID"
+msgstr "Crossref Funder ID"
+
+
+#: invenio.cfg:490
+msgid "EAN13"
+msgstr "EAN13"
+
+
+#: invenio.cfg:495
+msgid "EISSN"
+msgstr "EISSN"
+
+
+#: invenio.cfg:500
+msgid "GRID"
+msgstr "GRID"
+
+
+#: invenio.cfg:505
+msgid "Handle"
+msgstr "Handle"
+
+
+#: invenio.cfg:510
+msgid "IGSN"
+msgstr "IGSN"
+
+
+#: invenio.cfg:515
+msgid "ISBN"
+msgstr "ISBN"
+
+
+#: invenio.cfg:520
+msgid "ISNI"
+msgstr "ISNI"
+
+
+#: invenio.cfg:525
+msgid "ISSN"
+msgstr "ISSN"
+
+
+#: invenio.cfg:530
+msgid "ISTC"
+msgstr "ISTC"
+
+
+#: invenio.cfg:535
+msgid "LISSN"
+msgstr "LISSN"
+
+
+#: invenio.cfg:540
+msgid "LSID"
+msgstr "LSID"
+
+
+#: invenio.cfg:545
+msgid "PMID"
+msgstr "PMID"
+
+
+#: invenio.cfg:550
+msgid "PURL"
+msgstr "PURL"
+
+
+#: invenio.cfg:554
+msgid "UPC"
+msgstr "UPC"
+
+
+#: invenio.cfg:555 invenio.cfg:1099
+msgid "URL"
+msgstr "URL"
+
+
+#: invenio.cfg:556
+msgid "URN"
+msgstr "URN"
+
+
+#: invenio.cfg:558
+msgid "W3ID"
+msgstr "W3ID"
+
+
+#: invenio.cfg:564
+msgid "UUID"
+msgstr "UUID"
+
+
+#: invenio.cfg:569
+msgid "GUID"
+msgstr "GUID"
+
+
+#: invenio.cfg:574 invenio.cfg:1133
+msgid "Other"
+msgstr "Other"
+
+
+#: invenio.cfg:651
+msgid "Content"
+msgstr "Contenido"
+
+
+#: invenio.cfg:666
+msgid "Publishing information"
+msgstr "Información de publicación"
+
+
+#: invenio.cfg:674
+msgid "Blog"
+msgstr "Blog"
+
+
+#: invenio.cfg:681
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:27
+msgid "Platform"
+msgstr "Plataforma"
+
+
+#: invenio.cfg:684
+msgid "The feed generator software for this record."
+msgstr "El software generador de feed para este registro."
+
+
+#: invenio.cfg:695
+msgid "The feature image URL."
+msgstr "La URL de la imagen destacada."
+
+
+#: invenio.cfg:705
+msgid "Indicates if the record is stale."
+msgstr "Indica si el registro está desactualizado."
+
+
+#: invenio.cfg:933
+msgid "Best match"
+msgstr "Mejor coincidencia"
+
+
+#: invenio.cfg:937
+msgid "Newest"
+msgstr "Más reciente"
+
+
+#: invenio.cfg:941
+msgid "Oldest"
+msgstr "Más antiguo"
+
+
+#: invenio.cfg:949
+msgid "Recently updated"
+msgstr "Actualizado recientemente"
+
+
+#: invenio.cfg:953
+msgid "Least recently updated"
+msgstr "Menos actualizado recientemente"
+
+
+#: invenio.cfg:957
+msgid "Recently added"
+msgstr "Añadido recientemente"
+
+
+#: invenio.cfg:961
+msgid "Least recently added"
+msgstr "Añadido hace más tiempo"
+
+
+#: invenio.cfg:965
+msgid "Newest activity"
+msgstr "Actividad más reciente"
+
+
+#: invenio.cfg:969
+msgid "Oldest activity"
+msgstr "Actividad más antigua"
+
+
+#: invenio.cfg:973
+msgid "Most viewed"
+msgstr "Más vistos"
+
+
+#: invenio.cfg:1051
+msgid "Publication year"
+msgstr "Año de publicación"
+
+
+#: invenio.cfg:1066
+msgid "Author affiliations"
+msgstr "Afiliaciones de autores"
+
+
+#: invenio.cfg:1076
+msgid "Funders"
+msgstr "Financiadores"
+
+
+#: invenio.cfg:1086
+msgid "Author identifiers"
+msgstr "Identificadores de autores"
+
+
+#: invenio.cfg:1087
+msgid "ORCID"
+msgstr "ORCID"
+
+
+#: invenio.cfg:1100
+msgid "No identifier"
+msgstr "Sin identificador"
+
+
+#: invenio.cfg:1110
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:327
+msgid "Citations"
+msgstr "Citas"
+
+
+#: invenio.cfg:1120
+msgid "Platforms"
+msgstr "Plataformas"
+
+
+#: invenio.cfg:1122
+msgid "WordPress"
+msgstr "WordPress"
+
+
+#: invenio.cfg:1123
+msgid "WordPress.com"
+msgstr "WordPress.com"
+
+
+#: invenio.cfg:1124
+msgid "Hugo"
+msgstr "Hugo"
+
+
+#: invenio.cfg:1125
+msgid "Blogger"
+msgstr "Blogger"
+
+
+#: invenio.cfg:1126
+msgid "Jekyll"
+msgstr "Jekyll"
+
+
+#: invenio.cfg:1127
+msgid "Ghost"
+msgstr "Ghost"
+
+
+#: invenio.cfg:1128
+msgid "Quarto"
+msgstr "Quarto"
+
+
+#: invenio.cfg:1129
+msgid "Substack"
+msgstr "Substack"
+
+
+#: invenio.cfg:1130
+msgid "Medium"
+msgstr "Medium"
+
+
+#: invenio.cfg:1131
+msgid "Squarespace"
+msgstr "Squarespace"
+
+
+#: invenio.cfg:1132
+msgid "Drupal"
+msgstr "Drupal"
+
+
+#: invenio.cfg:1149
+msgid "Licenses"
+msgstr "Licencias"
+
+
+#: invenio.cfg:1193 invenio.cfg:1194
+msgid "Stale"
+msgstr "Desactualizado"
+
+
+#: invenio.cfg:1518
+msgid "Crossref XML"
+msgstr "Crossref XML"
+
+
+#: invenio.cfg:1584
+msgid "Data Package JSON"
+msgstr "JSON de paquete de datos"
+
+
+#: invenio.cfg:1603
+msgid "ACS"
+msgstr "ACS"
+
+
+#: invenio.cfg:1609
+msgid "BJPS"
+msgstr "BJPS"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/_termui_impl.py:613
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr "{editor}: Edición fallida"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/_termui_impl.py:617
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr "{editor}: Edición fallida: {e}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1114
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1151
+#, python-brace-format
+msgid "{text} {deprecated_message}"
+msgstr "{text} {deprecated_message}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1170
+msgid "Options"
+msgstr "Opciones"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1245
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1264
+#, python-brace-format
+msgid "DeprecationWarning: The command {name!r} is deprecated.{extra_message}"
+msgstr "DeprecationWarning: El comando {name!r} está obsoleto.{extra_message}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1448
+msgid "Aborted!"
+msgstr "¡Cancelado!"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1822
+msgid "Commands"
+msgstr "Comandos"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1853
+msgid "Missing command."
+msgstr "Comando faltante."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1931
+#, python-brace-format
+msgid "No such command {name!r}."
+msgstr "Comando desconocido {name!r}."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:2355
+msgid "Value must be an iterable."
+msgstr "El valor debe ser iterable."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:2378
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:3015
+#, python-brace-format
+msgid "env var: {var}"
+msgstr "variable de entorno: {var}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:3018
+#, python-brace-format
+msgid "default: {default}"
+msgstr "predeterminado: {default}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:3022
+msgid "required"
+msgstr "obligatorio"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:3082
+msgid "(dynamic)"
+msgstr "(dinámico)"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr "%(prog)s, versión %(version)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/decorators.py:522
+msgid "Show the version and exit."
+msgstr "Mostrar la versión y salir."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/decorators.py:548
+msgid "Show this message and exit."
+msgstr "Mostrar este mensaje y salir."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:50
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:89
+#, python-brace-format
+msgid "Error: {message}"
+msgstr "Error: {message}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:81
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr "Intente '{command} {option}' para obtener ayuda."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:130
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr "Valor inválido: {message}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:132
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr "Valor inválido para {param_hint}: {message}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:190
+msgid "Missing argument"
+msgstr "Argumento faltante"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:192
+msgid "Missing option"
+msgstr "Opción faltante"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:194
+msgid "Missing parameter"
+msgstr "Parámetro faltante"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:196
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr "{param_type} faltante"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:203
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr "Parámetro faltante: {param_name}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:223
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr "Opción desconocida: {name}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:235
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:282
+msgid "unknown error"
+msgstr "error desconocido"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:289
+#, python-brace-format
+msgid "Could not open file {filename!r}: {message}"
+msgstr "No se pudo abrir el archivo {filename!r}: {message}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/formatting.py:156
+msgid "Usage:"
+msgstr "Uso:"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/parser.py:199
+#, python-brace-format
+msgid "Argument {name!r} takes {nargs} values."
+msgstr "El argumento {name!r} toma {nargs} valores."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/parser.py:381
+#, python-brace-format
+msgid "Option {name!r} does not take a value."
+msgstr "La opción {name!r} no toma un valor."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/parser.py:444
+#, python-brace-format
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+
+#: docs/activate/lib/python3.13/site-packages/click/shell_completion.py:332
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr "El autocompletado de shell no es compatible con versiones de Bash anteriores a 4.4."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/shell_completion.py:339
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr "No se pudo detectar la versión de Bash, el autocompletado de shell no es compatible."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:165
+msgid "Repeat for confirmation"
+msgstr "Repetir para confirmar"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:181
+msgid "Error: The value you entered was invalid."
+msgstr "Error: El valor ingresado no es válido."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:183
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr "Error: {e.message}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:194
+msgid "Error: The two entered values do not match."
+msgstr "Error: Los dos valores ingresados no coinciden."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:253
+msgid "Error: invalid input"
+msgstr "Error: entrada inválida"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:872
+msgid "Press any key to continue..."
+msgstr "Presione cualquier tecla para continuar..."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:369
+#, python-brace-format
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:460
+#, python-brace-format
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:482
+#, python-brace-format
+msgid "{value!r} is not a valid {number_type}."
+msgstr "{value!r} no es un {number_type} válido."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:538
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr "{value} no está en el rango {range}."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:719
+#, python-brace-format
+msgid "{value!r} is not a valid boolean. Recognized values: {states}"
+msgstr "{value!r} no es un booleano válido. Valores reconocidos: {states}"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:747
+#, python-brace-format
+msgid "{value!r} is not a valid UUID."
+msgstr "{value!r} no es un UUID válido."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:937
+msgid "file"
+msgstr "archivo"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:939
+msgid "directory"
+msgstr "directorio"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:941
+msgid "path"
+msgstr "ruta"
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:988
+#, python-brace-format
+msgid "{name} {filename!r} does not exist."
+msgstr "{name} {filename!r} no existe."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:997
+#, python-brace-format
+msgid "{name} {filename!r} is a file."
+msgstr "{name} {filename!r} es un archivo."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:1005
+#, python-brace-format
+msgid "{name} {filename!r} is a directory."
+msgstr "{name} {filename!r} es un directorio."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:1014
+#, python-brace-format
+msgid "{name} {filename!r} is not readable."
+msgstr "{name} {filename!r} no es legible."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:1023
+#, python-brace-format
+msgid "{name} {filename!r} is not writable."
+msgstr "{name} {filename!r} no es modificable."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:1032
+#, python-brace-format
+msgid "{name} {filename!r} is not executable."
+msgstr "{name} {filename!r} no es ejecutable."
+
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:1099
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:281
+msgid "January"
+msgstr "Enero"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:282
+msgid "February"
+msgstr "Febrero"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:283
+msgid "March"
+msgstr "Marzo"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:284
+msgid "April"
+msgstr "Abril"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:285
+msgid "May"
+msgstr "Mayo"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:286
+msgid "June"
+msgstr "Junio"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:287
+msgid "July"
+msgstr "Julio"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:288
+msgid "August"
+msgstr "Agosto"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:289
+msgid "September"
+msgstr "Septiembre"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:290
+msgid "October"
+msgstr "Octubre"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:291
+msgid "November"
+msgstr "Noviembre"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:292
+msgid "December"
+msgstr "Diciembre"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:295
+msgid "Monday"
+msgstr "Lunes"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:296
+msgid "Tuesday"
+msgstr "Martes"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:297
+msgid "Wednesday"
+msgstr "Miércoles"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:298
+msgid "Thursday"
+msgstr "Jueves"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:299
+msgid "Friday"
+msgstr "Viernes"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:300
+msgid "Saturday"
+msgstr "Sábado"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:301
+msgid "Sunday"
+msgstr "Domingo"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:377
+msgid "1 second ago"
+msgstr "hace 1 segundo"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:383
+msgid "1 minute ago"
+msgstr "hace 1 minuto"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:388
+msgid "1 hour ago"
+msgstr "hace 1 hora"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:391
+#, python-format
+msgid "%(time)s"
+msgstr "%(time)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:393
+msgid "yesterday"
+msgstr "ayer"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:393
+#, python-format
+msgid "yesterday at %(time)s"
+msgstr "ayer a las %(time)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:395
+#, python-format
+msgid "%(weekday)s"
+msgstr "%(weekday)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:395
+#, python-format
+msgid "%(weekday)s at %(time)s"
+msgstr "%(weekday)s a las %(time)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:398
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:451
+#, python-format
+msgid "%(month_name)s %(day)s"
+msgstr "%(day)s de %(month_name)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:400
+#, python-format
+msgid "%(month_name)s %(day)s at %(time)s"
+msgstr "%(day)s de %(month_name)s a las %(time)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:405
+#, python-format
+msgid "%(month_name)s %(day)s, %(year)s"
+msgstr "%(day)s de %(month_name)s de %(year)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:407
+#, python-format
+msgid "%(month_name)s %(day)s, %(year)s at %(time)s"
+msgstr "%(day)s de %(month_name)s de %(year)s a las %(time)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:445
+#, python-format
+msgid "%(weekday)s, %(month_name)s %(day)s"
+msgstr "%(weekday)s, %(day)s de %(month_name)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:468
+#, python-format
+msgid "%(commas)s and %(last)s"
+msgstr "%(commas)s y %(last)s"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/test/locale_test.py:68
+msgid "right"
+msgstr "derecha"
+
+
+#: docs/activate/lib/python3.13/site-packages/tornado/test/locale_test.py:70
+#: docs/activate/lib/python3.13/site-packages/tornado/test/locale_test.py:72
+msgid "club"
+msgstr "club"
+
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:18
 msgid "About"
 msgstr "Acerca de"
 
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:19
 msgid "Overview"
 msgstr "Descripción general"
 
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:20
 msgid "FAQ"
 msgstr "Preguntas frecuentes"
 
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:21
 msgid "Dashboard"
 msgstr "Panel de control"
 
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:22
 msgid "Register Your Blog"
 msgstr "Registra tu blog"
 
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:25
 msgid "Community"
 msgstr "Comunidad"
 
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:26
 msgid "Advisory Board"
 msgstr "Consejo asesor"
 
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:27
 msgid "Newsletter"
 msgstr "Boletín informativo"
 
-msgid "Documentation"
-msgstr "Documentación"
 
+#: templates/semantic-ui/invenio_app_rdm/footer.html:29
 msgid "Slack Community"
 msgstr "Comunidad de Slack"
 
-msgid "Support"
-msgstr "Apoyo"
 
+#: templates/semantic-ui/invenio_app_rdm/footer.html:33
 msgid "Membership Interest Form"
 msgstr "Formulario de interés de membresía"
 
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:34
 msgid "Donate"
 msgstr "Donar"
 
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:35
 msgid "Web Analytics"
 msgstr "Analítica web"
+
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:62
+msgid "Participating Blogs"
+msgstr "Blogs participantes"
+
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:74
+msgid "All Posts"
+msgstr "Todas las publicaciones"
+
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:86
+msgid "Posts last 30 Days"
+msgstr "Publicaciones de los últimos 30 días"
+
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:98
+msgid "Posts with Funding"
+msgstr "Publicaciones con financiación"
+
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:114
+msgid "Posts with ORCID"
+msgstr "Publicaciones con ORCID"
+
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:126
+msgid "Posts with ROR ID"
+msgstr "Publicaciones con ROR ID"
+
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:138
+msgid "Posts with References"
+msgstr "Publicaciones con referencias"
+
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:150
+msgid "Cited Posts"
+msgstr "Publicaciones citadas"
+
+
+#: templates/semantic-ui/invenio_app_rdm/header.html:19
+msgid "Impersonated session"
+msgstr "Sesión de suplantación de identidad"
+
+
+#: templates/semantic-ui/invenio_app_rdm/header.html:21
+msgid "You must logout after you finish with you inquiry!"
+msgstr "¡Debes cerrar sesión cuando termines tu consulta!"
+
+
+#: templates/semantic-ui/invenio_app_rdm/page_admin.html:40
+msgid "Invenio"
+msgstr "Invenio"
+
+
+#: templates/semantic-ui/invenio_app_rdm/macros/records_list.html:13
+msgid "Recent blog posts"
+msgstr "Publicaciones recientes en español"
+
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:80
+msgid "Part of"
+msgstr "Parte de"
+
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:91
+msgid "Community visibility"
+msgstr "Visibilidad de la comunidad"
+
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:92
+msgid "The community is restricted to users with access."
+msgstr "La comunidad está restringida a usuarios con acceso."
+
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:119
+msgid "You are previewing a new record that has not yet been published."
+msgstr "Estás previsualizando un nuevo registro que aún no se ha publicado."
+
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:121
+msgid "You are previewing a new record version that has not yet been published."
+msgstr "Estás previsualizando una nueva versión del registro que aún no se ha publicado."
+
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/content.html:14
+msgid "Record content"
+msgstr "Contenido del registro"
+
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/creatibutors.html:21
+msgid "Creators & Contributors"
+msgstr "Creadores y colaboradores"
+
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:24
+msgid "Thesis"
+msgstr "Tesis"
+
+
+#: templates/semantic-ui/invenio_app_rdm/records/macros/detail.html:68
+#: templates/semantic-ui/invenio_app_rdm/records/macros/detail.html:71
+msgid "Missing description type!"
+msgstr "¡Tipo de descripción faltante!"
+
+
+#: templates/semantic-ui/invenio_app_rdm/records/macros/detail.html:90
+msgid "Unknown date type"
+msgstr "Tipo de fecha desconocido"
+
+
+#: templates/semantic-ui/invenio_communities/details/header.html:202
+msgid "Submission to this community is only allowed to community members."
+msgstr "La presentación a esta comunidad solo está permitida a los miembros."
+
+
+#: templates/semantic-ui/invenio_communities/details/header.html:217
+msgid "Manage community"
+msgstr "Gestionar comunidad"
+
+
+msgid "Communities"
+msgstr "Comunidades"
+
+
+msgid "Community management menu dropdown"
+msgstr "Menú desplegable de gestión de comunidades"
+
+
+msgid "Manage communities"
+msgstr "Gestionar comunidades"
+
+
+msgid "Pending communities"
+msgstr "Comunidades pendientes"
+
+
+msgid "Remove community"
+msgstr "Eliminar comunidad"
+
+
+msgid "Remove {{communityTitle}} from this record"
+msgstr "Eliminar {{communityTitle}} de este registro"
+
+
+msgid "Search for community..."
+msgstr "Buscar comunidad..."
+
+
+msgid "Search for pending submissions to communities..."
+msgstr "Buscar envíos pendientes a comunidades..."
+
+
+msgid "Search in all communities"
+msgstr "Buscar en todas las comunidades"
+
+
+msgid "Search in my communities"
+msgstr "Buscar en mis comunidades"
+
+
+msgid "Search in my communities..."
+msgstr "Buscar en mis comunidades..."
+
+
+msgid "Search records in community..."
+msgstr "Buscar registros en la comunidad..."
+
+
+msgid "Select a community"
+msgstr "Seleccionar una comunidad"
+
+
+msgid "Submit to community"
+msgstr "Enviar a la comunidad"
+
+
+msgid "This record is not included in any communities yet."
+msgstr "Este registro aún no pertenece a ninguna comunidad."
+
+
+msgid "{{communityTitle}} is a default branding for this record"
+msgstr "{{communityTitle}} es la marca predeterminada para este registro"
+
+
+msgid "Search communities"
+msgstr "Buscar comunidades"
+
+
+msgid "My communities"
+msgstr "Mis comunidades"
+
+
+msgid "New communities"
+msgstr "Nuevas comunidades"
+
+
+msgid "Featured communities"
+msgstr "Comunidades destacadas"
+
 
 msgid "Status"
 msgstr "Estado"
 
-#: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
-msgid "Recent blog posts"
-msgstr "Publicaciones recientes en español"
 
-#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
 msgid "No records found."
 msgstr "No se encontraron publicaciones en español."
 
-#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
+
 msgid "Search all records"
 msgstr "Buscar todas las publicaciones"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html
-msgid "Participating Blogs"
-msgstr "Blogs participantes"
-
-msgid "All Posts"
-msgstr "Todas las publicaciones"
-
-msgid "Posts last 30 Days"
-msgstr "Publicaciones de los últimos 30 días"
-
-msgid "Posts with ORCID"
-msgstr "Publicaciones con ORCID"
-
-msgid "Posts with ROR ID"
-msgstr "Publicaciones con ROR ID"
-
-msgid "Posts with References"
-msgstr "Publicaciones con referencias"
-
-msgid "Posts with Funding"
-msgstr "Publicaciones con financiación"
-
-msgid "Cited Posts"
-msgstr "Publicaciones citadas"
