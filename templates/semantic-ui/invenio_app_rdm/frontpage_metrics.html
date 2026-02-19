@@ -47,8 +47,8 @@
     background: rgba(0,0,0,0.15);
   }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .metrics-card .metrics-value {
-      font-size: 0.95em;
+    .metrics-card #metrics-posts {
+      font-size: 1.3em;
     }
   }
 </style>
@@ -60,10 +60,10 @@
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/blog.svg" alt="Blog" width="48" height="48"></div>
         <div>
-          <div class="ui placeholder metrics-placeholder" id="metric-blogs-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-blogs-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metric-blogs" style="display:none;"></div>
+          <div class="metrics-value" id="metrics-blogs" style="display:none;"></div>
           <div class="meta">{{ _("Participating Blogs") }}</div>
         </div>
       </div>
@@ -72,10 +72,10 @@
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/article.svg" alt="Article" width="48" height="48"></div>
         <div>
-          <div class="ui placeholder metrics-placeholder" id="metric-posts-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-posts-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metric-posts" style="display:none;"></div>
+          <div class="metrics-value" id="metrics-posts" style="display:none;"></div>
           <div class="meta">{{ _("All Posts") }}</div>
         </div>
       </div>
@@ -84,10 +84,10 @@
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/date-range.svg" alt="Date range" width="48" height="48"></div>
         <div>
-          <div class="ui placeholder metrics-placeholder" id="metric-recent-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-recent-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metric-recent" style="display:none;"></div>
+          <div class="metrics-value" id="metrics-recent" style="display:none;"></div>
           <div class="meta">{{ _("Posts last 30 Days") }}</div>
         </div>
       </div>
@@ -96,10 +96,10 @@
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/sponsor-tiers.svg" alt="Funding" width="48" height="48"></div>
         <div>
-          <div class="ui placeholder metrics-placeholder" id="metric-funding-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-funding-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metric-funding" style="display:none;"></div>
+          <div class="metrics-value" id="metrics-funding" style="display:none;"></div>
           <div class="meta">{{ _("Posts with Funding") }}</div>
         </div>
       </div>
@@ -112,10 +112,10 @@
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/orcid.svg" alt="ORCID" width="48" height="48"></div>
         <div>
-          <div class="ui placeholder metrics-placeholder" id="metric-orcid-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-orcid-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metric-orcid" style="display:none;"></div>
+          <div class="metrics-value" id="metrics-orcid" style="display:none;"></div>
           <div class="meta">{{ _("Posts with ORCID") }}</div>
         </div>
       </div>
@@ -124,10 +124,10 @@
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/ror.svg" alt="ROR" width="48" height="48"></div>
         <div>
-          <div class="ui placeholder metrics-placeholder" id="metric-ror-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-ror-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metric-ror" style="display:none;"></div>
+          <div class="metrics-value" id="metrics-ror" style="display:none;"></div>
           <div class="meta">{{ _("Posts with ROR ID") }}</div>
         </div>
       </div>
@@ -136,10 +136,10 @@
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/list-ordered.svg" alt="References" width="48" height="48"></div>
         <div>
-          <div class="ui placeholder metrics-placeholder" id="metric-references-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-references-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metric-references" style="display:none;"></div>
+          <div class="metrics-value" id="metrics-references" style="display:none;"></div>
           <div class="meta">{{ _("Posts with References") }}</div>
         </div>
       </div>
@@ -148,10 +148,10 @@
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/citation.svg" alt="Citations" width="48" height="48"></div>
         <div>
-          <div class="ui placeholder metrics-placeholder" id="metric-citations-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-citations-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metric-citations" style="display:none;"></div>
+          <div class="metrics-value" id="metrics-citations" style="display:none;"></div>
           <div class="meta">{{ _("Cited Posts") }}</div>
         </div>
       </div>
@@ -205,10 +205,10 @@
     var recentCount = results[2].hits.total;
     var fundingCount = results[3].hits.total;
 
-    show("metric-blogs", fmt(blogCount), "/communities/search?q=&f=type%3Ablog&l=list&p=1&s=10&sort=newest");
-    show("metric-posts", fmt(totalPosts), "/search?q=&l=list&p=1&s=10&sort=newest");
-    show("metric-recent", fmt(recentCount), "/search?q=" + encodeURIComponent(recentQ) + "&l=list&p=1&s=10&sort=newest");
-    show("metric-funding", fmt(fundingCount), "/search?q=funder:*&l=list&p=1&s=10&sort=newest");
+    show("metrics-blogs", fmt(blogCount), "/communities/search?q=&f=type%3Ablog&l=list&p=1&s=10&sort=newest");
+    show("metrics-posts", fmt(totalPosts), "/search?q=&l=list&p=1&s=10&sort=newest");
+    show("metrics-recent", fmt(recentCount), "/search?q=" + encodeURIComponent(recentQ) + "&l=list&p=1&s=10&sort=newest");
+    show("metrics-funding", fmt(fundingCount), "/search?q=funder:*&l=list&p=1&s=10&sort=newest");
 
     // Row 2: percentage metrics (depend on totalPosts)
     return Promise.all([
@@ -218,10 +218,10 @@
       fetch(baseUrl + "/records?q=" + encodeURIComponent("custom_fields.rs\\:citations.identifier:*") + "&size=1", { headers: headers }).then(function(r) { return r.json(); }),
     ]);
   }).then(function(results) {
-    show("metric-orcid", pct(results[0].hits.total, totalPosts), "/search?q=&f=author_identifiers:orcid&l=list&p=1&s=10&sort=newest");
-    show("metric-ror", pct(results[1].hits.total, totalPosts), "/search?q=ror:*&l=list&p=1&s=10&sort=newest");
-    show("metric-references", pct(results[2].hits.total, totalPosts), "/search?q=references:*&l=list&p=1&s=10&sort=newest");
-    show("metric-citations", pct(results[3].hits.total, totalPosts), "/search?q=" + encodeURIComponent("custom_fields.rs\\:citations.identifier:*") + "&l=list&p=1&s=10&sort=newest");
+    show("metrics-orcid", pct(results[0].hits.total, totalPosts), "/search?q=&f=author_identifiers:orcid&l=list&p=1&s=10&sort=newest");
+    show("metrics-ror", pct(results[1].hits.total, totalPosts), "/search?q=ror:*&l=list&p=1&s=10&sort=newest");
+    show("metrics-references", pct(results[2].hits.total, totalPosts), "/search?q=references:*&l=list&p=1&s=10&sort=newest");
+    show("metrics-citations", pct(results[3].hits.total, totalPosts), "/search?q=" + encodeURIComponent("custom_fields.rs\\:citations.identifier:*") + "&l=list&p=1&s=10&sort=newest");
   }).catch(function(err) {
     console.error("Failed to load frontpage metrics:", err);
   });

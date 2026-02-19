@@ -88,9 +88,18 @@ class RecordsResultsListItem extends Component {
                 {publicationDate}
               </Label>
               <Label horizontal size="small" className="olive">
-                {languages.map((lang) => (
-                  <span key={lang.title_l10n}>{lang.title_l10n}</span>
-                ))}
+                {languages.map((lang) => {
+                  let label = lang.title_l10n;
+                  try {
+                    const display = new Intl.DisplayNames(
+                      [i18next.language, "en"],
+                      { type: "language" },
+                    );
+                    const name = display.of(lang.id);
+                    if (name && name !== lang.id) label = name;
+                  } catch (e) {}
+                  return <span key={lang.id}>{label}</span>;
+                })}
               </Label>
               <Label horizontal size="small" className="teal">
                 <a href={"https://doi.org/" + doi} target="_blank">

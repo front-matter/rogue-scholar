@@ -281,7 +281,7 @@
   "and {{count}} others_plural": "und {{count}} anderer",
   "<0><0>metadata.publication_date:[2017-01-01 TO *]</0> will give you all the publications from 2017 until today.</0>": "<0><0>metadata.publication_date:[2017-01-01 TO *] </0>liefert als Ergebnis alle Publikationen von 2017 bis heute zurück.</0>",
   "Cite all versions?": "Alle Versionen zitieren?",
-  "You can cite all versions by using the DOI": "Sie können alle Versionen mit der DOI zitieren",
+  "You can cite all versions by using the DOI": "Sie können alle Versionen mit der folgenden DOI zitieren:",
   "This DOI represents all versions, and will always resolve to the latest one.": "Diese DOI repräsentiert alle Versionen und verweist immer auf die neueste Version.",
   "The DOI is registered when the first version is published.": "Die DOI wird registriert, wenn die erste Version veröffentlicht wird.",
   "Read more": "Weiterlesen"
