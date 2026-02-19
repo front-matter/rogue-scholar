@@ -46,9 +46,9 @@
       {%- set q = scheme_key + ':' + scheme_value %}
       <a href="{{ url_for('invenio_search_ui.search', q=q, sort='newest') }}"
          class="subject"
-         title="{{ _('Search results for ') + subject.subject }}"
+         title="{{ _('Search results for ') + (subject | subject_title) }}"
       >
-        {{ subject.subject }}
+        {{ subject | subject_title }}
       </a>
     </li>
     {%- endfor %}

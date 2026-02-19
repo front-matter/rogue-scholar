@@ -223,7 +223,7 @@
 
 {% macro list_languages(languages) %}
   {% for lang in languages %}
-    {{ lang.title_l10n }}{{ ", " if not loop.last }}
+    {{ lang.id | language_name }}{{ ", " if not loop.last }}
   {% endfor %}
 {% endmacro %}
 
