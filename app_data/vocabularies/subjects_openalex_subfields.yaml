@@ -1,756 +1,2016 @@
 - id: "https://openalex.org/subfields/1402"
   scheme: "Subfields"
   subject: "Accounting"
+  title:
+    en: Accounting
+    de: Buchhaltung
+    fr: Comptabilité
+    es: Contabilidad
 - id: "https://openalex.org/subfields/3102"
   scheme: "Subfields"
   subject: "Acoustics and Ultrasonics"
+  title:
+    en: Acoustics and Ultrasonics
+    de: Akustik und Ultraschall
+    fr: Acoustique et ultrasons
+    es: Acústica y ultrasonidos
 - id: "https://openalex.org/subfields/2202"
   scheme: "Subfields"
   subject: "Aerospace Engineering"
+  title:
+    en: Aerospace Engineering
+    de: Luft- und Raumfahrttechnik
+    fr: Ingénierie aérospatiale
+    es: Ingeniería aeroespacial
 - id: "https://openalex.org/subfields/1302"
   scheme: "Subfields"
   subject: "Aging"
+  title:
+    en: Aging
+    de: Altern
+    fr: Vieillissement
+    es: Envejecimiento
 - id: "https://openalex.org/subfields/1102"
   scheme: "Subfields"
   subject: "Agronomy and Crop Science"
+  title:
+    en: Agronomy and Crop Science
+    de: Agronomie und Pflanzenbau
+    fr: Agronomie et sciences des cultures
+    es: Agronomía y ciencias de cultivos
 - id: "https://openalex.org/subfields/2602"
   scheme: "Subfields"
   subject: "Algebra and Number Theory"
+  title:
+    en: Algebra and Number Theory
+    de: Algebra und Zahlentheorie
+    fr: Algèbre et théorie des nombres
+    es: Álgebra y teoría de números
 - id: "https://openalex.org/subfields/1602"
   scheme: "Subfields"
   subject: "Analytical Chemistry"
+  title:
+    en: Analytical Chemistry
+    de: Analytische Chemie
+    fr: Chimie analytique
+    es: Química analítica
 - id: "https://openalex.org/subfields/2702"
   scheme: "Subfields"
   subject: "Anatomy"
+  title:
+    en: Anatomy
+    de: Anatomie
+    fr: Anatomie
+    es: Anatomía
 - id: "https://openalex.org/subfields/2703"
   scheme: "Subfields"
   subject: "Anesthesiology and Pain Medicine"
+  title:
+    en: Anesthesiology and Pain Medicine
+    de: Anästhesiologie und Schmerzmedizin
+    fr: Anesthésiologie et médecine de la douleur
+    es: Anestesiología y medicina del dolor
 - id: "https://openalex.org/subfields/1103"
   scheme: "Subfields"
   subject: "Animal Science and Zoology"
+  title:
+    en: Animal Science and Zoology
+    de: Tierwissenschaften und Zoologie
+    fr: Sciences animales et zoologie
+    es: Ciencias animales y zoología
 - id: "https://openalex.org/subfields/3314"
   scheme: "Subfields"
   subject: "Anthropology"
+  title:
+    en: Anthropology
+    de: Anthropologie
+    fr: Anthropologie
+    es: Antropología
 - id: "https://openalex.org/subfields/2604"
   scheme: "Subfields"
   subject: "Applied Mathematics"
+  title:
+    en: Applied Mathematics
+    de: Angewandte Mathematik
+    fr: Mathématiques appliquées
+    es: Matemáticas aplicadas
 - id: "https://openalex.org/subfields/2402"
   scheme: "Subfields"
   subject: "Applied Microbiology and Biotechnology"
+  title:
+    en: Applied Microbiology and Biotechnology
+    de: Angewandte Mikrobiologie und Biotechnologie
+    fr: Microbiologie appliquée et biotechnologie
+    es: Microbiología aplicada y biotecnología
 - id: "https://openalex.org/subfields/3202"
   scheme: "Subfields"
   subject: "Applied Psychology"
+  title:
+    en: Applied Psychology
+    de: Angewandte Psychologie
+    fr: Psychologie appliquée
+    es: Psicología aplicada
 - id: "https://openalex.org/subfields/1104"
   scheme: "Subfields"
   subject: "Aquatic Science"
+  title:
+    en: Aquatic Science
+    de: Aquatische Wissenschaften
+    fr: Sciences aquatiques
+    es: Ciencias acuáticas
 - id: "https://openalex.org/subfields/1204"
   scheme: "Subfields"
   subject: "Archeology"
+  title:
+    en: Archeology
+    de: Archäologie
+    fr: Archéologie
+    es: Arqueología
 - id: "https://openalex.org/subfields/3302"
   scheme: "Subfields"
   subject: "Archeology"
+  title:
+    en: Archeology
+    de: Archäologie
+    fr: Archéologie
+    es: Arqueología
 - id: "https://openalex.org/subfields/2216"
   scheme: "Subfields"
   subject: "Architecture"
+  title:
+    en: Architecture
+    de: Architektur
+    fr: Architecture
+    es: Arquitectura
 - id: "https://openalex.org/subfields/1702"
   scheme: "Subfields"
   subject: "Artificial Intelligence"
+  title:
+    en: Artificial Intelligence
+    de: Künstliche Intelligenz
+    fr: Intelligence artificielle
+    es: Inteligencia artificial
 - id: "https://openalex.org/subfields/3103"
   scheme: "Subfields"
   subject: "Astronomy and Astrophysics"
+  title:
+    en: Astronomy and Astrophysics
+    de: Astronomie und Astrophysik
+    fr: Astronomie et astrophysique
+    es: Astronomía y astrofísica
 - id: "https://openalex.org/subfields/1902"
   scheme: "Subfields"
   subject: "Atmospheric Science"
+  title:
+    en: Atmospheric Science
+    de: Atmosphärenwissenschaften
+    fr: Sciences de l'atmosphère
+    es: Ciencias atmosféricas
 - id: "https://openalex.org/subfields/3107"
   scheme: "Subfields"
   subject: "Atomic and Molecular Physics, and Optics"
+  title:
+    en: Atomic and Molecular Physics, and Optics
+    de: Atom- und Molekülphysik sowie Optik
+    fr: Physique atomique et moléculaire, et optique
+    es: Física atómica y molecular, y óptica
 - id: "https://openalex.org/subfields/2203"
   scheme: "Subfields"
   subject: "Automotive Engineering"
+  title:
+    en: Automotive Engineering
+    de: Fahrzeugtechnik
+    fr: Génie automobile
+    es: Ingeniería del automóvil
 - id: "https://openalex.org/subfields/2802"
   scheme: "Subfields"
   subject: "Behavioral Neuroscience"
+  title:
+    en: Behavioral Neuroscience
+    de: Verhaltensneurowissenschaften
+    fr: Neurosciences comportementales
+    es: Neurociencias del comportamiento
 - id: "https://openalex.org/subfields/1303"
   scheme: "Subfields"
   subject: "Biochemistry"
+  title:
+    en: Biochemistry
+    de: Biochemie
+    fr: Biochimie
+    es: Bioquímica
 - id: "https://openalex.org/subfields/2704"
   scheme: "Subfields"
   subject: "Biochemistry"
+  title:
+    en: Biochemistry
+    de: Biochemie
+    fr: Biochimie
+    es: Bioquímica
 - id: "https://openalex.org/subfields/1502"
   scheme: "Subfields"
   subject: "Bioengineering"
+  title:
+    en: Bioengineering
+    de: Bioingenieurwesen
+    fr: Biogénie
+    es: Bioingeniería
 - id: "https://openalex.org/subfields/2803"
   scheme: "Subfields"
   subject: "Biological Psychiatry"
+  title:
+    en: Biological Psychiatry
+    de: Biologische Psychiatrie
+    fr: Psychiatrie biologique
+    es: Psiquiatría biológica
 - id: "https://openalex.org/subfields/2502"
   scheme: "Subfields"
   subject: "Biomaterials"
+  title:
+    en: Biomaterials
+    de: Biomaterialien
+    fr: Biomatériaux
+    es: Biomateriales
 - id: "https://openalex.org/subfields/2204"
   scheme: "Subfields"
   subject: "Biomedical Engineering"
+  title:
+    en: Biomedical Engineering
+    de: Biomedizinische Technik
+    fr: Génie biomédical
+    es: Ingeniería biomédica
 - id: "https://openalex.org/subfields/1304"
   scheme: "Subfields"
   subject: "Biophysics"
+  title:
+    en: Biophysics
+    de: Biophysik
+    fr: Biophysique
+    es: Biofísica
 - id: "https://openalex.org/subfields/1305"
   scheme: "Subfields"
   subject: "Biotechnology"
+  title:
+    en: Biotechnology
+    de: Biotechnologie
+    fr: Biotechnologie
+    es: Biotecnología
 - id: "https://openalex.org/subfields/2215"
   scheme: "Subfields"
   subject: "Building and Construction"
+  title:
+    en: Building and Construction
+    de: Hoch- und Tiefbau
+    fr: Bâtiment et construction
+    es: Construcción y edificación
 - id: "https://openalex.org/subfields/1403"
   scheme: "Subfields"
   subject: "Business and International Management"
+  title:
+    en: Business and International Management
+    de: Wirtschaft und internationales Management
+    fr: Commerce et management international
+    es: Empresa y gestión internacional
 - id: "https://openalex.org/subfields/1306"
   scheme: "Subfields"
   subject: "Cancer Research"
+  title:
+    en: Cancer Research
+    de: Krebsforschung
+    fr: Recherche sur le cancer
+    es: Investigación oncológica
 - id: "https://openalex.org/subfields/2705"
   scheme: "Subfields"
   subject: "Cardiology and Cardiovascular Medicine"
+  title:
+    en: Cardiology and Cardiovascular Medicine
+    de: Kardiologie und Herz-Kreislauf-Medizin
+    fr: Cardiologie et médecine cardiovasculaire
+    es: Cardiología y medicina cardiovascular
 - id: "https://openalex.org/subfields/1503"
   scheme: "Subfields"
   subject: "Catalysis"
+  title:
+    en: Catalysis
+    de: Katalyse
+    fr: Catalyse
+    es: Catálisis
 - id: "https://openalex.org/subfields/1307"
   scheme: "Subfields"
   subject: "Cell Biology"
+  title:
+    en: Cell Biology
+    de: Zellbiologie
+    fr: Biologie cellulaire
+    es: Biología celular
 - id: "https://openalex.org/subfields/2804"
   scheme: "Subfields"
   subject: "Cellular and Molecular Neuroscience"
+  title:
+    en: Cellular and Molecular Neuroscience
+    de: Zell- und Molekulare Neurowissenschaften
+    fr: Neurosciences cellulaires et moléculaires
+    es: Neurociencias celulares y moleculares
 - id: "https://openalex.org/subfields/2503"
   scheme: "Subfields"
   subject: "Ceramics and Composites"
+  title:
+    en: Ceramics and Composites
+    de: Keramik und Verbundwerkstoffe
+    fr: Céramiques et composites
+    es: Cerámica y materiales compuestos
 - id: "https://openalex.org/subfields/1504"
   scheme: "Subfields"
   subject: "Chemical Health and Safety"
+  title:
+    en: Chemical Health and Safety
+    de: Chemische Gesundheit und Sicherheit
+    fr: Santé et sécurité chimiques
+    es: Salud y seguridad química
 - id: "https://openalex.org/subfields/2205"
   scheme: "Subfields"
   subject: "Civil and Structural Engineering"
+  title:
+    en: Civil and Structural Engineering
+    de: Bau- und Konstruktionsingenieurwesen
+    fr: Génie civil et structural
+    es: Ingeniería civil y estructural
 - id: "https://openalex.org/subfields/1205"
   scheme: "Subfields"
   subject: "Classics"
+  title:
+    en: Classics
+    de: Klassische Altertumswissenschaft
+    fr: Études classiques
+    es: Estudios clásicos
 - id: "https://openalex.org/subfields/1308"
   scheme: "Subfields"
   subject: "Clinical Biochemistry"
+  title:
+    en: Clinical Biochemistry
+    de: Klinische Biochemie
+    fr: Biochimie clinique
+    es: Bioquímica clínica
 - id: "https://openalex.org/subfields/3203"
   scheme: "Subfields"
   subject: "Clinical Psychology"
+  title:
+    en: Clinical Psychology
+    de: Klinische Psychologie
+    fr: Psychologie clinique
+    es: Psicología clínica
 - id: "https://openalex.org/subfields/2805"
   scheme: "Subfields"
   subject: "Cognitive Neuroscience"
+  title:
+    en: Cognitive Neuroscience
+    de: Kognitive Neurowissenschaften
+    fr: Neurosciences cognitives
+    es: Neurociencias cognitivas
 - id: "https://openalex.org/subfields/3315"
   scheme: "Subfields"
   subject: "Communication"
+  title:
+    en: Communication
+    de: Kommunikation
+    fr: Communication
+    es: Comunicación
 - id: "https://openalex.org/subfields/2707"
   scheme: "Subfields"
   subject: "Complementary and alternative medicine"
+  title:
+    en: Complementary and alternative medicine
+    de: Komplementär- und Alternativmedizin
+    fr: Médecine complémentaire et alternative
+    es: Medicina complementaria y alternativa
 - id: "https://openalex.org/subfields/3603"
   scheme: "Subfields"
   subject: "Complementary and Manual Therapy"
+  title:
+    en: Complementary and Manual Therapy
+    de: Komplementär- und Manualtherapie
+    fr: Thérapie complémentaire et manuelle
+    es: Terapia complementaria y manual
 - id: "https://openalex.org/subfields/2605"
   scheme: "Subfields"
   subject: "Computational Mathematics"
+  title:
+    en: Computational Mathematics
+    de: Numerische Mathematik
+    fr: Mathématiques computationnelles
+    es: Matemáticas computacionales
 - id: "https://openalex.org/subfields/2206"
   scheme: "Subfields"
   subject: "Computational Mechanics"
+  title:
+    en: Computational Mechanics
+    de: Numerische Mechanik
+    fr: Mécanique computationnelle
+    es: Mecánica computacional
 - id: "https://openalex.org/subfields/1703"
   scheme: "Subfields"
   subject: "Computational Theory and Mathematics"
+  title:
+    en: Computational Theory and Mathematics
+    de: Theoretische Informatik und Mathematik
+    fr: Théorie de l'informatique et mathématiques
+    es: Teoría computacional y matemáticas
 - id: "https://openalex.org/subfields/1704"
   scheme: "Subfields"
   subject: "Computer Graphics and Computer-Aided Design"
+  title:
+    en: Computer Graphics and Computer-Aided Design
+    de: Computergrafik und computergestütztes Design
+    fr: Infographie et conception assistée par ordinateur
+    es: Gráficos por computadora y diseño asistido
 - id: "https://openalex.org/subfields/1705"
   scheme: "Subfields"
   subject: "Computer Networks and Communications"
+  title:
+    en: Computer Networks and Communications
+    de: Computernetzwerke und Kommunikation
+    fr: Réseaux informatiques et communications
+    es: Redes informáticas y comunicaciones
 - id: "https://openalex.org/subfields/1706"
   scheme: "Subfields"
   subject: "Computer Science Applications"
+  title:
+    en: Computer Science Applications
+    de: Anwendungen der Informatik
+    fr: Applications informatiques
+    es: Aplicaciones informáticas
 - id: "https://openalex.org/subfields/1707"
   scheme: "Subfields"
   subject: "Computer Vision and Pattern Recognition"
+  title:
+    en: Computer Vision and Pattern Recognition
+    de: Computersehen und Mustererkennung
+    fr: Vision par ordinateur et reconnaissance de formes
+    es: Visión por computadora y reconocimiento de patrones
 - id: "https://openalex.org/subfields/3104"
   scheme: "Subfields"
   subject: "Condensed Matter Physics"
+  title:
+    en: Condensed Matter Physics
+    de: Physik der kondensierten Materie
+    fr: Physique de la matière condensée
+    es: Física de la materia condensada
 - id: "https://openalex.org/subfields/1206"
   scheme: "Subfields"
   subject: "Conservation"
+  title:
+    en: Conservation
+    de: Naturschutz
+    fr: Conservation
+    es: Conservación
 - id: "https://openalex.org/subfields/2207"
   scheme: "Subfields"
   subject: "Control and Systems Engineering"
+  title:
+    en: Control and Systems Engineering
+    de: Steuerungs- und Systemtechnik
+    fr: Génie de la commande et des systèmes
+    es: Ingeniería de control y sistemas
 - id: "https://openalex.org/subfields/2706"
   scheme: "Subfields"
   subject: "Critical Care and Intensive Care Medicine"
+  title:
+    en: Critical Care and Intensive Care Medicine
+    de: Intensiv- und Notfallmedizin
+    fr: Soins intensifs et médecine de réanimation
+    es: Medicina de cuidados intensivos
 - id: "https://openalex.org/subfields/3316"
   scheme: "Subfields"
   subject: "Cultural Studies"
+  title:
+    en: Cultural Studies
+    de: Kulturwissenschaften
+    fr: Études culturelles
+    es: Estudios culturales
 - id: "https://openalex.org/subfields/3317"
   scheme: "Subfields"
   subject: "Demography"
+  title:
+    en: Demography
+    de: Demographie
+    fr: Démographie
+    es: Demografía
 - id: "https://openalex.org/subfields/2708"
   scheme: "Subfields"
   subject: "Dermatology"
+  title:
+    en: Dermatology
+    de: Dermatologie
+    fr: Dermatologie
+    es: Dermatología
 - id: "https://openalex.org/subfields/3303"
   scheme: "Subfields"
   subject: "Development"
+  title:
+    en: Development
+    de: Entwicklung
+    fr: Développement
+    es: Desarrollo
 - id: "https://openalex.org/subfields/3204"
   scheme: "Subfields"
   subject: "Developmental and Educational Psychology"
+  title:
+    en: Developmental and Educational Psychology
+    de: Entwicklungs- und Pädagogische Psychologie
+    fr: Psychologie du développement et de l'éducation
+    es: Psicología del desarrollo y educativa
 - id: "https://openalex.org/subfields/1309"
   scheme: "Subfields"
   subject: "Developmental Biology"
+  title:
+    en: Developmental Biology
+    de: Entwicklungsbiologie
+    fr: Biologie du développement
+    es: Biología del desarrollo
 - id: "https://openalex.org/subfields/2806"
   scheme: "Subfields"
   subject: "Developmental Neuroscience"
+  title:
+    en: Developmental Neuroscience
+    de: Entwicklungsneurowissenschaften
+    fr: Neurosciences du développement
+    es: Neurociencias del desarrollo
 - id: "https://openalex.org/subfields/2607"
   scheme: "Subfields"
   subject: "Discrete Mathematics and Combinatorics"
+  title:
+    en: Discrete Mathematics and Combinatorics
+    de: Diskrete Mathematik und Kombinatorik
+    fr: Mathématiques discrètes et combinatoire
+    es: Matemáticas discretas y combinatoria
 - id: "https://openalex.org/subfields/3002"
   scheme: "Subfields"
   subject: "Drug Discovery"
+  title:
+    en: Drug Discovery
+    de: Wirkstoffentdeckung
+    fr: Découverte de médicaments
+    es: Descubrimiento de fármacos
 - id: "https://openalex.org/subfields/1904"
   scheme: "Subfields"
   subject: "Earth-Surface Processes"
+  title:
+    en: Earth-Surface Processes
+    de: Erdoberflächenprozesse
+    fr: Processus de surface terrestre
+    es: Procesos de la superficie terrestre
 - id: "https://openalex.org/subfields/2302"
   scheme: "Subfields"
   subject: "Ecological Modeling"
+  title:
+    en: Ecological Modeling
+    de: Ökologische Modellierung
+    fr: Modélisation écologique
+    es: Modelización ecológica
 - id: "https://openalex.org/subfields/2303"
   scheme: "Subfields"
   subject: "Ecology"
+  title:
+    en: Ecology
+    de: Ökologie
+    fr: Écologie
+    es: Ecología
 - id: "https://openalex.org/subfields/1105"
   scheme: "Subfields"
   subject: "Ecology, Evolution, Behavior and Systematics"
+  title:
+    en: Ecology, Evolution, Behavior and Systematics
+    de: Ökologie, Evolution, Verhalten und Systematik
+    fr: Écologie, évolution, comportement et systématique
+    es: Ecología, evolución, conducta y sistemática
 - id: "https://openalex.org/subfields/2002"
   scheme: "Subfields"
   subject: "Economics and Econometrics"
+  title:
+    en: Economics and Econometrics
+    de: Wirtschaftswissenschaften und Ökonometrie
+    fr: Économie et économétrie
+    es: Economía y econometría
 - id: "https://openalex.org/subfields/3304"
   scheme: "Subfields"
   subject: "Education"
+  title:
+    en: Education
+    de: Bildungswissenschaften
+    fr: Éducation
+    es: Educación
 - id: "https://openalex.org/subfields/2208"
   scheme: "Subfields"
   subject: "Electrical and Electronic Engineering"
+  title:
+    en: Electrical and Electronic Engineering
+    de: Elektrotechnik und Elektronik
+    fr: Génie électrique et électronique
+    es: Ingeniería eléctrica y electrónica
 - id: "https://openalex.org/subfields/1603"
   scheme: "Subfields"
   subject: "Electrochemistry"
+  title:
+    en: Electrochemistry
+    de: Elektrochemie
+    fr: Électrochimie
+    es: Electroquímica
 - id: "https://openalex.org/subfields/2504"
   scheme: "Subfields"
   subject: "Electronic, Optical and Magnetic Materials"
+  title:
+    en: Electronic, Optical and Magnetic Materials
+    de: Elektronische, optische und magnetische Materialien
+    fr: Matériaux électroniques, optiques et magnétiques
+    es: Materiales electrónicos, ópticos y magnéticos
 - id: "https://openalex.org/subfields/3604"
   scheme: "Subfields"
   subject: "Emergency Medical Services"
+  title:
+    en: Emergency Medical Services
+    de: Rettungsdienste
+    fr: Services médicaux d'urgence
+    es: Servicios de emergencias médicas
 - id: "https://openalex.org/subfields/2711"
   scheme: "Subfields"
   subject: "Emergency Medicine"
+  title:
+    en: Emergency Medicine
+    de: Notfallmedizin
+    fr: Médecine d'urgence
+    es: Medicina de urgencias
 - id: "https://openalex.org/subfields/2807"
   scheme: "Subfields"
   subject: "Endocrine and Autonomic Systems"
+  title:
+    en: Endocrine and Autonomic Systems
+    de: Endokrine und autonome Systeme
+    fr: Systèmes endocrinien et autonome
+    es: Sistemas endocrino y autonómico
 - id: "https://openalex.org/subfields/1310"
   scheme: "Subfields"
   subject: "Endocrinology"
+  title:
+    en: Endocrinology
+    de: Endokrinologie
+    fr: Endocrinologie
+    es: Endocrinología
 - id: "https://openalex.org/subfields/2712"
   scheme: "Subfields"
   subject: "Endocrinology, Diabetes and Metabolism"
+  title:
+    en: Endocrinology, Diabetes and Metabolism
+    de: Endokrinologie, Diabetes und Stoffwechsel
+    fr: Endocrinologie, diabète et métabolisme
+    es: Endocrinología, diabetes y metabolismo
 - id: "https://openalex.org/subfields/2102"
   scheme: "Subfields"
   subject: "Energy Engineering and Power Technology"
+  title:
+    en: Energy Engineering and Power Technology
+    de: Energietechnik und Kraftwerkstechnik
+    fr: Ingénierie énergétique et technologie de l'énergie
+    es: Ingeniería energética y tecnología eléctrica
 - id: "https://openalex.org/subfields/2304"
   scheme: "Subfields"
   subject: "Environmental Chemistry"
+  title:
+    en: Environmental Chemistry
+    de: Umweltchemie
+    fr: Chimie de l'environnement
+    es: Química ambiental
 - id: "https://openalex.org/subfields/2305"
   scheme: "Subfields"
   subject: "Environmental Engineering"
+  title:
+    en: Environmental Engineering
+    de: Umweltingenieurwesen
+    fr: Génie de l'environnement
+    es: Ingeniería ambiental
 - id: "https://openalex.org/subfields/2713"
   scheme: "Subfields"
   subject: "Epidemiology"
+  title:
+    en: Epidemiology
+    de: Epidemiologie
+    fr: Épidémiologie
+    es: Epidemiología
 - id: "https://openalex.org/subfields/3402"
   scheme: "Subfields"
   subject: "Equine"
+  title:
+    en: Equine
+    de: Pferdewissenschaften
+    fr: Sciences équines
+    es: Ciencias equinas
 - id: "https://openalex.org/subfields/3205"
   scheme: "Subfields"
   subject: "Experimental and Cognitive Psychology"
+  title:
+    en: Experimental and Cognitive Psychology
+    de: Experimentelle und kognitive Psychologie
+    fr: Psychologie expérimentale et cognitive
+    es: Psicología experimental y cognitiva
 - id: "https://openalex.org/subfields/2714"
   scheme: "Subfields"
   subject: "Family Practice"
+  title:
+    en: Family Practice
+    de: Allgemeinmedizin
+    fr: Médecine de famille
+    es: Medicina de familia
 - id: "https://openalex.org/subfields/1506"
   scheme: "Subfields"
   subject: "Filtration and Separation"
+  title:
+    en: Filtration and Separation
+    de: Filtration und Trennung
+    fr: Filtration et séparation
+    es: Filtración y separación
 - id: "https://openalex.org/subfields/2003"
   scheme: "Subfields"
   subject: "Finance"
+  title:
+    en: Finance
+    de: Finanzwesen
+    fr: Finance
+    es: Finanzas
 - id: "https://openalex.org/subfields/1507"
   scheme: "Subfields"
   subject: "Fluid Flow and Transfer Processes"
+  title:
+    en: Fluid Flow and Transfer Processes
+    de: Strömungsfluss und Übertragungsprozesse
+    fr: Écoulement des fluides et processus de transfert
+    es: Flujo de fluidos y procesos de transferencia
 - id: "https://openalex.org/subfields/1106"
   scheme: "Subfields"
   subject: "Food Science"
+  title:
+    en: Food Science
+    de: Lebensmittelwissenschaft
+    fr: Sciences alimentaires
+    es: Ciencias de la alimentación
 - id: "https://openalex.org/subfields/1107"
   scheme: "Subfields"
   subject: "Forestry"
+  title:
+    en: Forestry
+    de: Forstwirtschaft
+    fr: Sylviculture
+    es: Silvicultura
 - id: "https://openalex.org/subfields/2103"
   scheme: "Subfields"
   subject: "Fuel Technology"
+  title:
+    en: Fuel Technology
+    de: Kraftstofftechnik
+    fr: Technologie des combustibles
+    es: Tecnología de combustibles
 - id: "https://openalex.org/subfields/2715"
   scheme: "Subfields"
   subject: "Gastroenterology"
+  title:
+    en: Gastroenterology
+    de: Gastroenterologie
+    fr: Gastroentérologie
+    es: Gastroenterología
 - id: "https://openalex.org/subfields/3318"
   scheme: "Subfields"
   subject: "Gender Studies"
+  title:
+    en: Gender Studies
+    de: Geschlechterforschung
+    fr: Études de genre
+    es: Estudios de género
 - id: "https://openalex.org/subfields/1100"
   scheme: "Subfields"
   subject: "General Agricultural and Biological Sciences"
+  title:
+    en: General Agricultural and Biological Sciences
+    de: Allgemeine Agrar- und Biowissenschaften
+    fr: Sciences agricoles et biologiques générales
+    es: Ciencias agrícolas y biológicas generales
 - id: "https://openalex.org/subfields/1200"
   scheme: "Subfields"
   subject: "General Arts and Humanities"
+  title:
+    en: General Arts and Humanities
+    de: Allgemeine Kunst und Geisteswissenschaften
+    fr: Arts et sciences humaines généraux
+    es: Artes y humanidades generales
 - id: "https://openalex.org/subfields/1800"
   scheme: "Subfields"
   subject: "General Decision Sciences"
+  title:
+    en: General Decision Sciences
+    de: Allgemeine Entscheidungswissenschaften
+    fr: Sciences de la décision générales
+    es: Ciencias de la decisión generales
 - id: "https://openalex.org/subfields/3500"
   scheme: "Subfields"
   subject: "General Dentistry"
+  title:
+    en: General Dentistry
+    de: Allgemeine Zahnmedizin
+    fr: Dentisterie générale
+    es: Odontología general
 - id: "https://openalex.org/subfields/2000"
   scheme: "Subfields"
   subject: "General Economics, Econometrics and Finance"
+  title:
+    en: General Economics, Econometrics and Finance
+    de: Allgemeine Wirtschaftswissenschaften, Ökonometrie und Finanzen
+    fr: Économie, économétrie et finance générales
+    es: Economía, econometría y finanzas generales
 - id: "https://openalex.org/subfields/2100"
   scheme: "Subfields"
   subject: "General Energy"
+  title:
+    en: General Energy
+    de: Allgemeine Energiewissenschaften
+    fr: Énergie générale
+    es: Energía general
 - id: "https://openalex.org/subfields/2200"
   scheme: "Subfields"
   subject: "General Engineering"
+  title:
+    en: General Engineering
+    de: Allgemeine Ingenieurwissenschaften
+    fr: Ingénierie générale
+    es: Ingeniería general
 - id: "https://openalex.org/subfields/3600"
   scheme: "Subfields"
   subject: "General Health Professions"
+  title:
+    en: General Health Professions
+    de: Allgemeine Gesundheitsberufe
+    fr: Professions de santé générales
+    es: Profesiones sanitarias generales
 - id: "https://openalex.org/subfields/2500"
   scheme: "Subfields"
   subject: "General Materials Science"
+  title:
+    en: General Materials Science
+    de: Allgemeine Materialwissenschaften
+    fr: Sciences des matériaux générales
+    es: Ciencia de materiales general
 - id: "https://openalex.org/subfields/3200"
   scheme: "Subfields"
   subject: "General Psychology"
+  title:
+    en: General Psychology
+    de: Allgemeine Psychologie
+    fr: Psychologie générale
+    es: Psicología general
 - id: "https://openalex.org/subfields/3300"
   scheme: "Subfields"
   subject: "General Social Sciences"
+  title:
+    en: General Social Sciences
+    de: Allgemeine Sozialwissenschaften
+    fr: Sciences sociales générales
+    es: Ciencias sociales generales
 - id: "https://openalex.org/subfields/1311"
   scheme: "Subfields"
   subject: "Genetics"
+  title:
+    en: Genetics
+    de: Genetik
+    fr: Génétique
+    es: Genética
 - id: "https://openalex.org/subfields/2716"
   scheme: "Subfields"
   subject: "Genetics"
+  title:
+    en: Genetics
+    de: Genetik
+    fr: Génétique
+    es: Genética
 - id: "https://openalex.org/subfields/1906"
   scheme: "Subfields"
   subject: "Geochemistry and Petrology"
+  title:
+    en: Geochemistry and Petrology
+    de: Geochemie und Petrologie
+    fr: Géochimie et pétrologie
+    es: Geoquímica y petrología
 - id: "https://openalex.org/subfields/3305"
   scheme: "Subfields"
   subject: "Geography, Planning and Development"
+  title:
+    en: Geography, Planning and Development
+    de: Geographie, Raumplanung und Entwicklung
+    fr: Géographie, planification et développement
+    es: Geografía, planificación y desarrollo
 - id: "https://openalex.org/subfields/1907"
   scheme: "Subfields"
   subject: "Geology"
+  title:
+    en: Geology
+    de: Geologie
+    fr: Géologie
+    es: Geología
 - id: "https://openalex.org/subfields/2608"
   scheme: "Subfields"
   subject: "Geometry and Topology"
+  title:
+    en: Geometry and Topology
+    de: Geometrie und Topologie
+    fr: Géométrie et topologie
+    es: Geometría y topología
 - id: "https://openalex.org/subfields/1908"
   scheme: "Subfields"
   subject: "Geophysics"
+  title:
+    en: Geophysics
+    de: Geophysik
+    fr: Géophysique
+    es: Geofísica
 - id: "https://openalex.org/subfields/2717"
   scheme: "Subfields"
   subject: "Geriatrics and Gerontology"
+  title:
+    en: Geriatrics and Gerontology
+    de: Geriatrie und Gerontologie
+    fr: Gériatrie et gérontologie
+    es: Geriatría y gerontología
 - id: "https://openalex.org/subfields/2306"
   scheme: "Subfields"
   subject: "Global and Planetary Change"
+  title:
+    en: Global and Planetary Change
+    de: Globaler und planetarer Wandel
+    fr: Changement global et planétaire
+    es: Cambio global y planetario
 - id: "https://openalex.org/subfields/1708"
   scheme: "Subfields"
   subject: "Hardware and Architecture"
+  title:
+    en: Hardware and Architecture
+    de: Hardware und Architektur
+    fr: Matériel et architecture
+    es: Hardware y arquitectura
 - id: "https://openalex.org/subfields/3306"
   scheme: "Subfields"
   subject: "Health"
+  title:
+    en: Health
+    de: Gesundheit
+    fr: Santé
+    es: Salud
 - id: "https://openalex.org/subfields/2718"
   scheme: "Subfields"
   subject: "Health Informatics"
+  title:
+    en: Health Informatics
+    de: Gesundheitsinformatik
+    fr: Informatique de santé
+    es: Informática de salud
 - id: "https://openalex.org/subfields/3605"
   scheme: "Subfields"
   subject: "Health Information Management"
+  title:
+    en: Health Information Management
+    de: Gesundheitsinformationsmanagement
+    fr: Gestion de l'information de santé
+    es: Gestión de información sanitaria
 - id: "https://openalex.org/subfields/2307"
   scheme: "Subfields"
   subject: "Health, Toxicology and Mutagenesis"
+  title:
+    en: Health, Toxicology and Mutagenesis
+    de: Gesundheit, Toxikologie und Mutagenese
+    fr: Santé, toxicologie et mutagenèse
+    es: Salud, toxicología y mutagénesis
 - id: "https://openalex.org/subfields/2720"
   scheme: "Subfields"
   subject: "Hematology"
+  title:
+    en: Hematology
+    de: Hämatologie
+    fr: Hématologie
+    es: Hematología
 - id: "https://openalex.org/subfields/2721"
   scheme: "Subfields"
   subject: "Hepatology"
+  title:
+    en: Hepatology
+    de: Hepatologie
+    fr: Hépatologie
+    es: Hepatología
 - id: "https://openalex.org/subfields/1202"
   scheme: "Subfields"
   subject: "History"
+  title:
+    en: History
+    de: Geschichte
+    fr: Histoire
+    es: Historia
 - id: "https://openalex.org/subfields/1207"
   scheme: "Subfields"
   subject: "History and Philosophy of Science"
+  title:
+    en: History and Philosophy of Science
+    de: Geschichte und Philosophie der Wissenschaft
+    fr: Histoire et philosophie des sciences
+    es: Historia y filosofía de la ciencia
 - id: "https://openalex.org/subfields/1108"
   scheme: "Subfields"
   subject: "Horticulture"
+  title:
+    en: Horticulture
+    de: Gartenbau
+    fr: Horticulture
+    es: Horticultura
 - id: "https://openalex.org/subfields/3307"
   scheme: "Subfields"
   subject: "Human Factors and Ergonomics"
+  title:
+    en: Human Factors and Ergonomics
+    de: Menschliche Faktoren und Ergonomie
+    fr: Facteurs humains et ergonomie
+    es: Factores humanos y ergonomía
 - id: "https://openalex.org/subfields/1709"
   scheme: "Subfields"
   subject: "Human-Computer Interaction"
+  title:
+    en: Human-Computer Interaction
+    de: Mensch-Computer-Interaktion
+    fr: Interaction homme-machine
+    es: Interacción humano-computadora
 - id: "https://openalex.org/subfields/2403"
   scheme: "Subfields"
   subject: "Immunology"
+  title:
+    en: Immunology
+    de: Immunologie
+    fr: Immunologie
+    es: Inmunología
 - id: "https://openalex.org/subfields/2723"
   scheme: "Subfields"
   subject: "Immunology and Allergy"
+  title:
+    en: Immunology and Allergy
+    de: Immunologie und Allergie
+    fr: Immunologie et allergie
+    es: Inmunología y alergología
 - id: "https://openalex.org/subfields/2209"
   scheme: "Subfields"
   subject: "Industrial and Manufacturing Engineering"
+  title:
+    en: Industrial and Manufacturing Engineering
+    de: Industrie- und Fertigungstechnik
+    fr: Génie industriel et de fabrication
+    es: Ingeniería industrial y de fabricación
 - id: "https://openalex.org/subfields/2311"
   scheme: "Subfields"
   subject: "Industrial and Manufacturing Engineering"
+  title:
+    en: Industrial and Manufacturing Engineering
+    de: Industrie- und Fertigungstechnik
+    fr: Génie industriel et de fabrication
+    es: Ingeniería industrial y de fabricación
 - id: "https://openalex.org/subfields/1410"
   scheme: "Subfields"
   subject: "Industrial relations"
+  title:
+    en: Industrial relations
+    de: Arbeitsbeziehungen
+    fr: Relations industrielles
+    es: Relaciones laborales
 - id: "https://openalex.org/subfields/2725"
   scheme: "Subfields"
   subject: "Infectious Diseases"
+  title:
+    en: Infectious Diseases
+    de: Infektionskrankheiten
+    fr: Maladies infectieuses
+    es: Enfermedades infecciosas
 - id: "https://openalex.org/subfields/1710"
   scheme: "Subfields"
   subject: "Information Systems"
+  title:
+    en: Information Systems
+    de: Informationssysteme
+    fr: Systèmes d'information
+    es: Sistemas de información
 - id: "https://openalex.org/subfields/1802"
   scheme: "Subfields"
   subject: "Information Systems and Management"
+  title:
+    en: Information Systems and Management
+    de: Informationssysteme und Management
+    fr: Systèmes d'information et management
+    es: Sistemas de información y gestión
 - id: "https://openalex.org/subfields/1604"
   scheme: "Subfields"
   subject: "Inorganic Chemistry"
+  title:
+    en: Inorganic Chemistry
+    de: Anorganische Chemie
+    fr: Chimie inorganique
+    es: Química inorgánica
 - id: "https://openalex.org/subfields/1109"
   scheme: "Subfields"
   subject: "Insect Science"
+  title:
+    en: Insect Science
+    de: Insektenkunde
+    fr: Entomologie
+    es: Entomología
 - id: "https://openalex.org/subfields/3105"
   scheme: "Subfields"
   subject: "Instrumentation"
+  title:
+    en: Instrumentation
+    de: Instrumentierung
+    fr: Instrumentation
+    es: Instrumentación
 - id: "https://openalex.org/subfields/2724"
   scheme: "Subfields"
   subject: "Internal Medicine"
+  title:
+    en: Internal Medicine
+    de: Innere Medizin
+    fr: Médecine interne
+    es: Medicina interna
 - id: "https://openalex.org/subfields/2910"
   scheme: "Subfields"
   subject: "Issues, ethics and legal aspects"
+  title:
+    en: Issues, ethics and legal aspects
+    de: Fragen, Ethik und rechtliche Aspekte
+    fr: Questions, éthique et aspects juridiques
+    es: Cuestiones, ética y aspectos jurídicos
 - id: "https://openalex.org/subfields/1203"
   scheme: "Subfields"
   subject: "Language and Linguistics"
+  title:
+    en: Language and Linguistics
+    de: Sprache und Linguistik
+    fr: Langue et linguistique
+    es: Lengua y lingüística
 - id: "https://openalex.org/subfields/3308"
   scheme: "Subfields"
   subject: "Law"
+  title:
+    en: Law
+    de: Rechtswissenschaft
+    fr: Droit
+    es: Derecho
 - id: "https://openalex.org/subfields/2911"
   scheme: "Subfields"
   subject: "Leadership and Management"
+  title:
+    en: Leadership and Management
+    de: Führung und Management
+    fr: Leadership et management
+    es: Liderazgo y gestión
 - id: "https://openalex.org/subfields/3309"
   scheme: "Subfields"
   subject: "Library and Information Sciences"
+  title:
+    en: Library and Information Sciences
+    de: Bibliotheks- und Informationswissenschaften
+    fr: Sciences de la bibliothéconomie et de l'information
+    es: Biblioteconomía y ciencias de la información
 - id: "https://openalex.org/subfields/3319"
   scheme: "Subfields"
   subject: "Life-span and Life-course Studies"
+  title:
+    en: Life-span and Life-course Studies
+    de: Lebensspannen- und Lebenslaufstudien
+    fr: Études sur le parcours de vie
+    es: Estudios del ciclo vital
 - id: "https://openalex.org/subfields/3310"
   scheme: "Subfields"
   subject: "Linguistics and Language"
+  title:
+    en: Linguistics and Language
+    de: Linguistik und Sprache
+    fr: Linguistique et langue
+    es: Lingüística y lengua
 - id: "https://openalex.org/subfields/1208"
   scheme: "Subfields"
   subject: "Literature and Literary Theory"
+  title:
+    en: Literature and Literary Theory
+    de: Literatur und Literaturtheorie
+    fr: Littérature et théorie littéraire
+    es: Literatura y teoría literaria
 - id: "https://openalex.org/subfields/1404"
   scheme: "Subfields"
   subject: "Management Information Systems"
+  title:
+    en: Management Information Systems
+    de: Managementinformationssysteme
+    fr: Systèmes d'information de gestion
+    es: Sistemas de información de gestión
 - id: "https://openalex.org/subfields/1405"
   scheme: "Subfields"
   subject: "Management of Technology and Innovation"
+  title:
+    en: Management of Technology and Innovation
+    de: Technologie- und Innovationsmanagement
+    fr: Management de la technologie et de l'innovation
+    es: Gestión de la tecnología y la innovación
 - id: "https://openalex.org/subfields/1803"
   scheme: "Subfields"
   subject: "Management Science and Operations Research"
+  title:
+    en: Management Science and Operations Research
+    de: Managementwissenschaft und Operations Research
+    fr: Sciences du management et recherche opérationnelle
+    es: Ciencias de la gestión e investigación de operaciones
 - id: "https://openalex.org/subfields/2308"
   scheme: "Subfields"
   subject: "Management, Monitoring, Policy and Law"
+  title:
+    en: Management, Monitoring, Policy and Law
+    de: Management, Überwachung, Politik und Recht
+    fr: Management, surveillance, politique et droit
+    es: Gestión, monitoreo, política y derecho
 - id: "https://openalex.org/subfields/1406"
   scheme: "Subfields"
   subject: "Marketing"
+  title:
+    en: Marketing
+    de: Marketing
+    fr: Marketing
+    es: Marketing
 - id: "https://openalex.org/subfields/2505"
   scheme: "Subfields"
   subject: "Materials Chemistry"
+  title:
+    en: Materials Chemistry
+    de: Materialchemie
+    fr: Chimie des matériaux
+    es: Química de materiales
 - id: "https://openalex.org/subfields/2610"
   scheme: "Subfields"
   subject: "Mathematical Physics"
+  title:
+    en: Mathematical Physics
+    de: Mathematische Physik
+    fr: Physique mathématique
+    es: Física matemática
 - id: "https://openalex.org/subfields/2210"
   scheme: "Subfields"
   subject: "Mechanical Engineering"
+  title:
+    en: Mechanical Engineering
+    de: Maschinenbau
+    fr: Génie mécanique
+    es: Ingeniería mecánica
 - id: "https://openalex.org/subfields/2211"
   scheme: "Subfields"
   subject: "Mechanics of Materials"
+  title:
+    en: Mechanics of Materials
+    de: Werkstoffmechanik
+    fr: Mécanique des matériaux
+    es: Mecánica de materiales
 - id: "https://openalex.org/subfields/2214"
   scheme: "Subfields"
   subject: "Media Technology"
+  title:
+    en: Media Technology
+    de: Medientechnologie
+    fr: Technologie des médias
+    es: Tecnología de medios
 - id: "https://openalex.org/subfields/3607"
   scheme: "Subfields"
   subject: "Medical Laboratory Technology"
+  title:
+    en: Medical Laboratory Technology
+    de: Medizinische Labortechnologie
+    fr: Technologie de laboratoire médical
+    es: Tecnología de laboratorio médico
 - id: "https://openalex.org/subfields/3608"
   scheme: "Subfields"
   subject: "Medical Terminology"
+  title:
+    en: Medical Terminology
+    de: Medizinische Terminologie
+    fr: Terminologie médicale
+    es: Terminología médica
 - id: "https://openalex.org/subfields/2506"
   scheme: "Subfields"
   subject: "Metals and Alloys"
+  title:
+    en: Metals and Alloys
+    de: Metalle und Legierungen
+    fr: Métaux et alliages
+    es: Metales y aleaciones
 - id: "https://openalex.org/subfields/2404"
   scheme: "Subfields"
   subject: "Microbiology"
+  title:
+    en: Microbiology
+    de: Mikrobiologie
+    fr: Microbiologie
+    es: Microbiología
 - id: "https://openalex.org/subfields/2726"
   scheme: "Subfields"
   subject: "Microbiology"
+  title:
+    en: Microbiology
+    de: Mikrobiologie
+    fr: Microbiologie
+    es: Microbiología
 - id: "https://openalex.org/subfields/2611"
   scheme: "Subfields"
   subject: "Modeling and Simulation"
+  title:
+    en: Modeling and Simulation
+    de: Modellierung und Simulation
+    fr: Modélisation et simulation
+    es: Modelización y simulación
 - id: "https://openalex.org/subfields/1312"
   scheme: "Subfields"
   subject: "Molecular Biology"
+  title:
+    en: Molecular Biology
+    de: Molekularbiologie
+    fr: Biologie moléculaire
+    es: Biología molecular
 - id: "https://openalex.org/subfields/1313"
   scheme: "Subfields"
   subject: "Molecular Medicine"
+  title:
+    en: Molecular Medicine
+    de: Molekulare Medizin
+    fr: Médecine moléculaire
+    es: Medicina molecular
 - id: "https://openalex.org/subfields/1209"
   scheme: "Subfields"
   subject: "Museology"
+  title:
+    en: Museology
+    de: Museologie
+    fr: Muséologie
+    es: Museología
 - id: "https://openalex.org/subfields/1210"
   scheme: "Subfields"
   subject: "Music"
+  title:
+    en: Music
+    de: Musik
+    fr: Musique
+    es: Música
 - id: "https://openalex.org/subfields/2309"
   scheme: "Subfields"
   subject: "Nature and Landscape Conservation"
+  title:
+    en: Nature and Landscape Conservation
+    de: Natur- und Landschaftsschutz
+    fr: Conservation de la nature et du paysage
+    es: Conservación de la naturaleza y el paisaje
 - id: "https://openalex.org/subfields/2727"
   scheme: "Subfields"
   subject: "Nephrology"
+  title:
+    en: Nephrology
+    de: Nephrologie
+    fr: Néphrologie
+    es: Nefrología
 - id: "https://openalex.org/subfields/2728"
   scheme: "Subfields"
   subject: "Neurology"
+  title:
+    en: Neurology
+    de: Neurologie
+    fr: Neurologie
+    es: Neurología
 - id: "https://openalex.org/subfields/2808"
   scheme: "Subfields"
   subject: "Neurology"
+  title:
+    en: Neurology
+    de: Neurologie
+    fr: Neurologie
+    es: Neurología
 - id: "https://openalex.org/subfields/3206"
   scheme: "Subfields"
   subject: "Neuropsychology and Physiological Psychology"
+  title:
+    en: Neuropsychology and Physiological Psychology
+    de: Neuropsychologie und Physiologische Psychologie
+    fr: Neuropsychologie et psychologie physiologique
+    es: Neuropsicología y psicología fisiológica
 - id: "https://openalex.org/subfields/3106"
   scheme: "Subfields"
   subject: "Nuclear and High Energy Physics"
+  title:
+    en: Nuclear and High Energy Physics
+    de: Kern- und Hochenergiephysik
+    fr: Physique nucléaire et des hautes énergies
+    es: Física nuclear y de altas energías
 - id: "https://openalex.org/subfields/2104"
   scheme: "Subfields"
   subject: "Nuclear Energy and Engineering"
+  title:
+    en: Nuclear Energy and Engineering
+    de: Kernenergie und Kerntechnik
+    fr: Énergie nucléaire et génie nucléaire
+    es: Energía nuclear e ingeniería nuclear
 - id: "https://openalex.org/subfields/2612"
   scheme: "Subfields"
   subject: "Numerical Analysis"
+  title:
+    en: Numerical Analysis
+    de: Numerische Analyse
+    fr: Analyse numérique
+    es: Análisis numérico
 - id: "https://openalex.org/subfields/2916"
   scheme: "Subfields"
   subject: "Nutrition and Dietetics"
+  title:
+    en: Nutrition and Dietetics
+    de: Ernährung und Diätetik
+    fr: Nutrition et diététique
+    es: Nutrición y dietética
 - id: "https://openalex.org/subfields/2729"
   scheme: "Subfields"
   subject: "Obstetrics and Gynecology"
+  title:
+    en: Obstetrics and Gynecology
+    de: Geburtshilfe und Gynäkologie
+    fr: Obstétrique et gynécologie
+    es: Obstetricia y ginecología
 - id: "https://openalex.org/subfields/3609"
   scheme: "Subfields"
   subject: "Occupational Therapy"
+  title:
+    en: Occupational Therapy
+    de: Ergotherapie
+    fr: Ergothérapie
+    es: Terapia ocupacional
 - id: "https://openalex.org/subfields/2212"
   scheme: "Subfields"
   subject: "Ocean Engineering"
+  title:
+    en: Ocean Engineering
+    de: Meerestechnik
+    fr: Génie océanique
+    es: Ingeniería oceánica
 - id: "https://openalex.org/subfields/1910"
   scheme: "Subfields"
   subject: "Oceanography"
+  title:
+    en: Oceanography
+    de: Ozeanographie
+    fr: Océanographie
+    es: Oceanografía
 - id: "https://openalex.org/subfields/2730"
   scheme: "Subfields"
   subject: "Oncology"
+  title:
+    en: Oncology
+    de: Onkologie
+    fr: Oncologie
+    es: Oncología
 - id: "https://openalex.org/subfields/2731"
   scheme: "Subfields"
   subject: "Ophthalmology"
+  title:
+    en: Ophthalmology
+    de: Ophthalmologie
+    fr: Ophtalmologie
+    es: Oftalmología
 - id: "https://openalex.org/subfields/3504"
   scheme: "Subfields"
   subject: "Oral Surgery"
+  title:
+    en: Oral Surgery
+    de: Oralchirurgie
+    fr: Chirurgie buccale
+    es: Cirugía oral
 - id: "https://openalex.org/subfields/1605"
   scheme: "Subfields"
   subject: "Organic Chemistry"
+  title:
+    en: Organic Chemistry
+    de: Organische Chemie
+    fr: Chimie organique
+    es: Química orgánica
 - id: "https://openalex.org/subfields/1407"
   scheme: "Subfields"
   subject: "Organizational Behavior and Human Resource Management"
+  title:
+    en: Organizational Behavior and Human Resource Management
+    de: Organisationsverhalten und Personalmanagement
+    fr: Comportement organisationnel et gestion des ressources humaines
+    es: Comportamiento organizacional y gestión de recursos humanos
 - id: "https://openalex.org/subfields/3505"
   scheme: "Subfields"
   subject: "Orthodontics"
+  title:
+    en: Orthodontics
+    de: Kieferorthopädie
+    fr: Orthodontie
+    es: Ortodoncia
 - id: "https://openalex.org/subfields/2732"
   scheme: "Subfields"
   subject: "Orthopedics and Sports Medicine"
+  title:
+    en: Orthopedics and Sports Medicine
+    de: Orthopädie und Sportmedizin
+    fr: Orthopédie et médecine du sport
+    es: Ortopedia y medicina deportiva
 - id: "https://openalex.org/subfields/2733"
   scheme: "Subfields"
   subject: "Otorhinolaryngology"
+  title:
+    en: Otorhinolaryngology
+    de: Hals-Nasen-Ohren-Heilkunde
+    fr: Oto-rhino-laryngologie
+    es: Otorrinolaringología
 - id: "https://openalex.org/subfields/1911"
   scheme: "Subfields"
   subject: "Paleontology"
+  title:
+    en: Paleontology
+    de: Paläontologie
+    fr: Paléontologie
+    es: Paleontología
 - id: "https://openalex.org/subfields/2405"
   scheme: "Subfields"
   subject: "Parasitology"
+  title:
+    en: Parasitology
+    de: Parasitologie
+    fr: Parasitologie
+    es: Parasitología
 - id: "https://openalex.org/subfields/2734"
   scheme: "Subfields"
   subject: "Pathology and Forensic Medicine"
+  title:
+    en: Pathology and Forensic Medicine
+    de: Pathologie und Rechtsmedizin
+    fr: Pathologie et médecine légale
+    es: Patología y medicina forense
 - id: "https://openalex.org/subfields/2735"
   scheme: "Subfields"
   subject: "Pediatrics, Perinatology and Child Health"
+  title:
+    en: Pediatrics, Perinatology and Child Health
+    de: Pädiatrie, Perinatologie und Kindergesundheit
+    fr: Pédiatrie, périnatologie et santé de l'enfant
+    es: Pediatría, perinatología y salud infantil
 - id: "https://openalex.org/subfields/3506"
   scheme: "Subfields"
   subject: "Periodontics"
+  title:
+    en: Periodontics
+    de: Parodontologie
+    fr: Parodontologie
+    es: Periodoncia
 - id: "https://openalex.org/subfields/3003"
   scheme: "Subfields"
   subject: "Pharmaceutical Science"
+  title:
+    en: Pharmaceutical Science
+    de: Pharmazeutische Wissenschaft
+    fr: Sciences pharmaceutiques
+    es: Ciencias farmacéuticas
 - id: "https://openalex.org/subfields/2736"
   scheme: "Subfields"
   subject: "Pharmacology"
+  title:
+    en: Pharmacology
+    de: Pharmakologie
+    fr: Pharmacologie
+    es: Farmacología
 - id: "https://openalex.org/subfields/3004"
   scheme: "Subfields"
   subject: "Pharmacology"
+  title:
+    en: Pharmacology
+    de: Pharmakologie
+    fr: Pharmacologie
+    es: Farmacología
 - id: "https://openalex.org/subfields/3611"
   scheme: "Subfields"
   subject: "Pharmacy"
+  title:
+    en: Pharmacy
+    de: Pharmazie
+    fr: Pharmacie
+    es: Farmacia
 - id: "https://openalex.org/subfields/1211"
   scheme: "Subfields"
   subject: "Philosophy"
+  title:
+    en: Philosophy
+    de: Philosophie
+    fr: Philosophie
+    es: Filosofía
 - id: "https://openalex.org/subfields/1606"
   scheme: "Subfields"
   subject: "Physical and Theoretical Chemistry"
+  title:
+    en: Physical and Theoretical Chemistry
+    de: Physikalische und theoretische Chemie
+    fr: Chimie physique et théorique
+    es: Química física y teórica
 - id: "https://openalex.org/subfields/3612"
   scheme: "Subfields"
   subject: "Physical Therapy, Sports Therapy and Rehabilitation"
+  title:
+    en: Physical Therapy, Sports Therapy and Rehabilitation
+    de: Physiotherapie, Sporttherapie und Rehabilitation
+    fr: Physiothérapie, thérapie sportive et réadaptation
+    es: Fisioterapia, terapia deportiva y rehabilitación
 - id: "https://openalex.org/subfields/2737"
   scheme: "Subfields"
   subject: "Physiology"
+  title:
+    en: Physiology
+    de: Physiologie
+    fr: Physiologie
+    es: Fisiología
 - id: "https://openalex.org/subfields/1314"
   scheme: "Subfields"
   subject: "Physiology"
+  title:
+    en: Physiology
+    de: Physiologie
+    fr: Physiologie
+    es: Fisiología
 - id: "https://openalex.org/subfields/1110"
   scheme: "Subfields"
   subject: "Plant Science"
+  title:
+    en: Plant Science
+    de: Pflanzenwissenschaften
+    fr: Sciences végétales
+    es: Ciencias vegetales
 - id: "https://openalex.org/subfields/3320"
   scheme: "Subfields"
   subject: "Political Science and International Relations"
+  title:
+    en: Political Science and International Relations
+    de: Politikwissenschaft und Internationale Beziehungen
+    fr: Sciences politiques et relations internationales
+    es: Ciencias políticas y relaciones internacionales
 - id: "https://openalex.org/subfields/2310"
   scheme: "Subfields"
   subject: "Pollution"
+  title:
+    en: Pollution
+    de: Umweltverschmutzung
+    fr: Pollution
+    es: Contaminación
 - id: "https://openalex.org/subfields/2507"
   scheme: "Subfields"
   subject: "Polymers and Plastics"
+  title:
+    en: Polymers and Plastics
+    de: Polymere und Kunststoffe
+    fr: Polymères et plastiques
+    es: Polímeros y plásticos
 - id: "https://openalex.org/subfields/1508"
   scheme: "Subfields"
   subject: "Process Chemistry and Technology"
+  title:
+    en: Process Chemistry and Technology
+    de: Prozesstechnik und -chemie
+    fr: Chimie et technologie des procédés
+    es: Química y tecnología de procesos
 - id: "https://openalex.org/subfields/2738"
   scheme: "Subfields"
   subject: "Psychiatry and Mental health"
+  title:
+    en: Psychiatry and Mental health
+    de: Psychiatrie und psychische Gesundheit
+    fr: Psychiatrie et santé mentale
+    es: Psiquiatría y salud mental
 - id: "https://openalex.org/subfields/3321"
   scheme: "Subfields"
   subject: "Public Administration"
+  title:
+    en: Public Administration
+    de: Öffentliche Verwaltung
+    fr: Administration publique
+    es: Administración pública
 - id: "https://openalex.org/subfields/2739"
   scheme: "Subfields"
   subject: "Public Health, Environmental and Occupational Health"
+  title:
+    en: Public Health, Environmental and Occupational Health
+    de: Öffentliche Gesundheit, Umwelt- und Arbeitsmedizin
+    fr: Santé publique, santé environnementale et au travail
+    es: Salud pública, salud ambiental y laboral
 - id: "https://openalex.org/subfields/2740"
   scheme: "Subfields"
   subject: "Pulmonary and Respiratory Medicine"
+  title:
+    en: Pulmonary and Respiratory Medicine
+    de: Lungen- und Atemwegsmedizin
+    fr: Médecine pulmonaire et respiratoire
+    es: Medicina pulmonar y respiratoria
 - id: "https://openalex.org/subfields/3108"
   scheme: "Subfields"
   subject: "Radiation"
+  title:
+    en: Radiation
+    de: Strahlung
+    fr: Rayonnement
+    es: Radiación
 - id: "https://openalex.org/subfields/3614"
   scheme: "Subfields"
   subject: "Radiological and Ultrasound Technology"
+  title:
+    en: Radiological and Ultrasound Technology
+    de: Radiologische und Ultraschalltechnologie
+    fr: Technologie radiologique et ultrasonore
+    es: Tecnología radiológica y de ultrasonido
 - id: "https://openalex.org/subfields/2741"
   scheme: "Subfields"
   subject: "Radiology, Nuclear Medicine and Imaging"
+  title:
+    en: Radiology, Nuclear Medicine and Imaging
+    de: Radiologie, Nuklearmedizin und Bildgebung
+    fr: Radiologie, médecine nucléaire et imagerie
+    es: Radiología, medicina nuclear e imagen
 - id: "https://openalex.org/subfields/2742"
   scheme: "Subfields"
   subject: "Rehabilitation"
+  title:
+    en: Rehabilitation
+    de: Rehabilitation
+    fr: Réadaptation
+    es: Rehabilitación
 - id: "https://openalex.org/subfields/1212"
   scheme: "Subfields"
   subject: "Religious studies"
+  title:
+    en: Religious studies
+    de: Religionswissenschaften
+    fr: Études religieuses
+    es: Estudios religiosos
 - id: "https://openalex.org/subfields/2105"
   scheme: "Subfields"
   subject: "Renewable Energy, Sustainability and the Environment"
+  title:
+    en: Renewable Energy, Sustainability and the Environment
+    de: Erneuerbare Energie, Nachhaltigkeit und Umwelt
+    fr: Énergie renouvelable, durabilité et environnement
+    es: Energía renovable, sostenibilidad y medio ambiente
 - id: "https://openalex.org/subfields/2743"
   scheme: "Subfields"
   subject: "Reproductive Medicine"
+  title:
+    en: Reproductive Medicine
+    de: Reproduktionsmedizin
+    fr: Médecine de la reproduction
+    es: Medicina reproductiva
 - id: "https://openalex.org/subfields/2922"
   scheme: "Subfields"
   subject: "Research and Theory"
+  title:
+    en: Research and Theory
+    de: Forschung und Theorie
+    fr: Recherche et théorie
+    es: Investigación y teoría
 - id: "https://openalex.org/subfields/2745"
   scheme: "Subfields"
   subject: "Rheumatology"
+  title:
+    en: Rheumatology
+    de: Rheumatologie
+    fr: Rhumatologie
+    es: Reumatología
 - id: "https://openalex.org/subfields/3311"
   scheme: "Subfields"
   subject: "Safety Research"
+  title:
+    en: Safety Research
+    de: Sicherheitsforschung
+    fr: Recherche sur la sécurité
+    es: Investigación en seguridad
 - id: "https://openalex.org/subfields/2213"
   scheme: "Subfields"
   subject: "Safety, Risk, Reliability and Quality"
+  title:
+    en: Safety, Risk, Reliability and Quality
+    de: Sicherheit, Risiko, Zuverlässigkeit und Qualität
+    fr: Sécurité, risque, fiabilité et qualité
+    es: Seguridad, riesgo, fiabilidad y calidad
 - id: "https://openalex.org/subfields/2809"
   scheme: "Subfields"
   subject: "Sensory Systems"
+  title:
+    en: Sensory Systems
+    de: Sensorische Systeme
+    fr: Systèmes sensoriels
+    es: Sistemas sensoriales
 - id: "https://openalex.org/subfields/1711"
   scheme: "Subfields"
   subject: "Signal Processing"
+  title:
+    en: Signal Processing
+    de: Signalverarbeitung
+    fr: Traitement du signal
+    es: Procesamiento de señales
 - id: "https://openalex.org/subfields/3404"
   scheme: "Subfields"
   subject: "Small Animals"
+  title:
+    en: Small Animals
+    de: Kleintiere
+    fr: Petits animaux
+    es: Animales pequeños
 - id: "https://openalex.org/subfields/3207"
   scheme: "Subfields"
   subject: "Social Psychology"
+  title:
+    en: Social Psychology
+    de: Sozialpsychologie
+    fr: Psychologie sociale
+    es: Psicología social
 - id: "https://openalex.org/subfields/3312"
   scheme: "Subfields"
   subject: "Sociology and Political Science"
+  title:
+    en: Sociology and Political Science
+    de: Soziologie und Politikwissenschaft
+    fr: Sociologie et sciences politiques
+    es: Sociología y ciencias políticas
 - id: "https://openalex.org/subfields/1712"
   scheme: "Subfields"
   subject: "Software"
+  title:
+    en: Software
+    de: Software
+    fr: Logiciel
+    es: Software
 - id: "https://openalex.org/subfields/1111"
   scheme: "Subfields"
   subject: "Soil Science"
+  title:
+    en: Soil Science
+    de: Bodenkunde
+    fr: Science du sol
+    es: Ciencia del suelo
 - id: "https://openalex.org/subfields/1912"
   scheme: "Subfields"
   subject: "Space and Planetary Science"
+  title:
+    en: Space and Planetary Science
+    de: Raum- und Planetenwissenschaften
+    fr: Sciences spatiales et planétaires
+    es: Ciencias del espacio y planetarias
 - id: "https://openalex.org/subfields/1607"
   scheme: "Subfields"
   subject: "Spectroscopy"
+  title:
+    en: Spectroscopy
+    de: Spektroskopie
+    fr: Spectroscopie
+    es: Espectroscopía
 - id: "https://openalex.org/subfields/3616"
   scheme: "Subfields"
   subject: "Speech and Hearing"
+  title:
+    en: Speech and Hearing
+    de: Sprach- und Hörheilkunde
+    fr: Orthophonie et audiologie
+    es: Logopedia y audiología
 - id: "https://openalex.org/subfields/3109"
   scheme: "Subfields"
   subject: "Statistical and Nonlinear Physics"
+  title:
+    en: Statistical and Nonlinear Physics
+    de: Statistische und nichtlineare Physik
+    fr: Physique statistique et non linéaire
+    es: Física estadística y no lineal
 - id: "https://openalex.org/subfields/2613"
   scheme: "Subfields"
   subject: "Statistics and Probability"
+  title:
+    en: Statistics and Probability
+    de: Statistik und Wahrscheinlichkeitsrechnung
+    fr: Statistiques et probabilités
+    es: Estadística y probabilidad
 - id: "https://openalex.org/subfields/1804"
   scheme: "Subfields"
   subject: "Statistics, Probability and Uncertainty"
+  title:
+    en: Statistics, Probability and Uncertainty
+    de: Statistik, Wahrscheinlichkeit und Unsicherheit
+    fr: Statistiques, probabilités et incertitude
+    es: Estadística, probabilidad e incertidumbre
 - id: "https://openalex.org/subfields/1408"
   scheme: "Subfields"
   subject: "Strategy and Management"
+  title:
+    en: Strategy and Management
+    de: Strategie und Management
+    fr: Stratégie et management
+    es: Estrategia y gestión
 - id: "https://openalex.org/subfields/1315"
   scheme: "Subfields"
   subject: "Structural Biology"
+  title:
+    en: Structural Biology
+    de: Strukturbiologie
+    fr: Biologie structurale
+    es: Biología estructural
 - id: "https://openalex.org/subfields/2508"
   scheme: "Subfields"
   subject: "Surfaces, Coatings and Films"
+  title:
+    en: Surfaces, Coatings and Films
+    de: Oberflächen, Beschichtungen und Schichten
+    fr: Surfaces, revêtements et films
+    es: Superficies, recubrimientos y películas
 - id: "https://openalex.org/subfields/2746"
   scheme: "Subfields"
   subject: "Surgery"
+  title:
+    en: Surgery
+    de: Chirurgie
+    fr: Chirurgie
+    es: Cirugía
 - id: "https://openalex.org/subfields/2614"
   scheme: "Subfields"
   subject: "Theoretical Computer Science"
+  title:
+    en: Theoretical Computer Science
+    de: Theoretische Informatik
+    fr: Informatique théorique
+    es: Informática teórica
 - id: "https://openalex.org/subfields/1409"
   scheme: "Subfields"
   subject: "Tourism, Leisure and Hospitality Management"
+  title:
+    en: Tourism, Leisure and Hospitality Management
+    de: Tourismus-, Freizeit- und Gastgewerbemanagement
+    fr: Gestion du tourisme, des loisirs et de l'hôtellerie
+    es: Gestión del turismo, ocio y hostelería
 - id: "https://openalex.org/subfields/3005"
   scheme: "Subfields"
   subject: "Toxicology"
+  title:
+    en: Toxicology
+    de: Toxikologie
+    fr: Toxicologie
+    es: Toxicología
 - id: "https://openalex.org/subfields/2747"
   scheme: "Subfields"
   subject: "Transplantation"
+  title:
+    en: Transplantation
+    de: Transplantation
+    fr: Transplantation
+    es: Trasplante
 - id: "https://openalex.org/subfields/3313"
   scheme: "Subfields"
   subject: "Transportation"
+  title:
+    en: Transportation
+    de: Transport
+    fr: Transport
+    es: Transporte
 - id: "https://openalex.org/subfields/3322"
   scheme: "Subfields"
   subject: "Urban Studies"
+  title:
+    en: Urban Studies
+    de: Stadtforschung
+    fr: Études urbaines
+    es: Estudios urbanos
 - id: "https://openalex.org/subfields/2748"
   scheme: "Subfields"
   subject: "Urology"
+  title:
+    en: Urology
+    de: Urologie
+    fr: Urologie
+    es: Urología
 - id: "https://openalex.org/subfields/2406"
   scheme: "Subfields"
   subject: "Virology"
+  title:
+    en: Virology
+    de: Virologie
+    fr: Virologie
+    es: Virología
 - id: "https://openalex.org/subfields/1213"
   scheme: "Subfields"
   subject: "Visual Arts and Performing Arts"
+  title:
+    en: Visual Arts and Performing Arts
+    de: Bildende Kunst und darstellende Künste
+    fr: Arts visuels et arts du spectacle
+    es: Artes visuales y escénicas
 - id: "https://openalex.org/subfields/2312"
   scheme: "Subfields"
   subject: "Water Science and Technology"
+  title:
+    en: Water Science and Technology
+    de: Wasserwissenschaft und -technologie
+    fr: Sciences et technologie de l'eau
+    es: Ciencias y tecnología del agua

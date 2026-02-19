@@ -1,12 +1,32 @@
 - id: "https://openalex.org/domains/4"
   scheme: "Domains"
   subject: "Health Sciences"
+  title:
+    en: Health Sciences
+    de: Gesundheitswissenschaften
+    fr: Sciences de la santé
+    es: Ciencias de la salud
 - id: "https://openalex.org/domains/1"
   scheme: "Domains"
   subject: "Life Sciences"
+  title:
+    en: Life Sciences
+    de: Lebenswissenschaften
+    fr: Sciences de la vie
+    es: Ciencias de la vida
 - id: "https://openalex.org/domains/3"
   scheme: "Domains"
   subject: "Physical Sciences"
+  title:
+    en: Physical Sciences
+    de: Naturwissenschaften
+    fr: Sciences physiques
+    es: Ciencias físicas
 - id: "https://openalex.org/domains/2"
   scheme: "Domains"
   subject: "Social Sciences"
+  title:
+    en: Social Sciences
+    de: Sozialwissenschaften
+    fr: Sciences sociales
+    es: Ciencias sociales

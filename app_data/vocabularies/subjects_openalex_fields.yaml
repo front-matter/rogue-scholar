@@ -1,78 +1,208 @@
 - id: "https://openalex.org/fields/11"
   scheme: "Fields"
   subject: "Agricultural and Biological Sciences"
+  title:
+    en: Agricultural and Biological Sciences
+    de: Agrar- und Biowissenschaften
+    fr: Sciences agricoles et biologiques
+    es: Ciencias agrícolas y biológicas
 - id: "https://openalex.org/fields/12"
   scheme: "Fields"
   subject: "Arts and Humanities"
+  title:
+    en: Arts and Humanities
+    de: Kunst und Geisteswissenschaften
+    fr: Arts et sciences humaines
+    es: Artes y humanidades
 - id: "https://openalex.org/fields/13"
   scheme: "Fields"
   subject: "Biochemistry, Genetics and Molecular Biology"
+  title:
+    en: Biochemistry, Genetics and Molecular Biology
+    de: Biochemie, Genetik und Molekularbiologie
+    fr: Biochimie, génétique et biologie moléculaire
+    es: Bioquímica, genética y biología molecular
 - id: "https://openalex.org/fields/14"
   scheme: "Fields"
   subject: "Business, Management and Accounting"
+  title:
+    en: Business, Management and Accounting
+    de: Wirtschaft, Management und Rechnungswesen
+    fr: Commerce, gestion et comptabilité
+    es: Empresa, gestión y contabilidad
 - id: "https://openalex.org/fields/15"
   scheme: "Fields"
   subject: "Chemical Engineering"
+  title:
+    en: Chemical Engineering
+    de: Chemische Verfahrenstechnik
+    fr: Génie chimique
+    es: Ingeniería química
 - id: "https://openalex.org/fields/16"
   scheme: "Fields"
   subject: "Chemistry"
+  title:
+    en: Chemistry
+    de: Chemie
+    fr: Chimie
+    es: Química
 - id: "https://openalex.org/fields/17"
   scheme: "Fields"
   subject: "Computer Science"
+  title:
+    en: Computer Science
+    de: Informatik
+    fr: Informatique
+    es: Informática
 - id: "https://openalex.org/fields/18"
   scheme: "Fields"
   subject: "Decision Sciences"
+  title:
+    en: Decision Sciences
+    de: Entscheidungswissenschaften
+    fr: Sciences de la décision
+    es: Ciencias de la decisión
 - id: "https://openalex.org/fields/35"
   scheme: "Fields"
   subject: "Dentistry"
+  title:
+    en: Dentistry
+    de: Zahnmedizin
+    fr: Dentisterie
+    es: Odontología
 - id: "https://openalex.org/fields/19"
   scheme: "Fields"
   subject: "Earth and Planetary Sciences"
+  title:
+    en: Earth and Planetary Sciences
+    de: Erd- und Planetenwissenschaften
+    fr: Sciences de la Terre et des planètes
+    es: Ciencias de la Tierra y planetarias
 - id: "https://openalex.org/fields/20"
   scheme: "Fields"
   subject: "Economics, Econometrics and Finance"
+  title:
+    en: Economics, Econometrics and Finance
+    de: Wirtschaft, Ökonometrie und Finanzen
+    fr: Économie, économétrie et finance
+    es: Economía, econometría y finanzas
 - id: "https://openalex.org/fields/21"
   scheme: "Fields"
   subject: "Energy"
+  title:
+    en: Energy
+    de: Energie
+    fr: Énergie
+    es: Energía
 - id: "https://openalex.org/fields/22"
   scheme: "Fields"
   subject: "Engineering"
+  title:
+    en: Engineering
+    de: Ingenieurwissenschaften
+    fr: Ingénierie
+    es: Ingeniería
 - id: "https://openalex.org/fields/23"
   scheme: "Fields"
   subject: "Environmental Science"
+  title:
+    en: Environmental Science
+    de: Umweltwissenschaften
+    fr: Sciences de l'environnement
+    es: Ciencias ambientales
 - id: "https://openalex.org/fields/36"
   scheme: "Fields"
   subject: "Health Professions"
+  title:
+    en: Health Professions
+    de: Gesundheitsberufe
+    fr: Professions de santé
+    es: Profesiones sanitarias
 - id: "https://openalex.org/fields/24"
   scheme: "Fields"
   subject: "Immunology and Microbiology"
+  title:
+    en: Immunology and Microbiology
+    de: Immunologie und Mikrobiologie
+    fr: Immunologie et microbiologie
+    es: Inmunología y microbiología
 - id: "https://openalex.org/fields/25"
   scheme: "Fields"
   subject: "Materials Science"
+  title:
+    en: Materials Science
+    de: Materialwissenschaften
+    fr: Science des matériaux
+    es: Ciencia de materiales
 - id: "https://openalex.org/fields/26"
   scheme: "Fields"
   subject: "Mathematics"
+  title:
+    en: Mathematics
+    de: Mathematik
+    fr: Mathématiques
+    es: Matemáticas
 - id: "https://openalex.org/fields/27"
   scheme: "Fields"
   subject: "Medicine"
+  title:
+    en: Medicine
+    de: Medizin
+    fr: Médecine
+    es: Medicina
 - id: "https://openalex.org/fields/28"
   scheme: "Fields"
   subject: "Neuroscience"
+  title:
+    en: Neuroscience
+    de: Neurowissenschaften
+    fr: Neurosciences
+    es: Neurociencias
 - id: "https://openalex.org/fields/29"
   scheme: "Fields"
   subject: "Nursing"
+  title:
+    en: Nursing
+    de: Pflegewissenschaften
+    fr: Sciences infirmières
+    es: Enfermería
 - id: "https://openalex.org/fields/30"
   scheme: "Fields"
   subject: "Pharmacology, Toxicology and Pharmaceutics"
+  title:
+    en: Pharmacology, Toxicology and Pharmaceutics
+    de: Pharmakologie, Toxikologie und Pharmazeutik
+    fr: Pharmacologie, toxicologie et pharmacie
+    es: Farmacología, toxicología y farmacia
 - id: "https://openalex.org/fields/31"
   scheme: "Fields"
   subject: "Physics and Astronomy"
+  title:
+    en: Physics and Astronomy
+    de: Physik und Astronomie
+    fr: Physique et astronomie
+    es: Física y astronomía
 - id: "https://openalex.org/fields/32"
   scheme: "Fields"
   subject: "Psychology"
+  title:
+    en: Psychology
+    de: Psychologie
+    fr: Psychologie
+    es: Psicología
 - id: "https://openalex.org/fields/33"
   scheme: "Fields"
   subject: "Social Sciences"
+  title:
+    en: Social Sciences
+    de: Sozialwissenschaften
+    fr: Sciences sociales
+    es: Ciencias sociales
 - id: "https://openalex.org/fields/34"
   scheme: "Fields"
   subject: "Veterinary"
+  title:
+    en: Veterinary
+    de: Veterinärmedizin
+    fr: Médecine vétérinaire
+    es: Veterinaria

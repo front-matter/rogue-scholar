@@ -1,144 +1,384 @@
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1"
   scheme: FOS
   subject: "Natural sciences"
+  title:
+    en: Natural sciences
+    de: Naturwissenschaften
+    fr: Sciences naturelles
+    es: Ciencias naturales
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.1"
   scheme: FOS
   subject: "Mathematics"
+  title:
+    en: Mathematics
+    de: Mathematik
+    fr: Mathématiques
+    es: Matemáticas
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.2"
   scheme: FOS
   subject: "Computer and information sciences"
+  title:
+    en: Computer and information sciences
+    de: Informatik
+    fr: Informatique et sciences de l'information
+    es: Ciencias de la computación e información
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.3"
   scheme: FOS
   subject: "Physical sciences"
+  title:
+    en: Physical sciences
+    de: Physik
+    fr: Sciences physiques
+    es: Ciencias físicas
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.4"
   scheme: FOS
   subject: "Chemical sciences"
+  title:
+    en: Chemical sciences
+    de: Chemie
+    fr: Sciences chimiques
+    es: Ciencias químicas
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.5"
   scheme: FOS
   subject: "Earth and related environmental sciences"
+  title:
+    en: Earth and related environmental sciences
+    de: Geowissenschaften
+    fr: Sciences de la Terre et sciences de l'environnement connexes
+    es: Ciencias de la Tierra y ciencias medioambientales afines
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.6"
   scheme: FOS
   subject: "Biological sciences"
+  title:
+    en: Biological sciences
+    de: Biologie
+    fr: Sciences biologiques
+    es: Ciencias biológicas
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.7"
   scheme: FOS
   subject: "Other natural sciences"
+  title:
+    en: Other natural sciences
+    de: Andere Naturwissenschaften
+    fr: Autres sciences naturelles
+    es: Otras ciencias naturales
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2"
   scheme: FOS
   subject: "Engineering and technology"
+  title:
+    en: Engineering and technology
+    de: Technische Wissenschaften
+    fr: Ingénierie et technologie
+    es: Ingeniería y tecnología
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.1"
   scheme: FOS
   subject: "Civil engineering"
+  title:
+    en: Civil engineering
+    de: Bauingenieurwesen
+    fr: Génie civil
+    es: Ingeniería civil
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.2"
   scheme: FOS
   subject: "Electrical engineering, electronic engineering, information engineering"
+  title:
+    en: Electrical engineering, electronic engineering, information engineering
+    de: Elektrotechnik und Informationstechnik
+    fr: Génie électrique, génie électronique et génie de l'information
+    es: Ingeniería eléctrica, electrónica e informática
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.3"
   scheme: FOS
   subject: "Mechanical engineering"
+  title:
+    en: Mechanical engineering
+    de: Maschinenbau
+    fr: Génie mécanique
+    es: Ingeniería mecánica
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.4"
   scheme: FOS
   subject: "Chemical engineering"
+  title:
+    en: Chemical engineering
+    de: Chemische Verfahrenstechnik
+    fr: Génie chimique
+    es: Ingeniería química
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.5"
   scheme: FOS
   subject: "Materials engineering"
+  title:
+    en: Materials engineering
+    de: Werkstofftechnik
+    fr: Génie des matériaux
+    es: Ingeniería de materiales
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.6"
   scheme: FOS
   subject: "Medical engineering"
+  title:
+    en: Medical engineering
+    de: Medizintechnik
+    fr: Génie médical
+    es: Ingeniería médica
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.7"
   scheme: FOS
   subject: "Environmental engineering"
+  title:
+    en: Environmental engineering
+    de: Umweltingenieurwesen
+    fr: Génie de l'environnement
+    es: Ingeniería ambiental
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.8"
   scheme: FOS
   subject: "Environmental biotechnology"
+  title:
+    en: Environmental biotechnology
+    de: Umweltbiotechnologie
+    fr: Biotechnologie environnementale
+    es: Biotecnología ambiental
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.9"
   scheme: FOS
   subject: "Industrial biotechnology"
+  title:
+    en: Industrial biotechnology
+    de: Industrielle Biotechnologie
+    fr: Biotechnologie industrielle
+    es: Biotecnología industrial
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.10"
   scheme: FOS
   subject: "Nano technology"
+  title:
+    en: Nano technology
+    de: Nanotechnologie
+    fr: Nanotechnologie
+    es: Nanotecnología
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.11"
   scheme: FOS
   subject: "Other engineering and technologies"
+  title:
+    en: Other engineering and technologies
+    de: Andere Technische Wissenschaften
+    fr: Autres sciences de l'ingénieur et technologies
+    es: Otras ingenierías y tecnologías
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3"
   scheme: FOS
   subject: "Medical and health sciences"
+  title:
+    en: Medical and health sciences
+    de: Humanmedizin und Gesundheitswissenschaften
+    fr: Sciences médicales et sciences de la santé
+    es: Ciencias médicas y de la salud
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3.1"
   scheme: FOS
   subject: "Basic medicine"
+  title:
+    en: Basic medicine
+    de: Medizinisch-theoretische Wissenschaften und Pharmazie
+    fr: Médecine fondamentale
+    es: Medicina básica
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3.2"
   scheme: FOS
   subject: "Clinical medicine"
+  title:
+    en: Clinical medicine
+    de: Klinische Medizin
+    fr: Médecine clinique
+    es: Medicina clínica
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3.3"
   scheme: FOS
   subject: "Health sciences"
+  title:
+    en: Health sciences
+    de: Gesundheitswissenschaften
+    fr: Sciences de la santé
+    es: Ciencias de la salud
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3.4"
   scheme: FOS
   subject: "Health biotechnology"
+  title:
+    en: Health biotechnology
+    de: Medizinische Biotechnologie
+    fr: Biotechnologie de la santé
+    es: Biotecnología sanitaria
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3.5"
   scheme: FOS
   subject: "Other medical sciences"
+  title:
+    en: Other medical sciences
+    de: Andere Humanmedizin und Gesundheitswissenschaften
+    fr: Autres sciences médicales
+    es: Otras ciencias médicas
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4"
   scheme: FOS
   subject: "Agricultural sciences"
+  title:
+    en: Agricultural sciences
+    de: Agrarwissenschaften und Veterinärmedizin
+    fr: Sciences agricoles
+    es: Ciencias agrarias
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4.1"
   scheme: FOS
   subject: "Agriculture, forestry, and fisheries"
+  title:
+    en: Agriculture, forestry, and fisheries
+    de: Land- und Forstwirtschaft, Fischerei
+    fr: Agriculture, sylviculture et pêche
+    es: Agricultura, silvicultura y pesca
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4.2"
   scheme: FOS
   subject: "Animal and dairy science"
+  title:
+    en: Animal and dairy science
+    de: Tierzucht, Tierproduktion
+    fr: Sciences animales et laitières
+    es: Ciencias animales y lecheras
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4.3"
   scheme: FOS
   subject: "Veterinary science"
+  title:
+    en: Veterinary science
+    de: Veterinärmedizin
+    fr: Sciences vétérinaires
+    es: Ciencias veterinarias
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4.4"
   scheme: FOS
   subject: "Agricultural biotechnology"
+  title:
+    en: Agricultural biotechnology
+    de: Agrarbiotechnologie und Lebensmittelbiotechnologie
+    fr: Biotechnologie agricole
+    es: Biotecnología agraria
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4.5"
   scheme: FOS
   subject: "Other agricultural sciences"
+  title:
+    en: Other agricultural sciences
+    de: Andere Agrarwissenschaften
+    fr: Autres sciences agricoles
+    es: Otras ciencias agrarias
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5"
   scheme: FOS
   subject: "Social science"
+  title:
+    en: Social science
+    de: Sozialwissenschaften
+    fr: Sciences sociales
+    es: Ciencias sociales
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.1"
   scheme: FOS
   subject: "Psychology"
+  title:
+    en: Psychology
+    de: Psychologie
+    fr: Psychologie
+    es: Psicología
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.2"
   scheme: FOS
   subject: "Economics and business"
+  title:
+    en: Economics and business
+    de: Wirtschaftswissenschaften
+    fr: Économie et commerce
+    es: Economía y empresa
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.3"
   scheme: FOS
   subject: "Educational sciences"
+  title:
+    en: Educational sciences
+    de: Erziehungswissenschaften
+    fr: Sciences de l'éducation
+    es: Ciencias de la educación
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.4"
   scheme: FOS
   subject: "Sociology"
+  title:
+    en: Sociology
+    de: Soziologie
+    fr: Sociologie
+    es: Sociología
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.5"
   scheme: FOS
   subject: "Law"
+  title:
+    en: Law
+    de: Rechtswissenschaften
+    fr: Droit
+    es: Derecho
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.6"
   scheme: FOS
   subject: "Political science"
+  title:
+    en: Political science
+    de: Politikwissenschaften
+    fr: Sciences politiques
+    es: Ciencias políticas
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.7"
   scheme: FOS
   subject: "Social and economic geography"
+  title:
+    en: Social and economic geography
+    de: Humangeographie und Raumplanung
+    fr: Géographie sociale et économique
+    es: Geografía social y económica
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.8"
   scheme: FOS
   subject: "Media and communications"
+  title:
+    en: Media and communications
+    de: Medienwissenschaften und Kommunikationswissenschaften
+    fr: Médias et communications
+    es: Medios de comunicación
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.9"
   scheme: FOS
   subject: "Other social sciences"
+  title:
+    en: Other social sciences
+    de: Andere Sozialwissenschaften
+    fr: Autres sciences sociales
+    es: Otras ciencias sociales
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6"
   scheme: FOS
   subject: "Humanities"
+  title:
+    en: Humanities
+    de: Geisteswissenschaften
+    fr: Sciences humaines
+    es: Humanidades
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6.1"
   scheme: FOS
   subject: "History and archaeology"
+  title:
+    en: History and archaeology
+    de: Geschichte und Archäologie
+    fr: Histoire et archéologie
+    es: Historia y arqueología
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6.2"
   scheme: FOS
   subject: "Languages and literature"
+  title:
+    en: Languages and literature
+    de: Sprachwissenschaften und Literaturwissenschaften
+    fr: Langues et littérature
+    es: Lenguas y literatura
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6.3"
   scheme: FOS
   subject: "Philosophy, ethics and religion"
+  title:
+    en: Philosophy, ethics and religion
+    de: Philosophie, Ethik und Religionswissenschaft
+    fr: Philosophie, éthique et religion
+    es: Filosofía, ética y religión
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6.4"
   scheme: FOS
   subject: "Arts (arts, history of arts, performing arts, music)"
+  title:
+    en: Arts (arts, history of arts, performing arts, music)
+    de: Kunstwissenschaften
+    fr: Arts (arts, histoire des arts, arts du spectacle, musique)
+    es: Artes (artes, historia del arte, artes escénicas, música)
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6.5"
   scheme: FOS
   subject: "Other humanities"
+  title:
+    en: Other humanities
+    de: Andere Geisteswissenschaften
+    fr: Autres sciences humaines
+    es: Otras humanidades
