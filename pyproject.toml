@@ -7,7 +7,7 @@ readme = "README.md"
 requires-python = ">=3.13,<3.14"
 license = "MIT"
 dependencies = [
-    "invenio-app-rdm>=14.0.0b5.dev2",
+    "invenio-app-rdm>=14.0.0b5.dev3",
     "invenio-search[opensearch2]>=3.1.2,<3.2.0",
     "invenio-s3>=3.0.2",
     "invenio-rdm-records",
@@ -26,6 +26,9 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build]
 include = ["site/rogue_scholar/*.py"]
+
+[project.entry-points."invenio_base.blueprints"]
+rogue_scholar = "rogue_scholar.views:create_blueprint"
 
 [tool.ruff]
 line-length = 79
