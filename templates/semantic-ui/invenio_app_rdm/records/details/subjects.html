@@ -29,7 +29,7 @@
   {% endif %}
 
   {%- for scheme, subjects in subjects|selectattr("scheme")|groupby('scheme')|sort(attribute='scheme') %}
-  <h3 class="ui tiny header">{{scheme}}</h3>
+  <h3 class="ui tiny header">{{ _(scheme) }}</h3>
   <ul class="ui horizontal list no-bullets subjects">
     {%- for subject in subjects %}
     <li class="item">

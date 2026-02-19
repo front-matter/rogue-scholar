@@ -1378,3 +1378,18 @@ msgstr "Neue Communities"
 
 msgid "Featured communities"
 msgstr "Ausgewählte Communities"
+
+msgid "Domains"
+msgstr "Domänen"
+
+msgid "Fields"
+msgstr "Fachgebiete"
+
+msgid "Subfields"
+msgstr "Teilgebiete"
+
+msgid "Topics"
+msgstr "Themen"
+
+msgid "FOS"
+msgstr "FOS"

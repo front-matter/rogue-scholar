@@ -1271,3 +1271,18 @@ msgstr "No se encontraron publicaciones en español."
 msgid "Search all records"
 msgstr "Buscar todas las publicaciones"
 
+msgid "Domains"
+msgstr "Dominios"
+
+msgid "Fields"
+msgstr "Campos"
+
+msgid "Subfields"
+msgstr "Subcampos"
+
+msgid "Topics"
+msgstr "Temas"
+
+msgid "FOS"
+msgstr "FOS"
+

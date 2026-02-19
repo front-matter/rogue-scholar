@@ -1281,3 +1281,18 @@ msgstr "Aucun article en français trouvé."
 msgid "Search all records"
 msgstr "Rechercher tous les articles"
 
+msgid "Domains"
+msgstr "Domaines"
+
+msgid "Fields"
+msgstr "Domaines scientifiques"
+
+msgid "Subfields"
+msgstr "Sous-domaines"
+
+msgid "Topics"
+msgstr "Thèmes"
+
+msgid "FOS"
+msgstr "FOS"
+
