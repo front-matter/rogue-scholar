@@ -1,12 +1,49 @@
 """Additional views."""
 
-from functools import lru_cache
+import os
 
 from babel import Locale, UnknownLocaleError
 from flask import Blueprint
 from flask_babel import get_locale
-from invenio_access.permissions import system_identity
-from invenio_records_resources.proxies import current_service_registry
+
+# Module-level cache: vocabulary subject id → {lang: title}
+# Populated once at blueprint creation time from the vocabulary YAML files.
+_SUBJECT_TITLES: dict = {}
+
+
+def _load_subject_titles_from_yaml(instance_path: str) -> dict:
+    """Load subject title translations from vocabulary YAML files.
+
+    Reads all subjects_*.yaml files from app_data/vocabularies/ and builds
+    an in-memory dict mapping subject id → title dict (e.g. {"en": ..., "de": ...}).
+    Called once at app startup so no database queries are needed at render time.
+    """
+    try:
+        import yaml
+    except ImportError:
+        return {}
+
+    titles: dict = {}
+    vocab_dir = os.path.join(instance_path, "app_data", "vocabularies")
+    if not os.path.isdir(vocab_dir):
+        return titles
+
+    for fname in os.listdir(vocab_dir):
+        if not (fname.startswith("subjects_") and fname.endswith(".yaml")):
+            continue
+        try:
+            with open(os.path.join(vocab_dir, fname), encoding="utf-8") as fh:
+                entries = yaml.safe_load(fh) or []
+            for entry in entries:
+                if (
+                    isinstance(entry, dict)
+                    and "id" in entry
+                    and "title" in entry
+                ):
+                    titles[entry["id"]] = entry["title"]
+        except Exception:
+            pass
+    return titles
 
 
 def _language_name(lang_id):
@@ -25,24 +62,13 @@ def _language_name(lang_id):
         return lang_id
 
 
-@lru_cache(maxsize=2000)
-def _get_subject_titles(subject_id):
-    """Return the title dict for a vocabulary subject ID (cached)."""
-    try:
-        service = current_service_registry.get("subjects")
-        result = service.read(system_identity, subject_id)
-        return result.data.get("title", {})
-    except Exception:
-        return {}
-
-
 def _subject_title(subject):
     """Return the translated title of a vocabulary subject in the current UI locale.
 
-    For vocabulary-backed subjects (those with an 'id'), looks up the full
-    title dict and returns the entry for the active locale, falling back
-    to the 'subject' field. For free-text subjects (no 'id'), returns
-    the 'subject' field directly.
+    For vocabulary-backed subjects (those with an 'id'), looks up the title dict
+    loaded from the vocabulary YAML files and returns the entry for the active
+    locale, falling back to the 'subject' field. For free-text subjects (no 'id'),
+    returns the 'subject' field directly.
     """
     fallback = subject.get("subject", "")
     subject_id = subject.get("id")
@@ -50,7 +76,7 @@ def _subject_title(subject):
         return fallback
     try:
         lang = str(get_locale() or "en").split("_")[0]
-        titles = _get_subject_titles(subject_id)
+        titles = _SUBJECT_TITLES.get(subject_id, {})
         return titles.get(lang) or fallback
     except Exception:
         return fallback
@@ -66,6 +92,9 @@ def create_blueprint(app):
         __name__,
         template_folder="./templates",
     )
+
+    # Populate subject title cache from YAML files once at startup
+    _SUBJECT_TITLES.update(_load_subject_titles_from_yaml(app.instance_path))
 
     app.jinja_env.filters["language_name"] = _language_name
     app.jinja_env.filters["subject_title"] = _subject_title
