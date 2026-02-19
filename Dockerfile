@@ -49,9 +49,10 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 # Copy application code
 COPY . .
 
-# Install Python dependencies
+# Install Python dependencies (use --no-editable so the project is installed as
+# a proper wheel, not an editable .pth pointing at the build-stage source tree)
 RUN --mount=type=cache,target=/root/.cache/uv \
-    uv sync --frozen --no-dev
+    uv sync --frozen --no-dev --no-editable
 
 # Build Javascript assets using rspack
 ENV WEBPACKEXT_PROJECT=invenio_assets.webpack:rspack_project
