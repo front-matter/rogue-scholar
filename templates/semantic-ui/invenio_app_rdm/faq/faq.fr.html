@@ -1,0 +1,173 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("FAQ") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="faq">Foire aux questions</h2>
+      </div>
+    </div>
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+
+        <div class="ui styled fluid accordion">
+
+          <div class="title active">
+            <i class="dropdown icon"></i>
+            Quand Rogue Scholar est-il disponible ?
+          </div>
+          <div class="content active">
+            <p>
+              La première version de Rogue Scholar est sortie en avril 2023.
+              La fonctionnalité complète (archivage, recherche plein texte,
+              DOI avec métadonnées) est disponible depuis le 1er juillet 2023.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Comment soumettre mon blog à Rogue Scholar ?
+          </div>
+          <div class="content">
+            <p>
+              Vous pouvez vous inscrire à Rogue Scholar en nous envoyant un
+              e-mail à
+              <a href="mailto:info@rogue-scholar.org">info@rogue-scholar.org</a>.
+              Nous vous répondrons dans les deux jours ouvrables.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Pourquoi mon blog pourrait-il ne pas être éligible pour Rogue Scholar ?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar convient uniquement aux blogs qui fournissent
+              l'intégralité de leurs publications via un flux RSS et acceptent
+              une licence
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                Creative Commons Attribution (CC BY)</a>.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Rogue Scholar ne prend-il en charge que les blogs scientifiques ?
+          </div>
+          <div class="content">
+            <p>
+              Non, nous acceptons les blogs de et sur toutes les disciplines
+              scientifiques.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Dans quelles langues Rogue Scholar est-il disponible ?
+          </div>
+          <div class="content">
+            <p>
+              La version actuelle prend en charge l'anglais, l'espagnol, le
+              portugais, le français, l'allemand et l'italien. Des langues
+              supplémentaires seront ajoutées en fonction des demandes des
+              utilisateurs.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Comment mon blog est-il archivé par Rogue Scholar ?
+          </div>
+          <div class="content">
+            <p>
+              Nous archivons votre blog via le flux Atom, ou également dans
+              d'autres formats tels que RSS et JSON Feed. Contactez-nous si
+              vous souhaitez ajouter votre identifiant ORCID ou vos références.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Dois-je fournir tout le contenu via Rogue Scholar ?
+          </div>
+          <div class="content">
+            <p>
+              Oui, nous avons besoin du texte intégral de toutes les
+              contributions pour permettre la recherche en texte intégral, la
+              conservation à long terme et l'enregistrement des attributions.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Rogue Scholar prend-il en charge les podcasts et les vlogs ?
+          </div>
+          <div class="content">
+            <p>
+              Les podcasts et les vlogs sont pris en charge en consultation
+              moyennant des frais. Veuillez nous contacter par
+              <a href="mailto:info@rogue-scholar.org">e-mail</a>.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Combien coûte l'archivage de mon blog avec Rogue Scholar ?
+          </div>
+          <div class="content">
+            <p>
+              L'utilisation de Rogue Scholar est gratuite pour les auteurs de blogs.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Combien coûte l'utilisation de Rogue Scholar ?
+          </div>
+          <div class="content">
+            <p>
+              La lecture et la réutilisation du contenu de Rogue Scholar sont
+              toujours gratuites. Le contenu est sous licence
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                Creative Commons Attribution (CC BY)</a>.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Comment puis-je soutenir Rogue Scholar ?
+          </div>
+          <div class="content">
+            <p>
+              Nous accueillons les dons et autres formes de soutien. Vous pouvez
+              nous
+              <a href="https://ko-fi.com/rogue_scholar" target="_blank">offrir un
+                café</a> ou nous contacter par
+              <a href="mailto:info@rogue-scholar.org">e-mail</a>.
+            </p>
+          </div>
+
+        </div><!-- /accordion -->
+
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}
+
+{% block javascript %}
+  {{ super() }}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      $(".ui.accordion").accordion();
+    });
+  </script>
+{% endblock javascript %}

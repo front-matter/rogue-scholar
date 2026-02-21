@@ -6,95 +6,1411 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rogue Scholar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-16 00:00+0000\n"
+"POT-Creation-Date: 2026-02-20 09:22+0000\n"
 "PO-Revision-Date: 2026-02-16 00:00+0000\n"
 "Last-Translator: \n"
 "Language: sv\n"
 "Language-Team: sv <info@front-matter.io>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel\n"
+"Generated-By: Babel 2.18.0\n"
 
-#: templates/semantic-ui/invenio_app_rdm/footer.html
+#: invenio.cfg:208
+msgid "Arabic"
+msgstr ""
+
+#: invenio.cfg:209
+msgid "Catalan"
+msgstr ""
+
+#: invenio.cfg:210
+msgid "Czech"
+msgstr ""
+
+#: invenio.cfg:211
+msgid "German"
+msgstr ""
+
+#: invenio.cfg:212
+msgid "Spanish"
+msgstr ""
+
+#: invenio.cfg:213
+msgid "Estonian"
+msgstr ""
+
+#: invenio.cfg:214
+msgid "Finnish"
+msgstr ""
+
+#: invenio.cfg:215
+msgid "French"
+msgstr ""
+
+#: invenio.cfg:216
+msgid "Hungarian"
+msgstr ""
+
+#: invenio.cfg:217
+msgid "Italian"
+msgstr ""
+
+#: invenio.cfg:218
+msgid "Dutch"
+msgstr ""
+
+#: invenio.cfg:219
+msgid "Portuguese"
+msgstr ""
+
+#: invenio.cfg:220
+msgid "Romanian"
+msgstr ""
+
+#: invenio.cfg:221
+msgid "Russian"
+msgstr ""
+
+#: invenio.cfg:222
+msgid "Slovenian"
+msgstr ""
+
+#: invenio.cfg:223
+msgid "Swedish"
+msgstr ""
+
+#: invenio.cfg:224
+msgid "Turkish"
+msgstr ""
+
+#: invenio.cfg:225
+msgid "Ukrainian"
+msgstr ""
+
+#: invenio.cfg:226
+msgid "Chinese"
+msgstr ""
+
+#: invenio.cfg:390 invenio.cfg:404 invenio.cfg:418 invenio.cfg:488
+#: invenio.cfg:1098 invenio.cfg:1111
+msgid "DOI"
+msgstr ""
+
+#: invenio.cfg:409
+msgid "OAI ID"
+msgstr ""
+
+#: invenio.cfg:427
+msgid "OAI"
+msgstr ""
+
+#: invenio.cfg:439 invenio.cfg:450
+msgid "Concept DOI"
+msgstr ""
+
+#: invenio.cfg:472
+msgid "ARK"
+msgstr ""
+
+#: invenio.cfg:474
+msgid "arXiv"
+msgstr ""
+
+#: invenio.cfg:479
+msgid "Bibcode"
+msgstr ""
+
+#: invenio.cfg:484
+msgid "Crossref Funder ID"
+msgstr ""
+
+#: invenio.cfg:490
+msgid "EAN13"
+msgstr ""
+
+#: invenio.cfg:495
+msgid "EISSN"
+msgstr ""
+
+#: invenio.cfg:500
+msgid "GRID"
+msgstr ""
+
+#: invenio.cfg:505
+msgid "Handle"
+msgstr ""
+
+#: invenio.cfg:510
+msgid "IGSN"
+msgstr ""
+
+#: invenio.cfg:515
+msgid "ISBN"
+msgstr ""
+
+#: invenio.cfg:520
+msgid "ISNI"
+msgstr ""
+
+#: invenio.cfg:525
+msgid "ISSN"
+msgstr ""
+
+#: invenio.cfg:530
+msgid "ISTC"
+msgstr ""
+
+#: invenio.cfg:535
+msgid "LISSN"
+msgstr ""
+
+#: invenio.cfg:540
+msgid "LSID"
+msgstr ""
+
+#: invenio.cfg:545
+msgid "PMID"
+msgstr ""
+
+#: invenio.cfg:550
+msgid "PURL"
+msgstr ""
+
+#: invenio.cfg:554
+msgid "UPC"
+msgstr ""
+
+#: invenio.cfg:555 invenio.cfg:1099
+msgid "URL"
+msgstr ""
+
+#: invenio.cfg:556
+msgid "URN"
+msgstr ""
+
+#: invenio.cfg:558
+msgid "W3ID"
+msgstr ""
+
+#: invenio.cfg:564
+msgid "UUID"
+msgstr ""
+
+#: invenio.cfg:569
+msgid "GUID"
+msgstr ""
+
+#: invenio.cfg:574 invenio.cfg:1133
+msgid "Other"
+msgstr ""
+
+#: invenio.cfg:651
+#, fuzzy
+msgid "Content"
+msgstr "Donera"
+
+#: invenio.cfg:666
+msgid "Publishing information"
+msgstr ""
+
+#: invenio.cfg:674
+msgid "Blog"
+msgstr ""
+
+#: invenio.cfg:681
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:27
+msgid "Platform"
+msgstr ""
+
+#: invenio.cfg:684
+msgid "The feed generator software for this record."
+msgstr ""
+
+#: invenio.cfg:695
+msgid "The feature image URL."
+msgstr ""
+
+#: invenio.cfg:705
+msgid "Indicates if the record is stale."
+msgstr ""
+
+#: invenio.cfg:933
+msgid "Best match"
+msgstr ""
+
+#: invenio.cfg:937
+#, fuzzy
+msgid "Newest"
+msgstr "Nyhetsbrev"
+
+#: invenio.cfg:941
+msgid "Oldest"
+msgstr ""
+
+#: invenio.cfg:945
+msgid "Version"
+msgstr ""
+
+#: invenio.cfg:949
+msgid "Recently updated"
+msgstr ""
+
+#: invenio.cfg:953
+msgid "Least recently updated"
+msgstr ""
+
+#: invenio.cfg:957
+msgid "Recently added"
+msgstr ""
+
+#: invenio.cfg:961
+msgid "Least recently added"
+msgstr ""
+
+#: invenio.cfg:965
+msgid "Newest activity"
+msgstr ""
+
+#: invenio.cfg:969
+msgid "Oldest activity"
+msgstr ""
+
+#: invenio.cfg:973
+msgid "Most viewed"
+msgstr ""
+
+#: invenio.cfg:1051
+msgid "Publication year"
+msgstr ""
+
+#: invenio.cfg:1066
+msgid "Author affiliations"
+msgstr ""
+
+#: invenio.cfg:1076
+msgid "Funders"
+msgstr ""
+
+#: invenio.cfg:1086
+msgid "Author identifiers"
+msgstr ""
+
+#: invenio.cfg:1087
+msgid "ORCID"
+msgstr ""
+
+#: invenio.cfg:1096
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:315
+#, fuzzy
+msgid "References"
+msgstr "Inlägg med referenser"
+
+#: invenio.cfg:1100
+msgid "No identifier"
+msgstr ""
+
+#: invenio.cfg:1110
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:327
+#, fuzzy
+msgid "Citations"
+msgstr "Dokumentation"
+
+#: invenio.cfg:1120
+msgid "Platforms"
+msgstr ""
+
+#: invenio.cfg:1122
+msgid "WordPress"
+msgstr ""
+
+#: invenio.cfg:1123
+msgid "WordPress.com"
+msgstr ""
+
+#: invenio.cfg:1124
+msgid "Hugo"
+msgstr ""
+
+#: invenio.cfg:1125
+msgid "Blogger"
+msgstr ""
+
+#: invenio.cfg:1126
+msgid "Jekyll"
+msgstr ""
+
+#: invenio.cfg:1127
+msgid "Ghost"
+msgstr ""
+
+#: invenio.cfg:1128
+msgid "Quarto"
+msgstr ""
+
+#: invenio.cfg:1129
+msgid "Substack"
+msgstr ""
+
+#: invenio.cfg:1130
+msgid "Medium"
+msgstr ""
+
+#: invenio.cfg:1131
+msgid "Squarespace"
+msgstr ""
+
+#: invenio.cfg:1132
+msgid "Drupal"
+msgstr ""
+
+#: invenio.cfg:1149
+msgid "Licenses"
+msgstr ""
+
+#: invenio.cfg:1183
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:155
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:171
+msgid "Related works"
+msgstr ""
+
+#: invenio.cfg:1193 invenio.cfg:1194
+msgid "Stale"
+msgstr ""
+
+#: invenio.cfg:1476
+msgid "JSON"
+msgstr ""
+
+#: invenio.cfg:1483
+msgid "JSON-LD"
+msgstr ""
+
+#: invenio.cfg:1491
+msgid "CSL"
+msgstr ""
+
+#: invenio.cfg:1500
+msgid "DataCite JSON"
+msgstr ""
+
+#: invenio.cfg:1509
+msgid "DataCite XML"
+msgstr ""
+
+#: invenio.cfg:1518
+msgid "Crossref XML"
+msgstr ""
+
+#: invenio.cfg:1527
+msgid "Dublin Core XML"
+msgstr ""
+
+#: invenio.cfg:1536
+msgid "MARCXML"
+msgstr ""
+
+#: invenio.cfg:1545
+msgid "BibTeX"
+msgstr ""
+
+#: invenio.cfg:1554
+msgid "GeoJSON"
+msgstr ""
+
+#: invenio.cfg:1563
+#, fuzzy
+msgid "DCAT"
+msgstr "Donera"
+
+#: invenio.cfg:1570
+msgid "Codemeta"
+msgstr ""
+
+#: invenio.cfg:1577
+msgid "Citation File Format"
+msgstr ""
+
+#: invenio.cfg:1584
+msgid "Data Package JSON"
+msgstr ""
+
+#: invenio.cfg:1603
+msgid "ACS"
+msgstr ""
+
+#: invenio.cfg:1604
+msgid "APA"
+msgstr ""
+
+#: invenio.cfg:1605
+msgid "Chicago"
+msgstr ""
+
+#: invenio.cfg:1606
+msgid "Harvard"
+msgstr ""
+
+#: invenio.cfg:1607
+msgid "IEEE"
+msgstr ""
+
+#: invenio.cfg:1608
+msgid "MLA"
+msgstr ""
+
+#: invenio.cfg:1609
+msgid "BJPS"
+msgstr ""
+
+#: invenio.cfg:1610
+msgid "Vancouver"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/_termui_impl.py:613
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/_termui_impl.py:617
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1114
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1151
+#, python-brace-format
+msgid "{text} {deprecated_message}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1170
+msgid "Options"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1245
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1264
+#, python-brace-format
+msgid "DeprecationWarning: The command {name!r} is deprecated.{extra_message}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1448
+#, fuzzy
+msgid "Aborted!"
+msgstr "Om"
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1822
+msgid "Commands"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1853
+msgid "Missing command."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:1931
+#, python-brace-format
+msgid "No such command {name!r}."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:2355
+msgid "Value must be an iterable."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:2378
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:2567
+#, python-brace-format
+msgid ""
+"DeprecationWarning: The {param_type} {name!r} is "
+"deprecated.{extra_message}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:3015
+#, python-brace-format
+msgid "env var: {var}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:3018
+#, python-brace-format
+msgid "default: {default}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:3022
+msgid "required"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/core.py:3082
+msgid "(dynamic)"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/decorators.py:465
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/decorators.py:522
+msgid "Show the version and exit."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/decorators.py:548
+msgid "Show this message and exit."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:50
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:89
+#, python-brace-format
+msgid "Error: {message}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:81
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:130
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:132
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:190
+msgid "Missing argument"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:192
+msgid "Missing option"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:194
+msgid "Missing parameter"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:196
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:203
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:223
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:235
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:282
+msgid "unknown error"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/exceptions.py:289
+#, python-brace-format
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/formatting.py:156
+msgid "Usage:"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/parser.py:199
+#, python-brace-format
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/parser.py:381
+#, python-brace-format
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/parser.py:444
+#, python-brace-format
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: docs/activate/lib/python3.13/site-packages/click/shell_completion.py:332
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/shell_completion.py:339
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:165
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:181
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:183
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:194
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:253
+msgid "Error: invalid input"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/termui.py:872
+msgid "Press any key to continue..."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:332
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:369
+#, python-brace-format
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:460
+#, python-brace-format
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:482
+#, python-brace-format
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:538
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:719
+#, python-brace-format
+msgid "{value!r} is not a valid boolean. Recognized values: {states}"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:747
+#, python-brace-format
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:937
+msgid "file"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:939
+msgid "directory"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:941
+msgid "path"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:988
+#, python-brace-format
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:997
+#, python-brace-format
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:1005
+#, python-brace-format
+msgid "{name} {filename!r} is a directory."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:1014
+#, python-brace-format
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:1023
+#, python-brace-format
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:1032
+#, python-brace-format
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/click/types.py:1099
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:281
+msgid "January"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:282
+msgid "February"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:283
+msgid "March"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:284
+msgid "April"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:285
+msgid "May"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:286
+msgid "June"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:287
+msgid "July"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:288
+msgid "August"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:289
+msgid "September"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:290
+msgid "October"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:291
+msgid "November"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:292
+msgid "December"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:295
+msgid "Monday"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:296
+msgid "Tuesday"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:297
+msgid "Wednesday"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:298
+msgid "Thursday"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:299
+msgid "Friday"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:300
+msgid "Saturday"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:301
+msgid "Sunday"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:377
+msgid "1 second ago"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:383
+msgid "1 minute ago"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:388
+msgid "1 hour ago"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:391
+#, python-format
+msgid "%(time)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:393
+msgid "yesterday"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:393
+#, python-format
+msgid "yesterday at %(time)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:395
+#, python-format
+msgid "%(weekday)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:395
+#, python-format
+msgid "%(weekday)s at %(time)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:398
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:451
+#, python-format
+msgid "%(month_name)s %(day)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:400
+#, python-format
+msgid "%(month_name)s %(day)s at %(time)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:405
+#, python-format
+msgid "%(month_name)s %(day)s, %(year)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:407
+#, python-format
+msgid "%(month_name)s %(day)s, %(year)s at %(time)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:445
+#, python-format
+msgid "%(weekday)s, %(month_name)s %(day)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/locale.py:468
+#, python-format
+msgid "%(commas)s and %(last)s"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/test/locale_test.py:68
+msgctxt "law"
+msgid "right"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/test/locale_test.py:69
+msgctxt "good"
+msgid "right"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/test/locale_test.py:70
+#: docs/activate/lib/python3.13/site-packages/tornado/test/locale_test.py:72
+msgctxt "organization"
+msgid "club"
+msgstr ""
+
+#: docs/activate/lib/python3.13/site-packages/tornado/test/locale_test.py:74
+#: docs/activate/lib/python3.13/site-packages/tornado/test/locale_test.py:75
+msgctxt "stick"
+msgid "club"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:18
 msgid "About"
 msgstr "Om"
 
+#: templates/semantic-ui/invenio_app_rdm/footer.html:19
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.de.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.en.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.es.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.fr.html:7
 msgid "Overview"
 msgstr "Översikt"
 
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.de.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.en.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.es.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.fr.html:7
+#: templates/semantic-ui/invenio_app_rdm/footer.html:20
 msgid "FAQ"
 msgstr "FAQ"
 
-msgid "Dashboard"
-msgstr "Instrumentpanel"
-
+#: templates/semantic-ui/invenio_app_rdm/footer.html:21
 msgid "Register Your Blog"
 msgstr "Registrera din blogg"
 
-msgid "Community"
-msgstr "Gemenskap"
-
-msgid "Advisory Board"
-msgstr "Rådgivande styrelse"
-
-msgid "Newsletter"
-msgstr "Nyhetsbrev"
-
-msgid "Documentation"
-msgstr "Dokumentation"
-
-msgid "Slack Community"
-msgstr "Slack-gemenskap"
-
-msgid "Support"
-msgstr "Support"
-
+#: templates/semantic-ui/invenio_app_rdm/footer.html:22
 msgid "Membership Interest Form"
 msgstr "Intresseanmälan för medlemskap"
 
+#: templates/semantic-ui/invenio_app_rdm/footer.html:25
+msgid "Community"
+msgstr "Gemenskap"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:26
+msgid "Advisory Board"
+msgstr "Rådgivande styrelse"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:27
+msgid "Newsletter"
+msgstr "Nyhetsbrev"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:28
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:29
+msgid "Slack Community"
+msgstr "Slack-gemenskap"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:32
+msgid "Support"
+msgstr "Support"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:33
 msgid "Donate"
 msgstr "Donera"
 
+#: templates/semantic-ui/invenio_app_rdm/footer.html:34
 msgid "Web Analytics"
 msgstr "Webbanalys"
 
+#: templates/semantic-ui/invenio_app_rdm/footer.html:35
 msgid "Status"
 msgstr "Status"
 
-#: templates/semantic-ui/invenio_app_rdm/macros/records_list.html
-msgid "Recent blog posts"
-msgstr "Senaste blogginlägg på svenska"
-
-#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
-msgid "No records found."
-msgstr "Inga inlägg på svenska hittades."
-
-#: assets/js/invenio_app_rdm/overridableRegistry/RecordsList.js
-msgid "Search all records"
-msgstr "Sök alla inlägg"
-
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:67
 msgid "Participating Blogs"
 msgstr "Deltagande bloggar"
 
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:79
 msgid "All Posts"
 msgstr "Alla inlägg"
 
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:91
 msgid "Posts last 30 Days"
 msgstr "Inlägg senaste 30 dagarna"
 
-msgid "Posts with ORCID"
-msgstr "Inlägg med ORCID"
-
-msgid "Posts with ROR ID"
-msgstr "Inlägg med ROR-ID"
-
-msgid "Posts with References"
-msgstr "Inlägg med referenser"
-
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:103
 msgid "Posts with Funding"
 msgstr "Inlägg med finansiering"
 
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:119
+msgid "Posts with ORCID"
+msgstr "Inlägg med ORCID"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:131
+msgid "Posts with ROR ID"
+msgstr "Inlägg med ROR-ID"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:143
+msgid "Posts with References"
+msgstr "Inlägg med referenser"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:155
 msgid "Cited Posts"
 msgstr "Citerade inlägg"
+
+#: templates/semantic-ui/invenio_app_rdm/header.html:19
+msgid "Impersonated session"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/header.html:21
+msgid "You must logout after you finish with you inquiry!"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/header.html:38
+msgid "home"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/header.html:51
+msgid "Menu"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/header.html:68
+msgid "Close menu"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/header.html:120
+msgid "Requests"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/header.html:122
+msgid "Inbox"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/header_frontpage.html:39
+#: templates/semantic-ui/invenio_app_rdm/header_frontpage.html:40
+msgid "Search"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/page_admin.html:40
+msgid "Invenio"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/site_footer.html:16
+msgid "Powered by"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/site_footer.html:17
+msgid "InvenioRDM"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/help/search.cs.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.de.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.en.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.es.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.fr.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.it.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.nl.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.pt.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.sl.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.sv.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.tr.html:8
+msgid "Search guide"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/help/versioning.es.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/versioning.fr.html:8
+msgid "FAQ versioning"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/macros/records_list.html:13
+msgid "Recent blog posts"
+msgstr "Senaste blogginlägg på svenska"
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:51
+msgid "Information banner"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:80
+msgid "Part of"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:91
+#, fuzzy
+msgid "Community visibility"
+msgstr "Gemenskap"
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:92
+msgid "The community is restricted to users with access."
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:94
+msgid "Restricted"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:111
+#, fuzzy
+msgid "Preview"
+msgstr "Översikt"
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:115
+msgid "You are previewing a published record."
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:117
+msgid "You are previewing changes that have not yet been published."
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:119
+msgid "You are previewing a new record that has not yet been published."
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:121
+msgid "You are previewing a new record version that has not yet been published."
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:136
+#, python-format
+msgid ""
+"\n"
+"                    There is a %(link_start)snewer version%(link_end)s of"
+" the record\n"
+"                    available.\n"
+"                  "
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:160
+msgid "Record access information"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:167
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:303
+msgid "Reason"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:180
+msgid "Back-navigation"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:182
+msgid "Back to edit"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:200
+msgid "Manage record"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:218
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:220
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:20
+msgid "Publication date"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:221
+msgid "Published"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:240
+msgid "Record title and creators"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:246
+msgid "Creators and contributors"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:265
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:270
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:287
+msgid "Files"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:309
+msgid "Request access"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:311
+msgid ""
+"If you would like to request access to these files, please fill out the "
+"form below."
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:319
+msgid ""
+"You need to satisfy these conditions in order for this request to be "
+"accepted:"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:344
+msgid "System files"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:357
+msgid "Additional record details"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:371
+msgid "Record details"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:388
+msgid "Jump to top of page"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:390
+msgid "Jump up"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/content.html:14
+msgid "Record content"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/creatibutors.html:21
+msgid "Creators & Contributors"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/description.html:14
+msgid "Record description"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/description.html:15
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:88
+msgid "Description"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:38
+msgid "Additional details"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:55
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:73
+msgid "Additional titles"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:112
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:130
+msgid "Identifiers"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:194
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:212
+msgid "Funding"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:237
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:255
+#, fuzzy
+msgid "Dates"
+msgstr "Donera"
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/subjects.html:15
+msgid "Keywords"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/subjects.html:22
+#: templates/semantic-ui/invenio_app_rdm/records/details/subjects.html:49
+#, fuzzy
+msgid "Search results for "
+msgstr "Sök alla inlägg"
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/communities.html:16
+#, fuzzy
+msgid "Communities"
+msgstr "Gemenskap"
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:15
+msgid "Details"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:19
+msgid "Resource type"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:21
+msgid "Publisher"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:22
+msgid "Published in"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:23
+msgid "Imprint"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:24
+msgid "Thesis"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:25
+msgid "Conference"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:26
+msgid "Languages"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:28
+msgid "Formats"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:29
+msgid "Sizes"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/licenses.html:15
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/licenses.html:18
+#: templates/semantic-ui/invenio_app_rdm/records/macros/detail.html:182
+#: templates/semantic-ui/invenio_app_rdm/records/macros/detail.html:213
+msgid "Opens in new tab"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/licenses.html:15
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/licenses.html:18
+msgid "Read more"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/licenses.html:26
+msgid "Rights"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/licenses.html:58
+msgid "Close"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/licenses.html:62
+msgid "No further description."
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/macros/creatibutors.html:20
+#: templates/semantic-ui/invenio_app_rdm/records/macros/creatibutors.html:21
+#: templates/semantic-ui/invenio_app_rdm/records/macros/creatibutors.html:103
+#: templates/semantic-ui/invenio_app_rdm/records/macros/creatibutors.html:104
+msgid "profile"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/macros/creatibutors.html:82
+#: templates/semantic-ui/invenio_app_rdm/records/macros/creatibutors.html:86
+msgid "Show affiliations"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/macros/creatibutors.html:83
+msgid "Hide affiliations"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/macros/creatibutors.html:90
+msgid "Affiliations for"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/macros/detail.html:68
+#: templates/semantic-ui/invenio_app_rdm/records/macros/detail.html:71
+msgid "Missing description type!"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/macros/detail.html:90
+msgid "Unknown date type"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/macros/detail.html:130
+msgid "Open external link"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/records/macros/detail.html:324
+msgid "Conference website"
+msgstr ""
+
+#: templates/semantic-ui/invenio_communities/details/header.html:202
+msgid "Submission to this community is only allowed to community members."
+msgstr ""
+
+#: templates/semantic-ui/invenio_communities/details/header.html:209
+msgid "New upload"
+msgstr ""
+
+#: templates/semantic-ui/invenio_communities/details/header.html:217
+#, fuzzy
+msgid "Manage community"
+msgstr "Gemenskap"
+
+#~ msgid "Dashboard"
+#~ msgstr "Instrumentpanel"
+
+#~ msgid "No records found."
+#~ msgstr "Inga inlägg på svenska hittades."
+

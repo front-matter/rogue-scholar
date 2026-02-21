@@ -1,0 +1,171 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("FAQ") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="faq">Frequently Asked Questions</h2>
+      </div>
+    </div>
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+
+        <div class="ui styled fluid accordion">
+
+          <div class="title active">
+            <i class="dropdown icon"></i>
+            When did Rogue Scholar launch?
+          </div>
+          <div class="content active">
+            <p>
+              Rogue Scholar has been available with limited functionality since
+              April 1, 2023, and with full functionality (DOI and metadata
+              registration, archiving of full-text content, and full-text search)
+              since July 1, 2023.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            How can I sign up for Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              Send us an email at
+              <a href="mailto:info@rogue-scholar.org">info@rogue-scholar.org</a>.
+              We will add your blog to Rogue Scholar and notify you within two
+              business days.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Why would Rogue Scholar not accept my blog?
+          </div>
+          <div class="content">
+            <p>
+              We only cover blogs that write about science, and where the
+              full-text content is made available via RSS feed and distributed
+              under the terms of the
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                Creative Commons Attribution (CC BY)</a> license.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Does Rogue Scholar accept blogs about scholarship?
+          </div>
+          <div class="content">
+            <p>
+              Yes. We accept blogs about all forms of scholarship. The term
+              "science" is used in the broadest sense.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            What languages does Rogue Scholar support?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar supports English, Spanish, Portuguese, French,
+              German, and Italian. Additional languages will be added based on
+              user requests.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            How does Rogue Scholar archive my blog?
+          </div>
+          <div class="content">
+            <p>
+              We harvest your content and metadata using your Atom feed, or a
+              feed in another supported format such as RSS or JSON Feed.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            My RSS feed only contains summaries of blog posts.
+          </div>
+          <div class="content">
+            <p>
+              You need to provide the full post content via your RSS feed so
+              that we can implement archiving and full-text search. Most blogging
+              platforms offer a setting to include full content in the feed.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Does Rogue Scholar support podcasts and vlogs?
+          </div>
+          <div class="content">
+            <p>
+              Podcasts and vlogs are supported, but at an additional cost.
+              Please reach out to us via
+              <a href="mailto:info@rogue-scholar.org">email</a>.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            What does archiving my blog with Rogue Scholar cost?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar is free to use for blog authors.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            What costs are there for users of Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar is and will always be free to use and reuse. All
+              content is distributed under the terms of the
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                Creative Commons Attribution (CC BY)</a> license.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Can I sponsor or otherwise support Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              We appreciate donations and other forms of support. You can
+              <a href="https://ko-fi.com/rogue_scholar" target="_blank">buy us a
+                coffee</a> or reach out to us via
+              <a href="mailto:info@rogue-scholar.org">email</a>.
+            </p>
+          </div>
+
+        </div><!-- /accordion -->
+
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}
+
+{% block javascript %}
+  {{ super() }}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      $(".ui.accordion").accordion();
+    });
+  </script>
+{% endblock javascript %}

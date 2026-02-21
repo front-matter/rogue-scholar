@@ -1,0 +1,92 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Overview") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="overview">Rogue Scholar Overview</h2>
+      </div>
+
+      <div class="ui twelve wide column">
+        <h3>What is Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar is an open access archive and registry for science blogs.
+          It preserves science blog posts, makes them citable via
+          <a href="https://doi.org">DOI</a>, and ensures their long-term
+          discoverability alongside formal scholarly literature.
+        </p>
+
+        <h3>Why science blogs?</h3>
+        <p>
+          Science blogs are an important but often overlooked part of scholarly
+          communication. Researchers share preliminary findings, discuss methods,
+          explain complex topics to the public, and engage in scientific debate
+          long before — or instead of — formal publication. Rogue Scholar gives
+          these contributions the same citability and discoverability as journal
+          articles.
+        </p>
+
+        <h3>Key features</h3>
+        <ul>
+          <li>
+            <strong>DOI registration</strong> – Every archived blog post receives
+            a persistent DOI, enabling reliable citations and cross-links.
+          </li>
+          <li>
+            <strong>Structured metadata</strong> – Author names, ORCID iDs,
+            affiliations, subjects, licenses, and publication dates are captured
+            and exposed via standard schemas (DataCite, Dublin Core, Schema.org).
+          </li>
+          <li>
+            <strong>Full-text search</strong> – All archived posts are indexed and
+            searchable alongside other scholarly content.
+          </li>
+          <li>
+            <strong>Citation export</strong> – Citations can be generated in APA,
+            Chicago, MLA, and many other styles, and exported as BibTeX, RIS,
+            Citation.js, and more.
+          </li>
+          <li>
+            <strong>Multilingual support</strong> – Posts in any language are
+            archived; language detection and metadata localization are supported.
+          </li>
+          <li>
+            <strong>Open API</strong> – All metadata is freely available via a
+            REST API, enabling integration with reference managers, discovery
+            systems, and research workflows.
+          </li>
+          <li>
+            <strong>Communities</strong> – Blogs can be organized into thematic
+            communities, making it easy to discover related content.
+          </li>
+        </ul>
+
+        <h3>Supported platforms</h3>
+        <p>
+          Rogue Scholar supports ingestion from all major blogging platforms used
+          by researchers, including WordPress, Ghost, Substack, Quarto, Hugo,
+          Jekyll, and others via standard feed formats (RSS/Atom) or direct
+          API integration.
+        </p>
+
+        <h3>Who is behind Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar is operated by
+          <a href="https://front-matter.io" target="_blank">Front Matter</a> and
+          governed by an <a href="/board">Advisory Board</a> of researchers and
+          open science advocates. The infrastructure is built on
+          <a href="https://inveniosoftware.org/products/rdm/" target="_blank">InvenioRDM</a>,
+          the open source repository platform developed by CERN and partners.
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}

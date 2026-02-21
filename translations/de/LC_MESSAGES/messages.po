@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rogue Scholar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-18 21:13+0000\n"
+"POT-Creation-Date: 2026-02-20 09:22+0000\n"
 "PO-Revision-Date: 2026-02-16 00:00+0000\n"
 "Last-Translator: \n"
 "Language: de\n"
@@ -299,6 +299,12 @@ msgstr "Autorenidentifikatoren"
 msgid "ORCID"
 msgstr "ORCID"
 
+#: invenio.cfg:1096
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:315
+#, fuzzy
+msgid "References"
+msgstr "Konferenz"
+
 #: invenio.cfg:1100
 msgid "No identifier"
 msgstr "Kein Identifikator"
@@ -359,6 +365,13 @@ msgstr ""
 #: invenio.cfg:1149
 msgid "Licenses"
 msgstr "Lizenzen"
+
+#: invenio.cfg:1183
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:155
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:171
+#, fuzzy
+msgid "Related works"
+msgstr "Mehr lesen"
 
 #: invenio.cfg:1193 invenio.cfg:1194
 msgid "Stale"
@@ -637,11 +650,15 @@ msgstr[1] ""
 
 #: docs/activate/lib/python3.13/site-packages/click/shell_completion.py:332
 msgid "Shell completion is not supported for Bash versions older than 4.4."
-msgstr "Shell-Vervollständigung wird für Bash-Versionen älter als 4.4 nicht unterstützt."
+msgstr ""
+"Shell-Vervollständigung wird für Bash-Versionen älter als 4.4 nicht "
+"unterstützt."
 
 #: docs/activate/lib/python3.13/site-packages/click/shell_completion.py:339
 msgid "Couldn't detect Bash version, shell completion is not supported."
-msgstr "Bash-Version konnte nicht erkannt werden, Shell-Vervollständigung wird nicht unterstützt."
+msgstr ""
+"Bash-Version konnte nicht erkannt werden, Shell-Vervollständigung wird "
+"nicht unterstützt."
 
 #: docs/activate/lib/python3.13/site-packages/click/termui.py:165
 msgid "Repeat for confirmation"
@@ -928,20 +945,28 @@ msgid "About"
 msgstr "Über uns"
 
 #: templates/semantic-ui/invenio_app_rdm/footer.html:19
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.de.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.en.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.es.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.fr.html:7
 msgid "Overview"
 msgstr "Übersicht"
 
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.de.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.en.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.es.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.fr.html:7
 #: templates/semantic-ui/invenio_app_rdm/footer.html:20
 msgid "FAQ"
 msgstr "FAQ"
 
 #: templates/semantic-ui/invenio_app_rdm/footer.html:21
-msgid "Dashboard"
-msgstr "Dashboard"
-
-#: templates/semantic-ui/invenio_app_rdm/footer.html:22
 msgid "Register Your Blog"
 msgstr "Blog registrieren"
+
+#: templates/semantic-ui/invenio_app_rdm/footer.html:22
+msgid "Membership Interest Form"
+msgstr "Mitgliedschaftsformular"
 
 #: templates/semantic-ui/invenio_app_rdm/footer.html:25
 msgid "Community"
@@ -968,46 +993,46 @@ msgid "Support"
 msgstr "Unterstützung"
 
 #: templates/semantic-ui/invenio_app_rdm/footer.html:33
-msgid "Membership Interest Form"
-msgstr "Mitgliedschaftsformular"
-
-#: templates/semantic-ui/invenio_app_rdm/footer.html:34
 msgid "Donate"
 msgstr "Spenden"
 
-#: templates/semantic-ui/invenio_app_rdm/footer.html:35
+#: templates/semantic-ui/invenio_app_rdm/footer.html:34
 msgid "Web Analytics"
 msgstr "Webanalyse"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:62
+#: templates/semantic-ui/invenio_app_rdm/footer.html:35
+msgid "Status"
+msgstr "Status"
+
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:67
 msgid "Participating Blogs"
 msgstr "Teilnehmende Blogs"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:74
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:79
 msgid "All Posts"
 msgstr "Alle Beiträge"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:86
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:91
 msgid "Posts last 30 Days"
 msgstr "Beiträge letzte 30 Tage"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:98
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:103
 msgid "Posts with Funding"
 msgstr "Beiträge mit Förderung"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:114
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:119
 msgid "Posts with ORCID"
 msgstr "Beiträge mit ORCID"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:126
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:131
 msgid "Posts with ROR ID"
 msgstr "Beiträge mit ROR-ID"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:138
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:143
 msgid "Posts with References"
 msgstr "Beiträge mit Referenzen"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:150
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:155
 msgid "Cited Posts"
 msgstr "Zitierte Beiträge"
 
@@ -1039,6 +1064,12 @@ msgstr "Anfragen"
 msgid "Inbox"
 msgstr "Posteingang"
 
+#: templates/semantic-ui/invenio_app_rdm/header_frontpage.html:39
+#: templates/semantic-ui/invenio_app_rdm/header_frontpage.html:40
+#, fuzzy
+msgid "Search"
+msgstr "März"
+
 #: templates/semantic-ui/invenio_app_rdm/page_admin.html:40
 msgid "Invenio"
 msgstr "Invenio"
@@ -1050,6 +1081,27 @@ msgstr "Bereitgestellt von"
 #: templates/semantic-ui/invenio_app_rdm/site_footer.html:17
 msgid "InvenioRDM"
 msgstr "InvenioRDM"
+
+#: templates/semantic-ui/invenio_app_rdm/help/search.cs.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.de.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.en.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.es.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.fr.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.it.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.nl.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.pt.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.sl.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.sv.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/search.tr.html:8
+#, fuzzy
+msgid "Search guide"
+msgstr "Communities durchsuchen"
+
+#: templates/semantic-ui/invenio_app_rdm/help/versioning.es.html:8
+#: templates/semantic-ui/invenio_app_rdm/help/versioning.fr.html:8
+#, fuzzy
+msgid "FAQ versioning"
+msgstr "Version"
 
 #: templates/semantic-ui/invenio_app_rdm/macros/records_list.html:13
 msgid "Recent blog posts"
@@ -1075,6 +1127,11 @@ msgstr "Die Community ist beschränkt auf Benutzer*innen mit Zugangsberechtigung
 msgid "Restricted"
 msgstr "Eingeschränkt"
 
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:111
+#, fuzzy
+msgid "Preview"
+msgstr "Übersicht"
+
 #: templates/semantic-ui/invenio_app_rdm/records/detail.html:115
 msgid "You are previewing a published record."
 msgstr "Sie befinden sich in der Vorschau eines veröffentlichten Eintrags."
@@ -1089,7 +1146,9 @@ msgstr "Vorschau eines neuen Eintrags, der noch nicht veröffentlicht wurde."
 
 #: templates/semantic-ui/invenio_app_rdm/records/detail.html:121
 msgid "You are previewing a new record version that has not yet been published."
-msgstr "Vorschau einer neuen Version eines Eintrags, die noch nicht veröffentlicht wurde."
+msgstr ""
+"Vorschau einer neuen Version eines Eintrags, die noch nicht "
+"veröffentlicht wurde."
 
 #: templates/semantic-ui/invenio_app_rdm/records/detail.html:136
 #, python-format
@@ -1099,7 +1158,11 @@ msgid ""
 " the record\n"
 "                    available.\n"
 "                  "
-msgstr "\n                    Es ist eine %(link_start)s neuere Version %(link_end)s des Eintrags verfügbar.\n                  "
+msgstr ""
+"\n"
+"                    Es ist eine %(link_start)s neuere Version "
+"%(link_end)s des Eintrags verfügbar.\n"
+"                  "
 
 #: templates/semantic-ui/invenio_app_rdm/records/detail.html:160
 msgid "Record access information"
@@ -1118,11 +1181,21 @@ msgstr "Zurück"
 msgid "Back to edit"
 msgstr "Zurück zum Bearbeiten"
 
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:200
+#, fuzzy
+msgid "Manage record"
+msgstr "Community managen"
+
 #: templates/semantic-ui/invenio_app_rdm/records/detail.html:218
 #: templates/semantic-ui/invenio_app_rdm/records/detail.html:220
 #: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:20
 msgid "Publication date"
 msgstr "Veröffentlichungsdatum"
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:221
+#, fuzzy
+msgid "Published"
+msgstr "Herausgeber*in"
 
 #: templates/semantic-ui/invenio_app_rdm/records/detail.html:240
 msgid "Record title and creators"
@@ -1132,17 +1205,33 @@ msgstr "Titel des Eintrags und Ersteller*innen"
 msgid "Creators and contributors"
 msgstr "Ersteller*innen und Mitwirkende"
 
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:265
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:270
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:287
+#, fuzzy
+msgid "Files"
+msgstr "Datei"
+
+#: templates/semantic-ui/invenio_app_rdm/records/detail.html:309
+#, fuzzy
+msgid "Request access"
+msgstr "Anfragen"
+
 #: templates/semantic-ui/invenio_app_rdm/records/detail.html:311
 msgid ""
 "If you would like to request access to these files, please fill out the "
 "form below."
-msgstr "Wenn Sie Zugriff auf diese Dateien beantragen möchten, füllen Sie bitte das Formular aus."
+msgstr ""
+"Wenn Sie Zugriff auf diese Dateien beantragen möchten, füllen Sie bitte "
+"das Formular aus."
 
 #: templates/semantic-ui/invenio_app_rdm/records/detail.html:319
 msgid ""
 "You need to satisfy these conditions in order for this request to be "
 "accepted:"
-msgstr "Sie müssen die folgenden Bedingungen erfüllen, damit diese Anfrage angenommen wird:"
+msgstr ""
+"Sie müssen die folgenden Bedingungen erfüllen, damit diese Anfrage "
+"angenommen wird:"
 
 #: templates/semantic-ui/invenio_app_rdm/records/detail.html:344
 msgid "System files"
@@ -1195,6 +1284,11 @@ msgstr "Weitere Titel"
 msgid "Identifiers"
 msgstr "Identifier"
 
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:194
+#: templates/semantic-ui/invenio_app_rdm/records/details/details.html:212
+msgid "Funding"
+msgstr ""
+
 #: templates/semantic-ui/invenio_app_rdm/records/details/details.html:237
 #: templates/semantic-ui/invenio_app_rdm/records/details/details.html:255
 msgid "Dates"
@@ -1208,6 +1302,11 @@ msgstr "Schlagwörter"
 #: templates/semantic-ui/invenio_app_rdm/records/details/subjects.html:49
 msgid "Search results for "
 msgstr "Alle Beiträge durchsuchen nach "
+
+# Merged from invenio_app_rdm DE translations
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/communities.html:16
+msgid "Communities"
+msgstr "Communities"
 
 #: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:15
 msgid "Details"
@@ -1265,6 +1364,11 @@ msgstr "Mehr lesen"
 msgid "Rights"
 msgstr "Rechte"
 
+#: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/licenses.html:58
+#, fuzzy
+msgid "Close"
+msgstr "Menü schließen"
+
 #: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/licenses.html:62
 msgid "No further description."
 msgstr "Keine weitere Beschreibung."
@@ -1308,7 +1412,13 @@ msgstr "Konferenz-Website"
 
 #: templates/semantic-ui/invenio_communities/details/header.html:202
 msgid "Submission to this community is only allowed to community members."
-msgstr "Die Einreichung in diese Community ist nur für Community-Mitglieder erlaubt."
+msgstr ""
+"Die Einreichung in diese Community ist nur für Community-Mitglieder "
+"erlaubt."
+
+#: templates/semantic-ui/invenio_communities/details/header.html:209
+msgid "New upload"
+msgstr ""
 
 #: templates/semantic-ui/invenio_communities/details/header.html:217
 msgid "Manage community"
@@ -1317,79 +1427,75 @@ msgstr "Community managen"
 #~ msgid "No records found."
 #~ msgstr "Keine Beiträge auf Deutsch gefunden."
 
-# Merged from invenio_app_rdm DE translations
+#~ msgid "Dashboard"
+#~ msgstr "Dashboard"
 
-msgid "Communities"
-msgstr "Communities"
+#~ msgid "Community management menu dropdown"
+#~ msgstr "Dropdown-Menü für die Community-Verwaltung"
 
-msgid "Community management menu dropdown"
-msgstr "Dropdown-Menü für die Community-Verwaltung"
+#~ msgid "Manage communities"
+#~ msgstr "Communities verwalten"
 
-msgid "Manage communities"
-msgstr "Communities verwalten"
+#~ msgid "Pending communities"
+#~ msgstr "Ausstehende Communities"
 
-msgid "Pending communities"
-msgstr "Ausstehende Communities"
+#~ msgid "Remove community"
+#~ msgstr "Community entfernen"
 
-msgid "Remove community"
-msgstr "Community entfernen"
+#~ msgid "Remove {{communityTitle}} from this record"
+#~ msgstr "Entfernen Sie {{communityTitle}} aus diesem Eintrag"
 
-msgid "Remove {{communityTitle}} from this record"
-msgstr "Entfernen Sie {{communityTitle}} aus diesem Eintrag"
+#~ msgid "Search for community..."
+#~ msgstr "Suche nach Community ..."
 
-msgid "Search for community..."
-msgstr "Suche nach Community ..."
+#~ msgid "Search for pending submissions to communities..."
+#~ msgstr "Suche nach ausstehenden Einreichungen in Communities ..."
 
-msgid "Search for pending submissions to communities..."
-msgstr "Suche nach ausstehenden Einreichungen in Communities ..."
+#~ msgid "Search in all communities"
+#~ msgstr "Suche in allen Communities"
 
-msgid "Search in all communities"
-msgstr "Suche in allen Communities"
+#~ msgid "Search in my communities"
+#~ msgstr "Suche in meinen Communities"
 
-msgid "Search in my communities"
-msgstr "Suche in meinen Communities"
+#~ msgid "Search in my communities..."
+#~ msgstr "Suche in meinen Communities"
 
-msgid "Search in my communities..."
-msgstr "Suche in meinen Communities"
+#~ msgid "Search records in community..."
+#~ msgstr "Einträge in dieser Community suchen..."
 
-msgid "Search records in community..."
-msgstr "Einträge in dieser Community suchen..."
+#~ msgid "Select a community"
+#~ msgstr "Wählen Sie eine Community"
 
-msgid "Select a community"
-msgstr "Wählen Sie eine Community"
+#~ msgid "Submit to community"
+#~ msgstr "Einreichen in die Community"
 
-msgid "Submit to community"
-msgstr "Einreichen in die Community"
+#~ msgid "This record is not included in any communities yet."
+#~ msgstr "Dieser Eintrag ist noch nicht Teil einer Community."
 
-msgid "This record is not included in any communities yet."
-msgstr "Dieser Eintrag ist noch nicht Teil einer Community."
+#~ msgid "{{communityTitle}} is a default branding for this record"
+#~ msgstr "{{communityTitle}} ist ein Standard-Branding für diesen Eintrag"
 
-msgid "{{communityTitle}} is a default branding for this record"
-msgstr "{{communityTitle}} ist ein Standard-Branding für diesen Eintrag"
+#~ msgid "My communities"
+#~ msgstr "Meine Communities"
 
-msgid "Search communities"
-msgstr "Communities durchsuchen"
+#~ msgid "New communities"
+#~ msgstr "Neue Communities"
 
-msgid "My communities"
-msgstr "Meine Communities"
+#~ msgid "Featured communities"
+#~ msgstr "Ausgewählte Communities"
 
-msgid "New communities"
-msgstr "Neue Communities"
+#~ msgid "Domains"
+#~ msgstr "Domänen"
 
-msgid "Featured communities"
-msgstr "Ausgewählte Communities"
+#~ msgid "Fields"
+#~ msgstr "Fachgebiete"
 
-msgid "Domains"
-msgstr "Domänen"
+#~ msgid "Subfields"
+#~ msgstr "Teilgebiete"
 
-msgid "Fields"
-msgstr "Fachgebiete"
+#~ msgid "Topics"
+#~ msgstr "Themen"
 
-msgid "Subfields"
-msgstr "Teilgebiete"
+#~ msgid "FOS"
+#~ msgstr "FOS"
 
-msgid "Topics"
-msgstr "Themen"
-
-msgid "FOS"
-msgstr "FOS"

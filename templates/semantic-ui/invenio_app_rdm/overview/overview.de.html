@@ -1,0 +1,93 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Overview") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="overview">Rogue Scholar – Übersicht</h2>
+      </div>
+
+      <div class="ui twelve wide column">
+        <h3>Was ist Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar ist ein Open-Access-Archiv und -Register für Wissenschaftsblogs.
+          Es sichert Wissenschaftsblog-Beiträge langfristig, macht sie durch
+          <a href="https://doi.org">DOI</a> zitierbar und stellt ihre dauerhafte
+          Auffindbarkeit neben formaler wissenschaftlicher Literatur sicher.
+        </p>
+
+        <h3>Warum Wissenschaftsblogs?</h3>
+        <p>
+          Wissenschaftsblogs sind ein wichtiger, aber oft übersehener Teil
+          wissenschaftlicher Kommunikation. Forschende teilen Vorergebnisse,
+          diskutieren Methoden, erklären komplexe Themen und beteiligen sich am
+          wissenschaftlichen Diskurs – oft lange vor einer formalen Publikation
+          oder anstelle davon. Rogue Scholar verleiht diesen Beiträgen dieselbe
+          Zitierbarkeit und Auffindbarkeit wie Zeitschriftenartikeln.
+        </p>
+
+        <h3>Kernfunktionen</h3>
+        <ul>
+          <li>
+            <strong>DOI-Vergabe</strong> – Jeder archivierte Blog-Beitrag erhält
+            einen persistenten DOI, der zuverlässige Zitierungen und Verweise ermöglicht.
+          </li>
+          <li>
+            <strong>Strukturierte Metadaten</strong> – Autorennamen, ORCID-iDs,
+            Zugehörigkeiten, Schlagwörter, Lizenzen und Veröffentlichungsdaten werden
+            erfasst und in Standardformaten (DataCite, Dublin Core, Schema.org) bereitgestellt.
+          </li>
+          <li>
+            <strong>Volltextsuche</strong> – Alle archivierten Beiträge sind indexiert
+            und gemeinsam mit anderen wissenschaftlichen Inhalten durchsuchbar.
+          </li>
+          <li>
+            <strong>Zitationsexport</strong> – Zitate können in APA, Chicago, MLA
+            und vielen weiteren Stilen erstellt und als BibTeX, RIS, Citation.js
+            u. a. exportiert werden.
+          </li>
+          <li>
+            <strong>Mehrsprachigkeit</strong> – Beiträge in allen Sprachen werden
+            archiviert; Spracherkennung und Metadatenlokalisierung werden unterstützt.
+          </li>
+          <li>
+            <strong>Offene API</strong> – Alle Metadaten sind über eine REST-API
+            frei zugänglich, was die Integration in Literaturverwaltungsprogramme,
+            Discovery-Systeme und Forschungsworkflows ermöglicht.
+          </li>
+          <li>
+            <strong>Communities</strong> – Blogs können in thematische Communities
+            organisiert werden, um verwandte Inhalte leichter zu entdecken.
+          </li>
+        </ul>
+
+        <h3>Unterstützte Plattformen</h3>
+        <p>
+          Rogue Scholar unterstützt die Aufnahme von allen gängigen Blogging-Plattformen,
+          die von Forschenden genutzt werden, darunter WordPress, Ghost, Substack,
+          Quarto, Hugo, Jekyll und andere über Standard-Feed-Formate (RSS/Atom)
+          oder direkte API-Integration.
+        </p>
+
+        <h3>Wer steckt hinter Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar wird von
+          <a href="https://front-matter.io" target="_blank">Front Matter</a> betrieben
+          und von einem <a href="/board">Beirat</a> aus Forschenden und
+          Open-Science-Befürworterinnen und -Befürwortern geleitet. Die Infrastruktur
+          basiert auf
+          <a href="https://inveniosoftware.org/products/rdm/" target="_blank">InvenioRDM</a>,
+          der Open-Source-Repository-Plattform, die vom CERN und Partnern entwickelt wird.
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}

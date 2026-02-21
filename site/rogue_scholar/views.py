@@ -3,7 +3,7 @@
 import os
 
 from babel import Locale, UnknownLocaleError
-from flask import Blueprint
+from flask import Blueprint, render_template
 from flask_babel import get_locale
 
 # Module-level cache: vocabulary subject id → {lang: title}
@@ -85,6 +85,39 @@ def _subject_title(subject):
         return fallback
 
 
+def _overview():
+    """Overview page with locale-based template selection."""
+    locale = get_locale()
+    return render_template(
+        [
+            f"invenio_app_rdm/overview/overview.{locale}.html",
+            "invenio_app_rdm/overview/overview.en.html",
+        ]
+    )
+
+
+def _board():
+    """Advisory Board page with locale-based template selection."""
+    locale = get_locale()
+    return render_template(
+        [
+            f"invenio_app_rdm/board/board.{locale}.html",
+            "invenio_app_rdm/board/board.en.html",
+        ]
+    )
+
+
+def _faq():
+    """FAQ page with locale-based template selection."""
+    locale = get_locale()
+    return render_template(
+        [
+            f"invenio_app_rdm/faq/faq.{locale}.html",
+            "invenio_app_rdm/faq/faq.en.html",
+        ]
+    )
+
+
 #
 # Registration
 #
@@ -101,6 +134,12 @@ def create_blueprint(app):
 
     app.jinja_env.filters["language_name"] = _language_name
     app.jinja_env.filters["subject_title"] = _subject_title
+
+    blueprint.add_url_rule(
+        "/overview", endpoint="overview", view_func=_overview
+    )
+    blueprint.add_url_rule("/board", endpoint="board", view_func=_board)
+    blueprint.add_url_rule("/faq", endpoint="faq", view_func=_faq)
 
     # Add URL rules
     return blueprint

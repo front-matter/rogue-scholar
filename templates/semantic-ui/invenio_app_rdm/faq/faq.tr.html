@@ -1,0 +1,166 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("FAQ") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="faq">Sıkça sorulan sorular</h2>
+      </div>
+    </div>
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+
+        <div class="ui styled fluid accordion">
+
+          <div class="title active">
+            <i class="dropdown icon"></i>
+            Rogue Scholar ne zaman hizmete giriyor?
+          </div>
+          <div class="content active">
+            <p>
+              Rogue Scholar, 1 Nisan 2023 tarihinden itibaren sınırlı fonksiyonlarla ve 1
+              Temmuz 2023 tarihinden itibaren tam fonksiyonlarla (DOI ve meta veri kaydı, tam
+              metin içeriğin arşivlenmesi ve tam metin arama) kullanılabilir.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Rogue Scholar'a nasıl kayıt olabilirim?
+          </div>
+          <div class="content">
+            <p>
+              Ana sayfadan erişebileceğiniz formu doldurun. Blogunuzu Rogue Scholar'a ekleyip
+              iki iş günü içinde size haber vereceğiz.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Rogue Scholar neden blogumu kabul etmiyor?
+          </div>
+          <div class="content">
+            <p>
+              Yalnızca bilim hakkında yazan ve tam metin içeriğin RSS beslemesi yoluyla
+              sunulan ve
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                Creative Commons Attribution (CC-BY)</a> lisansı koşulları altında paylaşılan
+              blogları kapsıyoruz.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Rogue Scholar akademik blogları kabul ediyor mu?
+          </div>
+          <div class="content">
+            <p>
+              Evet. Her türlü bilim dalıyla ilgili blogları kabul ediyoruz. "Bilim" terimi en
+              geniş anlamıyla kullanılmaktadır.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Rogue Scholar hangi dilleri destekliyor?
+          </div>
+          <div class="content">
+            <p>
+              Mevcut sürüm İngilizce, İspanyolca, Portekizce, Fransızca, Almanca ve İtalyanca
+              dillerini desteklemektedir. Kullanıcı taleplerine göre ilave diller
+              eklenecektir.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Rogue Scholar blogumu nasıl arşivliyor?
+          </div>
+          <div class="content">
+            <p>
+              Atom beslemenizi (veya RSS veya JSON Beslemesi gibi başka bir formattaki
+              beslemeyi) kullanarak içeriğinizi ve meta verilerinizi toplayacağız.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            RSS beslemem yalnızca blog yazılarının özetlerini içeriyor.
+          </div>
+          <div class="content">
+            <p>
+              Tüm içeriği RSS beslemesi yoluyla sağlamanız gerekir, böylece arşivleme ve tam
+              metin aramayı uygulayabiliriz.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Rogue Scholar podcast'leri ve vlog'ları destekliyor mu?
+          </div>
+          <div class="content">
+            <p>
+              Podcast'ler ve vlog'lar desteklenmektedir, ancak ek bir ücret karşılığında. Bize
+              <a href="mailto:info@rogue-scholar.org">e-posta</a> yoluyla ulaşın.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Blogumu Rogue Scholar ile arşivlemenin maliyeti nedir?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar blog yazarları için ücretsizdir.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Rogue Scholar kullanıcıları için ne gibi masraflar var?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar'ın tüm içeriği
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                Creative Commons Attribution (CC-BY)</a> lisansı koşulları altında
+              dağıtılmaktadır ve her zaman kullanımı ve yeniden kullanımı ücretsiz olacaktır.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Rogue Scholar'a sponsor olabilir veya başka bir şekilde destekleyebilir miyim?
+          </div>
+          <div class="content">
+            <p>
+              Bağışları ve diğer destek biçimlerini memnuniyetle karşılıyoruz.
+              <a href="https://ko-fi.com/rogue_scholar" target="_blank">Bize bir kahve
+                ısmarlayabilir</a> veya
+              <a href="mailto:info@rogue-scholar.org">e-posta</a> yoluyla ulaşabilirsiniz.
+            </p>
+          </div>
+
+        </div><!-- /accordion -->
+
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}
+
+{% block javascript %}
+  {{ super() }}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      $(".ui.accordion").accordion();
+    });
+  </script>
+{% endblock javascript %}

@@ -1,0 +1,94 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Overview") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="overview">Rogue Scholar – Descripción general</h2>
+      </div>
+
+      <div class="ui twelve wide column">
+        <h3>¿Qué es Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar es un archivo y registro de acceso abierto para blogs
+          científicos. Preserva las entradas de blogs científicos, las hace citables
+          a través de un <a href="https://doi.org">DOI</a> y garantiza su
+          descubribilidad a largo plazo junto con la literatura científica formal.
+        </p>
+
+        <h3>¿Por qué los blogs científicos?</h3>
+        <p>
+          Los blogs científicos son una parte importante, pero a menudo ignorada, de
+          la comunicación académica. Los investigadores comparten resultados preliminares,
+          debaten métodos, explican temas complejos y participan en el debate científico,
+          con frecuencia mucho antes de una publicación formal o en su lugar.
+          Rogue Scholar otorga a estas contribuciones la misma citabilidad y
+          visibilidad que los artículos de revistas.
+        </p>
+
+        <h3>Características principales</h3>
+        <ul>
+          <li>
+            <strong>Asignación de DOI</strong> – Cada entrada archivada recibe un DOI
+            persistente que permite citas fiables y enlaces cruzados.
+          </li>
+          <li>
+            <strong>Metadatos estructurados</strong> – Nombres de autores, ORCID iDs,
+            afiliaciones, materias, licencias y fechas de publicación se capturan y
+            exponen en esquemas estándar (DataCite, Dublin Core, Schema.org).
+          </li>
+          <li>
+            <strong>Búsqueda de texto completo</strong> – Todas las entradas archivadas
+            están indexadas y se pueden buscar junto con otros contenidos científicos.
+          </li>
+          <li>
+            <strong>Exportación de citas</strong> – Las citas pueden generarse en APA,
+            Chicago, MLA y muchos otros estilos, y exportarse como BibTeX, RIS,
+            Citation.js y más.
+          </li>
+          <li>
+            <strong>Soporte multilingüe</strong> – Se archivan entradas en cualquier
+            idioma; se admite la detección de idiomas y la localización de metadatos.
+          </li>
+          <li>
+            <strong>API abierta</strong> – Todos los metadatos están disponibles
+            gratuitamente a través de una API REST, lo que permite la integración con
+            gestores de referencias, sistemas de descubrimiento y flujos de trabajo
+            de investigación.
+          </li>
+          <li>
+            <strong>Comunidades</strong> – Los blogs pueden organizarse en comunidades
+            temáticas para facilitar el descubrimiento de contenido relacionado.
+          </li>
+        </ul>
+
+        <h3>Plataformas compatibles</h3>
+        <p>
+          Rogue Scholar admite la ingesta desde todas las principales plataformas de
+          blogs utilizadas por investigadores, incluidas WordPress, Ghost, Substack,
+          Quarto, Hugo, Jekyll y otras a través de formatos de feed estándar (RSS/Atom)
+          o integración directa con la API.
+        </p>
+
+        <h3>¿Quién está detrás de Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar es gestionado por
+          <a href="https://front-matter.io" target="_blank">Front Matter</a> y
+          gobernado por un <a href="/board">Comité Asesor</a> de investigadores y
+          defensores de la ciencia abierta. La infraestructura se basa en
+          <a href="https://inveniosoftware.org/products/rdm/" target="_blank">InvenioRDM</a>,
+          la plataforma de repositorio de código abierto desarrollada por el CERN y sus
+          colaboradores.
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}

@@ -1,0 +1,93 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Overview") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="overview">Rogue Scholar – Vue d'ensemble</h2>
+      </div>
+
+      <div class="ui twelve wide column">
+        <h3>Qu'est-ce que Rogue Scholar ?</h3>
+        <p>
+          Rogue Scholar est une archive et un registre en libre accès pour les blogs
+          scientifiques. Il préserve les billets de blogs scientifiques, les rend
+          citables grâce à un <a href="https://doi.org">DOI</a> et assure leur
+          découvrabilité à long terme aux côtés de la littérature scientifique formelle.
+        </p>
+
+        <h3>Pourquoi les blogs scientifiques ?</h3>
+        <p>
+          Les blogs scientifiques constituent une part importante mais souvent négligée
+          de la communication savante. Les chercheurs y partagent des résultats
+          préliminaires, discutent des méthodes, expliquent des sujets complexes et
+          participent au débat scientifique — souvent bien avant, ou en lieu et place,
+          d'une publication formelle. Rogue Scholar confère à ces contributions la même
+          citabilité et visibilité que les articles de revues.
+        </p>
+
+        <h3>Fonctionnalités clés</h3>
+        <ul>
+          <li>
+            <strong>Attribution de DOI</strong> – Chaque billet archivé reçoit un DOI
+            persistant, permettant des citations fiables et des liens croisés.
+          </li>
+          <li>
+            <strong>Métadonnées structurées</strong> – Noms d'auteurs, identifiants
+            ORCID, affiliations, sujets, licences et dates de publication sont saisis
+            et exposés selon des schémas standards (DataCite, Dublin Core, Schema.org).
+          </li>
+          <li>
+            <strong>Recherche plein texte</strong> – Tous les billets archivés sont
+            indexés et consultables aux côtés d'autres contenus scientifiques.
+          </li>
+          <li>
+            <strong>Export de citations</strong> – Les citations peuvent être générées
+            en APA, Chicago, MLA et de nombreux autres styles, et exportées en BibTeX,
+            RIS, Citation.js, etc.
+          </li>
+          <li>
+            <strong>Support multilingue</strong> – Les billets dans toutes les langues
+            sont archivés ; la détection de la langue et la localisation des métadonnées
+            sont prises en charge.
+          </li>
+          <li>
+            <strong>API ouverte</strong> – Toutes les métadonnées sont librement
+            accessibles via une API REST, permettant l'intégration dans les gestionnaires
+            de références, les systèmes de découverte et les flux de travail de recherche.
+          </li>
+          <li>
+            <strong>Communautés</strong> – Les blogs peuvent être organisés en
+            communautés thématiques, facilitant la découverte de contenus connexes.
+          </li>
+        </ul>
+
+        <h3>Plateformes supportées</h3>
+        <p>
+          Rogue Scholar supporte l'import depuis toutes les principales plateformes
+          de blogs utilisées par les chercheurs, notamment WordPress, Ghost, Substack,
+          Quarto, Hugo, Jekyll et d'autres via des formats de flux standards (RSS/Atom)
+          ou une intégration directe par API.
+        </p>
+
+        <h3>Qui est derrière Rogue Scholar ?</h3>
+        <p>
+          Rogue Scholar est géré par
+          <a href="https://front-matter.io" target="_blank">Front Matter</a> et
+          gouverné par un <a href="/board">Comité consultatif</a> composé de chercheurs
+          et de défenseurs de la science ouverte. L'infrastructure repose sur
+          <a href="https://inveniosoftware.org/products/rdm/" target="_blank">InvenioRDM</a>,
+          la plateforme de dépôt open source développée par le CERN et ses partenaires.
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}

@@ -1,0 +1,82 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Advisory Board") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="board">Conseil consultatif</h2>
+      </div>
+
+      <div class="ui twelve wide column">
+        <p>
+          Le comité consultatif de Rogue Scholar guide l'orientation générale de Rogue
+          Scholar, en fournissant un retour d'information sur la gouvernance, le
+          développement des fonctionnalités et les activités de promotion.
+        </p>
+        <p>
+          Le conseil consultatif s'est réuni pour la première fois en janvier 2024 et se
+          réunira virtuellement deux fois par an. Un rapport de synthèse de chaque réunion
+          est publié sur le blog.
+        </p>
+
+        <div class="ui divided items">
+
+          <div class="item">
+            <div class="content">
+              <div class="header">Juan Pablo Alperin</div>
+              <div class="description">
+                <a href="https://www.scholcommlab.ca/" target="_blank">Scholarly Communications Lab</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="content">
+              <div class="header">Chiara Di Giambattista</div>
+              <div class="description">
+                <a href="https://opencitations.hypotheses.org/" target="_blank">OpenCitations Blog</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="content">
+              <div class="header">Heinz Pampel</div>
+              <div class="description">
+                <a href="https://wisspub.net/" target="_blank">wisspub.net</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="content">
+              <div class="header">Henry Rzepa</div>
+              <div class="description">
+                <a href="https://www.ch.imperial.ac.uk/rzepa/blog" target="_blank">Henry Rzepa's Blog</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="content">
+              <div class="header">Maëlle Salmon</div>
+              <div class="description">
+                <a href="https://masalmon.eu/post/" target="_blank">Maëlle's R blog</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /items -->
+
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}
