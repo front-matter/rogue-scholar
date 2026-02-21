@@ -59,8 +59,8 @@ export class RecordCitationField extends Component {
   fetchCitation = async (recordLinks, style, includeDeleted) => {
     const includeDeletedParam =
       includeDeleted === true ? "&include_deleted=1" : "";
-    // Use i18next.language so the citation locale matches the selected UI language
-    const locale = i18next.language || navigator.language;
+    // Prefer explicit locale prop (server-side), fall back to i18next or browser
+    const locale = this.props.locale || i18next.language || navigator.language;
     const url = `${recordLinks.self}?locale=${locale}&style=${style}${includeDeletedParam}`;
     return await http.get(url, {
       headers: {
@@ -162,4 +162,9 @@ RecordCitationField.propTypes = {
   recordLinks: PropTypes.object.isRequired,
   defaultStyle: PropTypes.string.isRequired,
   includeDeleted: PropTypes.bool.isRequired,
+  locale: PropTypes.string,
+};
+
+RecordCitationField.defaultProps = {
+  locale: undefined,
 };
