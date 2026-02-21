@@ -59,16 +59,28 @@ export class RecordCitationField extends Component {
     const includeDeletedParam =
       includeDeleted === true ? "&include_deleted=1" : "";
     // Prefer explicit locale prop (server-side), fall back to i18next or browser
-    // Normalize underscore to hyphen (e.g. de_DE → de-DE) for CSL API
+    // Use only the base language code (e.g. "de" from "de_DE" or "de-DE")
+    // for maximum CSL style compatibility — not all styles have regional locale files
     const rawLocale =
       this.props.locale || i18next.language || navigator.language;
-    const locale = rawLocale.replace("_", "-");
+    const locale = rawLocale.split(/[-_]/)[0];
     const url = `${recordLinks.self}?locale=${locale}&style=${style}${includeDeletedParam}`;
-    return await http.get(url, {
-      headers: {
-        Accept: "text/x-bibliography",
-      },
-    });
+    try {
+      return await http.get(url, {
+        headers: { Accept: "text/x-bibliography" },
+      });
+    } catch (error) {
+      // Some CSL styles lack locale data and crash citeproc-py with a non-English
+      // locale (TypeError: 'NoneType' object is not iterable in citeproc/model.py).
+      // Fall back to English in that case.
+      if (locale !== "en" && error?.response?.status === 500) {
+        const fallbackUrl = `${recordLinks.self}?locale=en&style=${style}${includeDeletedParam}`;
+        return await http.get(fallbackUrl, {
+          headers: { Accept: "text/x-bibliography" },
+        });
+      }
+      throw error;
+    }
   };
 
   getCitation = async (recordLinks, style, includeDeleted) => {
