@@ -2,3779 +2,3779 @@
   scheme: "Subfields"
   subject: "Accounting"
   title:
-    en: Accounting
-    de: Buchhaltung
-    fr: Comptabilité
-    es: Contabilidad
     cs: Účetnictví
-    sv: Redovisning
-    sl: Računovodstvo
+    de: Buchhaltung
+    en: Accounting
+    es: Contabilidad
+    fr: Comptabilité
+    it: Contabilità
     nl: Accountancy
     pt: Contabilidade
-    it: Contabilità
+    sl: Računovodstvo
+    sv: Redovisning
     tr: Muhasebe
 - id: "https://openalex.org/subfields/3102"
   scheme: "Subfields"
   subject: "Acoustics and Ultrasonics"
   title:
-    en: Acoustics and Ultrasonics
-    de: Akustik und Ultraschall
-    fr: Acoustique et ultrasons
-    es: Acústica y ultrasonidos
     cs: Akustika a ultrazvuk
-    sv: Akustik och ultraljud
-    sl: Akustika in ultrazvok
+    de: Akustik und Ultraschall
+    en: Acoustics and Ultrasonics
+    es: Acústica y ultrasonidos
+    fr: Acoustique et ultrasons
+    it: Acustica e ultrasuoni
     nl: Akoestiek en ultrageluid
     pt: Acústica e ultrassons
-    it: Acustica e ultrasuoni
+    sl: Akustika in ultrazvok
+    sv: Akustik och ultraljud
     tr: Akustik ve ultrasonik
 - id: "https://openalex.org/subfields/2202"
   scheme: "Subfields"
   subject: "Aerospace Engineering"
   title:
-    en: Aerospace Engineering
-    de: Luft- und Raumfahrttechnik
-    fr: Ingénierie aérospatiale
-    es: Ingeniería aeroespacial
     cs: Letecké a kosmické inženýrství
-    sv: Flyg- och rymdteknik
-    sl: Letalsko in vesoljsko inženirstvo
+    de: Luft- und Raumfahrttechnik
+    en: Aerospace Engineering
+    es: Ingeniería aeroespacial
+    fr: Ingénierie aérospatiale
+    it: Ingegneria aerospaziale
     nl: Lucht- en ruimtevaarttechniek
     pt: Engenharia aeroespacial
-    it: Ingegneria aerospaziale
+    sl: Letalsko in vesoljsko inženirstvo
+    sv: Flyg- och rymdteknik
     tr: Havacılık ve uzay mühendisliği
 - id: "https://openalex.org/subfields/1302"
   scheme: "Subfields"
   subject: "Aging"
   title:
-    en: Aging
-    de: Altern
-    fr: Vieillissement
-    es: Envejecimiento
     cs: Stárnutí
-    sv: Åldrande
-    sl: Staranje
+    de: Altern
+    en: Aging
+    es: Envejecimiento
+    fr: Vieillissement
+    it: Invecchiamento
     nl: Veroudering
     pt: Envelhecimento
-    it: Invecchiamento
+    sl: Staranje
+    sv: Åldrande
     tr: Yaşlanma
 - id: "https://openalex.org/subfields/1102"
   scheme: "Subfields"
   subject: "Agronomy and Crop Science"
   title:
-    en: Agronomy and Crop Science
-    de: Agronomie und Pflanzenbau
-    fr: Agronomie et sciences des cultures
-    es: Agronomía y ciencias de cultivos
     cs: Agronomie a zemědělství
-    sv: Agronomie och växtvetenskap
-    sl: Agronomija in rastlinska veda
+    de: Agronomie und Pflanzenbau
+    en: Agronomy and Crop Science
+    es: Agronomía y ciencias de cultivos
+    fr: Agronomie et sciences des cultures
+    it: Agronomia e scienze delle colture
     nl: Agronomie en gewaswetenschap
     pt: Agronomia e ciências das culturas
-    it: Agronomia e scienze delle colture
+    sl: Agronomija in rastlinska veda
+    sv: Agronomie och växtvetenskap
     tr: Agronomi ve bitki bilimi
 - id: "https://openalex.org/subfields/2602"
   scheme: "Subfields"
   subject: "Algebra and Number Theory"
   title:
-    en: Algebra and Number Theory
-    de: Algebra und Zahlentheorie
-    fr: Algèbre et théorie des nombres
-    es: Álgebra y teoría de números
     cs: Algebra a teorie čísel
-    sv: Algebra och talteori
-    sl: Algebra in teorija števil
+    de: Algebra und Zahlentheorie
+    en: Algebra and Number Theory
+    es: Álgebra y teoría de números
+    fr: Algèbre et théorie des nombres
+    it: Algebra e teoria dei numeri
     nl: Algebra en getaltheorie
     pt: Álgebra e teoria dos números
-    it: Algebra e teoria dei numeri
+    sl: Algebra in teorija števil
+    sv: Algebra och talteori
     tr: Cebir ve sayı teorisi
 - id: "https://openalex.org/subfields/1602"
   scheme: "Subfields"
   subject: "Analytical Chemistry"
   title:
-    en: Analytical Chemistry
-    de: Analytische Chemie
-    fr: Chimie analytique
-    es: Química analítica
     cs: Analytická chemie
-    sv: Analytisk kemi
-    sl: Analitična kemija
+    de: Analytische Chemie
+    en: Analytical Chemistry
+    es: Química analítica
+    fr: Chimie analytique
+    it: Chimica analitica
     nl: Analytische scheikunde
     pt: Química analítica
-    it: Chimica analitica
+    sl: Analitična kemija
+    sv: Analytisk kemi
     tr: Analitik kimya
 - id: "https://openalex.org/subfields/2702"
   scheme: "Subfields"
   subject: "Anatomy"
   title:
-    en: Anatomy
-    de: Anatomie
-    fr: Anatomie
-    es: Anatomía
     cs: Anatomie
-    sv: Anatomi
-    sl: Anatomija
+    de: Anatomie
+    en: Anatomy
+    es: Anatomía
+    fr: Anatomie
+    it: Anatomia
     nl: Anatomie
     pt: Anatomia
-    it: Anatomia
+    sl: Anatomija
+    sv: Anatomi
     tr: Anatomi
 - id: "https://openalex.org/subfields/2703"
   scheme: "Subfields"
   subject: "Anesthesiology and Pain Medicine"
   title:
-    en: Anesthesiology and Pain Medicine
-    de: Anästhesiologie und Schmerzmedizin
-    fr: Anesthésiologie et médecine de la douleur
-    es: Anestesiología y medicina del dolor
     cs: Anesteziologie a léčba bolesti
-    sv: Anestesiologi och smärtmedicin
-    sl: Anesteziologija in zdravljenje bolečin
+    de: Anästhesiologie und Schmerzmedizin
+    en: Anesthesiology and Pain Medicine
+    es: Anestesiología y medicina del dolor
+    fr: Anesthésiologie et médecine de la douleur
+    it: Anestesiologia e medicina del dolore
     nl: Anesthesiologie en pijnbehandeling
     pt: Anestesiologia e medicina da dor
-    it: Anestesiologia e medicina del dolore
+    sl: Anesteziologija in zdravljenje bolečin
+    sv: Anestesiologi och smärtmedicin
     tr: Anesteziyoloji ve ağrı tıbbı
 - id: "https://openalex.org/subfields/1103"
   scheme: "Subfields"
   subject: "Animal Science and Zoology"
   title:
-    en: Animal Science and Zoology
-    de: Tierwissenschaften und Zoologie
-    fr: Sciences animales et zoologie
-    es: Ciencias animales y zoología
     cs: Zootechnika a zoologie
-    sv: Husdjursvetenskap och zoologi
-    sl: Živinoreja in zoologija
+    de: Tierwissenschaften und Zoologie
+    en: Animal Science and Zoology
+    es: Ciencias animales y zoología
+    fr: Sciences animales et zoologie
+    it: Scienze animali e zoologia
     nl: Dierkunde en zoologie
     pt: Ciências animais e zoologia
-    it: Scienze animali e zoologia
+    sl: Živinoreja in zoologija
+    sv: Husdjursvetenskap och zoologi
     tr: Hayvan bilimi ve zooloji
 - id: "https://openalex.org/subfields/3314"
   scheme: "Subfields"
   subject: "Anthropology"
   title:
-    en: Anthropology
-    de: Anthropologie
-    fr: Anthropologie
-    es: Antropología
     cs: Antropologie
-    sv: Antropologi
-    sl: Antropologija
+    de: Anthropologie
+    en: Anthropology
+    es: Antropología
+    fr: Anthropologie
+    it: Antropologia
     nl: Antropologie
     pt: Antropologia
-    it: Antropologia
+    sl: Antropologija
+    sv: Antropologi
     tr: Antropoloji
 - id: "https://openalex.org/subfields/2604"
   scheme: "Subfields"
   subject: "Applied Mathematics"
   title:
-    en: Applied Mathematics
-    de: Angewandte Mathematik
-    fr: Mathématiques appliquées
-    es: Matemáticas aplicadas
     cs: Aplikovaná matematika
-    sv: Tillämpad matematik
-    sl: Uporabna matematika
+    de: Angewandte Mathematik
+    en: Applied Mathematics
+    es: Matemáticas aplicadas
+    fr: Mathématiques appliquées
+    it: Matematica applicata
     nl: Toegepaste wiskunde
     pt: Matemática aplicada
-    it: Matematica applicata
+    sl: Uporabna matematika
+    sv: Tillämpad matematik
     tr: Uygulamalı matematik
 - id: "https://openalex.org/subfields/2402"
   scheme: "Subfields"
   subject: "Applied Microbiology and Biotechnology"
   title:
-    en: Applied Microbiology and Biotechnology
-    de: Angewandte Mikrobiologie und Biotechnologie
-    fr: Microbiologie appliquée et biotechnologie
-    es: Microbiología aplicada y biotecnología
     cs: Aplikovaná mikrobiologie a biotechnologie
-    sv: Tillämpad mikrobiologi och bioteknik
-    sl: Uporabna mikrobiologija in biotehnologija
+    de: Angewandte Mikrobiologie und Biotechnologie
+    en: Applied Microbiology and Biotechnology
+    es: Microbiología aplicada y biotecnología
+    fr: Microbiologie appliquée et biotechnologie
+    it: Microbiologia applicata e biotecnologia
     nl: Toegepaste microbiologie en biotechnologie
     pt: Microbiologia aplicada e biotecnologia
-    it: Microbiologia applicata e biotecnologia
+    sl: Uporabna mikrobiologija in biotehnologija
+    sv: Tillämpad mikrobiologi och bioteknik
     tr: Uygulamalı mikrobiyoloji ve biyoteknoloji
 - id: "https://openalex.org/subfields/3202"
   scheme: "Subfields"
   subject: "Applied Psychology"
   title:
-    en: Applied Psychology
-    de: Angewandte Psychologie
-    fr: Psychologie appliquée
-    es: Psicología aplicada
     cs: Aplikovaná psychologie
-    sv: Tillämpad psykologi
-    sl: Uporabna psihologija
+    de: Angewandte Psychologie
+    en: Applied Psychology
+    es: Psicología aplicada
+    fr: Psychologie appliquée
+    it: Psicologia applicata
     nl: Toegepaste psychologie
     pt: Psicologia aplicada
-    it: Psicologia applicata
+    sl: Uporabna psihologija
+    sv: Tillämpad psykologi
     tr: Uygulamalı psikoloji
 - id: "https://openalex.org/subfields/1104"
   scheme: "Subfields"
   subject: "Aquatic Science"
   title:
-    en: Aquatic Science
-    de: Aquatische Wissenschaften
-    fr: Sciences aquatiques
-    es: Ciencias acuáticas
     cs: Vodní vědy
-    sv: Akvatisk vetenskap
-    sl: Vodne vede
+    de: Aquatische Wissenschaften
+    en: Aquatic Science
+    es: Ciencias acuáticas
+    fr: Sciences aquatiques
+    it: Scienze acquatiche
     nl: Aquatische wetenschappen
     pt: Ciências aquáticas
-    it: Scienze acquatiche
+    sl: Vodne vede
+    sv: Akvatisk vetenskap
     tr: Su bilimleri
 - id: "https://openalex.org/subfields/1204"
   scheme: "Subfields"
   subject: "Archeology"
   title:
-    en: Archeology
-    de: Archäologie
-    fr: Archéologie
-    es: Arqueología
     cs: Archeologie
-    sv: Arkeologi
-    sl: Arheologija
+    de: Archäologie
+    en: Archeology
+    es: Arqueología
+    fr: Archéologie
+    it: Archeologia
     nl: Archeologie
     pt: Arqueologia
-    it: Archeologia
+    sl: Arheologija
+    sv: Arkeologi
     tr: Arkeoloji
 - id: "https://openalex.org/subfields/3302"
   scheme: "Subfields"
   subject: "Archeology"
   title:
-    en: Archeology
-    de: Archäologie
-    fr: Archéologie
-    es: Arqueología
     cs: Archeologie
-    sv: Arkeologi
-    sl: Arheologija
+    de: Archäologie
+    en: Archeology
+    es: Arqueología
+    fr: Archéologie
+    it: Archeologia
     nl: Archeologie
     pt: Arqueologia
-    it: Archeologia
+    sl: Arheologija
+    sv: Arkeologi
     tr: Arkeoloji
 - id: "https://openalex.org/subfields/2216"
   scheme: "Subfields"
   subject: "Architecture"
   title:
-    en: Architecture
-    de: Architektur
-    fr: Architecture
-    es: Arquitectura
     cs: Architektura
-    sv: Arkitektur
-    sl: Arhitektura
+    de: Architektur
+    en: Architecture
+    es: Arquitectura
+    fr: Architecture
+    it: Architettura
     nl: Architectuur
     pt: Arquitetura
-    it: Architettura
+    sl: Arhitektura
+    sv: Arkitektur
     tr: Mimarlık
 - id: "https://openalex.org/subfields/1702"
   scheme: "Subfields"
   subject: "Artificial Intelligence"
   title:
-    en: Artificial Intelligence
-    de: Künstliche Intelligenz
-    fr: Intelligence artificielle
-    es: Inteligencia artificial
     cs: Umělá inteligence
-    sv: Artificiell intelligens
-    sl: Umetna inteligenca
+    de: Künstliche Intelligenz
+    en: Artificial Intelligence
+    es: Inteligencia artificial
+    fr: Intelligence artificielle
+    it: Intelligenza artificiale
     nl: Kunstmatige intelligentie
     pt: Inteligência artificial
-    it: Intelligenza artificiale
+    sl: Umetna inteligenca
+    sv: Artificiell intelligens
     tr: Yapay zeka
 - id: "https://openalex.org/subfields/3103"
   scheme: "Subfields"
   subject: "Astronomy and Astrophysics"
   title:
-    en: Astronomy and Astrophysics
-    de: Astronomie und Astrophysik
-    fr: Astronomie et astrophysique
-    es: Astronomía y astrofísica
     cs: Astronomie a astrofyzika
-    sv: Astronomi och astrofysik
-    sl: Astronomija in astrofizika
+    de: Astronomie und Astrophysik
+    en: Astronomy and Astrophysics
+    es: Astronomía y astrofísica
+    fr: Astronomie et astrophysique
+    it: Astronomia e astrofisica
     nl: Astronomie en astrofysica
     pt: Astronomia e astrofísica
-    it: Astronomia e astrofisica
+    sl: Astronomija in astrofizika
+    sv: Astronomi och astrofysik
     tr: Astronomi ve astrofizik
 - id: "https://openalex.org/subfields/1902"
   scheme: "Subfields"
   subject: "Atmospheric Science"
   title:
-    en: Atmospheric Science
-    de: Atmosphärenwissenschaften
-    fr: Sciences de l'atmosphère
-    es: Ciencias atmosféricas
     cs: Atmosférické vědy
-    sv: Atmosfärsvetenskap
-    sl: Atmosferske vede
+    de: Atmosphärenwissenschaften
+    en: Atmospheric Science
+    es: Ciencias atmosféricas
+    fr: Sciences de l'atmosphère
+    it: Scienze dell'atmosfera
     nl: Atmosferische wetenschappen
     pt: Ciências atmosféricas
-    it: Scienze dell'atmosfera
+    sl: Atmosferske vede
+    sv: Atmosfärsvetenskap
     tr: Atmosfer bilimleri
 - id: "https://openalex.org/subfields/3107"
   scheme: "Subfields"
   subject: "Atomic and Molecular Physics, and Optics"
   title:
-    en: Atomic and Molecular Physics, and Optics
-    de: Atom- und Molekülphysik sowie Optik
-    fr: Physique atomique et moléculaire, et optique
-    es: Física atómica y molecular, y óptica
     cs: Atomová a molekulární fyzika a optika
-    sv: Atom- och molekylfysik samt optik
-    sl: Atomska in molekulska fizika ter optika
+    de: Atom- und Molekülphysik sowie Optik
+    en: Atomic and Molecular Physics, and Optics
+    es: Física atómica y molecular, y óptica
+    fr: Physique atomique et moléculaire, et optique
+    it: Fisica atomica e molecolare e ottica
     nl: Atoom- en molecuulfysica en optica
     pt: Física atómica e molecular, e óptica
-    it: Fisica atomica e molecolare e ottica
+    sl: Atomska in molekulska fizika ter optika
+    sv: Atom- och molekylfysik samt optik
     tr: Atomik ve moleküler fizik ve optik
 - id: "https://openalex.org/subfields/2203"
   scheme: "Subfields"
   subject: "Automotive Engineering"
   title:
-    en: Automotive Engineering
-    de: Fahrzeugtechnik
-    fr: Génie automobile
-    es: Ingeniería del automóvil
     cs: Automobilové inženýrství
-    sv: Fordonsteknik
-    sl: Avtomobilsko inženirstvo
+    de: Fahrzeugtechnik
+    en: Automotive Engineering
+    es: Ingeniería del automóvil
+    fr: Génie automobile
+    it: Ingegneria automobilistica
     nl: Autotechniek
     pt: Engenharia automóvel
-    it: Ingegneria automobilistica
+    sl: Avtomobilsko inženirstvo
+    sv: Fordonsteknik
     tr: Otomotiv mühendisliği
 - id: "https://openalex.org/subfields/2802"
   scheme: "Subfields"
   subject: "Behavioral Neuroscience"
   title:
-    en: Behavioral Neuroscience
-    de: Verhaltensneurowissenschaften
-    fr: Neurosciences comportementales
-    es: Neurociencias del comportamiento
     cs: Behaviorální neurovědy
-    sv: Beteendeneurovetenskap
-    sl: Vedenjska nevroznanost
+    de: Verhaltensneurowissenschaften
+    en: Behavioral Neuroscience
+    es: Neurociencias del comportamiento
+    fr: Neurosciences comportementales
+    it: Neuroscienze comportamentali
     nl: Gedragsneurowetenschappen
     pt: Neurociência comportamental
-    it: Neuroscienze comportamentali
+    sl: Vedenjska nevroznanost
+    sv: Beteendeneurovetenskap
     tr: Davranışsal sinirbilim
 - id: "https://openalex.org/subfields/1303"
   scheme: "Subfields"
   subject: "Biochemistry"
   title:
-    en: Biochemistry
-    de: Biochemie
-    fr: Biochimie
-    es: Bioquímica
     cs: Biochemie
-    sv: Biokemi
-    sl: Biokemija
+    de: Biochemie
+    en: Biochemistry
+    es: Bioquímica
+    fr: Biochimie
+    it: Biochimica
     nl: Biochemie
     pt: Bioquímica
-    it: Biochimica
+    sl: Biokemija
+    sv: Biokemi
     tr: Biyokimya
 - id: "https://openalex.org/subfields/2704"
   scheme: "Subfields"
   subject: "Biochemistry"
   title:
-    en: Biochemistry
-    de: Biochemie
-    fr: Biochimie
-    es: Bioquímica
     cs: Biochemie
-    sv: Biokemi
-    sl: Biokemija
+    de: Biochemie
+    en: Biochemistry
+    es: Bioquímica
+    fr: Biochimie
+    it: Biochimica
     nl: Biochemie
     pt: Bioquímica
-    it: Biochimica
+    sl: Biokemija
+    sv: Biokemi
     tr: Biyokimya
 - id: "https://openalex.org/subfields/1502"
   scheme: "Subfields"
   subject: "Bioengineering"
   title:
-    en: Bioengineering
-    de: Bioingenieurwesen
-    fr: Biogénie
-    es: Bioingeniería
     cs: Bioinženýrství
-    sv: Bioteknik
-    sl: Bioinženirstvo
+    de: Bioingenieurwesen
+    en: Bioengineering
+    es: Bioingeniería
+    fr: Biogénie
+    it: Bioingegneria
     nl: Bio-engineering
     pt: Bioengenharia
-    it: Bioingegneria
+    sl: Bioinženirstvo
+    sv: Bioteknik
     tr: Biyomühendislik
 - id: "https://openalex.org/subfields/2803"
   scheme: "Subfields"
   subject: "Biological Psychiatry"
   title:
-    en: Biological Psychiatry
-    de: Biologische Psychiatrie
-    fr: Psychiatrie biologique
-    es: Psiquiatría biológica
     cs: Biologická psychiatrie
-    sv: Biologisk psykiatri
-    sl: Biološka psihiatrija
+    de: Biologische Psychiatrie
+    en: Biological Psychiatry
+    es: Psiquiatría biológica
+    fr: Psychiatrie biologique
+    it: Psichiatria biologica
     nl: Biologische psychiatrie
     pt: Psiquiatria biológica
-    it: Psichiatria biologica
+    sl: Biološka psihiatrija
+    sv: Biologisk psykiatri
     tr: Biyolojik psikiyatri
 - id: "https://openalex.org/subfields/2502"
   scheme: "Subfields"
   subject: "Biomaterials"
   title:
-    en: Biomaterials
-    de: Biomaterialien
-    fr: Biomatériaux
-    es: Biomateriales
     cs: Biomaterály
-    sv: Biomaterial
-    sl: Biomateriali
+    de: Biomaterialien
+    en: Biomaterials
+    es: Biomateriales
+    fr: Biomatériaux
+    it: Biomateriali
     nl: Biomaterialen
     pt: Biomateriais
-    it: Biomateriali
+    sl: Biomateriali
+    sv: Biomaterial
     tr: Biyomalzemeler
 - id: "https://openalex.org/subfields/2204"
   scheme: "Subfields"
   subject: "Biomedical Engineering"
   title:
-    en: Biomedical Engineering
-    de: Biomedizinische Technik
-    fr: Génie biomédical
-    es: Ingeniería biomédica
     cs: Biomedicínské inženýrství
-    sv: Biomedicinsk teknik
-    sl: Biomedicinsko inženirstvo
+    de: Biomedizinische Technik
+    en: Biomedical Engineering
+    es: Ingeniería biomédica
+    fr: Génie biomédical
+    it: Ingegneria biomedica
     nl: Biomedische techniek
     pt: Engenharia biomédica
-    it: Ingegneria biomedica
+    sl: Biomedicinsko inženirstvo
+    sv: Biomedicinsk teknik
     tr: Biyomedikal mühendislik
 - id: "https://openalex.org/subfields/1304"
   scheme: "Subfields"
   subject: "Biophysics"
   title:
-    en: Biophysics
-    de: Biophysik
-    fr: Biophysique
-    es: Biofísica
     cs: Biofyzika
-    sv: Biofysik
-    sl: Biofizika
+    de: Biophysik
+    en: Biophysics
+    es: Biofísica
+    fr: Biophysique
+    it: Biofisica
     nl: Biofysica
     pt: Biofísica
-    it: Biofisica
+    sl: Biofizika
+    sv: Biofysik
     tr: Biyofizik
 - id: "https://openalex.org/subfields/1305"
   scheme: "Subfields"
   subject: "Biotechnology"
   title:
-    en: Biotechnology
-    de: Biotechnologie
-    fr: Biotechnologie
-    es: Biotecnología
     cs: Biotechnologie
-    sv: Bioteknologi
-    sl: Biotehnologija
+    de: Biotechnologie
+    en: Biotechnology
+    es: Biotecnología
+    fr: Biotechnologie
+    it: Biotecnologia
     nl: Biotechnologie
     pt: Biotecnologia
-    it: Biotecnologia
+    sl: Biotehnologija
+    sv: Bioteknologi
     tr: Biyoteknoloji
 - id: "https://openalex.org/subfields/2215"
   scheme: "Subfields"
   subject: "Building and Construction"
   title:
-    en: Building and Construction
-    de: Hoch- und Tiefbau
-    fr: Bâtiment et construction
-    es: Construcción y edificación
     cs: Stavebnictví
-    sv: Bygg och konstruktion
-    sl: Gradbeništvo in gradnja
+    de: Hoch- und Tiefbau
+    en: Building and Construction
+    es: Construcción y edificación
+    fr: Bâtiment et construction
+    it: Edilizia e costruzioni
     nl: Bouw en constructie
     pt: Construção e edificação
-    it: Edilizia e costruzioni
+    sl: Gradbeništvo in gradnja
+    sv: Bygg och konstruktion
     tr: İnşaat ve yapı
 - id: "https://openalex.org/subfields/1403"
   scheme: "Subfields"
   subject: "Business and International Management"
   title:
-    en: Business and International Management
-    de: Wirtschaft und internationales Management
-    fr: Commerce et management international
-    es: Empresa y gestión internacional
     cs: Obchod a mezinárodní management
-    sv: Affärer och internationell ledning
-    sl: Poslovanje in mednarodni management
+    de: Wirtschaft und internationales Management
+    en: Business and International Management
+    es: Empresa y gestión internacional
+    fr: Commerce et management international
+    it: Economia e management internazionale
     nl: Bedrijfskunde en internationaal management
     pt: Negócios e gestão internacional
-    it: Economia e management internazionale
+    sl: Poslovanje in mednarodni management
+    sv: Affärer och internationell ledning
     tr: İşletme ve uluslararası yönetim
 - id: "https://openalex.org/subfields/1306"
   scheme: "Subfields"
   subject: "Cancer Research"
   title:
-    en: Cancer Research
-    de: Krebsforschung
-    fr: Recherche sur le cancer
-    es: Investigación oncológica
     cs: Výzkum rakoviny
-    sv: Cancerforskning
-    sl: Raziskovanje raka
+    de: Krebsforschung
+    en: Cancer Research
+    es: Investigación oncológica
+    fr: Recherche sur le cancer
+    it: Ricerca sul cancro
     nl: Kankeronderzoek
     pt: Investigação oncológica
-    it: Ricerca sul cancro
+    sl: Raziskovanje raka
+    sv: Cancerforskning
     tr: Kanser araştırmaları
 - id: "https://openalex.org/subfields/2705"
   scheme: "Subfields"
   subject: "Cardiology and Cardiovascular Medicine"
   title:
-    en: Cardiology and Cardiovascular Medicine
-    de: Kardiologie und Herz-Kreislauf-Medizin
-    fr: Cardiologie et médecine cardiovasculaire
-    es: Cardiología y medicina cardiovascular
     cs: Kardiologie a kardiovaskulární medicína
-    sv: Kardiologi och kardiovaskulär medicin
-    sl: Kardiologija in kardiovaskularna medicina
+    de: Kardiologie und Herz-Kreislauf-Medizin
+    en: Cardiology and Cardiovascular Medicine
+    es: Cardiología y medicina cardiovascular
+    fr: Cardiologie et médecine cardiovasculaire
+    it: Cardiologia e medicina cardiovascolare
     nl: Cardiologie en cardiovasculaire geneeskunde
     pt: Cardiologia e medicina cardiovascular
-    it: Cardiologia e medicina cardiovascolare
+    sl: Kardiologija in kardiovaskularna medicina
+    sv: Kardiologi och kardiovaskulär medicin
     tr: Kardiyoloji ve kardiyovasküler tıp
 - id: "https://openalex.org/subfields/1503"
   scheme: "Subfields"
   subject: "Catalysis"
   title:
-    en: Catalysis
-    de: Katalyse
-    fr: Catalyse
-    es: Catálisis
     cs: Katalýza
-    sv: Katalys
-    sl: Kataliza
+    de: Katalyse
+    en: Catalysis
+    es: Catálisis
+    fr: Catalyse
+    it: Catalisi
     nl: Katalyse
     pt: Catálise
-    it: Catalisi
+    sl: Kataliza
+    sv: Katalys
     tr: Kataliz
 - id: "https://openalex.org/subfields/1307"
   scheme: "Subfields"
   subject: "Cell Biology"
   title:
-    en: Cell Biology
-    de: Zellbiologie
-    fr: Biologie cellulaire
-    es: Biología celular
     cs: Buněčná biologie
-    sv: Cellbiologi
-    sl: Celična biologija
+    de: Zellbiologie
+    en: Cell Biology
+    es: Biología celular
+    fr: Biologie cellulaire
+    it: Biologia cellulare
     nl: Celbiologie
     pt: Biologia celular
-    it: Biologia cellulare
+    sl: Celična biologija
+    sv: Cellbiologi
     tr: Hücre biyolojisi
 - id: "https://openalex.org/subfields/2804"
   scheme: "Subfields"
   subject: "Cellular and Molecular Neuroscience"
   title:
-    en: Cellular and Molecular Neuroscience
-    de: Zell- und Molekulare Neurowissenschaften
-    fr: Neurosciences cellulaires et moléculaires
-    es: Neurociencias celulares y moleculares
     cs: Buněčná a molekulární neurověda
-    sv: Cellulär och molekylär neurovetenskap
-    sl: Celična in molekularna nevroznanost
+    de: Zell- und Molekulare Neurowissenschaften
+    en: Cellular and Molecular Neuroscience
+    es: Neurociencias celulares y moleculares
+    fr: Neurosciences cellulaires et moléculaires
+    it: Neuroscienze cellulari e molecolari
     nl: Cellulaire en moleculaire neurowetenschappen
     pt: Neurociência celular e molecular
-    it: Neuroscienze cellulari e molecolari
+    sl: Celična in molekularna nevroznanost
+    sv: Cellulär och molekylär neurovetenskap
     tr: Hücresel ve moleküler sinirbilim
 - id: "https://openalex.org/subfields/2503"
   scheme: "Subfields"
   subject: "Ceramics and Composites"
   title:
-    en: Ceramics and Composites
-    de: Keramik und Verbundwerkstoffe
-    fr: Céramiques et composites
-    es: Cerámica y materiales compuestos
     cs: Keramika a kompozity
-    sv: Keramik och kompositer
-    sl: Keramika in kompoziti
+    de: Keramik und Verbundwerkstoffe
+    en: Ceramics and Composites
+    es: Cerámica y materiales compuestos
+    fr: Céramiques et composites
+    it: Ceramiche e compositi
     nl: Keramiek en composieten
     pt: Cerâmica e compósitos
-    it: Ceramiche e compositi
+    sl: Keramika in kompoziti
+    sv: Keramik och kompositer
     tr: Seramik ve kompozitler
 - id: "https://openalex.org/subfields/1504"
   scheme: "Subfields"
   subject: "Chemical Health and Safety"
   title:
-    en: Chemical Health and Safety
-    de: Chemische Gesundheit und Sicherheit
-    fr: Santé et sécurité chimiques
-    es: Salud y seguridad química
     cs: Chemické zdraví a bezpečnost
-    sv: Kemisk hälsa och säkerhet
-    sl: Kemijsko zdravje in varnost
+    de: Chemische Gesundheit und Sicherheit
+    en: Chemical Health and Safety
+    es: Salud y seguridad química
+    fr: Santé et sécurité chimiques
+    it: Salute e sicurezza chimica
     nl: Chemische gezondheid en veiligheid
     pt: Saúde e segurança química
-    it: Salute e sicurezza chimica
+    sl: Kemijsko zdravje in varnost
+    sv: Kemisk hälsa och säkerhet
     tr: Kimyasal sağlık ve güvenlik
 - id: "https://openalex.org/subfields/2205"
   scheme: "Subfields"
   subject: "Civil and Structural Engineering"
   title:
-    en: Civil and Structural Engineering
-    de: Bau- und Konstruktionsingenieurwesen
-    fr: Génie civil et structural
-    es: Ingeniería civil y estructural
     cs: Stavební a konstrukční inženýrství
-    sv: Bygg- och konstruktionsteknik
-    sl: Gradbeništvo in konstrukcijsko inženirstvo
+    de: Bau- und Konstruktionsingenieurwesen
+    en: Civil and Structural Engineering
+    es: Ingeniería civil y estructural
+    fr: Génie civil et structural
+    it: Ingegneria civile e strutturale
     nl: Civiele en constructietechniek
     pt: Engenharia civil e estrutural
-    it: Ingegneria civile e strutturale
+    sl: Gradbeništvo in konstrukcijsko inženirstvo
+    sv: Bygg- och konstruktionsteknik
     tr: İnşaat ve yapı mühendisliği
 - id: "https://openalex.org/subfields/1205"
   scheme: "Subfields"
   subject: "Classics"
   title:
-    en: Classics
-    de: Klassische Altertumswissenschaft
-    fr: Études classiques
-    es: Estudios clásicos
     cs: Klasická studia
-    sv: Klassiska studier
-    sl: Klasične študije
+    de: Klassische Altertumswissenschaft
+    en: Classics
+    es: Estudios clásicos
+    fr: Études classiques
+    it: Studi classici
     nl: Klassieke studies
     pt: Estudos clássicos
-    it: Studi classici
+    sl: Klasične študije
+    sv: Klassiska studier
     tr: Klasik çalışmalar
 - id: "https://openalex.org/subfields/1308"
   scheme: "Subfields"
   subject: "Clinical Biochemistry"
   title:
-    en: Clinical Biochemistry
-    de: Klinische Biochemie
-    fr: Biochimie clinique
-    es: Bioquímica clínica
     cs: Klinická biochemie
-    sv: Klinisk biokemi
-    sl: Klinična biokemija
+    de: Klinische Biochemie
+    en: Clinical Biochemistry
+    es: Bioquímica clínica
+    fr: Biochimie clinique
+    it: Biochimica clinica
     nl: Klinische biochemie
     pt: Bioquímica clínica
-    it: Biochimica clinica
+    sl: Klinična biokemija
+    sv: Klinisk biokemi
     tr: Klinik biyokimya
 - id: "https://openalex.org/subfields/3203"
   scheme: "Subfields"
   subject: "Clinical Psychology"
   title:
-    en: Clinical Psychology
-    de: Klinische Psychologie
-    fr: Psychologie clinique
-    es: Psicología clínica
     cs: Klinická psychologie
-    sv: Klinisk psykologi
-    sl: Klinična psihologija
+    de: Klinische Psychologie
+    en: Clinical Psychology
+    es: Psicología clínica
+    fr: Psychologie clinique
+    it: Psicologia clinica
     nl: Klinische psychologie
     pt: Psicologia clínica
-    it: Psicologia clinica
+    sl: Klinična psihologija
+    sv: Klinisk psykologi
     tr: Klinik psikoloji
 - id: "https://openalex.org/subfields/2805"
   scheme: "Subfields"
   subject: "Cognitive Neuroscience"
   title:
-    en: Cognitive Neuroscience
-    de: Kognitive Neurowissenschaften
-    fr: Neurosciences cognitives
-    es: Neurociencias cognitivas
     cs: Kognitivní neurověda
-    sv: Kognitiv neurovetenskap
-    sl: Kognitivna nevroznanost
+    de: Kognitive Neurowissenschaften
+    en: Cognitive Neuroscience
+    es: Neurociencias cognitivas
+    fr: Neurosciences cognitives
+    it: Neuroscienze cognitive
     nl: Cognitieve neurowetenschappen
     pt: Neurociência cognitiva
-    it: Neuroscienze cognitive
+    sl: Kognitivna nevroznanost
+    sv: Kognitiv neurovetenskap
     tr: Bilişsel sinirbilim
 - id: "https://openalex.org/subfields/3315"
   scheme: "Subfields"
   subject: "Communication"
   title:
-    en: Communication
-    de: Kommunikation
-    fr: Communication
-    es: Comunicación
     cs: Komunikace
-    sv: Kommunikation
-    sl: Komunikacija
+    de: Kommunikation
+    en: Communication
+    es: Comunicación
+    fr: Communication
+    it: Comunicazione
     nl: Communicatie
     pt: Comunicação
-    it: Comunicazione
+    sl: Komunikacija
+    sv: Kommunikation
     tr: İletişim
 - id: "https://openalex.org/subfields/2707"
   scheme: "Subfields"
   subject: "Complementary and alternative medicine"
   title:
-    en: Complementary and alternative medicine
-    de: Komplementär- und Alternativmedizin
-    fr: Médecine complémentaire et alternative
-    es: Medicina complementaria y alternativa
     cs: Komplementární a alternativní medicína
-    sv: Komplementär och alternativ medicin
-    sl: Komplementarna in alternativna medicina
+    de: Komplementär- und Alternativmedizin
+    en: Complementary and alternative medicine
+    es: Medicina complementaria y alternativa
+    fr: Médecine complémentaire et alternative
+    it: Medicina complementare e alternativa
     nl: Complementaire en alternatieve geneeskunde
     pt: Medicina complementar e alternativa
-    it: Medicina complementare e alternativa
+    sl: Komplementarna in alternativna medicina
+    sv: Komplementär och alternativ medicin
     tr: Tamamlayıcı ve alternatif tıp
 - id: "https://openalex.org/subfields/3603"
   scheme: "Subfields"
   subject: "Complementary and Manual Therapy"
   title:
-    en: Complementary and Manual Therapy
-    de: Komplementär- und Manualtherapie
-    fr: Thérapie complémentaire et manuelle
-    es: Terapia complementaria y manual
     cs: Komplementární a manuální terapie
-    sv: Komplementär och manuell terapi
-    sl: Komplementarna in manualna terapija
+    de: Komplementär- und Manualtherapie
+    en: Complementary and Manual Therapy
+    es: Terapia complementaria y manual
+    fr: Thérapie complémentaire et manuelle
+    it: Terapia complementare e manuale
     nl: Complementaire en manuele therapie
     pt: Terapia complementar e manual
-    it: Terapia complementare e manuale
+    sl: Komplementarna in manualna terapija
+    sv: Komplementär och manuell terapi
     tr: Tamamlayıcı ve manuel terapi
 - id: "https://openalex.org/subfields/2605"
   scheme: "Subfields"
   subject: "Computational Mathematics"
   title:
-    en: Computational Mathematics
-    de: Numerische Mathematik
-    fr: Mathématiques computationnelles
-    es: Matemáticas computacionales
     cs: Výpočetní matematika
-    sv: Beräkningsmatematik
-    sl: Računska matematika
+    de: Numerische Mathematik
+    en: Computational Mathematics
+    es: Matemáticas computacionales
+    fr: Mathématiques computationnelles
+    it: Matematica computazionale
     nl: Computationele wiskunde
     pt: Matemática computacional
-    it: Matematica computazionale
+    sl: Računska matematika
+    sv: Beräkningsmatematik
     tr: Hesaplamalı matematik
 - id: "https://openalex.org/subfields/2206"
   scheme: "Subfields"
   subject: "Computational Mechanics"
   title:
-    en: Computational Mechanics
-    de: Numerische Mechanik
-    fr: Mécanique computationnelle
-    es: Mecánica computacional
     cs: Výpočetní mechanika
-    sv: Beräkningsmekanik
-    sl: Računska mehanika
+    de: Numerische Mechanik
+    en: Computational Mechanics
+    es: Mecánica computacional
+    fr: Mécanique computationnelle
+    it: Meccanica computazionale
     nl: Computationele mechanica
     pt: Mecânica computacional
-    it: Meccanica computazionale
+    sl: Računska mehanika
+    sv: Beräkningsmekanik
     tr: Hesaplamalı mekanik
 - id: "https://openalex.org/subfields/1703"
   scheme: "Subfields"
   subject: "Computational Theory and Mathematics"
   title:
-    en: Computational Theory and Mathematics
-    de: Theoretische Informatik und Mathematik
-    fr: Théorie de l'informatique et mathématiques
-    es: Teoría computacional y matemáticas
     cs: Teorie výpočtů a matematika
-    sv: Beräkningsteori och matematik
-    sl: Računska teorija in matematika
+    de: Theoretische Informatik und Mathematik
+    en: Computational Theory and Mathematics
+    es: Teoría computacional y matemáticas
+    fr: Théorie de l'informatique et mathématiques
+    it: Teoria computazionale e matematica
     nl: Computationele theorie en wiskunde
     pt: Teoria computacional e matemática
-    it: Teoria computazionale e matematica
+    sl: Računska teorija in matematika
+    sv: Beräkningsteori och matematik
     tr: Hesaplama teorisi ve matematik
 - id: "https://openalex.org/subfields/1704"
   scheme: "Subfields"
   subject: "Computer Graphics and Computer-Aided Design"
   title:
-    en: Computer Graphics and Computer-Aided Design
-    de: Computergrafik und computergestütztes Design
-    fr: Infographie et conception assistée par ordinateur
-    es: Gráficos por computadora y diseño asistido
     cs: Počítačová grafika a počítačem podporovaný design
-    sv: Datorgrafik och datorstödd konstruktion
-    sl: Računalniška grafika in računalniško podprto oblikovanje
+    de: Computergrafik und computergestütztes Design
+    en: Computer Graphics and Computer-Aided Design
+    es: Gráficos por computadora y diseño asistido
+    fr: Infographie et conception assistée par ordinateur
+    it: Grafica computerizzata e progettazione assistita da computer
     nl: Computergraphics en computerondersteund ontwerp
     pt: Gráficos computacionais e design assistido por computador
-    it: Grafica computerizzata e progettazione assistita da computer
+    sl: Računalniška grafika in računalniško podprto oblikovanje
+    sv: Datorgrafik och datorstödd konstruktion
     tr: Bilgisayar grafikleri ve bilgisayar destekli tasarım
 - id: "https://openalex.org/subfields/1705"
   scheme: "Subfields"
   subject: "Computer Networks and Communications"
   title:
-    en: Computer Networks and Communications
-    de: Computernetzwerke und Kommunikation
-    fr: Réseaux informatiques et communications
-    es: Redes informáticas y comunicaciones
     cs: Počítačové sítě a komunikace
-    sv: Datornätverk och kommunikation
-    sl: Računalniška omrežja in komunikacije
+    de: Computernetzwerke und Kommunikation
+    en: Computer Networks and Communications
+    es: Redes informáticas y comunicaciones
+    fr: Réseaux informatiques et communications
+    it: Reti informatiche e comunicazioni
     nl: Computernetwerken en communicatie
     pt: Redes de computadores e comunicações
-    it: Reti informatiche e comunicazioni
+    sl: Računalniška omrežja in komunikacije
+    sv: Datornätverk och kommunikation
     tr: Bilgisayar ağları ve iletişim
 - id: "https://openalex.org/subfields/1706"
   scheme: "Subfields"
   subject: "Computer Science Applications"
   title:
-    en: Computer Science Applications
-    de: Anwendungen der Informatik
-    fr: Applications informatiques
-    es: Aplicaciones informáticas
     cs: Aplikace informatiky
-    sv: Datavetenskap tillämpningar
-    sl: Aplikacije računalništva
+    de: Anwendungen der Informatik
+    en: Computer Science Applications
+    es: Aplicaciones informáticas
+    fr: Applications informatiques
+    it: Applicazioni dell'informatica
     nl: Informatica toepassingen
     pt: Aplicações da ciência da computação
-    it: Applicazioni dell'informatica
+    sl: Aplikacije računalništva
+    sv: Datavetenskap tillämpningar
     tr: Bilgisayar bilimi uygulamaları
 - id: "https://openalex.org/subfields/1707"
   scheme: "Subfields"
   subject: "Computer Vision and Pattern Recognition"
   title:
-    en: Computer Vision and Pattern Recognition
-    de: Computersehen und Mustererkennung
-    fr: Vision par ordinateur et reconnaissance de formes
-    es: Visión por computadora y reconocimiento de patrones
     cs: Počítačové vidění a rozpoznávání vzorů
-    sv: Datorseende och mönsterigenkänning
-    sl: Računalniški vid in prepoznavanje vzorcev
+    de: Computersehen und Mustererkennung
+    en: Computer Vision and Pattern Recognition
+    es: Visión por computadora y reconocimiento de patrones
+    fr: Vision par ordinateur et reconnaissance de formes
+    it: Visione artificiale e riconoscimento di pattern
     nl: Computer vision en patroonherkenning
     pt: Visão computacional e reconhecimento de padrões
-    it: Visione artificiale e riconoscimento di pattern
+    sl: Računalniški vid in prepoznavanje vzorcev
+    sv: Datorseende och mönsterigenkänning
     tr: Bilgisayarlı görü ve örüntü tanıma
 - id: "https://openalex.org/subfields/3104"
   scheme: "Subfields"
   subject: "Condensed Matter Physics"
   title:
-    en: Condensed Matter Physics
-    de: Physik der kondensierten Materie
-    fr: Physique de la matière condensée
-    es: Física de la materia condensada
     cs: Fyzika kondenzované hmoty
-    sv: Kondenserad materias fysik
-    sl: Fizika kondenzirane snovi
+    de: Physik der kondensierten Materie
+    en: Condensed Matter Physics
+    es: Física de la materia condensada
+    fr: Physique de la matière condensée
+    it: Fisica della materia condensata
     nl: Fysica van gecondenseerde materie
     pt: Física da matéria condensada
-    it: Fisica della materia condensata
+    sl: Fizika kondenzirane snovi
+    sv: Kondenserad materias fysik
     tr: Yoğun madde fiziği
 - id: "https://openalex.org/subfields/1206"
   scheme: "Subfields"
   subject: "Conservation"
   title:
-    en: Conservation
-    de: Naturschutz
-    fr: Conservation
-    es: Conservación
     cs: Ochrana přírody
-    sv: Naturvård
-    sl: Varstvo narave
+    de: Naturschutz
+    en: Conservation
+    es: Conservación
+    fr: Conservation
+    it: Conservazione
     nl: Natuurbehoud
     pt: Conservação
-    it: Conservazione
+    sl: Varstvo narave
+    sv: Naturvård
     tr: Koruma
 - id: "https://openalex.org/subfields/2207"
   scheme: "Subfields"
   subject: "Control and Systems Engineering"
   title:
-    en: Control and Systems Engineering
-    de: Steuerungs- und Systemtechnik
-    fr: Génie de la commande et des systèmes
-    es: Ingeniería de control y sistemas
     cs: Řídící a systémové inženýrství
-    sv: Regler- och systemteknik
-    sl: Krmilno in sistemsko inženirstvo
+    de: Steuerungs- und Systemtechnik
+    en: Control and Systems Engineering
+    es: Ingeniería de control y sistemas
+    fr: Génie de la commande et des systèmes
+    it: Ingegneria dei controlli e dei sistemi
     nl: Regeltechniek en systeemtechniek
     pt: Engenharia de controlo e sistemas
-    it: Ingegneria dei controlli e dei sistemi
+    sl: Krmilno in sistemsko inženirstvo
+    sv: Regler- och systemteknik
     tr: Kontrol ve sistem mühendisliği
 - id: "https://openalex.org/subfields/2706"
   scheme: "Subfields"
   subject: "Critical Care and Intensive Care Medicine"
   title:
-    en: Critical Care and Intensive Care Medicine
-    de: Intensiv- und Notfallmedizin
-    fr: Soins intensifs et médecine de réanimation
-    es: Medicina de cuidados intensivos
     cs: Intenzivní péče a urgentní medicína
-    sv: Intensivvård och kritisk medicin
-    sl: Intenzivna nega in medicina
+    de: Intensiv- und Notfallmedizin
+    en: Critical Care and Intensive Care Medicine
+    es: Medicina de cuidados intensivos
+    fr: Soins intensifs et médecine de réanimation
+    it: Medicina intensiva e terapia intensiva
     nl: Intensive care en critical care geneeskunde
     pt: Cuidados intensivos e medicina de urgência
-    it: Medicina intensiva e terapia intensiva
+    sl: Intenzivna nega in medicina
+    sv: Intensivvård och kritisk medicin
     tr: Yoğun bakım tıbbı
 - id: "https://openalex.org/subfields/3316"
   scheme: "Subfields"
   subject: "Cultural Studies"
   title:
-    en: Cultural Studies
-    de: Kulturwissenschaften
-    fr: Études culturelles
-    es: Estudios culturales
     cs: Kulturální studia
-    sv: Kulturstudier
-    sl: Kulturne študije
+    de: Kulturwissenschaften
+    en: Cultural Studies
+    es: Estudios culturales
+    fr: Études culturelles
+    it: Studi culturali
     nl: Culturele studies
     pt: Estudos culturais
-    it: Studi culturali
+    sl: Kulturne študije
+    sv: Kulturstudier
     tr: Kültürel çalışmalar
 - id: "https://openalex.org/subfields/3317"
   scheme: "Subfields"
   subject: "Demography"
   title:
-    en: Demography
-    de: Demographie
-    fr: Démographie
-    es: Demografía
     cs: Demografie
-    sv: Demografi
-    sl: Demografija
+    de: Demographie
+    en: Demography
+    es: Demografía
+    fr: Démographie
+    it: Demografia
     nl: Demografie
     pt: Demografia
-    it: Demografia
+    sl: Demografija
+    sv: Demografi
     tr: Demografi
 - id: "https://openalex.org/subfields/2708"
   scheme: "Subfields"
   subject: "Dermatology"
   title:
-    en: Dermatology
-    de: Dermatologie
-    fr: Dermatologie
-    es: Dermatología
     cs: Dermatologie
-    sv: Dermatologi
-    sl: Dermatologija
+    de: Dermatologie
+    en: Dermatology
+    es: Dermatología
+    fr: Dermatologie
+    it: Dermatologia
     nl: Dermatologie
     pt: Dermatologia
-    it: Dermatologia
+    sl: Dermatologija
+    sv: Dermatologi
     tr: Dermatoloji
 - id: "https://openalex.org/subfields/3303"
   scheme: "Subfields"
   subject: "Development"
   title:
-    en: Development
-    de: Entwicklung
-    fr: Développement
-    es: Desarrollo
     cs: Rozvoj
-    sv: Utveckling
-    sl: Razvoj
+    de: Entwicklung
+    en: Development
+    es: Desarrollo
+    fr: Développement
+    it: Sviluppo
     nl: Ontwikkeling
     pt: Desenvolvimento
-    it: Sviluppo
+    sl: Razvoj
+    sv: Utveckling
     tr: Kalkınma
 - id: "https://openalex.org/subfields/3204"
   scheme: "Subfields"
   subject: "Developmental and Educational Psychology"
   title:
-    en: Developmental and Educational Psychology
-    de: Entwicklungs- und Pädagogische Psychologie
-    fr: Psychologie du développement et de l'éducation
-    es: Psicología del desarrollo y educativa
     cs: Vývojová a pedagogická psychologie
-    sv: Utvecklings- och pedagogisk psykologi
-    sl: Razvojna in pedagoška psihologija
+    de: Entwicklungs- und Pädagogische Psychologie
+    en: Developmental and Educational Psychology
+    es: Psicología del desarrollo y educativa
+    fr: Psychologie du développement et de l'éducation
+    it: Psicologia dello sviluppo e dell'educazione
     nl: Ontwikkelings- en onderwijspsychologie
     pt: Psicologia do desenvolvimento e educacional
-    it: Psicologia dello sviluppo e dell'educazione
+    sl: Razvojna in pedagoška psihologija
+    sv: Utvecklings- och pedagogisk psykologi
     tr: Gelişim ve eğitim psikolojisi
 - id: "https://openalex.org/subfields/1309"
   scheme: "Subfields"
   subject: "Developmental Biology"
   title:
-    en: Developmental Biology
-    de: Entwicklungsbiologie
-    fr: Biologie du développement
-    es: Biología del desarrollo
     cs: Vývojová biologie
-    sv: Utvecklingsbiologi
-    sl: Razvojna biologija
+    de: Entwicklungsbiologie
+    en: Developmental Biology
+    es: Biología del desarrollo
+    fr: Biologie du développement
+    it: Biologia dello sviluppo
     nl: Ontwikkelingsbiologie
     pt: Biologia do desenvolvimento
-    it: Biologia dello sviluppo
+    sl: Razvojna biologija
+    sv: Utvecklingsbiologi
     tr: Gelişim biyolojisi
 - id: "https://openalex.org/subfields/2806"
   scheme: "Subfields"
   subject: "Developmental Neuroscience"
   title:
-    en: Developmental Neuroscience
-    de: Entwicklungsneurowissenschaften
-    fr: Neurosciences du développement
-    es: Neurociencias del desarrollo
     cs: Vývojová neurověda
-    sv: Utvecklingsneurovetenskap
-    sl: Razvojna nevroznanost
+    de: Entwicklungsneurowissenschaften
+    en: Developmental Neuroscience
+    es: Neurociencias del desarrollo
+    fr: Neurosciences du développement
+    it: Neuroscienze dello sviluppo
     nl: Ontwikkelingsneurologie
     pt: Neurociência do desenvolvimento
-    it: Neuroscienze dello sviluppo
+    sl: Razvojna nevroznanost
+    sv: Utvecklingsneurovetenskap
     tr: Gelişimsel sinirbilim
 - id: "https://openalex.org/subfields/2607"
   scheme: "Subfields"
   subject: "Discrete Mathematics and Combinatorics"
   title:
-    en: Discrete Mathematics and Combinatorics
-    de: Diskrete Mathematik und Kombinatorik
-    fr: Mathématiques discrètes et combinatoire
-    es: Matemáticas discretas y combinatoria
     cs: Diskrétní matematika a kombinatorika
-    sv: Diskret matematik och kombinatorik
-    sl: Diskretna matematika in kombinatorika
+    de: Diskrete Mathematik und Kombinatorik
+    en: Discrete Mathematics and Combinatorics
+    es: Matemáticas discretas y combinatoria
+    fr: Mathématiques discrètes et combinatoire
+    it: Matematica discreta e combinatoria
     nl: Discrete wiskunde en combinatoriek
     pt: Matemática discreta e combinatória
-    it: Matematica discreta e combinatoria
+    sl: Diskretna matematika in kombinatorika
+    sv: Diskret matematik och kombinatorik
     tr: Ayrık matematik ve kombinatorik
 - id: "https://openalex.org/subfields/3002"
   scheme: "Subfields"
   subject: "Drug Discovery"
   title:
-    en: Drug Discovery
-    de: Wirkstoffentdeckung
-    fr: Découverte de médicaments
-    es: Descubrimiento de fármacos
     cs: Objev léčiv
-    sv: Läkemedelsutveckling
-    sl: Odkrivanje zdravil
+    de: Wirkstoffentdeckung
+    en: Drug Discovery
+    es: Descubrimiento de fármacos
+    fr: Découverte de médicaments
+    it: Scoperta di farmaci
     nl: Geneesmiddelenonderzoek
     pt: Descoberta de fármacos
-    it: Scoperta di farmaci
+    sl: Odkrivanje zdravil
+    sv: Läkemedelsutveckling
     tr: İlaç keşfi
 - id: "https://openalex.org/subfields/1904"
   scheme: "Subfields"
   subject: "Earth-Surface Processes"
   title:
-    en: Earth-Surface Processes
-    de: Erdoberflächenprozesse
-    fr: Processus de surface terrestre
-    es: Procesos de la superficie terrestre
     cs: Procesy zemského povrchu
-    sv: Jordens ytprocesser
-    sl: Procesi na zemeljskem površju
+    de: Erdoberflächenprozesse
+    en: Earth-Surface Processes
+    es: Procesos de la superficie terrestre
+    fr: Processus de surface terrestre
+    it: Processi della superficie terrestre
     nl: Aardoppervlakprocessen
     pt: Processos da superfície terrestre
-    it: Processi della superficie terrestre
+    sl: Procesi na zemeljskem površju
+    sv: Jordens ytprocesser
     tr: Yeryüzü süreçleri
 - id: "https://openalex.org/subfields/2302"
   scheme: "Subfields"
   subject: "Ecological Modeling"
   title:
-    en: Ecological Modeling
-    de: Ökologische Modellierung
-    fr: Modélisation écologique
-    es: Modelización ecológica
     cs: Ekologické modelování
-    sv: Ekologisk modellering
-    sl: Ekološko modeliranje
+    de: Ökologische Modellierung
+    en: Ecological Modeling
+    es: Modelización ecológica
+    fr: Modélisation écologique
+    it: Modellazione ecologica
     nl: Ecologische modellering
     pt: Modelação ecológica
-    it: Modellazione ecologica
+    sl: Ekološko modeliranje
+    sv: Ekologisk modellering
     tr: Ekolojik modelleme
 - id: "https://openalex.org/subfields/2303"
   scheme: "Subfields"
   subject: "Ecology"
   title:
-    en: Ecology
-    de: Ökologie
-    fr: Écologie
-    es: Ecología
     cs: Ekologie
-    sv: Ekologi
-    sl: Ekologija
+    de: Ökologie
+    en: Ecology
+    es: Ecología
+    fr: Écologie
+    it: Ecologia
     nl: Ecologie
     pt: Ecologia
-    it: Ecologia
+    sl: Ekologija
+    sv: Ekologi
     tr: Ekoloji
 - id: "https://openalex.org/subfields/1105"
   scheme: "Subfields"
   subject: "Ecology, Evolution, Behavior and Systematics"
   title:
-    en: Ecology, Evolution, Behavior and Systematics
-    de: Ökologie, Evolution, Verhalten und Systematik
-    fr: Écologie, évolution, comportement et systématique
-    es: Ecología, evolución, conducta y sistemática
     cs: Ekologie, evoluce, chování a systematika
-    sv: Ekologi, evolution, beteende och systematik
-    sl: Ekologija, evolucija, vedenje in sistematika
+    de: Ökologie, Evolution, Verhalten und Systematik
+    en: Ecology, Evolution, Behavior and Systematics
+    es: Ecología, evolución, conducta y sistemática
+    fr: Écologie, évolution, comportement et systématique
+    it: Ecologia, evoluzione, comportamento e sistematica
     nl: Ecologie, evolutie, gedrag en systematiek
     pt: Ecologia, evolução, comportamento e sistemática
-    it: Ecologia, evoluzione, comportamento e sistematica
+    sl: Ekologija, evolucija, vedenje in sistematika
+    sv: Ekologi, evolution, beteende och systematik
     tr: Ekoloji, evrim, davranış ve sistematik
 - id: "https://openalex.org/subfields/2002"
   scheme: "Subfields"
   subject: "Economics and Econometrics"
   title:
-    en: Economics and Econometrics
-    de: Wirtschaftswissenschaften und Ökonometrie
-    fr: Économie et économétrie
-    es: Economía y econometría
     cs: Ekonomie a ekonometrie
-    sv: Ekonomi och ekonometri
-    sl: Ekonomija in ekonometrija
+    de: Wirtschaftswissenschaften und Ökonometrie
+    en: Economics and Econometrics
+    es: Economía y econometría
+    fr: Économie et économétrie
+    it: Economia ed econometria
     nl: Economie en econometrie
     pt: Economia e econometria
-    it: Economia ed econometria
+    sl: Ekonomija in ekonometrija
+    sv: Ekonomi och ekonometri
     tr: Ekonomi ve ekonometri
 - id: "https://openalex.org/subfields/3304"
   scheme: "Subfields"
   subject: "Education"
   title:
-    en: Education
-    de: Bildungswissenschaften
-    fr: Éducation
-    es: Educación
     cs: Vzdělávání
-    sv: Utbildning
-    sl: Izobraževanje
+    de: Bildungswissenschaften
+    en: Education
+    es: Educación
+    fr: Éducation
+    it: Istruzione
     nl: Onderwijs
     pt: Educação
-    it: Istruzione
+    sl: Izobraževanje
+    sv: Utbildning
     tr: Eğitim
 - id: "https://openalex.org/subfields/2208"
   scheme: "Subfields"
   subject: "Electrical and Electronic Engineering"
   title:
-    en: Electrical and Electronic Engineering
-    de: Elektrotechnik und Elektronik
-    fr: Génie électrique et électronique
-    es: Ingeniería eléctrica y electrónica
     cs: Elektrotechnika a elektronika
-    sv: Elektroteknik och elektronik
-    sl: Elektrotehnika in elektronika
+    de: Elektrotechnik und Elektronik
+    en: Electrical and Electronic Engineering
+    es: Ingeniería eléctrica y electrónica
+    fr: Génie électrique et électronique
+    it: Ingegneria elettrica ed elettronica
     nl: Elektrotechniek en elektronica
     pt: Engenharia elétrica e eletrónica
-    it: Ingegneria elettrica ed elettronica
+    sl: Elektrotehnika in elektronika
+    sv: Elektroteknik och elektronik
     tr: Elektrik ve elektronik mühendisliği
 - id: "https://openalex.org/subfields/1603"
   scheme: "Subfields"
   subject: "Electrochemistry"
   title:
-    en: Electrochemistry
-    de: Elektrochemie
-    fr: Électrochimie
-    es: Electroquímica
     cs: Elektrochemie
-    sv: Elektrokemi
-    sl: Elektrokemija
+    de: Elektrochemie
+    en: Electrochemistry
+    es: Electroquímica
+    fr: Électrochimie
+    it: Elettrochimica
     nl: Elektrochemie
     pt: Eletroquímica
-    it: Elettrochimica
+    sl: Elektrokemija
+    sv: Elektrokemi
     tr: Elektrokimya
 - id: "https://openalex.org/subfields/2504"
   scheme: "Subfields"
   subject: "Electronic, Optical and Magnetic Materials"
   title:
-    en: Electronic, Optical and Magnetic Materials
-    de: Elektronische, optische und magnetische Materialien
-    fr: Matériaux électroniques, optiques et magnétiques
-    es: Materiales electrónicos, ópticos y magnéticos
     cs: Elektronické, optické a magnetické materiály
-    sv: Elektroniska, optiska och magnetiska material
-    sl: Elektronski, optični in magnetni materiali
+    de: Elektronische, optische und magnetische Materialien
+    en: Electronic, Optical and Magnetic Materials
+    es: Materiales electrónicos, ópticos y magnéticos
+    fr: Matériaux électroniques, optiques et magnétiques
+    it: Materiali elettronici, ottici e magnetici
     nl: Elektronische, optische en magnetische materialen
     pt: Materiais eletrónicos, ópticos e magnéticos
-    it: Materiali elettronici, ottici e magnetici
+    sl: Elektronski, optični in magnetni materiali
+    sv: Elektroniska, optiska och magnetiska material
     tr: Elektronik, optik ve manyetik malzemeler
 - id: "https://openalex.org/subfields/3604"
   scheme: "Subfields"
   subject: "Emergency Medical Services"
   title:
-    en: Emergency Medical Services
-    de: Rettungsdienste
-    fr: Services médicaux d'urgence
-    es: Servicios de emergencias médicas
     cs: Zdravotnická záchranná služba
-    sv: Akutsjukvård
-    sl: Reševalna služba
+    de: Rettungsdienste
+    en: Emergency Medical Services
+    es: Servicios de emergencias médicas
+    fr: Services médicaux d'urgence
+    it: Servizi medici di emergenza
     nl: Spoedeisende medische hulpverlening
     pt: Serviços de emergência médica
-    it: Servizi medici di emergenza
+    sl: Reševalna služba
+    sv: Akutsjukvård
     tr: Acil tıp hizmetleri
 - id: "https://openalex.org/subfields/2711"
   scheme: "Subfields"
   subject: "Emergency Medicine"
   title:
-    en: Emergency Medicine
-    de: Notfallmedizin
-    fr: Médecine d'urgence
-    es: Medicina de urgencias
     cs: Urgentní medicína
-    sv: Akutmedicin
-    sl: Urgentna medicina
+    de: Notfallmedizin
+    en: Emergency Medicine
+    es: Medicina de urgencias
+    fr: Médecine d'urgence
+    it: Medicina d'urgenza
     nl: Spoedeisende geneeskunde
     pt: Medicina de urgência
-    it: Medicina d'urgenza
+    sl: Urgentna medicina
+    sv: Akutmedicin
     tr: Acil tıp
 - id: "https://openalex.org/subfields/2807"
   scheme: "Subfields"
   subject: "Endocrine and Autonomic Systems"
   title:
-    en: Endocrine and Autonomic Systems
-    de: Endokrine und autonome Systeme
-    fr: Systèmes endocrinien et autonome
-    es: Sistemas endocrino y autonómico
     cs: Endokrinní a autonomní systémy
-    sv: Endokrina och autonoma system
-    sl: Endokrini in avtonomni sistemi
+    de: Endokrine und autonome Systeme
+    en: Endocrine and Autonomic Systems
+    es: Sistemas endocrino y autonómico
+    fr: Systèmes endocrinien et autonome
+    it: Sistemi endocrino e autonomo
     nl: Endocriene en autonome systemen
     pt: Sistemas endócrino e autónomo
-    it: Sistemi endocrino e autonomo
+    sl: Endokrini in avtonomni sistemi
+    sv: Endokrina och autonoma system
     tr: Endokrin ve otonom sistemler
 - id: "https://openalex.org/subfields/1310"
   scheme: "Subfields"
   subject: "Endocrinology"
   title:
-    en: Endocrinology
-    de: Endokrinologie
-    fr: Endocrinologie
-    es: Endocrinología
     cs: Endokrinologie
-    sv: Endokrinologi
-    sl: Endokrinologija
+    de: Endokrinologie
+    en: Endocrinology
+    es: Endocrinología
+    fr: Endocrinologie
+    it: Endocrinologia
     nl: Endocrinologie
     pt: Endocrinologia
-    it: Endocrinologia
+    sl: Endokrinologija
+    sv: Endokrinologi
     tr: Endokrinoloji
 - id: "https://openalex.org/subfields/2712"
   scheme: "Subfields"
   subject: "Endocrinology, Diabetes and Metabolism"
   title:
-    en: Endocrinology, Diabetes and Metabolism
-    de: Endokrinologie, Diabetes und Stoffwechsel
-    fr: Endocrinologie, diabète et métabolisme
-    es: Endocrinología, diabetes y metabolismo
     cs: Endokrinologie, diabetes a metabolismus
-    sv: Endokrinologi, diabetes och metabolism
-    sl: Endokrinologija, diabetes in metabolizem
+    de: Endokrinologie, Diabetes und Stoffwechsel
+    en: Endocrinology, Diabetes and Metabolism
+    es: Endocrinología, diabetes y metabolismo
+    fr: Endocrinologie, diabète et métabolisme
+    it: Endocrinologia, diabete e metabolismo
     nl: Endocrinologie, diabetes en metabolisme
     pt: Endocrinologia, diabetes e metabolismo
-    it: Endocrinologia, diabete e metabolismo
+    sl: Endokrinologija, diabetes in metabolizem
+    sv: Endokrinologi, diabetes och metabolism
     tr: Endokrinoloji, diyabet ve metabolizma
 - id: "https://openalex.org/subfields/2102"
   scheme: "Subfields"
   subject: "Energy Engineering and Power Technology"
   title:
-    en: Energy Engineering and Power Technology
-    de: Energietechnik und Kraftwerkstechnik
-    fr: Ingénierie énergétique et technologie de l'énergie
-    es: Ingeniería energética y tecnología eléctrica
     cs: Energetické inženýrství a technologie
-    sv: Energiteknik och kraftteknik
-    sl: Energetsko inženirstvo in tehnologija
+    de: Energietechnik und Kraftwerkstechnik
+    en: Energy Engineering and Power Technology
+    es: Ingeniería energética y tecnología eléctrica
+    fr: Ingénierie énergétique et technologie de l'énergie
+    it: Ingegneria energetica e tecnologia dell'energia
     nl: Energietechniek en elektrische technologie
     pt: Engenharia energética e tecnologia elétrica
-    it: Ingegneria energetica e tecnologia dell'energia
+    sl: Energetsko inženirstvo in tehnologija
+    sv: Energiteknik och kraftteknik
     tr: Enerji mühendisliği ve güç teknolojisi
 - id: "https://openalex.org/subfields/2304"
   scheme: "Subfields"
   subject: "Environmental Chemistry"
   title:
-    en: Environmental Chemistry
-    de: Umweltchemie
-    fr: Chimie de l'environnement
-    es: Química ambiental
     cs: Environmentální chemie
-    sv: Miljökemi
-    sl: Okoljska kemija
+    de: Umweltchemie
+    en: Environmental Chemistry
+    es: Química ambiental
+    fr: Chimie de l'environnement
+    it: Chimica ambientale
     nl: Milieukunde
     pt: Química ambiental
-    it: Chimica ambientale
+    sl: Okoljska kemija
+    sv: Miljökemi
     tr: Çevre kimyası
 - id: "https://openalex.org/subfields/2305"
   scheme: "Subfields"
   subject: "Environmental Engineering"
   title:
-    en: Environmental Engineering
-    de: Umweltingenieurwesen
-    fr: Génie de l'environnement
-    es: Ingeniería ambiental
     cs: Environmentální inženýrství
-    sv: Miljöteknik
-    sl: Okoljsko inženirstvo
+    de: Umweltingenieurwesen
+    en: Environmental Engineering
+    es: Ingeniería ambiental
+    fr: Génie de l'environnement
+    it: Ingegneria ambientale
     nl: Milieutechniek
     pt: Engenharia ambiental
-    it: Ingegneria ambientale
+    sl: Okoljsko inženirstvo
+    sv: Miljöteknik
     tr: Çevre mühendisliği
 - id: "https://openalex.org/subfields/2713"
   scheme: "Subfields"
   subject: "Epidemiology"
   title:
-    en: Epidemiology
-    de: Epidemiologie
-    fr: Épidémiologie
-    es: Epidemiología
     cs: Epidemiologie
-    sv: Epidemiologi
-    sl: Epidemiologija
+    de: Epidemiologie
+    en: Epidemiology
+    es: Epidemiología
+    fr: Épidémiologie
+    it: Epidemiologia
     nl: Epidemiologie
     pt: Epidemiologia
-    it: Epidemiologia
+    sl: Epidemiologija
+    sv: Epidemiologi
     tr: Epidemiyoloji
 - id: "https://openalex.org/subfields/3402"
   scheme: "Subfields"
   subject: "Equine"
   title:
-    en: Equine
-    de: Pferdewissenschaften
-    fr: Sciences équines
-    es: Ciencias equinas
     cs: Koňské vědy
-    sv: Hästvetenskap
-    sl: Konjske vede
+    de: Pferdewissenschaften
+    en: Equine
+    es: Ciencias equinas
+    fr: Sciences équines
+    it: Scienze equine
     nl: Paardenwetenschap
     pt: Ciências equinas
-    it: Scienze equine
+    sl: Konjske vede
+    sv: Hästvetenskap
     tr: At bilimleri
 - id: "https://openalex.org/subfields/3205"
   scheme: "Subfields"
   subject: "Experimental and Cognitive Psychology"
   title:
-    en: Experimental and Cognitive Psychology
-    de: Experimentelle und kognitive Psychologie
-    fr: Psychologie expérimentale et cognitive
-    es: Psicología experimental y cognitiva
     cs: Experimentální a kognitivní psychologie
-    sv: Experimentell och kognitiv psykologi
-    sl: Eksperimentalna in kognitivna psihologija
+    de: Experimentelle und kognitive Psychologie
+    en: Experimental and Cognitive Psychology
+    es: Psicología experimental y cognitiva
+    fr: Psychologie expérimentale et cognitive
+    it: Psicologia sperimentale e cognitiva
     nl: Experimentele en cognitieve psychologie
     pt: Psicologia experimental e cognitiva
-    it: Psicologia sperimentale e cognitiva
+    sl: Eksperimentalna in kognitivna psihologija
+    sv: Experimentell och kognitiv psykologi
     tr: Deneysel ve bilişsel psikoloji
 - id: "https://openalex.org/subfields/2714"
   scheme: "Subfields"
   subject: "Family Practice"
   title:
-    en: Family Practice
-    de: Allgemeinmedizin
-    fr: Médecine de famille
-    es: Medicina de familia
     cs: Všeobecné lékařství
-    sv: Allmänmedicin
-    sl: Splošna medicina
+    de: Allgemeinmedizin
+    en: Family Practice
+    es: Medicina de familia
+    fr: Médecine de famille
+    it: Medicina di famiglia
     nl: Huisartsgeneeskunde
     pt: Medicina de família
-    it: Medicina di famiglia
+    sl: Splošna medicina
+    sv: Allmänmedicin
     tr: Aile hekimliği
 - id: "https://openalex.org/subfields/1506"
   scheme: "Subfields"
   subject: "Filtration and Separation"
   title:
-    en: Filtration and Separation
-    de: Filtration und Trennung
-    fr: Filtration et séparation
-    es: Filtración y separación
     cs: Filtrace a separace
-    sv: Filtrering och separation
-    sl: Filtracija in separacija
+    de: Filtration und Trennung
+    en: Filtration and Separation
+    es: Filtración y separación
+    fr: Filtration et séparation
+    it: Filtrazione e separazione
     nl: Filtratie en scheiding
     pt: Filtração e separação
-    it: Filtrazione e separazione
+    sl: Filtracija in separacija
+    sv: Filtrering och separation
     tr: Filtrasyon ve ayırma
 - id: "https://openalex.org/subfields/2003"
   scheme: "Subfields"
   subject: "Finance"
   title:
-    en: Finance
-    de: Finanzwesen
-    fr: Finance
-    es: Finanzas
     cs: Finance
-    sv: Finans
-    sl: Finance
+    de: Finanzwesen
+    en: Finance
+    es: Finanzas
+    fr: Finance
+    it: Finanza
     nl: Financiën
     pt: Finanças
-    it: Finanza
+    sl: Finance
+    sv: Finans
     tr: Finans
 - id: "https://openalex.org/subfields/1507"
   scheme: "Subfields"
   subject: "Fluid Flow and Transfer Processes"
   title:
-    en: Fluid Flow and Transfer Processes
-    de: Strömungsfluss und Übertragungsprozesse
-    fr: Écoulement des fluides et processus de transfert
-    es: Flujo de fluidos y procesos de transferencia
     cs: Tok tekutin a přenosové procesy
-    sv: Strömning och överföringsprocesser
-    sl: Tok tekočin in prenosni procesi
+    de: Strömungsfluss und Übertragungsprozesse
+    en: Fluid Flow and Transfer Processes
+    es: Flujo de fluidos y procesos de transferencia
+    fr: Écoulement des fluides et processus de transfert
+    it: Flusso di fluidi e processi di trasferimento
     nl: Stromingsleer en overdrachtsprocessen
     pt: Escoamento de fluidos e processos de transferência
-    it: Flusso di fluidi e processi di trasferimento
+    sl: Tok tekočin in prenosni procesi
+    sv: Strömning och överföringsprocesser
     tr: Akışkan akışı ve transfer süreçleri
 - id: "https://openalex.org/subfields/1106"
   scheme: "Subfields"
   subject: "Food Science"
   title:
-    en: Food Science
-    de: Lebensmittelwissenschaft
-    fr: Sciences alimentaires
-    es: Ciencias de la alimentación
     cs: Potravinová věda
-    sv: Livsmedelsvetenskap
-    sl: Živilska veda
+    de: Lebensmittelwissenschaft
+    en: Food Science
+    es: Ciencias de la alimentación
+    fr: Sciences alimentaires
+    it: Scienze alimentari
     nl: Levensmiddelenwetenschappen
     pt: Ciências alimentares
-    it: Scienze alimentari
+    sl: Živilska veda
+    sv: Livsmedelsvetenskap
     tr: Gıda bilimi
 - id: "https://openalex.org/subfields/1107"
   scheme: "Subfields"
   subject: "Forestry"
   title:
-    en: Forestry
-    de: Forstwirtschaft
-    fr: Sylviculture
-    es: Silvicultura
     cs: Lesnictví
-    sv: Skogsvetenskap
-    sl: Gozdarstvo
+    de: Forstwirtschaft
+    en: Forestry
+    es: Silvicultura
+    fr: Sylviculture
+    it: Selvicoltura
     nl: Bosbouw
     pt: Silvicultura
-    it: Selvicoltura
+    sl: Gozdarstvo
+    sv: Skogsvetenskap
     tr: Ormancılık
 - id: "https://openalex.org/subfields/2103"
   scheme: "Subfields"
   subject: "Fuel Technology"
   title:
-    en: Fuel Technology
-    de: Kraftstofftechnik
-    fr: Technologie des combustibles
-    es: Tecnología de combustibles
     cs: Technologie paliv
-    sv: Bränsleteknologi
-    sl: Tehnologija goriv
+    de: Kraftstofftechnik
+    en: Fuel Technology
+    es: Tecnología de combustibles
+    fr: Technologie des combustibles
+    it: Tecnologia dei combustibili
     nl: Brandstoftechnologie
     pt: Tecnologia de combustíveis
-    it: Tecnologia dei combustibili
+    sl: Tehnologija goriv
+    sv: Bränsleteknologi
     tr: Yakıt teknolojisi
 - id: "https://openalex.org/subfields/2715"
   scheme: "Subfields"
   subject: "Gastroenterology"
   title:
-    en: Gastroenterology
-    de: Gastroenterologie
-    fr: Gastroentérologie
-    es: Gastroenterología
     cs: Gastroenterologie
-    sv: Gastroenterologi
-    sl: Gastroenterologija
+    de: Gastroenterologie
+    en: Gastroenterology
+    es: Gastroenterología
+    fr: Gastroentérologie
+    it: Gastroenterologia
     nl: Gastro-enterologie
     pt: Gastroenterologia
-    it: Gastroenterologia
+    sl: Gastroenterologija
+    sv: Gastroenterologi
     tr: Gastroenteroloji
 - id: "https://openalex.org/subfields/3318"
   scheme: "Subfields"
   subject: "Gender Studies"
   title:
-    en: Gender Studies
-    de: Geschlechterforschung
-    fr: Études de genre
-    es: Estudios de género
     cs: Genderová studia
-    sv: Genusstudier
-    sl: Spolne študije
+    de: Geschlechterforschung
+    en: Gender Studies
+    es: Estudios de género
+    fr: Études de genre
+    it: Studi di genere
     nl: Genderstudies
     pt: Estudos de género
-    it: Studi di genere
+    sl: Spolne študije
+    sv: Genusstudier
     tr: Toplumsal cinsiyet çalışmaları
 - id: "https://openalex.org/subfields/1100"
   scheme: "Subfields"
   subject: "General Agricultural and Biological Sciences"
   title:
-    en: General Agricultural and Biological Sciences
-    de: Allgemeine Agrar- und Biowissenschaften
-    fr: Sciences agricoles et biologiques générales
-    es: Ciencias agrícolas y biológicas generales
     cs: Obecné zemědělské a biologické vědy
-    sv: Allmänna jordbruks- och biologiska vetenskaper
-    sl: Splošne kmetijske in biološke vede
+    de: Allgemeine Agrar- und Biowissenschaften
+    en: General Agricultural and Biological Sciences
+    es: Ciencias agrícolas y biológicas generales
+    fr: Sciences agricoles et biologiques générales
+    it: Scienze agrarie e biologiche generali
     nl: Algemene landbouw- en biologische wetenschappen
     pt: Ciências agrícolas e biológicas gerais
-    it: Scienze agrarie e biologiche generali
+    sl: Splošne kmetijske in biološke vede
+    sv: Allmänna jordbruks- och biologiska vetenskaper
     tr: Genel tarım ve biyoloji bilimleri
 - id: "https://openalex.org/subfields/1200"
   scheme: "Subfields"
   subject: "General Arts and Humanities"
   title:
-    en: General Arts and Humanities
-    de: Allgemeine Kunst und Geisteswissenschaften
-    fr: Arts et sciences humaines généraux
-    es: Artes y humanidades generales
     cs: Obecné umění a humanitní vědy
-    sv: Allmänna konst- och humanistiska vetenskaper
-    sl: Splošne umetnosti in humanistika
+    de: Allgemeine Kunst und Geisteswissenschaften
+    en: General Arts and Humanities
+    es: Artes y humanidades generales
+    fr: Arts et sciences humaines généraux
+    it: Arti e scienze umane generali
     nl: Algemene kunsten en geesteswetenschappen
     pt: Artes e humanidades gerais
-    it: Arti e scienze umane generali
+    sl: Splošne umetnosti in humanistika
+    sv: Allmänna konst- och humanistiska vetenskaper
     tr: Genel sanat ve beşeri bilimler
 - id: "https://openalex.org/subfields/1800"
   scheme: "Subfields"
   subject: "General Decision Sciences"
   title:
-    en: General Decision Sciences
-    de: Allgemeine Entscheidungswissenschaften
-    fr: Sciences de la décision générales
-    es: Ciencias de la decisión generales
     cs: Obecné rozhodovací vědy
-    sv: Allmänna beslutvetenskaper
-    sl: Splošne odločitvene vede
+    de: Allgemeine Entscheidungswissenschaften
+    en: General Decision Sciences
+    es: Ciencias de la decisión generales
+    fr: Sciences de la décision générales
+    it: Scienze decisionali generali
     nl: Algemene besluitvormingswetenschappen
     pt: Ciências da decisão gerais
-    it: Scienze decisionali generali
+    sl: Splošne odločitvene vede
+    sv: Allmänna beslutvetenskaper
     tr: Genel karar bilimleri
 - id: "https://openalex.org/subfields/3500"
   scheme: "Subfields"
   subject: "General Dentistry"
   title:
-    en: General Dentistry
-    de: Allgemeine Zahnmedizin
-    fr: Dentisterie générale
-    es: Odontología general
     cs: Všeobecná stomatologie
-    sv: Allmän tandvård
-    sl: Splošna zobozdravstvena dejavnost
+    de: Allgemeine Zahnmedizin
+    en: General Dentistry
+    es: Odontología general
+    fr: Dentisterie générale
+    it: Odontoiatria generale
     nl: Algemene tandheelkunde
     pt: Medicina dentária geral
-    it: Odontoiatria generale
+    sl: Splošna zobozdravstvena dejavnost
+    sv: Allmän tandvård
     tr: Genel diş hekimliği
 - id: "https://openalex.org/subfields/2000"
   scheme: "Subfields"
   subject: "General Economics, Econometrics and Finance"
   title:
-    en: General Economics, Econometrics and Finance
-    de: Allgemeine Wirtschaftswissenschaften, Ökonometrie und Finanzen
-    fr: Économie, économétrie et finance générales
-    es: Economía, econometría y finanzas generales
     cs: Obecná ekonomie, ekonometrie a finance
-    sv: Allmän ekonomi, ekonometri och finans
-    sl: Splošna ekonomija, ekonometrija in finance
+    de: Allgemeine Wirtschaftswissenschaften, Ökonometrie und Finanzen
+    en: General Economics, Econometrics and Finance
+    es: Economía, econometría y finanzas generales
+    fr: Économie, économétrie et finance générales
+    it: Economia, econometria e finanza generali
     nl: Algemene economie, econometrie en financiën
     pt: Economia, econometria e finanças gerais
-    it: Economia, econometria e finanza generali
+    sl: Splošna ekonomija, ekonometrija in finance
+    sv: Allmän ekonomi, ekonometri och finans
     tr: Genel ekonomi, ekonometri ve finans
 - id: "https://openalex.org/subfields/2100"
   scheme: "Subfields"
   subject: "General Energy"
   title:
-    en: General Energy
-    de: Allgemeine Energiewissenschaften
-    fr: Énergie générale
-    es: Energía general
     cs: Obecná energetika
-    sv: Allmän energi
-    sl: Splošna energetika
+    de: Allgemeine Energiewissenschaften
+    en: General Energy
+    es: Energía general
+    fr: Énergie générale
+    it: Energia generale
     nl: Algemene energetica
     pt: Energia geral
-    it: Energia generale
+    sl: Splošna energetika
+    sv: Allmän energi
     tr: Genel enerji
 - id: "https://openalex.org/subfields/2200"
   scheme: "Subfields"
   subject: "General Engineering"
   title:
-    en: General Engineering
-    de: Allgemeine Ingenieurwissenschaften
-    fr: Ingénierie générale
-    es: Ingeniería general
     cs: Obecné inženýrství
-    sv: Allmän ingenjörsvetenskap
-    sl: Splošno inženirstvo
+    de: Allgemeine Ingenieurwissenschaften
+    en: General Engineering
+    es: Ingeniería general
+    fr: Ingénierie générale
+    it: Ingegneria generale
     nl: Algemene techniek
     pt: Engenharia geral
-    it: Ingegneria generale
+    sl: Splošno inženirstvo
+    sv: Allmän ingenjörsvetenskap
     tr: Genel mühendislik
 - id: "https://openalex.org/subfields/3600"
   scheme: "Subfields"
   subject: "General Health Professions"
   title:
-    en: General Health Professions
-    de: Allgemeine Gesundheitsberufe
-    fr: Professions de santé générales
-    es: Profesiones sanitarias generales
     cs: Obecné zdravotnické profese
-    sv: Allmänna hälsoyrken
-    sl: Splošni zdravstveni poklici
+    de: Allgemeine Gesundheitsberufe
+    en: General Health Professions
+    es: Profesiones sanitarias generales
+    fr: Professions de santé générales
+    it: Professioni sanitarie generali
     nl: Algemene gezondheidszorgberoepen
     pt: Profissões de saúde gerais
-    it: Professioni sanitarie generali
+    sl: Splošni zdravstveni poklici
+    sv: Allmänna hälsoyrken
     tr: Genel sağlık meslekleri
 - id: "https://openalex.org/subfields/2500"
   scheme: "Subfields"
   subject: "General Materials Science"
   title:
-    en: General Materials Science
-    de: Allgemeine Materialwissenschaften
-    fr: Sciences des matériaux générales
-    es: Ciencia de materiales general
     cs: Obecná materiálová věda
-    sv: Allmän materialvetenskap
-    sl: Splošna veda o materialih
+    de: Allgemeine Materialwissenschaften
+    en: General Materials Science
+    es: Ciencia de materiales general
+    fr: Sciences des matériaux générales
+    it: Scienza dei materiali generale
     nl: Algemene materiaalkunde
     pt: Ciência dos materiais geral
-    it: Scienza dei materiali generale
+    sl: Splošna veda o materialih
+    sv: Allmän materialvetenskap
     tr: Genel malzeme bilimi
 - id: "https://openalex.org/subfields/3200"
   scheme: "Subfields"
   subject: "General Psychology"
   title:
-    en: General Psychology
-    de: Allgemeine Psychologie
-    fr: Psychologie générale
-    es: Psicología general
     cs: Obecná psychologie
-    sv: Allmän psykologi
-    sl: Splošna psihologija
+    de: Allgemeine Psychologie
+    en: General Psychology
+    es: Psicología general
+    fr: Psychologie générale
+    it: Psicologia generale
     nl: Algemene psychologie
     pt: Psicologia geral
-    it: Psicologia generale
+    sl: Splošna psihologija
+    sv: Allmän psykologi
     tr: Genel psikoloji
 - id: "https://openalex.org/subfields/3300"
   scheme: "Subfields"
   subject: "General Social Sciences"
   title:
-    en: General Social Sciences
-    de: Allgemeine Sozialwissenschaften
-    fr: Sciences sociales générales
-    es: Ciencias sociales generales
     cs: Obecné sociální vědy
-    sv: Allmänna samhällsvetenskaper
-    sl: Splošne družbene vede
+    de: Allgemeine Sozialwissenschaften
+    en: General Social Sciences
+    es: Ciencias sociales generales
+    fr: Sciences sociales générales
+    it: Scienze sociali generali
     nl: Algemene sociale wetenschappen
     pt: Ciências sociais gerais
-    it: Scienze sociali generali
+    sl: Splošne družbene vede
+    sv: Allmänna samhällsvetenskaper
     tr: Genel sosyal bilimler
 - id: "https://openalex.org/subfields/1311"
   scheme: "Subfields"
   subject: "Genetics"
   title:
-    en: Genetics
-    de: Genetik
-    fr: Génétique
-    es: Genética
     cs: Genetika
-    sv: Genetik
-    sl: Genetika
+    de: Genetik
+    en: Genetics
+    es: Genética
+    fr: Génétique
+    it: Genetica
     nl: Genetica
     pt: Genética
-    it: Genetica
+    sl: Genetika
+    sv: Genetik
     tr: Genetik
 - id: "https://openalex.org/subfields/2716"
   scheme: "Subfields"
   subject: "Genetics"
   title:
-    en: Genetics
-    de: Genetik
-    fr: Génétique
-    es: Genética
     cs: Genetika
-    sv: Genetik
-    sl: Genetika
+    de: Genetik
+    en: Genetics
+    es: Genética
+    fr: Génétique
+    it: Genetica
     nl: Genetica
     pt: Genética
-    it: Genetica
+    sl: Genetika
+    sv: Genetik
     tr: Genetik
 - id: "https://openalex.org/subfields/1906"
   scheme: "Subfields"
   subject: "Geochemistry and Petrology"
   title:
-    en: Geochemistry and Petrology
-    de: Geochemie und Petrologie
-    fr: Géochimie et pétrologie
-    es: Geoquímica y petrología
     cs: Geochemie a petrologie
-    sv: Geokemi och petrologi
-    sl: Geokemija in petrologija
+    de: Geochemie und Petrologie
+    en: Geochemistry and Petrology
+    es: Geoquímica y petrología
+    fr: Géochimie et pétrologie
+    it: Geochimica e petrologia
     nl: Geochemie en petrologie
     pt: Geoquímica e petrologia
-    it: Geochimica e petrologia
+    sl: Geokemija in petrologija
+    sv: Geokemi och petrologi
     tr: Jeokimya ve petroloji
 - id: "https://openalex.org/subfields/3305"
   scheme: "Subfields"
   subject: "Geography, Planning and Development"
   title:
-    en: Geography, Planning and Development
-    de: Geographie, Raumplanung und Entwicklung
-    fr: Géographie, planification et développement
-    es: Geografía, planificación y desarrollo
     cs: Geografie, plánování a rozvoj
-    sv: Geografi, stadsplanering och utveckling
-    sl: Geografija, prostorsko načrtovanje in razvoj
+    de: Geographie, Raumplanung und Entwicklung
+    en: Geography, Planning and Development
+    es: Geografía, planificación y desarrollo
+    fr: Géographie, planification et développement
+    it: Geografia, pianificazione e sviluppo
     nl: Geografie, ruimtelijke ordening en ontwikkeling
     pt: Geografia, planeamento e desenvolvimento
-    it: Geografia, pianificazione e sviluppo
+    sl: Geografija, prostorsko načrtovanje in razvoj
+    sv: Geografi, stadsplanering och utveckling
     tr: Coğrafya, planlama ve kalkınma
 - id: "https://openalex.org/subfields/1907"
   scheme: "Subfields"
   subject: "Geology"
   title:
-    en: Geology
-    de: Geologie
-    fr: Géologie
-    es: Geología
     cs: Geologie
-    sv: Geologi
-    sl: Geologija
+    de: Geologie
+    en: Geology
+    es: Geología
+    fr: Géologie
+    it: Geologia
     nl: Geologie
     pt: Geologia
-    it: Geologia
+    sl: Geologija
+    sv: Geologi
     tr: Jeoloji
 - id: "https://openalex.org/subfields/2608"
   scheme: "Subfields"
   subject: "Geometry and Topology"
   title:
-    en: Geometry and Topology
-    de: Geometrie und Topologie
-    fr: Géométrie et topologie
-    es: Geometría y topología
     cs: Geometrie a topologie
-    sv: Geometri och topologi
-    sl: Geometrija in topologija
+    de: Geometrie und Topologie
+    en: Geometry and Topology
+    es: Geometría y topología
+    fr: Géométrie et topologie
+    it: Geometria e topologia
     nl: Meetkunde en topologie
     pt: Geometria e topologia
-    it: Geometria e topologia
+    sl: Geometrija in topologija
+    sv: Geometri och topologi
     tr: Geometri ve topoloji
 - id: "https://openalex.org/subfields/1908"
   scheme: "Subfields"
   subject: "Geophysics"
   title:
-    en: Geophysics
-    de: Geophysik
-    fr: Géophysique
-    es: Geofísica
     cs: Geofyzika
-    sv: Geofysik
-    sl: Geofizika
+    de: Geophysik
+    en: Geophysics
+    es: Geofísica
+    fr: Géophysique
+    it: Geofisica
     nl: Geofysica
     pt: Geofísica
-    it: Geofisica
+    sl: Geofizika
+    sv: Geofysik
     tr: Jeofizik
 - id: "https://openalex.org/subfields/2717"
   scheme: "Subfields"
   subject: "Geriatrics and Gerontology"
   title:
-    en: Geriatrics and Gerontology
-    de: Geriatrie und Gerontologie
-    fr: Gériatrie et gérontologie
-    es: Geriatría y gerontología
     cs: Geriatrie a gerontologie
-    sv: Geriatri och gerontologi
-    sl: Geriatrija in gerontologija
+    de: Geriatrie und Gerontologie
+    en: Geriatrics and Gerontology
+    es: Geriatría y gerontología
+    fr: Gériatrie et gérontologie
+    it: Geriatria e gerontologia
     nl: Geriatrie en gerontologie
     pt: Geriatria e gerontologia
-    it: Geriatria e gerontologia
+    sl: Geriatrija in gerontologija
+    sv: Geriatri och gerontologi
     tr: Geriatri ve gerontoloji
 - id: "https://openalex.org/subfields/2306"
   scheme: "Subfields"
   subject: "Global and Planetary Change"
   title:
-    en: Global and Planetary Change
-    de: Globaler und planetarer Wandel
-    fr: Changement global et planétaire
-    es: Cambio global y planetario
     cs: Globální a planetární změna
-    sv: Global och planetär förändring
-    sl: Globalne in planetarne spremembe
+    de: Globaler und planetarer Wandel
+    en: Global and Planetary Change
+    es: Cambio global y planetario
+    fr: Changement global et planétaire
+    it: Cambiamento globale e planetario
     nl: Mondiale en planetaire verandering
     pt: Mudança global e planetária
-    it: Cambiamento globale e planetario
+    sl: Globalne in planetarne spremembe
+    sv: Global och planetär förändring
     tr: Küresel ve gezegense değişim
 - id: "https://openalex.org/subfields/1708"
   scheme: "Subfields"
   subject: "Hardware and Architecture"
   title:
-    en: Hardware and Architecture
-    de: Hardware und Architektur
-    fr: Matériel et architecture
-    es: Hardware y arquitectura
     cs: Hardware a architektura
-    sv: Hårdvara och arkitektur
-    sl: Strojna oprema in arhitektura
+    de: Hardware und Architektur
+    en: Hardware and Architecture
+    es: Hardware y arquitectura
+    fr: Matériel et architecture
+    it: Hardware e architettura
     nl: Hardware en architectuur
     pt: Hardware e arquitetura
-    it: Hardware e architettura
+    sl: Strojna oprema in arhitektura
+    sv: Hårdvara och arkitektur
     tr: Donanım ve mimari
 - id: "https://openalex.org/subfields/3306"
   scheme: "Subfields"
   subject: "Health"
   title:
-    en: Health
-    de: Gesundheit
-    fr: Santé
-    es: Salud
     cs: Zdraví
-    sv: Hälsa
-    sl: Zdravje
+    de: Gesundheit
+    en: Health
+    es: Salud
+    fr: Santé
+    it: Salute
     nl: Gezondheid
     pt: Saúde
-    it: Salute
+    sl: Zdravje
+    sv: Hälsa
     tr: Sağlık
 - id: "https://openalex.org/subfields/2718"
   scheme: "Subfields"
   subject: "Health Informatics"
   title:
-    en: Health Informatics
-    de: Gesundheitsinformatik
-    fr: Informatique de santé
-    es: Informática de salud
     cs: Zdravotnická informatika
-    sv: Hälsoinformatik
-    sl: Zdravstvena informatika
+    de: Gesundheitsinformatik
+    en: Health Informatics
+    es: Informática de salud
+    fr: Informatique de santé
+    it: Informatica sanitaria
     nl: Gezondheids­informatica
     pt: Informática em saúde
-    it: Informatica sanitaria
+    sl: Zdravstvena informatika
+    sv: Hälsoinformatik
     tr: Sağlık bilişimi
 - id: "https://openalex.org/subfields/3605"
   scheme: "Subfields"
   subject: "Health Information Management"
   title:
-    en: Health Information Management
-    de: Gesundheitsinformationsmanagement
-    fr: Gestion de l'information de santé
-    es: Gestión de información sanitaria
     cs: Správa zdravotních informací
-    sv: Hantering av hälsoinformation
-    sl: Upravljanje zdravstvenih informacij
+    de: Gesundheitsinformationsmanagement
+    en: Health Information Management
+    es: Gestión de información sanitaria
+    fr: Gestion de l'information de santé
+    it: Gestione delle informazioni sanitarie
     nl: Gezondheidsinformatiebeheer
     pt: Gestão de informação em saúde
-    it: Gestione delle informazioni sanitarie
+    sl: Upravljanje zdravstvenih informacij
+    sv: Hantering av hälsoinformation
     tr: Sağlık bilgi yönetimi
 - id: "https://openalex.org/subfields/2307"
   scheme: "Subfields"
   subject: "Health, Toxicology and Mutagenesis"
   title:
-    en: Health, Toxicology and Mutagenesis
-    de: Gesundheit, Toxikologie und Mutagenese
-    fr: Santé, toxicologie et mutagenèse
-    es: Salud, toxicología y mutagénesis
     cs: Zdraví, toxikologie a mutageneze
-    sv: Hälsa, toxikologi och mutagenes
-    sl: Zdravje, toksikologija in mutageneza
+    de: Gesundheit, Toxikologie und Mutagenese
+    en: Health, Toxicology and Mutagenesis
+    es: Salud, toxicología y mutagénesis
+    fr: Santé, toxicologie et mutagenèse
+    it: Salute, tossicologia e mutagenesi
     nl: Gezondheid, toxicologie en mutagenese
     pt: Saúde, toxicologia e mutagénese
-    it: Salute, tossicologia e mutagenesi
+    sl: Zdravje, toksikologija in mutageneza
+    sv: Hälsa, toxikologi och mutagenes
     tr: Sağlık, toksikoloji ve mutajenez
 - id: "https://openalex.org/subfields/2720"
   scheme: "Subfields"
   subject: "Hematology"
   title:
-    en: Hematology
-    de: Hämatologie
-    fr: Hématologie
-    es: Hematología
     cs: Hematologie
-    sv: Hematologi
-    sl: Hematologija
+    de: Hämatologie
+    en: Hematology
+    es: Hematología
+    fr: Hématologie
+    it: Ematologia
     nl: Hematologie
     pt: Hematologia
-    it: Ematologia
+    sl: Hematologija
+    sv: Hematologi
     tr: Hematoloji
 - id: "https://openalex.org/subfields/2721"
   scheme: "Subfields"
   subject: "Hepatology"
   title:
-    en: Hepatology
-    de: Hepatologie
-    fr: Hépatologie
-    es: Hepatología
     cs: Hepatologie
-    sv: Hepatologi
-    sl: Hepatologija
+    de: Hepatologie
+    en: Hepatology
+    es: Hepatología
+    fr: Hépatologie
+    it: Epatologia
     nl: Hepatologie
     pt: Hepatologia
-    it: Epatologia
+    sl: Hepatologija
+    sv: Hepatologi
     tr: Hepatoloji
 - id: "https://openalex.org/subfields/1202"
   scheme: "Subfields"
   subject: "History"
   title:
-    en: History
-    de: Geschichte
-    fr: Histoire
-    es: Historia
     cs: Historie
-    sv: Historia
-    sl: Zgodovina
+    de: Geschichte
+    en: History
+    es: Historia
+    fr: Histoire
+    it: Storia
     nl: Geschiedenis
     pt: História
-    it: Storia
+    sl: Zgodovina
+    sv: Historia
     tr: Tarih
 - id: "https://openalex.org/subfields/1207"
   scheme: "Subfields"
   subject: "History and Philosophy of Science"
   title:
-    en: History and Philosophy of Science
-    de: Geschichte und Philosophie der Wissenschaft
-    fr: Histoire et philosophie des sciences
-    es: Historia y filosofía de la ciencia
     cs: Dějiny a filozofie vědy
-    sv: Vetenskapens historia och filosofi
-    sl: Zgodovina in filozofija znanosti
+    de: Geschichte und Philosophie der Wissenschaft
+    en: History and Philosophy of Science
+    es: Historia y filosofía de la ciencia
+    fr: Histoire et philosophie des sciences
+    it: Storia e filosofia della scienza
     nl: Geschiedenis en filosofie van de wetenschap
     pt: História e filosofia da ciência
-    it: Storia e filosofia della scienza
+    sl: Zgodovina in filozofija znanosti
+    sv: Vetenskapens historia och filosofi
     tr: Bilim tarihi ve felsefesi
 - id: "https://openalex.org/subfields/1108"
   scheme: "Subfields"
   subject: "Horticulture"
   title:
-    en: Horticulture
-    de: Gartenbau
-    fr: Horticulture
-    es: Horticultura
     cs: Zahradnictví
-    sv: Trädgårdsvetenskap
-    sl: Vrtnarstvo
+    de: Gartenbau
+    en: Horticulture
+    es: Horticultura
+    fr: Horticulture
+    it: Orticoltura
     nl: Tuinbouw
     pt: Horticultura
-    it: Orticoltura
+    sl: Vrtnarstvo
+    sv: Trädgårdsvetenskap
     tr: Bahçecilik
 - id: "https://openalex.org/subfields/3307"
   scheme: "Subfields"
   subject: "Human Factors and Ergonomics"
   title:
-    en: Human Factors and Ergonomics
-    de: Menschliche Faktoren und Ergonomie
-    fr: Facteurs humains et ergonomie
-    es: Factores humanos y ergonomía
     cs: Lidské faktory a ergonomie
-    sv: Mänskliga faktorer och ergonomi
-    sl: Človeški dejavniki in ergonomija
+    de: Menschliche Faktoren und Ergonomie
+    en: Human Factors and Ergonomics
+    es: Factores humanos y ergonomía
+    fr: Facteurs humains et ergonomie
+    it: Fattori umani ed ergonomia
     nl: Menselijke factoren en ergonomie
     pt: Fatores humanos e ergonomia
-    it: Fattori umani ed ergonomia
+    sl: Človeški dejavniki in ergonomija
+    sv: Mänskliga faktorer och ergonomi
     tr: İnsan faktörleri ve ergonomi
 - id: "https://openalex.org/subfields/1709"
   scheme: "Subfields"
   subject: "Human-Computer Interaction"
   title:
-    en: Human-Computer Interaction
-    de: Mensch-Computer-Interaktion
-    fr: Interaction homme-machine
-    es: Interacción humano-computadora
     cs: Interakce člověka s počítačem
-    sv: Människa-datorinteraktion
-    sl: Interakcija človek-računalnik
+    de: Mensch-Computer-Interaktion
+    en: Human-Computer Interaction
+    es: Interacción humano-computadora
+    fr: Interaction homme-machine
+    it: Interazione uomo-macchina
     nl: Mens-computer interactie
     pt: Interação humano-computador
-    it: Interazione uomo-macchina
+    sl: Interakcija človek-računalnik
+    sv: Människa-datorinteraktion
     tr: İnsan-bilgisayar etkileşimi
 - id: "https://openalex.org/subfields/2403"
   scheme: "Subfields"
   subject: "Immunology"
   title:
-    en: Immunology
-    de: Immunologie
-    fr: Immunologie
-    es: Inmunología
     cs: Imunologie
-    sv: Immunologi
-    sl: Imunologija
+    de: Immunologie
+    en: Immunology
+    es: Inmunología
+    fr: Immunologie
+    it: Immunologia
     nl: Immunologie
     pt: Imunologia
-    it: Immunologia
+    sl: Imunologija
+    sv: Immunologi
     tr: İmmünoloji
 - id: "https://openalex.org/subfields/2723"
   scheme: "Subfields"
   subject: "Immunology and Allergy"
   title:
-    en: Immunology and Allergy
-    de: Immunologie und Allergie
-    fr: Immunologie et allergie
-    es: Inmunología y alergología
     cs: Imunologie a alergie
-    sv: Immunologi och allergi
-    sl: Imunologija in alergija
+    de: Immunologie und Allergie
+    en: Immunology and Allergy
+    es: Inmunología y alergología
+    fr: Immunologie et allergie
+    it: Immunologia e allergologia
     nl: Immunologie en allergologie
     pt: Imunologia e alergia
-    it: Immunologia e allergologia
+    sl: Imunologija in alergija
+    sv: Immunologi och allergi
     tr: İmmünoloji ve alerji
 - id: "https://openalex.org/subfields/2209"
   scheme: "Subfields"
   subject: "Industrial and Manufacturing Engineering"
   title:
-    en: Industrial and Manufacturing Engineering
-    de: Industrie- und Fertigungstechnik
-    fr: Génie industriel et de fabrication
-    es: Ingeniería industrial y de fabricación
     cs: Průmyslové a výrobní inženýrství
-    sv: Industri- och tillverkningsteknik
-    sl: Industrijsko in proizvodno inženirstvo
+    de: Industrie- und Fertigungstechnik
+    en: Industrial and Manufacturing Engineering
+    es: Ingeniería industrial y de fabricación
+    fr: Génie industriel et de fabrication
+    it: Ingegneria industriale e manifatturiera
     nl: Industrie- en productietechniek
     pt: Engenharia industrial e de fabrico
-    it: Ingegneria industriale e manifatturiera
+    sl: Industrijsko in proizvodno inženirstvo
+    sv: Industri- och tillverkningsteknik
     tr: Endüstri ve üretim mühendisliği
 - id: "https://openalex.org/subfields/2311"
   scheme: "Subfields"
   subject: "Industrial and Manufacturing Engineering"
   title:
-    en: Industrial and Manufacturing Engineering
-    de: Industrie- und Fertigungstechnik
-    fr: Génie industriel et de fabrication
-    es: Ingeniería industrial y de fabricación
     cs: Průmyslové a výrobní inženýrství
-    sv: Industri- och tillverkningsteknik
-    sl: Industrijsko in proizvodno inženirstvo
+    de: Industrie- und Fertigungstechnik
+    en: Industrial and Manufacturing Engineering
+    es: Ingeniería industrial y de fabricación
+    fr: Génie industriel et de fabrication
+    it: Ingegneria industriale e manifatturiera
     nl: Industrie- en productietechniek
     pt: Engenharia industrial e de fabrico
-    it: Ingegneria industriale e manifatturiera
+    sl: Industrijsko in proizvodno inženirstvo
+    sv: Industri- och tillverkningsteknik
     tr: Endüstri ve üretim mühendisliği
 - id: "https://openalex.org/subfields/1410"
   scheme: "Subfields"
   subject: "Industrial relations"
   title:
-    en: Industrial relations
-    de: Arbeitsbeziehungen
-    fr: Relations industrielles
-    es: Relaciones laborales
     cs: Pracovní vztahy
-    sv: Arbetsmarknadsrelationer
-    sl: Industrijski odnosi
+    de: Arbeitsbeziehungen
+    en: Industrial relations
+    es: Relaciones laborales
+    fr: Relations industrielles
+    it: Relazioni industriali
     nl: Arbeidsverhoudingen
     pt: Relações laborais
-    it: Relazioni industriali
+    sl: Industrijski odnosi
+    sv: Arbetsmarknadsrelationer
     tr: Endüstriyel ilişkiler
 - id: "https://openalex.org/subfields/2725"
   scheme: "Subfields"
   subject: "Infectious Diseases"
   title:
-    en: Infectious Diseases
-    de: Infektionskrankheiten
-    fr: Maladies infectieuses
-    es: Enfermedades infecciosas
     cs: Infekční nemoci
-    sv: Infektionssjukdomar
-    sl: Nalezljive bolezni
+    de: Infektionskrankheiten
+    en: Infectious Diseases
+    es: Enfermedades infecciosas
+    fr: Maladies infectieuses
+    it: Malattie infettive
     nl: Infectieziekten
     pt: Doenças infecciosas
-    it: Malattie infettive
+    sl: Nalezljive bolezni
+    sv: Infektionssjukdomar
     tr: Enfeksiyon hastalıkları
 - id: "https://openalex.org/subfields/1710"
   scheme: "Subfields"
   subject: "Information Systems"
   title:
-    en: Information Systems
-    de: Informationssysteme
-    fr: Systèmes d'information
-    es: Sistemas de información
     cs: Informační systémy
-    sv: Informationssystem
-    sl: Informacijski sistemi
+    de: Informationssysteme
+    en: Information Systems
+    es: Sistemas de información
+    fr: Systèmes d'information
+    it: Sistemi informativi
     nl: Informatiesystemen
     pt: Sistemas de informação
-    it: Sistemi informativi
+    sl: Informacijski sistemi
+    sv: Informationssystem
     tr: Bilgi sistemleri
 - id: "https://openalex.org/subfields/1802"
   scheme: "Subfields"
   subject: "Information Systems and Management"
   title:
-    en: Information Systems and Management
-    de: Informationssysteme und Management
-    fr: Systèmes d'information et management
-    es: Sistemas de información y gestión
     cs: Informační systémy a management
-    sv: Informationssystem och management
-    sl: Informacijski sistemi in management
+    de: Informationssysteme und Management
+    en: Information Systems and Management
+    es: Sistemas de información y gestión
+    fr: Systèmes d'information et management
+    it: Sistemi informativi e management
     nl: Informatiesystemen en management
     pt: Sistemas de informação e gestão
-    it: Sistemi informativi e management
+    sl: Informacijski sistemi in management
+    sv: Informationssystem och management
     tr: Bilgi sistemleri ve yönetim
 - id: "https://openalex.org/subfields/1604"
   scheme: "Subfields"
   subject: "Inorganic Chemistry"
   title:
-    en: Inorganic Chemistry
-    de: Anorganische Chemie
-    fr: Chimie inorganique
-    es: Química inorgánica
     cs: Anorganická chemie
-    sv: Oorganisk kemi
-    sl: Anorganska kemija
+    de: Anorganische Chemie
+    en: Inorganic Chemistry
+    es: Química inorgánica
+    fr: Chimie inorganique
+    it: Chimica inorganica
     nl: Anorganische scheikunde
     pt: Química inorgânica
-    it: Chimica inorganica
+    sl: Anorganska kemija
+    sv: Oorganisk kemi
     tr: İnorganik kimya
 - id: "https://openalex.org/subfields/1109"
   scheme: "Subfields"
   subject: "Insect Science"
   title:
-    en: Insect Science
-    de: Insektenkunde
-    fr: Entomologie
-    es: Entomología
     cs: Entomologie
-    sv: Insektsvetenskap
-    sl: Entomologija
+    de: Insektenkunde
+    en: Insect Science
+    es: Entomología
+    fr: Entomologie
+    it: Entomologia
     nl: Insectenkunde
     pt: Entomologia
-    it: Entomologia
+    sl: Entomologija
+    sv: Insektsvetenskap
     tr: Böcek bilimi
 - id: "https://openalex.org/subfields/3105"
   scheme: "Subfields"
   subject: "Instrumentation"
   title:
-    en: Instrumentation
-    de: Instrumentierung
-    fr: Instrumentation
-    es: Instrumentación
     cs: Instrumentace
-    sv: Instrumentering
-    sl: Instrumentacija
+    de: Instrumentierung
+    en: Instrumentation
+    es: Instrumentación
+    fr: Instrumentation
+    it: Strumentazione
     nl: Instrumentatie
     pt: Instrumentação
-    it: Strumentazione
+    sl: Instrumentacija
+    sv: Instrumentering
     tr: Enstrümantasyon
 - id: "https://openalex.org/subfields/2724"
   scheme: "Subfields"
   subject: "Internal Medicine"
   title:
-    en: Internal Medicine
-    de: Innere Medizin
-    fr: Médecine interne
-    es: Medicina interna
     cs: Vnitřní lékařství
-    sv: Internmedicin
-    sl: Interna medicina
+    de: Innere Medizin
+    en: Internal Medicine
+    es: Medicina interna
+    fr: Médecine interne
+    it: Medicina interna
     nl: Interne geneeskunde
     pt: Medicina interna
-    it: Medicina interna
+    sl: Interna medicina
+    sv: Internmedicin
     tr: İç hastalıkları
 - id: "https://openalex.org/subfields/2910"
   scheme: "Subfields"
   subject: "Issues, ethics and legal aspects"
   title:
-    en: Issues, ethics and legal aspects
-    de: Fragen, Ethik und rechtliche Aspekte
-    fr: Questions, éthique et aspects juridiques
-    es: Cuestiones, ética y aspectos jurídicos
     cs: Otázky, etika a právní aspekty
-    sv: Frågor, etik och juridiska aspekter
-    sl: Vprašanja, etika in pravni vidiki
+    de: Fragen, Ethik und rechtliche Aspekte
+    en: Issues, ethics and legal aspects
+    es: Cuestiones, ética y aspectos jurídicos
+    fr: Questions, éthique et aspects juridiques
+    it: Questioni, etica e aspetti giuridici
     nl: Kwesties, ethiek en juridische aspecten
     pt: Questões, ética e aspetos jurídicos
-    it: Questioni, etica e aspetti giuridici
+    sl: Vprašanja, etika in pravni vidiki
+    sv: Frågor, etik och juridiska aspekter
     tr: Sorunlar, etik ve hukuki boyutlar
 - id: "https://openalex.org/subfields/1203"
   scheme: "Subfields"
   subject: "Language and Linguistics"
   title:
-    en: Language and Linguistics
-    de: Sprache und Linguistik
-    fr: Langue et linguistique
-    es: Lengua y lingüística
     cs: Jazyk a lingvistika
-    sv: Språk och lingvistik
-    sl: Jezik in jezikoslovje
+    de: Sprache und Linguistik
+    en: Language and Linguistics
+    es: Lengua y lingüística
+    fr: Langue et linguistique
+    it: Lingua e linguistica
     nl: Taal en taalkunde
     pt: Língua e linguística
-    it: Lingua e linguistica
+    sl: Jezik in jezikoslovje
+    sv: Språk och lingvistik
     tr: Dil ve dilbilim
 - id: "https://openalex.org/subfields/3308"
   scheme: "Subfields"
   subject: "Law"
   title:
-    en: Law
-    de: Rechtswissenschaft
-    fr: Droit
-    es: Derecho
     cs: Právo
-    sv: Rätt
-    sl: Pravo
+    de: Rechtswissenschaft
+    en: Law
+    es: Derecho
+    fr: Droit
+    it: Diritto
     nl: Recht
     pt: Direito
-    it: Diritto
+    sl: Pravo
+    sv: Rätt
     tr: Hukuk
 - id: "https://openalex.org/subfields/2911"
   scheme: "Subfields"
   subject: "Leadership and Management"
   title:
-    en: Leadership and Management
-    de: Führung und Management
-    fr: Leadership et management
-    es: Liderazgo y gestión
     cs: Vedení a management
-    sv: Ledarskap och management
-    sl: Vodenje in management
+    de: Führung und Management
+    en: Leadership and Management
+    es: Liderazgo y gestión
+    fr: Leadership et management
+    it: Leadership e management
     nl: Leiderschap en management
     pt: Liderança e gestão
-    it: Leadership e management
+    sl: Vodenje in management
+    sv: Ledarskap och management
     tr: Liderlik ve yönetim
 - id: "https://openalex.org/subfields/3309"
   scheme: "Subfields"
   subject: "Library and Information Sciences"
   title:
-    en: Library and Information Sciences
-    de: Bibliotheks- und Informationswissenschaften
-    fr: Sciences de la bibliothéconomie et de l'information
-    es: Biblioteconomía y ciencias de la información
     cs: Knihovnictví a informační vědy
-    sv: Biblioteks- och informationsvetenskap
-    sl: Knjižničarstvo in informacijske vede
+    de: Bibliotheks- und Informationswissenschaften
+    en: Library and Information Sciences
+    es: Biblioteconomía y ciencias de la información
+    fr: Sciences de la bibliothéconomie et de l'information
+    it: Biblioteconomia e scienze dell'informazione
     nl: Bibliotheek- en informatiewetenschap
     pt: Biblioteconomia e ciências da informação
-    it: Biblioteconomia e scienze dell'informazione
+    sl: Knjižničarstvo in informacijske vede
+    sv: Biblioteks- och informationsvetenskap
     tr: Kütüphanecilik ve bilgi bilimleri
 - id: "https://openalex.org/subfields/3319"
   scheme: "Subfields"
   subject: "Life-span and Life-course Studies"
   title:
-    en: Life-span and Life-course Studies
-    de: Lebensspannen- und Lebenslaufstudien
-    fr: Études sur le parcours de vie
-    es: Estudios del ciclo vital
     cs: Studia životního span a životní dráhy
-    sv: Livslopp och livsloppsstudier
-    sl: Študije življenjske poti
+    de: Lebensspannen- und Lebenslaufstudien
+    en: Life-span and Life-course Studies
+    es: Estudios del ciclo vital
+    fr: Études sur le parcours de vie
+    it: Studi sul ciclo di vita
     nl: Levensloop- en levenscyclus studies
     pt: Estudos do ciclo de vida
-    it: Studi sul ciclo di vita
+    sl: Študije življenjske poti
+    sv: Livslopp och livsloppsstudier
     tr: Yaşam süreci ve yaşam akışı çalışmaları
 - id: "https://openalex.org/subfields/3310"
   scheme: "Subfields"
   subject: "Linguistics and Language"
   title:
-    en: Linguistics and Language
-    de: Linguistik und Sprache
-    fr: Linguistique et langue
-    es: Lingüística y lengua
     cs: Lingvistika a jazyk
-    sv: Lingvistik och språk
-    sl: Jezikoslovje in jezik
+    de: Linguistik und Sprache
+    en: Linguistics and Language
+    es: Lingüística y lengua
+    fr: Linguistique et langue
+    it: Linguistica e lingua
     nl: Taalkunde en taal
     pt: Linguística e língua
-    it: Linguistica e lingua
+    sl: Jezikoslovje in jezik
+    sv: Lingvistik och språk
     tr: Dilbilim ve dil
 - id: "https://openalex.org/subfields/1208"
   scheme: "Subfields"
   subject: "Literature and Literary Theory"
   title:
-    en: Literature and Literary Theory
-    de: Literatur und Literaturtheorie
-    fr: Littérature et théorie littéraire
-    es: Literatura y teoría literaria
     cs: Literatura a literární teorie
-    sv: Litteratur och litteraturteori
-    sl: Literatura in literarna teorija
+    de: Literatur und Literaturtheorie
+    en: Literature and Literary Theory
+    es: Literatura y teoría literaria
+    fr: Littérature et théorie littéraire
+    it: Letteratura e teoria letteraria
     nl: Literatuur en literaire theorie
     pt: Literatura e teoria literária
-    it: Letteratura e teoria letteraria
+    sl: Literatura in literarna teorija
+    sv: Litteratur och litteraturteori
     tr: Edebiyat ve edebi teori
 - id: "https://openalex.org/subfields/1404"
   scheme: "Subfields"
   subject: "Management Information Systems"
   title:
-    en: Management Information Systems
-    de: Managementinformationssysteme
-    fr: Systèmes d'information de gestion
-    es: Sistemas de información de gestión
     cs: Manažerské informační systémy
-    sv: Ledningsinformationssystem
-    sl: Upravljavski informacijski sistemi
+    de: Managementinformationssysteme
+    en: Management Information Systems
+    es: Sistemas de información de gestión
+    fr: Systèmes d'information de gestion
+    it: Sistemi informativi aziendali
     nl: Management informatiesystemen
     pt: Sistemas de informação de gestão
-    it: Sistemi informativi aziendali
+    sl: Upravljavski informacijski sistemi
+    sv: Ledningsinformationssystem
     tr: Yönetim bilgi sistemleri
 - id: "https://openalex.org/subfields/1405"
   scheme: "Subfields"
   subject: "Management of Technology and Innovation"
   title:
-    en: Management of Technology and Innovation
-    de: Technologie- und Innovationsmanagement
-    fr: Management de la technologie et de l'innovation
-    es: Gestión de la tecnología y la innovación
     cs: Management technologií a inovací
-    sv: Teknik- och innovationsledning
-    sl: Management tehnologij in inovacij
+    de: Technologie- und Innovationsmanagement
+    en: Management of Technology and Innovation
+    es: Gestión de la tecnología y la innovación
+    fr: Management de la technologie et de l'innovation
+    it: Gestione della tecnologia e dell'innovazione
     nl: Technologie- en innovatiemanagement
     pt: Gestão de tecnologia e inovação
-    it: Gestione della tecnologia e dell'innovazione
+    sl: Management tehnologij in inovacij
+    sv: Teknik- och innovationsledning
     tr: Teknoloji ve inovasyon yönetimi
 - id: "https://openalex.org/subfields/1803"
   scheme: "Subfields"
   subject: "Management Science and Operations Research"
   title:
-    en: Management Science and Operations Research
-    de: Managementwissenschaft und Operations Research
-    fr: Sciences du management et recherche opérationnelle
-    es: Ciencias de la gestión e investigación de operaciones
     cs: Věda o řízení a operační výzkum
-    sv: Ledningsvetenskap och operations research
-    sl: Upravljavska veda in operativne raziskave
+    de: Managementwissenschaft und Operations Research
+    en: Management Science and Operations Research
+    es: Ciencias de la gestión e investigación de operaciones
+    fr: Sciences du management et recherche opérationnelle
+    it: Scienze gestionali e ricerca operativa
     nl: Managementwetenschap en operations research
     pt: Ciências da gestão e investigação operacional
-    it: Scienze gestionali e ricerca operativa
+    sl: Upravljavska veda in operativne raziskave
+    sv: Ledningsvetenskap och operations research
     tr: Yönetim bilimi ve yöneylem araştırması
 - id: "https://openalex.org/subfields/2308"
   scheme: "Subfields"
   subject: "Management, Monitoring, Policy and Law"
   title:
-    en: Management, Monitoring, Policy and Law
-    de: Management, Überwachung, Politik und Recht
-    fr: Management, surveillance, politique et droit
-    es: Gestión, monitoreo, política y derecho
     cs: Management, monitorování, politika a právo
-    sv: Management, övervakning, politik och lag
-    sl: Upravljanje, monitoring, politika in pravo
+    de: Management, Überwachung, Politik und Recht
+    en: Management, Monitoring, Policy and Law
+    es: Gestión, monitoreo, política y derecho
+    fr: Management, surveillance, politique et droit
+    it: Gestione, monitoraggio, politica e diritto
     nl: Beheer, monitoring, beleid en recht
     pt: Gestão, monitorização, política e direito
-    it: Gestione, monitoraggio, politica e diritto
+    sl: Upravljanje, monitoring, politika in pravo
+    sv: Management, övervakning, politik och lag
     tr: Yönetim, izleme, politika ve hukuk
 - id: "https://openalex.org/subfields/1406"
   scheme: "Subfields"
   subject: "Marketing"
   title:
-    en: Marketing
-    de: Marketing
-    fr: Marketing
-    es: Marketing
     cs: Marketing
-    sv: Marknadsföring
-    sl: Trženje
+    de: Marketing
+    en: Marketing
+    es: Marketing
+    fr: Marketing
+    it: Marketing
     nl: Marketing
     pt: Marketing
-    it: Marketing
+    sl: Trženje
+    sv: Marknadsföring
     tr: Pazarlama
 - id: "https://openalex.org/subfields/2505"
   scheme: "Subfields"
   subject: "Materials Chemistry"
   title:
-    en: Materials Chemistry
-    de: Materialchemie
-    fr: Chimie des matériaux
-    es: Química de materiales
     cs: Chemie materiálů
-    sv: Materialkemi
-    sl: Kemija materialov
+    de: Materialchemie
+    en: Materials Chemistry
+    es: Química de materiales
+    fr: Chimie des matériaux
+    it: Chimica dei materiali
     nl: Materiaalchemie
     pt: Química dos materiais
-    it: Chimica dei materiali
+    sl: Kemija materialov
+    sv: Materialkemi
     tr: Malzeme kimyası
 - id: "https://openalex.org/subfields/2610"
   scheme: "Subfields"
   subject: "Mathematical Physics"
   title:
-    en: Mathematical Physics
-    de: Mathematische Physik
-    fr: Physique mathématique
-    es: Física matemática
     cs: Matematická fyzika
-    sv: Matematisk fysik
-    sl: Matematična fizika
+    de: Mathematische Physik
+    en: Mathematical Physics
+    es: Física matemática
+    fr: Physique mathématique
+    it: Fisica matematica
     nl: Mathematische fysica
     pt: Física matemática
-    it: Fisica matematica
+    sl: Matematična fizika
+    sv: Matematisk fysik
     tr: Matematiksel fizik
 - id: "https://openalex.org/subfields/2210"
   scheme: "Subfields"
   subject: "Mechanical Engineering"
   title:
-    en: Mechanical Engineering
-    de: Maschinenbau
-    fr: Génie mécanique
-    es: Ingeniería mecánica
     cs: Strojní inženýrství
-    sv: Maskinteknik
-    sl: Strojno inženirstvo
+    de: Maschinenbau
+    en: Mechanical Engineering
+    es: Ingeniería mecánica
+    fr: Génie mécanique
+    it: Ingegneria meccanica
     nl: Werktuigbouwkunde
     pt: Engenharia mecânica
-    it: Ingegneria meccanica
+    sl: Strojno inženirstvo
+    sv: Maskinteknik
     tr: Makine mühendisliği
 - id: "https://openalex.org/subfields/2211"
   scheme: "Subfields"
   subject: "Mechanics of Materials"
   title:
-    en: Mechanics of Materials
-    de: Werkstoffmechanik
-    fr: Mécanique des matériaux
-    es: Mecánica de materiales
     cs: Mechanika materiálů
-    sv: Materialmekanik
-    sl: Mehanika materialov
+    de: Werkstoffmechanik
+    en: Mechanics of Materials
+    es: Mecánica de materiales
+    fr: Mécanique des matériaux
+    it: Meccanica dei materiali
     nl: Materiaalmechanica
     pt: Mecânica dos materiais
-    it: Meccanica dei materiali
+    sl: Mehanika materialov
+    sv: Materialmekanik
     tr: Malzeme mekaniği
 - id: "https://openalex.org/subfields/2214"
   scheme: "Subfields"
   subject: "Media Technology"
   title:
-    en: Media Technology
-    de: Medientechnologie
-    fr: Technologie des médias
-    es: Tecnología de medios
     cs: Mediální technologie
-    sv: Medieteknik
-    sl: Medijska tehnologija
+    de: Medientechnologie
+    en: Media Technology
+    es: Tecnología de medios
+    fr: Technologie des médias
+    it: Tecnologia dei media
     nl: Mediatechnologie
     pt: Tecnologia dos media
-    it: Tecnologia dei media
+    sl: Medijska tehnologija
+    sv: Medieteknik
     tr: Medya teknolojisi
 - id: "https://openalex.org/subfields/3607"
   scheme: "Subfields"
   subject: "Medical Laboratory Technology"
   title:
-    en: Medical Laboratory Technology
-    de: Medizinische Labortechnologie
-    fr: Technologie de laboratoire médical
-    es: Tecnología de laboratorio médico
     cs: Technologie zdravotnické laboratoře
-    sv: Medicinsk laboratorieteknik
-    sl: Tehnologija medicinskega laboratorija
+    de: Medizinische Labortechnologie
+    en: Medical Laboratory Technology
+    es: Tecnología de laboratorio médico
+    fr: Technologie de laboratoire médical
+    it: Tecnologia di laboratorio medico
     nl: Medische laboratoriumtechnologie
     pt: Tecnologia laboratorial médica
-    it: Tecnologia di laboratorio medico
+    sl: Tehnologija medicinskega laboratorija
+    sv: Medicinsk laboratorieteknik
     tr: Tıbbi laboratuvar teknolojisi
 - id: "https://openalex.org/subfields/3608"
   scheme: "Subfields"
   subject: "Medical Terminology"
   title:
-    en: Medical Terminology
-    de: Medizinische Terminologie
-    fr: Terminologie médicale
-    es: Terminología médica
     cs: Lékařská terminologie
-    sv: Medicinsk terminologi
-    sl: Medicinska terminologija
+    de: Medizinische Terminologie
+    en: Medical Terminology
+    es: Terminología médica
+    fr: Terminologie médicale
+    it: Terminologia medica
     nl: Medische terminologie
     pt: Terminologia médica
-    it: Terminologia medica
+    sl: Medicinska terminologija
+    sv: Medicinsk terminologi
     tr: Tıbbi terminoloji
 - id: "https://openalex.org/subfields/2506"
   scheme: "Subfields"
   subject: "Metals and Alloys"
   title:
-    en: Metals and Alloys
-    de: Metalle und Legierungen
-    fr: Métaux et alliages
-    es: Metales y aleaciones
     cs: Kovy a slitiny
-    sv: Metaller och legeringar
-    sl: Kovine in zlitine
+    de: Metalle und Legierungen
+    en: Metals and Alloys
+    es: Metales y aleaciones
+    fr: Métaux et alliages
+    it: Metalli e leghe
     nl: Metalen en legeringen
     pt: Metais e ligas
-    it: Metalli e leghe
+    sl: Kovine in zlitine
+    sv: Metaller och legeringar
     tr: Metaller ve alaşımlar
 - id: "https://openalex.org/subfields/2404"
   scheme: "Subfields"
   subject: "Microbiology"
   title:
-    en: Microbiology
-    de: Mikrobiologie
-    fr: Microbiologie
-    es: Microbiología
     cs: Mikrobiologie
-    sv: Mikrobiologi
-    sl: Mikrobiologija
+    de: Mikrobiologie
+    en: Microbiology
+    es: Microbiología
+    fr: Microbiologie
+    it: Microbiologia
     nl: Microbiologie
     pt: Microbiologia
-    it: Microbiologia
+    sl: Mikrobiologija
+    sv: Mikrobiologi
     tr: Mikrobiyoloji
 - id: "https://openalex.org/subfields/2726"
   scheme: "Subfields"
   subject: "Microbiology"
   title:
-    en: Microbiology
-    de: Mikrobiologie
-    fr: Microbiologie
-    es: Microbiología
     cs: Mikrobiologie
-    sv: Mikrobiologi
-    sl: Mikrobiologija
+    de: Mikrobiologie
+    en: Microbiology
+    es: Microbiología
+    fr: Microbiologie
+    it: Microbiologia
     nl: Microbiologie
     pt: Microbiologia
-    it: Microbiologia
+    sl: Mikrobiologija
+    sv: Mikrobiologi
     tr: Mikrobiyoloji
 - id: "https://openalex.org/subfields/2611"
   scheme: "Subfields"
   subject: "Modeling and Simulation"
   title:
-    en: Modeling and Simulation
-    de: Modellierung und Simulation
-    fr: Modélisation et simulation
-    es: Modelización y simulación
     cs: Modelování a simulace
-    sv: Modellering och simulering
-    sl: Modeliranje in simulacija
+    de: Modellierung und Simulation
+    en: Modeling and Simulation
+    es: Modelización y simulación
+    fr: Modélisation et simulation
+    it: Modellazione e simulazione
     nl: Modellering en simulatie
     pt: Modelação e simulação
-    it: Modellazione e simulazione
+    sl: Modeliranje in simulacija
+    sv: Modellering och simulering
     tr: Modelleme ve simülasyon
 - id: "https://openalex.org/subfields/1312"
   scheme: "Subfields"
   subject: "Molecular Biology"
   title:
-    en: Molecular Biology
-    de: Molekularbiologie
-    fr: Biologie moléculaire
-    es: Biología molecular
     cs: Molekulární biologie
-    sv: Molekylärbiologi
-    sl: Molekularna biologija
+    de: Molekularbiologie
+    en: Molecular Biology
+    es: Biología molecular
+    fr: Biologie moléculaire
+    it: Biologia molecolare
     nl: Moleculaire biologie
     pt: Biologia molecular
-    it: Biologia molecolare
+    sl: Molekularna biologija
+    sv: Molekylärbiologi
     tr: Moleküler biyoloji
 - id: "https://openalex.org/subfields/1313"
   scheme: "Subfields"
   subject: "Molecular Medicine"
   title:
-    en: Molecular Medicine
-    de: Molekulare Medizin
-    fr: Médecine moléculaire
-    es: Medicina molecular
     cs: Molekulární medicína
-    sv: Molekylär medicin
-    sl: Molekularna medicina
+    de: Molekulare Medizin
+    en: Molecular Medicine
+    es: Medicina molecular
+    fr: Médecine moléculaire
+    it: Medicina molecolare
     nl: Moleculaire geneeskunde
     pt: Medicina molecular
-    it: Medicina molecolare
+    sl: Molekularna medicina
+    sv: Molekylär medicin
     tr: Moleküler tıp
 - id: "https://openalex.org/subfields/1209"
   scheme: "Subfields"
   subject: "Museology"
   title:
-    en: Museology
-    de: Museologie
-    fr: Muséologie
-    es: Museología
     cs: Muzeologie
-    sv: Museologi
-    sl: Muzeologija
+    de: Museologie
+    en: Museology
+    es: Museología
+    fr: Muséologie
+    it: Museologia
     nl: Museologie
     pt: Museologia
-    it: Museologia
+    sl: Muzeologija
+    sv: Museologi
     tr: Müzecilik
 - id: "https://openalex.org/subfields/1210"
   scheme: "Subfields"
   subject: "Music"
   title:
-    en: Music
-    de: Musik
-    fr: Musique
-    es: Música
     cs: Hudba
-    sv: Musik
-    sl: Glasba
+    de: Musik
+    en: Music
+    es: Música
+    fr: Musique
+    it: Musica
     nl: Muziek
     pt: Música
-    it: Musica
+    sl: Glasba
+    sv: Musik
     tr: Müzik
 - id: "https://openalex.org/subfields/2309"
   scheme: "Subfields"
   subject: "Nature and Landscape Conservation"
   title:
-    en: Nature and Landscape Conservation
-    de: Natur- und Landschaftsschutz
-    fr: Conservation de la nature et du paysage
-    es: Conservación de la naturaleza y el paisaje
     cs: Ochrana přírody a krajiny
-    sv: Natur- och landskapsvård
-    sl: Varstvo narave in krajine
+    de: Natur- und Landschaftsschutz
+    en: Nature and Landscape Conservation
+    es: Conservación de la naturaleza y el paisaje
+    fr: Conservation de la nature et du paysage
+    it: Conservazione della natura e del paesaggio
     nl: Natuur- en landschapsbehoud
     pt: Conservação da natureza e da paisagem
-    it: Conservazione della natura e del paesaggio
+    sl: Varstvo narave in krajine
+    sv: Natur- och landskapsvård
     tr: Doğa ve peyzaj koruma
 - id: "https://openalex.org/subfields/2727"
   scheme: "Subfields"
   subject: "Nephrology"
   title:
-    en: Nephrology
-    de: Nephrologie
-    fr: Néphrologie
-    es: Nefrología
     cs: Nefrologie
-    sv: Nefrologi
-    sl: Nefrologija
+    de: Nephrologie
+    en: Nephrology
+    es: Nefrología
+    fr: Néphrologie
+    it: Nefrologia
     nl: Nephrologie
     pt: Nefrologia
-    it: Nefrologia
+    sl: Nefrologija
+    sv: Nefrologi
     tr: Nefroloji
 - id: "https://openalex.org/subfields/2728"
   scheme: "Subfields"
   subject: "Neurology"
   title:
-    en: Neurology
-    de: Neurologie
-    fr: Neurologie
-    es: Neurología
     cs: Neurologie
-    sv: Neurologi
-    sl: Nevrologija
+    de: Neurologie
+    en: Neurology
+    es: Neurología
+    fr: Neurologie
+    it: Neurologia
     nl: Neurologie
     pt: Neurologia
-    it: Neurologia
+    sl: Nevrologija
+    sv: Neurologi
     tr: Nöroloji
 - id: "https://openalex.org/subfields/2808"
   scheme: "Subfields"
   subject: "Neurology"
   title:
-    en: Neurology
-    de: Neurologie
-    fr: Neurologie
-    es: Neurología
     cs: Neurologie
-    sv: Neurologi
-    sl: Nevrologija
+    de: Neurologie
+    en: Neurology
+    es: Neurología
+    fr: Neurologie
+    it: Neurologia
     nl: Neurologie
     pt: Neurologia
-    it: Neurologia
+    sl: Nevrologija
+    sv: Neurologi
     tr: Nöroloji
 - id: "https://openalex.org/subfields/3206"
   scheme: "Subfields"
   subject: "Neuropsychology and Physiological Psychology"
   title:
-    en: Neuropsychology and Physiological Psychology
-    de: Neuropsychologie und Physiologische Psychologie
-    fr: Neuropsychologie et psychologie physiologique
-    es: Neuropsicología y psicología fisiológica
     cs: Neuropsychologie a fyziologická psychologie
-    sv: Neuropsykologi och fysiologisk psykologi
-    sl: Nevropsihologija in fiziološka psihologija
+    de: Neuropsychologie und Physiologische Psychologie
+    en: Neuropsychology and Physiological Psychology
+    es: Neuropsicología y psicología fisiológica
+    fr: Neuropsychologie et psychologie physiologique
+    it: Neuropsicologia e psicologia fisiologica
     nl: Neuropsychologie en fysiologische psychologie
     pt: Neuropsicologia e psicologia fisiológica
-    it: Neuropsicologia e psicologia fisiologica
+    sl: Nevropsihologija in fiziološka psihologija
+    sv: Neuropsykologi och fysiologisk psykologi
     tr: Nöropsikoloji ve fizyolojik psikoloji
 - id: "https://openalex.org/subfields/3106"
   scheme: "Subfields"
   subject: "Nuclear and High Energy Physics"
   title:
-    en: Nuclear and High Energy Physics
-    de: Kern- und Hochenergiephysik
-    fr: Physique nucléaire et des hautes énergies
-    es: Física nuclear y de altas energías
     cs: Jaderná fyzika a fyzika vysokých energií
-    sv: Kärn- och högenergifysik
-    sl: Jedrska fizika in fizika visokih energij
+    de: Kern- und Hochenergiephysik
+    en: Nuclear and High Energy Physics
+    es: Física nuclear y de altas energías
+    fr: Physique nucléaire et des hautes énergies
+    it: Fisica nucleare e delle alte energie
     nl: Kern- en hoge-energiefysica
     pt: Física nuclear e de altas energias
-    it: Fisica nucleare e delle alte energie
+    sl: Jedrska fizika in fizika visokih energij
+    sv: Kärn- och högenergifysik
     tr: Nükleer ve yüksek enerji fiziği
 - id: "https://openalex.org/subfields/2104"
   scheme: "Subfields"
   subject: "Nuclear Energy and Engineering"
   title:
-    en: Nuclear Energy and Engineering
-    de: Kernenergie und Kerntechnik
-    fr: Énergie nucléaire et génie nucléaire
-    es: Energía nuclear e ingeniería nuclear
     cs: Jaderná energie a inženýrství
-    sv: Kärnkraft och kärnkraftsteknik
-    sl: Jedrska energija in inženirstvo
+    de: Kernenergie und Kerntechnik
+    en: Nuclear Energy and Engineering
+    es: Energía nuclear e ingeniería nuclear
+    fr: Énergie nucléaire et génie nucléaire
+    it: Energia nucleare e ingegneria nucleare
     nl: Kernenergie en kerntechniek
     pt: Energia nuclear e engenharia nuclear
-    it: Energia nucleare e ingegneria nucleare
+    sl: Jedrska energija in inženirstvo
+    sv: Kärnkraft och kärnkraftsteknik
     tr: Nükleer enerji ve mühendislik
 - id: "https://openalex.org/subfields/2612"
   scheme: "Subfields"
   subject: "Numerical Analysis"
   title:
-    en: Numerical Analysis
-    de: Numerische Analyse
-    fr: Analyse numérique
-    es: Análisis numérico
     cs: Numerická analýza
-    sv: Numerisk analys
-    sl: Numerična analiza
+    de: Numerische Analyse
+    en: Numerical Analysis
+    es: Análisis numérico
+    fr: Analyse numérique
+    it: Analisi numerica
     nl: Numerieke analyse
     pt: Análise numérica
-    it: Analisi numerica
+    sl: Numerična analiza
+    sv: Numerisk analys
     tr: Sayısal analiz
 - id: "https://openalex.org/subfields/2916"
   scheme: "Subfields"
   subject: "Nutrition and Dietetics"
   title:
-    en: Nutrition and Dietetics
-    de: Ernährung und Diätetik
-    fr: Nutrition et diététique
-    es: Nutrición y dietética
     cs: Výživa a dietetika
-    sv: Nutrition och dietistik
-    sl: Prehrana in dietetika
+    de: Ernährung und Diätetik
+    en: Nutrition and Dietetics
+    es: Nutrición y dietética
+    fr: Nutrition et diététique
+    it: Nutrizione e dietetica
     nl: Voeding en diëtetiek
     pt: Nutrição e dietética
-    it: Nutrizione e dietetica
+    sl: Prehrana in dietetika
+    sv: Nutrition och dietistik
     tr: Beslenme ve diyetetik
 - id: "https://openalex.org/subfields/2729"
   scheme: "Subfields"
   subject: "Obstetrics and Gynecology"
   title:
-    en: Obstetrics and Gynecology
-    de: Geburtshilfe und Gynäkologie
-    fr: Obstétrique et gynécologie
-    es: Obstetricia y ginecología
     cs: Porodnictví a gynekologie
-    sv: Obstetrik och gynekologi
-    sl: Porodništvo in ginekologija
+    de: Geburtshilfe und Gynäkologie
+    en: Obstetrics and Gynecology
+    es: Obstetricia y ginecología
+    fr: Obstétrique et gynécologie
+    it: Ostetricia e ginecologia
     nl: Verloskunde en gynaecologie
     pt: Obstetrícia e ginecologia
-    it: Ostetricia e ginecologia
+    sl: Porodništvo in ginekologija
+    sv: Obstetrik och gynekologi
     tr: Obstetrik ve jinekoloji
 - id: "https://openalex.org/subfields/3609"
   scheme: "Subfields"
   subject: "Occupational Therapy"
   title:
-    en: Occupational Therapy
-    de: Ergotherapie
-    fr: Ergothérapie
-    es: Terapia ocupacional
     cs: Ergoterapie
-    sv: Arbetsterapi
-    sl: Delovna terapija
+    de: Ergotherapie
+    en: Occupational Therapy
+    es: Terapia ocupacional
+    fr: Ergothérapie
+    it: Terapia occupazionale
     nl: Ergotherapie
     pt: Terapia ocupacional
-    it: Terapia occupazionale
+    sl: Delovna terapija
+    sv: Arbetsterapi
     tr: Ergoterapi
 - id: "https://openalex.org/subfields/2212"
   scheme: "Subfields"
   subject: "Ocean Engineering"
   title:
-    en: Ocean Engineering
-    de: Meerestechnik
-    fr: Génie océanique
-    es: Ingeniería oceánica
     cs: Oceánské inženýrství
-    sv: Havsbaserad teknik
-    sl: Oceansko inženirstvo
+    de: Meerestechnik
+    en: Ocean Engineering
+    es: Ingeniería oceánica
+    fr: Génie océanique
+    it: Ingegneria oceanica
     nl: Oceaantechniek
     pt: Engenharia oceânica
-    it: Ingegneria oceanica
+    sl: Oceansko inženirstvo
+    sv: Havsbaserad teknik
     tr: Okyanus mühendisliği
 - id: "https://openalex.org/subfields/1910"
   scheme: "Subfields"
   subject: "Oceanography"
   title:
-    en: Oceanography
-    de: Ozeanographie
-    fr: Océanographie
-    es: Oceanografía
     cs: Oceánografie
-    sv: Oceanografi
-    sl: Oceanografija
+    de: Ozeanographie
+    en: Oceanography
+    es: Oceanografía
+    fr: Océanographie
+    it: Oceanografia
     nl: Oceanografie
     pt: Oceanografia
-    it: Oceanografia
+    sl: Oceanografija
+    sv: Oceanografi
     tr: Oşinografi
 - id: "https://openalex.org/subfields/2730"
   scheme: "Subfields"
   subject: "Oncology"
   title:
-    en: Oncology
-    de: Onkologie
-    fr: Oncologie
-    es: Oncología
     cs: Onkologie
-    sv: Onkologi
-    sl: Onkologija
+    de: Onkologie
+    en: Oncology
+    es: Oncología
+    fr: Oncologie
+    it: Oncologia
     nl: Oncologie
     pt: Oncologia
-    it: Oncologia
+    sl: Onkologija
+    sv: Onkologi
     tr: Onkoloji
 - id: "https://openalex.org/subfields/2731"
   scheme: "Subfields"
   subject: "Ophthalmology"
   title:
-    en: Ophthalmology
-    de: Ophthalmologie
-    fr: Ophtalmologie
-    es: Oftalmología
     cs: Oftalmologie
-    sv: Oftalmologi
-    sl: Oftalmologija
+    de: Ophthalmologie
+    en: Ophthalmology
+    es: Oftalmología
+    fr: Ophtalmologie
+    it: Oftalmologia
     nl: Oogheelkunde
     pt: Oftalmologia
-    it: Oftalmologia
+    sl: Oftalmologija
+    sv: Oftalmologi
     tr: Göz hastalıkları
 - id: "https://openalex.org/subfields/3504"
   scheme: "Subfields"
   subject: "Oral Surgery"
   title:
-    en: Oral Surgery
-    de: Oralchirurgie
-    fr: Chirurgie buccale
-    es: Cirugía oral
     cs: Orální chirurgie
-    sv: Oral kirurgi
-    sl: Oralna kirurgija
+    de: Oralchirurgie
+    en: Oral Surgery
+    es: Cirugía oral
+    fr: Chirurgie buccale
+    it: Chirurgia orale
     nl: Mondchirurgie
     pt: Cirurgia oral
-    it: Chirurgia orale
+    sl: Oralna kirurgija
+    sv: Oral kirurgi
     tr: Ağız cerrahisi
 - id: "https://openalex.org/subfields/1605"
   scheme: "Subfields"
   subject: "Organic Chemistry"
   title:
-    en: Organic Chemistry
-    de: Organische Chemie
-    fr: Chimie organique
-    es: Química orgánica
     cs: Organická chemie
-    sv: Organisk kemi
-    sl: Organska kemija
+    de: Organische Chemie
+    en: Organic Chemistry
+    es: Química orgánica
+    fr: Chimie organique
+    it: Chimica organica
     nl: Organische scheikunde
     pt: Química orgânica
-    it: Chimica organica
+    sl: Organska kemija
+    sv: Organisk kemi
     tr: Organik kimya
 - id: "https://openalex.org/subfields/1407"
   scheme: "Subfields"
   subject: "Organizational Behavior and Human Resource Management"
   title:
-    en: Organizational Behavior and Human Resource Management
-    de: Organisationsverhalten und Personalmanagement
-    fr: Comportement organisationnel et gestion des ressources humaines
-    es: Comportamiento organizacional y gestión de recursos humanos
     cs: Organizační chování a řízení lidských zdrojů
-    sv: Organisationsbeteende och personalledning
-    sl: Organizacijsko vedenje in upravljanje človeških virov
+    de: Organisationsverhalten und Personalmanagement
+    en: Organizational Behavior and Human Resource Management
+    es: Comportamiento organizacional y gestión de recursos humanos
+    fr: Comportement organisationnel et gestion des ressources humaines
+    it: Comportamento organizzativo e gestione delle risorse umane
     nl: Organisatiegedrag en personeelsmanagement
     pt: Comportamento organizacional e gestão de recursos humanos
-    it: Comportamento organizzativo e gestione delle risorse umane
+    sl: Organizacijsko vedenje in upravljanje človeških virov
+    sv: Organisationsbeteende och personalledning
     tr: Örgütsel davranış ve insan kaynakları yönetimi
 - id: "https://openalex.org/subfields/3505"
   scheme: "Subfields"
   subject: "Orthodontics"
   title:
-    en: Orthodontics
-    de: Kieferorthopädie
-    fr: Orthodontie
-    es: Ortodoncia
     cs: Ortodoncie
-    sv: Ortodonti
-    sl: Ortodontija
+    de: Kieferorthopädie
+    en: Orthodontics
+    es: Ortodoncia
+    fr: Orthodontie
+    it: Ortodonzia
     nl: Orthodontie
     pt: Ortodontia
-    it: Ortodonzia
+    sl: Ortodontija
+    sv: Ortodonti
     tr: Ortodonti
 - id: "https://openalex.org/subfields/2732"
   scheme: "Subfields"
   subject: "Orthopedics and Sports Medicine"
   title:
-    en: Orthopedics and Sports Medicine
-    de: Orthopädie und Sportmedizin
-    fr: Orthopédie et médecine du sport
-    es: Ortopedia y medicina deportiva
     cs: Ortopedie a sportovní medicína
-    sv: Ortopedi och sportmedicin
-    sl: Ortopedija in športna medicina
+    de: Orthopädie und Sportmedizin
+    en: Orthopedics and Sports Medicine
+    es: Ortopedia y medicina deportiva
+    fr: Orthopédie et médecine du sport
+    it: Ortopedia e medicina dello sport
     nl: Orthopedische en sportgeneeskunde
     pt: Ortopedia e medicina desportiva
-    it: Ortopedia e medicina dello sport
+    sl: Ortopedija in športna medicina
+    sv: Ortopedi och sportmedicin
     tr: Ortopedi ve spor hekimliği
 - id: "https://openalex.org/subfields/2733"
   scheme: "Subfields"
   subject: "Otorhinolaryngology"
   title:
-    en: Otorhinolaryngology
-    de: Hals-Nasen-Ohren-Heilkunde
-    fr: Oto-rhino-laryngologie
-    es: Otorrinolaringología
     cs: Otorinolaryngologie
-    sv: Öron-, näs- och halssjukdomar
-    sl: Otorinolaringologija
+    de: Hals-Nasen-Ohren-Heilkunde
+    en: Otorhinolaryngology
+    es: Otorrinolaringología
+    fr: Oto-rhino-laryngologie
+    it: Otorinolaringoiatria
     nl: Keel-, neus- en oorheelkunde
     pt: Otorrinolaringologia
-    it: Otorinolaringoiatria
+    sl: Otorinolaringologija
+    sv: Öron-, näs- och halssjukdomar
     tr: Kulak burun boğaz
 - id: "https://openalex.org/subfields/1911"
   scheme: "Subfields"
   subject: "Paleontology"
   title:
-    en: Paleontology
-    de: Paläontologie
-    fr: Paléontologie
-    es: Paleontología
     cs: Paleontologie
-    sv: Paleontologi
-    sl: Paleontologija
+    de: Paläontologie
+    en: Paleontology
+    es: Paleontología
+    fr: Paléontologie
+    it: Paleontologia
     nl: Paleontologie
     pt: Paleontologia
-    it: Paleontologia
+    sl: Paleontologija
+    sv: Paleontologi
     tr: Paleontoloji
 - id: "https://openalex.org/subfields/2405"
   scheme: "Subfields"
   subject: "Parasitology"
   title:
-    en: Parasitology
-    de: Parasitologie
-    fr: Parasitologie
-    es: Parasitología
     cs: Parazitologie
-    sv: Parasitologi
-    sl: Parazitologija
+    de: Parasitologie
+    en: Parasitology
+    es: Parasitología
+    fr: Parasitologie
+    it: Parassitologia
     nl: Parasitologie
     pt: Parasitologia
-    it: Parassitologia
+    sl: Parazitologija
+    sv: Parasitologi
     tr: Parazitoloji
 - id: "https://openalex.org/subfields/2734"
   scheme: "Subfields"
   subject: "Pathology and Forensic Medicine"
   title:
-    en: Pathology and Forensic Medicine
-    de: Pathologie und Rechtsmedizin
-    fr: Pathologie et médecine légale
-    es: Patología y medicina forense
     cs: Patologie a soudní lékařství
-    sv: Patologi och rättsmedicin
-    sl: Patologija in sodna medicina
+    de: Pathologie und Rechtsmedizin
+    en: Pathology and Forensic Medicine
+    es: Patología y medicina forense
+    fr: Pathologie et médecine légale
+    it: Patologia e medicina legale
     nl: Pathologie en forensische geneeskunde
     pt: Patologia e medicina forense
-    it: Patologia e medicina legale
+    sl: Patologija in sodna medicina
+    sv: Patologi och rättsmedicin
     tr: Patoloji ve adli tıp
 - id: "https://openalex.org/subfields/2735"
   scheme: "Subfields"
   subject: "Pediatrics, Perinatology and Child Health"
   title:
-    en: Pediatrics, Perinatology and Child Health
-    de: Pädiatrie, Perinatologie und Kindergesundheit
-    fr: Pédiatrie, périnatologie et santé de l'enfant
-    es: Pediatría, perinatología y salud infantil
     cs: Pediatrie, perinatologie a zdraví dětí
-    sv: Pediatrik, perinatologi och barnhälsa
-    sl: Pediatrija, perinatologija in zdravje otrok
+    de: Pädiatrie, Perinatologie und Kindergesundheit
+    en: Pediatrics, Perinatology and Child Health
+    es: Pediatría, perinatología y salud infantil
+    fr: Pédiatrie, périnatologie et santé de l'enfant
+    it: Pediatria, perinatologia e salute del bambino
     nl: Kindergeneeskunde, perinatologie en kindergezondheid
     pt: Pediatria, perinatologia e saúde infantil
-    it: Pediatria, perinatologia e salute del bambino
+    sl: Pediatrija, perinatologija in zdravje otrok
+    sv: Pediatrik, perinatologi och barnhälsa
     tr: Pediatri, perinatoloji ve çocuk sağlığı
 - id: "https://openalex.org/subfields/3506"
   scheme: "Subfields"
   subject: "Periodontics"
   title:
-    en: Periodontics
-    de: Parodontologie
-    fr: Parodontologie
-    es: Periodoncia
     cs: Parodontologie
-    sv: Parodontologi
-    sl: Parodontologija
+    de: Parodontologie
+    en: Periodontics
+    es: Periodoncia
+    fr: Parodontologie
+    it: Parodontologia
     nl: Parodontologie
     pt: Periodontia
-    it: Parodontologia
+    sl: Parodontologija
+    sv: Parodontologi
     tr: Periodontoloji
 - id: "https://openalex.org/subfields/3003"
   scheme: "Subfields"
   subject: "Pharmaceutical Science"
   title:
-    en: Pharmaceutical Science
-    de: Pharmazeutische Wissenschaft
-    fr: Sciences pharmaceutiques
-    es: Ciencias farmacéuticas
     cs: Farmaceutické vědy
-    sv: Farmaceutisk vetenskap
-    sl: Farmacevtska veda
+    de: Pharmazeutische Wissenschaft
+    en: Pharmaceutical Science
+    es: Ciencias farmacéuticas
+    fr: Sciences pharmaceutiques
+    it: Scienze farmaceutiche
     nl: Farmaceutische wetenschappen
     pt: Ciências farmacêuticas
-    it: Scienze farmaceutiche
+    sl: Farmacevtska veda
+    sv: Farmaceutisk vetenskap
     tr: Eczacılık bilimleri
 - id: "https://openalex.org/subfields/2736"
   scheme: "Subfields"
   subject: "Pharmacology"
   title:
-    en: Pharmacology
-    de: Pharmakologie
-    fr: Pharmacologie
-    es: Farmacología
     cs: Farmakologie
-    sv: Farmakologi
-    sl: Farmakologija
+    de: Pharmakologie
+    en: Pharmacology
+    es: Farmacología
+    fr: Pharmacologie
+    it: Farmacologia
     nl: Farmacologie
     pt: Farmacologia
-    it: Farmacologia
+    sl: Farmakologija
+    sv: Farmakologi
     tr: Farmakoloji
 - id: "https://openalex.org/subfields/3004"
   scheme: "Subfields"
   subject: "Pharmacology"
   title:
-    en: Pharmacology
-    de: Pharmakologie
-    fr: Pharmacologie
-    es: Farmacología
     cs: Farmakologie
-    sv: Farmakologi
-    sl: Farmakologija
+    de: Pharmakologie
+    en: Pharmacology
+    es: Farmacología
+    fr: Pharmacologie
+    it: Farmacologia
     nl: Farmacologie
     pt: Farmacologia
-    it: Farmacologia
+    sl: Farmakologija
+    sv: Farmakologi
     tr: Farmakoloji
 - id: "https://openalex.org/subfields/3611"
   scheme: "Subfields"
   subject: "Pharmacy"
   title:
-    en: Pharmacy
-    de: Pharmazie
-    fr: Pharmacie
-    es: Farmacia
     cs: Farmacie
-    sv: Farmaci
-    sl: Farmacija
+    de: Pharmazie
+    en: Pharmacy
+    es: Farmacia
+    fr: Pharmacie
+    it: Farmacia
     nl: Farmacie
     pt: Farmácia
-    it: Farmacia
+    sl: Farmacija
+    sv: Farmaci
     tr: Eczacılık
 - id: "https://openalex.org/subfields/1211"
   scheme: "Subfields"
   subject: "Philosophy"
   title:
-    en: Philosophy
-    de: Philosophie
-    fr: Philosophie
-    es: Filosofía
     cs: Filozofie
-    sv: Filosofi
-    sl: Filozofija
+    de: Philosophie
+    en: Philosophy
+    es: Filosofía
+    fr: Philosophie
+    it: Filosofia
     nl: Filosofie
     pt: Filosofia
-    it: Filosofia
+    sl: Filozofija
+    sv: Filosofi
     tr: Felsefe
 - id: "https://openalex.org/subfields/1606"
   scheme: "Subfields"
   subject: "Physical and Theoretical Chemistry"
   title:
-    en: Physical and Theoretical Chemistry
-    de: Physikalische und theoretische Chemie
-    fr: Chimie physique et théorique
-    es: Química física y teórica
     cs: Fyzikální a teoretická chemie
-    sv: Fysikalisk och teoretisk kemi
-    sl: Fizikalna in teoretična kemija
+    de: Physikalische und theoretische Chemie
+    en: Physical and Theoretical Chemistry
+    es: Química física y teórica
+    fr: Chimie physique et théorique
+    it: Chimica fisica e teorica
     nl: Fysische en theoretische scheikunde
     pt: Química física e teórica
-    it: Chimica fisica e teorica
+    sl: Fizikalna in teoretična kemija
+    sv: Fysikalisk och teoretisk kemi
     tr: Fiziksel ve teorik kimya
 - id: "https://openalex.org/subfields/3612"
   scheme: "Subfields"
   subject: "Physical Therapy, Sports Therapy and Rehabilitation"
   title:
-    en: Physical Therapy, Sports Therapy and Rehabilitation
-    de: Physiotherapie, Sporttherapie und Rehabilitation
-    fr: Physiothérapie, thérapie sportive et réadaptation
-    es: Fisioterapia, terapia deportiva y rehabilitación
     cs: Fyzioterapie, sportovní terapie a rehabilitace
-    sv: Fysioterapi, sportterapi och rehabilitering
-    sl: Fizioterapija, športna terapija in rehabilitacija
+    de: Physiotherapie, Sporttherapie und Rehabilitation
+    en: Physical Therapy, Sports Therapy and Rehabilitation
+    es: Fisioterapia, terapia deportiva y rehabilitación
+    fr: Physiothérapie, thérapie sportive et réadaptation
+    it: Fisioterapia, terapia sportiva e riabilitazione
     nl: Fysiotherapie, sporttherapie en revalidatie
     pt: Fisioterapia, terapia desportiva e reabilitação
-    it: Fisioterapia, terapia sportiva e riabilitazione
+    sl: Fizioterapija, športna terapija in rehabilitacija
+    sv: Fysioterapi, sportterapi och rehabilitering
     tr: Fizik tedavi, spor terapisi ve rehabilitasyon
 - id: "https://openalex.org/subfields/2737"
   scheme: "Subfields"
   subject: "Physiology"
   title:
-    en: Physiology
-    de: Physiologie
-    fr: Physiologie
-    es: Fisiología
     cs: Fyziologie
-    sv: Fysiologi
-    sl: Fiziologija
+    de: Physiologie
+    en: Physiology
+    es: Fisiología
+    fr: Physiologie
+    it: Fisiologia
     nl: Fysiologie
     pt: Fisiologia
-    it: Fisiologia
+    sl: Fiziologija
+    sv: Fysiologi
     tr: Fizyoloji
 - id: "https://openalex.org/subfields/1314"
   scheme: "Subfields"
   subject: "Physiology"
   title:
-    en: Physiology
-    de: Physiologie
-    fr: Physiologie
-    es: Fisiología
     cs: Fyziologie
-    sv: Fysiologi
-    sl: Fiziologija
+    de: Physiologie
+    en: Physiology
+    es: Fisiología
+    fr: Physiologie
+    it: Fisiologia
     nl: Fysiologie
     pt: Fisiologia
-    it: Fisiologia
+    sl: Fiziologija
+    sv: Fysiologi
     tr: Fizyoloji
 - id: "https://openalex.org/subfields/1110"
   scheme: "Subfields"
   subject: "Plant Science"
   title:
-    en: Plant Science
-    de: Pflanzenwissenschaften
-    fr: Sciences végétales
-    es: Ciencias vegetales
     cs: Věda o rostlinách
-    sv: Växtvetenskap
-    sl: Botanika
+    de: Pflanzenwissenschaften
+    en: Plant Science
+    es: Ciencias vegetales
+    fr: Sciences végétales
+    it: Scienze vegetali
     nl: Plantkunde
     pt: Ciências das plantas
-    it: Scienze vegetali
+    sl: Botanika
+    sv: Växtvetenskap
     tr: Bitki bilimi
 - id: "https://openalex.org/subfields/3320"
   scheme: "Subfields"
   subject: "Political Science and International Relations"
   title:
-    en: Political Science and International Relations
-    de: Politikwissenschaft und Internationale Beziehungen
-    fr: Sciences politiques et relations internationales
-    es: Ciencias políticas y relaciones internacionales
     cs: Politologie a mezinárodní vztahy
-    sv: Statsvetenskap och internationella relationer
-    sl: Politologija in mednarodne odnosi
+    de: Politikwissenschaft und Internationale Beziehungen
+    en: Political Science and International Relations
+    es: Ciencias políticas y relaciones internacionales
+    fr: Sciences politiques et relations internationales
+    it: Scienze politiche e relazioni internazionali
     nl: Politicologie en internationale betrekkingen
     pt: Ciências políticas e relações internacionais
-    it: Scienze politiche e relazioni internazionali
+    sl: Politologija in mednarodne odnosi
+    sv: Statsvetenskap och internationella relationer
     tr: Siyaset bilimi ve uluslararası ilişkiler
 - id: "https://openalex.org/subfields/2310"
   scheme: "Subfields"
   subject: "Pollution"
   title:
-    en: Pollution
-    de: Umweltverschmutzung
-    fr: Pollution
-    es: Contaminación
     cs: Znečištění
-    sv: Förorening
-    sl: Onesnaževanje
+    de: Umweltverschmutzung
+    en: Pollution
+    es: Contaminación
+    fr: Pollution
+    it: Inquinamento
     nl: Vervuiling
     pt: Poluição
-    it: Inquinamento
+    sl: Onesnaževanje
+    sv: Förorening
     tr: Kirlilik
 - id: "https://openalex.org/subfields/2507"
   scheme: "Subfields"
   subject: "Polymers and Plastics"
   title:
-    en: Polymers and Plastics
-    de: Polymere und Kunststoffe
-    fr: Polymères et plastiques
-    es: Polímeros y plásticos
     cs: Polymery a plasty
-    sv: Polymerer och plaster
-    sl: Polimeri in plastika
+    de: Polymere und Kunststoffe
+    en: Polymers and Plastics
+    es: Polímeros y plásticos
+    fr: Polymères et plastiques
+    it: Polimeri e plastica
     nl: Polymeren en kunststoffen
     pt: Polímeros e plásticos
-    it: Polimeri e plastica
+    sl: Polimeri in plastika
+    sv: Polymerer och plaster
     tr: Polimerler ve plastikler
 - id: "https://openalex.org/subfields/1508"
   scheme: "Subfields"
   subject: "Process Chemistry and Technology"
   title:
-    en: Process Chemistry and Technology
-    de: Prozesstechnik und -chemie
-    fr: Chimie et technologie des procédés
-    es: Química y tecnología de procesos
     cs: Procesní chemie a technologie
-    sv: Processkemi och teknik
-    sl: Procesna kemija in tehnologija
+    de: Prozesstechnik und -chemie
+    en: Process Chemistry and Technology
+    es: Química y tecnología de procesos
+    fr: Chimie et technologie des procédés
+    it: Chimica e tecnologia dei processi
     nl: Proceschemie en -technologie
     pt: Química e tecnologia de processos
-    it: Chimica e tecnologia dei processi
+    sl: Procesna kemija in tehnologija
+    sv: Processkemi och teknik
     tr: Proses kimyası ve teknolojisi
 - id: "https://openalex.org/subfields/2738"
   scheme: "Subfields"
   subject: "Psychiatry and Mental health"
   title:
-    en: Psychiatry and Mental health
-    de: Psychiatrie und psychische Gesundheit
-    fr: Psychiatrie et santé mentale
-    es: Psiquiatría y salud mental
     cs: Psychiatrie a duševní zdraví
-    sv: Psykiatri och psykisk hälsa
-    sl: Psihiatrija in duševno zdravje
+    de: Psychiatrie und psychische Gesundheit
+    en: Psychiatry and Mental health
+    es: Psiquiatría y salud mental
+    fr: Psychiatrie et santé mentale
+    it: Psichiatria e salute mentale
     nl: Psychiatrie en geestelijke gezondheid
     pt: Psiquiatria e saúde mental
-    it: Psichiatria e salute mentale
+    sl: Psihiatrija in duševno zdravje
+    sv: Psykiatri och psykisk hälsa
     tr: Psikiyatri ve ruh sağlığı
 - id: "https://openalex.org/subfields/3321"
   scheme: "Subfields"
   subject: "Public Administration"
   title:
-    en: Public Administration
-    de: Öffentliche Verwaltung
-    fr: Administration publique
-    es: Administración pública
     cs: Veřejná správa
-    sv: Offentlig förvaltning
-    sl: Javna uprava
+    de: Öffentliche Verwaltung
+    en: Public Administration
+    es: Administración pública
+    fr: Administration publique
+    it: Amministrazione pubblica
     nl: Openbaar bestuur
     pt: Administração pública
-    it: Amministrazione pubblica
+    sl: Javna uprava
+    sv: Offentlig förvaltning
     tr: Kamu yönetimi
 - id: "https://openalex.org/subfields/2739"
   scheme: "Subfields"
   subject: "Public Health, Environmental and Occupational Health"
   title:
-    en: Public Health, Environmental and Occupational Health
-    de: Öffentliche Gesundheit, Umwelt- und Arbeitsmedizin
-    fr: Santé publique, santé environnementale et au travail
-    es: Salud pública, salud ambiental y laboral
     cs: Veřejné zdraví, environmentální a pracovní zdraví
-    sv: Folkhälsa, miljömedicinsk och arbetsmiljöhälsa
-    sl: Javno zdravje, okoljsko in poklicno zdravje
+    de: Öffentliche Gesundheit, Umwelt- und Arbeitsmedizin
+    en: Public Health, Environmental and Occupational Health
+    es: Salud pública, salud ambiental y laboral
+    fr: Santé publique, santé environnementale et au travail
+    it: Salute pubblica, ambientale e occupazionale
     nl: Volksgezondheid, milieu- en arbeidsgezondheid
     pt: Saúde pública, ambiental e ocupacional
-    it: Salute pubblica, ambientale e occupazionale
+    sl: Javno zdravje, okoljsko in poklicno zdravje
+    sv: Folkhälsa, miljömedicinsk och arbetsmiljöhälsa
     tr: Halk sağlığı, çevre ve iş sağlığı
 - id: "https://openalex.org/subfields/2740"
   scheme: "Subfields"
   subject: "Pulmonary and Respiratory Medicine"
   title:
-    en: Pulmonary and Respiratory Medicine
-    de: Lungen- und Atemwegsmedizin
-    fr: Médecine pulmonaire et respiratoire
-    es: Medicina pulmonar y respiratoria
     cs: Plicní a respirační medicína
-    sv: Lungmedicin och andningssjukvård
-    sl: Pljučna in respiratorna medicina
+    de: Lungen- und Atemwegsmedizin
+    en: Pulmonary and Respiratory Medicine
+    es: Medicina pulmonar y respiratoria
+    fr: Médecine pulmonaire et respiratoire
+    it: Medicina polmonare e respiratoria
     nl: Longziekten en luchtwegsgeneeskunde
     pt: Medicina pulmonar e respiratória
-    it: Medicina polmonare e respiratoria
+    sl: Pljučna in respiratorna medicina
+    sv: Lungmedicin och andningssjukvård
     tr: Akciğer ve solunum tıbbı
 - id: "https://openalex.org/subfields/3108"
   scheme: "Subfields"
   subject: "Radiation"
   title:
-    en: Radiation
-    de: Strahlung
-    fr: Rayonnement
-    es: Radiación
     cs: Záření
-    sv: Strålning
-    sl: Sevanje
+    de: Strahlung
+    en: Radiation
+    es: Radiación
+    fr: Rayonnement
+    it: Radiazione
     nl: Straling
     pt: Radiação
-    it: Radiazione
+    sl: Sevanje
+    sv: Strålning
     tr: Radyasyon
 - id: "https://openalex.org/subfields/3614"
   scheme: "Subfields"
   subject: "Radiological and Ultrasound Technology"
   title:
-    en: Radiological and Ultrasound Technology
-    de: Radiologische und Ultraschalltechnologie
-    fr: Technologie radiologique et ultrasonore
-    es: Tecnología radiológica y de ultrasonido
     cs: Radiologické a ultrazvukové technologie
-    sv: Radiologisk och ultraljudsteknik
-    sl: Radiološka in ultrazvočna tehnologija
+    de: Radiologische und Ultraschalltechnologie
+    en: Radiological and Ultrasound Technology
+    es: Tecnología radiológica y de ultrasonido
+    fr: Technologie radiologique et ultrasonore
+    it: Tecnologia radiologica e a ultrasuoni
     nl: Radiologische en echografische technologie
     pt: Tecnologia radiológica e de ultrassom
-    it: Tecnologia radiologica e a ultrasuoni
+    sl: Radiološka in ultrazvočna tehnologija
+    sv: Radiologisk och ultraljudsteknik
     tr: Radyolojik ve ultrason teknolojisi
 - id: "https://openalex.org/subfields/2741"
   scheme: "Subfields"
   subject: "Radiology, Nuclear Medicine and Imaging"
   title:
-    en: Radiology, Nuclear Medicine and Imaging
-    de: Radiologie, Nuklearmedizin und Bildgebung
-    fr: Radiologie, médecine nucléaire et imagerie
-    es: Radiología, medicina nuclear e imagen
     cs: Radiologie, nukleární medicína a zobrazování
-    sv: Radiologi, nuklearmedicin och bilddiagnostik
-    sl: Radiologija, nuklearna medicina in slikanje
+    de: Radiologie, Nuklearmedizin und Bildgebung
+    en: Radiology, Nuclear Medicine and Imaging
+    es: Radiología, medicina nuclear e imagen
+    fr: Radiologie, médecine nucléaire et imagerie
+    it: Radiologia, medicina nucleare e imaging
     nl: Radiologie, nucleaire geneeskunde en beeldvorming
     pt: Radiologia, medicina nuclear e imagiologia
-    it: Radiologia, medicina nucleare e imaging
+    sl: Radiologija, nuklearna medicina in slikanje
+    sv: Radiologi, nuklearmedicin och bilddiagnostik
     tr: Radyoloji, nükleer tıp ve görüntüleme
 - id: "https://openalex.org/subfields/2742"
   scheme: "Subfields"
   subject: "Rehabilitation"
   title:
-    en: Rehabilitation
-    de: Rehabilitation
-    fr: Réadaptation
-    es: Rehabilitación
     cs: Rehabilitace
-    sv: Rehabilitering
-    sl: Rehabilitacija
+    de: Rehabilitation
+    en: Rehabilitation
+    es: Rehabilitación
+    fr: Réadaptation
+    it: Riabilitazione
     nl: Revalidatie
     pt: Reabilitação
-    it: Riabilitazione
+    sl: Rehabilitacija
+    sv: Rehabilitering
     tr: Rehabilitasyon
 - id: "https://openalex.org/subfields/1212"
   scheme: "Subfields"
   subject: "Religious studies"
   title:
-    en: Religious studies
-    de: Religionswissenschaften
-    fr: Études religieuses
-    es: Estudios religiosos
     cs: Religionistika
-    sv: Religionsvetenskap
-    sl: Religiozne študije
+    de: Religionswissenschaften
+    en: Religious studies
+    es: Estudios religiosos
+    fr: Études religieuses
+    it: Studi religiosi
     nl: Godsdienstwetenschappen
     pt: Estudos religiosos
-    it: Studi religiosi
+    sl: Religiozne študije
+    sv: Religionsvetenskap
     tr: Din bilimleri
 - id: "https://openalex.org/subfields/2105"
   scheme: "Subfields"
   subject: "Renewable Energy, Sustainability and the Environment"
   title:
-    en: Renewable Energy, Sustainability and the Environment
-    de: Erneuerbare Energie, Nachhaltigkeit und Umwelt
-    fr: Énergie renouvelable, durabilité et environnement
-    es: Energía renovable, sostenibilidad y medio ambiente
     cs: Obnovitelná energie, udržitelnost a životní prostředí
-    sv: Förnybar energi, hållbarhet och miljö
-    sl: Obnovljiva energija, trajnost in okolje
+    de: Erneuerbare Energie, Nachhaltigkeit und Umwelt
+    en: Renewable Energy, Sustainability and the Environment
+    es: Energía renovable, sostenibilidad y medio ambiente
+    fr: Énergie renouvelable, durabilité et environnement
+    it: Energia rinnovabile, sostenibilità e ambiente
     nl: Hernieuwbare energie, duurzaamheid en milieu
     pt: Energias renováveis, sustentabilidade e ambiente
-    it: Energia rinnovabile, sostenibilità e ambiente
+    sl: Obnovljiva energija, trajnost in okolje
+    sv: Förnybar energi, hållbarhet och miljö
     tr: Yenilenebilir enerji, sürdürülebilirlik ve çevre
 - id: "https://openalex.org/subfields/2743"
   scheme: "Subfields"
   subject: "Reproductive Medicine"
   title:
-    en: Reproductive Medicine
-    de: Reproduktionsmedizin
-    fr: Médecine de la reproduction
-    es: Medicina reproductiva
     cs: Reprodukční medicína
-    sv: Reproduktionsmedicin
-    sl: Reproduktivna medicina
+    de: Reproduktionsmedizin
+    en: Reproductive Medicine
+    es: Medicina reproductiva
+    fr: Médecine de la reproduction
+    it: Medicina della riproduzione
     nl: Reproductieve geneeskunde
     pt: Medicina reprodutiva
-    it: Medicina della riproduzione
+    sl: Reproduktivna medicina
+    sv: Reproduktionsmedicin
     tr: Üreme tıbbı
 - id: "https://openalex.org/subfields/2922"
   scheme: "Subfields"
   subject: "Research and Theory"
   title:
-    en: Research and Theory
-    de: Forschung und Theorie
-    fr: Recherche et théorie
-    es: Investigación y teoría
     cs: Výzkum a teorie
-    sv: Forskning och teori
-    sl: Raziskovanje in teorija
+    de: Forschung und Theorie
+    en: Research and Theory
+    es: Investigación y teoría
+    fr: Recherche et théorie
+    it: Ricerca e teoria
     nl: Onderzoek en theorie
     pt: Investigação e teoria
-    it: Ricerca e teoria
+    sl: Raziskovanje in teorija
+    sv: Forskning och teori
     tr: Araştırma ve teori
 - id: "https://openalex.org/subfields/2745"
   scheme: "Subfields"
   subject: "Rheumatology"
   title:
-    en: Rheumatology
-    de: Rheumatologie
-    fr: Rhumatologie
-    es: Reumatología
     cs: Revmatologie
-    sv: Reumatologi
-    sl: Revmatologija
+    de: Rheumatologie
+    en: Rheumatology
+    es: Reumatología
+    fr: Rhumatologie
+    it: Reumatologia
     nl: Reumatologie
     pt: Reumatologia
-    it: Reumatologia
+    sl: Revmatologija
+    sv: Reumatologi
     tr: Romatoloji
 - id: "https://openalex.org/subfields/3311"
   scheme: "Subfields"
   subject: "Safety Research"
   title:
-    en: Safety Research
-    de: Sicherheitsforschung
-    fr: Recherche sur la sécurité
-    es: Investigación en seguridad
     cs: Bezpečnostní výzkum
-    sv: Säkerhetsforskning
-    sl: Varnostne raziskave
+    de: Sicherheitsforschung
+    en: Safety Research
+    es: Investigación en seguridad
+    fr: Recherche sur la sécurité
+    it: Ricerca sulla sicurezza
     nl: Veiligheidsonderzoek
     pt: Investigação em segurança
-    it: Ricerca sulla sicurezza
+    sl: Varnostne raziskave
+    sv: Säkerhetsforskning
     tr: Güvenlik araştırmaları
 - id: "https://openalex.org/subfields/2213"
   scheme: "Subfields"
   subject: "Safety, Risk, Reliability and Quality"
   title:
-    en: Safety, Risk, Reliability and Quality
-    de: Sicherheit, Risiko, Zuverlässigkeit und Qualität
-    fr: Sécurité, risque, fiabilité et qualité
-    es: Seguridad, riesgo, fiabilidad y calidad
     cs: Bezpečnost, riziko, spolehlivost a kvalita
-    sv: Säkerhet, risk, tillförlitlighet och kvalitet
-    sl: Varnost, tveganje, zanesljivost in kakovost
+    de: Sicherheit, Risiko, Zuverlässigkeit und Qualität
+    en: Safety, Risk, Reliability and Quality
+    es: Seguridad, riesgo, fiabilidad y calidad
+    fr: Sécurité, risque, fiabilité et qualité
+    it: Sicurezza, rischio, affidabilità e qualità
     nl: Veiligheid, risico, betrouwbaarheid en kwaliteit
     pt: Segurança, risco, fiabilidade e qualidade
-    it: Sicurezza, rischio, affidabilità e qualità
+    sl: Varnost, tveganje, zanesljivost in kakovost
+    sv: Säkerhet, risk, tillförlitlighet och kvalitet
     tr: Güvenlik, risk, güvenilirlik ve kalite
 - id: "https://openalex.org/subfields/2809"
   scheme: "Subfields"
   subject: "Sensory Systems"
   title:
-    en: Sensory Systems
-    de: Sensorische Systeme
-    fr: Systèmes sensoriels
-    es: Sistemas sensoriales
     cs: Smyslové systémy
-    sv: Sensoriska system
-    sl: Čutilni sistemi
+    de: Sensorische Systeme
+    en: Sensory Systems
+    es: Sistemas sensoriales
+    fr: Systèmes sensoriels
+    it: Sistemi sensoriali
     nl: Sensorische systemen
     pt: Sistemas sensoriais
-    it: Sistemi sensoriali
+    sl: Čutilni sistemi
+    sv: Sensoriska system
     tr: Duyusal sistemler
 - id: "https://openalex.org/subfields/1711"
   scheme: "Subfields"
   subject: "Signal Processing"
   title:
-    en: Signal Processing
-    de: Signalverarbeitung
-    fr: Traitement du signal
-    es: Procesamiento de señales
     cs: Zpracování signálů
-    sv: Signalbehandling
-    sl: Obdelava signalov
+    de: Signalverarbeitung
+    en: Signal Processing
+    es: Procesamiento de señales
+    fr: Traitement du signal
+    it: Elaborazione dei segnali
     nl: Signaalverwerking
     pt: Processamento de sinais
-    it: Elaborazione dei segnali
+    sl: Obdelava signalov
+    sv: Signalbehandling
     tr: Sinyal işleme
 - id: "https://openalex.org/subfields/3404"
   scheme: "Subfields"
   subject: "Small Animals"
   title:
-    en: Small Animals
-    de: Kleintiere
-    fr: Petits animaux
-    es: Animales pequeños
     cs: Malá zvířata
-    sv: Smådjur
-    sl: Male živali
+    de: Kleintiere
+    en: Small Animals
+    es: Animales pequeños
+    fr: Petits animaux
+    it: Piccoli animali
     nl: Kleine dieren
     pt: Animais pequenos
-    it: Piccoli animali
+    sl: Male živali
+    sv: Smådjur
     tr: Küçük hayvanlar
 - id: "https://openalex.org/subfields/3207"
   scheme: "Subfields"
   subject: "Social Psychology"
   title:
-    en: Social Psychology
-    de: Sozialpsychologie
-    fr: Psychologie sociale
-    es: Psicología social
     cs: Sociální psychologie
-    sv: Socialpsykologi
-    sl: Socialna psihologija
+    de: Sozialpsychologie
+    en: Social Psychology
+    es: Psicología social
+    fr: Psychologie sociale
+    it: Psicologia sociale
     nl: Sociale psychologie
     pt: Psicologia social
-    it: Psicologia sociale
+    sl: Socialna psihologija
+    sv: Socialpsykologi
     tr: Sosyal psikoloji
 - id: "https://openalex.org/subfields/3312"
   scheme: "Subfields"
   subject: "Sociology and Political Science"
   title:
-    en: Sociology and Political Science
-    de: Soziologie und Politikwissenschaft
-    fr: Sociologie et sciences politiques
-    es: Sociología y ciencias políticas
     cs: Sociologie a politologie
-    sv: Sociologi och statsvetenskap
-    sl: Sociologija in politologija
+    de: Soziologie und Politikwissenschaft
+    en: Sociology and Political Science
+    es: Sociología y ciencias políticas
+    fr: Sociologie et sciences politiques
+    it: Sociologia e scienze politiche
     nl: Sociologie en politicologie
     pt: Sociologia e ciências políticas
-    it: Sociologia e scienze politiche
+    sl: Sociologija in politologija
+    sv: Sociologi och statsvetenskap
     tr: Sosyoloji ve siyaset bilimi
 - id: "https://openalex.org/subfields/1712"
   scheme: "Subfields"
   subject: "Software"
   title:
-    en: Software
-    de: Software
-    fr: Logiciel
-    es: Software
     cs: Software
-    sv: Programvara
-    sl: Programska oprema
+    de: Software
+    en: Software
+    es: Software
+    fr: Logiciel
+    it: Software
     nl: Software
     pt: Software
-    it: Software
+    sl: Programska oprema
+    sv: Programvara
     tr: Yazılım
 - id: "https://openalex.org/subfields/1111"
   scheme: "Subfields"
   subject: "Soil Science"
   title:
-    en: Soil Science
-    de: Bodenkunde
-    fr: Science du sol
-    es: Ciencia del suelo
     cs: Půdoznalství
-    sv: Markvetenskap
-    sl: Pedologija
+    de: Bodenkunde
+    en: Soil Science
+    es: Ciencia del suelo
+    fr: Science du sol
+    it: Scienza del suolo
     nl: Bodemkunde
     pt: Ciência do solo
-    it: Scienza del suolo
+    sl: Pedologija
+    sv: Markvetenskap
     tr: Toprak bilimi
 - id: "https://openalex.org/subfields/1912"
   scheme: "Subfields"
   subject: "Space and Planetary Science"
   title:
-    en: Space and Planetary Science
-    de: Raum- und Planetenwissenschaften
-    fr: Sciences spatiales et planétaires
-    es: Ciencias del espacio y planetarias
     cs: Vesmírná a planetární věda
-    sv: Rym- och planetvetenskap
-    sl: Vesoljska in planetarna veda
+    de: Raum- und Planetenwissenschaften
+    en: Space and Planetary Science
+    es: Ciencias del espacio y planetarias
+    fr: Sciences spatiales et planétaires
+    it: Scienze spaziali e planetarie
     nl: Ruimte- en planetaire wetenschap
     pt: Ciências do espaço e planetárias
-    it: Scienze spaziali e planetarie
+    sl: Vesoljska in planetarna veda
+    sv: Rym- och planetvetenskap
     tr: Uzay ve gezegen bilimleri
 - id: "https://openalex.org/subfields/1607"
   scheme: "Subfields"
   subject: "Spectroscopy"
   title:
-    en: Spectroscopy
-    de: Spektroskopie
-    fr: Spectroscopie
-    es: Espectroscopía
     cs: Spektroskopie
-    sv: Spektroskopi
-    sl: Spektroskopija
+    de: Spektroskopie
+    en: Spectroscopy
+    es: Espectroscopía
+    fr: Spectroscopie
+    it: Spettroscopia
     nl: Spectroscopie
     pt: Espectroscopia
-    it: Spettroscopia
+    sl: Spektroskopija
+    sv: Spektroskopi
     tr: Spektroskopi
 - id: "https://openalex.org/subfields/3616"
   scheme: "Subfields"
   subject: "Speech and Hearing"
   title:
-    en: Speech and Hearing
-    de: Sprach- und Hörheilkunde
-    fr: Orthophonie et audiologie
-    es: Logopedia y audiología
     cs: Logopedie a audiologie
-    sv: Tal och hörsel
-    sl: Govor in sluh
+    de: Sprach- und Hörheilkunde
+    en: Speech and Hearing
+    es: Logopedia y audiología
+    fr: Orthophonie et audiologie
+    it: Parola e udito
     nl: Spraak en gehoor
     pt: Fala e audição
-    it: Parola e udito
+    sl: Govor in sluh
+    sv: Tal och hörsel
     tr: Konuşma ve işitme
 - id: "https://openalex.org/subfields/3109"
   scheme: "Subfields"
   subject: "Statistical and Nonlinear Physics"
   title:
-    en: Statistical and Nonlinear Physics
-    de: Statistische und nichtlineare Physik
-    fr: Physique statistique et non linéaire
-    es: Física estadística y no lineal
     cs: Statistická a nelineární fyzika
-    sv: Statistisk och ickelinjär fysik
-    sl: Statistična in nelinearna fizika
+    de: Statistische und nichtlineare Physik
+    en: Statistical and Nonlinear Physics
+    es: Física estadística y no lineal
+    fr: Physique statistique et non linéaire
+    it: Fisica statistica e non lineare
     nl: Statistische en niet-lineaire fysica
     pt: Física estatística e não linear
-    it: Fisica statistica e non lineare
+    sl: Statistična in nelinearna fizika
+    sv: Statistisk och ickelinjär fysik
     tr: İstatistiksel ve doğrusal olmayan fizik
 - id: "https://openalex.org/subfields/2613"
   scheme: "Subfields"
   subject: "Statistics and Probability"
   title:
-    en: Statistics and Probability
-    de: Statistik und Wahrscheinlichkeitsrechnung
-    fr: Statistiques et probabilités
-    es: Estadística y probabilidad
     cs: Statistika a pravděpodobnost
-    sv: Statistik och sannolikhet
-    sl: Statistika in verjetnost
+    de: Statistik und Wahrscheinlichkeitsrechnung
+    en: Statistics and Probability
+    es: Estadística y probabilidad
+    fr: Statistiques et probabilités
+    it: Statistica e probabilità
     nl: Statistiek en kansrekening
     pt: Estatística e probabilidade
-    it: Statistica e probabilità
+    sl: Statistika in verjetnost
+    sv: Statistik och sannolikhet
     tr: İstatistik ve olasılık
 - id: "https://openalex.org/subfields/1804"
   scheme: "Subfields"
   subject: "Statistics, Probability and Uncertainty"
   title:
-    en: Statistics, Probability and Uncertainty
-    de: Statistik, Wahrscheinlichkeit und Unsicherheit
-    fr: Statistiques, probabilités et incertitude
-    es: Estadística, probabilidad e incertidumbre
     cs: Statistika, pravděpodobnost a nejistota
-    sv: Statistik, sannolikhet och osäkerhet
-    sl: Statistika, verjetnost in negotovost
+    de: Statistik, Wahrscheinlichkeit und Unsicherheit
+    en: Statistics, Probability and Uncertainty
+    es: Estadística, probabilidad e incertidumbre
+    fr: Statistiques, probabilités et incertitude
+    it: Statistica, probabilità e incertezza
     nl: Statistiek, kansrekening en onzekerheid
     pt: Estatística, probabilidade e incerteza
-    it: Statistica, probabilità e incertezza
+    sl: Statistika, verjetnost in negotovost
+    sv: Statistik, sannolikhet och osäkerhet
     tr: İstatistik, olasılık ve belirsizlik
 - id: "https://openalex.org/subfields/1408"
   scheme: "Subfields"
   subject: "Strategy and Management"
   title:
-    en: Strategy and Management
-    de: Strategie und Management
-    fr: Stratégie et management
-    es: Estrategia y gestión
     cs: Strategie a management
-    sv: Strategi och management
-    sl: Strategija in management
+    de: Strategie und Management
+    en: Strategy and Management
+    es: Estrategia y gestión
+    fr: Stratégie et management
+    it: Strategia e management
     nl: Strategie en management
     pt: Estratégia e gestão
-    it: Strategia e management
+    sl: Strategija in management
+    sv: Strategi och management
     tr: Strateji ve yönetim
 - id: "https://openalex.org/subfields/1315"
   scheme: "Subfields"
   subject: "Structural Biology"
   title:
-    en: Structural Biology
-    de: Strukturbiologie
-    fr: Biologie structurale
-    es: Biología estructural
     cs: Strukturní biologie
-    sv: Strukturbiologi
-    sl: Strukturna biologija
+    de: Strukturbiologie
+    en: Structural Biology
+    es: Biología estructural
+    fr: Biologie structurale
+    it: Biologia strutturale
     nl: Structuurbiologie
     pt: Biologia estrutural
-    it: Biologia strutturale
+    sl: Strukturna biologija
+    sv: Strukturbiologi
     tr: Yapısal biyoloji
 - id: "https://openalex.org/subfields/2508"
   scheme: "Subfields"
   subject: "Surfaces, Coatings and Films"
   title:
-    en: Surfaces, Coatings and Films
-    de: Oberflächen, Beschichtungen und Schichten
-    fr: Surfaces, revêtements et films
-    es: Superficies, recubrimientos y películas
     cs: Povrchy, povlaky a filmy
-    sv: Ytor, beläggningar och filmer
-    sl: Površine, prevleke in filmi
+    de: Oberflächen, Beschichtungen und Schichten
+    en: Surfaces, Coatings and Films
+    es: Superficies, recubrimientos y películas
+    fr: Surfaces, revêtements et films
+    it: Superfici, rivestimenti e film
     nl: Oppervlakken, coatings en films
     pt: Superfícies, revestimentos e filmes
-    it: Superfici, rivestimenti e film
+    sl: Površine, prevleke in filmi
+    sv: Ytor, beläggningar och filmer
     tr: Yüzeyler, kaplamalar ve filmler
 - id: "https://openalex.org/subfields/2746"
   scheme: "Subfields"
   subject: "Surgery"
   title:
-    en: Surgery
-    de: Chirurgie
-    fr: Chirurgie
-    es: Cirugía
     cs: Chirurgie
-    sv: Kirurgi
-    sl: Kirurgija
+    de: Chirurgie
+    en: Surgery
+    es: Cirugía
+    fr: Chirurgie
+    it: Chirurgia
     nl: Chirurgie
     pt: Cirurgia
-    it: Chirurgia
+    sl: Kirurgija
+    sv: Kirurgi
     tr: Cerrahi
 - id: "https://openalex.org/subfields/2614"
   scheme: "Subfields"
   subject: "Theoretical Computer Science"
   title:
-    en: Theoretical Computer Science
-    de: Theoretische Informatik
-    fr: Informatique théorique
-    es: Informática teórica
     cs: Teoretická informatika
-    sv: Teoretisk datavetenskap
-    sl: Teoretično računalništvo
+    de: Theoretische Informatik
+    en: Theoretical Computer Science
+    es: Informática teórica
+    fr: Informatique théorique
+    it: Informatica teorica
     nl: Theoretische informatica
     pt: Ciência da computação teórica
-    it: Informatica teorica
+    sl: Teoretično računalništvo
+    sv: Teoretisk datavetenskap
     tr: Teorik bilgisayar bilimi
 - id: "https://openalex.org/subfields/1409"
   scheme: "Subfields"
   subject: "Tourism, Leisure and Hospitality Management"
   title:
-    en: Tourism, Leisure and Hospitality Management
-    de: Tourismus-, Freizeit- und Gastgewerbemanagement
-    fr: Gestion du tourisme, des loisirs et de l'hôtellerie
-    es: Gestión del turismo, ocio y hostelería
     cs: Management cestovního ruchu, volného času a pohostinství
-    sv: Turism-, fritids- och hotellmanagement
-    sl: Management turizma, prostega časa in gostinstva
+    de: Tourismus-, Freizeit- und Gastgewerbemanagement
+    en: Tourism, Leisure and Hospitality Management
+    es: Gestión del turismo, ocio y hostelería
+    fr: Gestion du tourisme, des loisirs et de l'hôtellerie
+    it: Gestione del turismo, del tempo libero e dell'ospitalità
     nl: Toerisme-, vrijetijds- en horecamanagement
     pt: Gestão de turismo, lazer e hotelaria
-    it: Gestione del turismo, del tempo libero e dell'ospitalità
+    sl: Management turizma, prostega časa in gostinstva
+    sv: Turism-, fritids- och hotellmanagement
     tr: Turizm, eğlence ve otelcilik yönetimi
 - id: "https://openalex.org/subfields/3005"
   scheme: "Subfields"
   subject: "Toxicology"
   title:
-    en: Toxicology
-    de: Toxikologie
-    fr: Toxicologie
-    es: Toxicología
     cs: Toxikologie
-    sv: Toxikologi
-    sl: Toksikologija
+    de: Toxikologie
+    en: Toxicology
+    es: Toxicología
+    fr: Toxicologie
+    it: Tossicologia
     nl: Toxicologie
     pt: Toxicologia
-    it: Tossicologia
+    sl: Toksikologija
+    sv: Toxikologi
     tr: Toksikoloji
 - id: "https://openalex.org/subfields/2747"
   scheme: "Subfields"
   subject: "Transplantation"
   title:
-    en: Transplantation
-    de: Transplantation
-    fr: Transplantation
-    es: Trasplante
     cs: Transplantace
-    sv: Transplantation
-    sl: Transplantacija
+    de: Transplantation
+    en: Transplantation
+    es: Trasplante
+    fr: Transplantation
+    it: Trapianto
     nl: Transplantatie
     pt: Transplantação
-    it: Trapianto
+    sl: Transplantacija
+    sv: Transplantation
     tr: Transplantasyon
 - id: "https://openalex.org/subfields/3313"
   scheme: "Subfields"
   subject: "Transportation"
   title:
-    en: Transportation
-    de: Transport
-    fr: Transport
-    es: Transporte
     cs: Doprava
-    sv: Transport
-    sl: Promet
+    de: Transport
+    en: Transportation
+    es: Transporte
+    fr: Transport
+    it: Trasporti
     nl: Transport
     pt: Transportes
-    it: Trasporti
+    sl: Promet
+    sv: Transport
     tr: Ulaşım
 - id: "https://openalex.org/subfields/3322"
   scheme: "Subfields"
   subject: "Urban Studies"
   title:
-    en: Urban Studies
-    de: Stadtforschung
-    fr: Études urbaines
-    es: Estudios urbanos
     cs: Urbánní studia
-    sv: Urbana studier
-    sl: Urbane študije
+    de: Stadtforschung
+    en: Urban Studies
+    es: Estudios urbanos
+    fr: Études urbaines
+    it: Studi urbani
     nl: Stedelijke studies
     pt: Estudos urbanos
-    it: Studi urbani
+    sl: Urbane študije
+    sv: Urbana studier
     tr: Kentsel çalışmalar
 - id: "https://openalex.org/subfields/2748"
   scheme: "Subfields"
   subject: "Urology"
   title:
-    en: Urology
-    de: Urologie
-    fr: Urologie
-    es: Urología
     cs: Urologie
-    sv: Urologi
-    sl: Urologija
+    de: Urologie
+    en: Urology
+    es: Urología
+    fr: Urologie
+    it: Urologia
     nl: Urologie
     pt: Urologia
-    it: Urologia
+    sl: Urologija
+    sv: Urologi
     tr: Üroloji
 - id: "https://openalex.org/subfields/2406"
   scheme: "Subfields"
   subject: "Virology"
   title:
-    en: Virology
-    de: Virologie
-    fr: Virologie
-    es: Virología
     cs: Virologie
-    sv: Virologi
-    sl: Virologija
+    de: Virologie
+    en: Virology
+    es: Virología
+    fr: Virologie
+    it: Virologia
     nl: Virologie
     pt: Virologia
-    it: Virologia
+    sl: Virologija
+    sv: Virologi
     tr: Viroloji
 - id: "https://openalex.org/subfields/1213"
   scheme: "Subfields"
   subject: "Visual Arts and Performing Arts"
   title:
-    en: Visual Arts and Performing Arts
-    de: Bildende Kunst und darstellende Künste
-    fr: Arts visuels et arts du spectacle
-    es: Artes visuales y escénicas
     cs: Výtvarné a scénické umění
-    sv: Visuella och sceniska konster
-    sl: Vizualne in uprizoritvene umetnosti
+    de: Bildende Kunst und darstellende Künste
+    en: Visual Arts and Performing Arts
+    es: Artes visuales y escénicas
+    fr: Arts visuels et arts du spectacle
+    it: Arti visive e dello spettacolo
     nl: Beeldende kunst en podiumkunsten
     pt: Artes visuais e artes do espetáculo
-    it: Arti visive e dello spettacolo
+    sl: Vizualne in uprizoritvene umetnosti
+    sv: Visuella och sceniska konster
     tr: Görsel sanatlar ve gösteri sanatları
 - id: "https://openalex.org/subfields/2312"
   scheme: "Subfields"
   subject: "Water Science and Technology"
   title:
-    en: Water Science and Technology
-    de: Wasserwissenschaft und -technologie
-    fr: Sciences et technologie de l'eau
-    es: Ciencias y tecnología del agua
     cs: Vodní věda a technologie
-    sv: Vattenteknik och vattenforskning
-    sl: Vodni viri in tehnologija
+    de: Wasserwissenschaft und -technologie
+    en: Water Science and Technology
+    es: Ciencias y tecnología del agua
+    fr: Sciences et technologie de l'eau
+    it: Scienze e tecnologia dell'acqua
     nl: Waterwetenschap en -technologie
     pt: Ciências e tecnologia da água
-    it: Scienze e tecnologia dell'acqua
+    sl: Vodni viri in tehnologija
+    sv: Vattenteknik och vattenforskning
     tr: Su bilimi ve teknolojisi

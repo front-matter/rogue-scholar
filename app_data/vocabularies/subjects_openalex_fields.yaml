@@ -2,389 +2,389 @@
   scheme: "Fields"
   subject: "Agricultural and Biological Sciences"
   title:
-    en: Agricultural and Biological Sciences
-    de: Agrar- und Biowissenschaften
-    fr: Sciences agricoles et biologiques
-    es: Ciencias agrícolas y biológicas
     cs: Zemědělské a biologické vědy
-    sv: Jordbruks- och biovetenskaper
-    sl: Kmetijske in biološke vede
+    de: Agrar- und Biowissenschaften
+    en: Agricultural and Biological Sciences
+    es: Ciencias agrícolas y biológicas
+    fr: Sciences agricoles et biologiques
+    it: Scienze agrarie e biologiche
     nl: Landbouw- en biowetenschappen
     pt: Ciências agrícolas e biológicas
-    it: Scienze agrarie e biologiche
+    sl: Kmetijske in biološke vede
+    sv: Jordbruks- och biovetenskaper
     tr: Tarım ve biyoloji bilimleri
 - id: "https://openalex.org/fields/12"
   scheme: "Fields"
   subject: "Arts and Humanities"
   title:
-    en: Arts and Humanities
-    de: Kunst und Geisteswissenschaften
-    fr: Arts et sciences humaines
-    es: Artes y humanidades
     cs: Umění a humanitní vědy
-    sv: Konst och humaniora
-    sl: Umetnost in humanistične vede
+    de: Kunst und Geisteswissenschaften
+    en: Arts and Humanities
+    es: Artes y humanidades
+    fr: Arts et sciences humaines
+    it: Arti e scienze umane
     nl: Kunst en geesteswetenschappen
     pt: Artes e humanidades
-    it: Arti e scienze umane
+    sl: Umetnost in humanistične vede
+    sv: Konst och humaniora
     tr: Sanat ve beşeri bilimler
 - id: "https://openalex.org/fields/13"
   scheme: "Fields"
   subject: "Biochemistry, Genetics and Molecular Biology"
   title:
-    en: Biochemistry, Genetics and Molecular Biology
-    de: Biochemie, Genetik und Molekularbiologie
-    fr: Biochimie, génétique et biologie moléculaire
-    es: Bioquímica, genética y biología molecular
     cs: Biochemie, genetika a molekulární biologie
-    sv: Biokemi, genetik och molekylärbiologi
-    sl: Biokemija, genetika in molekularna biologija
+    de: Biochemie, Genetik und Molekularbiologie
+    en: Biochemistry, Genetics and Molecular Biology
+    es: Bioquímica, genética y biología molecular
+    fr: Biochimie, génétique et biologie moléculaire
+    it: Biochimica, genetica e biologia molecolare
     nl: Biochemie, genetica en moleculaire biologie
     pt: Bioquímica, genética e biologia molecular
-    it: Biochimica, genetica e biologia molecolare
+    sl: Biokemija, genetika in molekularna biologija
+    sv: Biokemi, genetik och molekylärbiologi
     tr: Biyokimya, genetik ve moleküler biyoloji
 - id: "https://openalex.org/fields/14"
   scheme: "Fields"
   subject: "Business, Management and Accounting"
   title:
-    en: Business, Management and Accounting
-    de: Wirtschaft, Management und Rechnungswesen
-    fr: Commerce, gestion et comptabilité
-    es: Empresa, gestión y contabilidad
     cs: Podnikové řízení a účetnictví
-    sv: Företagsekonomi, management och redovisning
-    sl: Poslovanje, management in računovodstvo
+    de: Wirtschaft, Management und Rechnungswesen
+    en: Business, Management and Accounting
+    es: Empresa, gestión y contabilidad
+    fr: Commerce, gestion et comptabilité
+    it: Economia aziendale, management e contabilità
     nl: Bedrijfskunde, management en accounting
     pt: Gestão, administração e contabilidade
-    it: Economia aziendale, management e contabilità
+    sl: Poslovanje, management in računovodstvo
+    sv: Företagsekonomi, management och redovisning
     tr: İşletme, yönetim ve muhasebe
 - id: "https://openalex.org/fields/15"
   scheme: "Fields"
   subject: "Chemical Engineering"
   title:
-    en: Chemical Engineering
-    de: Chemische Verfahrenstechnik
-    fr: Génie chimique
-    es: Ingeniería química
     cs: Chemické inženýrrství
-    sv: Kemiteknik
-    sl: Kemijsko inženirstvo
+    de: Chemische Verfahrenstechnik
+    en: Chemical Engineering
+    es: Ingeniería química
+    fr: Génie chimique
+    it: Ingegneria chimica
     nl: Chemische technologie
     pt: Engenharia química
-    it: Ingegneria chimica
+    sl: Kemijsko inženirstvo
+    sv: Kemiteknik
     tr: Kimya mühendisliği
 - id: "https://openalex.org/fields/16"
   scheme: "Fields"
   subject: "Chemistry"
   title:
-    en: Chemistry
-    de: Chemie
-    fr: Chimie
-    es: Química
     cs: Chemie
-    sv: Kemi
-    sl: Kemija
+    de: Chemie
+    en: Chemistry
+    es: Química
+    fr: Chimie
+    it: Chimica
     nl: Scheikunde
     pt: Química
-    it: Chimica
+    sl: Kemija
+    sv: Kemi
     tr: Kimya
 - id: "https://openalex.org/fields/17"
   scheme: "Fields"
   subject: "Computer Science"
   title:
-    en: Computer Science
-    de: Informatik
-    fr: Informatique
-    es: Informática
     cs: Informatika
-    sv: Datavetenskap
-    sl: Računalništvo
+    de: Informatik
+    en: Computer Science
+    es: Informática
+    fr: Informatique
+    it: Informatica
     nl: Informatica
     pt: Ciências da computação
-    it: Informatica
+    sl: Računalništvo
+    sv: Datavetenskap
     tr: Bilgisayar bilimleri
 - id: "https://openalex.org/fields/18"
   scheme: "Fields"
   subject: "Decision Sciences"
   title:
-    en: Decision Sciences
-    de: Entscheidungswissenschaften
-    fr: Sciences de la décision
-    es: Ciencias de la decisión
     cs: Rozhodovací vědy
-    sv: Beslutsteori
-    sl: Odločitvene vede
+    de: Entscheidungswissenschaften
+    en: Decision Sciences
+    es: Ciencias de la decisión
+    fr: Sciences de la décision
+    it: Scienze delle decisioni
     nl: Besliskunde
     pt: Ciências da decisão
-    it: Scienze delle decisioni
+    sl: Odločitvene vede
+    sv: Beslutsteori
     tr: Karar bilimleri
 - id: "https://openalex.org/fields/35"
   scheme: "Fields"
   subject: "Dentistry"
   title:
-    en: Dentistry
-    de: Zahnmedizin
-    fr: Dentisterie
-    es: Odontología
     cs: Stomatologie
-    sv: Odontologi
-    sl: Zobozdravstvo
+    de: Zahnmedizin
+    en: Dentistry
+    es: Odontología
+    fr: Dentisterie
+    it: Odontoiatria
     nl: Tandheelkunde
     pt: Medicina dentária
-    it: Odontoiatria
+    sl: Zobozdravstvo
+    sv: Odontologi
     tr: Diş hekimliği
 - id: "https://openalex.org/fields/19"
   scheme: "Fields"
   subject: "Earth and Planetary Sciences"
   title:
-    en: Earth and Planetary Sciences
-    de: Erd- und Planetenwissenschaften
-    fr: Sciences de la Terre et des planètes
-    es: Ciencias de la Tierra y planetarias
     cs: Vědy o Zemi a planetární vědy
-    sv: Geovetenskap och planetvetenskap
-    sl: Vede o Zemlji in planetarne vede
+    de: Erd- und Planetenwissenschaften
+    en: Earth and Planetary Sciences
+    es: Ciencias de la Tierra y planetarias
+    fr: Sciences de la Terre et des planètes
+    it: Scienze della Terra e planetarie
     nl: Aard- en planetaire wetenschappen
     pt: Ciências da Terra e planetárias
-    it: Scienze della Terra e planetarie
+    sl: Vede o Zemlji in planetarne vede
+    sv: Geovetenskap och planetvetenskap
     tr: Yer ve gezegen bilimleri
 - id: "https://openalex.org/fields/20"
   scheme: "Fields"
   subject: "Economics, Econometrics and Finance"
   title:
-    en: Economics, Econometrics and Finance
-    de: Wirtschaft, Ökonometrie und Finanzen
-    fr: Économie, économétrie et finance
-    es: Economía, econometría y finanzas
     cs: Ekonomie, ekonometrie a finance
-    sv: Ekonomi, ekonometri och finans
-    sl: Ekonomija, ekonometrija in finance
+    de: Wirtschaft, Ökonometrie und Finanzen
+    en: Economics, Econometrics and Finance
+    es: Economía, econometría y finanzas
+    fr: Économie, économétrie et finance
+    it: Economia, econometria e finanza
     nl: Economie, econometrie en financiën
     pt: Economia, econometria e finanças
-    it: Economia, econometria e finanza
+    sl: Ekonomija, ekonometrija in finance
+    sv: Ekonomi, ekonometri och finans
     tr: Ekonomi, ekonometri ve finans
 - id: "https://openalex.org/fields/21"
   scheme: "Fields"
   subject: "Energy"
   title:
-    en: Energy
-    de: Energie
-    fr: Énergie
-    es: Energía
     cs: Energetika
-    sv: Energi
-    sl: Energetika
+    de: Energie
+    en: Energy
+    es: Energía
+    fr: Énergie
+    it: Energia
     nl: Energie
     pt: Energia
-    it: Energia
+    sl: Energetika
+    sv: Energi
     tr: Enerji
 - id: "https://openalex.org/fields/22"
   scheme: "Fields"
   subject: "Engineering"
   title:
-    en: Engineering
-    de: Ingenieurwissenschaften
-    fr: Ingénierie
-    es: Ingeniería
     cs: Technické vědy
-    sv: Teknik
-    sl: Tehnika
+    de: Ingenieurwissenschaften
+    en: Engineering
+    es: Ingeniería
+    fr: Ingénierie
+    it: Ingegneria
     nl: Techniek
     pt: Engenharia
-    it: Ingegneria
+    sl: Tehnika
+    sv: Teknik
     tr: Mühendislik
 - id: "https://openalex.org/fields/23"
   scheme: "Fields"
   subject: "Environmental Science"
   title:
-    en: Environmental Science
-    de: Umweltwissenschaften
-    fr: Sciences de l'environnement
-    es: Ciencias ambientales
     cs: Environmentální vědy
-    sv: Miljövetenskap
-    sl: Okoljske vede
+    de: Umweltwissenschaften
+    en: Environmental Science
+    es: Ciencias ambientales
+    fr: Sciences de l'environnement
+    it: Scienze ambientali
     nl: Milieuwetenschappen
     pt: Ciências ambientais
-    it: Scienze ambientali
+    sl: Okoljske vede
+    sv: Miljövetenskap
     tr: Çevre bilimleri
 - id: "https://openalex.org/fields/36"
   scheme: "Fields"
   subject: "Health Professions"
   title:
-    en: Health Professions
-    de: Gesundheitsberufe
-    fr: Professions de santé
-    es: Profesiones sanitarias
     cs: Zdravotnické profese
-    sv: Hälsovårdsprofessioner
-    sl: Zdravstveni poklici
+    de: Gesundheitsberufe
+    en: Health Professions
+    es: Profesiones sanitarias
+    fr: Professions de santé
+    it: Professioni sanitarie
     nl: Gezondheidsberoepen
     pt: Profissões de saúde
-    it: Professioni sanitarie
+    sl: Zdravstveni poklici
+    sv: Hälsovårdsprofessioner
     tr: Sağlık meslekleri
 - id: "https://openalex.org/fields/24"
   scheme: "Fields"
   subject: "Immunology and Microbiology"
   title:
-    en: Immunology and Microbiology
-    de: Immunologie und Mikrobiologie
-    fr: Immunologie et microbiologie
-    es: Inmunología y microbiología
     cs: Imunologie a mikrobiologie
-    sv: Immunologi och mikrobiologi
-    sl: Imunologija in mikrobiologija
+    de: Immunologie und Mikrobiologie
+    en: Immunology and Microbiology
+    es: Inmunología y microbiología
+    fr: Immunologie et microbiologie
+    it: Immunologia e microbiologia
     nl: Immunologie en microbiologie
     pt: Imunologia e microbiologia
-    it: Immunologia e microbiologia
+    sl: Imunologija in mikrobiologija
+    sv: Immunologi och mikrobiologi
     tr: İmmünoloji ve mikrobiyoloji
 - id: "https://openalex.org/fields/25"
   scheme: "Fields"
   subject: "Materials Science"
   title:
-    en: Materials Science
-    de: Materialwissenschaften
-    fr: Science des matériaux
-    es: Ciencia de materiales
     cs: Materiálové vědy
-    sv: Materialteknik
-    sl: Materialske vede
+    de: Materialwissenschaften
+    en: Materials Science
+    es: Ciencia de materiales
+    fr: Science des matériaux
+    it: Scienza dei materiali
     nl: Materiaalkunde
     pt: Ciência dos materiais
-    it: Scienza dei materiali
+    sl: Materialske vede
+    sv: Materialteknik
     tr: Malzeme bilimi
 - id: "https://openalex.org/fields/26"
   scheme: "Fields"
   subject: "Mathematics"
   title:
-    en: Mathematics
-    de: Mathematik
-    fr: Mathématiques
-    es: Matemáticas
     cs: Matematika
-    sv: Matematik
-    sl: Matematika
+    de: Mathematik
+    en: Mathematics
+    es: Matemáticas
+    fr: Mathématiques
+    it: Matematica
     nl: Wiskunde
     pt: Matemática
-    it: Matematica
+    sl: Matematika
+    sv: Matematik
     tr: Matematik
 - id: "https://openalex.org/fields/27"
   scheme: "Fields"
   subject: "Medicine"
   title:
-    en: Medicine
-    de: Medizin
-    fr: Médecine
-    es: Medicina
     cs: Medicína
-    sv: Medicin
-    sl: Medicina
+    de: Medizin
+    en: Medicine
+    es: Medicina
+    fr: Médecine
+    it: Medicina
     nl: Geneeskunde
     pt: Medicina
-    it: Medicina
+    sl: Medicina
+    sv: Medicin
     tr: Tıp
 - id: "https://openalex.org/fields/28"
   scheme: "Fields"
   subject: "Neuroscience"
   title:
-    en: Neuroscience
-    de: Neurowissenschaften
-    fr: Neurosciences
-    es: Neurociencias
     cs: Neurovědy
-    sv: Neurovetenskap
-    sl: Nevroznanost
+    de: Neurowissenschaften
+    en: Neuroscience
+    es: Neurociencias
+    fr: Neurosciences
+    it: Neuroscienze
     nl: Neurowetenschappen
     pt: Neurociências
-    it: Neuroscienze
+    sl: Nevroznanost
+    sv: Neurovetenskap
     tr: Sinirbilim
 - id: "https://openalex.org/fields/29"
   scheme: "Fields"
   subject: "Nursing"
   title:
-    en: Nursing
-    de: Pflegewissenschaften
-    fr: Sciences infirmières
-    es: Enfermería
     cs: Ošetřovatelství
-    sv: Omvårdnad
-    sl: Zdravstvena nega
+    de: Pflegewissenschaften
+    en: Nursing
+    es: Enfermería
+    fr: Sciences infirmières
+    it: Infermieristica
     nl: Verpleegkunde
     pt: Enfermagem
-    it: Infermieristica
+    sl: Zdravstvena nega
+    sv: Omvårdnad
     tr: Hemşirelik
 - id: "https://openalex.org/fields/30"
   scheme: "Fields"
   subject: "Pharmacology, Toxicology and Pharmaceutics"
   title:
-    en: Pharmacology, Toxicology and Pharmaceutics
-    de: Pharmakologie, Toxikologie und Pharmazeutik
-    fr: Pharmacologie, toxicologie et pharmacie
-    es: Farmacología, toxicología y farmacia
     cs: Farmakologie, toxikologie a farmacie
-    sv: Farmakologi, toxikologi och farmaci
-    sl: Farmakologija, toksikologija in farmacija
+    de: Pharmakologie, Toxikologie und Pharmazeutik
+    en: Pharmacology, Toxicology and Pharmaceutics
+    es: Farmacología, toxicología y farmacia
+    fr: Pharmacologie, toxicologie et pharmacie
+    it: Farmacologia, tossicologia e farmacia
     nl: Farmacologie, toxicologie en farmacie
     pt: Farmacologia, toxicologia e farmácia
-    it: Farmacologia, tossicologia e farmacia
+    sl: Farmakologija, toksikologija in farmacija
+    sv: Farmakologi, toxikologi och farmaci
     tr: Farmakoloji, toksikoloji ve eczacılık
 - id: "https://openalex.org/fields/31"
   scheme: "Fields"
   subject: "Physics and Astronomy"
   title:
-    en: Physics and Astronomy
-    de: Physik und Astronomie
-    fr: Physique et astronomie
-    es: Física y astronomía
     cs: Fyzika a astronomie
-    sv: Fysik och astronomi
-    sl: Fizika in astronomija
+    de: Physik und Astronomie
+    en: Physics and Astronomy
+    es: Física y astronomía
+    fr: Physique et astronomie
+    it: Fisica e astronomia
     nl: Natuurkunde en sterrenkunde
     pt: Física e astronomia
-    it: Fisica e astronomia
+    sl: Fizika in astronomija
+    sv: Fysik och astronomi
     tr: Fizik ve astronomi
 - id: "https://openalex.org/fields/32"
   scheme: "Fields"
   subject: "Psychology"
   title:
-    en: Psychology
-    de: Psychologie
-    fr: Psychologie
-    es: Psicología
     cs: Psychologie
-    sv: Psykologi
-    sl: Psihologija
+    de: Psychologie
+    en: Psychology
+    es: Psicología
+    fr: Psychologie
+    it: Psicologia
     nl: Psychologie
     pt: Psicologia
-    it: Psicologia
+    sl: Psihologija
+    sv: Psykologi
     tr: Psikoloji
 - id: "https://openalex.org/fields/33"
   scheme: "Fields"
   subject: "Social Sciences"
   title:
-    en: Social Sciences
-    de: Sozialwissenschaften
-    fr: Sciences sociales
-    es: Ciencias sociales
     cs: Společenské vědy
-    sv: Samhällsvetenskap
-    sl: Družbene vede
+    de: Sozialwissenschaften
+    en: Social Sciences
+    es: Ciencias sociales
+    fr: Sciences sociales
+    it: Scienze sociali
     nl: Sociale wetenschappen
     pt: Ciências sociais
-    it: Scienze sociali
+    sl: Družbene vede
+    sv: Samhällsvetenskap
     tr: Sosyal bilimler
 - id: "https://openalex.org/fields/34"
   scheme: "Fields"
   subject: "Veterinary"
   title:
-    en: Veterinary
-    de: Veterinärmedizin
-    fr: Médecine vétérinaire
-    es: Veterinaria
     cs: Veterinární lékařství
-    sv: Veterinärmedicin
-    sl: Veterinarstvo
+    de: Veterinärmedizin
+    en: Veterinary
+    es: Veterinaria
+    fr: Médecine vétérinaire
+    it: Medicina veterinaria
     nl: Diergeneeskunde
     pt: Medicina veterinária
-    it: Medicina veterinaria
+    sl: Veterinarstvo
+    sv: Veterinärmedicin
     tr: Veterinerlik

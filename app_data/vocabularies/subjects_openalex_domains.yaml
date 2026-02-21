@@ -2,59 +2,59 @@
   scheme: "Domains"
   subject: "Health Sciences"
   title:
-    en: Health Sciences
-    de: Gesundheitswissenschaften
-    fr: Sciences de la santé
-    es: Ciencias de la salud
     cs: Zdravotní vědy
-    sv: Hälsovetenskap
-    sl: Zdravstvene vede
+    de: Gesundheitswissenschaften
+    en: Health Sciences
+    es: Ciencias de la salud
+    fr: Sciences de la santé
+    it: Scienze della salute
     nl: Gezondheidswetenschappen
     pt: Ciências da saúde
-    it: Scienze della salute
+    sl: Zdravstvene vede
+    sv: Hälsovetenskap
     tr: Sağlık bilimleri
 - id: "https://openalex.org/domains/1"
   scheme: "Domains"
   subject: "Life Sciences"
   title:
-    en: Life Sciences
-    de: Lebenswissenschaften
-    fr: Sciences de la vie
-    es: Ciencias de la vida
     cs: Vědy o životě
-    sv: Livsvetenskap
-    sl: Biološke in življenjske vede
+    de: Lebenswissenschaften
+    en: Life Sciences
+    es: Ciencias de la vida
+    fr: Sciences de la vie
+    it: Scienze della vita
     nl: Levenswetenschappen
     pt: Ciências da vida
-    it: Scienze della vita
+    sl: Biološke in življenjske vede
+    sv: Livsvetenskap
     tr: Yaşam bilimleri
 - id: "https://openalex.org/domains/3"
   scheme: "Domains"
   subject: "Physical Sciences"
   title:
-    en: Physical Sciences
-    de: Naturwissenschaften
-    fr: Sciences physiques
-    es: Ciencias físicas
     cs: Přírodní vědy
-    sv: Naturvetenskap
-    sl: Naravoslovne vede
+    de: Naturwissenschaften
+    en: Physical Sciences
+    es: Ciencias físicas
+    fr: Sciences physiques
+    it: Scienze fisiche
     nl: Natuurwetenschappen
     pt: Ciências físicas
-    it: Scienze fisiche
+    sl: Naravoslovne vede
+    sv: Naturvetenskap
     tr: Fiziksel bilimler
 - id: "https://openalex.org/domains/2"
   scheme: "Domains"
   subject: "Social Sciences"
   title:
-    en: Social Sciences
-    de: Sozialwissenschaften
-    fr: Sciences sociales
-    es: Ciencias sociales
     cs: Společenské vědy
-    sv: Samhällsvetenskap
-    sl: Družbene vede
+    de: Sozialwissenschaften
+    en: Social Sciences
+    es: Ciencias sociales
+    fr: Sciences sociales
+    it: Scienze sociali
     nl: Sociale wetenschappen
     pt: Ciências sociais
-    it: Scienze sociali
+    sl: Družbene vede
+    sv: Samhällsvetenskap
     tr: Sosyal bilimler
