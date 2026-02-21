@@ -100,7 +100,7 @@ export class RecordCitationField extends Component {
   render() {
     const { styles, recordLinks, defaultStyle, includeDeleted } = this.props;
     const { loading, citation, error } = this.state;
-    const citationOptions = styles.map((style) => {
+    const citationOptions = (styles || []).map((style) => {
       return {
         key: style[0],
         value: style[0],

@@ -74,7 +74,7 @@ if (recordCitationAppDiv) {
   ReactDOM.render(
     <RecordCitationField
       recordLinks={JSON.parse(recordCitationAppDiv.dataset.recordLinks)}
-      styles={JSON.parse(recordCitationAppDiv.dataset.styles)}
+      styles={JSON.parse(recordCitationAppDiv.dataset.styles) || []}
       defaultStyle={JSON.parse(recordCitationAppDiv.dataset.defaultstyle)}
       includeDeleted={JSON.parse(recordCitationAppDiv.dataset.includeDeleted)}
       locale={recordCitationAppDiv.dataset.locale}

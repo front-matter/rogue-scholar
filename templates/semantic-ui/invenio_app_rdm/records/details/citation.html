@@ -11,5 +11,5 @@
   data-styles='{{ config.get("RDM_CITATION_STYLES") | tojson }}'
   data-defaultstyle='{{ config.get("RDM_CITATION_STYLES_DEFAULT") | tojson }}'
   data-include-deleted='{{ include_deleted | tojson }}'
-  data-locale='{{ get_locale() }}'>
+  data-locale='{{ request.babel_locale }}'>
 </div>
