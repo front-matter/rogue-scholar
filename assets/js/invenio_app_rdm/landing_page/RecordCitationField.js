@@ -7,7 +7,6 @@
 // under the terms of the MIT License; see LICENSE file for more details.
 
 import _debounce from "lodash/debounce";
-import _escape from "lodash/escape";
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Placeholder, Dropdown, Message } from "semantic-ui-react";
@@ -109,9 +108,8 @@ export class RecordCitationField extends Component {
     });
 
     // convert links in text to clickable links (ignoring punctuations at the end)
-    const escapedCitation = _escape(citation); // escape html characters
     const urlRegex = /(https?:\/\/[^\s,;]+(?=[^\s,;]*))/g;
-    const urlizedCitation = escapedCitation.replace(urlRegex, (url) => {
+    const urlizedCitation = citation.replace(urlRegex, (url) => {
       // remove trailing dot
       let trailingDot = "";
       if (url.endsWith(".")) {
