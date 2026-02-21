@@ -10,9 +10,11 @@
 import re
 from flask import request, url_for
 
+
 def camelcase_to_titlecase(s):
-    t = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', s)
+    t = re.sub(r"(?<=[a-z])(?=[A-Z])", " ", s)
     return t[0].upper() + t[1:].lower()
+
 
 def blogs_detail_view_function():
     """Implements redirector view function for blogs detail.
@@ -25,8 +27,11 @@ def blogs_detail_view_function():
     """
     _id = request.view_args["id"]
     values = {"pid_value": _id}
-    target = url_for("invenio_app_rdm_communities.communities_detail", **values)
+    target = url_for(
+        "invenio_app_rdm_communities.communities_detail", **values
+    )
     return target
+
 
 def blogs_search_view_function():
     """Implements redirector view function for blogs search.
@@ -48,6 +53,7 @@ def blogs_search_view_function():
     target = url_for("invenio_communities.communities_search", **values)
     return target
 
+
 def posts_detail_view_function():
     """Implements redirector view function for posts detail.
     Assumes that the pid_value is a DOI.
@@ -63,6 +69,7 @@ def posts_detail_view_function():
     values = {"q": f"doi:{prefix}/{suffix}"}
     target = url_for("invenio_search_ui.search", **values)
     return target
+
 
 def posts_search_view_function():
     """Implements redirector view function for posts search.
@@ -87,19 +94,8 @@ def posts_search_view_function():
     target = url_for("invenio_search_ui.search", **values)
     return target
 
+
 REDIRECTOR_RULES = {
-    "redirect_signin": {
-        "source": "/auth/signin",
-        "target": "https://legacy.rogue-scholar.org/auth/signin",
-    },
-    "redirect_about": {
-        "source": "/about",
-        "target": "https://legacy.rogue-scholar.org/about",
-    },
-    "redirect_board": {
-        "source": "/board",
-        "target": "https://legacy.rogue-scholar.org/board",
-    },
     "redirect_blogs": {
         "source": "/blogs",
         "target": blogs_search_view_function,
@@ -139,7 +135,7 @@ REDIRECTOR_RULES = {
     "redirect_en_blogs_detail": {
         "source": "/en/blogs/<id>",
         "target": blogs_detail_view_function,
-    },    
+    },
     "redirect_de_blogs_detail": {
         "source": "/de/blogs/<id>",
         "target": blogs_detail_view_function,

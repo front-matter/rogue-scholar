@@ -1,0 +1,101 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Overview") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="overview">Rogue Scholar – Overzicht</h2>
+      </div>
+
+      <div class="ui twelve wide column">
+        <h3>Wat is Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar is een open access archief en register voor wetenschapsblogs.
+          Het bewaart wetenschapsblogberichten, maakt ze citeerbaar via
+          <a href="https://doi.org">DOI</a> en zorgt voor hun langdurige
+          vindbaarheid naast formele wetenschappelijke literatuur.
+        </p>
+
+        <h3>Waarom wetenschapsblogs?</h3>
+        <p>
+          Wetenschapsblogs zijn een belangrijk maar vaak over het hoofd gezien deel
+          van wetenschappelijke communicatie. Onderzoekers delen voorlopige bevindingen,
+          bespreken methoden, leggen complexe onderwerpen uit aan het publiek en
+          nemen deel aan wetenschappelijk debat lang voor – of parallel aan –
+          formele publicatie. Rogue Scholar geeft deze bijdragen dezelfde citeerbaarheid
+          en vindbaarheid als tijdschriftartikelen.
+          In tegenstelling tot preprints hebben academische blogberichten vaak een
+          bredere reikwijdte, die verder gaat dan het rapporteren van origineel onderzoek.
+          Ze kunnen tutorials, opiniestukken, literatuuroverzichten, evenementenaankondigingen
+          en meer bevatten.
+        </p>
+
+        <h3>Belangrijkste functies</h3>
+        <ul>
+          <li>
+            <strong>DOI-registratie</strong> – Elk gearchiveerd blogbericht ontvangt
+            een persistent DOI, waardoor betrouwbare citaties en kruisverwijzingen
+            mogelijk zijn. Berichten zijn geversioneerd: voor elke versie wordt een DOI
+            aangemaakt en een concept-DOI verwijst altijd naar de meest recente versie.
+          </li>
+          <li>
+            <strong>Gestructureerde metadata</strong> – Auteursnamen, ORCID iD's,
+            affiliaties met ROR-ID's, onderwerpen, licenties en publicatiedatums worden
+            vastgelegd en beschikbaar gesteld via standaardschema's (DataCite, Crossref,
+            Dublin Core, Schema.org).
+          </li>
+          <li>
+            <strong>Volledige tekstzoekfunctie</strong> – Alle gearchiveerde berichten
+            zijn geïndexeerd en doorzoekbaar via de volledige tekstzoekfunctie.
+          </li>
+          <li>
+            <strong>Citatie-export</strong> – Citaties kunnen worden gegenereerd in
+            APA, Chicago, MLA en vele andere stijlen, en geëxporteerd als BibTeX,
+            RIS, JSON-LD en meer.
+          </li>
+          <li>
+            <strong>Meertalige ondersteuning</strong> – Berichten in elke taal worden
+            gearchiveerd; taaldetectie en metadata-lokalisatie worden ondersteund.
+          </li>
+          <li>
+            <strong>Open API</strong> – Alle metadata zijn vrij beschikbaar via een
+            REST API, waardoor integratie met referentiebeheerders, ontdekkingssystemen
+            en onderzoeksworkflows mogelijk is.
+          </li>
+          <li>
+            <strong>Communities</strong> – Blogs kunnen worden georganiseerd in
+            thematische communities, zodat gerelateerde inhoud gemakkelijk te
+            ontdekken is.
+          </li>
+        </ul>
+
+        <h3>Ondersteunde platformen</h3>
+        <p>
+          Rogue Scholar ondersteunt inname van alle grote blogplatformen die door
+          onderzoekers worden gebruikt, waaronder WordPress, Ghost, Substack,
+          Quarto, Hugo, Jekyll en anderen via standaard feedformaten (RSS/Atom)
+          of directe API-integratie.
+        </p>
+
+        <h3>Wie zit er achter Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar wordt beheerd door
+          <a href="https://front-matter.de" target="_blank">Front Matter</a> en
+          bestuurd door een <a href="/board">Advisory Board</a> van onderzoekers en
+          voorstanders van open wetenschap. De infrastructuur is gebouwd op
+          <a href="https://inveniordm.docs.cern.ch/" target="_blank">InvenioRDM</a>,
+          het open source repositoryplatform ontwikkeld door CERN en partners,
+          waaronder Front Matter.
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}

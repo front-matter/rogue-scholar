@@ -6,6 +6,13 @@
     de: Naturwissenschaften
     fr: Sciences naturelles
     es: Ciencias naturales
+    cs: Přírodní vědy
+    sv: Naturvetenskap
+    sl: Naravoslovne vede
+    nl: Natuurwetenschappen
+    pt: Ciências naturais
+    it: Scienze naturali
+    tr: Doğa bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.1"
   scheme: FOS
   subject: "Mathematics"
@@ -14,6 +21,13 @@
     de: Mathematik
     fr: Mathématiques
     es: Matemáticas
+    cs: Matematika
+    sv: Matematik
+    sl: Matematika
+    nl: Wiskunde
+    pt: Matemática
+    it: Matematica
+    tr: Matematik
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.2"
   scheme: FOS
   subject: "Computer and information sciences"
@@ -22,6 +36,13 @@
     de: Informatik
     fr: Informatique et sciences de l'information
     es: Ciencias de la computación e información
+    cs: Informatika a informační vědy
+    sv: Data- och informationsvetenskap
+    sl: Računalništvo in informacijske vede
+    nl: Informatica en informatiewetenschappen
+    pt: Ciências da computação e informação
+    it: Informatica e scienze dell'informazione
+    tr: Bilgisayar ve bilgi bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.3"
   scheme: FOS
   subject: "Physical sciences"
@@ -30,6 +51,13 @@
     de: Physik
     fr: Sciences physiques
     es: Ciencias físicas
+    cs: Fyzikální vědy
+    sv: Fysik
+    sl: Fizikalne vede
+    nl: Natuurkunde
+    pt: Ciências físicas
+    it: Scienze fisiche
+    tr: Fizik bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.4"
   scheme: FOS
   subject: "Chemical sciences"
@@ -38,6 +66,13 @@
     de: Chemie
     fr: Sciences chimiques
     es: Ciencias químicas
+    cs: Chemické vědy
+    sv: Kemi
+    sl: Kemijske vede
+    nl: Chemische wetenschappen
+    pt: Ciências químicas
+    it: Scienze chimiche
+    tr: Kimya bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.5"
   scheme: FOS
   subject: "Earth and related environmental sciences"
@@ -46,6 +81,13 @@
     de: Geowissenschaften
     fr: Sciences de la Terre et sciences de l'environnement connexes
     es: Ciencias de la Tierra y ciencias medioambientales afines
+    cs: Vědy o Zemi a příbuzné vědy o životním prostředí
+    sv: Geovetenskap och relaterade miljövetenskaper
+    sl: Vede o Zemlji in sorodne okoljske vede
+    nl: Aardwetenschappen en aanverwante milieuwetenschappen
+    pt: Ciências da Terra e ciências ambientais afins
+    it: Scienze della Terra e scienze ambientali correlate
+    tr: Yer bilimleri ve ilgili çevre bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.6"
   scheme: FOS
   subject: "Biological sciences"
@@ -54,6 +96,13 @@
     de: Biologie
     fr: Sciences biologiques
     es: Ciencias biológicas
+    cs: Biologické vědy
+    sv: Biologi
+    sl: Biološke vede
+    nl: Biologische wetenschappen
+    pt: Ciências biológicas
+    it: Scienze biologiche
+    tr: Biyoloji bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?1.7"
   scheme: FOS
   subject: "Other natural sciences"
@@ -62,6 +111,13 @@
     de: Andere Naturwissenschaften
     fr: Autres sciences naturelles
     es: Otras ciencias naturales
+    cs: Ostatní přírodní vědy
+    sv: Övriga naturvetenskaper
+    sl: Druge naravoslovne vede
+    nl: Andere natuurwetenschappen
+    pt: Outras ciências naturais
+    it: Altre scienze naturali
+    tr: Diğer doğa bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2"
   scheme: FOS
   subject: "Engineering and technology"
@@ -70,6 +126,13 @@
     de: Technische Wissenschaften
     fr: Ingénierie et technologie
     es: Ingeniería y tecnología
+    cs: Technické vědy a technologie
+    sv: Teknik och teknologi
+    sl: Tehnika in tehnologija
+    nl: Techniek en technologie
+    pt: Engenharia e tecnologia
+    it: Ingegneria e tecnologia
+    tr: Mühendislik ve teknoloji
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.1"
   scheme: FOS
   subject: "Civil engineering"
@@ -78,6 +141,13 @@
     de: Bauingenieurwesen
     fr: Génie civil
     es: Ingeniería civil
+    cs: Stavební inženýrrství
+    sv: Byggteknik
+    sl: Gradbenništvo
+    nl: Civiele techniek
+    pt: Engenharia civil
+    it: Ingegneria civile
+    tr: İnşaat mühendisliği
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.2"
   scheme: FOS
   subject: "Electrical engineering, electronic engineering, information engineering"
@@ -86,6 +156,13 @@
     de: Elektrotechnik und Informationstechnik
     fr: Génie électrique, génie électronique et génie de l'information
     es: Ingeniería eléctrica, electrónica e informática
+    cs: Elektrotechnika, elektronika a informační inženýrrství
+    sv: Elektroteknik, elektronik och informationsteknik
+    sl: Elektrotehnika, elektronika in informacijska tehnika
+    nl: Elektrotechniek, elektronische techniek en informatietechniek
+    pt: Engenharia elétrica, engenharia eletrônica e engenharia da informação
+    it: Ingegneria elettrica, ingegneria elettronica e ingegneria dell'informazione
+    tr: Elektrik mühendisliği, elektronik mühendisliği, bilgi mühendisliği
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.3"
   scheme: FOS
   subject: "Mechanical engineering"
@@ -94,6 +171,13 @@
     de: Maschinenbau
     fr: Génie mécanique
     es: Ingeniería mecánica
+    cs: Strojní inženýrrství
+    sv: Maskinteknik
+    sl: Strojništvo
+    nl: Werktuigbouwkunde
+    pt: Engenharia mecânica
+    it: Ingegneria meccanica
+    tr: Makine mühendisliği
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.4"
   scheme: FOS
   subject: "Chemical engineering"
@@ -102,6 +186,13 @@
     de: Chemische Verfahrenstechnik
     fr: Génie chimique
     es: Ingeniería química
+    cs: Chemické inženýrrství
+    sv: Kemiteknik
+    sl: Kemijsko inženirstvo
+    nl: Chemische technologie
+    pt: Engenharia química
+    it: Ingegneria chimica
+    tr: Kimya mühendisliği
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.5"
   scheme: FOS
   subject: "Materials engineering"
@@ -110,6 +201,13 @@
     de: Werkstofftechnik
     fr: Génie des matériaux
     es: Ingeniería de materiales
+    cs: Materiálové inženýrrství
+    sv: Materialteknik
+    sl: Materialsko inženirstvo
+    nl: Materiaalkunde
+    pt: Engenharia de materiais
+    it: Ingegneria dei materiali
+    tr: Malzeme mühendisliği
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.6"
   scheme: FOS
   subject: "Medical engineering"
@@ -118,6 +216,13 @@
     de: Medizintechnik
     fr: Génie médical
     es: Ingeniería médica
+    cs: Lékařské inženýrrství
+    sv: Medicinsk teknik
+    sl: Medicinsko inženirstvo
+    nl: Medische technologie
+    pt: Engenharia médica
+    it: Ingegneria medica
+    tr: Tıbbi mühendislik
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.7"
   scheme: FOS
   subject: "Environmental engineering"
@@ -126,6 +231,13 @@
     de: Umweltingenieurwesen
     fr: Génie de l'environnement
     es: Ingeniería ambiental
+    cs: Environmentální inženýrrství
+    sv: Miljöteknik
+    sl: Okoljsko inženirstvo
+    nl: Milieutechniek
+    pt: Engenharia ambiental
+    it: Ingegneria ambientale
+    tr: Çevre mühendisliği
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.8"
   scheme: FOS
   subject: "Environmental biotechnology"
@@ -134,6 +246,13 @@
     de: Umweltbiotechnologie
     fr: Biotechnologie environnementale
     es: Biotecnología ambiental
+    cs: Environmentální biotechnologie
+    sv: Miljöbioteknik
+    sl: Okoljska biotehnologija
+    nl: Milieubiotechnologie
+    pt: Biotecnologia ambiental
+    it: Biotecnologia ambientale
+    tr: Çevre biyoteknolojisi
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.9"
   scheme: FOS
   subject: "Industrial biotechnology"
@@ -142,6 +261,13 @@
     de: Industrielle Biotechnologie
     fr: Biotechnologie industrielle
     es: Biotecnología industrial
+    cs: Průmyslová biotechnologie
+    sv: Industriell bioteknik
+    sl: Industrijska biotehnologija
+    nl: Industriële biotechnologie
+    pt: Biotecnologia industrial
+    it: Biotecnologia industriale
+    tr: Endüstriyel biyoteknoloji
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.10"
   scheme: FOS
   subject: "Nano technology"
@@ -150,6 +276,13 @@
     de: Nanotechnologie
     fr: Nanotechnologie
     es: Nanotecnología
+    cs: Nanotechnologie
+    sv: Nanoteknik
+    sl: Nanotehnologija
+    nl: Nanotechnologie
+    pt: Nanotecnologia
+    it: Nanotecnologia
+    tr: Nanoteknoloji
 - id: "http://www.oecd.org/science/inno/38235147.pdf?2.11"
   scheme: FOS
   subject: "Other engineering and technologies"
@@ -158,6 +291,13 @@
     de: Andere Technische Wissenschaften
     fr: Autres sciences de l'ingénieur et technologies
     es: Otras ingenierías y tecnologías
+    cs: Ostatní technické vědy a technologie
+    sv: Övrig teknik och teknologi
+    sl: Druge tehnike in tehnologije
+    nl: Andere techniek en technologieën
+    pt: Outras engenharias e tecnologias
+    it: Altre ingegnerie e tecnologie
+    tr: Diğer mühendislik ve teknolojiler
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3"
   scheme: FOS
   subject: "Medical and health sciences"
@@ -166,6 +306,13 @@
     de: Humanmedizin und Gesundheitswissenschaften
     fr: Sciences médicales et sciences de la santé
     es: Ciencias médicas y de la salud
+    cs: Lékařské vědy a zdravověda
+    sv: Medicinska och hälsovetenskaper
+    sl: Medicinske in zdravstvene vede
+    nl: Medische en gezondheidswetenschappen
+    pt: Ciências médicas e da saúde
+    it: Scienze mediche e della salute
+    tr: Tıp ve sağlık bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3.1"
   scheme: FOS
   subject: "Basic medicine"
@@ -174,6 +321,13 @@
     de: Medizinisch-theoretische Wissenschaften und Pharmazie
     fr: Médecine fondamentale
     es: Medicina básica
+    cs: Základní lékařské vědy
+    sv: Grundläggande medicin
+    sl: Temeljna medicina
+    nl: Basisgeneeskunde
+    pt: Medicina básica
+    it: Medicina di base
+    tr: Temel tıp
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3.2"
   scheme: FOS
   subject: "Clinical medicine"
@@ -182,6 +336,13 @@
     de: Klinische Medizin
     fr: Médecine clinique
     es: Medicina clínica
+    cs: Klinická medicína
+    sv: Klinisk medicin
+    sl: Klinična medicina
+    nl: Klinische geneeskunde
+    pt: Medicina clínica
+    it: Medicina clinica
+    tr: Klinik tıp
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3.3"
   scheme: FOS
   subject: "Health sciences"
@@ -190,6 +351,13 @@
     de: Gesundheitswissenschaften
     fr: Sciences de la santé
     es: Ciencias de la salud
+    cs: Zdravotní vědy
+    sv: Hälsovetenskap
+    sl: Zdravstvene vede
+    nl: Gezondheidswetenschappen
+    pt: Ciências da saúde
+    it: Scienze della salute
+    tr: Sağlık bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3.4"
   scheme: FOS
   subject: "Health biotechnology"
@@ -198,6 +366,13 @@
     de: Medizinische Biotechnologie
     fr: Biotechnologie de la santé
     es: Biotecnología sanitaria
+    cs: Zdravotní biotechnologie
+    sv: Hälsobioteknik
+    sl: Zdravstvena biotehnologija
+    nl: Gezondheids-biotechnologie
+    pt: Biotecnologia da saúde
+    it: Biotecnologia sanitaria
+    tr: Sağlık biyoteknolojisi
 - id: "http://www.oecd.org/science/inno/38235147.pdf?3.5"
   scheme: FOS
   subject: "Other medical sciences"
@@ -206,6 +381,13 @@
     de: Andere Humanmedizin und Gesundheitswissenschaften
     fr: Autres sciences médicales
     es: Otras ciencias médicas
+    cs: Ostatní lékařské vědy
+    sv: Övriga medicinska vetenskaper
+    sl: Druge medicinske vede
+    nl: Andere medische wetenschappen
+    pt: Outras ciências médicas
+    it: Altre scienze mediche
+    tr: Diğer tıp bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4"
   scheme: FOS
   subject: "Agricultural sciences"
@@ -214,6 +396,13 @@
     de: Agrarwissenschaften und Veterinärmedizin
     fr: Sciences agricoles
     es: Ciencias agrarias
+    cs: Zemědělské vědy
+    sv: Lantbruksvetenskap
+    sl: Kmetijske vede
+    nl: Landbouwwetenschappen
+    pt: Ciências agrárias
+    it: Scienze agrarie
+    tr: Tarım bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4.1"
   scheme: FOS
   subject: "Agriculture, forestry, and fisheries"
@@ -222,6 +411,13 @@
     de: Land- und Forstwirtschaft, Fischerei
     fr: Agriculture, sylviculture et pêche
     es: Agricultura, silvicultura y pesca
+    cs: Zemědělství, lesnictví a rybářství
+    sv: Jordbruk, skogsbruk och fiske
+    sl: Kmetijstvo, gozdarstvo in ribištvo
+    nl: Landbouw, bosbouw en visserij
+    pt: Agricultura, silvicultura e pescas
+    it: Agricoltura, silvicoltura e pesca
+    tr: Tarım, ormancılık ve balıkçılık
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4.2"
   scheme: FOS
   subject: "Animal and dairy science"
@@ -230,6 +426,13 @@
     de: Tierzucht, Tierproduktion
     fr: Sciences animales et laitières
     es: Ciencias animales y lecheras
+    cs: Zootechnika a mlékařenství
+    sv: Husdjursvetenskap och mjölkvetenskap
+    sl: Živinoreja in mlekarska veda
+    nl: Dier- en zuivelwetenschap
+    pt: Ciências animais e leiteiras
+    it: Scienze animali e lattiero-casearie
+    tr: Hayvan ve süt bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4.3"
   scheme: FOS
   subject: "Veterinary science"
@@ -238,6 +441,13 @@
     de: Veterinärmedizin
     fr: Sciences vétérinaires
     es: Ciencias veterinarias
+    cs: Veterinární vědy
+    sv: Veterinärmedicin
+    sl: Veterinarska veda
+    nl: Diergeneeskunde
+    pt: Ciências veterinárias
+    it: Scienze veterinarie
+    tr: Veteriner bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4.4"
   scheme: FOS
   subject: "Agricultural biotechnology"
@@ -246,6 +456,13 @@
     de: Agrarbiotechnologie und Lebensmittelbiotechnologie
     fr: Biotechnologie agricole
     es: Biotecnología agraria
+    cs: Zemědělská biotechnologie
+    sv: Lantbruksbioteknik
+    sl: Kmetijska biotehnologija
+    nl: Landbouwbiotechnologie
+    pt: Biotecnologia agrária
+    it: Biotecnologia agraria
+    tr: Tarımsal biyoteknoloji
 - id: "http://www.oecd.org/science/inno/38235147.pdf?4.5"
   scheme: FOS
   subject: "Other agricultural sciences"
@@ -254,6 +471,13 @@
     de: Andere Agrarwissenschaften
     fr: Autres sciences agricoles
     es: Otras ciencias agrarias
+    cs: Ostatní zemědělské vědy
+    sv: Övriga lantbruksvetenskaper
+    sl: Druge kmetijske vede
+    nl: Andere landbouwwetenschappen
+    pt: Outras ciências agrárias
+    it: Altre scienze agrarie
+    tr: Diğer tarım bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5"
   scheme: FOS
   subject: "Social science"
@@ -262,6 +486,13 @@
     de: Sozialwissenschaften
     fr: Sciences sociales
     es: Ciencias sociales
+    cs: Společenské vědy
+    sv: Samhällsvetenskap
+    sl: Družbene vede
+    nl: Sociale wetenschappen
+    pt: Ciências sociais
+    it: Scienze sociali
+    tr: Sosyal bilimler
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.1"
   scheme: FOS
   subject: "Psychology"
@@ -270,6 +501,13 @@
     de: Psychologie
     fr: Psychologie
     es: Psicología
+    cs: Psychologie
+    sv: Psykologi
+    sl: Psihologija
+    nl: Psychologie
+    pt: Psicologia
+    it: Psicologia
+    tr: Psikoloji
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.2"
   scheme: FOS
   subject: "Economics and business"
@@ -278,6 +516,13 @@
     de: Wirtschaftswissenschaften
     fr: Économie et commerce
     es: Economía y empresa
+    cs: Ekonomie a obchod
+    sv: Ekonomi och företagsekonomi
+    sl: Ekonomija in poslovanje
+    nl: Economie en bedrijfskunde
+    pt: Economia e gestão
+    it: Economia e impresa
+    tr: Ekonomi ve işletme
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.3"
   scheme: FOS
   subject: "Educational sciences"
@@ -286,6 +531,13 @@
     de: Erziehungswissenschaften
     fr: Sciences de l'éducation
     es: Ciencias de la educación
+    cs: Pedagogika
+    sv: Pedagogik
+    sl: Pedagoške vede
+    nl: Onderwijswetenschappen
+    pt: Ciências da educação
+    it: Scienze dell'educazione
+    tr: Eğitim bilimleri
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.4"
   scheme: FOS
   subject: "Sociology"
@@ -294,6 +546,13 @@
     de: Soziologie
     fr: Sociologie
     es: Sociología
+    cs: Sociologie
+    sv: Sociologi
+    sl: Sociologija
+    nl: Sociologie
+    pt: Sociologia
+    it: Sociologia
+    tr: Sosyoloji
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.5"
   scheme: FOS
   subject: "Law"
@@ -302,6 +561,13 @@
     de: Rechtswissenschaften
     fr: Droit
     es: Derecho
+    cs: Právo
+    sv: Juridik
+    sl: Pravo
+    nl: Rechtswetenschappen
+    pt: Direito
+    it: Diritto
+    tr: Hukuk
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.6"
   scheme: FOS
   subject: "Political science"
@@ -310,6 +576,13 @@
     de: Politikwissenschaften
     fr: Sciences politiques
     es: Ciencias políticas
+    cs: Politologie
+    sv: Statsvetenskap
+    sl: Politologija
+    nl: Politicologie
+    pt: Ciências políticas
+    it: Scienze politiche
+    tr: Siyaset bilimi
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.7"
   scheme: FOS
   subject: "Social and economic geography"
@@ -318,6 +591,13 @@
     de: Humangeographie und Raumplanung
     fr: Géographie sociale et économique
     es: Geografía social y económica
+    cs: Sociální a ekonomická geografie
+    sv: Social och ekonomisk geografi
+    sl: Socialna in ekonomska geografija
+    nl: Sociale en economische geografie
+    pt: Geografia social e económica
+    it: Geografia sociale ed economica
+    tr: Sosyal ve ekonomik coğrafya
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.8"
   scheme: FOS
   subject: "Media and communications"
@@ -326,6 +606,13 @@
     de: Medienwissenschaften und Kommunikationswissenschaften
     fr: Médias et communications
     es: Medios de comunicación
+    cs: Mediální a komunikační vědy
+    sv: Medie- och kommunikationsvetenskap
+    sl: Mediji in komunikacije
+    nl: Media en communicatie
+    pt: Meios de comunicação e comunicações
+    it: Media e comunicazioni
+    tr: Medya ve iletişim
 - id: "http://www.oecd.org/science/inno/38235147.pdf?5.9"
   scheme: FOS
   subject: "Other social sciences"
@@ -334,6 +621,13 @@
     de: Andere Sozialwissenschaften
     fr: Autres sciences sociales
     es: Otras ciencias sociales
+    cs: Ostatní společenské vědy
+    sv: Övriga samhällsvetenskaper
+    sl: Druge družbene vede
+    nl: Andere sociale wetenschappen
+    pt: Outras ciências sociais
+    it: Altre scienze sociali
+    tr: Diğer sosyal bilimler
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6"
   scheme: FOS
   subject: "Humanities"
@@ -342,6 +636,13 @@
     de: Geisteswissenschaften
     fr: Sciences humaines
     es: Humanidades
+    cs: Humanitní vědy
+    sv: Humaniora
+    sl: Humanistične vede
+    nl: Geesteswetenschappen
+    pt: Humanidades
+    it: Scienze umane
+    tr: İnsani bilimler
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6.1"
   scheme: FOS
   subject: "History and archaeology"
@@ -350,6 +651,13 @@
     de: Geschichte und Archäologie
     fr: Histoire et archéologie
     es: Historia y arqueología
+    cs: Historie a archeologie
+    sv: Historia och arkeologi
+    sl: Zgodovina in arheologija
+    nl: Geschiedenis en archeologie
+    pt: História e arqueologia
+    it: Storia e archeologia
+    tr: Tarih ve arkeoloji
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6.2"
   scheme: FOS
   subject: "Languages and literature"
@@ -358,6 +666,13 @@
     de: Sprachwissenschaften und Literaturwissenschaften
     fr: Langues et littérature
     es: Lenguas y literatura
+    cs: Jazykověda a literární věda
+    sv: Språk och litteratur
+    sl: Jezikoslovje in literarna veda
+    nl: Taal en literatuur
+    pt: Línguas e literatura
+    it: Lingue e letteratura
+    tr: Dil ve edebiyat
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6.3"
   scheme: FOS
   subject: "Philosophy, ethics and religion"
@@ -366,6 +681,13 @@
     de: Philosophie, Ethik und Religionswissenschaft
     fr: Philosophie, éthique et religion
     es: Filosofía, ética y religión
+    cs: Filozofie, etika a náboženství
+    sv: Filosofi, etik och religion
+    sl: Filozofija, etika in religija
+    nl: Filosofie, ethiek en religie
+    pt: Filosofia, ética e religião
+    it: Filosofia, etica e religione
+    tr: Felsefe, etik ve din
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6.4"
   scheme: FOS
   subject: "Arts (arts, history of arts, performing arts, music)"
@@ -374,6 +696,13 @@
     de: Kunstwissenschaften
     fr: Arts (arts, histoire des arts, arts du spectacle, musique)
     es: Artes (artes, historia del arte, artes escénicas, música)
+    cs: Umění (výtvarné umění, dějiny umění, divadelní umění, hudba)
+    sv: Konst (konst, konsthistoria, scenkonst, musik)
+    sl: Umetnost (umetnost, zgodovina umetnosti, uprizoritvene umetnosti, glasba)
+    nl: Kunst (kunst, kunstgeschiedenis, podiumkunsten, muziek)
+    pt: Artes (artes, história das artes, artes performativas, música)
+    it: Arti (arti, storia dell'arte, arti dello spettacolo, musica)
+    tr: Sanatlar (sanat, sanat tarihi, sahne sanatları, müzik)
 - id: "http://www.oecd.org/science/inno/38235147.pdf?6.5"
   scheme: FOS
   subject: "Other humanities"
@@ -382,3 +711,10 @@
     de: Andere Geisteswissenschaften
     fr: Autres sciences humaines
     es: Otras humanidades
+    cs: Ostatní humanitní vědy
+    sv: Övriga humaniora
+    sl: Druge humanistične vede
+    nl: Andere geesteswetenschappen
+    pt: Outras humanidades
+    it: Altre scienze umane
+    tr: Diğer insani bilimler

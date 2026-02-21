@@ -6,6 +6,13 @@
     de: Agrar- und Biowissenschaften
     fr: Sciences agricoles et biologiques
     es: Ciencias agrícolas y biológicas
+    cs: Zemědělské a biologické vědy
+    sv: Jordbruks- och biovetenskaper
+    sl: Kmetijske in biološke vede
+    nl: Landbouw- en biowetenschappen
+    pt: Ciências agrícolas e biológicas
+    it: Scienze agrarie e biologiche
+    tr: Tarım ve biyoloji bilimleri
 - id: "https://openalex.org/fields/12"
   scheme: "Fields"
   subject: "Arts and Humanities"
@@ -14,6 +21,13 @@
     de: Kunst und Geisteswissenschaften
     fr: Arts et sciences humaines
     es: Artes y humanidades
+    cs: Umění a humanitní vědy
+    sv: Konst och humaniora
+    sl: Umetnost in humanistične vede
+    nl: Kunst en geesteswetenschappen
+    pt: Artes e humanidades
+    it: Arti e scienze umane
+    tr: Sanat ve beşeri bilimler
 - id: "https://openalex.org/fields/13"
   scheme: "Fields"
   subject: "Biochemistry, Genetics and Molecular Biology"
@@ -22,6 +36,13 @@
     de: Biochemie, Genetik und Molekularbiologie
     fr: Biochimie, génétique et biologie moléculaire
     es: Bioquímica, genética y biología molecular
+    cs: Biochemie, genetika a molekulární biologie
+    sv: Biokemi, genetik och molekylärbiologi
+    sl: Biokemija, genetika in molekularna biologija
+    nl: Biochemie, genetica en moleculaire biologie
+    pt: Bioquímica, genética e biologia molecular
+    it: Biochimica, genetica e biologia molecolare
+    tr: Biyokimya, genetik ve moleküler biyoloji
 - id: "https://openalex.org/fields/14"
   scheme: "Fields"
   subject: "Business, Management and Accounting"
@@ -30,6 +51,13 @@
     de: Wirtschaft, Management und Rechnungswesen
     fr: Commerce, gestion et comptabilité
     es: Empresa, gestión y contabilidad
+    cs: Podnikové řízení a účetnictví
+    sv: Företagsekonomi, management och redovisning
+    sl: Poslovanje, management in računovodstvo
+    nl: Bedrijfskunde, management en accounting
+    pt: Gestão, administração e contabilidade
+    it: Economia aziendale, management e contabilità
+    tr: İşletme, yönetim ve muhasebe
 - id: "https://openalex.org/fields/15"
   scheme: "Fields"
   subject: "Chemical Engineering"
@@ -38,6 +66,13 @@
     de: Chemische Verfahrenstechnik
     fr: Génie chimique
     es: Ingeniería química
+    cs: Chemické inženýrrství
+    sv: Kemiteknik
+    sl: Kemijsko inženirstvo
+    nl: Chemische technologie
+    pt: Engenharia química
+    it: Ingegneria chimica
+    tr: Kimya mühendisliği
 - id: "https://openalex.org/fields/16"
   scheme: "Fields"
   subject: "Chemistry"
@@ -46,6 +81,13 @@
     de: Chemie
     fr: Chimie
     es: Química
+    cs: Chemie
+    sv: Kemi
+    sl: Kemija
+    nl: Scheikunde
+    pt: Química
+    it: Chimica
+    tr: Kimya
 - id: "https://openalex.org/fields/17"
   scheme: "Fields"
   subject: "Computer Science"
@@ -54,6 +96,13 @@
     de: Informatik
     fr: Informatique
     es: Informática
+    cs: Informatika
+    sv: Datavetenskap
+    sl: Računalništvo
+    nl: Informatica
+    pt: Ciências da computação
+    it: Informatica
+    tr: Bilgisayar bilimleri
 - id: "https://openalex.org/fields/18"
   scheme: "Fields"
   subject: "Decision Sciences"
@@ -62,6 +111,13 @@
     de: Entscheidungswissenschaften
     fr: Sciences de la décision
     es: Ciencias de la decisión
+    cs: Rozhodovací vědy
+    sv: Beslutsteori
+    sl: Odločitvene vede
+    nl: Besliskunde
+    pt: Ciências da decisão
+    it: Scienze delle decisioni
+    tr: Karar bilimleri
 - id: "https://openalex.org/fields/35"
   scheme: "Fields"
   subject: "Dentistry"
@@ -70,6 +126,13 @@
     de: Zahnmedizin
     fr: Dentisterie
     es: Odontología
+    cs: Stomatologie
+    sv: Odontologi
+    sl: Zobozdravstvo
+    nl: Tandheelkunde
+    pt: Medicina dentária
+    it: Odontoiatria
+    tr: Diş hekimliği
 - id: "https://openalex.org/fields/19"
   scheme: "Fields"
   subject: "Earth and Planetary Sciences"
@@ -78,6 +141,13 @@
     de: Erd- und Planetenwissenschaften
     fr: Sciences de la Terre et des planètes
     es: Ciencias de la Tierra y planetarias
+    cs: Vědy o Zemi a planetární vědy
+    sv: Geovetenskap och planetvetenskap
+    sl: Vede o Zemlji in planetarne vede
+    nl: Aard- en planetaire wetenschappen
+    pt: Ciências da Terra e planetárias
+    it: Scienze della Terra e planetarie
+    tr: Yer ve gezegen bilimleri
 - id: "https://openalex.org/fields/20"
   scheme: "Fields"
   subject: "Economics, Econometrics and Finance"
@@ -86,6 +156,13 @@
     de: Wirtschaft, Ökonometrie und Finanzen
     fr: Économie, économétrie et finance
     es: Economía, econometría y finanzas
+    cs: Ekonomie, ekonometrie a finance
+    sv: Ekonomi, ekonometri och finans
+    sl: Ekonomija, ekonometrija in finance
+    nl: Economie, econometrie en financiën
+    pt: Economia, econometria e finanças
+    it: Economia, econometria e finanza
+    tr: Ekonomi, ekonometri ve finans
 - id: "https://openalex.org/fields/21"
   scheme: "Fields"
   subject: "Energy"
@@ -94,6 +171,13 @@
     de: Energie
     fr: Énergie
     es: Energía
+    cs: Energetika
+    sv: Energi
+    sl: Energetika
+    nl: Energie
+    pt: Energia
+    it: Energia
+    tr: Enerji
 - id: "https://openalex.org/fields/22"
   scheme: "Fields"
   subject: "Engineering"
@@ -102,6 +186,13 @@
     de: Ingenieurwissenschaften
     fr: Ingénierie
     es: Ingeniería
+    cs: Technické vědy
+    sv: Teknik
+    sl: Tehnika
+    nl: Techniek
+    pt: Engenharia
+    it: Ingegneria
+    tr: Mühendislik
 - id: "https://openalex.org/fields/23"
   scheme: "Fields"
   subject: "Environmental Science"
@@ -110,6 +201,13 @@
     de: Umweltwissenschaften
     fr: Sciences de l'environnement
     es: Ciencias ambientales
+    cs: Environmentální vědy
+    sv: Miljövetenskap
+    sl: Okoljske vede
+    nl: Milieuwetenschappen
+    pt: Ciências ambientais
+    it: Scienze ambientali
+    tr: Çevre bilimleri
 - id: "https://openalex.org/fields/36"
   scheme: "Fields"
   subject: "Health Professions"
@@ -118,6 +216,13 @@
     de: Gesundheitsberufe
     fr: Professions de santé
     es: Profesiones sanitarias
+    cs: Zdravotnické profese
+    sv: Hälsovårdsprofessioner
+    sl: Zdravstveni poklici
+    nl: Gezondheidsberoepen
+    pt: Profissões de saúde
+    it: Professioni sanitarie
+    tr: Sağlık meslekleri
 - id: "https://openalex.org/fields/24"
   scheme: "Fields"
   subject: "Immunology and Microbiology"
@@ -126,6 +231,13 @@
     de: Immunologie und Mikrobiologie
     fr: Immunologie et microbiologie
     es: Inmunología y microbiología
+    cs: Imunologie a mikrobiologie
+    sv: Immunologi och mikrobiologi
+    sl: Imunologija in mikrobiologija
+    nl: Immunologie en microbiologie
+    pt: Imunologia e microbiologia
+    it: Immunologia e microbiologia
+    tr: İmmünoloji ve mikrobiyoloji
 - id: "https://openalex.org/fields/25"
   scheme: "Fields"
   subject: "Materials Science"
@@ -134,6 +246,13 @@
     de: Materialwissenschaften
     fr: Science des matériaux
     es: Ciencia de materiales
+    cs: Materiálové vědy
+    sv: Materialteknik
+    sl: Materialske vede
+    nl: Materiaalkunde
+    pt: Ciência dos materiais
+    it: Scienza dei materiali
+    tr: Malzeme bilimi
 - id: "https://openalex.org/fields/26"
   scheme: "Fields"
   subject: "Mathematics"
@@ -142,6 +261,13 @@
     de: Mathematik
     fr: Mathématiques
     es: Matemáticas
+    cs: Matematika
+    sv: Matematik
+    sl: Matematika
+    nl: Wiskunde
+    pt: Matemática
+    it: Matematica
+    tr: Matematik
 - id: "https://openalex.org/fields/27"
   scheme: "Fields"
   subject: "Medicine"
@@ -150,6 +276,13 @@
     de: Medizin
     fr: Médecine
     es: Medicina
+    cs: Medicína
+    sv: Medicin
+    sl: Medicina
+    nl: Geneeskunde
+    pt: Medicina
+    it: Medicina
+    tr: Tıp
 - id: "https://openalex.org/fields/28"
   scheme: "Fields"
   subject: "Neuroscience"
@@ -158,6 +291,13 @@
     de: Neurowissenschaften
     fr: Neurosciences
     es: Neurociencias
+    cs: Neurovědy
+    sv: Neurovetenskap
+    sl: Nevroznanost
+    nl: Neurowetenschappen
+    pt: Neurociências
+    it: Neuroscienze
+    tr: Sinirbilim
 - id: "https://openalex.org/fields/29"
   scheme: "Fields"
   subject: "Nursing"
@@ -166,6 +306,13 @@
     de: Pflegewissenschaften
     fr: Sciences infirmières
     es: Enfermería
+    cs: Ošetřovatelství
+    sv: Omvårdnad
+    sl: Zdravstvena nega
+    nl: Verpleegkunde
+    pt: Enfermagem
+    it: Infermieristica
+    tr: Hemşirelik
 - id: "https://openalex.org/fields/30"
   scheme: "Fields"
   subject: "Pharmacology, Toxicology and Pharmaceutics"
@@ -174,6 +321,13 @@
     de: Pharmakologie, Toxikologie und Pharmazeutik
     fr: Pharmacologie, toxicologie et pharmacie
     es: Farmacología, toxicología y farmacia
+    cs: Farmakologie, toxikologie a farmacie
+    sv: Farmakologi, toxikologi och farmaci
+    sl: Farmakologija, toksikologija in farmacija
+    nl: Farmacologie, toxicologie en farmacie
+    pt: Farmacologia, toxicologia e farmácia
+    it: Farmacologia, tossicologia e farmacia
+    tr: Farmakoloji, toksikoloji ve eczacılık
 - id: "https://openalex.org/fields/31"
   scheme: "Fields"
   subject: "Physics and Astronomy"
@@ -182,6 +336,13 @@
     de: Physik und Astronomie
     fr: Physique et astronomie
     es: Física y astronomía
+    cs: Fyzika a astronomie
+    sv: Fysik och astronomi
+    sl: Fizika in astronomija
+    nl: Natuurkunde en sterrenkunde
+    pt: Física e astronomia
+    it: Fisica e astronomia
+    tr: Fizik ve astronomi
 - id: "https://openalex.org/fields/32"
   scheme: "Fields"
   subject: "Psychology"
@@ -190,6 +351,13 @@
     de: Psychologie
     fr: Psychologie
     es: Psicología
+    cs: Psychologie
+    sv: Psykologi
+    sl: Psihologija
+    nl: Psychologie
+    pt: Psicologia
+    it: Psicologia
+    tr: Psikoloji
 - id: "https://openalex.org/fields/33"
   scheme: "Fields"
   subject: "Social Sciences"
@@ -198,6 +366,13 @@
     de: Sozialwissenschaften
     fr: Sciences sociales
     es: Ciencias sociales
+    cs: Společenské vědy
+    sv: Samhällsvetenskap
+    sl: Družbene vede
+    nl: Sociale wetenschappen
+    pt: Ciências sociais
+    it: Scienze sociali
+    tr: Sosyal bilimler
 - id: "https://openalex.org/fields/34"
   scheme: "Fields"
   subject: "Veterinary"
@@ -206,3 +381,10 @@
     de: Veterinärmedizin
     fr: Médecine vétérinaire
     es: Veterinaria
+    cs: Veterinární lékařství
+    sv: Veterinärmedicin
+    sl: Veterinarstvo
+    nl: Diergeneeskunde
+    pt: Medicina veterinária
+    it: Medicina veterinaria
+    tr: Veterinerlik

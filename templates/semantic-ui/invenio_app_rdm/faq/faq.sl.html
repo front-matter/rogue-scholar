@@ -1,0 +1,194 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("FAQ") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="faq">Pogosta vprašanja</h2>
+      </div>
+    </div>
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+
+        <div class="ui styled fluid accordion">
+
+          <div class="title active">
+            <i class="dropdown icon"></i>
+            Kdaj je bil Rogue Scholar lansiran?
+          </div>
+          <div class="content active">
+            <p>
+              Rogue Scholar je na voljo z omejeno funkcionalnostjo od 1. aprila 2023 in
+              s polno funkcionalnostjo (registracija DOI in metapodatkov, arhiviranje
+              celotnega besedila in iskanje po celotnem besedilu) od 1. julija 2023.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Kako se lahko prijavim v Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              Kliknite na povezavo <a href="https://tally.so/r/nPvNK0" target="_blank">Registrirajte svoj blog</a>
+              v nogi vsake strani Rogue Scholar in izpolnite kratek obrazec.
+              Odgovorili vam bomo v petih delovnih dneh.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Zakaj Rogue Scholar morda ne bi sprejel mojega bloga?
+          </div>
+          <div class="content">
+            <p>
+              Zajemamo samo bloge, ki pišejo o znanosti in kjer je vsebina celotnega
+              besedila na voljo prek RSS vira in distribuirana pod pogoji licence
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                Creative Commons Priznanje avtorstva (CC BY)</a>.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Ali Rogue Scholar sprejema bloge o znanosti v širšem smislu?
+          </div>
+          <div class="content">
+            <p>
+              Da. Sprejemamo bloge o vseh oblikah akademskega dela. Izraz "znanost"
+              se uporablja v najširšem pomenu.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Katere jezike podpira Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar podpira angleščino, nemščino, španščino, francoščino,
+              nizozemščino, slovenščino, italijanščino, portugalščino, turščino,
+              češčino in švedščino. Dodatni jeziki bodo dodani na podlagi zahtev uporabnikov.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Kako Rogue Scholar arhivira moj blog?
+          </div>
+          <div class="content">
+            <p>
+              Vašo vsebino in metapodatke zbiramo prek vašega Atom vira ali vira
+              v drugem podprtem formatu, kot je RSS ali JSON Feed.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Moj RSS vir vsebuje samo povzetke objav.
+          </div>
+          <div class="content">
+            <p>
+              Zagotoviti morate celotno vsebino objav prek RSS vira, da lahko
+              implementiramo arhiviranje in iskanje po celotnem besedilu. Večina
+              blogerskih platform ponuja nastavitev za vključitev celotne vsebine v vir.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Ali Rogue Scholar sprejema vsebino, ustvarjeno z umetno inteligenco (UI)?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar ne sprejema objav na blogu, ki so pretežno ali v celoti
+              ustvarjene z umetno inteligenco (UI). Čeprav priznavamo vrednost orodij UI
+              pri podpori pisnega procesa, je avtorstvo človeška dejavnost in zahtevamo,
+              da je vsa vsebina napisana in odobrena s strani človeških znanstvenikov.
+              Spodbujamo avtorje, da orodja UI uporabljajo odgovorno in etično ter vedno
+              navedejo ustrezno pripisovanje za katero koli vsebino, ustvarjeno z UI.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Ali Rogue Scholar podpira podcaste in vloge?
+          </div>
+          <div class="content">
+            <p>
+              Podcasti in vlogi so podprti, vendar še niso v celoti integrirani v platformo.
+              Prosimo, kontaktirajte nas prek <a href="mailto:info@rogue-scholar.org">e-pošte</a>
+              za podrobnosti.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Koliko stane arhiviranje mojega bloga z Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar je za avtorje blogov brezplačen.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Kakšni so stroški za uporabnike Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar je in bo vedno brezplačen za uporabo in ponovno uporabo.
+              Vsa vsebina je distribuirana pod pogoji licence
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                Creative Commons Priznanje avtorstva (CC BY)</a>.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Ali lahko sponzoriram ali kako drugače podprem Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              Cenimo donacije in druge oblike podpore. Lahko nam
+              <a href="https://ko-fi.com/rogue_scholar" target="_blank">kupite
+                kavo</a> ali nas kontaktirate prek
+              <a href="mailto:info@rogue-scholar.org">e-pošte</a>.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Ali Rogue Scholar sprejema oglaševanje ali plačano gostujoče vsebine?
+          </div>
+          <div class="content">
+            <p>
+              Rogue Scholar ne sprejema oglaševanja ali plačanih gostujočih vsebin
+              in tega v prihodnosti ne načrtuje. Na poizvedbe ne bomo odgovarjali.
+            </p>
+          </div>
+
+        </div><!-- /accordion -->
+
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}
+
+{% block javascript %}
+  {{ super() }}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      $(".ui.accordion").accordion();
+    });
+  </script>
+{% endblock javascript %}

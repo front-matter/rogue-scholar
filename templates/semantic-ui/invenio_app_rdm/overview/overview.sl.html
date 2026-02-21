@@ -1,0 +1,100 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Overview") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="overview">Rogue Scholar – Pregled</h2>
+      </div>
+
+      <div class="ui twelve wide column">
+        <h3>Kaj je Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar je arhiv z odprtim dostopom in register za znanstvene bloge.
+          Ohranja objave znanstvenih blogov, jih naredi citabilne prek
+          <a href="https://doi.org">DOI</a> in zagotavlja njihovo dolgoročno
+          odkrivljivost ob strani formalne znanstvene literature.
+        </p>
+
+        <h3>Zakaj znanstveni blogi?</h3>
+        <p>
+          Znanstveni blogi so pomemben, a pogosto spregledan del znanstvenega
+          komuniciranja. Raziskovalci delijo preliminarne ugotovitve, razpravljajo
+          o metodah, razlagajo kompleksne teme javnosti in se vključujejo v
+          znanstveno razpravo dolgo pred formalnim objavljanjem – ali vzporedno z
+          njim. Rogue Scholar tem prispevkom podeljuje enako citabilnost in
+          odkrivljivost kot člankom v revijah.
+          Za razliko od preprintov imajo akademske objave na blogu pogosto širši
+          obseg, ki sega onkraj poročanja o izvirnih raziskavah. Vključujejo lahko
+          vadnice, mnenjske prispevke, preglede literature, napovedi dogodkov in še
+          veliko več.
+        </p>
+
+        <h3>Ključne funkcije</h3>
+        <ul>
+          <li>
+            <strong>Registracija DOI</strong> – Vsaka arhivirana objava na blogu
+            prejme trajni DOI, ki omogoča zanesljive citate in medsebojne povezave.
+            Objave so verzionrane: vsaki različici je dodeljen DOI, konceptni DOI
+            pa vedno kaže na najnovejšo različico.
+          </li>
+          <li>
+            <strong>Strukturirani metapodatki</strong> – Imena avtorjev, ORCID iD,
+            institucije z ROR ID-ji, teme, licence in datumi objave so zajeti in
+            izpostavljeni prek standardnih shem (DataCite, Crossref, Dublin Core,
+            Schema.org).
+          </li>
+          <li>
+            <strong>Iskanje po celotnem besedilu</strong> – Vse arhivirane objave
+            so indeksirane in iskane prek iskanja po celotnem besedilu.
+          </li>
+          <li>
+            <strong>Izvoz citatov</strong> – Citate je mogoče generirati v slogih
+            APA, Chicago, MLA in številnih drugih ter izvažati kot BibTeX, RIS,
+            JSON-LD in več.
+          </li>
+          <li>
+            <strong>Večjezična podpora</strong> – Arhivirajo se objave v katerem
+            koli jeziku; podprti sta zaznavanje jezika in lokalizacija metapodatkov.
+          </li>
+          <li>
+            <strong>Odprto API</strong> – Vsi metapodatki so prosto dostopni prek
+            REST API, kar omogoča integracijo z upravljalniki referenc, sistemi
+            odkrivanja in raziskovalnimi delovnimi tokovi.
+          </li>
+          <li>
+            <strong>Skupnosti</strong> – Bloge je mogoče organizirati v tematske
+            skupnosti, kar olajša odkrivanje sorodnih vsebin.
+          </li>
+        </ul>
+
+        <h3>Podprte platforme</h3>
+        <p>
+          Rogue Scholar podpira vnos iz vseh večjih blogerskih platform, ki jih
+          uporabljajo raziskovalci, vključno z WordPress, Ghost, Substack, Quarto,
+          Hugo, Jekyll in drugimi prek standardnih formatov virov (RSS/Atom) ali
+          neposredne integracije API.
+        </p>
+
+        <h3>Kdo stoji za Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar upravlja
+          <a href="https://front-matter.de" target="_blank">Front Matter</a>
+          in ga vodi <a href="/board">Posvetovalni odbor</a> sestavljeni iz
+          raziskovalcev in zagovornikov odprte znanosti. Infrastruktura je zgrajena
+          na <a href="https://inveniordm.docs.cern.ch/" target="_blank">InvenioRDM</a>,
+          odprtokodni repozitorijski platformi, ki sta jo razvila CERN in partnerji,
+          vključno s Front Matter.
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}

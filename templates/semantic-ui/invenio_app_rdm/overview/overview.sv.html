@@ -1,0 +1,98 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Overview") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="overview">Rogue Scholar – Översikt</h2>
+      </div>
+
+      <div class="ui twelve wide column">
+        <h3>Vad är Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar är ett öppet arkiv och register för vetenskapsbloggar.
+          Det bevarar vetenskapsblogginlägg, gör dem citerbare via
+          <a href="https://doi.org">DOI</a> och säkerställer deras långsiktiga
+          synlighet vid sidan av formell vetenskaplig litteratur.
+        </p>
+
+        <h3>Varför vetenskapsbloggar?</h3>
+        <p>
+          Vetenskapsbloggar är en viktig men ofta förbisedd del av vetenskaplig
+          kommunikation. Forskare delar preliminära resultat, diskuterar metoder,
+          förklarar komplexa ämnen för allmänheten och deltar i vetenskaplig debatt
+          långt innan – eller parallellt med – formell publicering. Rogue Scholar ger
+          dessa bidrag samma citerbarhet och synlighet som tidskriftsartiklar.
+          Till skillnad från preprints har akademiska blogginlägg ofta ett bredare
+          omfång, bortom att rapportera originalforskning. De kan innehålla handledningar,
+          debattartiklar, litteraturöversikter, evenemangstillkännagivanden och mycket mer.
+        </p>
+
+        <h3>Viktiga funktioner</h3>
+        <ul>
+          <li>
+            <strong>DOI-registrering</strong> – Varje arkiverat blogginlägg tilldelas
+            ett persistent DOI som möjliggör tillförlitliga citeringar och korsreferenser.
+            Inlägg är versionerade: ett DOI skapas för varje version och ett koncept-DOI
+            pekar alltid på den senaste versionen.
+          </li>
+          <li>
+            <strong>Strukturerade metadata</strong> – Författarnamn, ORCID iD,
+            affilieringar med ROR-ID, ämnen, licenser och publiceringsdatum fångas
+            och exponeras via standardscheman (DataCite, Crossref, Dublin Core,
+            Schema.org).
+          </li>
+          <li>
+            <strong>Fulltextsökning</strong> – Alla arkiverade inlägg är indexerade
+            och sökbara via fulltextsökning.
+          </li>
+          <li>
+            <strong>Citationsexport</strong> – Citeringar kan genereras i APA,
+            Chicago, MLA och många andra stilar, och exporteras som BibTeX, RIS,
+            JSON-LD med mera.
+          </li>
+          <li>
+            <strong>Flerspråkigt stöd</strong> – Inlägg på alla språk arkiveras;
+            språkdetektering och metadatalokalisering stöds.
+          </li>
+          <li>
+            <strong>Öppet API</strong> – Alla metadata är fritt tillgängliga via ett
+            REST API, vilket möjliggör integration med referenshanterare, söksystem
+            och forskningsarbetsflöden.
+          </li>
+          <li>
+            <strong>Communities</strong> – Bloggar kan organiseras i tematiska
+            communities, vilket underlättar att hitta relaterat innehåll.
+          </li>
+        </ul>
+
+        <h3>Plattformar som stöds</h3>
+        <p>
+          Rogue Scholar stöder inläsning från alla större bloggplattformar som
+          används av forskare, inklusive WordPress, Ghost, Substack, Quarto,
+          Hugo, Jekyll och andra via standardflödesformat (RSS/Atom) eller direkt
+          API-integration.
+        </p>
+
+        <h3>Vem ligger bakom Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar drivs av
+          <a href="https://front-matter.de" target="_blank">Front Matter</a> och
+          styrs av ett <a href="/board">Advisory Board</a> bestående av forskare
+          och förespråkare för öppen vetenskap. Infrastrukturen är byggd på
+          <a href="https://inveniordm.docs.cern.ch/" target="_blank">InvenioRDM</a>,
+          den open source-repositorieplattformen som utvecklats av CERN och partners,
+          inklusive Front Matter.
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}

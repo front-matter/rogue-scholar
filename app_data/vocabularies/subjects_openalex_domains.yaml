@@ -6,6 +6,13 @@
     de: Gesundheitswissenschaften
     fr: Sciences de la santé
     es: Ciencias de la salud
+    cs: Zdravotní vědy
+    sv: Hälsovetenskap
+    sl: Zdravstvene vede
+    nl: Gezondheidswetenschappen
+    pt: Ciências da saúde
+    it: Scienze della salute
+    tr: Sağlık bilimleri
 - id: "https://openalex.org/domains/1"
   scheme: "Domains"
   subject: "Life Sciences"
@@ -14,6 +21,13 @@
     de: Lebenswissenschaften
     fr: Sciences de la vie
     es: Ciencias de la vida
+    cs: Vědy o životě
+    sv: Livsvetenskap
+    sl: Biološke in življenjske vede
+    nl: Levenswetenschappen
+    pt: Ciências da vida
+    it: Scienze della vita
+    tr: Yaşam bilimleri
 - id: "https://openalex.org/domains/3"
   scheme: "Domains"
   subject: "Physical Sciences"
@@ -22,6 +36,13 @@
     de: Naturwissenschaften
     fr: Sciences physiques
     es: Ciencias físicas
+    cs: Přírodní vědy
+    sv: Naturvetenskap
+    sl: Naravoslovne vede
+    nl: Natuurwetenschappen
+    pt: Ciências físicas
+    it: Scienze fisiche
+    tr: Fiziksel bilimler
 - id: "https://openalex.org/domains/2"
   scheme: "Domains"
   subject: "Social Sciences"
@@ -30,3 +51,10 @@
     de: Sozialwissenschaften
     fr: Sciences sociales
     es: Ciencias sociales
+    cs: Společenské vědy
+    sv: Samhällsvetenskap
+    sl: Družbene vede
+    nl: Sociale wetenschappen
+    pt: Ciências sociais
+    it: Scienze sociali
+    tr: Sosyal bilimler

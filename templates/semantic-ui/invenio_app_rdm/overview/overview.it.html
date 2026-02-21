@@ -1,0 +1,101 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Overview") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="overview">Rogue Scholar – Panoramica</h2>
+      </div>
+
+      <div class="ui twelve wide column">
+        <h3>Che cos'è Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar è un archivio ad accesso aperto e un registro per i blog
+          scientifici. Conserva i post dei blog scientifici, li rende citabili
+          tramite <a href="https://doi.org">DOI</a> e ne garantisce la reperibilità
+          a lungo termine accanto alla letteratura accademica formale.
+        </p>
+
+        <h3>Perché i blog scientifici?</h3>
+        <p>
+          I blog scientifici sono una parte importante ma spesso trascurata della
+          comunicazione accademica. I ricercatori condividono risultati preliminari,
+          discutono metodi, spiegano argomenti complessi al pubblico e partecipano
+          al dibattito scientifico molto prima — o in parallelo a — una pubblicazione
+          formale. Rogue Scholar conferisce a questi contributi la stessa citabilità
+          e reperibilità degli articoli di riviste.
+          A differenza dei preprint, i post di blog accademici hanno spesso un ambito
+          più ampio, che va oltre la presentazione di ricerche originali. Possono
+          includere tutorial, articoli di opinione, rassegne della letteratura,
+          annunci di eventi e molto altro.
+        </p>
+
+        <h3>Funzionalità principali</h3>
+        <ul>
+          <li>
+            <strong>Registrazione DOI</strong> – Ogni post archiviato riceve un
+            DOI persistente, che consente citazioni affidabili e collegamenti incrociati.
+            I post sono versionati: a ogni versione viene assegnato un DOI e un DOI
+            di concetto punta sempre alla versione più recente.
+          </li>
+          <li>
+            <strong>Metadati strutturati</strong> – Nomi degli autori, ORCID iD,
+            affiliazioni con ROR ID, soggetti, licenze e date di pubblicazione vengono
+            acquisiti ed esposti tramite schemi standard (DataCite, Crossref, Dublin Core,
+            Schema.org).
+          </li>
+          <li>
+            <strong>Ricerca full-text</strong> – Tutti i post archiviati sono
+            indicizzati e ricercabili tramite ricerca full-text.
+          </li>
+          <li>
+            <strong>Esportazione citazioni</strong> – Le citazioni possono essere
+            generate in stile APA, Chicago, MLA e molti altri, ed esportate come
+            BibTeX, RIS, JSON-LD e altro.
+          </li>
+          <li>
+            <strong>Supporto multilingue</strong> – I post in qualsiasi lingua
+            vengono archiviati; sono supportati il rilevamento della lingua e la
+            localizzazione dei metadati.
+          </li>
+          <li>
+            <strong>API aperta</strong> – Tutti i metadati sono liberamente
+            disponibili tramite un'API REST, consentendo l'integrazione con
+            gestori di riferimenti, sistemi di discovery e flussi di lavoro di ricerca.
+          </li>
+          <li>
+            <strong>Comunità</strong> – I blog possono essere organizzati in
+            comunità tematiche, facilitando la scoperta di contenuti correlati.
+          </li>
+        </ul>
+
+        <h3>Piattaforme supportate</h3>
+        <p>
+          Rogue Scholar supporta l'acquisizione da tutte le principali piattaforme
+          di blogging utilizzate dai ricercatori, tra cui WordPress, Ghost, Substack,
+          Quarto, Hugo, Jekyll e altre tramite formati di feed standard (RSS/Atom)
+          o integrazione diretta tramite API.
+        </p>
+
+        <h3>Chi c'è dietro Rogue Scholar?</h3>
+        <p>
+          Rogue Scholar è gestito da
+          <a href="https://front-matter.de" target="_blank">Front Matter</a>
+          ed è governato da un <a href="/board">Advisory Board</a> composto da
+          ricercatori e sostenitori della scienza aperta. L'infrastruttura è
+          costruita su <a href="https://inveniordm.docs.cern.ch/" target="_blank">InvenioRDM</a>,
+          la piattaforma di repository open source sviluppata dal CERN e dai suoi
+          partner, tra cui Front Matter.
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}

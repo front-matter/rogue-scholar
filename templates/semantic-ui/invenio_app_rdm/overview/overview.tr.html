@@ -1,0 +1,101 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("Overview") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="overview">Rogue Scholar – Genel Bakış</h2>
+      </div>
+
+      <div class="ui twelve wide column">
+        <h3>Rogue Scholar nedir?</h3>
+        <p>
+          Rogue Scholar, bilim blogları için açık erişimli bir arşiv ve kayıt
+          sistemidir. Bilim blogu yazılarını korur, <a href="https://doi.org">DOI</a>
+          aracılığıyla atıf yapılabilir hale getirir ve resmi akademik literatürün
+          yanında uzun vadeli keşfedilebilirliklerini sağlar.
+        </p>
+
+        <h3>Neden bilim blogları?</h3>
+        <p>
+          Bilim blogları, akademik iletişimin önemli ancak çoğunlukla göz ardı
+          edilen bir parçasıdır. Araştırmacılar ön bulgularını paylaşır, yöntemleri
+          tartışır, karmaşık konuları kamuoyuna açıklar ve resmi yayından çok önce
+          — ya da onunla eş zamanlı olarak — bilimsel tartışmalara katılır. Rogue Scholar,
+          bu katkılara dergi makaleleriyle aynı atıf yapılabilirlik ve keşfedilebilirliği
+          kazandırır.
+          Önbaskıların aksine, akademik blog yazıları genellikle özgün araştırma
+          raporlamasının ötesinde daha geniş bir kapsama sahiptir. Eğitimler, görüş
+          yazıları, literatür derlemeleri, etkinlik duyuruları ve daha fazlasını
+          içerebilirler.
+        </p>
+
+        <h3>Temel özellikler</h3>
+        <ul>
+          <li>
+            <strong>DOI kaydı</strong> – Arşivlenen her blog yazısı, güvenilir
+            alıntılar ve çapraz bağlantılar sağlayan kalıcı bir DOI alır. Yazılar
+            sürümlendirilir: her sürüm için bir DOI oluşturulur ve bir kavram DOI
+            her zaman en son sürüme yönlendirir.
+          </li>
+          <li>
+            <strong>Yapılandırılmış meta veriler</strong> – Yazar adları, ORCID
+            iD'leri, ROR ID'li kurumsal bağlantılar, konular, lisanslar ve yayın
+            tarihleri standart şemalar (DataCite, Crossref, Dublin Core, Schema.org)
+            aracılığıyla yakalanır ve sunulur.
+          </li>
+          <li>
+            <strong>Tam metin arama</strong> – Arşivlenen tüm yazılar dizinlenir
+            ve tam metin arama ile aranabilir.
+          </li>
+          <li>
+            <strong>Atıf dışa aktarma</strong> – APA, Chicago, MLA ve diğer birçok
+            stilde alıntı oluşturulabilir; BibTeX, RIS, JSON-LD ve diğer
+            formatlarda dışa aktarılabilir.
+          </li>
+          <li>
+            <strong>Çok dilli destek</strong> – Her dildeki yazılar arşivlenir;
+            dil tespiti ve meta veri yerelleştirmesi desteklenir.
+          </li>
+          <li>
+            <strong>Açık API</strong> – Tüm meta veriler bir REST API aracılığıyla
+            serbestçe erişilebilir; kaynak yöneticileri, keşif sistemleri ve araştırma
+            iş akışlarıyla entegrasyona olanak tanır.
+          </li>
+          <li>
+            <strong>Topluluklar</strong> – Bloglar tematik topluluklara göre
+            düzenlenebilir; bu sayede ilgili içeriklerin keşfi kolaylaşır.
+          </li>
+        </ul>
+
+        <h3>Desteklenen platformlar</h3>
+        <p>
+          Rogue Scholar, araştırmacılar tarafından kullanılan tüm büyük blog
+          platformlarından veri alımını destekler: WordPress, Ghost, Substack,
+          Quarto, Hugo, Jekyll ve diğerleri standart besleme formatları (RSS/Atom)
+          veya doğrudan API entegrasyonu aracılığıyla.
+        </p>
+
+        <h3>Rogue Scholar'ın arkasında kim var?</h3>
+        <p>
+          Rogue Scholar,
+          <a href="https://front-matter.de" target="_blank">Front Matter</a>
+          tarafından işletilmekte ve araştırmacılar ile açık bilim savunucularından
+          oluşan bir <a href="/board">Danışma Kurulu</a> tarafından yönetilmektedir.
+          Altyapı, CERN ve Front Matter dahil ortaklar tarafından geliştirilen açık
+          kaynaklı depo platformu
+          <a href="https://inveniordm.docs.cern.ch/" target="_blank">InvenioRDM</a>
+          üzerine inşa edilmiştir.
+        </p>
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}

@@ -1,0 +1,197 @@
+{#
+  Copyright (C) 2024-2026 Front Matter.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{%- set title = _("FAQ") %}
+{%- extends config.BASE_TEMPLATE %}
+
+{%- block page_body %}
+  <div class="ui grid container rel-mt-2">
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+        <h2 id="faq">Perguntas frequentes</h2>
+      </div>
+    </div>
+    <div class="ui row">
+      <div class="ui sixteen wide column">
+
+        <div class="ui styled fluid accordion">
+
+          <div class="title active">
+            <i class="dropdown icon"></i>
+            Quando foi lançado o Rogue Scholar?
+          </div>
+          <div class="content active">
+            <p>
+              O Rogue Scholar está disponível com funcionalidade limitada desde 1 de abril
+              de 2023 e com funcionalidade completa (registo de DOI e metadados, arquivo de
+              conteúdo em texto completo e pesquisa de texto completo) desde 1 de julho de 2023.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Como posso registar-me no Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              Clique na ligação <a href="https://tally.so/r/nPvNK0" target="_blank">Registe o seu blog</a>
+              no rodapé de cada página do Rogue Scholar e preencha o curto formulário.
+              Responderemos no prazo de cinco dias úteis.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Por que razão o Rogue Scholar poderia não aceitar o meu blog?
+          </div>
+          <div class="content">
+            <p>
+              Cobrimos apenas blogs que escrevem sobre ciência e onde o conteúdo em texto
+              completo está disponível através de feed RSS e distribuído nos termos da
+              licença
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                Creative Commons Atribuição (CC BY)</a>.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            O Rogue Scholar aceita blogs sobre investigação académica?
+          </div>
+          <div class="content">
+            <p>
+              Sim. Aceitamos blogs sobre todas as formas de investigação académica.
+              O termo "ciência" é utilizado no sentido mais amplo.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Que línguas suporta o Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              O Rogue Scholar suporta inglês, alemão, espanhol, francês, neerlandês,
+              esloveno, italiano, português, turco, checo e sueco. Línguas adicionais
+              serão adicionadas com base nos pedidos dos utilizadores.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Como é que o Rogue Scholar arquiva o meu blog?
+          </div>
+          <div class="content">
+            <p>
+              Recolhemos o seu conteúdo e metadados utilizando o seu feed Atom ou um feed
+              noutro formato suportado, como RSS ou JSON Feed.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            O meu feed RSS contém apenas resumos das publicações do blog.
+          </div>
+          <div class="content">
+            <p>
+              É necessário fornecer o conteúdo completo das publicações através do seu
+              feed RSS para que possamos implementar o arquivo e a pesquisa de texto
+              completo. A maioria das plataformas de blogging oferece uma definição para
+              incluir o conteúdo completo no feed.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            O Rogue Scholar aceita conteúdo gerado por IA (inteligência artificial)?
+          </div>
+          <div class="content">
+            <p>
+              O Rogue Scholar não aceita publicações em blogs geradas principalmente ou
+              inteiramente por IA (inteligência artificial). Embora reconheçamos o valor
+              das ferramentas de IA para auxiliar no processo de escrita, a autoria é um
+              empreendimento humano, e exigimos que todo o conteúdo seja escrito e
+              aprovado por investigadores humanos. Encorajamos os autores a utilizarem as
+              ferramentas de IA de forma responsável e ética, e a fornecerem sempre a
+              devida atribuição para qualquer conteúdo gerado por IA.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            O Rogue Scholar suporta podcasts e vlogs?
+          </div>
+          <div class="content">
+            <p>
+              Podcasts e vlogs são suportados, mas ainda não estão totalmente integrados
+              na plataforma. Contacte-nos por
+              <a href="mailto:info@rogue-scholar.org">e-mail</a> para mais informações.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Quanto custa arquivar o meu blog com o Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              O Rogue Scholar é gratuito para os autores de blogs.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Quais são os custos para os utilizadores do Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              O Rogue Scholar é e será sempre gratuito para utilização e reutilização.
+              Todo o conteúdo é distribuído nos termos da licença
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+                Creative Commons Atribuição (CC BY)</a>.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            Posso patrocinar ou apoiar de outra forma o Rogue Scholar?
+          </div>
+          <div class="content">
+            <p>
+              Agradecemos doações e outras formas de apoio. Pode
+              <a href="https://ko-fi.com/rogue_scholar" target="_blank">convidar-nos
+                para um café</a> ou contactar-nos por
+              <a href="mailto:info@rogue-scholar.org">e-mail</a>.
+            </p>
+          </div>
+
+          <div class="title">
+            <i class="dropdown icon"></i>
+            O Rogue Scholar aceita publicidade ou conteúdo de convidados pago?
+          </div>
+          <div class="content">
+            <p>
+              O Rogue Scholar não aceita publicidade nem conteúdo de convidados pago,
+              e não tem planos de o fazer no futuro. Não responderemos a pedidos nesse sentido.
+            </p>
+          </div>
+
+        </div><!-- /accordion -->
+
+      </div>
+
+    </div>
+  </div>
+{% endblock page_body %}
+
+{% block javascript %}
+  {{ super() }}
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      $(".ui.accordion").accordion();
+    });
+  </script>
+{% endblock javascript %}
