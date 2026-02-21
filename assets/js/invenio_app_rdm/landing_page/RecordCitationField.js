@@ -59,7 +59,10 @@ export class RecordCitationField extends Component {
     const includeDeletedParam =
       includeDeleted === true ? "&include_deleted=1" : "";
     // Prefer explicit locale prop (server-side), fall back to i18next or browser
-    const locale = this.props.locale || i18next.language || navigator.language;
+    // Normalize underscore to hyphen (e.g. de_DE → de-DE) for CSL API
+    const rawLocale =
+      this.props.locale || i18next.language || navigator.language;
+    const locale = rawLocale.replace("_", "-");
     const url = `${recordLinks.self}?locale=${locale}&style=${style}${includeDeletedParam}`;
     return await http.get(url, {
       headers: {
