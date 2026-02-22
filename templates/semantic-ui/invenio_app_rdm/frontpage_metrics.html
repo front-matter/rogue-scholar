@@ -46,11 +46,6 @@
   .metrics-card .ui.placeholder .line {
     background: rgba(0,0,0,0.15);
   }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .metrics-card #metrics-posts {
-      font-size: 1.3em;
-    }
-  }
 </style>
 <div id="frontpage-metrics" class="ui container rel-mt-2 rel-mb-1">
 
@@ -166,6 +161,10 @@
   var headers = { "Accept": "application/vnd.inveniordm.v1+json" };
 
   function fmt(n) {
+    var w = window.innerWidth;
+    if (n > 999 && w >= 768 && w <= 1199) {
+      return n.toLocaleString(undefined, { notation: "compact", maximumFractionDigits: 1 });
+    }
     return n.toLocaleString();
   }
 
