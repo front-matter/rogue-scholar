@@ -1,4 +1,4 @@
-FROM python:3.13.11-bookworm AS builder
+FROM python:3.14-bookworm AS builder
 LABEL maintainer="Front Matter <info@front-matter.de>"
 LABEL org.opencontainers.image.source="https://github.com/front-matter/rogue-scholar"
 LABEL org.opencontainers.image.licenses="MIT"
@@ -114,7 +114,7 @@ RUN MULTIARCH="$(dpkg-architecture -qDEB_HOST_MULTIARCH)" && \
     ls /invenio-libs/libcairo.so* || { echo "FATAL: libcairo not found in ${LIB_DIR}"; find /usr -name 'libcairo*' 2>/dev/null; exit 1; } && \
     echo "Collected $(ls /invenio-libs/ | wc -l) library files"
 
-FROM python:3.13.11-slim-bookworm AS runtime
+FROM python:3.14-slim-bookworm AS runtime
 
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US:en \
