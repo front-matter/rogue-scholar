@@ -4083,7 +4083,7 @@ docs = [
 requires-dist = [
     { name = "commonmeta-py", marker = "extra == 'actions'", specifier = ">=0.203" },
     { name = "gunicorn", specifier = "~=23.0.0" },
-    { name = "invenio-app-rdm", specifier = ">=14.0.0b5.dev3" },
+    { name = "invenio-app-rdm", specifier = ">=14.0.0b5.dev4" },
     { name = "invenio-oauthclient", git = "https://github.com/front-matter/invenio-oauthclient?branch=contrib-oidc" },
     { name = "invenio-rdm-records", git = "https://github.com/front-matter/invenio-rdm-records?branch=crossref_doi_provider" },
     { name = "invenio-s3", specifier = ">=3.0.2" },
