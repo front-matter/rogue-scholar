@@ -121,7 +121,8 @@ ENV LANG=en_US.UTF-8 \
     VIRTUAL_ENV=/opt/invenio/.venv \
     PATH="/opt/invenio/.venv/bin:$PATH" \
     WORKING_DIR=/opt/invenio \
-    INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
+    INVENIO_INSTANCE_PATH=/opt/invenio/var/instance \
+    GUNICORN_ACCESS_LOGFORMAT="{\"time\":\"%(t)s\",\"ip\":\"%({x-forwarded-for}i)s\",\"method\":\"%(m)s\",\"path\":\"%(U)s\",\"query\":\"%(q)s\",\"status\":%(s)s,\"size\":%(B)s,\"referer\":\"%(f)s\",\"user_agent\":\"%(a)s\",\"request_time\":%(L)s}"
 
 # create non-root invenio user
 ENV INVENIO_USER_ID=1654
@@ -150,11 +151,9 @@ COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/invenio.cfg ${INVENI
 COPY --from=builder --chown=1654:0 --chmod=755 ${INVENIO_INSTANCE_PATH}/update_subjects.py ${INVENIO_INSTANCE_PATH}/update_subjects.py
 COPY --chown=1654:0 ./Caddyfile /etc/caddy/Caddyfile
 COPY --chown=1654:0 --chmod=755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
-COPY --chown=1654:0 ./entrypoint.py /opt/invenio/.venv/bin/entrypoint.py
 
 WORKDIR ${WORKING_DIR}/src
 
 USER invenio
 EXPOSE 4000
-# ENTRYPOINT ["python", "/opt/invenio/.venv/bin/entrypoint.py"]
-CMD ["sh", "-c", "gunicorn invenio_app.wsgi:application --bind 0.0.0.0:4000 --workers 2 --threads 4 --timeout 60 --access-logfile - --error-logfile - --log-level ${GUNICORN_LOG_LEVEL:-WARNING}"]
+CMD ["sh", "-c", "gunicorn invenio_app.wsgi:application --bind 0.0.0.0:4000 --workers 2 --threads 4 --timeout 60 --access-logfile - --access-logformat \"${GUNICORN_ACCESS_LOGFORMAT}\" --error-logfile - --log-level ${GUNICORN_LOG_LEVEL:-WARNING}"]
