@@ -62,6 +62,7 @@ RUN --mount=type=cache,target=/var/cache/assets \
 
 # Copy application files to instance path
 COPY ./invenio.cfg ${INVENIO_INSTANCE_PATH}/
+COPY ./gunicorn.conf.py ${INVENIO_INSTANCE_PATH}/
 COPY site ${INVENIO_INSTANCE_PATH}/site
 COPY static ${INVENIO_INSTANCE_PATH}/static
 COPY assets ${INVENIO_INSTANCE_PATH}/assets
@@ -121,11 +122,10 @@ ENV LANG=en_US.UTF-8 \
     VIRTUAL_ENV=/opt/invenio/.venv \
     PATH="/opt/invenio/.venv/bin:$PATH" \
     WORKING_DIR=/opt/invenio \
-    INVENIO_INSTANCE_PATH=/opt/invenio/var/instance \
-    GUNICORN_ACCESS_LOGFORMAT="{\"time\":\"%(t)s\",\"ip\":\"%({x-forwarded-for}i)s\",\"method\":\"%(m)s\",\"path\":\"%(U)s\",\"query\":\"%(q)s\",\"status\":%(s)s,\"size\":%(B)s,\"referer\":\"%(f)s\",\"user_agent\":\"%(a)s\",\"request_time\":%(L)s}"
+    INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
 
 # create non-root invenio user
-ENV INVENIO_USER_ID=1654
+ENV INVENIO_USER_ID=1000
 RUN adduser invenio --uid ${INVENIO_USER_ID} --gid 0 --no-create-home --disabled-password
 
 # Copy prebuilt runtime libraries into arch-specific directory
@@ -140,20 +140,21 @@ RUN MULTIARCH="$(cat /tmp/invenio-libs/.arch)" && \
     ldconfig -p | grep -i cairo && \
     python3 -c "import ctypes.util; r=ctypes.util.find_library('cairo'); print(f'cairo: {r}'); assert r, 'libcairo not found'"
 
-COPY --from=builder --chown=1654:0 ${VIRTUAL_ENV} ${VIRTUAL_ENV}
-COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/site ${INVENIO_INSTANCE_PATH}/site
-COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/static ${INVENIO_INSTANCE_PATH}/static
-COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/assets ${INVENIO_INSTANCE_PATH}/assets
-COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/templates ${INVENIO_INSTANCE_PATH}/templates
-COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/app_data ${INVENIO_INSTANCE_PATH}/app_data
-COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/translations ${INVENIO_INSTANCE_PATH}/translations
-COPY --from=builder --chown=1654:0 ${INVENIO_INSTANCE_PATH}/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
-COPY --from=builder --chown=1654:0 --chmod=755 ${INVENIO_INSTANCE_PATH}/update_subjects.py ${INVENIO_INSTANCE_PATH}/update_subjects.py
-COPY --chown=1654:0 ./Caddyfile /etc/caddy/Caddyfile
-COPY --chown=1654:0 --chmod=755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
+COPY --from=builder --chown=1000:0 ${VIRTUAL_ENV} ${VIRTUAL_ENV}
+COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/site ${INVENIO_INSTANCE_PATH}/site
+COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/static ${INVENIO_INSTANCE_PATH}/static
+COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/assets ${INVENIO_INSTANCE_PATH}/assets
+COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/templates ${INVENIO_INSTANCE_PATH}/templates
+COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/app_data ${INVENIO_INSTANCE_PATH}/app_data
+COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/translations ${INVENIO_INSTANCE_PATH}/translations
+COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
+COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/gunicorn.conf.py ${INVENIO_INSTANCE_PATH}/gunicorn.conf.py
+COPY --from=builder --chown=1000:0 --chmod=755 ${INVENIO_INSTANCE_PATH}/update_subjects.py ${INVENIO_INSTANCE_PATH}/update_subjects.py
+COPY --chown=1000:0 ./Caddyfile /etc/caddy/Caddyfile
+COPY --chown=1000:0 --chmod=755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
 
 WORKDIR ${WORKING_DIR}/src
 
 USER invenio
 EXPOSE 4000
-CMD ["sh", "-c", "gunicorn invenio_app.wsgi:application --bind 0.0.0.0:4000 --workers 2 --threads 4 --timeout 60 --access-logfile - --access-logformat \"${GUNICORN_ACCESS_LOGFORMAT}\" --error-logfile - --log-level ${GUNICORN_LOG_LEVEL:-WARNING}"]
+CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:4000", "--workers", "2", "--threads", "4", "--config", "/opt/invenio/var/instance/gunicorn.conf.py"]
