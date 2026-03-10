@@ -25,7 +25,7 @@ env:
   clear:
     INVENIO_SITE_UI_URL: https://staging.rogue-scholar.org
     INVENIO_SITE_API_URL: https://staging.rogue-scholar.org/api
-    INVENIO_LOGGING_CONSOLE_LEVEL: DEBUG
+    INVENIO_LOGGING_CONSOLE_LEVEL: INFO
     # accessories db, cache, search
     POSTGRES_DB: staging
     INVENIO_CACHE_REDIS_URL: redis://inveniordm-cache:6379/12

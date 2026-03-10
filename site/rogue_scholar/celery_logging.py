@@ -8,7 +8,9 @@ from celery.signals import setup_logging, task_postrun, task_prerun
 @setup_logging.connect
 def configure_celery_logging(**kwargs):
     """Replace Celery's default logging with structlog JSON (or console) output."""
-    log_level_name = os.environ.get("INVENIO_LOG_LEVEL", "WARNING").upper()
+    log_level_name = os.environ.get(
+        "INVENIO_LOGGING_CONSOLE_LEVEL", "INFO"
+    ).upper()
     log_level = getattr(logging, log_level_name, logging.WARNING)
     debug_mode = os.environ.get("INVENIO_DEBUG", "false").lower() == "true"
 

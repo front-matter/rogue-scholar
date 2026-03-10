@@ -6,8 +6,10 @@ import structlog
 
 def configure_logging() -> None:
     """Configure structlog with JSON (prod) or console (dev) output."""
-    log_level_name = os.environ.get("INVENIO_LOG_LEVEL", "WARNING").upper()
-    log_level = getattr(logging, log_level_name, logging.WARNING)
+    log_level_name = os.environ.get(
+        "INVENIO_LOGGING_CONSOLE_LEVEL", "INFO"
+    ).upper()
+    log_level = getattr(logging, log_level_name, logging.INFO)
     debug_mode = os.environ.get("INVENIO_DEBUG", "false").lower() == "true"
 
     shared_processors = [
@@ -52,6 +54,8 @@ def configure_logging() -> None:
     # Suppress handled exceptions logged at DEBUG by invenio's resource layer
     # (e.g. LogoNotFoundError, which is a normal 404 — not an application error)
     logging.getLogger("invenio").setLevel(max(log_level, logging.INFO))
+    # Gunicorn access logs are emitted at INFO — ensure they always flow through structlog
+    logging.getLogger("gunicorn.access").setLevel(logging.INFO)
     # Suppress noisy but harmless urllib3 connection pool full warnings
     logging.getLogger("urllib3.connectionpool").setLevel(logging.ERROR)
     # Suppress third-party deprecation warnings (marshmallow, pyparsing, …)
@@ -129,7 +133,7 @@ logger_class = StructlogGunicornLogger
 
 accesslog = "-"
 errorlog = "-"
-loglevel = os.environ.get("INVENIO_LOG_LEVEL", "WARNING").lower()
+loglevel = os.environ.get("INVENIO_LOGGING_CONSOLE_LEVEL", "INFO").lower()
 
 worker_class = "sync"
 timeout = 60
