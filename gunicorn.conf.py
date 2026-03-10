@@ -54,6 +54,10 @@ def configure_logging() -> None:
     logging.getLogger("invenio").setLevel(max(log_level, logging.INFO))
     # Suppress noisy but harmless urllib3 connection pool full warnings
     logging.getLogger("urllib3.connectionpool").setLevel(logging.ERROR)
+    # Suppress third-party deprecation warnings (marshmallow, pyparsing, …)
+    # unless running in debug mode; they are noise in production logs
+    if not debug_mode:
+        logging.getLogger("py.warnings").setLevel(logging.ERROR)
 
 
 def on_starting(server):

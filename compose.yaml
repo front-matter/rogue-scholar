@@ -37,8 +37,6 @@ x-common-env:
   INVENIO_DEBUG: ${INVENIO_DEBUG:-False}
   INVENIO_LOGGING_CONSOLE_LEVEL: ${INVENIO_LOG_LEVEL:-WARNING}
   INVENIO_LOGGING_FS_LEVEL: ${INVENIO_LOG_LEVEL:-WARNING}
-  INVENIO_CELERY_WORKER_LOG_FORMAT: ${INVENIO_CELERY_WORKER_LOG_FORMAT:-{"time":"%(asctime)s","level":"%(levelname)s","logger":"%(name)s","message":"%(message)s"}}
-  INVENIO_CELERY_WORKER_TASK_LOG_FORMAT: ${INVENIO_CELERY_WORKER_TASK_LOG_FORMAT:-{"time":"%(asctime)s","level":"%(levelname)s","logger":"%(name)s","task_name":"%(task_name)s","task_id":"%(task_id)s","message":"%(message)s"}}
 
   # DOI Registration
   INVENIO_DATACITE_ENABLED: ${INVENIO_DATACITE_ENABLED:-False}
