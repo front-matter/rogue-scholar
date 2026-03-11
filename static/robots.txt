@@ -1,5 +1,64 @@
+# ── Block commercial SEO crawlers ──────────────────────────────────────────────
+
+User-agent: SemrushBot
+User-agent: SemrushBot-SA
+User-agent: SemrushBot-SI
+User-agent: SemrushBot-SWA
+User-agent: SemrushBot-BA
+User-agent: AhrefsBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: BLEXBot
+User-agent: DataForSeoBot
+User-agent: PetalBot
+User-agent: serpstatbot
+User-agent: SEOkicks
+User-agent: Seekport
+User-agent: seoscanners.net
+Disallow: /
+
+# ── Block AI training crawlers ─────────────────────────────────────────────────
+
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: CCBot
+User-agent: anthropic-ai
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: PerplexityBot
+User-agent: Omgilibot
+User-agent: FacebookBot
+User-agent: Diffbot
+Disallow: /
+
+# ── All other crawlers (including Googlebot, Bingbot, academic crawlers) ───────
+
 User-agent: *
-Disallow: /search
-Disallow: /api
-Disallow: /administration
+
+# Infrastructure — never crawl
+Disallow: /api/
+Disallow: /administration/
+Disallow: /oauth/
+Disallow: /account/
+Disallow: /me/
+Disallow: /static/
+
+# Auth flows
+Disallow: /login
+Disallow: /logout
+Disallow: /signup
+
+# Search with query strings — allow base /search but not faceted/parameterised
+# (prevents crawl traps from combinatorial facets)
+Disallow: /search?
+
+# Record file downloads — allow metadata pages, not file bytes
+Disallow: /records/*/files/
+Disallow: /records/*/file-preview/
+
+# OAI-PMH — useful for harvesters but not for generic crawlers
+# (harvesters use it directly, not via robots.txt)
+Disallow: /oai2d
+
+# Crawl rate courtesy
 Crawl-delay: 10
