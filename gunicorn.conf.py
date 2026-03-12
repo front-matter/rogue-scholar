@@ -3,6 +3,10 @@ import os
 
 import structlog
 
+# Hard-code the prometheus multiprocess directory so it is set before
+# prometheus_client is imported (it reads the env var at import time).
+os.environ.setdefault("PROMETHEUS_MULTIPROC_DIR", "/tmp/prometheus_multiproc")
+
 
 def configure_logging() -> None:
     """Configure structlog with JSON (prod) or console (dev) output."""
