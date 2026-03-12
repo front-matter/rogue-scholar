@@ -38,11 +38,7 @@ def _load_subject_titles_from_yaml(instance_path: str) -> dict:
             with open(os.path.join(vocab_dir, fname), encoding="utf-8") as fh:
                 entries = yaml.safe_load(fh) or []
             for entry in entries:
-                if (
-                    isinstance(entry, dict)
-                    and "id" in entry
-                    and "title" in entry
-                ):
+                if isinstance(entry, dict) and "id" in entry and "title" in entry:
                     titles[entry["id"]] = entry["title"]
         except Exception:
             pass
@@ -155,6 +151,13 @@ def create_api_blueprint(app):
 #
 def create_blueprint(app):
     """Register blueprint routes on app."""
+    # Track UI app requests in the shared multiprocess registry.
+    # metrics_endpoint=False avoids registering a duplicate /metrics route
+    # (that lives on the API app via create_api_blueprint).
+    PrometheusMetrics(
+        app, group_by="endpoint", export_defaults=True, metrics_endpoint=False
+    )
+
     blueprint = Blueprint(
         "invenio_rdm_starter",
         __name__,
@@ -167,9 +170,7 @@ def create_blueprint(app):
     app.jinja_env.filters["language_name"] = _language_name
     app.jinja_env.filters["subject_title"] = _subject_title
 
-    blueprint.add_url_rule(
-        "/overview", endpoint="overview", view_func=_overview
-    )
+    blueprint.add_url_rule("/overview", endpoint="overview", view_func=_overview)
     blueprint.add_url_rule("/board", endpoint="board", view_func=_board)
     blueprint.add_url_rule("/faq", endpoint="faq", view_func=_faq)
 
