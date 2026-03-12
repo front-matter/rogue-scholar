@@ -160,6 +160,15 @@ services:
         condition: service_healthy
       db:
         condition: service_healthy
+  celery-exporter:
+    image: danihodovic/celery-exporter:latest
+    restart: "unless-stopped"
+    command: [ "--broker-url=${INVENIO_CELERY_BROKER_URL:-redis://cache:6379/0}" ]
+    ports:
+      - "127.0.0.1:9808:9808"
+    depends_on:
+      cache:
+        condition: service_healthy
   cache:
     image: valkey/valkey:7.2.5-bookworm
     restart: "unless-stopped"
