@@ -153,6 +153,9 @@ COPY --from=builder --chown=1000:0 --chmod=755 ${INVENIO_INSTANCE_PATH}/update_s
 COPY --chown=1000:0 ./Caddyfile /etc/caddy/Caddyfile
 COPY --chown=1000:0 --chmod=755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
 
+# Create shared directory for prometheus_client multiprocess mode
+RUN mkdir -p /tmp/prometheus_multiproc && chown 1000:0 /tmp/prometheus_multiproc
+
 WORKDIR ${WORKING_DIR}/src
 
 USER invenio

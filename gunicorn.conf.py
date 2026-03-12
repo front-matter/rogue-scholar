@@ -75,6 +75,13 @@ def post_fork(server, worker):
     structlog.contextvars.bind_contextvars(worker_pid=worker.pid)
 
 
+def worker_exit(server, worker):
+    """Called when a worker exits — clean up prometheus multiprocess files."""
+    from prometheus_client import multiprocess
+
+    multiprocess.mark_process_dead(worker.pid)
+
+
 class StructlogGunicornLogger:
     def __init__(self, cfg):
         self.error_log = structlog.get_logger("gunicorn.error")
