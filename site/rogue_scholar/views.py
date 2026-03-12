@@ -5,6 +5,8 @@ import os
 from babel import Locale, UnknownLocaleError
 from flask import Blueprint, render_template
 from flask_babel import get_locale
+from invenio_administration.permissions import administration_permission
+from prometheus_flask_exporter import PrometheusMetrics
 
 # Module-level cache: vocabulary subject id → {lang: title}
 # Populated once at blueprint creation time from the vocabulary YAML files.
@@ -61,7 +63,7 @@ def _language_name(lang_id):
         normalized = Locale.parse(lang_id).language
         name = loc.languages.get(normalized)
         return name if name else lang_id
-    except (UnknownLocaleError, ValueError):
+    except UnknownLocaleError, ValueError:
         return lang_id
 
 
@@ -116,6 +118,18 @@ def _faq():
             "invenio_app_rdm/faq/faq.en.html",
         ]
     )
+
+
+def create_api_blueprint(app):
+    """Register Prometheus metrics on the API Flask app."""
+    PrometheusMetrics(
+        app,
+        group_by="endpoint",
+        metrics_decorator=administration_permission.require(
+            http_exception=403
+        ),
+    )
+    return Blueprint("rogue_scholar_api", __name__)
 
 
 #

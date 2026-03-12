@@ -15,6 +15,7 @@ dependencies = [
     "setuptools>=70,<81",
     "gunicorn~=23.0.0",
     "structlog>=25.0",
+    "prometheus-flask-exporter>=0.23.1",
 ]
 
 [tool.uv.sources]
@@ -33,6 +34,9 @@ sources = { "site" = "" }
 
 [project.entry-points."invenio_base.blueprints"]
 rogue_scholar = "rogue_scholar.views:create_blueprint"
+
+[project.entry-points."invenio_base.api_blueprints"]
+rogue_scholar = "rogue_scholar.views:create_api_blueprint"
 
 [tool.ruff]
 line-length = 79
