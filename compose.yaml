@@ -138,6 +138,10 @@ services:
       INVENIO_OIDC_ISSUER: ${INVENIO_OIDC_ISSUER:-}
       INVENIO_OIDC_APP_CREDENTIALS_CONSUMER_KEY: ${INVENIO_OIDC_APP_CREDENTIALS_CONSUMER_KEY:-}
       INVENIO_OIDC_APP_CREDENTIALS_CONSUMER_SECRET: ${INVENIO_OIDC_APP_CREDENTIALS_CONSUMER_SECRET:-}
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
     depends_on:
       search:
         condition: service_healthy
@@ -153,6 +157,10 @@ services:
       - uploaded_data:/opt/invenio/var/instance/data
     environment:
       <<: *common-env
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
     depends_on:
       search:
         condition: service_healthy
