@@ -1,9 +1,10 @@
 """Additional views."""
 
 import os
+from functools import wraps
 
 from babel import Locale, UnknownLocaleError
-from flask import Blueprint, render_template
+from flask import Blueprint, abort, render_template, request
 from flask_babel import get_locale
 from invenio_administration.permissions import administration_permission
 from prometheus_flask_exporter import PrometheusMetrics
@@ -120,15 +121,32 @@ def _faq():
     )
 
 
+def _metrics_access(f):
+    """Allow direct internal requests; require admin permission via proxy."""
+
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        if request.headers.get("X-Forwarded-For"):
+            # Request came through the upstream proxy — enforce auth
+            if not administration_permission.can():
+                abort(403)
+        return f(*args, **kwargs)
+
+    return decorated
+
+
 def create_api_blueprint(app):
     """Register Prometheus metrics on the API Flask app."""
-    PrometheusMetrics(
+    metrics = PrometheusMetrics(
         app,
         group_by="endpoint",
-        metrics_decorator=administration_permission.require(
-            http_exception=403
-        ),
+        metrics_decorator=_metrics_access,
     )
+    # Disable HTTPS redirect for /metrics so internal Prometheus scrapers
+    # can reach it without TLS (same pattern as /ping).
+    metrics_view = app.view_functions.get("prometheus_metrics")
+    if metrics_view is not None:
+        metrics_view.talisman_view_options = {"force_https": False}
     return Blueprint("rogue_scholar_api", __name__)
 
 
