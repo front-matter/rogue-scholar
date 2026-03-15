@@ -2,25 +2,24 @@
 
 import os
 from functools import wraps
+from pathlib import Path
 
 from babel import Locale, UnknownLocaleError
-from flask import Blueprint, abort, render_template, request
+from flask import Blueprint, abort, current_app, render_template, request
 from flask_babel import get_locale
 from invenio_administration.permissions import administration_permission
-from prometheus_flask_exporter import PrometheusMetrics
+from prometheus_flask_exporter.multiprocess import (
+    GunicornPrometheusMetrics,
+    GunicornInternalPrometheusMetrics,
+)
 
-# Module-level cache: vocabulary subject id → {lang: title}
+# Module-level cache: vocabulary subject id -> {lang: title}
 # Populated once at blueprint creation time from the vocabulary YAML files.
 _SUBJECT_TITLES: dict = {}
 
 
 def _load_subject_titles_from_yaml(instance_path: str) -> dict:
-    """Load subject title translations from vocabulary YAML files.
-
-    Reads all subjects_*.yaml files from app_data/vocabularies/ and builds
-    an in-memory dict mapping subject id → title dict (e.g. {"en": ..., "de": ...}).
-    Called once at app startup so no database queries are needed at render time.
-    """
+    """Load subject title translations from vocabulary YAML files."""
     try:
         import yaml
     except ImportError:
@@ -50,17 +49,10 @@ def _load_subject_titles_from_yaml(instance_path: str) -> dict:
 
 
 def _language_name(lang_id):
-    """Return the display name of a language ID in the current UI locale.
-
-    Uses Babel to translate ISO 639-1 (e.g. 'en') and ISO 639-2/B (e.g. 'eng')
-    language codes into a human-readable name in the currently active
-    Flask-Babel locale. Falls back to the language ID itself if no translation
-    is found.
-    """
+    """Return the display name of a language ID in the current UI locale."""
     try:
         ui_locale = str(get_locale() or "en")
         loc = Locale.parse(ui_locale)
-        # Normalize to 2-letter ISO 639-1 via Locale.parse (handles 'eng' -> 'en')
         normalized = Locale.parse(lang_id).language
         name = loc.languages.get(normalized)
         return name if name else lang_id
@@ -69,13 +61,7 @@ def _language_name(lang_id):
 
 
 def _subject_title(subject):
-    """Return the translated title of a vocabulary subject in the current UI locale.
-
-    For vocabulary-backed subjects (those with an 'id'), looks up the title dict
-    loaded from the vocabulary YAML files and returns the entry for the active
-    locale, falling back to the 'subject' field. For free-text subjects (no 'id'),
-    returns the 'subject' field directly.
-    """
+    """Return the translated title of a vocabulary subject in the current UI locale."""
     fallback = subject.get("subject", "")
     subject_id = subject.get("id")
     if not subject_id:
@@ -135,20 +121,47 @@ def _metrics_access(f):
     return decorated
 
 
+def _init_metrics(app, **kwargs):
+    """Initialize API metrics using Gunicorn multiprocess mode."""
+    _ensure_multiproc_dir()
+    return GunicornInternalPrometheusMetrics(app, **kwargs)
+
+
+def _ensure_multiproc_dir():
+    """Ensure Prometheus multiprocess directory exists and is configured."""
+    multiproc_dir = (
+        os.environ.get("PROMETHEUS_MULTIPROC_DIR")
+        or os.environ.get("prometheus_multiproc_dir")
+        or "/tmp/prometheus_multiproc"
+    )
+    os.environ.setdefault("PROMETHEUS_MULTIPROC_DIR", multiproc_dir)
+    Path(multiproc_dir).mkdir(parents=True, exist_ok=True)
+    return multiproc_dir
+
+
+def _version():
+    """Return the configured InvenioRDM version string."""
+    return str(current_app.config.get("INVENIO_APP_RDM_VERSION", ""))
+
+
 def create_api_blueprint(app):
     """Register Prometheus metrics on the API Flask app."""
-    metrics = PrometheusMetrics(
+    _init_metrics(
         app,
-        path="/api/metrics",
+        path="/metrics",
         group_by="endpoint",
         metrics_decorator=_metrics_access,
     )
-    # Disable HTTPS redirect for /api/metrics so internal Prometheus scrapers
-    # can reach it without TLS (same pattern as /ping).
+    # Disable HTTPS redirect for the metrics endpoint on the API app.
+    # In the combined app this is exposed externally as /api/metrics.
     metrics_view = app.view_functions.get("prometheus_metrics")
     if metrics_view is not None:
         metrics_view.talisman_view_options = {"force_https": False}
-    return Blueprint("rogue_scholar_api", __name__)
+
+    blueprint = Blueprint("rogue_scholar_api", __name__)
+    blueprint.add_url_rule("/version", endpoint="version", view_func=_version)
+
+    return blueprint
 
 
 #
@@ -156,20 +169,17 @@ def create_api_blueprint(app):
 #
 def create_blueprint(app):
     """Register blueprint routes on app."""
-    # Track UI app requests in the shared multiprocess registry.
-    # metrics_endpoint=False avoids registering a duplicate metrics route
-    # (that lives on the API app via create_api_blueprint).
-    PrometheusMetrics(
-        app, group_by="endpoint", export_defaults=True, metrics_endpoint=False
-    )
+    # Track UI app requests in the shared multiprocess registry without
+    # exposing an endpoint on the UI app.
+    _ensure_multiproc_dir()
+    GunicornPrometheusMetrics(app, group_by="endpoint", export_defaults=True)
 
     blueprint = Blueprint(
-        "invenio_rdm_starter",
+        "rogue_scholar",
         __name__,
         template_folder="./templates",
     )
 
-    # Populate subject title cache from YAML files once at startup
     _SUBJECT_TITLES.update(_load_subject_titles_from_yaml(app.instance_path))
 
     app.jinja_env.filters["language_name"] = _language_name
@@ -181,5 +191,4 @@ def create_blueprint(app):
     blueprint.add_url_rule("/board", endpoint="board", view_func=_board)
     blueprint.add_url_rule("/faq", endpoint="faq", view_func=_faq)
 
-    # Add URL rules
     return blueprint

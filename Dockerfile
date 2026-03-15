@@ -37,7 +37,8 @@ ENV VIRTUAL_ENV=/opt/invenio/.venv \
     UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
     UV_PYTHON_DOWNLOADS=0 \
-    INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
+    INVENIO_INSTANCE_PATH=/opt/invenio/var/instance \
+    PROMETHEUS_MULTIPROC_DIR=/tmp/prometheus_multiproc
 
 WORKDIR ${WORKING_DIR}
 
@@ -54,6 +55,9 @@ COPY . .
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev --no-editable
 
+# Prepare Prometheus multiprocess directory for app init during build steps.
+RUN mkdir -p ${PROMETHEUS_MULTIPROC_DIR}
+
 # Build Javascript assets using rspack
 ENV WEBPACKEXT_PROJECT=invenio_assets.webpack:rspack_project
 RUN --mount=type=cache,target=/var/cache/assets \
@@ -61,13 +65,14 @@ RUN --mount=type=cache,target=/var/cache/assets \
     invenio webpack create
 
 # Copy application files to instance path
-COPY ./invenio.cfg ${INVENIO_INSTANCE_PATH}/
 COPY ./gunicorn.conf.py ${INVENIO_INSTANCE_PATH}/
 COPY site ${INVENIO_INSTANCE_PATH}/site
 COPY static ${INVENIO_INSTANCE_PATH}/static
 COPY assets ${INVENIO_INSTANCE_PATH}/assets
 COPY templates ${INVENIO_INSTANCE_PATH}/templates
 COPY app_data ${INVENIO_INSTANCE_PATH}/app_data
+COPY ./invenio.cfg ${INVENIO_INSTANCE_PATH}/app_data/invenio.cfg
+RUN ln -sf app_data/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
 COPY translations ${INVENIO_INSTANCE_PATH}/translations
 COPY update_subjects.py ${INVENIO_INSTANCE_PATH}/
 

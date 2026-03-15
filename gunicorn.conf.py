@@ -1,11 +1,20 @@
 import logging
 import os
+from pathlib import Path
 
 import structlog
 
 # Hard-code the prometheus multiprocess directory so it is set before
 # prometheus_client is imported (it reads the env var at import time).
 os.environ.setdefault("PROMETHEUS_MULTIPROC_DIR", "/tmp/prometheus_multiproc")
+
+
+def _prepare_prometheus_multiproc_dir() -> None:
+    """Ensure multiprocess metrics dir exists and has no stale files."""
+    multiproc_dir = Path(os.environ["PROMETHEUS_MULTIPROC_DIR"])
+    multiproc_dir.mkdir(parents=True, exist_ok=True)
+    for shard_file in multiproc_dir.glob("*.db"):
+        shard_file.unlink(missing_ok=True)
 
 
 def configure_logging() -> None:
@@ -70,6 +79,7 @@ def configure_logging() -> None:
 
 def on_starting(server):
     """Called once in the master process before workers fork."""
+    _prepare_prometheus_multiproc_dir()
     configure_logging()
 
 
@@ -79,8 +89,8 @@ def post_fork(server, worker):
     structlog.contextvars.bind_contextvars(worker_pid=worker.pid)
 
 
-def worker_exit(server, worker):
-    """Called when a worker exits — clean up prometheus multiprocess files."""
+def child_exit(server, worker):
+    """Called in master on worker exit — clean up multiprocess files."""
     from prometheus_client import multiprocess
 
     multiprocess.mark_process_dead(worker.pid)
