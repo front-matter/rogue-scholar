@@ -1,44 +1,24 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2025 Front Matter.
+# Copyright (C) 2025-2026 Front Matter.
 #
 # Rogue Scholar is free software; you can redistribute it and/or modify it
 # under the terms of the MIT License; see LICENSE file for more details.
 
 """Rogue Scholar permissions."""
 
-from invenio_records.dictutils import dict_lookup
-from invenio_records_permissions.generators import (
-    ConditionalGenerator,
-    Generator,
-)
-from invenio_administration.generators import Administration
 from invenio_communities.permissions import CommunityPermissionPolicy
 from invenio_rdm_records.services.generators import (
     AccessGrant,
-    CommunityInclusionReviewers,
-    IfDeleted,
-    IfExternalDOIRecord,
-    IfFileIsLocal,
-    IfNewRecord,
-    IfRecordDeleted,
-    IfRestricted,
-    RecordCommunitiesAction,
     RecordOwners,
-    ResourceAccessToken,
-    SecretLinks,
-    SubmissionReviewer,
 )
 from invenio_rdm_records.services.permissions import RDMRecordPermissionPolicy
 from invenio_records_permissions.generators import (
-    Disable,
-    IfConfig,
     SystemProcess,
 )
+from invenio_communities.generators import CommunityManagers
 from .generators import (
     MediaFilesManager,
-    ExternalDOIFilesManager,
-    IfFilesRestrictedForCommunity,
     IfRecordManagementAllowedForCommunity,
 )
 
@@ -144,6 +124,7 @@ class RogueScholarCommunityPermissionPolicy(CommunityPermissionPolicy):
     """
 
     can_create = [SystemProcess()]
+    can_update = [CommunityManagers(), SystemProcess()]
     can_moderate = [SystemProcess()]
     can_rename = [SystemProcess()]
     can_submit_record = [SystemProcess()]
