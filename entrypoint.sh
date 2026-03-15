@@ -2,6 +2,17 @@
 # Entrypoint script for InvenioRDM
 set -e
 
+INSTANCE_CONFIG="/opt/invenio/var/instance/invenio.cfg"
+VOLUME_CONFIG="/opt/invenio/var/instance/app_data/invenio.cfg"
+DEFAULT_CONFIG="/opt/invenio/var/instance/invenio.cfg.default"
+
+# Keep configuration persistent in the external app_data volume.
+mkdir -p "$(dirname "${VOLUME_CONFIG}")"
+if [ ! -f "${VOLUME_CONFIG}" ] && [ -f "${DEFAULT_CONFIG}" ]; then
+	cp "${DEFAULT_CONFIG}" "${VOLUME_CONFIG}"
+fi
+ln -sfn app_data/invenio.cfg "${INSTANCE_CONFIG}"
+
 # Creating database and tables if they do not exist...
 invenio db init create
 

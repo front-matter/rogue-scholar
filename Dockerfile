@@ -72,6 +72,7 @@ COPY assets ${INVENIO_INSTANCE_PATH}/assets
 COPY templates ${INVENIO_INSTANCE_PATH}/templates
 COPY app_data ${INVENIO_INSTANCE_PATH}/app_data
 COPY ./invenio.cfg ${INVENIO_INSTANCE_PATH}/app_data/invenio.cfg
+COPY ./invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg.default
 RUN ln -sf app_data/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
 COPY translations ${INVENIO_INSTANCE_PATH}/translations
 COPY update_subjects.py ${INVENIO_INSTANCE_PATH}/
@@ -153,6 +154,7 @@ COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/templates ${INVENIO_
 COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/app_data ${INVENIO_INSTANCE_PATH}/app_data
 COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/translations ${INVENIO_INSTANCE_PATH}/translations
 COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
+COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/invenio.cfg.default ${INVENIO_INSTANCE_PATH}/invenio.cfg.default
 COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/gunicorn.conf.py ${INVENIO_INSTANCE_PATH}/gunicorn.conf.py
 COPY --from=builder --chown=1000:0 --chmod=755 ${INVENIO_INSTANCE_PATH}/update_subjects.py ${INVENIO_INSTANCE_PATH}/update_subjects.py
 COPY --chown=1000:0 ./Caddyfile /etc/caddy/Caddyfile
