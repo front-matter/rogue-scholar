@@ -51,7 +51,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 COPY . .
 
 # Install Python dependencies (use --no-editable so the project is installed as
-# a proper wheel, not an editable .pth pointing at the build-stage source tree)
+# a proper wheel
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev --no-editable
 
