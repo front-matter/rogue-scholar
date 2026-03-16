@@ -4401,6 +4401,7 @@ dependencies = [
     { name = "prometheus-flask-exporter" },
     { name = "setuptools" },
     { name = "structlog" },
+    { name = "structlog-sentry" },
 ]
 
 [package.optional-dependencies]
@@ -4431,6 +4432,7 @@ requires-dist = [
     { name = "quarto-cli", marker = "extra == 'docs'", specifier = "~=1.8.25" },
     { name = "setuptools", specifier = ">=70,<81" },
     { name = "structlog", specifier = ">=25.0" },
+    { name = "structlog-sentry", specifier = ">=2.1.0" },
 ]
 provides-extras = ["docs", "actions"]
 
@@ -4728,6 +4730,19 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/ef/52/9ba0f43b686e7f3ddfeaa78ac3af750292662284b3661e91ad5494f21dbc/structlog-25.5.0.tar.gz", hash = "sha256:098522a3bebed9153d4570c6d0288abf80a031dfdb2048d59a49e9dc2190fc98", size = 1460830, upload-time = "2025-10-27T08:28:23.028Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a8/45/a132b9074aa18e799b891b91ad72133c98d8042c70f6240e4c5f9dabee2f/structlog-25.5.0-py3-none-any.whl", hash = "sha256:a8453e9b9e636ec59bd9e79bbd4a72f025981b3ba0f5837aebf48f02f37a7f9f", size = 72510, upload-time = "2025-10-27T08:28:21.535Z" },
+]
+
+[[package]]
+name = "structlog-sentry"
+version = "2.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "sentry-sdk" },
+    { name = "structlog" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f1/87/77e9b49edfe50dcb4845bfd693c275bffdf2ebda4e34250d2312e418c49f/structlog_sentry-2.1.0.tar.gz", hash = "sha256:ee4fb04a381f25570017dd26345ea15b6461cbf87ae0a315e20ddd822ad4256b", size = 6788, upload-time = "2024-03-13T07:47:57.116Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e8/75/5e599821ee944c62f6b17ee0d5f4910146e9541692178055acc0b5768549/structlog_sentry-2.1.0-py3-none-any.whl", hash = "sha256:8f631fc4cf9890f8ea368f057861b62ceef30dd75726a85706869807926e22d0", size = 11134, upload-time = "2024-03-13T07:47:55.498Z" },
 ]
 
 [[package]]

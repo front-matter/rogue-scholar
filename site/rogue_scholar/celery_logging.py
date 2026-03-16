@@ -1,8 +1,26 @@
 import logging
 import os
 
+import sentry_sdk
 import structlog
 from celery.signals import setup_logging, task_postrun, task_prerun
+from sentry_sdk.integrations.logging import LoggingIntegration
+from structlog_sentry import SentryProcessor
+
+
+def configure_sentry() -> None:
+    """Initialise Sentry SDK if SENTRY_DSN is set."""
+    dsn = os.environ.get("SENTRY_DSN")
+    if not dsn:
+        return
+
+    sentry_sdk.init(
+        dsn=dsn,
+        environment=os.environ.get("INVENIO_ENVIRONMENT", "production"),
+        integrations=[LoggingIntegration(event_level=None, level=None)],
+        traces_sample_rate=0.0,
+        enable_tracing=False,
+    )
 
 
 @setup_logging.connect
@@ -26,6 +44,7 @@ def configure_celery_logging(**kwargs):
     structlog.configure(
         processors=[
             *shared_processors,
+            SentryProcessor(event_level=logging.ERROR),
             structlog.stdlib.ProcessorFormatter.wrap_for_formatter,
         ],
         logger_factory=structlog.stdlib.LoggerFactory(),
@@ -43,7 +62,10 @@ def configure_celery_logging(**kwargs):
             structlog.stdlib.ProcessorFormatter.remove_processors_meta,
             renderer,
         ],
-        foreign_pre_chain=shared_processors,
+        foreign_pre_chain=[
+            *shared_processors,
+            SentryProcessor(event_level=logging.ERROR),
+        ],
     )
 
     handler = logging.StreamHandler()
@@ -73,6 +95,8 @@ def configure_celery_logging(**kwargs):
     logging.getLogger("urllib3.connectionpool").setLevel(logging.ERROR)
     if not debug_mode:
         logging.getLogger("py.warnings").setLevel(logging.ERROR)
+
+    configure_sentry()
 
 
 @task_prerun.connect

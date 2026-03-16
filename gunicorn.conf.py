@@ -2,7 +2,10 @@ import logging
 import os
 from pathlib import Path
 
+import sentry_sdk
 import structlog
+from sentry_sdk.integrations.logging import LoggingIntegration
+from structlog_sentry import SentryProcessor
 
 # Hard-code the prometheus multiprocess directory so it is set before
 # prometheus_client is imported (it reads the env var at import time).
@@ -37,6 +40,7 @@ def configure_logging() -> None:
     structlog.configure(
         processors=[
             *shared_processors,
+            SentryProcessor(event_level=logging.ERROR),
             structlog.stdlib.ProcessorFormatter.wrap_for_formatter,
         ],
         logger_factory=structlog.stdlib.LoggerFactory(),
@@ -54,7 +58,10 @@ def configure_logging() -> None:
             structlog.stdlib.ProcessorFormatter.remove_processors_meta,
             renderer,
         ],
-        foreign_pre_chain=shared_processors,
+        foreign_pre_chain=[
+            *shared_processors,
+            SentryProcessor(event_level=logging.ERROR),
+        ],
     )
 
     handler = logging.StreamHandler()
@@ -77,16 +84,33 @@ def configure_logging() -> None:
         logging.getLogger("py.warnings").setLevel(logging.ERROR)
 
 
+def configure_sentry() -> None:
+    """Initialise Sentry SDK if SENTRY_DSN is set."""
+    dsn = os.environ.get("SENTRY_DSN")
+    if not dsn:
+        return
+
+    sentry_sdk.init(
+        dsn=dsn,
+        environment=os.environ.get("INVENIO_ENVIRONMENT", "production"),
+        integrations=[LoggingIntegration(event_level=None, level=None)],
+        traces_sample_rate=0.0,
+        enable_tracing=False,
+    )
+
+
 def on_starting(server):
     """Called once in the master process before workers fork."""
     _prepare_prometheus_multiproc_dir()
     configure_logging()
+    configure_sentry()
 
 
 def post_fork(server, worker):
     """Called in each worker after forking — re-initialise structlog context."""
     structlog.contextvars.clear_contextvars()
     structlog.contextvars.bind_contextvars(worker_pid=worker.pid)
+    configure_sentry()
 
 
 def child_exit(server, worker):
