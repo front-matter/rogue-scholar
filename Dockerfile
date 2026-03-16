@@ -24,7 +24,7 @@ RUN --mount=type=cache,sharing=locked,target=/var/cache/apt \
     npm install -g pnpm@latest-10
 
 # Install uv and activate virtualenv
-COPY --from=ghcr.io/astral-sh/uv:0.9.26 /uv /uvx /bin/
+COPY --from=ghcr.io/astral-sh/uv:0.10.10 /uv /uvx /bin/
 RUN uv venv /opt/invenio/.venv
 
 # Use the virtual environment automatically
@@ -58,12 +58,6 @@ RUN --mount=type=cache,target=/root/.cache/uv \
 # Prepare Prometheus multiprocess directory for app init during build steps.
 RUN mkdir -p ${PROMETHEUS_MULTIPROC_DIR}
 
-# Build Javascript assets using rspack
-ENV WEBPACKEXT_PROJECT=invenio_assets.webpack:rspack_project
-RUN --mount=type=cache,target=/var/cache/assets \
-    invenio collect --verbose && \
-    invenio webpack create
-
 # Copy application files to instance path
 COPY ./gunicorn.conf.py ${INVENIO_INSTANCE_PATH}/
 COPY site ${INVENIO_INSTANCE_PATH}/site
@@ -80,15 +74,11 @@ COPY update_subjects.py ${INVENIO_INSTANCE_PATH}/
 # Compile translation catalogs
 RUN pybabel compile -d ${INVENIO_INSTANCE_PATH}/translations
 
-# Enable the option to have a deterministic javascript dependency build
-# From: https://github.com/tu-graz-library/docker-invenio-base
-COPY ./package.json ${INVENIO_INSTANCE_PATH}/assets/
-COPY ./pnpm-lock.yaml ${INVENIO_INSTANCE_PATH}/assets/
-
-WORKDIR ${INVENIO_INSTANCE_PATH}/assets
-RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
-    pnpm install && \
-    pnpm run build
+# Build Javascript assets into the instance path expected at runtime.
+ENV WEBPACKEXT_PROJECT=invenio_assets.webpack:rspack_project
+RUN --mount=type=cache,target=/var/cache/assets \
+    invenio collect --verbose && \
+    invenio webpack buildall
 
 # Gather runtime libraries by finding .so files directly (most reliable).
 # Uses cp -L to dereference symlinks so only real files are stored.
