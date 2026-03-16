@@ -94,6 +94,7 @@ def configure_sentry() -> None:
         dsn=dsn,
         environment=os.environ.get("INVENIO_ENVIRONMENT", "production"),
         integrations=[LoggingIntegration(event_level=None, level=None)],
+        with_locals=False,
         traces_sample_rate=0.0,
         enable_tracing=False,
     )
