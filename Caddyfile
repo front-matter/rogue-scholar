@@ -1,4 +1,5 @@
 localhost :443 {
+	tls /certs/localhost.pem /certs/localhost-key.pem
 	root /static/* /opt/invenio/var/instance/static
 	try_files {path} {path}/ /index.html
 	reverse_proxy web:4000

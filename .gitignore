@@ -163,6 +163,9 @@ docker/opensearch/*
 # Local Kamal folder
 .kamal
 
+# Local TLS certificates (mkcert)
+.certs/
+
 config/master.key
 
 !clickhouse/logs.xml
