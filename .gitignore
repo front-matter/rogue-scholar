@@ -174,3 +174,5 @@ node_modules
 .vscode/settings.json
 
 compose.yaml
+
+public/
