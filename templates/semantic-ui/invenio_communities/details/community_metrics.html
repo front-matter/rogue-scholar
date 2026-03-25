@@ -270,10 +270,9 @@
 (function() {
   var baseUrl = "/api";
   var headers = { "Accept": "application/vnd.inveniordm.v1+json" };
-  var communityId = "{{ community_ui['id'] }}";
   var communitySlug = "{{ community_ui['slug'] }}";
-  var communityRef = communitySlug || communityId;
-  var communityRecordsPath = "/communities/" + encodeURIComponent(communityRef) + "/records";
+  var communityRecordsPath = "/communities/" + encodeURIComponent(communitySlug) + "/records";
+  var communityBrowsePath = "/communities/" + encodeURIComponent(communitySlug) + "/browse";
 
   function fmt(n) {
     if (n >= 1000) {
@@ -319,29 +318,15 @@
   }
 
   function fetchCommunityRecords(query) {
-    var refs = [communityId, communitySlug].filter(Boolean);
-    if (refs.length === 0) {
-      return Promise.reject(new Error("Missing community id and slug"));
+    if (!communitySlug) {
+      return Promise.reject(new Error("Missing community slug"));
     }
-
-    var uniqueRefs = refs.filter(function(ref, index) {
-      return refs.indexOf(ref) === index;
+    return fetch(buildCommunityRecordsUrl({ ref: communitySlug, query: query }), { headers: headers }).then(function(r) {
+      if (!r.ok) {
+        throw new Error("Community records request failed with status " + r.status);
+      }
+      return r.json();
     });
-
-    function tryRef(index) {
-      var ref = uniqueRefs[index];
-      return fetch(buildCommunityRecordsUrl({ ref: ref, query: query }), { headers: headers }).then(function(r) {
-        if (!r.ok) {
-          if (index < uniqueRefs.length - 1 && (r.status === 400 || r.status === 404)) {
-            return tryRef(index + 1);
-          }
-          throw new Error("Community records request failed with status " + r.status);
-        }
-        return r.json();
-      });
-    }
-
-    return tryRef(0);
   }
 
   function show(id, text, href) {
@@ -354,6 +339,11 @@
     }
     ph.style.display = "none";
     el.style.display = "";
+  }
+
+  function browseHref(query, sort) {
+    var params = "q=" + encodeURIComponent(query || "") + "&l=list&p=1&s=10&sort=" + (sort || "newest");
+    return communityBrowsePath + "?" + params;
   }
 
   // Compute date 30 days ago as YYYY-MM-DD
@@ -381,10 +371,10 @@
     var recentCount = totalFrom(results[2]);
     var fundingCount = totalFrom(results[3]);
 
-    show("metrics-first", formatPublicationDate(oldestPublicationDate), communityRecordsPath + "?sort=oldest");
-    show("metrics-posts", fmt(totalPosts), communityRecordsPath + "?sort=newest");
-    show("metrics-recent", fmt(recentCount), communityRecordsPath + "?q=" + encodeURIComponent(recentQ) + "&sort=newest");
-    show("metrics-funding", fmt(fundingCount), communityRecordsPath + "?q=funder:*&sort=newest");
+    show("metrics-first", formatPublicationDate(oldestPublicationDate), browseHref("", "oldest"));
+    show("metrics-posts", fmt(totalPosts), browseHref("", "newest"));
+    show("metrics-recent", fmt(recentCount), browseHref(recentQ, "newest"));
+    show("metrics-funding", fmt(fundingCount), browseHref("funder:*", "newest"));
 
     // Row 2: percentage metrics (depend on totalPosts)
     return Promise.all([
@@ -394,10 +384,10 @@
       fetchCommunityRecords("q=" + encodeURIComponent(citationsQ) + "&size=1"),
     ]);
   }).then(function(results) {
-    show("metrics-orcid", pct(totalFrom(results[0]), totalPosts), communityRecordsPath + "?q=" + encodeURIComponent(orcidQ) + "&sort=newest");
-    show("metrics-ror", pct(totalFrom(results[1]), totalPosts), communityRecordsPath + "?q=" + encodeURIComponent(rorQ) + "&sort=newest");
-    show("metrics-references", pct(totalFrom(results[2]), totalPosts), communityRecordsPath + "?q=" + encodeURIComponent(referencesQ) + "&sort=newest");
-    show("metrics-citations", pct(totalFrom(results[3]), totalPosts), communityRecordsPath + "?q=" + encodeURIComponent(citationsQ) + "&sort=newest");
+    show("metrics-orcid", pct(totalFrom(results[0]), totalPosts), browseHref(orcidQ, "newest"));
+    show("metrics-ror", pct(totalFrom(results[1]), totalPosts), browseHref(rorQ, "newest"));
+    show("metrics-references", pct(totalFrom(results[2]), totalPosts), browseHref(referencesQ, "newest"));
+    show("metrics-citations", pct(totalFrom(results[3]), totalPosts), browseHref(citationsQ, "newest"));
   }).catch(function(err) {
     console.error("Failed to load community metrics:", err);
   });
