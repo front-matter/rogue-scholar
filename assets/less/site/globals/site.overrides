@@ -51,3 +51,8 @@ samp {
   }
 }
 
+.theme-default.outer-navbar {
+  background-color: @lightGrey;
+  background-image: none;
+}
+
