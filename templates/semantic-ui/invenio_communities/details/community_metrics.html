@@ -1,0 +1,405 @@
+{#
+  Copyright (C) 2026 Front Matter.
+
+  Rogue Scholar is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+<style>
+  #community-metrics {
+    padding: 2rem 1rem 1rem;
+  }
+  .metrics-grid.ui.cards {
+    margin: 0 -0.75rem !important;
+  }
+  .metrics-card.card {
+    background: #ffffff !important;
+    border-radius: 1.5rem !important;
+    border: 1px solid rgba(148, 163, 184, 0.14) !important;
+    box-shadow: 0 24px 48px rgba(96, 165, 250, 0.16) !important;
+    margin: 0 0.75rem 1.5rem !important;
+    overflow: hidden;
+  }
+  .metrics-card .content {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: space-between;
+    min-height: 13.5rem;
+    padding: 1.9rem 2rem 0 !important;
+    position: relative;
+  }
+  .metrics-card .metrics-icon {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: flex-start;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin-bottom: 0.5rem;
+    color: var(--metrics-accent);
+  }
+  .metrics-card .metrics-icon::before {
+    content: "";
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--metrics-icon-color, var(--metrics-accent));
+    -webkit-mask-image: var(--metrics-icon);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-image: var(--metrics-icon);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    filter: drop-shadow(0 10px 14px color-mix(in srgb, var(--metrics-accent) 25%, transparent));
+  }
+  .metrics-card--orcid .metrics-icon::before,
+  .metrics-card--ror .metrics-icon::before {
+    background-color: transparent;
+    background-image: var(--metrics-icon);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .metrics-card .metrics-copy {
+    width: 100%;
+  }
+  .metrics-card .metrics-value {
+    color: var(--metrics-accent);
+    font-size: clamp(2rem, 3vw, 3.35rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+  .metrics-card .metrics-value a,
+  .metrics-card .meta {
+    color: inherit !important;
+  }
+  .metrics-card .metrics-value a {
+    color: var(--metrics-accent) !important;
+    text-decoration: none;
+  }
+  .metrics-card .metrics-value a:hover {
+    opacity: 0.82;
+  }
+  .metrics-card .meta {
+    color: #7c8798 !important;
+    font-size: 14px !important;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 0.25rem;
+  }
+  .metrics-placeholder.ui.placeholder {
+    background: transparent !important;
+    margin-bottom: 0.25rem;
+  }
+  .metrics-card .ui.placeholder .line {
+    background: rgba(148, 163, 184, 0.26);
+    border-radius: 999px;
+    height: 1.15rem;
+  }
+  .metrics-card--blogs {
+    --metrics-accent: #3c6df0;
+    --metrics-icon: url("/static/images/blog.svg");
+  }
+  .metrics-card--posts {
+    --metrics-accent: #ff5b1a;
+    --metrics-icon: url("/static/images/article.svg");
+  }
+  .metrics-card--recent {
+    --metrics-accent: #f2a900;
+    --metrics-icon: url("/static/images/date-range.svg");
+  }
+  .metrics-card--funding {
+    --metrics-accent: #d946c5;
+    --metrics-icon: url("/static/images/sponsor-tiers.svg");
+  }
+  .metrics-card--orcid {
+    --metrics-accent: #A6CE39;
+    --metrics-icon: url("/static/images/orcid.svg");
+  }
+  .metrics-card--ror {
+    --metrics-accent: #53BAA1;
+    --metrics-icon: url("/static/images/ror.svg");
+  }
+  .metrics-card--references {
+    --metrics-accent: #4f86ff;
+    --metrics-icon: url("/static/images/list-ordered.svg");
+  }
+  .metrics-card--citations {
+    --metrics-accent: #8b5cf6;
+    --metrics-icon: url("/static/images/citation.svg");
+  }
+  @media only screen and (max-width: 991px) {
+    #community-metrics {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .metrics-grid.ui.cards {
+      margin: 0 !important;
+    }
+    .metrics-card.card {
+      margin: 0 0 1rem !important;
+    }
+    .metrics-card .content {
+      min-height: 11.5rem;
+      padding: 1.6rem 1.6rem 0 !important;
+    }
+    .metrics-card .metrics-icon {
+      margin-bottom: 0.5rem;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .metrics-card .metrics-value {
+      font-size: 2.55rem;
+    }
+  }
+</style>
+<div id="community-metrics" class="ui container rel-mt-2 rel-mb-1">
+
+  {# Row 1: Absolute counts #}
+  <div class="ui four stackable cards metrics-grid">
+    <div class="card metrics-card metrics-card--first">
+      <div class="content">
+        <div class="metrics-icon" role="img" aria-label="First"></div>
+        <div class="metrics-copy">
+          <div class="ui placeholder metrics-placeholder" id="metrics-first-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="meta">{{ _("First post") }}</div>
+          <div class="metrics-value" id="metrics-first" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card metrics-card metrics-card--posts">
+      <div class="content">
+        <div class="metrics-icon" role="img" aria-label="Article"></div>
+        <div class="metrics-copy">
+          <div class="ui placeholder metrics-placeholder" id="metrics-posts-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="meta">{{ _("All Posts") }}</div>
+          <div class="metrics-value" id="metrics-posts" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card metrics-card metrics-card--recent">
+      <div class="content">
+        <div class="metrics-icon" role="img" aria-label="Date range"></div>
+        <div class="metrics-copy">
+          <div class="ui placeholder metrics-placeholder" id="metrics-recent-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="meta">{{ _("Posts last 30 Days") }}</div>
+          <div class="metrics-value" id="metrics-recent" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card metrics-card metrics-card--funding">
+      <div class="content">
+        <div class="metrics-icon" role="img" aria-label="Funding"></div>
+        <div class="metrics-copy">
+          <div class="ui placeholder metrics-placeholder" id="metrics-funding-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="meta">{{ _("Posts with Funding") }}</div>
+          <div class="metrics-value" id="metrics-funding" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {# Row 2: Percentage metrics #}
+  <div class="ui four stackable cards metrics-grid">
+    <div class="card metrics-card metrics-card--orcid">
+      <div class="content">
+        <div class="metrics-icon" role="img" aria-label="ORCID"></div>
+        <div class="metrics-copy">
+          <div class="ui placeholder metrics-placeholder" id="metrics-orcid-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="meta">{{ _("Posts with ORCID") }}</div>
+          <div class="metrics-value" id="metrics-orcid" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card metrics-card metrics-card--ror">
+      <div class="content">
+        <div class="metrics-icon" role="img" aria-label="ROR"></div>
+        <div class="metrics-copy">
+          <div class="ui placeholder metrics-placeholder" id="metrics-ror-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="meta">{{ _("Posts with ROR ID") }}</div>
+          <div class="metrics-value" id="metrics-ror" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card metrics-card metrics-card--references">
+      <div class="content">
+        <div class="metrics-icon" role="img" aria-label="References"></div>
+        <div class="metrics-copy">
+          <div class="ui placeholder metrics-placeholder" id="metrics-references-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="meta">{{ _("Posts with References") }}</div>
+          <div class="metrics-value" id="metrics-references" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card metrics-card metrics-card--citations">
+      <div class="content">
+        <div class="metrics-icon" role="img" aria-label="Citations"></div>
+        <div class="metrics-copy">
+          <div class="ui placeholder metrics-placeholder" id="metrics-citations-placeholder">
+            <div class="line"></div>
+          </div>
+          <div class="meta">{{ _("Cited Posts") }}</div>
+          <div class="metrics-value" id="metrics-citations" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var baseUrl = "/api";
+  var headers = { "Accept": "application/vnd.inveniordm.v1+json" };
+  var communityId = "{{ community_ui['id'] }}";
+  var communitySlug = "{{ community_ui['slug'] }}";
+  var communityRef = communitySlug || communityId;
+  var communityRecordsPath = "/communities/" + encodeURIComponent(communityRef) + "/records";
+
+  function fmt(n) {
+    if (n >= 1000) {
+      var k = n / 1000;
+      return (k % 1 === 0 ? k : k.toFixed(1)) + "K";
+    }
+    return n.toLocaleString();
+  }
+
+  function pct(n, total) {
+    if (!total) {
+      return "0%";
+    }
+    return Math.round(n / total * 100) + "%";
+  }
+
+  function formatPublicationDate(dateValue) {
+    if (!dateValue) {
+      return "-";
+    }
+    var parsed = new Date(dateValue + "T12:00:00Z");
+    if (isNaN(parsed.getTime())) {
+      return dateValue.slice(0, 4);
+    }
+    return String(parsed.getUTCFullYear());
+  }
+
+  function totalFrom(result) {
+    if (!result || !result.hits) {
+      return 0;
+    }
+    if (typeof result.hits.total === "number") {
+      return result.hits.total;
+    }
+    if (result.hits.total && typeof result.hits.total.value === "number") {
+      return result.hits.total.value;
+    }
+    return 0;
+  }
+
+  function buildCommunityRecordsUrl(params) {
+    return baseUrl + "/communities/" + encodeURIComponent(params.ref) + "/records?" + params.query;
+  }
+
+  function fetchCommunityRecords(query) {
+    var refs = [communityId, communitySlug].filter(Boolean);
+    if (refs.length === 0) {
+      return Promise.reject(new Error("Missing community id and slug"));
+    }
+
+    var uniqueRefs = refs.filter(function(ref, index) {
+      return refs.indexOf(ref) === index;
+    });
+
+    function tryRef(index) {
+      var ref = uniqueRefs[index];
+      return fetch(buildCommunityRecordsUrl({ ref: ref, query: query }), { headers: headers }).then(function(r) {
+        if (!r.ok) {
+          if (index < uniqueRefs.length - 1 && (r.status === 400 || r.status === 404)) {
+            return tryRef(index + 1);
+          }
+          throw new Error("Community records request failed with status " + r.status);
+        }
+        return r.json();
+      });
+    }
+
+    return tryRef(0);
+  }
+
+  function show(id, text, href) {
+    var el = document.getElementById(id);
+    var ph = document.getElementById(id + "-placeholder");
+    if (href) {
+      el.innerHTML = '<a href="' + href + '">' + text + '</a>';
+    } else {
+      el.textContent = text;
+    }
+    ph.style.display = "none";
+    el.style.display = "";
+  }
+
+  // Compute date 30 days ago as YYYY-MM-DD
+  var d = new Date();
+  d.setDate(d.getDate() - 30);
+  var since = d.toISOString().slice(0, 10);
+  var recentQ = "metadata.publication_date:[" + since + " TO *]";
+  var orcidQ = "metadata.creators.person_or_org.identifiers.identifier:*";
+  var rorQ = "metadata.creators.affiliations.id:*";
+  var referencesQ = "metadata.references.identifier:*";
+  var citationsQ = "custom_fields.rs\\:citations.identifier:*";
+
+  // Fetch all metrics in parallel
+  var totalPosts = 0;
+
+  Promise.all([
+    fetchCommunityRecords("size=1&sort=oldest"),
+    fetchCommunityRecords("size=1"),
+    fetchCommunityRecords("q=" + encodeURIComponent(recentQ) + "&size=1"),
+    fetchCommunityRecords("q=funder:*&size=1"),
+  ]).then(function(results) {
+    var oldestHit = results[0].hits.hits && results[0].hits.hits.length ? results[0].hits.hits[0] : null;
+    var oldestPublicationDate = oldestHit && oldestHit.metadata ? oldestHit.metadata.publication_date : null;
+    totalPosts = totalFrom(results[1]);
+    var recentCount = totalFrom(results[2]);
+    var fundingCount = totalFrom(results[3]);
+
+    show("metrics-first", formatPublicationDate(oldestPublicationDate), communityRecordsPath + "?sort=oldest");
+    show("metrics-posts", fmt(totalPosts), communityRecordsPath + "?sort=newest");
+    show("metrics-recent", fmt(recentCount), communityRecordsPath + "?q=" + encodeURIComponent(recentQ) + "&sort=newest");
+    show("metrics-funding", fmt(fundingCount), communityRecordsPath + "?q=funder:*&sort=newest");
+
+    // Row 2: percentage metrics (depend on totalPosts)
+    return Promise.all([
+      fetchCommunityRecords("q=" + encodeURIComponent(orcidQ) + "&size=1"),
+      fetchCommunityRecords("q=" + encodeURIComponent(rorQ) + "&size=1"),
+      fetchCommunityRecords("q=" + encodeURIComponent(referencesQ) + "&size=1"),
+      fetchCommunityRecords("q=" + encodeURIComponent(citationsQ) + "&size=1"),
+    ]);
+  }).then(function(results) {
+    show("metrics-orcid", pct(totalFrom(results[0]), totalPosts), communityRecordsPath + "?q=" + encodeURIComponent(orcidQ) + "&sort=newest");
+    show("metrics-ror", pct(totalFrom(results[1]), totalPosts), communityRecordsPath + "?q=" + encodeURIComponent(rorQ) + "&sort=newest");
+    show("metrics-references", pct(totalFrom(results[2]), totalPosts), communityRecordsPath + "?q=" + encodeURIComponent(referencesQ) + "&sort=newest");
+    show("metrics-citations", pct(totalFrom(results[3]), totalPosts), communityRecordsPath + "?q=" + encodeURIComponent(citationsQ) + "&sort=newest");
+  }).catch(function(err) {
+    console.error("Failed to load community metrics:", err);
+  });
+})();
+</script>
