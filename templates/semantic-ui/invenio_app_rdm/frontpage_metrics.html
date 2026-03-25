@@ -5,149 +5,232 @@
   under the terms of the MIT License; see LICENSE file for more details.
 #}
 <style>
+  #frontpage-metrics {
+    padding: 2rem 1rem 1rem;
+  }
+  .metrics-grid.ui.cards {
+    margin: 0 -0.75rem !important;
+  }
   .metrics-card.card {
-    border-radius: 0.5rem !important;
-    box-shadow: none !important;
-    border: none !important;
+    background: #ffffff !important;
+    border-radius: 1.5rem !important;
+    border: 1px solid rgba(148, 163, 184, 0.14) !important;
+    box-shadow: 0 24px 48px rgba(96, 165, 250, 0.16) !important;
+    margin: 0 0.75rem 1.5rem !important;
+    overflow: hidden;
   }
   .metrics-card .content {
-    display: grid !important;
-    grid-template-columns: auto 1fr !important;
-    grid-template-rows: 1fr auto !important;
-    align-items: center !important;
-    padding: 1.2em 1.5em !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: space-between;
+    min-height: 13.5rem;
+    padding: 1.9rem 2rem !important;
+    position: relative;
   }
   .metrics-card .metrics-icon {
-    grid-row: 1 / 3;
-    padding-right: 1em;
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    margin-bottom: 2.25rem;
+    color: var(--metrics-accent);
   }
+  .metrics-card .metrics-icon img,
   .metrics-card .metrics-icon svg {
-    width: 48px;
-    height: 48px;
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 14px color-mix(in srgb, var(--metrics-accent) 25%, transparent));
+  }
+  .metrics-card .metrics-copy {
+    width: 100%;
   }
   .metrics-card .metrics-value {
-    font-size: 1.8em;
+    color: var(--metrics-accent);
+    font-size: clamp(2rem, 3vw, 3.35rem);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1;
+    letter-spacing: -0.04em;
   }
   .metrics-card .metrics-value a,
   .metrics-card .meta {
-    color: rgba(0,0,0,0.85) !important;
+    color: inherit !important;
+  }
+  .metrics-card .metrics-value a {
+    color: var(--metrics-accent) !important;
+    text-decoration: none;
   }
   .metrics-card .metrics-value a:hover {
-    color: #000 !important;
+    opacity: 0.82;
   }
   .metrics-card .meta {
-    font-size: 0.95em;
-    opacity: 0.9;
+    color: #7c8798 !important;
+    font-size: 1.08rem;
+    font-weight: 500;
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
+  }
+  .metrics-placeholder.ui.placeholder {
+    background: transparent !important;
+    margin-bottom: 0.25rem;
   }
   .metrics-card .ui.placeholder .line {
-    background: rgba(0,0,0,0.15);
+    background: rgba(148, 163, 184, 0.26);
+    border-radius: 999px;
+    height: 1.15rem;
+  }
+  .metrics-card--blogs {
+    --metrics-accent: #3c6df0;
+  }
+  .metrics-card--posts {
+    --metrics-accent: #ff5b1a;
+  }
+  .metrics-card--recent {
+    --metrics-accent: #f2a900;
+  }
+  .metrics-card--funding {
+    --metrics-accent: #d946c5;
+  }
+  .metrics-card--orcid {
+    --metrics-accent: #2aa52a;
+  }
+  .metrics-card--ror {
+    --metrics-accent: #14b8a6;
+  }
+  .metrics-card--references {
+    --metrics-accent: #4f86ff;
+  }
+  .metrics-card--citations {
+    --metrics-accent: #8b5cf6;
+  }
+  @media only screen and (max-width: 991px) {
+    #frontpage-metrics {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .metrics-grid.ui.cards {
+      margin: 0 !important;
+    }
+    .metrics-card.card {
+      margin: 0 0 1rem !important;
+    }
+    .metrics-card .content {
+      min-height: 11.5rem;
+      padding: 1.6rem !important;
+    }
+    .metrics-card .metrics-icon {
+      margin-bottom: 1.6rem;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1199px) {
+    .metrics-card .metrics-value {
+      font-size: 2.55rem;
+    }
   }
 </style>
 <div id="frontpage-metrics" class="ui container rel-mt-2 rel-mb-1">
 
   {# Row 1: Absolute counts #}
-  <div class="ui four stackable cards">
-    <div class="card metrics-card" style="background-color:#4269d0;">
+  <div class="ui four stackable cards metrics-grid">
+    <div class="card metrics-card metrics-card--blogs">
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/blog.svg" alt="Blog" width="48" height="48"></div>
-        <div>
+        <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-blogs-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metrics-blogs" style="display:none;"></div>
           <div class="meta">{{ _("Participating Blogs") }}</div>
+          <div class="metrics-value" id="metrics-blogs" style="display:none;"></div>
         </div>
       </div>
     </div>
-    <div class="card metrics-card" style="background-color:#ff725c;">
+    <div class="card metrics-card metrics-card--posts">
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/article.svg" alt="Article" width="48" height="48"></div>
-        <div>
+        <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-posts-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metrics-posts" style="display:none;"></div>
           <div class="meta">{{ _("All Posts") }}</div>
+          <div class="metrics-value" id="metrics-posts" style="display:none;"></div>
         </div>
       </div>
     </div>
-    <div class="card metrics-card" style="background-color:#efb118;">
+    <div class="card metrics-card metrics-card--recent">
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/date-range.svg" alt="Date range" width="48" height="48"></div>
-        <div>
+        <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-recent-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metrics-recent" style="display:none;"></div>
           <div class="meta">{{ _("Posts last 30 Days") }}</div>
+          <div class="metrics-value" id="metrics-recent" style="display:none;"></div>
         </div>
       </div>
     </div>
-    <div class="card metrics-card" style="background-color:#ff8ab7;">
+    <div class="card metrics-card metrics-card--funding">
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/sponsor-tiers.svg" alt="Funding" width="48" height="48"></div>
-        <div>
+        <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-funding-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metrics-funding" style="display:none;"></div>
           <div class="meta">{{ _("Posts with Funding") }}</div>
+          <div class="metrics-value" id="metrics-funding" style="display:none;"></div>
         </div>
       </div>
     </div>
   </div>
 
   {# Row 2: Percentage metrics #}
-  <div class="ui four stackable cards" style="margin-top:0.5rem;">
-    <div class="card metrics-card" style="background-color:#a6ce39;">
+  <div class="ui four stackable cards metrics-grid">
+    <div class="card metrics-card metrics-card--orcid">
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/orcid.svg" alt="ORCID" width="48" height="48"></div>
-        <div>
+        <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-orcid-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metrics-orcid" style="display:none;"></div>
           <div class="meta">{{ _("Posts with ORCID") }}</div>
+          <div class="metrics-value" id="metrics-orcid" style="display:none;"></div>
         </div>
       </div>
     </div>
-    <div class="card metrics-card" style="background-color:#53baa1;">
+    <div class="card metrics-card metrics-card--ror">
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/ror.svg" alt="ROR" width="48" height="48"></div>
-        <div>
+        <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-ror-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metrics-ror" style="display:none;"></div>
           <div class="meta">{{ _("Posts with ROR ID") }}</div>
+          <div class="metrics-value" id="metrics-ror" style="display:none;"></div>
         </div>
       </div>
     </div>
-    <div class="card metrics-card" style="background-color:#97bbf5;">
+    <div class="card metrics-card metrics-card--references">
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/list-ordered.svg" alt="References" width="48" height="48"></div>
-        <div>
+        <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-references-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metrics-references" style="display:none;"></div>
           <div class="meta">{{ _("Posts with References") }}</div>
+          <div class="metrics-value" id="metrics-references" style="display:none;"></div>
         </div>
       </div>
     </div>
-    <div class="card metrics-card" style="background-color:#c4b5fd;">
+    <div class="card metrics-card metrics-card--citations">
       <div class="content">
         <div class="metrics-icon"><img src="/static/images/citation.svg" alt="Citations" width="48" height="48"></div>
-        <div>
+        <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-citations-placeholder">
             <div class="line"></div>
           </div>
-          <div class="metrics-value" id="metrics-citations" style="display:none;"></div>
           <div class="meta">{{ _("Cited Posts") }}</div>
+          <div class="metrics-value" id="metrics-citations" style="display:none;"></div>
         </div>
       </div>
     </div>
