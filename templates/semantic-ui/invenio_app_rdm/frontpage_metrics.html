@@ -37,11 +37,19 @@
     margin-bottom: 2.25rem;
     color: var(--metrics-accent);
   }
-  .metrics-card .metrics-icon img,
-  .metrics-card .metrics-icon svg {
+  .metrics-card .metrics-icon::before {
+    content: "";
     width: 2.5rem;
     height: 2.5rem;
-    object-fit: contain;
+    background-color: var(--metrics-icon-color, var(--metrics-accent));
+    -webkit-mask-image: var(--metrics-icon);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
+    mask-image: var(--metrics-icon);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
     filter: drop-shadow(0 10px 14px color-mix(in srgb, var(--metrics-accent) 25%, transparent));
   }
   .metrics-card .metrics-copy {
@@ -67,10 +75,10 @@
   }
   .metrics-card .meta {
     color: #7c8798 !important;
-    font-size: 1.08rem;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.35;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
   }
   .metrics-placeholder.ui.placeholder {
     background: transparent !important;
@@ -83,27 +91,35 @@
   }
   .metrics-card--blogs {
     --metrics-accent: #3c6df0;
+    --metrics-icon: url("/static/images/blog.svg");
   }
   .metrics-card--posts {
     --metrics-accent: #ff5b1a;
+    --metrics-icon: url("/static/images/article.svg");
   }
   .metrics-card--recent {
     --metrics-accent: #f2a900;
+    --metrics-icon: url("/static/images/date-range.svg");
   }
   .metrics-card--funding {
     --metrics-accent: #d946c5;
+    --metrics-icon: url("/static/images/sponsor-tiers.svg");
   }
   .metrics-card--orcid {
-    --metrics-accent: #2aa52a;
+    --metrics-accent: #A6CE39;
+    --metrics-icon: url("/static/images/orcid.svg");
   }
   .metrics-card--ror {
-    --metrics-accent: #14b8a6;
+    --metrics-accent: #53BAA1;
+    --metrics-icon: url("/static/images/ror.svg");
   }
   .metrics-card--references {
     --metrics-accent: #4f86ff;
+    --metrics-icon: url("/static/images/list-ordered.svg");
   }
   .metrics-card--citations {
     --metrics-accent: #8b5cf6;
+    --metrics-icon: url("/static/images/citation.svg");
   }
   @media only screen and (max-width: 991px) {
     #frontpage-metrics {
@@ -121,7 +137,7 @@
       padding: 1.6rem !important;
     }
     .metrics-card .metrics-icon {
-      margin-bottom: 1.6rem;
+      margin-bottom: 1rem;
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -136,7 +152,7 @@
   <div class="ui four stackable cards metrics-grid">
     <div class="card metrics-card metrics-card--blogs">
       <div class="content">
-        <div class="metrics-icon"><img src="/static/images/blog.svg" alt="Blog" width="48" height="48"></div>
+        <div class="metrics-icon" role="img" aria-label="Blog"></div>
         <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-blogs-placeholder">
             <div class="line"></div>
@@ -148,7 +164,7 @@
     </div>
     <div class="card metrics-card metrics-card--posts">
       <div class="content">
-        <div class="metrics-icon"><img src="/static/images/article.svg" alt="Article" width="48" height="48"></div>
+        <div class="metrics-icon" role="img" aria-label="Article"></div>
         <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-posts-placeholder">
             <div class="line"></div>
@@ -160,7 +176,7 @@
     </div>
     <div class="card metrics-card metrics-card--recent">
       <div class="content">
-        <div class="metrics-icon"><img src="/static/images/date-range.svg" alt="Date range" width="48" height="48"></div>
+        <div class="metrics-icon" role="img" aria-label="Date range"></div>
         <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-recent-placeholder">
             <div class="line"></div>
@@ -172,7 +188,7 @@
     </div>
     <div class="card metrics-card metrics-card--funding">
       <div class="content">
-        <div class="metrics-icon"><img src="/static/images/sponsor-tiers.svg" alt="Funding" width="48" height="48"></div>
+        <div class="metrics-icon" role="img" aria-label="Funding"></div>
         <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-funding-placeholder">
             <div class="line"></div>
@@ -188,7 +204,7 @@
   <div class="ui four stackable cards metrics-grid">
     <div class="card metrics-card metrics-card--orcid">
       <div class="content">
-        <div class="metrics-icon"><img src="/static/images/orcid.svg" alt="ORCID" width="48" height="48"></div>
+        <div class="metrics-icon" role="img" aria-label="ORCID"></div>
         <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-orcid-placeholder">
             <div class="line"></div>
@@ -200,7 +216,7 @@
     </div>
     <div class="card metrics-card metrics-card--ror">
       <div class="content">
-        <div class="metrics-icon"><img src="/static/images/ror.svg" alt="ROR" width="48" height="48"></div>
+        <div class="metrics-icon" role="img" aria-label="ROR"></div>
         <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-ror-placeholder">
             <div class="line"></div>
@@ -212,7 +228,7 @@
     </div>
     <div class="card metrics-card metrics-card--references">
       <div class="content">
-        <div class="metrics-icon"><img src="/static/images/list-ordered.svg" alt="References" width="48" height="48"></div>
+        <div class="metrics-icon" role="img" aria-label="References"></div>
         <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-references-placeholder">
             <div class="line"></div>
@@ -224,7 +240,7 @@
     </div>
     <div class="card metrics-card metrics-card--citations">
       <div class="content">
-        <div class="metrics-icon"><img src="/static/images/citation.svg" alt="Citations" width="48" height="48"></div>
+        <div class="metrics-icon" role="img" aria-label="Citations"></div>
         <div class="metrics-copy">
           <div class="ui placeholder metrics-placeholder" id="metrics-citations-placeholder">
             <div class="line"></div>
