@@ -58,3 +58,7 @@
     }
   }
 }
+
+.ui.container.frontpage-header {
+  background-color: #cbd5e1 !important;
+}

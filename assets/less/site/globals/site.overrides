@@ -50,9 +50,3 @@ samp {
     padding-left: .1rem;
   }
 }
-
-.theme-default.outer-navbar {
-  background-color: @lightGrey;
-  background-image: none;
-}
-
