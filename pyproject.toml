@@ -14,11 +14,12 @@ dependencies = [
     "invenio-oauthclient",
     "setuptools>=70,<81",
     "gunicorn~=23.0.0",
+    "commonmeta-py==0.209",
     "structlog>=25.0",
     "prometheus-flask-exporter>=0.23.1",
-    "invenio-logging[sentry]",
+    "invenio-logging",                           # no [sentry] extra
+    "sentry-sdk[flask]>=2.0,<3",
     "structlog-sentry>=2.1.0",
-    "sentry-sdk>=1.45.1",
 ]
 
 [tool.uv.sources]
