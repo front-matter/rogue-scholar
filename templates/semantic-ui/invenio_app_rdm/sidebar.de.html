@@ -40,6 +40,23 @@
   <h2 class="ui medium top attached header mt-0">Newsletter</h2>
   <div class="ui segment bottom attached rdm-sidebar">
     <p>Erhalten Sie Informationen über Blogs, die Rogue Scholar beigetreten sind, wichtige technische und Community-Updates sowie weitere für Rogue Scholar-Nutzer relevante Neuigkeiten.</p>
-    <p><a href="https://listmonk.rogue-scholar.org/subscription/form" target="_blank">Melden Sie sich für den monatlichen Newsletter an</a></p>
+    <form method="post" action="http://listmonk.rogue-scholar.org/subscription/form" class="listmonk-form">
+      <div>
+        <h3>{{ _("Subscribe") }}</h3>
+        <input type="hidden" name="nonce" />
+
+        <p><input type="email" name="email" required placeholder="{{ _("E-mail") }}" /></p>
+        <p><input type="text" name="name" placeholder="{{ _("Name (optional)") }}" /></p>
+
+        <p>
+          <input id="2150b" type="checkbox" name="l" checked value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
+          <label for="2150b">{{ _("Monthly Newsletter") }}</label>
+          <br />
+          <span>{{ _("The monthly newsletter of the Rogue Scholar science blog archive.") }}</span>
+        </p>
+
+        <input type="submit" value="{{ _("Subscribe") }}" />
+      </div>
+    </form>
   </div>
 </section>

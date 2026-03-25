@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rogue Scholar\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-20 09:22+0000\n"
+"POT-Creation-Date: 2026-03-25 09:02+0100\n"
 "PO-Revision-Date: 2026-02-16 00:00+0000\n"
 "Last-Translator: \n"
 "Language: tr\n"
@@ -17,454 +17,358 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.18.0\n"
 
-#: invenio.cfg:208
+#: invenio.cfg:158
 msgid "Arabic"
 msgstr ""
 
-#: invenio.cfg:209
-msgid "Catalan"
+#: invenio.cfg:159
+msgid "Bulgarian"
 msgstr ""
 
-#: invenio.cfg:210
+#: invenio.cfg:160
 msgid "Czech"
 msgstr ""
 
-#: invenio.cfg:211
+#: invenio.cfg:161
+msgid "Danish"
+msgstr ""
+
+#: invenio.cfg:162
 msgid "German"
 msgstr ""
 
-#: invenio.cfg:212
+#: invenio.cfg:163
+msgid "Greek"
+msgstr ""
+
+#: invenio.cfg:164
 msgid "Spanish"
 msgstr ""
 
-#: invenio.cfg:213
+#: invenio.cfg:165
 msgid "Estonian"
 msgstr ""
 
-#: invenio.cfg:214
+#: invenio.cfg:166
 msgid "Finnish"
 msgstr ""
 
-#: invenio.cfg:215
+#: invenio.cfg:167
 msgid "French"
 msgstr ""
 
-#: invenio.cfg:216
+#: invenio.cfg:168
+msgid "Irish"
+msgstr ""
+
+#: invenio.cfg:169
+msgid "Croatian"
+msgstr ""
+
+#: invenio.cfg:170
 msgid "Hungarian"
 msgstr ""
 
-#: invenio.cfg:217
+#: invenio.cfg:171
 msgid "Italian"
 msgstr ""
 
-#: invenio.cfg:218
+#: invenio.cfg:172
+msgid "Korean"
+msgstr ""
+
+#: invenio.cfg:173
+msgid "Lithuanian"
+msgstr ""
+
+#: invenio.cfg:174
+msgid "Latvian"
+msgstr ""
+
+#: invenio.cfg:175
+msgid "Japanese"
+msgstr ""
+
+#: invenio.cfg:176
+#, fuzzy
+msgid "Maltese"
+msgstr "Bağış yap"
+
+#: invenio.cfg:177
 msgid "Dutch"
 msgstr ""
 
-#: invenio.cfg:219
+#: invenio.cfg:178
+msgid "Polish"
+msgstr ""
+
+#: invenio.cfg:179
 msgid "Portuguese"
 msgstr ""
 
-#: invenio.cfg:220
+#: invenio.cfg:180
 msgid "Romanian"
 msgstr ""
 
-#: invenio.cfg:221
+#: invenio.cfg:181
 msgid "Russian"
 msgstr ""
 
-#: invenio.cfg:222
+#: invenio.cfg:182
+msgid "Slovak"
+msgstr ""
+
+#: invenio.cfg:183
 msgid "Slovenian"
 msgstr ""
 
-#: invenio.cfg:223
+#: invenio.cfg:184
 msgid "Swedish"
 msgstr ""
 
-#: invenio.cfg:224
+#: invenio.cfg:185
 msgid "Turkish"
 msgstr ""
 
-#: invenio.cfg:225
+#: invenio.cfg:186
 msgid "Ukrainian"
 msgstr ""
 
-#: invenio.cfg:226
+#: invenio.cfg:187
 msgid "Chinese"
 msgstr ""
 
-#: invenio.cfg:390 invenio.cfg:404 invenio.cfg:418 invenio.cfg:488
-#: invenio.cfg:1098 invenio.cfg:1111
+#: invenio.cfg:293 invenio.cfg:307 invenio.cfg:321 invenio.cfg:841
+#: invenio.cfg:854
 msgid "DOI"
 msgstr ""
 
-#: invenio.cfg:409
+#: invenio.cfg:312
 msgid "OAI ID"
 msgstr ""
 
-#: invenio.cfg:427
+#: invenio.cfg:330
 msgid "OAI"
 msgstr ""
 
-#: invenio.cfg:439 invenio.cfg:450
+#: invenio.cfg:342 invenio.cfg:354
 msgid "Concept DOI"
 msgstr ""
 
-#: invenio.cfg:472
-msgid "ARK"
-msgstr ""
-
-#: invenio.cfg:474
-msgid "arXiv"
-msgstr ""
-
-#: invenio.cfg:479
-msgid "Bibcode"
-msgstr ""
-
-#: invenio.cfg:484
-msgid "Crossref Funder ID"
-msgstr ""
-
-#: invenio.cfg:490
-msgid "EAN13"
-msgstr ""
-
-#: invenio.cfg:495
-msgid "EISSN"
-msgstr ""
-
-#: invenio.cfg:500
-msgid "GRID"
-msgstr ""
-
-#: invenio.cfg:505
-msgid "Handle"
-msgstr ""
-
-#: invenio.cfg:510
-msgid "IGSN"
-msgstr ""
-
-#: invenio.cfg:515
-msgid "ISBN"
-msgstr ""
-
-#: invenio.cfg:520
-msgid "ISNI"
-msgstr ""
-
-#: invenio.cfg:525
-msgid "ISSN"
-msgstr ""
-
-#: invenio.cfg:530
-msgid "ISTC"
-msgstr ""
-
-#: invenio.cfg:535
-msgid "LISSN"
-msgstr ""
-
-#: invenio.cfg:540
-msgid "LSID"
-msgstr ""
-
-#: invenio.cfg:545
-msgid "PMID"
-msgstr ""
-
-#: invenio.cfg:550
-msgid "PURL"
-msgstr ""
-
-#: invenio.cfg:554
-msgid "UPC"
-msgstr ""
-
-#: invenio.cfg:555 invenio.cfg:1099
-msgid "URL"
-msgstr ""
-
-#: invenio.cfg:556
-msgid "URN"
-msgstr ""
-
-#: invenio.cfg:558
-msgid "W3ID"
-msgstr ""
-
-#: invenio.cfg:564
+#: invenio.cfg:372
 msgid "UUID"
 msgstr ""
 
-#: invenio.cfg:569
+#: invenio.cfg:377
 msgid "GUID"
 msgstr ""
 
-#: invenio.cfg:574 invenio.cfg:1133
-msgid "Other"
-msgstr ""
-
-#: invenio.cfg:651
+#: invenio.cfg:451
 #, fuzzy
 msgid "Content"
 msgstr "Bağış yap"
 
-#: invenio.cfg:666
+#: invenio.cfg:466
 msgid "Publishing information"
 msgstr ""
 
-#: invenio.cfg:674
+#: invenio.cfg:474
 msgid "Blog"
 msgstr ""
 
-#: invenio.cfg:681
+#: invenio.cfg:481
 #: templates/semantic-ui/invenio_app_rdm/records/details/side_bar/details.html:27
 msgid "Platform"
 msgstr ""
 
-#: invenio.cfg:684
+#: invenio.cfg:484
 msgid "The feed generator software for this record."
 msgstr ""
 
-#: invenio.cfg:695
+#: invenio.cfg:495
 msgid "The feature image URL."
 msgstr ""
 
-#: invenio.cfg:705
+#: invenio.cfg:505
 msgid "Indicates if the record is stale."
 msgstr ""
 
-#: invenio.cfg:933
+#: invenio.cfg:733
 msgid "Best match"
 msgstr ""
 
-#: invenio.cfg:937
+#: invenio.cfg:737
 #, fuzzy
 msgid "Newest"
 msgstr "Bülten"
 
-#: invenio.cfg:941
+#: invenio.cfg:741
 msgid "Oldest"
 msgstr ""
 
-#: invenio.cfg:945
+#: invenio.cfg:745
 msgid "Version"
 msgstr ""
 
-#: invenio.cfg:949
+#: invenio.cfg:749
 msgid "Recently updated"
 msgstr ""
 
-#: invenio.cfg:953
+#: invenio.cfg:753
 msgid "Least recently updated"
 msgstr ""
 
-#: invenio.cfg:957
+#: invenio.cfg:757
 msgid "Recently added"
 msgstr ""
 
-#: invenio.cfg:961
+#: invenio.cfg:761
 msgid "Least recently added"
 msgstr ""
 
-#: invenio.cfg:965
+#: invenio.cfg:765
 msgid "Newest activity"
 msgstr ""
 
-#: invenio.cfg:969
+#: invenio.cfg:769
 msgid "Oldest activity"
 msgstr ""
 
-#: invenio.cfg:973
+#: invenio.cfg:773
 msgid "Most viewed"
 msgstr ""
 
-#: invenio.cfg:1051
-msgid "Publication year"
-msgstr ""
-
-#: invenio.cfg:1066
+#: invenio.cfg:809
 msgid "Author affiliations"
 msgstr ""
 
-#: invenio.cfg:1076
+#: invenio.cfg:819
 msgid "Funders"
 msgstr ""
 
-#: invenio.cfg:1086
+#: invenio.cfg:829
 msgid "Author identifiers"
 msgstr ""
 
-#: invenio.cfg:1087
+#: invenio.cfg:830
 msgid "ORCID"
 msgstr ""
 
-#: invenio.cfg:1096
+#: invenio.cfg:839
 #: templates/semantic-ui/invenio_app_rdm/records/details/details.html:315
 #, fuzzy
 msgid "References"
 msgstr "Referanslı yazılar"
 
-#: invenio.cfg:1100
+#: invenio.cfg:842
+msgid "URL"
+msgstr ""
+
+#: invenio.cfg:843
 msgid "No identifier"
 msgstr ""
 
-#: invenio.cfg:1110
+#: invenio.cfg:853
 #: templates/semantic-ui/invenio_app_rdm/records/details/details.html:327
 #, fuzzy
 msgid "Citations"
 msgstr "Dokümantasyon"
 
-#: invenio.cfg:1120
+#: invenio.cfg:863
 msgid "Platforms"
 msgstr ""
 
-#: invenio.cfg:1122
+#: invenio.cfg:865
 msgid "WordPress"
 msgstr ""
 
-#: invenio.cfg:1123
+#: invenio.cfg:866
 msgid "WordPress.com"
 msgstr ""
 
-#: invenio.cfg:1124
+#: invenio.cfg:867
 msgid "Hugo"
 msgstr ""
 
-#: invenio.cfg:1125
+#: invenio.cfg:868
 msgid "Blogger"
 msgstr ""
 
-#: invenio.cfg:1126
+#: invenio.cfg:869
 msgid "Jekyll"
 msgstr ""
 
-#: invenio.cfg:1127
+#: invenio.cfg:870
 msgid "Ghost"
 msgstr ""
 
-#: invenio.cfg:1128
+#: invenio.cfg:871
 msgid "Quarto"
 msgstr ""
 
-#: invenio.cfg:1129
+#: invenio.cfg:872
 msgid "Substack"
 msgstr ""
 
-#: invenio.cfg:1130
+#: invenio.cfg:873
 msgid "Medium"
 msgstr ""
 
-#: invenio.cfg:1131
+#: invenio.cfg:874
 msgid "Squarespace"
 msgstr ""
 
-#: invenio.cfg:1132
+#: invenio.cfg:875
 msgid "Drupal"
 msgstr ""
 
-#: invenio.cfg:1149
+#: invenio.cfg:876
+msgid "Other"
+msgstr ""
+
+#: invenio.cfg:892
 msgid "Licenses"
 msgstr ""
 
-#: invenio.cfg:1183
+#: invenio.cfg:917
 #: templates/semantic-ui/invenio_app_rdm/records/details/details.html:155
 #: templates/semantic-ui/invenio_app_rdm/records/details/details.html:171
 msgid "Related works"
 msgstr ""
 
-#: invenio.cfg:1193 invenio.cfg:1194
-msgid "Stale"
-msgstr ""
-
-#: invenio.cfg:1476
-msgid "JSON"
-msgstr ""
-
-#: invenio.cfg:1483
-msgid "JSON-LD"
-msgstr ""
-
-#: invenio.cfg:1491
-msgid "CSL"
-msgstr ""
-
-#: invenio.cfg:1500
-msgid "DataCite JSON"
-msgstr ""
-
-#: invenio.cfg:1509
-msgid "DataCite XML"
-msgstr ""
-
-#: invenio.cfg:1518
+#: invenio.cfg:1127
 msgid "Crossref XML"
 msgstr ""
 
-#: invenio.cfg:1527
-msgid "Dublin Core XML"
-msgstr ""
-
-#: invenio.cfg:1536
-msgid "MARCXML"
-msgstr ""
-
-#: invenio.cfg:1545
-msgid "BibTeX"
-msgstr ""
-
-#: invenio.cfg:1554
-msgid "GeoJSON"
-msgstr ""
-
-#: invenio.cfg:1563
-#, fuzzy
-msgid "DCAT"
-msgstr "Bağış yap"
-
-#: invenio.cfg:1570
-msgid "Codemeta"
-msgstr ""
-
-#: invenio.cfg:1577
-msgid "Citation File Format"
-msgstr ""
-
-#: invenio.cfg:1584
-msgid "Data Package JSON"
-msgstr ""
-
-#: invenio.cfg:1603
+#: invenio.cfg:1150
 msgid "ACS"
 msgstr ""
 
-#: invenio.cfg:1604
+#: invenio.cfg:1151
 msgid "APA"
 msgstr ""
 
-#: invenio.cfg:1605
+#: invenio.cfg:1152
 msgid "Chicago"
 msgstr ""
 
-#: invenio.cfg:1606
+#: invenio.cfg:1153
 msgid "Harvard"
 msgstr ""
 
-#: invenio.cfg:1607
+#: invenio.cfg:1154
 msgid "IEEE"
 msgstr ""
 
-#: invenio.cfg:1608
+#: invenio.cfg:1155
 msgid "MLA"
 msgstr ""
 
-#: invenio.cfg:1609
+#: invenio.cfg:1156
 msgid "BJPS"
 msgstr ""
 
-#: invenio.cfg:1610
+#: invenio.cfg:1157
 msgid "Vancouver"
 msgstr ""
 
@@ -938,17 +842,31 @@ msgid "About"
 msgstr "Hakkında"
 
 #: templates/semantic-ui/invenio_app_rdm/footer.html:19
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.cs.html:7
 #: templates/semantic-ui/invenio_app_rdm/overview/overview.de.html:7
 #: templates/semantic-ui/invenio_app_rdm/overview/overview.en.html:7
 #: templates/semantic-ui/invenio_app_rdm/overview/overview.es.html:7
 #: templates/semantic-ui/invenio_app_rdm/overview/overview.fr.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.it.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.nl.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.pt.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.sl.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.sv.html:7
+#: templates/semantic-ui/invenio_app_rdm/overview/overview.tr.html:7
 msgid "Overview"
 msgstr "Genel Bakış"
 
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.cs.html:7
 #: templates/semantic-ui/invenio_app_rdm/faq/faq.de.html:7
 #: templates/semantic-ui/invenio_app_rdm/faq/faq.en.html:7
 #: templates/semantic-ui/invenio_app_rdm/faq/faq.es.html:7
 #: templates/semantic-ui/invenio_app_rdm/faq/faq.fr.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.it.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.nl.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.pt.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.sl.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.sv.html:7
+#: templates/semantic-ui/invenio_app_rdm/faq/faq.tr.html:7
 #: templates/semantic-ui/invenio_app_rdm/footer.html:20
 msgid "FAQ"
 msgstr "SSS"
@@ -965,6 +883,17 @@ msgstr "Üyelik ilgi formu"
 msgid "Community"
 msgstr "Topluluk"
 
+#: templates/semantic-ui/invenio_app_rdm/board/board.cs.html:7
+#: templates/semantic-ui/invenio_app_rdm/board/board.de.html:7
+#: templates/semantic-ui/invenio_app_rdm/board/board.en.html:7
+#: templates/semantic-ui/invenio_app_rdm/board/board.es.html:7
+#: templates/semantic-ui/invenio_app_rdm/board/board.fr.html:7
+#: templates/semantic-ui/invenio_app_rdm/board/board.it.html:7
+#: templates/semantic-ui/invenio_app_rdm/board/board.nl.html:7
+#: templates/semantic-ui/invenio_app_rdm/board/board.pt.html:7
+#: templates/semantic-ui/invenio_app_rdm/board/board.sl.html:7
+#: templates/semantic-ui/invenio_app_rdm/board/board.sv.html:7
+#: templates/semantic-ui/invenio_app_rdm/board/board.tr.html:7
 #: templates/semantic-ui/invenio_app_rdm/footer.html:26
 msgid "Advisory Board"
 msgstr "Danışma Kurulu"
@@ -997,35 +926,35 @@ msgstr "Web Analizi"
 msgid "Status"
 msgstr "Durum"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:67
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:172
 msgid "Participating Blogs"
 msgstr "Katılan bloglar"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:79
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:184
 msgid "All Posts"
 msgstr "Tüm yazılar"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:91
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:196
 msgid "Posts last 30 Days"
 msgstr "Son 30 günün yazıları"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:103
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:208
 msgid "Posts with Funding"
 msgstr "Finansmanlı yazılar"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:119
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:224
 msgid "Posts with ORCID"
 msgstr "ORCID'li yazılar"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:131
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:236
 msgid "Posts with ROR ID"
 msgstr "ROR ID'li yazılar"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:143
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:248
 msgid "Posts with References"
 msgstr "Referanslı yazılar"
 
-#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:155
+#: templates/semantic-ui/invenio_app_rdm/frontpage_metrics.html:260
 msgid "Cited Posts"
 msgstr "Alıntılanan yazılar"
 
@@ -1064,6 +993,88 @@ msgstr ""
 
 #: templates/semantic-ui/invenio_app_rdm/page_admin.html:40
 msgid "Invenio"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/sidebar.cs.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.cs.html:58
+#: templates/semantic-ui/invenio_app_rdm/sidebar.de.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.de.html:58
+#: templates/semantic-ui/invenio_app_rdm/sidebar.en.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.en.html:58
+#: templates/semantic-ui/invenio_app_rdm/sidebar.es.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.es.html:58
+#: templates/semantic-ui/invenio_app_rdm/sidebar.fr.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.fr.html:58
+#: templates/semantic-ui/invenio_app_rdm/sidebar.it.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.it.html:58
+#: templates/semantic-ui/invenio_app_rdm/sidebar.nl.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.nl.html:58
+#: templates/semantic-ui/invenio_app_rdm/sidebar.pt.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.pt.html:58
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sl.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sl.html:58
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sv.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sv.html:58
+#: templates/semantic-ui/invenio_app_rdm/sidebar.tr.html:45
+#: templates/semantic-ui/invenio_app_rdm/sidebar.tr.html:58
+msgid "Subscribe"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/sidebar.cs.html:48
+#: templates/semantic-ui/invenio_app_rdm/sidebar.de.html:48
+#: templates/semantic-ui/invenio_app_rdm/sidebar.en.html:48
+#: templates/semantic-ui/invenio_app_rdm/sidebar.es.html:48
+#: templates/semantic-ui/invenio_app_rdm/sidebar.fr.html:48
+#: templates/semantic-ui/invenio_app_rdm/sidebar.it.html:48
+#: templates/semantic-ui/invenio_app_rdm/sidebar.nl.html:48
+#: templates/semantic-ui/invenio_app_rdm/sidebar.pt.html:48
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sl.html:48
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sv.html:48
+#: templates/semantic-ui/invenio_app_rdm/sidebar.tr.html:48
+msgid "E-mail"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/sidebar.cs.html:49
+#: templates/semantic-ui/invenio_app_rdm/sidebar.de.html:49
+#: templates/semantic-ui/invenio_app_rdm/sidebar.en.html:49
+#: templates/semantic-ui/invenio_app_rdm/sidebar.es.html:49
+#: templates/semantic-ui/invenio_app_rdm/sidebar.fr.html:49
+#: templates/semantic-ui/invenio_app_rdm/sidebar.it.html:49
+#: templates/semantic-ui/invenio_app_rdm/sidebar.nl.html:49
+#: templates/semantic-ui/invenio_app_rdm/sidebar.pt.html:49
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sl.html:49
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sv.html:49
+#: templates/semantic-ui/invenio_app_rdm/sidebar.tr.html:49
+msgid "Name (optional)"
+msgstr ""
+
+#: templates/semantic-ui/invenio_app_rdm/sidebar.cs.html:53
+#: templates/semantic-ui/invenio_app_rdm/sidebar.de.html:53
+#: templates/semantic-ui/invenio_app_rdm/sidebar.en.html:53
+#: templates/semantic-ui/invenio_app_rdm/sidebar.es.html:53
+#: templates/semantic-ui/invenio_app_rdm/sidebar.fr.html:53
+#: templates/semantic-ui/invenio_app_rdm/sidebar.it.html:53
+#: templates/semantic-ui/invenio_app_rdm/sidebar.nl.html:53
+#: templates/semantic-ui/invenio_app_rdm/sidebar.pt.html:53
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sl.html:53
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sv.html:53
+#: templates/semantic-ui/invenio_app_rdm/sidebar.tr.html:53
+#, fuzzy
+msgid "Monthly Newsletter"
+msgstr "Bülten"
+
+#: templates/semantic-ui/invenio_app_rdm/sidebar.cs.html:55
+#: templates/semantic-ui/invenio_app_rdm/sidebar.de.html:55
+#: templates/semantic-ui/invenio_app_rdm/sidebar.en.html:55
+#: templates/semantic-ui/invenio_app_rdm/sidebar.es.html:55
+#: templates/semantic-ui/invenio_app_rdm/sidebar.fr.html:55
+#: templates/semantic-ui/invenio_app_rdm/sidebar.it.html:55
+#: templates/semantic-ui/invenio_app_rdm/sidebar.nl.html:55
+#: templates/semantic-ui/invenio_app_rdm/sidebar.pt.html:55
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sl.html:55
+#: templates/semantic-ui/invenio_app_rdm/sidebar.sv.html:55
+#: templates/semantic-ui/invenio_app_rdm/sidebar.tr.html:55
+msgid "The monthly newsletter of the Rogue Scholar science blog archive."
 msgstr ""
 
 #: templates/semantic-ui/invenio_app_rdm/site_footer.html:16
@@ -1406,4 +1417,112 @@ msgstr "Topluluk"
 
 #~ msgid "No records found."
 #~ msgstr "Türkçe yazı bulunamadı."
+
+#~ msgid "Catalan"
+#~ msgstr ""
+
+#~ msgid "ARK"
+#~ msgstr ""
+
+#~ msgid "arXiv"
+#~ msgstr ""
+
+#~ msgid "Bibcode"
+#~ msgstr ""
+
+#~ msgid "Crossref Funder ID"
+#~ msgstr ""
+
+#~ msgid "EAN13"
+#~ msgstr ""
+
+#~ msgid "EISSN"
+#~ msgstr ""
+
+#~ msgid "GRID"
+#~ msgstr ""
+
+#~ msgid "Handle"
+#~ msgstr ""
+
+#~ msgid "IGSN"
+#~ msgstr ""
+
+#~ msgid "ISBN"
+#~ msgstr ""
+
+#~ msgid "ISNI"
+#~ msgstr ""
+
+#~ msgid "ISSN"
+#~ msgstr ""
+
+#~ msgid "ISTC"
+#~ msgstr ""
+
+#~ msgid "LISSN"
+#~ msgstr ""
+
+#~ msgid "LSID"
+#~ msgstr ""
+
+#~ msgid "PMID"
+#~ msgstr ""
+
+#~ msgid "PURL"
+#~ msgstr ""
+
+#~ msgid "UPC"
+#~ msgstr ""
+
+#~ msgid "URN"
+#~ msgstr ""
+
+#~ msgid "W3ID"
+#~ msgstr ""
+
+#~ msgid "Publication year"
+#~ msgstr ""
+
+#~ msgid "Stale"
+#~ msgstr ""
+
+#~ msgid "JSON"
+#~ msgstr ""
+
+#~ msgid "JSON-LD"
+#~ msgstr ""
+
+#~ msgid "CSL"
+#~ msgstr ""
+
+#~ msgid "DataCite JSON"
+#~ msgstr ""
+
+#~ msgid "DataCite XML"
+#~ msgstr ""
+
+#~ msgid "Dublin Core XML"
+#~ msgstr ""
+
+#~ msgid "MARCXML"
+#~ msgstr ""
+
+#~ msgid "BibTeX"
+#~ msgstr ""
+
+#~ msgid "GeoJSON"
+#~ msgstr ""
+
+#~ msgid "DCAT"
+#~ msgstr "Bağış yap"
+
+#~ msgid "Codemeta"
+#~ msgstr ""
+
+#~ msgid "Citation File Format"
+#~ msgstr ""
+
+#~ msgid "Data Package JSON"
+#~ msgstr ""
 
