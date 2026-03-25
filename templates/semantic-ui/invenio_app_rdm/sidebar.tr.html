@@ -40,23 +40,24 @@
   <h2 class="ui medium top attached header mt-0">Bülten</h2>
   <div class="ui segment bottom attached rdm-sidebar">
     <p>Rogue Scholar'a katılan bloglar, önemli teknik ve topluluk güncellemeleri ve Rogue Scholar kullanıcıları için ilgili diğer haberler hakkında bilgi alın.</p>
-    <form method="post" action="http://listmonk.rogue-scholar.org/subscription/form" class="listmonk-form">
-      <div>
-        <h3>{{ _("Subscribe") }}</h3>
-        <input type="hidden" name="nonce" />
-
-        <p><input type="email" name="email" required placeholder="{{ _("E-mail") }}" /></p>
-        <p><input type="text" name="name" placeholder="{{ _("Name (optional)") }}" /></p>
-
-        <p>
-          <input id="2150b" type="checkbox" name="l" checked value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
-          <label for="2150b">{{ _("Monthly Newsletter") }}</label>
-          <br />
-          <span>{{ _("The monthly newsletter of the Rogue Scholar science blog archive.") }}</span>
-        </p>
-
-        <input type="submit" value="{{ _("Subscribe") }}" />
+    <form method="post" action="https://listmonk.rogue-scholar.org/subscription/form">
+      <input type="hidden" name="nonce">
+      <label class="ui tiny header" for="email">
+        <small>{{ _("E-mail") }} *</small>
+      </label>
+      <div class="ui fluid input mb-10">
+        <input id="email" type="email" name="email" required="" placeholder="{{ _("E-mail") }}">
       </div>
+
+      <label class="ui tiny header" for="name">
+        <small>{{ _("Name") }}</small>
+      </label>
+      <div class="ui fluid input mb-10">
+        <input id="name" type="text" name="name" placeholder="{{ _("Name (optional)") }}">
+      </div>
+
+      <input id="e7755" type="hidden" name="l" value="e775524d-5cce-4885-b559-ef0f6214f24b">
+      <input type="submit" value="{{ _("Subscribe") }}" class="ui primary button fluid">
     </form>
   </div>
 </section>
