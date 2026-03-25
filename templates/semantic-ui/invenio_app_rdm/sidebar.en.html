@@ -40,7 +40,7 @@
   <h2 class="ui medium top attached header mt-0">Newsletter</h2>
   <div class="ui segment bottom attached rdm-sidebar">
     <p>Receive information on blogs that have joined Rogue Scholar, important technical and community updates, and other news relevant to Rogue Scholar users.</p>
-    <form method="post" action="http://listmonk.rogue-scholar.org/subscription/form" class="listmonk-form">
+    <form method="post" action="http://listmonk.rogue-scholar.org/subscription/form" >
       <div>
         <h3>{{ _("Subscribe") }}</h3>
         <input type="hidden" name="nonce" />
@@ -55,7 +55,7 @@
           <span>{{ _("The monthly newsletter of the Rogue Scholar science blog archive.") }}</span>
         </p>
 
-        <input type="submit" value="{{ _("Subscribe") }}" />
+        <input type="submit" value="{{ _("Subscribe") }}" class="ui primary button fluid" />
       </div>
     </form>
   </div>
