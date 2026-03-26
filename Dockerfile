@@ -1,46 +1,39 @@
-FROM python:3.14-bookworm AS builder
+FROM python:3.14-trixie AS builder
 LABEL maintainer="Front Matter <info@front-matter.de>"
 LABEL org.opencontainers.image.source="https://github.com/front-matter/rogue-scholar"
 LABEL org.opencontainers.image.licenses="MIT"
 LABEL org.opencontainers.image.title="Rogue Scholar"
 LABEL org.opencontainers.image.description="Rogue Scholar is a science blog archive based on the InvenioRDM repository software."
 
-# Dockerfile that builds the Rogue Scholar Docker image.
-
 ENV LANG=en_US.UTF-8 \
-    LANGUAGE=en_US:en
+    LANGUAGE=en_US:en \
+    VIRTUAL_ENV=/opt/invenio/.venv \
+    UV_PROJECT_ENVIRONMENT=/opt/invenio/.venv \
+    PATH="/opt/invenio/.venv/bin:$PATH" \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    UV_COMPILE_BYTECODE=1 \
+    UV_LINK_MODE=copy \
+    UV_PYTHON_DOWNLOADS=0 \
+    INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
 
 # Install OS package dependencies and Node.js in a single layer
 RUN --mount=type=cache,sharing=locked,target=/var/cache/apt \
     apt-get update --fix-missing && \
-    apt-get install -y build-essential libssl-dev libffi-dev \
-    python3-dev cargo pkg-config curl \
-    libcairo2-dev libpango1.0-dev libgdk-pixbuf2.0-dev \
-    libxml2-dev libxslt1-dev libpq-dev libjpeg-dev \
-    libwebp-dev libtiff-dev libcurl4-openssl-dev \
-    --no-install-recommends && \
     curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
-    apt-get install -y nodejs --no-install-recommends && \
+    apt-get install -y build-essential libssl-dev libffi-dev \
+    python3-dev cargo pkg-config \
+    libcairo2-dev libpango1.0-dev libgdk-pixbuf-xlib-2.0-dev \
+    libxml2-dev libxslt1-dev libpq-dev libjpeg-dev \
+    libwebp-dev libtiff-dev libcurl4-openssl-dev nodejs \
+    --no-install-recommends && \
     npm install -g pnpm@latest-10
 
 # Install uv and activate virtualenv
 COPY --from=ghcr.io/astral-sh/uv:0.10.10 /uv /uvx /bin/
 RUN uv venv /opt/invenio/.venv
 
-# Use the virtual environment automatically
-ENV VIRTUAL_ENV=/opt/invenio/.venv \
-    UV_PROJECT_ENVIRONMENT=/opt/invenio/.venv \
-    PATH="/opt/invenio/.venv/bin:$PATH" \
-    WORKING_DIR=/opt/invenio \
-    PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 \
-    UV_COMPILE_BYTECODE=1 \
-    UV_LINK_MODE=copy \
-    UV_PYTHON_DOWNLOADS=0 \
-    INVENIO_INSTANCE_PATH=/opt/invenio/var/instance \
-    PROMETHEUS_MULTIPROC_DIR=/tmp/prometheus_multiproc
-
-WORKDIR ${WORKING_DIR}
+WORKDIR /opt/invenio
 
 # Copy dependency files first for better layer caching
 COPY pyproject.toml uv.lock ./
@@ -55,20 +48,10 @@ COPY . .
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev --no-editable
 
-# Prepare Prometheus multiprocess directory for app init during build steps.
-RUN mkdir -p ${PROMETHEUS_MULTIPROC_DIR}
-
-# Copy application files to instance path
-COPY ./gunicorn.conf.py ${INVENIO_INSTANCE_PATH}/
-COPY site ${INVENIO_INSTANCE_PATH}/site
-COPY static ${INVENIO_INSTANCE_PATH}/static
+# Copy application files we need for Javascript compilation to instance path
 COPY assets ${INVENIO_INSTANCE_PATH}/assets
-COPY templates ${INVENIO_INSTANCE_PATH}/templates
-COPY app_data ${INVENIO_INSTANCE_PATH}/app_data
-COPY ./invenio.cfg ${INVENIO_INSTANCE_PATH}/app_data/invenio.cfg
-RUN ln -sf app_data/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
+COPY static ${INVENIO_INSTANCE_PATH}/static
 COPY translations ${INVENIO_INSTANCE_PATH}/translations
-COPY update_subjects.py ${INVENIO_INSTANCE_PATH}/
 
 # Compile translation catalogs
 RUN pybabel compile -d ${INVENIO_INSTANCE_PATH}/translations
@@ -79,80 +62,49 @@ RUN --mount=type=cache,target=/var/cache/assets \
     invenio collect --verbose && \
     invenio webpack buildall
 
-# Gather runtime libraries by finding .so files directly (most reliable).
-# Uses cp -L to dereference symlinks so only real files are stored.
-# ldconfig in the runtime stage will re-create symlinks and cache.
-RUN MULTIARCH="$(dpkg-architecture -qDEB_HOST_MULTIARCH)" && \
-    LIB_DIR="/usr/lib/${MULTIARCH}" && \
-    mkdir -p /invenio-libs && \
-    echo "${MULTIARCH}" > /invenio-libs/.arch && \
-    for pattern in \
-    'libcairo.so*' \
-    'libpango-1.0.so*' 'libpangocairo-1.0.so*' 'libpangoft2-1.0.so*' \
-    'libgdk_pixbuf-2.0.so*' \
-    'libgobject-2.0.so*' 'libglib-2.0.so*' 'libgio-2.0.so*' 'libgmodule-2.0.so*' \
-    'libxml2.so*' 'libxslt.so*' 'libexslt.so*' \
-    'libpq.so*' 'libjpeg.so*' 'libwebp.so*' 'libtiff.so*' 'libcurl.so*' \
-    'libfribidi.so*' 'libharfbuzz.so*' 'libfontconfig.so*' 'libfreetype.so*' \
-    'libpixman-1.so*' 'libpng16.so*' 'libexpat.so*' \
-    'libbrotlicommon.so*' 'libbrotlidec.so*' \
-    'libdatrie.so*' 'libthai.so*' 'libpcre2-8.so*' 'libffi.so*' \
-    'libbsd.so*' 'libmd.so*' 'libdeflate.so*' 'libjbig.so*' \
-    'libzstd.so*' 'liblerc.so*' 'libnghttp2.so*' 'libssh2.so*' \
-    'libssl.so*' 'libcrypto.so*' \
-    'libicudata.so*' 'libicui18n.so*' 'libicuuc.so*' \
-    'libX11.so*' 'libXext.so*' 'libXrender.so*' \
-    'libxcb.so*' 'libxcb-render.so*' 'libxcb-shm.so*' \
-    'libXau.so*' 'libXdmcp.so*' \
-    ; do \
-    find "${LIB_DIR}" -maxdepth 1 -name "${pattern}" -exec cp -Ln {} /invenio-libs/ \; 2>/dev/null || true; \
-    done && \
-    ls /invenio-libs/libcairo.so* || { echo "FATAL: libcairo not found in ${LIB_DIR}"; find /usr -name 'libcairo*' 2>/dev/null; exit 1; } && \
-    echo "Collected $(ls /invenio-libs/ | wc -l) library files"
 
-FROM python:3.14-slim-bookworm AS runtime
+FROM python:3.14-slim-trixie AS runtime
 
 ENV LANG=en_US.UTF-8 \
     LANGUAGE=en_US:en \
     VIRTUAL_ENV=/opt/invenio/.venv \
     PATH="/opt/invenio/.venv/bin:$PATH" \
-    WORKING_DIR=/opt/invenio \
+    PYTHONUNBUFFERED=1 \
     INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
 
 # create non-root invenio user
-ENV INVENIO_USER_ID=1000
-RUN adduser invenio --uid ${INVENIO_USER_ID} --gid 0 --no-create-home --disabled-password
+RUN adduser invenio --uid 1000 --gid 0 --no-create-home --disabled-password
 
-# Copy prebuilt runtime libraries into arch-specific directory
-# so ctypes.util.find_library() can locate them via ldconfig cache
-COPY --from=builder /invenio-libs/ /tmp/invenio-libs/
-RUN MULTIARCH="$(cat /tmp/invenio-libs/.arch)" && \
-    TARGET="/usr/lib/${MULTIARCH}" && \
-    mkdir -p "${TARGET}" && \
-    find /tmp/invenio-libs -maxdepth 1 -name '*.so*' -exec cp {} "${TARGET}/" \; && \
-    rm -rf /tmp/invenio-libs && \
-    ldconfig && \
-    ldconfig -p | grep -i cairo && \
-    python3 -c "import ctypes.util; r=ctypes.util.find_library('cairo'); print(f'cairo: {r}'); assert r, 'libcairo not found'"
+# Install OS package dependencies
+RUN --mount=type=cache,sharing=locked,target=/var/cache/apt \
+    apt-get update --fix-missing && \
+    apt-get install -y apt-utils gpg libcairo2 debian-keyring \
+    debian-archive-keyring apt-transport-https curl --no-install-recommends && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
+# Copy virtual environment and compiled files from builder stage
 COPY --from=builder --chown=1000:0 ${VIRTUAL_ENV} ${VIRTUAL_ENV}
-COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/site ${INVENIO_INSTANCE_PATH}/site
-COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/static ${INVENIO_INSTANCE_PATH}/static
 COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/assets ${INVENIO_INSTANCE_PATH}/assets
-COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/templates ${INVENIO_INSTANCE_PATH}/templates
-COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/app_data ${INVENIO_INSTANCE_PATH}/app_data
+COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/static ${INVENIO_INSTANCE_PATH}/static
 COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/translations ${INVENIO_INSTANCE_PATH}/translations
-COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
-COPY --from=builder --chown=1000:0 ${INVENIO_INSTANCE_PATH}/gunicorn.conf.py ${INVENIO_INSTANCE_PATH}/gunicorn.conf.py
-COPY --from=builder --chown=1000:0 --chmod=755 ${INVENIO_INSTANCE_PATH}/update_subjects.py ${INVENIO_INSTANCE_PATH}/update_subjects.py
-COPY --chown=1000:0 ./Caddyfile /etc/caddy/Caddyfile
-COPY --chown=1000:0 --chmod=755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
 
-# Create shared directory for prometheus_client multiprocess mode
+# Copy files needed at runtime
+COPY --chown=1000:0 app_data ${INVENIO_INSTANCE_PATH}/app_data
+COPY --chown=1000:0 site ${INVENIO_INSTANCE_PATH}/site
+COPY --chown=1000:0 templates ${INVENIO_INSTANCE_PATH}/templates
+COPY --chown=1000:0 ./invenio.cfg ${INVENIO_INSTANCE_PATH}/invenio.cfg
+
+# Prepare Gunicorn and Metrics
+COPY --chown=1000:0 ./gunicorn.conf.py ${INVENIO_INSTANCE_PATH}/
 RUN mkdir -p /tmp/prometheus_multiproc && chown 1000:0 /tmp/prometheus_multiproc
 
-WORKDIR ${WORKING_DIR}/src
+# Copy scripts used at runtime
+COPY --chown=1000:0 --chmod=755 ./scripts ${INVENIO_INSTANCE_PATH}/scripts/
 
+# Copy entrypoint script and set permissions
+COPY --chown=1000:0 --chmod=755 ./entrypoint.sh /opt/invenio/.venv/bin/entrypoint.sh
+
+WORKDIR /opt/invenio/src
 USER invenio
 EXPOSE 4000
 CMD ["gunicorn", "invenio_app.wsgi:application", "--bind", "0.0.0.0:4000", "--workers", "2", "--threads", "4", "--config", "/opt/invenio/var/instance/gunicorn.conf.py"]
