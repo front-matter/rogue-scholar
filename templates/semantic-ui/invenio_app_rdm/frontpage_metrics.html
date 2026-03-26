@@ -198,15 +198,15 @@
         </div>
       </div>
     </div>
-    <div class="card metrics-card metrics-card--funding">
+    <div class="card metrics-card metrics-card--citations">
       <div class="content">
-        <div class="metrics-icon" role="img" aria-label="Funding"></div>
+        <div class="metrics-icon" role="img" aria-label="Citations"></div>
         <div class="metrics-copy">
-          <div class="ui placeholder metrics-placeholder" id="metrics-funding-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-citations-placeholder">
             <div class="line"></div>
           </div>
-          <div class="meta">{{ _("Posts with Funding") }}</div>
-          <div class="metrics-value" id="metrics-funding" style="display:none;"></div>
+          <div class="meta">{{ _("Cited Posts") }}</div>
+          <div class="metrics-value" id="metrics-citations" style="display:none;"></div>
         </div>
       </div>
     </div>
@@ -250,15 +250,15 @@
         </div>
       </div>
     </div>
-    <div class="card metrics-card metrics-card--citations">
+    <div class="card metrics-card metrics-card--funding">
       <div class="content">
-        <div class="metrics-icon" role="img" aria-label="Citations"></div>
+        <div class="metrics-icon" role="img" aria-label="Funding"></div>
         <div class="metrics-copy">
-          <div class="ui placeholder metrics-placeholder" id="metrics-citations-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-funding-placeholder">
             <div class="line"></div>
           </div>
-          <div class="meta">{{ _("Cited Posts") }}</div>
-          <div class="metrics-value" id="metrics-citations" style="display:none;"></div>
+          <div class="meta">{{ _("Posts with Funding") }}</div>
+          <div class="metrics-value" id="metrics-funding" style="display:none;"></div>
         </div>
       </div>
     </div>
@@ -308,30 +308,30 @@
     fetch(baseUrl + "/communities?type=blog&size=1", { headers: headers }).then(function(r) { return r.json(); }),
     fetch(baseUrl + "/records?size=1", { headers: headers }).then(function(r) { return r.json(); }),
     fetch(baseUrl + "/records?q=" + encodeURIComponent(recentQ) + "&size=1", { headers: headers }).then(function(r) { return r.json(); }),
-    fetch(baseUrl + "/records?q=funder:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+    fetch(baseUrl + "/records?q=" + encodeURIComponent("custom_fields.rs\\:citations.identifier:*") + "&size=1", { headers: headers }).then(function(r) { return r.json(); }),
   ]).then(function(results) {
     var blogCount = results[0].hits.total;
     totalPosts = results[1].hits.total;
     var recentCount = results[2].hits.total;
-    var fundingCount = results[3].hits.total;
+    var citationsCount = results[3].hits.total;
 
     show("metrics-blogs", fmt(blogCount), "/communities/search?q=&f=type%3Ablog&l=list&p=1&s=10&sort=newest");
     show("metrics-posts", fmt(totalPosts), "/search?q=&l=list&p=1&s=10&sort=newest");
     show("metrics-recent", fmt(recentCount), "/search?q=" + encodeURIComponent(recentQ) + "&l=list&p=1&s=10&sort=newest");
-    show("metrics-funding", fmt(fundingCount), "/search?q=funder:*&l=list&p=1&s=10&sort=newest");
+    show("metrics-citations", fmt(citationsCount), "/search?q=" + encodeURIComponent("custom_fields.rs\\:citations.identifier:*") + "&l=list&p=1&s=10&sort=newest");
 
     // Row 2: percentage metrics (depend on totalPosts)
     return Promise.all([
       fetch(baseUrl + "/records?q=metadata.creators.person_or_org.identifiers.identifier:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
       fetch(baseUrl + "/records?q=metadata.creators.affiliations.id:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
       fetch(baseUrl + "/records?q=metadata.references.identifier:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
-      fetch(baseUrl + "/records?q=" + encodeURIComponent("custom_fields.rs\\:citations.identifier:*") + "&size=1", { headers: headers }).then(function(r) { return r.json(); }),
+      fetch(baseUrl + "/records?q=funder:*&size=1", { headers: headers }).then(function(r) { return r.json(); }),
     ]);
   }).then(function(results) {
     show("metrics-orcid", pct(results[0].hits.total, totalPosts), "/search?q=&f=author_identifiers:orcid&l=list&p=1&s=10&sort=newest");
     show("metrics-ror", pct(results[1].hits.total, totalPosts), "/search?q=ror:*&l=list&p=1&s=10&sort=newest");
     show("metrics-references", pct(results[2].hits.total, totalPosts), "/search?q=references:*&l=list&p=1&s=10&sort=newest");
-    show("metrics-citations", pct(results[3].hits.total, totalPosts), "/search?q=" + encodeURIComponent("custom_fields.rs\\:citations.identifier:*") + "&l=list&p=1&s=10&sort=newest");
+    show("metrics-funding", pct(results[3].hits.total, totalPosts), "/search?q=funder:*&l=list&p=1&s=10&sort=newest");
   }).catch(function(err) {
     console.error("Failed to load frontpage metrics:", err);
   });

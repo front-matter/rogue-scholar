@@ -198,15 +198,15 @@
         </div>
       </div>
     </div>
-    <div class="card metrics-card metrics-card--funding">
+    <div class="card metrics-card metrics-card--citations">
       <div class="content">
-        <div class="metrics-icon" role="img" aria-label="Funding"></div>
+        <div class="metrics-icon" role="img" aria-label="Citations"></div>
         <div class="metrics-copy">
-          <div class="ui placeholder metrics-placeholder" id="metrics-funding-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-citations-placeholder">
             <div class="line"></div>
           </div>
-          <div class="meta">{{ _("Posts with Funding") }}</div>
-          <div class="metrics-value" id="metrics-funding" style="display:none;"></div>
+          <div class="meta">{{ _("Cited Posts") }}</div>
+          <div class="metrics-value" id="metrics-citations" style="display:none;"></div>
         </div>
       </div>
     </div>
@@ -250,15 +250,15 @@
         </div>
       </div>
     </div>
-    <div class="card metrics-card metrics-card--citations">
+    <div class="card metrics-card metrics-card--funding">
       <div class="content">
-        <div class="metrics-icon" role="img" aria-label="Citations"></div>
+        <div class="metrics-icon" role="img" aria-label="Funding"></div>
         <div class="metrics-copy">
-          <div class="ui placeholder metrics-placeholder" id="metrics-citations-placeholder">
+          <div class="ui placeholder metrics-placeholder" id="metrics-funding-placeholder">
             <div class="line"></div>
           </div>
-          <div class="meta">{{ _("Cited Posts") }}</div>
-          <div class="metrics-value" id="metrics-citations" style="display:none;"></div>
+          <div class="meta">{{ _("Posts with Funding") }}</div>
+          <div class="metrics-value" id="metrics-funding" style="display:none;"></div>
         </div>
       </div>
     </div>
@@ -363,7 +363,7 @@
     fetchCommunityRecords("size=1&sort=oldest"),
     fetchCommunityRecords("size=1"),
     fetchCommunityRecords("q=" + encodeURIComponent(recentQ) + "&size=1"),
-    fetchCommunityRecords("q=funder:*&size=1"),
+    fetchCommunityRecords("q=" + encodeURIComponent(citationsQ) + "&size=1"),
   ]).then(function(results) {
     var oldestHit = results[0].hits.hits && results[0].hits.hits.length ? results[0].hits.hits[0] : null;
     var oldestPublicationDate = oldestHit && oldestHit.metadata ? oldestHit.metadata.publication_date : null;
@@ -371,25 +371,25 @@
     if (totalPosts === 0) { return; }
     document.getElementById("community-metrics").style.display = "";
     var recentCount = totalFrom(results[2]);
-    var fundingCount = totalFrom(results[3]);
+    var citationsCount = totalFrom(results[3]);
 
     show("metrics-first", formatPublicationDate(oldestPublicationDate), recordsHref("", "oldest"));
     show("metrics-posts", fmt(totalPosts), recordsHref("", "newest"));
     show("metrics-recent", fmt(recentCount), recordsHref(recentQ, "newest"));
-    show("metrics-funding", fmt(fundingCount), recordsHref("funder:*", "newest"));
+    show("metrics-citations", fmt(citationsCount), recordsHref(citationsQ, "newest"));
 
     // Row 2: percentage metrics (depend on totalPosts)
     return Promise.all([
       fetchCommunityRecords("q=" + encodeURIComponent(orcidQ) + "&size=1"),
       fetchCommunityRecords("q=" + encodeURIComponent(rorQ) + "&size=1"),
       fetchCommunityRecords("q=" + encodeURIComponent(referencesQ) + "&size=1"),
-      fetchCommunityRecords("q=" + encodeURIComponent(citationsQ) + "&size=1"),
+      fetchCommunityRecords("q=funder:*&size=1"),
     ]);
   }).then(function(results) {
     show("metrics-orcid", pct(totalFrom(results[0]), totalPosts), recordsHref(orcidQ, "newest"));
     show("metrics-ror", pct(totalFrom(results[1]), totalPosts), recordsHref(rorQ, "newest"));
     show("metrics-references", pct(totalFrom(results[2]), totalPosts), recordsHref(referencesQ, "newest"));
-    show("metrics-citations", pct(totalFrom(results[3]), totalPosts), recordsHref(citationsQ, "newest"));
+    show("metrics-funding", pct(totalFrom(results[3]), totalPosts), recordsHref("funder:*", "newest"));
   }).catch(function(err) {
     console.error("Failed to load community metrics:", err);
   });
