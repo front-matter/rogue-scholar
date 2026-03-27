@@ -12,7 +12,8 @@
     margin: 0 -0.75rem !important;
   }
   .metrics-card.card {
-    margin: 0 0.75rem 1.5rem !important;
+    background: transparent !important;
+    margin: 0 !important;
     overflow: hidden;
   }
   .metrics-card .content {
@@ -20,8 +21,8 @@
     flex-direction: column;
     align-items: flex-start !important;
     justify-content: space-between;
-    min-height: 13.5rem;
-    padding: 1.9rem 2rem 0 !important;
+    min-height: 10rem;
+    padding: 1rem 1rem 0 !important;
     position: relative;
   }
   .metrics-card .metrics-icon {
@@ -209,7 +210,7 @@
   </div>
 
   {# Row 2: Percentage metrics #}
-  <div class="ui four stackable cards metrics-grid">
+  <div class="ui four stackable cards metrics-grid" style="margin-top:0.5rem;">
     <div class="card metrics-card metrics-card--orcid">
       <div class="content">
         <div class="metrics-icon" role="img" aria-label="ORCID"></div>
