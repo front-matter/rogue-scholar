@@ -281,9 +281,9 @@
 
   function pct(n, total) {
     if (!total) {
-      return "0%";
+      return "0.0%";
     }
-    return Math.round(n / total * 100) + "%";
+    return (n / total * 100).toFixed(1) + "%";
   }
 
   function formatPublicationDate(dateValue) {

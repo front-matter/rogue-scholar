@@ -278,7 +278,10 @@
   }
 
   function pct(n, total) {
-    return Math.round(n / total * 100) + "%";
+    if (!total) {
+      return "0.0%";
+    }
+    return (n / total * 100).toFixed(1) + "%";
   }
 
   function show(id, text, href) {
