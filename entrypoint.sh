@@ -32,6 +32,7 @@ invenio roles create administration-moderation
 invenio access allow administration-moderation role administration-moderation
 
 # Creating indices if they do not exist...
+invenio index destroy --force --yes-i-know
 invenio index init
 
 # Creating custom fields for records...
