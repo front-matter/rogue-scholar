@@ -16,6 +16,9 @@ ln -sfn app_data/invenio.cfg "${INSTANCE_CONFIG}"
 # Creating database and tables if they do not exist...
 invenio db init create
 
+# Running database migrations...
+invenio alembic upgrade heads
+
 # Creating files location...
 invenio files location create --default s3-default  "s3://${S3_BUCKET}"
 
