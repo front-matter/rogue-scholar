@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """
-Fix communities_metadata: convert rs:generator from plain string
-to {"id": "..."} dict as required by VocabularyCF.
+Fix rs:generator custom field:
+1. communities_metadata: convert string -> {"id": "..."}, remap invalid IDs to "Other"
+2. rdm_records_metadata: same conversion (strings only, no invalid IDs found)
+
+Invalid community IDs remapped to "Other": Source, Jachère, Github
 
 Run with:
     python scripts/fix_generator_field.py
@@ -14,7 +17,8 @@ DB_URL = os.environ["INVENIO_SQLALCHEMY_DATABASE_URI"].replace(
     "postgresql+psycopg2://", "postgresql://"
 )
 
-FIX_SQL = """
+# 1a. Communities: convert remaining strings to {"id": "..."}
+COMMUNITIES_STRING_FIX_SQL = """
 UPDATE communities_metadata
 SET json = jsonb_set(
     json,
@@ -25,16 +29,39 @@ WHERE json->'custom_fields' ? 'rs:generator'
   AND jsonb_typeof(json->'custom_fields'->'rs:generator') = 'string';
 """
 
-COUNT_BEFORE_SQL = """
-SELECT COUNT(*) FROM communities_metadata
+# 1b. Communities: remap invalid IDs to "Other"
+COMMUNITIES_REMAP_SQL = """
+UPDATE communities_metadata
+SET json = jsonb_set(
+    json,
+    '{custom_fields,rs:generator}',
+    '{"id": "Other"}'
+)
+WHERE json->'custom_fields'->'rs:generator'->>'id' IN ('Source', 'Jachère', 'Github');
+"""
+
+# 2. RDM records: convert string -> {"id": "..."}
+RDM_STRING_FIX_SQL = """
+UPDATE rdm_records_metadata
+SET json = jsonb_set(
+    json,
+    '{custom_fields,rs:generator}',
+    jsonb_build_object('id', json->'custom_fields'->>'rs:generator')
+)
 WHERE json->'custom_fields' ? 'rs:generator'
   AND jsonb_typeof(json->'custom_fields'->'rs:generator') = 'string';
 """
 
-COUNT_AFTER_SQL = """
-SELECT COUNT(*) FROM communities_metadata
-WHERE json->'custom_fields' ? 'rs:generator'
-  AND jsonb_typeof(json->'custom_fields'->'rs:generator') = 'object';
+COUNTS_SQL = """
+SELECT
+  (SELECT COUNT(*) FROM communities_metadata
+   WHERE json->'custom_fields' ? 'rs:generator'
+     AND jsonb_typeof(json->'custom_fields'->'rs:generator') = 'string') AS comm_strings,
+  (SELECT COUNT(*) FROM communities_metadata
+   WHERE json->'custom_fields'->'rs:generator'->>'id' IN ('Source', 'Jachère', 'Github')) AS comm_invalid,
+  (SELECT COUNT(*) FROM rdm_records_metadata
+   WHERE json->'custom_fields' ? 'rs:generator'
+     AND jsonb_typeof(json->'custom_fields'->'rs:generator') = 'string') AS rdm_strings;
 """
 
 
@@ -44,22 +71,26 @@ def main():
     conn.autocommit = False
     cur = conn.cursor()
 
-    cur.execute(COUNT_BEFORE_SQL)
-    count_before = cur.fetchone()[0]
-    print(f"Communities with string rs:generator (before): {count_before}")
+    cur.execute(COUNTS_SQL)
+    comm_strings, comm_invalid, rdm_strings = cur.fetchone()
+    print(f"Communities with string rs:generator:  {comm_strings}")
+    print(f"Communities with invalid generator ID: {comm_invalid}")
+    print(f"RDM records with string rs:generator:  {rdm_strings}")
 
-    if count_before == 0:
-        print("Nothing to fix; all rs:generator values are already objects.")
+    if comm_strings == 0 and comm_invalid == 0 and rdm_strings == 0:
+        print("Nothing to fix.")
         cur.close()
         conn.close()
         return
 
-    cur.execute(FIX_SQL)
-    print(f"Rows updated: {cur.rowcount}")
+    cur.execute(COMMUNITIES_STRING_FIX_SQL)
+    print(f"Communities string->object: {cur.rowcount} rows")
 
-    cur.execute(COUNT_AFTER_SQL)
-    count_after = cur.fetchone()[0]
-    print(f"Communities with object rs:generator (after):  {count_after}")
+    cur.execute(COMMUNITIES_REMAP_SQL)
+    print(f"Communities invalid->Other: {cur.rowcount} rows")
+
+    cur.execute(RDM_STRING_FIX_SQL)
+    print(f"RDM records string->object: {cur.rowcount} rows")
 
     confirm = input("Commit? [y/N] ").strip().lower()
     if confirm == "y":
