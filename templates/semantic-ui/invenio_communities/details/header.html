@@ -14,21 +14,24 @@
 {% set feed_url = community_ui['custom_fields'].get("rs:feed_url", None) %}
 {% set feed_format = community_ui['custom_fields'].get("rs:feed_format", None) %}
 {% set feed_format_id = feed_format["id"] if feed_format else None %}
-{% if feed_format_id == "application/atom+xml" %}
+{% if feed_format_id == "atom" %}
   {% set feed_text = "Atom Feed" %}
-{% elif feed_format_id == "application/feed+json" %}
+{% elif feed_format_id == "jsonfeed" %}
   {% set feed_text = "JSON Feed" %}
 {% else %}
   {% set feed_text = "RSS Feed" %}
 {% endif %}
 {% set issn = community_ui['custom_fields'].get("rs:issn", None) %}
 {% set license = community_ui['custom_fields']["rs:license"]["id"] if community_ui['custom_fields'].get("rs:license", None) else None %}
-{% if license== "https://creativecommons.org/licenses/by/4.0/legalcode" %}
+{% if license == "cc-by-4.0" %}
   {% set license_text = "CC BY 4.0" %}
-{% elif license == "https://creativecommons.org/publicdomain/zero/1.0/legalcode" %}
+  {% set license_url = "https://creativecommons.org/licenses/by/4.0/" %}
+{% elif license == "cc0-1.0" %}
   {% set license_text = "CC0 1.0" %}
+  {% set license_url = "https://creativecommons.org/publicdomain/zero/1.0/" %}
 {% else %}
   {% set license_text = "" %}
+  {% set license_url = None %}
 {% endif %}
 {% set generator = community_ui['custom_fields']["rs:generator"]["title"]["en"] if community_ui['custom_fields'].get("rs:generator", None) else None %}
 {% set joined = community_ui['custom_fields'].get("rs:joined", None) %}
@@ -175,8 +178,8 @@
             <div class="mt-5">
               {% if license %}
                 <div class="inline-computer mt-5 rel-mr-1">
-                  <a class="ui bottom aligned tiny image" href="{{ license }}">
-                    {% if license == "https://creativecommons.org/publicdomain/zero/1.0/legalcode" %}
+                  <a class="ui bottom aligned tiny image" href="{{ license_url }}">
+                    {% if license == "cc0-1.0" %}
                       <img src="/static/icons/licenses/cc-cc0-icon.svg" alt="cc0-1.0 icon">
                     {% else %}
                       <img src="/static/icons/licenses/cc-by-icon.svg" alt="cc-by-4.0 icon">
