@@ -36,7 +36,7 @@
 {% set generator = community_ui['custom_fields']["rs:generator"]["title"]["en"] if community_ui['custom_fields'].get("rs:generator", None) else None %}
 {% set joined = community_ui['custom_fields'].get("rs:joined", None) %}
 {% set language = community_ui['custom_fields']["rs:language"]["title"]["en"] if community_ui['custom_fields'].get("rs:language", None) else None %}
-{% set subfield = community_ui['custom_fields']["rs:subfield"]["title"]["en"] if community_ui['custom_fields'].get("rs:subfield", None) else None %}
+{% set subfield = community_ui['custom_fields']["rs:subfield"]["subject"] if community_ui['custom_fields'].get("rs:subfield", None) else None %}
 {% macro button_to_request_membership(community_ui) %}
   {% if permissions.can_request_membership %}
   {# TODO: Add relation_to_community for other flows #}
