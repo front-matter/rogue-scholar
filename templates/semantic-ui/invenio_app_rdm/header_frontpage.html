@@ -9,47 +9,17 @@
 
 {%- extends config.THEME_HEADER_TEMPLATE %}
 
-{#- Remove search field from top bar on frontpage #}
-{%- block navbar_search %}{% endblock %}
+{{ super() }}
 
 {%- block navbar %}
-{{ super() }}
 
 {%- block frontpage_search %}
 <div id="frontpage-search-bar" class="ui container fluid frontpage-header">
-<div class="ui container grid">
-  <div class="row">
-    <div class="sixteen wide mobile four wide computer column"></div>
-    <div class="sixteen wide mobile eight wide computer column centered">
-      {%- block frontpage_title %}
-      {% include [
-        "invenio_app_rdm/frontpage_title." ~ current_i18n.language ~ ".html",
-        "invenio_app_rdm/frontpage_title.en.html"
-      ] %}
-    </div>
-    <div class="sixteen wide mobile four wide computer column"></div>
+  <div class="ui container grid">
+  {%- block top_banner %}
+    {%- include "invenio_app_rdm/frontpage_metrics.html" %}
+  {%- endblock top_banner %}
   </div>
-    {%- endblock frontpage_title %}
-      {%- block top_banner %}
-        {%- include "invenio_app_rdm/frontpage_metrics.html" %}
-      {%- endblock top_banner %}
-    {%- block frontpage_form %}
-    <div class="row">
-        <div class="sixteen wide mobile four wide computer column"></div>
-        <div class="sixteen wide mobile eight wide computer column center aligned">
-          <form action="{{ url_for('invenio_search_ui.search') }}" class="ui form" role="search">
-            <div class="ui fluid big action input">
-              <input type="text" name="q" class="form-control" aria-label="{{ _('Search') }}" placeholder="{{ _('Search') }}">
-              <button type="submit" class="ui icon search button" aria-label="{{ _('Search') }}">
-                <i class="search icon"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="ui divider hidden"></div>
-      {%- endblock frontpage_form %}
-</div>
 </div>
 {%- endblock frontpage_search %}
 
