@@ -39,9 +39,12 @@
 {% set joined = custom_fields.get("rs:joined", None) %}
 {% set language = custom_fields["rs:language"]["id"] if custom_fields.get("rs:language", None) else None %}
 {% set language_text = custom_fields["rs:language"]["title"]["en"] if custom_fields.get("rs:language", None) else None %}
-{% set subfield = custom_fields["rs:subfield"]["id"].split("/") | last if custom_fields.get("rs:subfield", None) else None %}
-{% set subfield_ui = ui_custom_fields.get("rs:subfield", {}) %}
-{% set subfield_text = subfield_ui["subject"] if subfield_ui.get("subject", None) else subfield %}
+{# Handle multiple=True for rs:subfield #}
+{% set subfields_raw = custom_fields.get("rs:subfield", []) %}
+{% set subfields_ui = ui_custom_fields.get("rs:subfield", []) %}
+{# Ensure arrays for iteration #}
+{% set subfields_items = subfields_raw if subfields_raw is iterable and subfields_raw is not string else [subfields_raw] if subfields_raw else [] %}
+{% set subfields_ui_items = subfields_ui if subfields_ui is iterable and subfields_ui is not string else [subfields_ui] if subfields_ui else [] %}
 {% macro button_to_request_membership(community_ui) %}
   {% if permissions.can_request_membership %}
   {# TODO: Add relation_to_community for other flows #}
@@ -167,13 +170,21 @@
                 </div>
               {% endif %}
 
-              {% if subfield %}
-                <div class="inline-computer mt-5 rel-mr-1">
-                  <i class="chart pie icon" aria-hidden="true"></i>
-                  <a href="/search?q=subfield:{{ subfield | urlencode }}&l=list&p=1&s=10&sort=newest">
-                    {{ subfield_text }}
-                  </a>
-                </div>
+              {% if subfields_items %}
+                {% for i, subfield_item in enumerate(subfields_items) %}
+                  {% if subfield_item %}
+                    {% set subfield_id = subfield_item["id"].split("/") | last if subfield_item.get("id") else None %}
+                    {% set subfield_text = subfields_ui_items[i]["subject"] if i < subfields_ui_items|length and subfields_ui_items[i].get("subject") else subfield_id %}
+                    {% if subfield_id %}
+                      <div class="inline-computer mt-5 rel-mr-1">
+                        <i class="chart pie icon" aria-hidden="true"></i>
+                        <a href="/search?q=subfield:{{ subfield_id | urlencode }}&l=list&p=1&s=10&sort=newest">
+                          {{ subfield_text }}
+                        </a>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
               {% endif %}
 
               {% if generator %}
