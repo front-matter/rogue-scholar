@@ -26,7 +26,7 @@
 {%- set title = record_ui["metadata"]["title"] %}
 {%- set metadata = record_ui["metadata"] %}
 
-{%- set can_curate_record = permissions is defined and (permissions.can_edit or permissions.can_review) %}
+{%- set can_curate_record = permissions is defined and permissions.can_manage %}
 
 <!-- preview_submission_request is set to true when coming from a community submission request -->
 {%- set is_preview_submission_request = preview_submission_request or false %}
