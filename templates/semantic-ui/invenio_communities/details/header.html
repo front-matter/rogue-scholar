@@ -11,8 +11,10 @@
 
 {%- from "invenio_theme/macros/truncate.html" import truncate_text %}
 {%- from "invenio_communities/details/macros/access-status-label.html" import access_status_label -%}
-{% set feed_url = community_ui['custom_fields'].get("rs:feed_url", None) %}
-{% set feed_format = community_ui['custom_fields'].get("rs:feed_format", None) %}
+{% set custom_fields = community_ui.get('custom_fields', {}) %}
+{% set ui_custom_fields = community_ui.get('ui', {}).get('custom_fields', {}) %}
+{% set feed_url = custom_fields.get("rs:feed_url", None) %}
+{% set feed_format = custom_fields.get("rs:feed_format", None) %}
 {% set feed_format_id = feed_format["id"] if feed_format else None %}
 {% if feed_format_id == "atom" %}
   {% set feed_text = "Atom Feed" %}
@@ -21,8 +23,8 @@
 {% else %}
   {% set feed_text = "RSS Feed" %}
 {% endif %}
-{% set issn = community_ui['custom_fields'].get("rs:issn", None) %}
-{% set license = community_ui['custom_fields']["rs:license"]["id"] if community_ui['custom_fields'].get("rs:license", None) else None %}
+{% set issn = custom_fields.get("rs:issn", None) %}
+{% set license = custom_fields["rs:license"]["id"] if custom_fields.get("rs:license", None) else None %}
 {% if license == "cc-by-4.0" %}
   {% set license_text = "CC BY 4.0" %}
   {% set license_url = "https://creativecommons.org/licenses/by/4.0/" %}
@@ -33,12 +35,13 @@
   {% set license_text = "" %}
   {% set license_url = None %}
 {% endif %}
-{% set generator = community_ui['custom_fields']["rs:generator"]["title"]["en"] if community_ui['custom_fields'].get("rs:generator", None) else None %}
-{% set joined = community_ui['custom_fields'].get("rs:joined", None) %}
-{% set language = community_ui['custom_fields']["rs:language"]["id"] if community_ui['custom_fields'].get("rs:language", None) else None %}
-{% set language_text = community_ui['custom_fields']["rs:language"]["title"]["en"] if community_ui['custom_fields'].get("rs:language", None) else None %}
-{% set subfield = community_ui['custom_fields']["rs:subfield"]["id"].split("/") | last if community_ui['custom_fields'].get("rs:subfield", None) else None %}
-{% set subfield_text = community_ui['custom_fields']["rs:subfield"]["subject"] if community_ui['custom_fields'].get("rs:subfield", None) else None %}
+{% set generator = custom_fields["rs:generator"]["title"]["en"] if custom_fields.get("rs:generator", None) else None %}
+{% set joined = custom_fields.get("rs:joined", None) %}
+{% set language = custom_fields["rs:language"]["id"] if custom_fields.get("rs:language", None) else None %}
+{% set language_text = custom_fields["rs:language"]["title"]["en"] if custom_fields.get("rs:language", None) else None %}
+{% set subfield = custom_fields["rs:subfield"]["id"].split("/") | last if custom_fields.get("rs:subfield", None) else None %}
+{% set subfield_ui = ui_custom_fields.get("rs:subfield", {}) %}
+{% set subfield_text = subfield_ui["subject"] if subfield_ui.get("subject", None) else subfield %}
 {% macro button_to_request_membership(community_ui) %}
   {% if permissions.can_request_membership %}
   {# TODO: Add relation_to_community for other flows #}

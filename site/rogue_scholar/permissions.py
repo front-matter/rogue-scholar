@@ -16,10 +16,8 @@ from invenio_rdm_records.services.permissions import RDMRecordPermissionPolicy
 from invenio_records_permissions.generators import (
     SystemProcess,
 )
-from invenio_communities.generators import CommunityManagers, CommunityOwners
 from .generators import (
     MediaFilesManager,
-    IfRecordManagementAllowedForCommunity,
 )
 
 
@@ -29,19 +27,10 @@ class RogueScholarRecordPermissionPolicy(RDMRecordPermissionPolicy):
     #
     # High-level permissions (used by low-level)
     #
-    can_manage = [
-        IfRecordManagementAllowedForCommunity(
-            then_=RDMRecordPermissionPolicy.can_manage,
-            else_=[
-                RecordOwners(),
-                AccessGrant("manage"),
-                SystemProcess(),
-            ],
-        )
-    ]
-    can_curate = can_manage + [SystemProcess()]
-    can_review = can_curate + [SystemProcess()]
-    can_preview = can_curate + [SystemProcess()]
+    can_manage = [SystemProcess()]
+    can_curate = [SystemProcess()]
+    can_review = [SystemProcess()]
+    can_preview = [SystemProcess()]
 
     #
     #  Records
@@ -124,6 +113,11 @@ class RogueScholarCommunityPermissionPolicy(CommunityPermissionPolicy):
     be managed by the system.
     """
 
+    # Community
     can_create = [SystemProcess()]
     can_submit_record = [SystemProcess()]
     can_community_manage_record = [SystemProcess()]
+
+    # Records in community
+    can_update = [SystemProcess()]
+    can_delete = [SystemProcess()]
