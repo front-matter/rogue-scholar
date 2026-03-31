@@ -16,7 +16,7 @@ from invenio_rdm_records.services.permissions import RDMRecordPermissionPolicy
 from invenio_records_permissions.generators import (
     SystemProcess,
 )
-from invenio_communities.generators import CommunityManagers
+from invenio_communities.generators import CommunityManagers, CommunityOwners
 from .generators import (
     MediaFilesManager,
     IfRecordManagementAllowedForCommunity,
@@ -120,12 +120,10 @@ class RogueScholarRecordPermissionPolicy(RDMRecordPermissionPolicy):
 
 class RogueScholarCommunityPermissionPolicy(CommunityPermissionPolicy):
     """Permissions for Community CRUD operations.
-    We start with limited permissions for community creation and moderation.
+    Communities can only be created by the system, records can only
+    be managed by the system.
     """
 
     can_create = [SystemProcess()]
-    can_update = [CommunityManagers(), SystemProcess()]
-    can_moderate = [SystemProcess()]
-    can_rename = [SystemProcess()]
     can_submit_record = [SystemProcess()]
-    can_include_directly = [SystemProcess()]
+    can_community_manage_record = [SystemProcess()]
