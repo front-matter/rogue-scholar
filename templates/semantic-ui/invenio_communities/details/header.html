@@ -227,12 +227,12 @@
             <div class="ui icon inline-block" data-tooltip="{{_('Submission to this community is only allowed to community members.')}}">
               <i class="grey question circle outline icon mb-5"></i>
             </div>
+            <a href="/uploads/new?community={{ community_ui['slug'] }}"
+              class="ui positive button labeled icon rel-mt-1 theme-secondary {{ 'disabled' if not permissions.can_submit_record }}">
+              <i class="upload icon" aria-hidden="true"></i>
+              {{ _("New upload") }}
+            </a>
           {% endif %}
-          <a href="/uploads/new?community={{ community_ui['slug'] }}"
-             class="ui positive button labeled icon rel-mt-1 theme-secondary {{ 'disabled' if not permissions.can_submit_record }}">
-            <i class="upload icon" aria-hidden="true"></i>
-            {{ _("New upload") }}
-          </a>
         {% endif %}
         {% if permissions.can_moderate %}
           <a
