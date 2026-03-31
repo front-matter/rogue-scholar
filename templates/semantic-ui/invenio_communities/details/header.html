@@ -171,7 +171,8 @@
               {% endif %}
 
               {% if subfields_items %}
-                {% for i, subfield_item in enumerate(subfields_items) %}
+                {% for subfield_item in subfields_items %}
+                  {% set i = loop.index0 %}
                   {% if subfield_item %}
                     {% set subfield_id = subfield_item["id"].split("/") | last if subfield_item.get("id") else None %}
                     {% set subfield_text = subfields_ui_items[i]["subject"] if i < subfields_ui_items|length and subfields_ui_items[i].get("subject") else subfield_id %}

@@ -20,13 +20,9 @@ ENV LANG=en_US.UTF-8 \
 # Install OS package dependencies and Node.js in a single layer
 RUN --mount=type=cache,sharing=locked,target=/var/cache/apt \
     apt-get update --fix-missing && \
-    curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
-    apt-get install -y build-essential libssl-dev libffi-dev \
-    python3-dev cargo pkg-config \
-    libcairo2-dev libpango1.0-dev libgdk-pixbuf-xlib-2.0-dev \
-    libxml2-dev libxslt1-dev libpq-dev libjpeg-dev \
-    libwebp-dev libtiff-dev libcurl4-openssl-dev nodejs \
-    --no-install-recommends && \
+    curl -fsSL https://deb.nodesource.com/setup_24.x | bash - && \
+    apt-get install -y build-essential python3-dev cargo pkg-config \
+    libgdk-pixbuf-xlib-2.0-dev nodejs --no-install-recommends && \
     npm install -g pnpm@latest-10
 
 # Install uv and activate virtualenv
