@@ -12,6 +12,12 @@ import RecordsResultsListItem from "./RecordsResultsListItem.js";
 import RecordsList from "./RecordsList.js";
 
 export const overriddenComponents = {
+  // Current InvenioRDM search keys (v14+)
+  "InvenioAppRdm.Search.ResultsList.item": RecordsResultsListItem,
+  "InvenioCommunities.DetailsSearch.ResultsList.item": RecordsResultsListItem,
+  "InvenioAppRDM.CollectionsSearch.ResultsList.item": RecordsResultsListItem,
+
+  // Legacy keys kept for backwards compatibility
   "InvenioAppRdm.Search.RecordsResultsListItem.layout": RecordsResultsListItem,
   "InvenioCommunities.DetailsSearch.RecordsResultsListItem.layout":
     RecordsResultsListItem,
