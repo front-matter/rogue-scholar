@@ -24,7 +24,8 @@
       {{ show_detail_thesis(_('Thesis'), record_ui["ui"]["publishing_information"]["thesis"]) if record_ui["ui"].get('publishing_information', {}).get('thesis', {}) }}
       {{ show_detail(_('Conference'), show_detail_conference(record_ui["ui"]["conference"])) if record_ui["ui"]["conference"] }}
       {{ show_detail(_('Languages'), list_languages(record_ui["ui"]["languages"])) if record_ui["ui"]["languages"] }}
-      {{ show_detail(_('Platform'), record_ui["ui"]["custom_fields"].get("rs:generator")) if record_ui["ui"]["custom_fields"].get("rs:generator", None) }}
+      {{ show_detail(_('Platform'), record_ui["ui"]["custom_fields"]["rs:generator"]["title_l10n"]) if record_ui["ui"]["custom_fields"].get("rs:generator", None) }}
+      {{ show_detail(_('Featured'), _('Yes')) if record_ui["ui"]["custom_fields"].get("rs:featured") == true }}
       {{ show_detail(_('Formats'), ", ".join(metadata.formats)) if metadata.formats }}
       {{ show_detail(_('Sizes'), ", ".join(metadata.sizes)) if metadata.sizes }}
     </dl>
