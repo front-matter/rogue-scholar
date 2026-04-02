@@ -1,5 +1,7 @@
+@ -1,218 +0,0 @@
 // This file is part of InvenioRDM
 // Copyright (C) 2022-2024 CERN.
+// Copyright (C) 2025 Front Matter.
 //
 // Invenio RDM is free software; you can redistribute it and/or modify it
 // under the terms of the MIT License; see LICENSE file for more details.
@@ -17,12 +19,66 @@ import {
   Button,
   Message,
 } from "semantic-ui-react";
-import Overridable from "react-overridable";
-import RecordsResultsListItem from "@js/invenio_app_rdm/components/RecordsResultsListItem";
+import RecordsResultsListItem from "./RecordsResultsListItem";
 import isEmpty from "lodash/isEmpty";
-import { buildUID } from "react-searchkit";
 
-export class RecordsList extends Component {
+// Add custom translations for this component
+const customTranslations = {
+  en: {
+    "No records found.": "No records in English found.",
+    "Search all records": "Search all records",
+  },
+  de: {
+    "No records found.": "Keine Beiträge auf Deutsch gefunden.",
+    "Search all records": "Alle Beiträge durchsuchen",
+  },
+  es: {
+    "No records found.": "No se encontraron publicaciones en español.",
+    "Search all records": "Buscar todas las publicaciones",
+  },
+  fr: {
+    "No records found.": "Aucun article en français trouvé.",
+    "Search all records": "Rechercher tous les articles",
+  },
+  it: {
+    "No records found.": "Nessun articolo in italiano trovato.",
+    "Search all records": "Cerca tutti gli articoli",
+  },
+  nl: {
+    "No records found.": "Geen artikelen in het Nederlands gevonden.",
+    "Search all records": "Alle artikelen doorzoeken",
+  },
+  pt: {
+    "No records found.": "Nenhuma publicação em português encontrada.",
+    "Search all records": "Pesquisar todas as publicações",
+  },
+  sv: {
+    "No records found.": "Inga inlägg på svenska hittades.",
+    "Search all records": "Sök alla inlägg",
+  },
+  tr: {
+    "No records found.": "Türkçe yazı bulunamadı.",
+    "Search all records": "Tüm yazıları ara",
+  },
+  uk: {
+    "No records found.": "Не знайдено жодного запису українською.",
+    "Search all records": "Шукати всі записи",
+  },
+  sl: {
+    "No records found.": "Ni najdenih objav v slovenščini.",
+    "Search all records": "Išči vse objave",
+  },
+  cs: {
+    "No records found.": "Nebyly nalezeny žádné příspěvky v češtině.",
+    "Search all records": "Prohledat všechny příspěvky",
+  },
+};
+
+Object.entries(customTranslations).forEach(([lng, resources]) => {
+  i18next.addResourceBundle(lng, "translation", resources, true, false);
+});
+
+class RecordsList extends Component {
   constructor(props) {
     super(props);
 
@@ -69,7 +125,6 @@ export class RecordsList extends Component {
       <Container>
         <Header as="h2">{title}</Header>
         {Array.from(Array(10)).map((item, index) => (
-          // eslint-disable-next-line react/no-array-index-key
           <div key={index}>
             <Placeholder fluid className="rel-mt-3">
               <Placeholder.Header>
@@ -123,8 +178,27 @@ export class RecordsList extends Component {
             <Container textAlign="center">
               <Button href="/search">{i18next.t("More")}</Button>
             </Container>
+          </Container>
+        )}
 
-            {error && <Message content={error} error icon="warning sign" />}
+        {!isLoading && !error && isEmpty(listItems) && (
+          <Container>
+            <Header as="h2">{title}</Header>
+            <Message info>
+              <Message.Content>
+                <p>{i18next.t("No records found.")}</p>
+                <Button href="/search" primary>
+                  {i18next.t("Search all records")}
+                </Button>
+              </Message.Content>
+            </Message>
+          </Container>
+        )}
+
+        {!isLoading && error && (
+          <Container>
+            <Header as="h2">{title}</Header>
+            <Message content={error} error icon="warning sign" />
           </Container>
         )}
       </>
@@ -142,28 +216,4 @@ RecordsList.defaultProps = {
   appName: "",
 };
 
-export class RecordsListOverridable extends Component {
-  render() {
-    const { title, fetchUrl, appName } = this.props;
-    return (
-      <Overridable
-        id={buildUID("layout", "", appName)}
-        title={title}
-        fetchUrl={fetchUrl}
-        appName={appName}
-      >
-        <RecordsList title={title} fetchUrl={fetchUrl} appName={appName} />
-      </Overridable>
-    );
-  }
-}
-
-RecordsListOverridable.propTypes = {
-  title: PropTypes.string.isRequired,
-  fetchUrl: PropTypes.string.isRequired,
-  appName: PropTypes.string,
-};
-
-RecordsListOverridable.defaultProps = {
-  appName: "",
-};
+export default RecordsList;
