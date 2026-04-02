@@ -8,9 +8,11 @@
  * Add here all the overridden components of your app.
  */
 
+import RecordsList from "./RecordsList.js";
 import RecordsResultsListItem from "./RecordsResultsListItem.js";
 
 export const overriddenComponents = {
+  "InvenioAppRDM.RecordsList.layout": RecordsList,
   "InvenioAppRdm.Search.ResultsList.item": RecordsResultsListItem,
   "InvenioCommunities.DetailsSearch.ResultsList.item": RecordsResultsListItem,
   "InvenioAppRDM.CollectionsSearch.ResultsList.item": RecordsResultsListItem,
