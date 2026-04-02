@@ -1,4 +1,3 @@
-@ -1,218 +0,0 @@
 // This file is part of InvenioRDM
 // Copyright (C) 2022-2024 CERN.
 // Copyright (C) 2025 Front Matter.
