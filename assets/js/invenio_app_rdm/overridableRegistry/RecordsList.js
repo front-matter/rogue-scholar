@@ -73,6 +73,28 @@ const customTranslations = {
   },
 };
 
+const buildQueryUrl = (fetchUrl) => {
+  const url = new URL(fetchUrl, "http://localhost");
+  const params = url.searchParams;
+  const queryParams = new URLSearchParams();
+
+  queryParams.set("sort", params.get("sort") || "newest");
+  queryParams.set("s", params.get("size") || "10");
+  queryParams.set("p", "1");
+  queryParams.set("q", params.get("q") || "");
+  queryParams.set("l", "list");
+
+  params.forEach((value, key) => {
+    if (["sort", "size", "q"].includes(key)) {
+      return;
+    }
+
+    queryParams.append("f", `${key}:${value}`);
+  });
+
+  return `/search?${queryParams.toString()}`;
+};
+
 Object.entries(customTranslations).forEach(([lng, resources]) => {
   i18next.addResourceBundle(lng, "translation", resources, true, false);
 });
@@ -150,7 +172,8 @@ class RecordsList extends Component {
 
   render() {
     const { isLoading, data, error } = this.state;
-    const { title, appName } = this.props;
+    const { title, appName, fetchUrl } = this.props;
+    const queryUrl = buildQueryUrl(fetchUrl);
 
     const listItems = data.hits?.map((record) => {
       return (
@@ -175,7 +198,9 @@ class RecordsList extends Component {
             </Item.Group>
 
             <Container textAlign="center">
-              <Button href="/search">{i18next.t("More")}</Button>
+              <Button href={queryUrl} primary>
+                {i18next.t("More")}
+              </Button>
             </Container>
           </Container>
         )}
@@ -186,7 +211,7 @@ class RecordsList extends Component {
             <Message info>
               <Message.Content>
                 <p>{i18next.t("No records found.")}</p>
-                <Button href="/search" primary>
+                <Button href={queryUrl} primary>
                   {i18next.t("Search all records")}
                 </Button>
               </Message.Content>
