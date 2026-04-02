@@ -10,11 +10,11 @@ import { i18next } from "@translations/invenio_app_rdm/i18next";
 import _get from "lodash/get";
 import React, { Component } from "react";
 import Overridable from "react-overridable";
-import { SearchItemCreators } from "./Utils";
+import { SearchItemCreators } from "@js/invenio_app_rdm/utils";
 import PropTypes from "prop-types";
 import { Item, Label, Image } from "semantic-ui-react";
 import { buildUID } from "react-searchkit";
-import { DisplayPartOfCommunities } from "../components/DisplayPartOfCommunities";
+import { DisplayPartOfCommunities } from "@js/invenio_app_rdm/components/DisplayPartOfCommunities";
 
 class RecordsResultsListItem extends Component {
   render() {

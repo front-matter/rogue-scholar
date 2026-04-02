@@ -1,4 +1,5 @@
-FROM python:3.14-trixie AS builder
+FROM --platform=linux/amd64 python:3.14-trixie AS builder
+
 LABEL maintainer="Front Matter <info@front-matter.de>"
 LABEL org.opencontainers.image.source="https://github.com/front-matter/rogue-scholar"
 LABEL org.opencontainers.image.licenses="MIT"
@@ -15,7 +16,8 @@ ENV LANG=en_US.UTF-8 \
     UV_COMPILE_BYTECODE=1 \
     UV_LINK_MODE=copy \
     UV_PYTHON_DOWNLOADS=0 \
-    INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
+    INVENIO_INSTANCE_PATH=/opt/invenio/var/instance \
+    WEBPACKEXT_PROJECT=invenio_assets.webpack:rspack_project
 
 # Install OS package dependencies and Node.js in a single layer
 RUN --mount=type=cache,sharing=locked,target=/var/cache/apt \
@@ -44,19 +46,29 @@ COPY . .
 RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-dev --no-editable
 
-# Copy application files we need for Javascript compilation to instance path
-COPY assets ${INVENIO_INSTANCE_PATH}/assets
-COPY static ${INVENIO_INSTANCE_PATH}/static
-COPY translations ${INVENIO_INSTANCE_PATH}/translations
-
-# Compile translation catalogs
-RUN pybabel compile -d ${INVENIO_INSTANCE_PATH}/translations
-
-# Build Javascript assets into the instance path expected at runtime.
-ENV WEBPACKEXT_PROJECT=invenio_assets.webpack:rspack_project
+# Build Javascript assets using rspack
 RUN --mount=type=cache,target=/var/cache/assets \
     invenio collect --verbose && \
-    invenio webpack buildall
+    invenio webpack create
+
+# Copy application files to instance path
+COPY ./invenio.cfg ${INVENIO_INSTANCE_PATH}/
+COPY site ${INVENIO_INSTANCE_PATH}/site
+COPY static ${INVENIO_INSTANCE_PATH}/static
+COPY assets ${INVENIO_INSTANCE_PATH}/assets
+COPY templates ${INVENIO_INSTANCE_PATH}/templates
+COPY app_data ${INVENIO_INSTANCE_PATH}/app_data
+COPY translations ${INVENIO_INSTANCE_PATH}/translations
+
+# Enable the option to have a deterministic javascript dependency build
+# From: https://github.com/tu-graz-library/docker-invenio-base
+COPY ./package.json ${INVENIO_INSTANCE_PATH}/assets/
+COPY ./pnpm-lock.yaml ${INVENIO_INSTANCE_PATH}/assets/
+
+WORKDIR ${INVENIO_INSTANCE_PATH}/assets
+RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
+    pnpm install && \
+    pnpm run build
 
 
 FROM python:3.14-slim-trixie AS runtime
