@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 python:3.14-trixie AS builder
+FROM python:3.14-trixie AS builder
 
 LABEL maintainer="Front Matter <info@front-matter.de>"
 LABEL org.opencontainers.image.source="https://github.com/front-matter/rogue-scholar"
@@ -60,16 +60,10 @@ COPY templates ${INVENIO_INSTANCE_PATH}/templates
 COPY app_data ${INVENIO_INSTANCE_PATH}/app_data
 COPY translations ${INVENIO_INSTANCE_PATH}/translations
 
-# Enable the option to have a deterministic javascript dependency build
-# From: https://github.com/tu-graz-library/docker-invenio-base
-COPY ./package.json ${INVENIO_INSTANCE_PATH}/assets/
-COPY ./pnpm-lock.yaml ${INVENIO_INSTANCE_PATH}/assets/
-
 WORKDIR ${INVENIO_INSTANCE_PATH}/assets
 RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
     pnpm install && \
     pnpm run build
-
 
 FROM python:3.14-slim-trixie AS runtime
 

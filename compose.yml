@@ -103,6 +103,7 @@ services:
       - caddy_config:/config
   web:
     image: ghcr.io/front-matter/rogue-scholar:latest
+    pull_policy: build
     platform: linux/amd64
     expose:
       - "4000"
@@ -179,6 +180,7 @@ services:
         condition: service_healthy
   worker:
     image: ghcr.io/front-matter/rogue-scholar:latest
+    pull_policy: build
     platform: linux/amd64
     command: [ "celery", "-A", "invenio_app.celery", "worker", "--beat", "--schedule=/tmp/celerybeat-schedule", "--events", "--loglevel=WARNING" ]
     volumes:

@@ -14,10 +14,11 @@ dependencies = [
     "invenio-oauthclient",
     "setuptools>=70,<81",
     "gunicorn~=23.0.0",
-    "commonmeta-py==0.209",
+    "commonmeta-py==0.211",
+    "invenio-logging",
+    "invenio-previewer",
     "structlog>=25.0",
-    "prometheus-flask-exporter>=0.23.1",
-    "invenio-logging",                           # no [sentry] extra
+    "prometheus-flask-exporter>=0.23.1",         # no [sentry] extra
     "sentry-sdk[flask]>=2.0,<3",
     "structlog-sentry>=2.1.0",
 ]
@@ -25,6 +26,7 @@ dependencies = [
 [tool.uv.sources]
 invenio-rdm-records = { git = "https://github.com/front-matter/invenio-rdm-records", branch = "crossref_doi_provider" }
 invenio-oauthclient = { git = "https://github.com/front-matter/invenio-oauthclient", branch = "contrib-oidc" }
+invenio-previewer = { git = "https://github.com/front-matter/invenio-previewer", branch = "epub" }
 
 [build-system]
 requires = ["hatchling"]
