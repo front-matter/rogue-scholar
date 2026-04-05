@@ -2157,7 +2157,7 @@ wheels = [
 [[package]]
 name = "invenio-previewer"
 version = "4.1.1"
-source = { git = "https://github.com/front-matter/invenio-previewer?branch=epub#89a6459967cd32e8b17aa6cf17c3d438962704b4" }
+source = { git = "https://github.com/front-matter/invenio-previewer?branch=epub#18fd335962931e6362ca51f51012b9a6173fbf50" }
 dependencies = [
     { name = "charset-normalizer" },
     { name = "invenio-assets" },

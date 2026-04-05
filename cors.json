@@ -1,0 +1,13 @@
+{
+  "CORSRules": [
+    {
+      "AllowedOrigins": [
+        "https://staging.rogue-scholar.org",
+        "https://rogue-scholar.org"
+      ],
+      "AllowedHeaders": ["*"],
+      "AllowedMethods": ["GET", "HEAD"],
+      "MaxAgeSeconds": 3000
+    }
+  ]
+}
