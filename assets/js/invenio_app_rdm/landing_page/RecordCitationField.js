@@ -114,17 +114,26 @@ export class RecordCitationField extends Component {
   render() {
     const { styles, recordLinks, defaultStyle, includeDeleted } = this.props;
     const { loading, citation, error } = this.state;
-    const citationOptions = (styles || []).map((style) => {
+    const normalizedStyles = Array.isArray(styles)
+      ? styles
+      : typeof styles === "string"
+      ? [[styles, styles]]
+      : [];
+    const citationOptions = normalizedStyles.map((style) => {
+      const value = Array.isArray(style) ? style[0] : style;
+      const label = Array.isArray(style) ? style[1] : style;
       return {
-        key: style[0],
-        value: style[0],
-        text: style[1],
+        key: value,
+        value,
+        text: label,
       };
     });
 
     // convert links in text to clickable links (ignoring punctuations at the end)
     const urlRegex = /(https?:\/\/[^\s,;]+(?=[^\s,;]*))/g;
-    const urlizedCitation = citation.replace(urlRegex, (url) => {
+    const citationText =
+      typeof citation === "string" ? citation : String(citation || "");
+    const urlizedCitation = citationText.replace(urlRegex, (url) => {
       // remove trailing dot
       let trailingDot = "";
       if (url.endsWith(".")) {
@@ -171,7 +180,7 @@ export class RecordCitationField extends Component {
 }
 
 RecordCitationField.propTypes = {
-  styles: PropTypes.array.isRequired,
+  styles: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   recordLinks: PropTypes.object.isRequired,
   defaultStyle: PropTypes.string.isRequired,
   includeDeleted: PropTypes.bool.isRequired,
@@ -179,5 +188,6 @@ RecordCitationField.propTypes = {
 };
 
 RecordCitationField.defaultProps = {
+  styles: [],
   locale: undefined,
 };

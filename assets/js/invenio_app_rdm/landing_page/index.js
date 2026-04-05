@@ -21,6 +21,24 @@ import Overridable, {
 
 const overriddenComponents = overrideStore.getAll();
 
+const safeJSONParse = (value, fallback = null) => {
+  try {
+    return JSON.parse(value);
+  } catch {
+    return fallback;
+  }
+};
+
+const normalizeCitationStyles = (styles) => {
+  if (Array.isArray(styles)) {
+    return styles;
+  }
+  if (typeof styles === "string" && styles.trim().length > 0) {
+    return [[styles, styles]];
+  }
+  return [];
+};
+
 const recordManagementAppDiv = document.getElementById("recordManagement");
 const recordManagementMobile = document.getElementById(
   "recordManagementMobile",
@@ -71,12 +89,20 @@ if (recordVersionsAppDiv) {
 
 const recordCitationAppDiv = document.getElementById("recordCitation");
 if (recordCitationAppDiv) {
+  const parsedStyles = safeJSONParse(recordCitationAppDiv.dataset.styles, []);
+  const parsedDefaultStyle = safeJSONParse(
+    recordCitationAppDiv.dataset.defaultstyle,
+    "apa",
+  );
   ReactDOM.render(
     <RecordCitationField
-      recordLinks={JSON.parse(recordCitationAppDiv.dataset.recordLinks)}
-      styles={JSON.parse(recordCitationAppDiv.dataset.styles) || []}
-      defaultStyle={JSON.parse(recordCitationAppDiv.dataset.defaultstyle)}
-      includeDeleted={JSON.parse(recordCitationAppDiv.dataset.includeDeleted)}
+      recordLinks={safeJSONParse(recordCitationAppDiv.dataset.recordLinks, {})}
+      styles={normalizeCitationStyles(parsedStyles)}
+      defaultStyle={parsedDefaultStyle || "apa"}
+      includeDeleted={safeJSONParse(
+        recordCitationAppDiv.dataset.includeDeleted,
+        false,
+      )}
       locale={recordCitationAppDiv.dataset.locale}
     />,
     recordCitationAppDiv,
