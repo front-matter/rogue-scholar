@@ -66,7 +66,10 @@
         <span>The monthly newsletter of the Rogue Scholar science blog archive.</span>
       </p>
       
+      <div class="cf-turnstile mb-10" data-sitekey="{{ config.get('TURNSTILE_SITE_KEY') }}"></div>
+
       <input type="submit" value="{{ _("Subscribe") }}" class="ui primary button fluid">
     </form>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </div>
 </section>

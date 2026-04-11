@@ -60,6 +60,7 @@ COPY templates ${INVENIO_INSTANCE_PATH}/templates
 COPY app_data ${INVENIO_INSTANCE_PATH}/app_data
 COPY translations ${INVENIO_INSTANCE_PATH}/translations
 
+# Compile assets using pnpm and rspack
 WORKDIR ${INVENIO_INSTANCE_PATH}/assets
 RUN --mount=type=cache,target=/root/.local/share/pnpm/store \
     pnpm install && \
