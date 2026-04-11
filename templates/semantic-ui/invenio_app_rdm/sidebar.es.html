@@ -44,38 +44,35 @@
   <div class="ui segment bottom attached rdm-sidebar">
     <p>Reciba información sobre blogs que se han unido a Rogue Scholar, actualizaciones técnicas y de la comunidad, y otras noticias relevantes para los usuarios de Rogue Scholar.</p>
     <form method="post" action="https://listmonk.rogue-scholar.org/subscription/form">
-      <input type="hidden" name="nonce">
-      <label class="ui tiny header" for="email">
-        <small>{{ _("E-mail") }} *</small>
-      </label>
-      <div class="ui fluid input mb-10">
-        <input id="email" type="email" name="email" required="" placeholder="{{ _("E-mail") }}">
-      </div>
+        <input type="hidden" name="nonce">
+        <label class="ui tiny header" for="email">
+          <small>{{ _("E-mail") }} *</small>
+        </label>
+        <div class="ui fluid input mb-10">
+          <input id="email" type="email" name="email" required="" placeholder="{{ _("E-mail") }}">
+        </div>
 
-      <label class="ui tiny header" for="name">
-        <small>{{ _("Name") }}</small>
-      </label>
-      <div class="ui fluid input mb-10">
-        <input id="name" type="text" name="name" placeholder="{{ _("Name (optional)") }}">
-      </div>
+        <label class="ui tiny header" for="name">
+          <small>{{ _("Name") }}</small>
+        </label>
+        <div class="ui fluid input mb-10">
+          <input id="name" type="text" name="name" placeholder="{{ _("Name (optional)") }}">
+        </div>
 
-      <p>
-        <input id="2150b" type="checkbox" name="l" checked value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
-        <label for="2150b">Monthly Newsletter (Inglés)</label>
-        <br />
-        <span>The monthly newsletter of the Rogue Scholar science blog archive.</span>
-      </p>
-      <p>
-        <input id="c3f92" type="checkbox" name="l" checked value="c3f92802-6d67-4d2c-96f1-100cadedbef9" />
-        <label for="c3f92">Boletín semanal en español</label>
-        <br />
-        <span>Puede suscribirse a los boletines periódicos de Rogue Scholar.</span>
-      </p>
-    
-      <div class="cf-turnstile mb-10" data-sitekey="{{ config.get('TURNSTILE_SITE_KEY') }}" data-appearance="interaction-only"></div>
+        <p>
+          <input id="2150b" type="checkbox" name="l" checked value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
+          <label for="2150b">Monthly Newsletter (Inglés)</label>
+          <br />
+          <span>The monthly newsletter of the Rogue Scholar science blog archive.</span>
+        </p>
+        <p>
+          <input id="c3f92" type="checkbox" name="l" checked value="c3f92802-6d67-4d2c-96f1-100cadedbef9" />
+          <label for="c3f92">Boletín semanal en español</label>
+          <br />
+          <span>Puede suscribirse a los boletines periódicos de Rogue Scholar.</span>
+        </p>
 
-      <input type="submit" value="{{ _("Subscribe") }}" class="ui primary button fluid">
-    </form>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        <input type="submit" value="{{ _("Subscribe") }}" class="ui primary button fluid">
+      </form>
   </div>
 </section>
