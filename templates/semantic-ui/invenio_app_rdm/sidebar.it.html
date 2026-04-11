@@ -5,6 +5,7 @@
   under the terms of the MIT License; see LICENSE file for more details.
 #}
 <section class="sidebar-container">
+
   <h2 class="ui medium top attached header mt-0">Perché usare Rogue Scholar?</h2>
   <div class="ui segment bottom attached rdm-sidebar">
     <ul class="m-0">
@@ -17,6 +18,9 @@
       <li>
         <strong>Nessun costo</strong> — i post del blog vengono archiviati senza costi né per i lettori né per gli autori. Rogue Scholar è sostenuto da <a href="https://ko-fi.com/rogue_scholar" target="_blank">donazioni</a> e sponsorizzazioni.
       </li>
+
+
+
       <li>
         <strong>Archiviato</strong> — i post del blog sono archiviati da Rogue Scholar e semestralmente dall'Internet Archive tramite il servizio <a href="https://archive-it.org/home/rogue-scholar" target="_blank">Archive-It</a>.
       </li>
@@ -29,6 +33,8 @@
       <li>
         <strong>Interoperabile</strong> — i metadati sono distribuiti tramite Crossref e ORCID, e servizi a valle che utilizzano i loro cataloghi di metadati.
       </li>
+
+
       <li>
         <strong>Riutilizzabile</strong> — il testo completo di ogni post del blog è distribuito secondo i termini della licenza Creative Commons Attribution 4.0.
       </li>
@@ -60,7 +66,7 @@
         </div>
 
         <p>
-          <input id="2150b" type="checkbox" name="l" checked value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
+          <input id="2150b" type="checkbox" name="l" value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
           <label for="2150b">Monthly Newsletter (inglese)</label>
           <br />
           <span>The monthly newsletter of the Rogue Scholar science blog archive.</span>
@@ -68,6 +74,9 @@
         
 
         <input type="submit" value="{{ _("Subscribe") }}" class="ui primary button fluid">
+        <div class="cf-turnstile" data-sitekey="{{ config.get('TURNSTILE_SITE_KEY') }}" data-appearance="interaction-only"></div>
+
       </form>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </div>
 </section>

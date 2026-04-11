@@ -5,6 +5,7 @@
   under the terms of the MIT License; see LICENSE file for more details.
 #}
 <section class="sidebar-container">
+
   <h2 class="ui medium top attached header mt-0">Neden Rogue Scholar kullanmalısınız?</h2>
   <div class="ui segment bottom attached rdm-sidebar">
     <ul class="m-0">
@@ -17,6 +18,10 @@
       <li>
         <strong>Ücret yok</strong> — blog yazıları okuyucular veya yazarlar için herhangi bir ücret olmaksızın arşivlenir. Rogue Scholar, <a href="https://ko-fi.com/rogue_scholar" target="_blank">bağışlar</a> ve sponsorluklar ile sürdürülmektedir.
       </li>
+
+
+
+
       <li>
         <strong>Arşivlenmiş</strong> — blog yazıları Rogue Scholar tarafından ve altı ayda bir Internet Archive <a href="https://archive-it.org/home/rogue-scholar" target="_blank">Archive-It</a> hizmeti tarafından arşivlenir.
       </li>
@@ -60,7 +65,7 @@
         </div>
 
         <p>
-          <input id="2150b" type="checkbox" name="l" checked value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
+          <input id="2150b" type="checkbox" name="l" value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
           <label for="2150b">Monthly newsletter (İngilizce)</label>
           <br />
           <span>The monthly newsletter of the Rogue Scholar science blog archive.</span>
@@ -68,6 +73,9 @@
 
 
         <input type="submit" value="{{ _("Subscribe") }}" class="ui primary button fluid">
+        <div class="cf-turnstile" data-sitekey="{{ config.get('TURNSTILE_SITE_KEY') }}" data-appearance="interaction-only"></div>
+
       </form>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </div>
 </section>

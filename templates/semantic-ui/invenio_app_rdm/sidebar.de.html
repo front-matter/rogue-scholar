@@ -60,19 +60,22 @@
         </div>
 
         <p>
-          <input id="2150b" type="checkbox" name="l" checked value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
+          <input id="2150b" type="checkbox" name="l" value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
           <label for="2150b">Monthly Newsletter (Englisch)</label>
           <br />
           <span>The monthly newsletter of the Rogue Scholar science blog archive.</span>
         </p>
         <p>
-          <input id="6a891" type="checkbox" name="l" checked value="6a8917c4-f42c-4593-b6a3-fcf94aab3642" />
+          <input id="6a891" type="checkbox" name="l" value="6a8917c4-f42c-4593-b6a3-fcf94aab3642" />
           <label for="6a891">Wöchentlicher Newsletter Deutsch</label>
           <br />
           <span>Wöchentlicher Newsletter der deutschsprachigen Rogue Scholar Blog-Posts.</span>
         </p>
 
+        <div class="cf-turnstile" data-sitekey="{{ config.get('TURNSTILE_SITE_KEY') }}" data-appearance="interaction-only"></div>
+
         <input type="submit" value="{{ _("Subscribe") }}" class="ui primary button fluid">
       </form>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </div>
 </section>

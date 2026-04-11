@@ -5,6 +5,7 @@
   under the terms of the MIT License; see LICENSE file for more details.
 #}
 <section class="sidebar-container">
+
   <h2 class="ui medium top attached header mt-0">Por que usar o Rogue Scholar?</h2>
   <div class="ui segment bottom attached rdm-sidebar">
     <ul class="m-0">
@@ -17,6 +18,9 @@
       <li>
         <strong>Sem custos</strong> — os posts do blog são arquivados sem custos para leitores ou autores. O Rogue Scholar é mantido por <a href="https://ko-fi.com/rogue_scholar" target="_blank">doações</a> e patrocínios.
       </li>
+
+
+
       <li>
         <strong>Arquivado</strong> — os posts do blog são arquivados pelo Rogue Scholar e semestralmente pelo Internet Archive por meio do serviço <a href="https://archive-it.org/home/rogue-scholar" target="_blank">Archive-It</a>.
       </li>
@@ -29,6 +33,8 @@
       <li>
         <strong>Interoperável</strong> — os metadados são distribuídos via Crossref e ORCID, e por serviços downstream que utilizam seus catálogos de metadados.
       </li>
+
+
       <li>
         <strong>Reutilizável</strong> — o texto completo de cada post do blog é distribuído sob os termos da licença Creative Commons Attribution 4.0.
       </li>
@@ -60,7 +66,7 @@
         </div>
 
         <p>
-          <input id="2150b" type="checkbox" name="l" checked value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
+          <input id="2150b" type="checkbox" name="l" value="2150b30e-ad6f-4a2c-a133-f2af67f041fd" />
           <label for="2150b">Monthly newsletter (Inglês)</label>
           <br />
           <span>The monthly newsletter of the Rogue Scholar science blog archive.</span>
@@ -68,6 +74,9 @@
 
 
         <input type="submit" value="{{ _("Subscribe") }}" class="ui primary button fluid">
+        <div class="cf-turnstile" data-sitekey="{{ config.get('TURNSTILE_SITE_KEY') }}" data-appearance="interaction-only"></div>
+
       </form>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   </div>
 </section>
