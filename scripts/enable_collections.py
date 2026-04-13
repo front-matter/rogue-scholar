@@ -10,15 +10,32 @@ from invenio_communities.proxies import current_communities
 log = structlog.get_logger().bind(script="enable_collections")
 
 
+def _is_blog_community(community: dict[str, Any]) -> bool:
+    """Return True when the community is a blog community."""
+    type_value = community.get("type")
+    if isinstance(type_value, str):
+        return type_value == "blog"
+    if isinstance(type_value, dict):
+        return type_value.get("id") == "blog"
+
+    metadata_type = (community.get("metadata") or {}).get("type")
+    if isinstance(metadata_type, str):
+        return metadata_type == "blog"
+    if isinstance(metadata_type, dict):
+        return metadata_type.get("id") == "blog"
+
+    return False
+
+
 def _iter_communities(page_size: int = 100) -> list[dict[str, Any]]:
     """Return all blog communities by paging through the service search API."""
     page = 1
-    results: list[dict[str, Any]] = []
+    all_results: list[dict[str, Any]] = []
 
     while True:
         response = current_communities.service.search(
             system_identity,
-            q="type.id:blog",
+            q="*",
             page=page,
             size=page_size,
         )
@@ -26,14 +43,16 @@ def _iter_communities(page_size: int = 100) -> list[dict[str, Any]]:
         if not hits:
             break
 
-        results.extend(hits)
+        all_results.extend(hits)
 
         if len(hits) < page_size:
             break
 
         page += 1
 
-    return results
+    return [
+        community for community in all_results if _is_blog_community(community)
+    ]
 
 
 def enable_children_for_all_blogs() -> dict[str, int]:
