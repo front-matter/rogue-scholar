@@ -37,6 +37,7 @@
 {% endif %}
 {% set generator = custom_fields["rs:generator"]["title"]["en"] if custom_fields.get("rs:generator", None) else None %}
 {% set joined = custom_fields.get("rs:joined", None) %}
+{% set doi = custom_fields.get("rs:doi", None) %}
 {% set language = custom_fields["rs:language"]["id"] if custom_fields.get("rs:language", None) else None %}
 {% set language_text = custom_fields["rs:language"]["title"]["en"] if custom_fields.get("rs:language", None) else None %}
 {# Handle multiple=True for rs:subfield #}
@@ -143,10 +144,10 @@
                 </div>
               {% endif %}
 
-              {% if joined %}
+              {% if doi %}
                 <div class="inline-computer mt-5 rel-mr-1">
-                  <i class="calendar plus icon" aria-hidden="true"></i>
-                  {{ joined }}
+                  <i class="arrow circle down icon" aria-hidden="true"></i>
+                  {{ doi }}
                 </div>
               {% endif %}
             </div>
@@ -194,6 +195,13 @@
                     <a href="/search?q=&f=platforms:{{ generator | urlencode }}&l=list&p=1&s=10&sort=newest">
                       {{ generator }}
                     </a>
+                </div>
+              {% endif %}
+
+              {% if joined %}
+                <div class="inline-computer mt-5 rel-mr-1">
+                  <i class="calendar plus icon" aria-hidden="true"></i>
+                  {{ joined }}
                 </div>
               {% endif %}
             </div>
