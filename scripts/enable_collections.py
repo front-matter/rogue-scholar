@@ -11,14 +11,14 @@ log = structlog.get_logger().bind(script="enable_collections")
 
 
 def _iter_communities(page_size: int = 100) -> list[dict[str, Any]]:
-    """Return all communities by paging through the service search API."""
+    """Return all blog communities by paging through the service search API."""
     page = 1
     results: list[dict[str, Any]] = []
 
     while True:
         response = current_communities.service.search(
             system_identity,
-            q="*",
+            q="type.id:blog",
             page=page,
             size=page_size,
         )
@@ -46,7 +46,7 @@ def enable_children_for_all_blogs() -> dict[str, int]:
     for community in communities:
         community_id = community["id"]
         slug = community.get("slug", community_id)
-        children = dict(community.get("children") or {})
+        children = community.get("children") or {}
 
         if children.get("allow") is True:
             skipped += 1
@@ -58,13 +58,25 @@ def enable_children_for_all_blogs() -> dict[str, int]:
             )
             continue
 
-        children["allow"] = True
-
         try:
+            full = current_communities.service.read(
+                system_identity, id_=community_id
+            ).to_dict()
+            # Strip read-only fields that update() rejects
+            for key in (
+                "id",
+                "links",
+                "revision_id",
+                "created",
+                "updated",
+                "versions",
+            ):
+                full.pop(key, None)
+            full.setdefault("children", {})["allow"] = True
             current_communities.service.update(
                 system_identity,
                 id_=community_id,
-                data={"children": children},
+                data=full,
             )
             updated += 1
             log.info("update_community", slug=slug, id=community_id)
