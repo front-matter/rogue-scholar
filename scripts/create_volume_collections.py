@@ -27,7 +27,7 @@ TREE_ORDER = 10
 
 
 def get_year_range(year: int) -> str:
-    return f"publication_date:[{year}-01-01 TO {year}-12-31]"
+    return f"metadata.publication_date:[{year}-01-01 TO {year}-12-31]"
 
 
 def _iter_communities(page_size: int = 100) -> list[dict[str, Any]]:
@@ -170,6 +170,32 @@ def _get_or_create_year_collection(
     return "unchanged"
 
 
+def _refresh_year_collection_sizes(
+    tree: CollectionTree,
+    start_year: int,
+    current_year: int,
+) -> int:
+    """Recalculate and persist num_records for each yearly collection."""
+    updated_sizes = 0
+
+    for year in range(start_year, current_year + 1):
+        slug = str(year)
+        collection = Collection.read(slug=slug, ctree_id=tree.id)
+        search_result = current_community_records_service.search(
+            system_identity,
+            community_id=tree.community_id,
+            extra_filter=collection.query,
+            params={"size": 1},
+        )
+        total = int(search_result.total)
+
+        if collection.num_records != total:
+            collection.update(num_records=total)
+            updated_sizes += 1
+
+    return updated_sizes
+
+
 def create_volumes_for_community(
     community: dict[str, Any],
     start_year: int,
@@ -182,6 +208,7 @@ def create_volumes_for_community(
     created = 0
     updated = 0
     unchanged = 0
+    size_updates = 0
 
     for year in range(start_year, current_year + 1):
         result = _get_or_create_year_collection(
@@ -195,6 +222,12 @@ def create_volumes_for_community(
         else:
             unchanged += 1
 
+    size_updates = _refresh_year_collection_sizes(
+        tree=tree,
+        start_year=start_year,
+        current_year=current_year,
+    )
+
     return {
         "slug": slug,
         "start_year": start_year,
@@ -202,6 +235,7 @@ def create_volumes_for_community(
         "created": created,
         "updated": updated,
         "unchanged": unchanged,
+        "size_updates": size_updates,
     }
 
 
@@ -217,6 +251,7 @@ def run(page_size: int = 100) -> dict[str, int]:
         "created": 0,
         "updated": 0,
         "unchanged": 0,
+        "size_updates": 0,
     }
 
     current_year = date.today().year
@@ -255,6 +290,7 @@ def run(page_size: int = 100) -> dict[str, int]:
             totals["created"] += int(result["created"])
             totals["updated"] += int(result["updated"])
             totals["unchanged"] += int(result["unchanged"])
+            totals["size_updates"] += int(result["size_updates"])
             log.info("community_processed", **result)
         except Exception as err:  # pragma: no cover - operational script
             db.session.rollback()
