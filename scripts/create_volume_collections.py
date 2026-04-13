@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 
-from datetime import date
 from typing import Any
 
 import re
@@ -108,6 +107,20 @@ def _first_publication_year(community_id: str) -> int | None:
     return _extract_year(metadata.get("publication_date"))
 
 
+def _newest_publication_year(community_id: str) -> int | None:
+    result = current_community_records_service.search(
+        system_identity,
+        community_id=community_id,
+        params={"size": 1, "sort": "newest"},
+    )
+    hits = list(result.hits)
+    if not hits:
+        return None
+
+    metadata = hits[0].get("metadata") or {}
+    return _extract_year(metadata.get("publication_date"))
+
+
 def _get_or_create_tree(community_id: str) -> tuple[CollectionTree, bool]:
     try:
         tree = CollectionTree.resolve(
@@ -173,12 +186,12 @@ def _get_or_create_year_collection(
 def _refresh_year_collection_sizes(
     tree: CollectionTree,
     start_year: int,
-    current_year: int,
+    end_year: int,
 ) -> int:
     """Recalculate and persist num_records for each yearly collection."""
     updated_sizes = 0
 
-    for year in range(start_year, current_year + 1):
+    for year in range(start_year, end_year + 1):
         slug = str(year)
         collection = Collection.read(slug=slug, ctree_id=tree.id)
         search_result = current_community_records_service.search(
@@ -199,8 +212,8 @@ def _refresh_year_collection_sizes(
 def create_volumes_for_community(
     community: dict[str, Any],
     start_year: int,
+    end_year: int,
 ) -> dict[str, int | str]:
-    current_year = date.today().year
     community_id = community["id"]
     slug = community.get("slug", community_id)
 
@@ -210,7 +223,7 @@ def create_volumes_for_community(
     unchanged = 0
     size_updates = 0
 
-    for year in range(start_year, current_year + 1):
+    for year in range(start_year, end_year + 1):
         result = _get_or_create_year_collection(
             tree=tree,
             year=year,
@@ -225,12 +238,13 @@ def create_volumes_for_community(
     size_updates = _refresh_year_collection_sizes(
         tree=tree,
         start_year=start_year,
-        current_year=current_year,
+        end_year=end_year,
     )
 
     return {
         "slug": slug,
         "start_year": start_year,
+        "end_year": end_year,
         "tree_changed": int(tree_created_or_updated),
         "created": created,
         "updated": updated,
@@ -247,6 +261,8 @@ def run(page_size: int = 100) -> dict[str, int]:
         "processed": 0,
         "skipped_non_blog": 0,
         "skipped_no_first_post": 0,
+        "skipped_no_last_post": 0,
+        "skipped_invalid_year_bounds": 0,
         "failed": 0,
         "created": 0,
         "updated": 0,
@@ -277,6 +293,29 @@ def run(page_size: int = 100) -> dict[str, int]:
             )
             continue
 
+        end_year = _newest_publication_year(community["id"])
+        if end_year is None:
+            totals["skipped_no_last_post"] += 1
+            log.info(
+                "skip_community",
+                slug=community.get("slug", community["id"]),
+                id=community["id"],
+                reason="missing_latest_publication_date",
+            )
+            continue
+
+        if start_year > end_year:
+            totals["skipped_invalid_year_bounds"] += 1
+            log.info(
+                "skip_community",
+                slug=community.get("slug", community["id"]),
+                id=community["id"],
+                reason="invalid_year_bounds",
+                start_year=start_year,
+                end_year=end_year,
+            )
+            continue
+
         community_id = community["id"]
         slug = community.get("slug", community_id)
 
@@ -284,6 +323,7 @@ def run(page_size: int = 100) -> dict[str, int]:
             result = create_volumes_for_community(
                 community,
                 start_year=start_year,
+                end_year=end_year,
             )
             db.session.commit()
             totals["processed"] += 1
