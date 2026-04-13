@@ -138,16 +138,18 @@
                 </div>
               {% endif %}
 
-              {% if issn %}
-                <div class="inline-computer mt-5 rel-mr-1">
-                  ISSN {{ issn }}
-                </div>
-              {% endif %}
-
               {% if doi %}
                 <div class="inline-computer mt-5 rel-mr-1">
                   <i class="arrow circle down icon" aria-hidden="true"></i>
-                  {{ doi }}
+                  <a href="{{ doi }}">
+                    {{ doi }}
+                  </a>
+                </div>
+              {% endif %}
+
+              {% if issn %}
+                <div class="inline-computer mt-5 rel-mr-1">
+                  ISSN {{ issn }}
                 </div>
               {% endif %}
             </div>
