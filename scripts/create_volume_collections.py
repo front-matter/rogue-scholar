@@ -1,5 +1,5 @@
 # scripts/create_volume_collections.py
-"""Create annual volume collections for blog communities in an idempotent way."""
+"""Create volume collections for blog communities in an idempotent way."""
 
 from __future__ import annotations
 
@@ -9,25 +9,25 @@ from typing import Any
 import re
 import structlog
 from invenio_access.permissions import system_identity
-from invenio_communities.collections.records.api import (
-    Collection,
-    CollectionTree,
-)
 from invenio_communities.proxies import current_communities
+from invenio_collections.api import Collection, CollectionTree
+from invenio_collections.errors import (
+    CollectionNotFound,
+    CollectionTreeNotFound,
+)
 from invenio_db import db
 from invenio_rdm_records.proxies import current_community_records_service
 
 
 log = structlog.get_logger().bind(script="create_volume_collections")
 
-TREE_TITLE = "Annual Volumes"
-TREE_SLUG = "annual-volumes"
+TREE_TITLE = "Volumes"
+TREE_SLUG = "volumes"
 TREE_ORDER = 10
-DEFAULT_START_YEAR = 2020
 
 
 def get_year_range(year: int) -> str:
-    return f"metadata.publication_date:[{year}-01-01 TO {year}-12-31]"
+    return f"publication_date:[{year}-01-01 TO {year}-12-31]"
 
 
 def _iter_communities(page_size: int = 100) -> list[dict[str, Any]]:
@@ -73,13 +73,12 @@ def _is_blog_community(community: dict[str, Any]) -> bool:
 
 def _start_year_for_community(
     community: dict[str, Any],
-    default_start_year: int,
     current_year: int,
-) -> int:
+) -> int | None:
     community_id = community["id"]
     first_year = _first_publication_year(community_id)
     if first_year is None:
-        return default_start_year
+        return None
 
     return max(min(first_year, current_year), 1900)
 
@@ -110,84 +109,74 @@ def _first_publication_year(community_id: str) -> int | None:
 
 
 def _get_or_create_tree(community_id: str) -> tuple[CollectionTree, bool]:
-    tree = CollectionTree.query.filter_by(
-        community_id=community_id,
-        slug=TREE_SLUG,
-    ).one_or_none()
-
-    if tree is None:
+    try:
+        tree = CollectionTree.resolve(
+            slug=TREE_SLUG,
+            community_id=community_id,
+        )
+    except CollectionTreeNotFound:
         tree = CollectionTree.create(
             title=TREE_TITLE,
             slug=TREE_SLUG,
             community_id=community_id,
             order=TREE_ORDER,
         )
-        db.session.add(tree)
-        db.session.flush()
         return tree, True
 
-    changed = False
+    updates: dict[str, Any] = {}
     if tree.title != TREE_TITLE:
-        tree.title = TREE_TITLE
-        changed = True
+        updates["title"] = TREE_TITLE
     if tree.order != TREE_ORDER:
-        tree.order = TREE_ORDER
-        changed = True
+        updates["order"] = TREE_ORDER
 
-    return tree, changed
+    if updates:
+        tree.update(**updates)
+        return tree, True
+
+    return tree, False
 
 
 def _get_or_create_year_collection(
-    community_id: str,
-    tree_id: str,
+    tree: CollectionTree,
     year: int,
 ) -> str:
     slug = str(year)
     expected_query = get_year_range(year)
-    collection = Collection.query.filter_by(
-        community_id=community_id,
-        tree_id=tree_id,
-        slug=slug,
-    ).one_or_none()
 
-    if collection is None:
-        collection = Collection.create(
+    try:
+        collection = Collection.read(slug=slug, ctree_id=tree.id)
+    except CollectionNotFound:
+        Collection.create(
             title=slug,
             slug=slug,
             query=expected_query,
-            community_id=community_id,
-            tree_id=tree_id,
+            ctree=tree,
             order=year,
         )
-        db.session.add(collection)
         return "created"
 
-    changed = False
+    updates: dict[str, Any] = {}
     if collection.title != slug:
-        collection.title = slug
-        changed = True
-    if collection.query != expected_query:
-        collection.query = expected_query
-        changed = True
+        updates["title"] = slug
+    if collection.search_query != expected_query:
+        updates["search_query"] = expected_query
     if collection.order != year:
-        collection.order = year
-        changed = True
+        updates["order"] = year
 
-    return "updated" if changed else "unchanged"
+    if updates:
+        collection.update(**updates)
+        return "updated"
+
+    return "unchanged"
 
 
 def create_volumes_for_community(
     community: dict[str, Any],
-    default_start_year: int = DEFAULT_START_YEAR,
+    start_year: int,
 ) -> dict[str, int | str]:
     current_year = date.today().year
     community_id = community["id"]
     slug = community.get("slug", community_id)
-    start_year = _start_year_for_community(
-        community,
-        default_start_year=default_start_year,
-        current_year=current_year,
-    )
 
     tree, tree_created_or_updated = _get_or_create_tree(community_id)
     created = 0
@@ -196,8 +185,7 @@ def create_volumes_for_community(
 
     for year in range(start_year, current_year + 1):
         result = _get_or_create_year_collection(
-            community_id=community_id,
-            tree_id=tree.id,
+            tree=tree,
             year=year,
         )
         if result == "created":
@@ -224,11 +212,14 @@ def run(page_size: int = 100) -> dict[str, int]:
         "total": 0,
         "processed": 0,
         "skipped_non_blog": 0,
+        "skipped_no_first_post": 0,
         "failed": 0,
         "created": 0,
         "updated": 0,
         "unchanged": 0,
     }
+
+    current_year = date.today().year
 
     for community in communities:
         totals["total"] += 1
@@ -237,11 +228,28 @@ def run(page_size: int = 100) -> dict[str, int]:
             totals["skipped_non_blog"] += 1
             continue
 
+        start_year = _start_year_for_community(
+            community,
+            current_year=current_year,
+        )
+        if start_year is None:
+            totals["skipped_no_first_post"] += 1
+            log.info(
+                "skip_community",
+                slug=community.get("slug", community["id"]),
+                id=community["id"],
+                reason="missing_first_publication_date",
+            )
+            continue
+
         community_id = community["id"]
         slug = community.get("slug", community_id)
 
         try:
-            result = create_volumes_for_community(community)
+            result = create_volumes_for_community(
+                community,
+                start_year=start_year,
+            )
             db.session.commit()
             totals["processed"] += 1
             totals["created"] += int(result["created"])
