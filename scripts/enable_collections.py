@@ -1,4 +1,4 @@
-"""Disable subcommunities for blog communities in a paginated, safe way."""
+"""Enable child communities for all communities in a paginated, safe way."""
 
 from typing import Any
 
@@ -55,8 +55,8 @@ def _iter_communities(page_size: int = 100) -> list[dict[str, Any]]:
     ]
 
 
-def disable_children_for_all_blogs() -> dict[str, int]:
-    """Set ``children.allow=False`` for all blog communities and return stats."""
+def enable_children_for_all_blogs() -> dict[str, int]:
+    """Set ``children.allow=True`` for all communities and return run stats."""
     communities = _iter_communities(page_size=100)
     updated = 0
     skipped = 0
@@ -67,13 +67,13 @@ def disable_children_for_all_blogs() -> dict[str, int]:
         slug = community.get("slug", community_id)
         children = community.get("children") or {}
 
-        if children.get("allow") is False:
+        if children.get("allow") is True:
             skipped += 1
             log.info(
                 "skip_community",
                 slug=slug,
                 id=community_id,
-                reason="already_disabled",
+                reason="already_enabled",
             )
             continue
 
@@ -91,7 +91,7 @@ def disable_children_for_all_blogs() -> dict[str, int]:
                 "versions",
             ):
                 full.pop(key, None)
-            full.setdefault("children", {})["allow"] = False
+            full.setdefault("children", {})["allow"] = True
             current_communities.service.update(
                 system_identity,
                 id_=community_id,
@@ -115,10 +115,5 @@ def disable_children_for_all_blogs() -> dict[str, int]:
     return stats
 
 
-def enable_children_for_all_blogs() -> dict[str, int]:
-    """Backward-compatible alias; now disables subcommunities for blogs."""
-    return disable_children_for_all_blogs()
-
-
 if __name__ == "__main__":
-    disable_children_for_all_blogs()
+    enable_children_for_all_blogs()
