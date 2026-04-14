@@ -173,17 +173,12 @@
                   {% endif %}
                 {% endfor %}
               {% endif %}
-
-              {% if issn %}
-                <div class="inline-computer mt-5 rel-mr-1">
-                  ISSN {{ issn }}
-                </div>
-              {% endif %}
             </div>
 
+            {% if joined or language or doi or issn %}
             <div>
               {% if joined %}
-                <div class="ui small horizontal label primary theme-primary mt-5 rel-mr-1">
+                <div class="ui small horizontal label primary theme-primary mt-5 rel-mr-1>
                   {{ joined }}
                 </div>
               {% endif %}
@@ -202,8 +197,15 @@
                     {{ doi }}
                   </a>
                 </div>
-              {% endif %}          
+              {% endif %}
+              
+              {% if issn %}
+                <div class="inline-computer mt-5 rel-mr-1">
+                  ISSN {{ issn }}
+                </div>
+              {% endif %}
             </div>
+            {% endif %}
 
             <div class="mt-5">
               {% if license %}
