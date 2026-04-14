@@ -178,13 +178,13 @@
             {% if joined or language or doi or issn %}
             <div>
               {% if joined %}
-                <div class="ui small horizontal label primary theme-primary mt-5 rel-mr-1>
+                <div class="ui small horizontal label primary theme-primary mt-5">
                   {{ joined }}
                 </div>
               {% endif %}
 
               {% if language %}
-                <div class="ui small horizontal label olive mt-5 rel-mr-1">
+                <div class="ui small horizontal label olive mt-5">
                   <a href="/search?q=&f=language:{{ language | urlencode }}&l=list&p=1&s=10&sort=newest">
                     {{ language_text }}
                   </a>
@@ -192,7 +192,7 @@
               {% endif %}
 
               {% if doi %}
-                <div class="ui small horizontal label teal mt-5 rel-mr-1">
+                <div class="ui small horizontal label teal mt-5">
                   <a href="{{ doi }}">
                     {{ doi }}
                   </a>
@@ -200,7 +200,7 @@
               {% endif %}
               
               {% if issn %}
-                <div class="inline-computer mt-5 rel-mr-1">
+                <div class="inline-computer mt-5">
                   ISSN {{ issn }}
                 </div>
               {% endif %}
