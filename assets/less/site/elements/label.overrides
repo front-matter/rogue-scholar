@@ -3,10 +3,12 @@
 ***********************************************/
 
 /* Inside Link */
-.ui.teal.label > a {
+.ui.teal.label > a,
+.ui.olive.label > a {
   color: @white !important;
   opacity: 1 !important;
 }
-.ui.teal.label > a:hover {
+.ui.teal.label > a:hover,
+.ui.olive.label > a:hover {
   opacity: 0.8 !important;
 }
