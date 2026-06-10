@@ -1,8 +1,8 @@
 name: Update Blogs
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "30 7 * * *"
+  # schedule:
+  #check_suite:   - cron: "30 7 * * *"
 jobs:
   update:
     runs-on: ubuntu-latest
